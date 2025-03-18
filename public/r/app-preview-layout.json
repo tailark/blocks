@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "app-preview-layout",
+  "type": "registry:file",
+  "files": [
+    {
+      "type": "registry:file",
+      "target": "app/preview/layout.tsx",
+      "content": "export const dynamic = 'force-static'\nexport const revalidate = 3600 // Cache for 1 hour\n\nexport default function BlockLayout({\n    children,\n}: Readonly<{\n    children: React.ReactNode\n}>) {\n    return <>{children}</>\n}\n",
+      "path": "app/preview/layout.tsx"
+    }
+  ]
+}

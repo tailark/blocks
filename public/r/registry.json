@@ -1,0 +1,1956 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "NSUI",
+  "homepage": "https://nsui.irung.me",
+  "items": [
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-call-to-action-one",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/call-to-action/one/page.tsx",
+          "path": "app/preview/call-to-action/one/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-call-to-action-three",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/call-to-action/three/page.tsx",
+          "path": "app/preview/call-to-action/three/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-call-to-action-two",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/call-to-action/two/page.tsx",
+          "path": "app/preview/call-to-action/two/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-comparator-one",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/comparator/one/page.tsx",
+          "path": "app/preview/comparator/one/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-contact-one",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/contact/one/page.tsx",
+          "path": "app/preview/contact/one/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx",
+          "path": "components/ui/select.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx",
+          "path": "components/ui/textarea.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-contact-two",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/contact/two/page.tsx",
+          "path": "app/preview/contact/two/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx",
+          "path": "components/ui/select.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx",
+          "path": "components/ui/textarea.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-content-five",
+      "type": "registry:page",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/content/five/page.tsx",
+          "path": "app/preview/content/five/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-content-four",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/content/four/page.tsx",
+          "path": "app/preview/content/four/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-content-one",
+      "type": "registry:page",
+      "dependencies": [
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/content/one/page.tsx",
+          "path": "app/preview/content/one/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-content-seven",
+      "type": "registry:page",
+      "dependencies": [
+        "lucide-react",
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/content/seven/page.tsx",
+          "path": "app/preview/content/seven/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-content-six",
+      "type": "registry:page",
+      "dependencies": [
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/content/six/page.tsx",
+          "path": "app/preview/content/six/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-content-three",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/content/three/page.tsx",
+          "path": "app/preview/content/three/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-content-two",
+      "type": "registry:page",
+      "dependencies": [
+        "lucide-react",
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/content/two/page.tsx",
+          "path": "app/preview/content/two/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-faqs-one",
+      "type": "registry:page",
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/faqs/one/page.tsx",
+          "path": "app/preview/faqs/one/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-eight",
+      "type": "registry:page",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/eight/page.tsx",
+          "path": "app/preview/features/eight/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-five",
+      "type": "registry:page",
+      "dependencies": [
+        "lucide-react",
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/five/page.tsx",
+          "path": "app/preview/features/five/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-four",
+      "type": "registry:page",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/four/page.tsx",
+          "path": "app/preview/features/four/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-nine",
+      "type": "registry:page",
+      "dependencies": [
+        "clsx",
+        "dotted-map",
+        "lucide-react",
+        "react",
+        "recharts",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/nine/page.tsx",
+          "path": "app/preview/features/nine/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/chart.tsx",
+          "path": "components/ui/chart.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-one",
+      "type": "registry:page",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/one/page.tsx",
+          "path": "app/preview/features/one/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-seven",
+      "type": "registry:page",
+      "dependencies": [
+        "lucide-react",
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/seven/page.tsx",
+          "path": "app/preview/features/seven/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-six",
+      "type": "registry:page",
+      "dependencies": [
+        "lucide-react",
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/six/page.tsx",
+          "path": "app/preview/features/six/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-three",
+      "type": "registry:page",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/three/page.tsx",
+          "path": "app/preview/features/three/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-features-two",
+      "type": "registry:page",
+      "dependencies": [
+        "clsx",
+        "lucide-react",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/features/two/page.tsx",
+          "path": "app/preview/features/two/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-footer-five",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/footer/five/page.tsx",
+          "path": "app/preview/footer/five/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-footer-four",
+      "type": "registry:page",
+      "dependencies": [
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/footer/four/page.tsx",
+          "path": "app/preview/footer/four/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-footer-one",
+      "type": "registry:page",
+      "dependencies": [
+        "clsx",
+        "next",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/footer/one/page.tsx",
+          "path": "app/preview/footer/one/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-footer-three",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/footer/three/page.tsx",
+          "path": "app/preview/footer/three/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-footer-two",
+      "type": "registry:page",
+      "dependencies": [
+        "clsx",
+        "next",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/footer/two/page.tsx",
+          "path": "app/preview/footer/two/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-eight",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/eight/page.tsx",
+          "path": "app/preview/hero-section/eight/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-five",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "next",
+        "react",
+        "react-use-measure",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/five/page.tsx",
+          "path": "app/preview/hero-section/five/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/hero9-header.tsx",
+          "path": "components/hero9-header.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/infinite-slider.tsx",
+          "path": "components/motion-primitives/infinite-slider.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/progressive-blur.tsx",
+          "path": "components/motion-primitives/progressive-blur.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-four",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "next",
+        "react",
+        "react-use-measure",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/four/page.tsx",
+          "path": "app/preview/hero-section/four/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/hero8-header.tsx",
+          "path": "components/hero8-header.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/infinite-slider.tsx",
+          "path": "components/motion-primitives/infinite-slider.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/progressive-blur.tsx",
+          "path": "components/motion-primitives/progressive-blur.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-nine",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/nine/page.tsx",
+          "path": "app/preview/hero-section/nine/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-one",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/one/page.tsx",
+          "path": "app/preview/hero-section/one/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/hero5-header.tsx",
+          "path": "components/hero5-header.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/animated-group.tsx",
+          "path": "components/motion-primitives/animated-group.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/text-effect.tsx",
+          "path": "components/motion-primitives/text-effect.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-seven",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "swiper",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/seven/page.tsx",
+          "path": "app/preview/hero-section/seven/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-six",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/six/page.tsx",
+          "path": "app/preview/hero-section/six/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-three",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "next",
+        "react",
+        "react-use-measure",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/three/page.tsx",
+          "path": "app/preview/hero-section/three/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/hero5-header.tsx",
+          "path": "components/hero5-header.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo-cloud.tsx",
+          "path": "components/logo-cloud.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/animated-group.tsx",
+          "path": "components/motion-primitives/animated-group.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/infinite-slider.tsx",
+          "path": "components/motion-primitives/infinite-slider.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/progressive-blur.tsx",
+          "path": "components/motion-primitives/progressive-blur.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/text-effect.tsx",
+          "path": "components/motion-primitives/text-effect.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-hero-section-two",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "motion",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/hero-section/two/page.tsx",
+          "path": "app/preview/hero-section/two/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/hero6-header.tsx",
+          "path": "components/hero6-header.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/animated-group.tsx",
+          "path": "components/motion-primitives/animated-group.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/text-effect.tsx",
+          "path": "components/motion-primitives/text-effect.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-login-one",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/login/one/page.tsx",
+          "path": "app/preview/login/one/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-login-three",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/login/three/page.tsx",
+          "path": "app/preview/login/three/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-login-two",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/login/two/page.tsx",
+          "path": "app/preview/login/two/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-logo-cloud-one",
+      "type": "registry:page",
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/logo-cloud/one/page.tsx",
+          "path": "app/preview/logo-cloud/one/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-logo-cloud-three",
+      "type": "registry:page",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "react",
+        "react-use-measure",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/logo-cloud/three/page.tsx",
+          "path": "app/preview/logo-cloud/three/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/infinite-slider.tsx",
+          "path": "components/motion-primitives/infinite-slider.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/motion-primitives/progressive-blur.tsx",
+          "path": "components/motion-primitives/progressive-blur.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-logo-cloud-two",
+      "type": "registry:page",
+      "dependencies": [
+        "lucide-react",
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/logo-cloud/two/page.tsx",
+          "path": "app/preview/logo-cloud/two/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-pricing-five",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/pricing/five/page.tsx",
+          "path": "app/preview/pricing/five/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-pricing-four",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/pricing/four/page.tsx",
+          "path": "app/preview/pricing/four/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-pricing-one",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/pricing/one/page.tsx",
+          "path": "app/preview/pricing/one/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-pricing-three",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/pricing/three/page.tsx",
+          "path": "app/preview/pricing/three/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-pricing-two",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/pricing/two/page.tsx",
+          "path": "app/preview/pricing/two/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-sign-up-one",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/sign-up/one/page.tsx",
+          "path": "app/preview/sign-up/one/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-sign-up-three",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/sign-up/three/page.tsx",
+          "path": "app/preview/sign-up/three/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-sign-up-two",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-label",
+        "@radix-ui/react-slot",
+        "class-variance-authority",
+        "clsx",
+        "next",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/sign-up/two/page.tsx",
+          "path": "app/preview/sign-up/two/page.tsx"
+        },
+        {
+          "type": "registry:component",
+          "target": "components/logo.tsx",
+          "path": "components/logo.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx",
+          "path": "components/ui/button.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx",
+          "path": "components/ui/input.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx",
+          "path": "components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-stats-four",
+      "type": "registry:page",
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/stats/four/page.tsx",
+          "path": "app/preview/stats/four/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-stats-one",
+      "type": "registry:page",
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/stats/one/page.tsx",
+          "path": "app/preview/stats/one/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-stats-three",
+      "type": "registry:page",
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/stats/three/page.tsx",
+          "path": "app/preview/stats/three/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-stats-two",
+      "type": "registry:page",
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/stats/two/page.tsx",
+          "path": "app/preview/stats/two/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-team-one",
+      "type": "registry:page",
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/team/one/page.tsx",
+          "path": "app/preview/team/one/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-team-two",
+      "type": "registry:page",
+      "dependencies": [
+        "next"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/team/two/page.tsx",
+          "path": "app/preview/team/two/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-testimonials-five",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-avatar",
+        "clsx",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/testimonials/five/page.tsx",
+          "path": "app/preview/testimonials/five/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx",
+          "path": "components/ui/avatar.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-testimonials-four",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-avatar",
+        "clsx",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/testimonials/four/page.tsx",
+          "path": "app/preview/testimonials/four/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx",
+          "path": "components/ui/avatar.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-testimonials-one",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-avatar",
+        "clsx",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/testimonials/one/page.tsx",
+          "path": "app/preview/testimonials/one/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx",
+          "path": "components/ui/avatar.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-testimonials-six",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-avatar",
+        "clsx",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/testimonials/six/page.tsx",
+          "path": "app/preview/testimonials/six/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx",
+          "path": "components/ui/avatar.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-testimonials-three",
+      "type": "registry:page",
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/testimonials/three/page.tsx",
+          "path": "app/preview/testimonials/three/page.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-testimonials-two",
+      "type": "registry:page",
+      "dependencies": [
+        "@radix-ui/react-avatar",
+        "clsx",
+        "react",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "type": "registry:page",
+          "target": "app/preview/testimonials/two/page.tsx",
+          "path": "app/preview/testimonials/two/page.tsx"
+        },
+        {
+          "type": "registry:lib",
+          "target": "lib/utils.ts",
+          "path": "lib/utils.ts"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx",
+          "path": "components/ui/avatar.tsx"
+        },
+        {
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx",
+          "path": "components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+      "name": "app-preview-layout",
+      "type": "registry:file",
+      "files": [
+        {
+          "type": "registry:file",
+          "target": "app/preview/layout.tsx",
+          "path": "app/preview/layout.tsx"
+        }
+      ]
+    }
+  ]
+}

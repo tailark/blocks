@@ -1,0 +1,34 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "app-preview-content-three",
+  "type": "registry:page",
+  "dependencies": [
+    "@radix-ui/react-slot",
+    "class-variance-authority",
+    "clsx",
+    "lucide-react",
+    "next",
+    "react",
+    "tailwind-merge"
+  ],
+  "files": [
+    {
+      "type": "registry:page",
+      "target": "app/preview/content/three/page.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport { ChevronRight } from 'lucide-react'\nimport Link from 'next/link'\n\nexport default function ContentSection() {\n    return (\n        <section className=\"py-16 md:py-32\">\n            <div className=\"mx-auto max-w-5xl space-y-8 px-6 md:space-y-12\">\n                <img className=\"rounded-(--radius) grayscale\" src=\"https://images.unsplash.com/photo-1530099486328-e021101a494a?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\" alt=\"team image\" height=\"\" width=\"\" loading=\"lazy\" />\n\n                <div className=\"grid gap-6 md:grid-cols-2 md:gap-12\">\n                    <h2 className=\"text-4xl font-medium\">The Lyra ecosystem brings together our models, products and platforms.</h2>\n                    <div className=\"space-y-6\">\n                        <p>Lyra is evolving to be more than just the models. It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate.</p>\n\n                        <Button asChild variant=\"secondary\" size=\"sm\" className=\"gap-1 pr-1.5\">\n                            <Link href=\"#\">\n                                <span>Learn More</span>\n                                <ChevronRight className=\"size-2\" />\n                            </Link>\n                        </Button>\n                    </div>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+      "path": "app/preview/content/three/page.tsx"
+    },
+    {
+      "type": "registry:lib",
+      "target": "lib/utils.ts",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n\nexport const titleToNumber = (title: string): number => {\n    const titles = [\"one\", \"two\", \"three\", \"four\", \"five\", \"six\", \"seven\", \"eight\", \"nine\", \"ten\", \"eleven\", \"twelve\", \"thirteen\", \"fourteen\", \"fifteen\", \"sixteen\", \"seventeen\", \"eighteen\", \"nineteen\", \"twenty\"];\n    return titles.indexOf(title.toLowerCase()) + 1;\n};",
+      "path": "lib/utils.ts"
+    },
+    {
+      "type": "registry:ui",
+      "target": "components/ui/button.tsx",
+      "content": "import * as React from 'react'\nimport { Slot } from '@radix-ui/react-slot'\nimport { cva, type VariantProps } from 'class-variance-authority'\n\nimport { cn } from '@/lib/utils'\n\nconst buttonVariants = cva('inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0', {\n    variants: {\n        variant: {\n            default: 'bg-radial-[at_52%_-52%] **:[text-shadow:0_1px_0_var(--color-primary)] border-primary from-primary/70 to-primary/95 text-primary-foreground inset-shadow-2xs inset-shadow-white/25 dark:inset-shadow-white dark:from-primary dark:to-primary/70 dark:hover:to-primary border text-sm shadow-md shadow-zinc-950/30 ring-0 transition-[filter] duration-200 hover:brightness-125 active:brightness-95 dark:border-0',\n            destructive: 'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',\n            outline: 'shadow-xs bg-linear-to-t hover:to-muted to-background from-muted dark:from-muted/50 dark:hover:to-muted/50 dark:border-border border border-zinc-300 shadow-zinc-950/10 duration-200',\n            secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',\n            ghost: 'hover:bg-accent hover:text-accent-foreground',\n            link: 'text-primary underline-offset-4 hover:underline',\n        },\n        size: {\n            default: 'h-9 px-4 py-2',\n            sm: 'h-8 rounded-md px-3 text-xs',\n            lg: 'h-10 rounded-md px-8',\n            icon: 'h-9 w-9',\n        },\n    },\n    defaultVariants: {\n        variant: 'default',\n        size: 'default',\n    },\n})\n\nexport interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {\n    asChild?: boolean\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : 'button'\n    return (\n        <Comp\n            className={cn(buttonVariants({ variant, size, className }))}\n            ref={ref}\n            {...props}\n        />\n    )\n})\nButton.displayName = 'Button'\n\nexport { Button, buttonVariants }\n",
+      "path": "components/ui/button.tsx"
+    }
+  ]
+}
