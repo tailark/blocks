@@ -473,6 +473,13 @@ export const blocks: Block[] = [
         code: loadCode('app/preview/sign-up/three/page.tsx'),
     },
     {
+        slug: 'forgot-password',
+        title: 'one',
+        category: 'forgot-password',
+        preview: '/preview/forgot-password/one',
+        code: loadCode('app/preview/forgot-password/one/page.tsx'),
+    },
+    {
         slug: 'contact',
         title: 'one',
         category: 'contact',

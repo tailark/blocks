@@ -814,6 +814,28 @@
       ]
     },
     {
+      "name": "forgot-password-1",
+      "type": "registry:block",
+      "title": "Forgot Password Page 1",
+      "description": "Shadcn/ui Forgot Password Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "app/preview/forgot-password/one/page.tsx",
+          "type": "registry:component",
+          "target": "components/forgot-password.tsx"
+        },
+        {
+          "path": "components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "stats-1",
       "type": "registry:block",
       "title": "Stats Block 1",
