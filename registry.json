@@ -1216,6 +1216,385 @@
           "target": "components/contact.tsx"
         }
       ]
+    },
+    {
+      "name": "integrations-1",
+      "type": "registry:block",
+      "title": "Integrations Block 1",
+      "description": "Shadcn/ui website integrations section",
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "app/preview/integrations/one/page.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-1.tsx"
+        },
+        {
+          "path": "components/logos/index.ts",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Gemini.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/GooglePaLM.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MagicUI.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MediaWiki.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Replit.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/VSCodium.tsx",
+          "type": "registry:component" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-2",
+      "type": "registry:block",
+      "title": "Integrations Block 2",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "app/preview/integrations/two/page.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-2.tsx"
+        },
+        {
+          "path": "components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/logos/index.ts",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Gemini.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/GooglePaLM.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MagicUI.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MediaWiki.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Replit.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/VSCodium.tsx",
+          "type": "registry:component" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-3",
+      "type": "registry:block",
+      "title": "Integrations Block 3",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "app/preview/integrations/three/page.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-3.tsx"
+        },
+        {
+          "path": "components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/logos/index.ts",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Gemini.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/GooglePaLM.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MagicUI.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MediaWiki.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Replit.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/VSCodium.tsx",
+          "type": "registry:component" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-4",
+      "type": "registry:block",
+      "title": "Integrations Block 4",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "app/preview/integrations/four/page.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-4.tsx"
+        },
+        {
+          "path": "components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/logos/index.ts",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Gemini.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/GooglePaLM.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MagicUI.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MediaWiki.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Replit.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/VSCodium.tsx",
+          "type": "registry:component" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-5",
+      "type": "registry:block",
+      "title": "Integrations Block 5",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "app/preview/integrations/five/page.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-5.tsx"
+        },
+        {
+          "path": "components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/logos/index.ts",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Gemini.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/GooglePaLM.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MagicUI.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MediaWiki.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Replit.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/VSCodium.tsx",
+          "type": "registry:component" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-6",
+      "type": "registry:block",
+      "title": "Integrations Block 6",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "app/preview/integrations/six/page.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-6.tsx"
+        },
+        {
+          "path": "components/logos/index.ts",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Gemini.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/GooglePaLM.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MagicUI.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MediaWiki.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Replit.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/VSCodium.tsx",
+          "type": "registry:component" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-7",
+      "type": "registry:block",
+      "title": "Integrations Block 7",
+      "description": "Shadcn/ui website integrations block",
+      "registryDependencies": [
+        "button",
+        "https://motion-primitives.com/c/infinite-slider.json"
+      ],
+      "files": [
+        {
+          "path": "app/preview/integrations/seven/page.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-7.tsx"
+        },
+        {
+          "path": "components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "components/logos/index.ts",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Gemini.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/GooglePaLM.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MagicUI.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MediaWiki.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Replit.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/VSCodium.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/motion-primitives/infinite-slider.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "integrations-8",
+      "type": "registry:block",
+      "title": "Integrations Block 8",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "hover-card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "app/preview/integrations/eight/page.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-8.tsx"
+        },
+        {
+          "path": "components/logos/index.ts",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Gemini.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/GooglePaLM.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MagicUI.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/MediaWiki.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/Replit.tsx",
+          "type": "registry:component" 
+        },
+        {
+          "path": "components/logos/VSCodium.tsx",
+          "type": "registry:component" 
+        }
+      ]
     }
   ]
 }
