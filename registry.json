@@ -179,6 +179,56 @@
     },
 
     {
+      "name": "faqs-2",
+      "type": "registry:block",
+      "title": "FAQs Block 2",
+      "description": "Shadcn/ui FAQs block with accordion component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "app/preview/faqs/two/page.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-2.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "faqs-3",
+      "type": "registry:block",
+      "title": "FAQs Block 3",
+      "description": "Shadcn/ui FAQs block with accordion component and icons",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "app/preview/faqs/three/page.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-3.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "faqs-4",
+      "type": "registry:block",
+      "title": "FAQs Block 4",
+      "description": "Shadcn/ui FAQs block with accordion component and icons",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "app/preview/faqs/four/page.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-4.tsx"
+        }
+      ]
+    },
+    {
       "name": "features-1",
       "type": "registry:block",
       "title": "Features Block 1",
