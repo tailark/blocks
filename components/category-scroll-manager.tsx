@@ -11,11 +11,12 @@ export function CategoryScrollManager({ children }: { children: ReactNode }) {
         const element = scrollRef.current
         if (!element) return
 
-        const activeLink = element.querySelector('[aria-current="page"]')
+        const activeLink = element.querySelector('[aria-current="page"]') as HTMLAnchorElement
         if (!activeLink) return
 
         if ('scrollIntoViewIfNeeded' in activeLink) {
-            ;(activeLink as any).scrollIntoViewIfNeeded()
+            // @ts-expect-error - scrollIntoViewIfNeeded is a non-standard method not in TypeScript's DOM types
+            ;(activeLink as HTMLAnchorElement).scrollIntoViewIfNeeded()
         } else {
             activeLink.scrollIntoView()
         }
