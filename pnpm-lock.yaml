@@ -50,6 +50,9 @@ importers:
       dotted-map:
         specifier: ^2.2.3
         version: 2.2.3
+      fast-glob:
+        specifier: ^3.3.3
+        version: 3.3.3
       google:
         specifier: link:@next/third-parties/google
         version: link:@next/third-parties/google

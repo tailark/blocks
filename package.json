@@ -24,6 +24,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dotted-map": "^2.2.3",
+    "fast-glob": "^3.3.3",
     "google": "link:@next/third-parties/google",
     "hast-util-to-jsx-runtime": "^2.3.2",
     "lucide-react": "^0.475.0",
