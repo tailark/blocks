@@ -231,7 +231,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, preview, title
                                     aria-label="copy code">
                                     {cliCopied ? <Check className="size-4" /> : <Terminal className="!size-3.5" />}
                                     <span className="hidden font-mono text-xs md:block">
-                                        pnpm dlx shadcn@canary add {category}-{titleToNumber(title)}
+                                        pnpm dlx shadcn@latest add {category}-{titleToNumber(title)}
                                     </span>
                                 </Button>
                                 <Separator
