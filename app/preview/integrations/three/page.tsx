@@ -3,6 +3,7 @@ import { Logo } from '@/components/logo'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+
 export default function IntegrationsSection() {
     return (
         <section>
@@ -12,23 +13,35 @@ export default function IntegrationsSection() {
                         <div className="dark:bg-muted/50 relative mx-auto w-fit">
                             <div className="bg-radial to-muted dark:to-background absolute inset-0 z-10 from-transparent to-75%"></div>
                             <div className="mx-auto mb-2 flex w-fit justify-center gap-2">
-                                <IntegrationCard icon={<Gemini />} />
-                                <IntegrationCard icon={<Replit />} />
+                                <IntegrationCard>
+                                    <Gemini />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <Replit />
+                                </IntegrationCard>
                             </div>
                             <div className="mx-auto my-2 flex w-fit justify-center gap-2">
-                                <IntegrationCard icon={<MagicUI />} />
+                                <IntegrationCard>
+                                    <MagicUI />
+                                </IntegrationCard>
                                 <IntegrationCard
                                     borderClassName="shadow-black-950/10 shadow-xl border-black/25 dark:border-white/25"
-                                    className="dark:bg-white/10"
-                                    icon={<Logo />}
-                                />
-                                <IntegrationCard icon={<VSCodium />} />
+                                    className="dark:bg-white/10">
+                                    <Logo />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <VSCodium />
+                                </IntegrationCard>
                             </div>
 
                             <div className="mx-auto flex w-fit justify-center gap-2">
-                                <IntegrationCard icon={<MediaWiki />} />
+                                <IntegrationCard>
+                                    <MediaWiki />
+                                </IntegrationCard>
 
-                                <IntegrationCard icon={<GooglePaLM />} />
+                                <IntegrationCard>
+                                    <GooglePaLM />
+                                </IntegrationCard>
                             </div>
                         </div>
                         <div className="mx-auto mt-6 max-w-lg space-y-6 text-center sm:mt-0 sm:text-left">
@@ -49,14 +62,14 @@ export default function IntegrationsSection() {
     )
 }
 
-const IntegrationCard = ({ icon, className, borderClassName }: { icon: React.ReactNode; className?: string; borderClassName?: string }) => {
+const IntegrationCard = ({ children, className, borderClassName }: { children: React.ReactNode; className?: string; borderClassName?: string }) => {
     return (
         <div className={cn('bg-background relative flex size-20 rounded-xl dark:bg-transparent', className)}>
             <div
                 role="presentation"
                 className={cn('absolute inset-0 rounded-xl border border-black/20 dark:border-white/25', borderClassName)}
             />
-            <div className="relative z-20 m-auto size-fit *:size-8">{icon}</div>
+            <div className="relative z-20 m-auto size-fit *:size-8">{children}</div>
         </div>
     )
 }

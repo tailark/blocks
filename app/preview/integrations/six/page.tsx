@@ -2,6 +2,7 @@ import { Gemini, Replit, GooglePaLM } from '@/components/logos'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Plus } from 'lucide-react'
+
 export default function IntegrationsSection() {
     return (
         <section>

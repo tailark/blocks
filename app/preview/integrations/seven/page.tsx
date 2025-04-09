@@ -11,18 +11,32 @@ export default function IntegrationsSection() {
             <div className="bg-muted dark:bg-background py-24 md:py-32">
                 <div className="mx-auto max-w-5xl px-6">
                     <div className="bg-muted/25 group relative mx-auto max-w-[22rem] items-center justify-between space-y-6 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] sm:max-w-md">
-                        <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:32px_32px] opacity-50"></div>
+                        <div
+                            role="presentation"
+                            className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:32px_32px] opacity-50"></div>
                         <div>
                             <InfiniteSlider
                                 gap={24}
                                 speed={20}
                                 speedOnHover={10}>
-                                <IntegrationCard icon={<VSCodium />} />
-                                <IntegrationCard icon={<MediaWiki />} />
-                                <IntegrationCard icon={<GooglePaLM />} />
-                                <IntegrationCard icon={<Gemini />} />
-                                <IntegrationCard icon={<Replit />} />
-                                <IntegrationCard icon={<MagicUI />} />
+                                <IntegrationCard>
+                                    <VSCodium />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <MediaWiki />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <GooglePaLM />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <Gemini />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <Replit />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <MagicUI />
+                                </IntegrationCard>
                             </InfiniteSlider>
                         </div>
 
@@ -32,12 +46,24 @@ export default function IntegrationsSection() {
                                 speed={20}
                                 speedOnHover={10}
                                 reverse>
-                                <IntegrationCard icon={<Gemini />} />
-                                <IntegrationCard icon={<Replit />} />
-                                <IntegrationCard icon={<MediaWiki />} />
-                                <IntegrationCard icon={<MagicUI />} />
-                                <IntegrationCard icon={<VSCodium />} />
-                                <IntegrationCard icon={<GooglePaLM />} />
+                                <IntegrationCard>
+                                    <Gemini />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <Replit />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <MediaWiki />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <MagicUI />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <VSCodium />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <GooglePaLM />
+                                </IntegrationCard>
                             </InfiniteSlider>
                         </div>
                         <div>
@@ -45,20 +71,32 @@ export default function IntegrationsSection() {
                                 gap={24}
                                 speed={20}
                                 speedOnHover={10}>
-                                <IntegrationCard icon={<Replit />} />
-                                <IntegrationCard icon={<MagicUI />} />
-                                <IntegrationCard icon={<Gemini />} />
-                                <IntegrationCard icon={<VSCodium />} />
-                                <IntegrationCard icon={<MediaWiki />} />
-                                <IntegrationCard icon={<GooglePaLM />} />
+                                <IntegrationCard>
+                                    <Replit />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <MagicUI />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <Gemini />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <VSCodium />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <MediaWiki />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <GooglePaLM />
+                                </IntegrationCard>
                             </InfiniteSlider>
                         </div>
                         <div className="absolute inset-0 m-auto flex size-fit justify-center gap-2">
                             <IntegrationCard
                                 className="shadow-black-950/10 size-16 bg-white/25 shadow-xl backdrop-blur-md backdrop-grayscale dark:border-white/10 dark:shadow-white/15"
-                                icon={<Logo />}
-                                isCenter={true}
-                            />
+                                isCenter={true}>
+                                <Logo />
+                            </IntegrationCard>
                         </div>
                     </div>
                     <div className="mx-auto mt-12 max-w-lg space-y-6 text-center">
@@ -78,10 +116,10 @@ export default function IntegrationsSection() {
     )
 }
 
-const IntegrationCard = ({ icon, className, isCenter = false }: { icon: React.ReactNode; className?: string; position?: 'left-top' | 'left-middle' | 'left-bottom' | 'right-top' | 'right-middle' | 'right-bottom'; isCenter?: boolean }) => {
+const IntegrationCard = ({ children, className, isCenter = false }: { children: React.ReactNode; className?: string; position?: 'left-top' | 'left-middle' | 'left-bottom' | 'right-top' | 'right-middle' | 'right-bottom'; isCenter?: boolean }) => {
     return (
         <div className={cn('bg-background relative z-20 flex size-12 rounded-full border', className)}>
-            <div className={cn('m-auto size-fit *:size-5', isCenter && '*:size-8')}>{icon}</div>
+            <div className={cn('m-auto size-fit *:size-5', isCenter && '*:size-8')}>{children}</div>
         </div>
     )
 }
