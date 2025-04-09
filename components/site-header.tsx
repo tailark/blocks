@@ -25,9 +25,15 @@ export const SiteHeader = () => {
                         <span className="sr-only font-bold">ns UI</span>
                     </Link>
 
-                    <div className="flex gap-1 items-center">
-                        <Button asChild size="sm" variant="ghost" className={cn('text-foreground/75 rounded-full', isActive('/hero-section') && 'text-foreground')}>
-                            <Link href="/hero-section" className="!text-sm">
+                    <div className="flex items-center gap-1">
+                        <Button
+                            asChild
+                            size="sm"
+                            variant="ghost"
+                            className={cn('text-foreground/75 rounded-full', isActive('/hero-section') && 'text-foreground')}>
+                            <Link
+                                href="/hero-section"
+                                className="!text-sm">
                                 Blocks
                             </Link>
                         </Button>
@@ -43,7 +49,6 @@ export const SiteHeader = () => {
                                     Snippets
                                 </Link>
                             </Button>
-                            <span className="rounded-full border border-green-300 bg-green-200 px-1.5 py-px text-xs text-green-900 dark:border-green-700 dark:bg-green-500/20 dark:text-green-50">New</span>
                         </div>
                     </div>
                 </div>
