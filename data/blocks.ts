@@ -428,6 +428,27 @@ export const blocks: Block[] = [
         preview: '/preview/faqs/one',
         code: loadCode('app/preview/faqs/one/page.tsx'),
     },
+    {
+        slug: 'faqs',
+        title: 'two',
+        category: 'faqs',
+        preview: '/preview/faqs/two',
+        code: loadCode('app/preview/faqs/two/page.tsx'),
+    },
+    {
+        slug: 'faqs',
+        title: 'three',
+        category: 'faqs',
+        preview: '/preview/faqs/three',
+        code: loadCode('app/preview/faqs/three/page.tsx'),
+    },
+    {
+        slug: 'faqs',
+        title: 'four',
+        category: 'faqs',
+        preview: '/preview/faqs/four',
+        code: loadCode('app/preview/faqs/four/page.tsx'),
+    },
 
     {
         slug: 'login',
