@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import glob from 'fast-glob'
 
 export interface Block {
     slug: string
@@ -15,47 +14,571 @@ function loadCode(filePath: string): string {
     return fs.readFileSync(fullPath, 'utf-8')
 }
 
-function getNumericValue(title: string): number {
-    const numberMap: Record<string, number> = {
-        'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 
-        'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10, 
-        'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14,
-        'fifteen': 15, 'sixteen': 16, 'seventeen': 17, 'eighteen': 18,
-        'nineteen': 19, 'twenty': 20
-    };
-    return numberMap[title] || 999;
-}
+export const blocks: Block[] = [
+    {
+        slug: 'hero-section',
+        title: 'one',
+        category: 'hero-section',
+        preview: '/preview/hero-section/one',
+        code: loadCode('app/preview/hero-section/one/page.tsx'),
+    },
+    {
+        slug: 'hero-section',
+        title: 'two',
+        category: 'hero-section',
+        preview: '/preview/hero-section/two',
+        code: loadCode('app/preview/hero-section/two/page.tsx'),
+    },
+    {
+        slug: 'hero-section',
+        title: 'three',
+        category: 'hero-section',
+        preview: '/preview/hero-section/three',
+        code: loadCode('app/preview/hero-section/three/page.tsx'),
+    },
+    {
+        slug: 'hero-section',
+        title: 'four',
+        category: 'hero-section',
+        preview: '/preview/hero-section/four',
+        code: loadCode('app/preview/hero-section/four/page.tsx'),
+    },
+    {
+        slug: 'hero-section',
+        title: 'five',
+        category: 'hero-section',
+        preview: '/preview/hero-section/five',
+        code: loadCode('app/preview/hero-section/five/page.tsx'),
+    },
+    {
+        slug: 'hero-section',
+        title: 'six',
+        category: 'hero-section',
+        preview: '/preview/hero-section/six',
+        code: loadCode('app/preview/hero-section/six/page.tsx'),
+    },
+    {
+        slug: 'hero-section',
+        title: 'seven',
+        category: 'hero-section',
+        preview: '/preview/hero-section/seven',
+        code: loadCode('app/preview/hero-section/seven/page.tsx'),
+    },
+    {
+        slug: 'hero-section',
+        title: 'eight',
+        category: 'hero-section',
+        preview: '/preview/hero-section/eight',
+        code: loadCode('app/preview/hero-section/eight/page.tsx'),
+    },
+    {
+        slug: 'hero-section',
+        title: 'nine',
+        category: 'hero-section',
+        preview: '/preview/hero-section/nine',
+        code: loadCode('app/preview/hero-section/nine/page.tsx'),
+    },
+    {
+        slug: 'logo-cloud',
+        title: 'one',
+        category: 'logo-cloud',
+        preview: '/preview/logo-cloud/one',
+        code: loadCode('app/preview/logo-cloud/one/page.tsx'),
+    },
+    {
+        slug: 'logo-cloud',
+        title: 'two',
+        category: 'logo-cloud',
+        preview: '/preview/logo-cloud/two',
+        code: loadCode('app/preview/logo-cloud/two/page.tsx'),
+    },
+    {
+        slug: 'logo-cloud',
+        title: 'three',
+        category: 'logo-cloud',
+        preview: '/preview/logo-cloud/three',
+        code: loadCode('app/preview/logo-cloud/three/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'one',
+        category: 'features',
+        preview: '/preview/features/one',
+        code: loadCode('app/preview/features/one/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'two',
+        category: 'features',
+        preview: '/preview/features/two',
+        code: loadCode('app/preview/features/two/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'three',
+        category: 'features',
+        preview: '/preview/features/three',
+        code: loadCode('app/preview/features/three/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'four',
+        category: 'features',
+        preview: '/preview/features/four',
+        code: loadCode('app/preview/features/four/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'five',
+        category: 'features',
+        preview: '/preview/features/five',
+        code: loadCode('app/preview/features/five/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'six',
+        category: 'features',
+        preview: '/preview/features/six',
+        code: loadCode('app/preview/features/six/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'seven',
+        category: 'features',
+        preview: '/preview/features/seven',
+        code: loadCode('app/preview/features/seven/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'eight',
+        category: 'features',
+        preview: '/preview/features/eight',
+        code: loadCode('app/preview/features/eight/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'nine',
+        category: 'features',
+        preview: '/preview/features/nine',
+        code: loadCode('app/preview/features/nine/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'ten',
+        category: 'features',
+        preview: '/preview/features/ten',
+        code: loadCode('app/preview/features/ten/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'eleven',
+        category: 'features',
+        preview: '/preview/features/eleven',
+        code: loadCode('app/preview/features/eleven/page.tsx'),
+    },
+    {
+        slug: 'features',
+        title: 'twelve',
+        category: 'features',
+        preview: '/preview/features/twelve',
+        code: loadCode('app/preview/features/twelve/page.tsx'),
+    },
 
-const files = glob.sync('app/preview/**/page.tsx')
+    {
+        slug:'integrations',
+        title:'one',
+        category:'integrations',
+        preview:'/preview/integrations/one',
+        code:loadCode('app/preview/integrations/one/page.tsx'),
+    },
+    {
+        slug:'integrations',
+        title:'two',
+        category:'integrations',
+        preview:'/preview/integrations/two',
+        code:loadCode('app/preview/integrations/two/page.tsx'),
+    },
+    {
+        slug:'integrations',
+        title:'three',
+        category:'integrations',
+        preview:'/preview/integrations/three',
+        code:loadCode('app/preview/integrations/three/page.tsx'),
+    },
+    {
+        slug:'integrations',
+        title:'four',
+        category:'integrations',
+        preview:'/preview/integrations/four',
+        code:loadCode('app/preview/integrations/four/page.tsx'),
+    },
+    {
+        slug:'integrations',
+        title:'five',
+        category:'integrations',
+        preview:'/preview/integrations/five',
+        code:loadCode('app/preview/integrations/five/page.tsx'),
+    },
+    {
+        slug:'integrations',
+        title:'six',
+        category:'integrations',
+        preview:'/preview/integrations/six',
+        code:loadCode('app/preview/integrations/six/page.tsx'),
+    },
+    {
+        slug:'integrations',
+        title:'seven',
+        category:'integrations',
+        preview:'/preview/integrations/seven',
+        code:loadCode('app/preview/integrations/seven/page.tsx'),
+    },
+    {
+        slug:'integrations',
+        title:'eight',
+        category:'integrations',
+        preview:'/preview/integrations/eight',
+        code:loadCode('app/preview/integrations/eight/page.tsx'),
+    },
 
-const blocksData: Block[] = files.map(filePath => {
-    const parts = filePath.split(path.sep)
-    const category = parts[2]
-    const title = parts[3]
-    return {
-        slug: category,
-        title,
-        category,
-        preview: `/preview/${category}/${title}`,
-        code: loadCode(filePath)
+    {
+        slug: 'content',
+        title: 'one',
+        category: 'content',
+        preview: '/preview/content/one',
+        code: loadCode('app/preview/content/one/page.tsx'),
+    },
+    {
+        slug: 'content',
+        title: 'seven',
+        category: 'content',
+        preview: '/preview/content/seven',
+        code: loadCode('app/preview/content/seven/page.tsx'),
+    },
+    {
+        slug: 'content',
+        title: 'two',
+        category: 'content',
+        preview: '/preview/content/two',
+        code: loadCode('app/preview/content/two/page.tsx'),
+    },
+    {
+        slug: 'content',
+        title: 'three',
+        category: 'content',
+        preview: '/preview/content/three',
+        code: loadCode('app/preview/content/three/page.tsx'),
+    },
+    {
+        slug: 'content',
+        title: 'four',
+        category: 'content',
+        preview: '/preview/content/four',
+        code: loadCode('app/preview/content/four/page.tsx'),
+    },
+    {
+        slug: 'content',
+        title: 'five',
+        category: 'content',
+        preview: '/preview/content/five',
+        code: loadCode('app/preview/content/five/page.tsx'),
+    },
+    {
+        slug: 'content',
+        title: 'six',
+        category: 'content',
+        preview: '/preview/content/six',
+        code: loadCode('app/preview/content/six/page.tsx'),
+    },
+    {
+        slug: 'stats',
+        title: 'one',
+        category: 'stats',
+        preview: '/preview/stats/one',
+        code: loadCode('app/preview/stats/one/page.tsx'),
+    },
+    {
+        slug: 'stats',
+        title: 'two',
+        category: 'stats',
+        preview: '/preview/stats/two',
+        code: loadCode('app/preview/stats/two/page.tsx'),
+    },
+    {
+        slug: 'stats',
+        title: 'three',
+        category: 'stats',
+        preview: '/preview/stats/three',
+        code: loadCode('app/preview/stats/three/page.tsx'),
+    },
+    {
+        slug: 'stats',
+        title: 'four',
+        category: 'stats',
+        preview: '/preview/stats/four',
+        code: loadCode('app/preview/stats/four/page.tsx'),
+    },
+    {
+        slug: 'team',
+        title: 'one',
+        category: 'team',
+        preview: '/preview/team/one',
+        code: loadCode('app/preview/team/one/page.tsx'),
+    },
+    {
+        slug: 'team',
+        title: 'two',
+        category: 'team',
+        preview: '/preview/team/two',
+        code: loadCode('app/preview/team/two/page.tsx'),
+    },
+
+    {
+        slug: 'testimonials',
+        title: 'one',
+        category: 'testimonials',
+        preview: '/preview/testimonials/one',
+        code: loadCode('app/preview/testimonials/one/page.tsx'),
+    },
+    {
+        slug: 'testimonials',
+        title: 'two',
+        category: 'testimonials',
+        preview: '/preview/testimonials/two',
+        code: loadCode('app/preview/testimonials/two/page.tsx'),
+    },
+    {
+        slug: 'testimonials',
+        title: 'three',
+        category: 'testimonials',
+        preview: '/preview/testimonials/three',
+        code: loadCode('app/preview/testimonials/three/page.tsx'),
+    },
+    {
+        slug: 'testimonials',
+        title: 'four',
+        category: 'testimonials',
+        preview: '/preview/testimonials/four',
+        code: loadCode('app/preview/testimonials/four/page.tsx'),
+    },
+    {
+        slug: 'testimonials',
+        title: 'five',
+        category: 'testimonials',
+        preview: '/preview/testimonials/five',
+        code: loadCode('app/preview/testimonials/five/page.tsx'),
+    },
+    {
+        slug: 'testimonials',
+        title: 'six',
+        category: 'testimonials',
+        preview: '/preview/testimonials/six',
+        code: loadCode('app/preview/testimonials/six/page.tsx'),
+    },
+
+
+    {
+        slug: 'call-to-action',
+        title: 'one',
+        category: 'call-to-action',
+        preview: '/preview/call-to-action/one',
+        code: loadCode('app/preview/call-to-action/one/page.tsx'),
+    },
+    {
+        slug: 'call-to-action',
+        title: 'two',
+        category: 'call-to-action',
+        preview: '/preview/call-to-action/two',
+        code: loadCode('app/preview/call-to-action/two/page.tsx'),
+    },
+    {
+        slug: 'call-to-action',
+        title: 'three',
+        category: 'call-to-action',
+        preview: '/preview/call-to-action/three',
+        code: loadCode('app/preview/call-to-action/three/page.tsx'),
+    },
+
+    {
+        slug: 'footer',
+        title: 'one',
+        category: 'footer',
+        preview: '/preview/footer/one',
+        code: loadCode('app/preview/footer/one/page.tsx'),
+    },
+    {
+        slug: 'footer',
+        title: 'two',
+        category: 'footer',
+        preview: '/preview/footer/two',
+        code: loadCode('app/preview/footer/two/page.tsx'),
+    },
+    {
+        slug: 'footer',
+        title: 'three',
+        category: 'footer',
+        preview: '/preview/footer/three',
+        code: loadCode('app/preview/footer/three/page.tsx'),
+    },
+    {
+        slug: 'footer',
+        title: 'four',
+        category: 'footer',
+        preview: '/preview/footer/four',
+        code: loadCode('app/preview/footer/four/page.tsx'),
+    },
+    {
+        slug: 'footer',
+        title: 'five',
+        category: 'footer',
+        preview: '/preview/footer/five',
+        code: loadCode('app/preview/footer/five/page.tsx'),
+    },
+
+    {
+        slug: 'pricing',
+        title: 'one',
+        category: 'pricing',
+        preview: '/preview/pricing/one',
+        code: loadCode('app/preview/pricing/one/page.tsx'),
+    },
+    {
+        slug: 'pricing',
+        title: 'two',
+        category: 'pricing',
+        preview: '/preview/pricing/two',
+        code: loadCode('app/preview/pricing/two/page.tsx'),
+    },
+    {
+        slug: 'pricing',
+        title: 'three',
+        category: 'pricing',
+        preview: '/preview/pricing/three',
+        code: loadCode('app/preview/pricing/three/page.tsx'),
+    },
+    {
+        slug: 'pricing',
+        title: 'four',
+        category: 'pricing',
+        preview: '/preview/pricing/four',
+        code: loadCode('app/preview/pricing/four/page.tsx'),
+    },
+    {
+        slug: 'pricing',
+        title: 'five',
+        category: 'pricing',
+        preview: '/preview/pricing/five',
+        code: loadCode('app/preview/pricing/five/page.tsx'),
+    },
+
+    {
+        slug: 'comparator',
+        title: 'one',
+        category: 'comparator',
+        preview: '/preview/comparator/one',
+        code: loadCode('app/preview/comparator/one/page.tsx'),
+    },
+
+    {
+        slug: 'faqs',
+        title: 'one',
+        category: 'faqs',
+        preview: '/preview/faqs/one',
+        code: loadCode('app/preview/faqs/one/page.tsx'),
+    },
+    {
+        slug: 'faqs',
+        title: 'two',
+        category: 'faqs',
+        preview: '/preview/faqs/two',
+        code: loadCode('app/preview/faqs/two/page.tsx'),
+    },
+    {
+        slug: 'faqs',
+        title: 'three',
+        category: 'faqs',
+        preview: '/preview/faqs/three',
+        code: loadCode('app/preview/faqs/three/page.tsx'),
+    },
+    {
+        slug: 'faqs',
+        title: 'four',
+        category: 'faqs',
+        preview: '/preview/faqs/four',
+        code: loadCode('app/preview/faqs/four/page.tsx'),
+    },
+
+    {
+        slug: 'login',
+        title: 'one',
+        category: 'login',
+        preview: '/preview/login/one',
+        code: loadCode('app/preview/login/one/page.tsx'),
+    },
+    {
+        slug: 'login',
+        title: 'two',
+        category: 'login',
+        preview: '/preview/login/two',
+        code: loadCode('app/preview/login/two/page.tsx'),
+    },
+    {
+        slug: 'login',
+        title: 'three',
+        category: 'login',
+        preview: '/preview/login/three',
+        code: loadCode('app/preview/login/three/page.tsx'),
+    },
+
+    {
+        slug: 'sign-up',
+        title: 'one',
+        category: 'sign-up',
+        preview: '/preview/sign-up/one',
+        code: loadCode('app/preview/sign-up/one/page.tsx'),
+    },
+    {
+        slug: 'sign-up',
+        title: 'two',
+        category: 'sign-up',
+        preview: '/preview/sign-up/two',
+        code: loadCode('app/preview/sign-up/two/page.tsx'),
+    },
+    {
+        slug: 'sign-up',
+        title: 'three',
+        category: 'sign-up',
+        preview: '/preview/sign-up/three',
+        code: loadCode('app/preview/sign-up/three/page.tsx'),
+    },
+    {
+        slug: 'forgot-password',
+        title: 'one',
+        category: 'forgot-password',
+        preview: '/preview/forgot-password/one',
+        code: loadCode('app/preview/forgot-password/one/page.tsx'),
+    },
+    {
+        slug: 'forgot-password',
+        title: 'two',
+        category: 'forgot-password',
+        preview: '/preview/forgot-password/two',
+        code: loadCode('app/preview/forgot-password/two/page.tsx'),
+    },
+    {
+        slug: 'contact',
+        title: 'one',
+        category: 'contact',
+        preview: '/preview/contact/one',
+        code: loadCode('app/preview/contact/one/page.tsx'),
+    },
+    {
+        slug: 'contact',
+        title: 'two',
+        category: 'contact',
+        preview: '/preview/contact/two',
+        code: loadCode('app/preview/contact/two/page.tsx'),
     }
-})
-
-export const blocks = blocksData.sort((a, b) => {
-    const categoryOrder = [
-        'hero-section', 'logo-cloud', 'features', 'integrations', 
-        'content', 'stats', 'team', 'testimonials', 'call-to-action', 
-        'footer', 'pricing', 'comparator', 'faqs', 'login', 
-        'sign-up', 'forgot-password', 'contact'
-    ];
-    const getCategoryIndex = (cat: string) => {
-        const index = categoryOrder.indexOf(cat);
-        return index === -1 ? categoryOrder.length : index;
-    };
-    const categoryComparison = getCategoryIndex(a.category) - getCategoryIndex(b.category);
-    if (categoryComparison !== 0) return categoryComparison;
-    
-    return getNumericValue(a.title) - getNumericValue(b.title);
-});
+]
 
 export const categories = [...new Set(blocks.map((b) => b.category))]
