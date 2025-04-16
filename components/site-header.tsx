@@ -15,7 +15,7 @@ export const SiteHeader = () => {
 
     return (
         <header className="border-b dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
-            <div className="mx-auto flex max-w-7xl justify-between px-6 py-4 lg:px-4">
+            <div className="mx-auto flex max-w-7xl justify-between px-6 py-3 lg:px-4">
                 <div className="flex gap-4 md:gap-6">
                     <Link
                         href="/"

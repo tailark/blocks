@@ -1,10 +1,10 @@
-# NSUI
+# Tailark
 
 Speed up your workflow with responsive, pre-built shadcn-UI blocks designed for marketing websites.
 
-[NSUI](https://tailark.com)
+[Tailark](https://tailark.com)
 
-![NSUI Image](app/opengraph-image.png)
+![Tailark Image](app/opengraph-image.png)
 
 
 ## Getting Started
