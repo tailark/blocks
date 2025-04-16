@@ -19,7 +19,7 @@ export const SiteFooter = () => (
                     variant="link"
                     className="text-foreground decoration-primary -ml-4 gap-1">
                     <Link
-                        href="https://github.com/Meschacirung/cnblocks"
+                        href="https://github.com/tailark/blocks"
                         target="_blank"
                         className="text-sm">
                         GitHub

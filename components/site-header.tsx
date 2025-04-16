@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Logo } from '@/components/logo'
 import { Button } from '@/components/ui/button'
-import { ArrowUpRight } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { cn } from '@/lib/utils'
 
@@ -95,7 +94,7 @@ export const SiteHeader = () => {
                         size="sm"
                         className="size-8 rounded-full">
                         <Link
-                            href="https://github.com/Meschacirung/cnblocks/"
+                            href="https://github.com/tailark/blocks"
                             target="_blank"
                             aria-label="GitHub"
                             rel="noreferrer"
