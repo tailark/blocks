@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
     const { category } = await params
     return {
-        title: `Shadcn ${category} Blocks`,
+        title: `Shadcn ${category} Blocks | Tailark`,
     }
 }
 

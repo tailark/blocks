@@ -1,5 +1,5 @@
 import { Gemini, Replit, MagicUI, VSCodium, MediaWiki, GooglePaLM } from '@/components/logos'
-import { Logo } from '@/components/logo'
+import { LogoIcon } from '@/components/logo'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -43,7 +43,7 @@ export default function IntegrationsSection() {
                                 <IntegrationCard
                                     className="shadow-black-950/10 dark:bg-background size-16 border-black/20 shadow-xl dark:border-white/25 dark:shadow-white/15"
                                     isCenter={true}>
-                                    <Logo className="text-blue-500" />
+                                    <LogoIcon className="text-blue-500" />
                                 </IntegrationCard>
                             </div>
                         </div>

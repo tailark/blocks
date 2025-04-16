@@ -49,12 +49,6 @@ export default function Home() {
             />
             <BlockPreview
                 previewOnly
-                preview="/examples/pricing/one"
-                category="page"
-                title="Pricing page"
-            />
-            <BlockPreview
-                previewOnly
                 preview="/examples/about/one"
                 category="page"
                 title="About page"
