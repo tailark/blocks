@@ -2,7 +2,7 @@
 
 Speed up your workflow with responsive, pre-built shadcn-UI blocks designed for marketing websites.
 
-[NSUI](https://nsui.irung.me)
+[NSUI](https://tailark.com)
 
 ![NSUI Image](app/opengraph-image.png)
 

@@ -60,7 +60,14 @@ export default function HeroSection() {
                 </section>
                 <section className="py-16 md:py-32">
                     <div className="mx-auto max-w-5xl space-y-16 px-6 md:space-y-32">
-                        <img className="rounded-(--radius) grayscale" src="https://images.unsplash.com/photo-1530099486328-e021101a494a?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="team image" height="" width="" loading="lazy" />
+                        <img
+                            className="rounded-(--radius) grayscale"
+                            src="https://images.unsplash.com/photo-1530099486328-e021101a494a?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="team image"
+                            height=""
+                            width=""
+                            loading="lazy"
+                        />
 
                         <div className="mx-auto grid max-w-lg gap-6 md:gap-12">
                             <span className="text-muted-foreground text-sm">Our Mission</span>
@@ -68,7 +75,11 @@ export default function HeroSection() {
                             <div className="space-y-6">
                                 <p>Lyra is evolving to be more than just the models. It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate.</p>
 
-                                <Button asChild variant="secondary" size="sm" className="gap-1 pr-1.5">
+                                <Button
+                                    asChild
+                                    variant="secondary"
+                                    size="sm"
+                                    className="gap-1 pr-1.5">
                                     <Link href="#">
                                         <span>Learn More</span>
                                         <ChevronRight className="size-2" />
@@ -82,7 +93,9 @@ export default function HeroSection() {
                 <section className="px-6 py-16 md:py-32">
                     <div className="mx-auto max-w-lg">
                         <h2 className="mb-8 text-4xl font-medium md:mb-16">Our Story</h2>
-                        <div aria-hidden className="relative -mx-4 mb-8 aspect-video md:mb-16">
+                        <div
+                            aria-hidden
+                            className="relative -mx-4 mb-8 aspect-video md:mb-16">
                             <div className="bg-background absolute inset-0 m-auto size-fit p-8">
                                 <LogoStroke className="h-fit w-20 text-blue-500" />
                             </div>
@@ -91,7 +104,7 @@ export default function HeroSection() {
 
                         <p className="text-accent-foreground">Lyra is evolving to be more than just the models. It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate.</p>
                         <p className="mt-4">
-                            Tailus UI. <span className="font-bold">It supports an entire ecosystem</span> — from products innovate. Sit minus, quod debitis autem quia aspernatur delectus impedit modi, neque non id ad dignissimos? Saepe deleniti perferendis beatae.
+                            Tailark. <span className="font-bold">It supports an entire ecosystem</span> — from products innovate. Sit minus, quod debitis autem quia aspernatur delectus impedit modi, neque non id ad dignissimos? Saepe deleniti perferendis beatae.
                         </p>
                     </div>
                 </section>
@@ -106,7 +119,14 @@ export default function HeroSection() {
                                 {members.map((member, index) => (
                                     <div key={index}>
                                         <div className="bg-background size-16 rounded-full border p-0.5 shadow shadow-zinc-950/5">
-                                            <img className="aspect-square rounded-full object-cover" src={member.avatar} alt={member.name} height="460" width="460" loading="lazy" />
+                                            <img
+                                                className="aspect-square rounded-full object-cover"
+                                                src={member.avatar}
+                                                alt={member.name}
+                                                height="460"
+                                                width="460"
+                                                loading="lazy"
+                                            />
                                         </div>
                                         <span className="mt-2 block text-sm">{member.name}</span>
                                         <span className="text-muted-foreground block text-xs">{member.role}</span>
@@ -117,11 +137,20 @@ export default function HeroSection() {
 
                         <div className="mt-6">
                             <h3 className="mb-6 text-lg font-medium">Engineering</h3>
-                            <div data-rounded="full" className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
+                            <div
+                                data-rounded="full"
+                                className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
                                 {members.map((member, index) => (
                                     <div key={index}>
                                         <div className="bg-background size-16 rounded-full border p-0.5 shadow shadow-zinc-950/5">
-                                            <img className="aspect-square rounded-full object-cover" src={member.avatar} alt={member.name} height="460" width="460" loading="lazy" />
+                                            <img
+                                                className="aspect-square rounded-full object-cover"
+                                                src={member.avatar}
+                                                alt={member.name}
+                                                height="460"
+                                                width="460"
+                                                loading="lazy"
+                                            />
                                         </div>
                                         <span className="mt-2 block text-sm">{member.name}</span>
                                         <span className="text-muted-foreground block text-xs">{member.role}</span>
@@ -132,11 +161,20 @@ export default function HeroSection() {
 
                         <div className="mt-6">
                             <h3 className="mb-6 text-lg font-medium">Marketing</h3>
-                            <div data-rounded="full" className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
+                            <div
+                                data-rounded="full"
+                                className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
                                 {members.map((member, index) => (
                                     <div key={index}>
                                         <div className="bg-background size-16 rounded-full border p-0.5 shadow shadow-zinc-950/5">
-                                            <img className="aspect-square rounded-full object-cover" src={member.avatar} alt={member.name} height="460" width="460" loading="lazy" />
+                                            <img
+                                                className="aspect-square rounded-full object-cover"
+                                                src={member.avatar}
+                                                alt={member.name}
+                                                height="460"
+                                                width="460"
+                                                loading="lazy"
+                                            />
                                         </div>
                                         <span className="mt-2 block text-sm">{member.name}</span>
                                         <span className="text-muted-foreground block text-xs">{member.role}</span>
@@ -150,17 +188,83 @@ export default function HeroSection() {
                     <div className="mx-auto max-w-5xl px-6">
                         <h2 className="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
                         <div className="mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/nvidia.svg" alt="Nvidia Logo" height="20" width="auto" />
-                            <img className="h-4 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/column.svg" alt="Column Logo" height="16" width="auto" />
-                            <img className="h-4 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/github.svg" alt="GitHub Logo" height="16" width="auto" />
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/nike.svg" alt="Nike Logo" height="20" width="auto" />
-                            <img className="h-4 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/laravel.svg" alt="Laravel Logo" height="16" width="auto" />
-                            <img className="h-7 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/lilly.svg" alt="Lilly Logo" height="28" width="auto" />
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg" alt="Lemon Squeezy Logo" height="20" width="auto" />
-                            <img className="h-6 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/openai.svg" alt="OpenAI Logo" height="24" width="auto" />
-                            <img className="h-4 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/tailwindcss.svg" alt="Tailwind CSS Logo" height="16" width="auto" />
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/vercel.svg" alt="Vercel Logo" height="20" width="auto" />
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/zapier.svg" alt="Zapier Logo" height="20" width="auto" />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/nvidia.svg"
+                                alt="Nvidia Logo"
+                                height="20"
+                                width="auto"
+                            />
+                            <img
+                                className="h-4 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/column.svg"
+                                alt="Column Logo"
+                                height="16"
+                                width="auto"
+                            />
+                            <img
+                                className="h-4 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/github.svg"
+                                alt="GitHub Logo"
+                                height="16"
+                                width="auto"
+                            />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/nike.svg"
+                                alt="Nike Logo"
+                                height="20"
+                                width="auto"
+                            />
+                            <img
+                                className="h-4 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/laravel.svg"
+                                alt="Laravel Logo"
+                                height="16"
+                                width="auto"
+                            />
+                            <img
+                                className="h-7 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/lilly.svg"
+                                alt="Lilly Logo"
+                                height="28"
+                                width="auto"
+                            />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
+                                alt="Lemon Squeezy Logo"
+                                height="20"
+                                width="auto"
+                            />
+                            <img
+                                className="h-6 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/openai.svg"
+                                alt="OpenAI Logo"
+                                height="24"
+                                width="auto"
+                            />
+                            <img
+                                className="h-4 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/tailwindcss.svg"
+                                alt="Tailwind CSS Logo"
+                                height="16"
+                                width="auto"
+                            />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/vercel.svg"
+                                alt="Vercel Logo"
+                                height="20"
+                                width="auto"
+                            />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/zapier.svg"
+                                alt="Zapier Logo"
+                                height="20"
+                                width="auto"
+                            />
                         </div>
                     </div>
                 </section>
@@ -172,13 +276,18 @@ export default function HeroSection() {
                             <p className="mt-4">Libero sapiente aliquam quibusdam aspernatur.</p>
 
                             <div className="mt-8 flex flex-wrap justify-center gap-4">
-                                <Button asChild size="lg">
+                                <Button
+                                    asChild
+                                    size="lg">
                                     <Link href="/">
                                         <span>Get Started</span>
                                     </Link>
                                 </Button>
 
-                                <Button asChild size="lg" variant="outline">
+                                <Button
+                                    asChild
+                                    size="lg"
+                                    variant="outline">
                                     <Link href="/">
                                         <span>Book Demo</span>
                                     </Link>
