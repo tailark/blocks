@@ -40,7 +40,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, preview, title
     const [cachedHeight, setCachedHeight] = useState<number | null>(null)
     const [isIframeCached, setIsIframeCached] = useState(false)
 
-    const terminalCode = `pnpm dlx shadcn@canary add https://nsui.irung.me/r/${category}-${titleToNumber(title)}.json`
+    const terminalCode = `pnpm dlx shadcn@canary add https://tailark.com/r/${category}-${titleToNumber(title)}.json`
 
     const { copied, copy } = useCopyToClipboard({ code: code as string, title, category, eventName: 'block_copy' })
     const { copied: cliCopied, copy: cliCopy } = useCopyToClipboard({ code: terminalCode, title, category, eventName: 'block_cli_copy' })

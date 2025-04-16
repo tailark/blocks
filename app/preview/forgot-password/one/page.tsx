@@ -1,4 +1,4 @@
-import { Logo } from '@/components/logo'
+import { LogoIcon } from '@/components/logo'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -15,7 +15,7 @@ export default function ForgotPasswordPage() {
                         <Link
                             href="/"
                             aria-label="go home">
-                            <Logo />
+                            <LogoIcon />
                         </Link>
                         <h1 className="mb-1 mt-4 text-xl font-semibold">Recover Password</h1>
                         <p className="text-sm">Enter your email to receive a reset link</p>

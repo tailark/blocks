@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'], 
     },
-    sitemap: 'https://nsui.irung.me/sitemap.xml',
+    sitemap: 'https://tailark.com/sitemap.xml',
   }
 }

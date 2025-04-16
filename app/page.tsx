@@ -11,33 +11,15 @@ export default function Home() {
             <section>
                 <div className="mx-4 max-w-7xl border-x px-4 py-16 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
                     <div className="mx-auto max-w-xl text-center">
+                        <p className="text-muted-foreground mb-12 text-balance text-sm">
+                            <span className="text-primary font-semibold">NSUI is now Tailark:</span> same modern marketing blocks, new name. Built with shadcn UI and TailwindCSS.
+                        </p>
                         <h1 className="text-balance text-3xl font-bold sm:text-4xl">Shadcn Marketing Blocks</h1>
                         <p className="mb-6 mt-3 text-balance text-base">Speed up your workflow with responsive, pre-built UI blocks designed for marketing websites.</p>
 
                         <Button>
                             <Link href="/hero-section">Explore blocks</Link>
                         </Button>
-                        <p className="text-muted-foreground mt-12 text-sm">
-                            <span className="text-primary font-semibold">Just Released:</span> New block categories including{' '}
-                            <Link
-                                href="/integrations"
-                                className="text-blue-600 hover:underline dark:text-blue-400">
-                                Integrations
-                            </Link>{' '}
-                            and{' '}
-                            <Link
-                                href="/forgot-password"
-                                className="text-blue-600 hover:underline dark:text-blue-400">
-                                Forgot Password
-                            </Link>
-                            . We've also added 3 new{' '}
-                            <Link
-                                href="/faqs"
-                                className="text-blue-600 hover:underline dark:text-blue-400">
-                                FAQ
-                            </Link>{' '}
-                            blocks to enhance your site's user experience.
-                        </p>
                     </div>
                 </div>
             </section>
@@ -46,12 +28,6 @@ export default function Home() {
                 preview="/examples/home/one"
                 category="page"
                 title="Home page"
-            />
-            <BlockPreview
-                previewOnly
-                preview="/examples/pricing/one"
-                category="page"
-                title="Pricing page"
             />
             <BlockPreview
                 previewOnly

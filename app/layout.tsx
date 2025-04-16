@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-    title: 'Shadcn Marketing Blocks',
+    title: 'Shadcn Marketing Blocks | Tailark',
     description: 'Speed up your workflow with responsive, pre-built UI blocks designed for marketing websites.',
 }
 
@@ -26,7 +26,9 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html
+            lang="en"
+            suppressHydrationWarning>
             <body className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}>
                 <ThemeProvider
                     attribute="class"

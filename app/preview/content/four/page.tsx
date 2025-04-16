@@ -11,9 +11,13 @@ export default function ContentSection() {
                     <div className="space-y-6">
                         <p>Lyra is evolving to be more than just the models. It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate.</p>
                         <p>
-                            Tailus UI. <span className="font-bold">It supports an entire ecosystem</span> — from products innovate. Sit minus, quod debitis autem quia aspernatur delectus impedit modi, neque non id ad dignissimos? Saepe deleniti perferendis beatae.
+                            Tailark. <span className="font-bold">It supports an entire ecosystem</span> — from products innovate. Sit minus, quod debitis autem quia aspernatur delectus impedit modi, neque non id ad dignissimos? Saepe deleniti perferendis beatae.
                         </p>
-                        <Button asChild variant="secondary" size="sm" className="gap-1 pr-1.5">
+                        <Button
+                            asChild
+                            variant="secondary"
+                            size="sm"
+                            className="gap-1 pr-1.5">
                             <Link href="#">
                                 <span>Learn More</span>
                                 <ChevronRight className="size-2" />
