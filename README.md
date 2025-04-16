@@ -1,6 +1,6 @@
 # Tailark
 
-Speed up your workflow with responsive, pre-built shadcn-UI blocks designed for marketing websites.
+Speed up your workflow with responsive, pre-built shadcn-UI and Tailwindcss blocks designed for marketing websites.
 
 [Tailark](https://tailark.com)
 
