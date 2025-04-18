@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: 'Shadcn Marketing Blocks | Tailark',
     description: 'Speed up your workflow with responsive, pre-built UI blocks designed for marketing websites.',
+    keywords: 'shadcn, ui, blocks, marketing, components, tailwind, react, nextjs, tailark, responsive, design system, templates, template, hero section, features, footers, contact forms, Bento, Call To Action, Testimonials, logo cloud, integrations, content, team, pricing, login, sign in, logout, stats FAQ sections',
 }
 
 export default function RootLayout({
