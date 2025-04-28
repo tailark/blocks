@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "registry:build": "shadcn build"
+    "registry:build": "npx smart-registry@latest 'app/preview'"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.7",

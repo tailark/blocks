@@ -1,0 +1,31 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "app-preview-testimonials-four",
+  "type": "registry:page",
+  "dependencies": [
+    "@radix-ui/react-avatar",
+    "clsx",
+    "react",
+    "tailwind-merge"
+  ],
+  "files": [
+    {
+      "type": "registry:page",
+      "target": "app/preview/testimonials/four/page.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'\n\nexport default function TestimonialsSection() {\n    return (\n        <section className=\"py-16 md:py-32\">\n            <div className=\"mx-auto max-w-5xl px-6\">\n                <div className=\"mx-auto max-w-2xl text-center\">\n                    <blockquote>\n                        <p className=\"text-lg font-medium sm:text-xl md:text-3xl\">Using TailsUI has been like unlocking a secret design superpower. It's the perfect fusion of simplicity and versatility, enabling us to create UIs that are as stunning as they are user-friendly.</p>\n\n                        <div className=\"mt-12 flex items-center justify-center gap-6\">\n                            <Avatar className=\"size-12\">\n                                <AvatarImage src=\"https://tailus.io/images/reviews/shekinah.webp\" alt=\"Shekinah Tshiokufila\" height=\"400\" width=\"400\" loading=\"lazy\" />\n                                <AvatarFallback>ST</AvatarFallback>\n                            </Avatar>\n\n                            <div className=\"space-y-1 border-l pl-6\">\n                                <cite className=\"font-medium\">John Doe</cite>\n                                <span className=\"text-muted-foreground block text-sm\">CEO, Nvidia</span>\n                            </div>\n                        </div>\n                    </blockquote>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+      "path": "app/preview/testimonials/four/page.tsx"
+    },
+    {
+      "type": "registry:lib",
+      "target": "lib/utils.ts",
+      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n\nexport const titleToNumber = (title: string): number => {\n    const titles = [\"one\", \"two\", \"three\", \"four\", \"five\", \"six\", \"seven\", \"eight\", \"nine\", \"ten\", \"eleven\", \"twelve\", \"thirteen\", \"fourteen\", \"fifteen\", \"sixteen\", \"seventeen\", \"eighteen\", \"nineteen\", \"twenty\"];\n    return titles.indexOf(title.toLowerCase()) + 1;\n};",
+      "path": "lib/utils.ts"
+    },
+    {
+      "type": "registry:ui",
+      "target": "components/ui/avatar.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as AvatarPrimitive from \"@radix-ui/react-avatar\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Avatar({\n  className,\n  ...props\n}: React.ComponentProps<typeof AvatarPrimitive.Root>) {\n  return (\n    <AvatarPrimitive.Root\n      data-slot=\"avatar\"\n      className={cn(\n        \"relative flex size-8 shrink-0 overflow-hidden rounded-full\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction AvatarImage({\n  className,\n  ...props\n}: React.ComponentProps<typeof AvatarPrimitive.Image>) {\n  return (\n    <AvatarPrimitive.Image\n      data-slot=\"avatar-image\"\n      className={cn(\"aspect-square size-full\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction AvatarFallback({\n  className,\n  ...props\n}: React.ComponentProps<typeof AvatarPrimitive.Fallback>) {\n  return (\n    <AvatarPrimitive.Fallback\n      data-slot=\"avatar-fallback\"\n      className={cn(\n        \"bg-muted flex size-full items-center justify-center rounded-full\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Avatar, AvatarImage, AvatarFallback }\n",
+      "path": "components/ui/avatar.tsx"
+    }
+  ]
+}
