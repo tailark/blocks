@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { LogoIcon } from './logo'
 import { Button } from './ui/button'
 import { ArrowUpRight } from 'lucide-react'
-import { ThemeToggle } from './ThemeToggle'
+import { ThemeToggle } from './theme-toggle'
 
 export const SiteFooter = () => (
     <footer className="pb-16">

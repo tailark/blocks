@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { GoogleAnalytics } from '@next/third-parties/google'
-import ServiceWorkerInit from '@/components/ServiceWorkerInit'
+import ServiceWorkerInit from '@/components/service-worker-init'
 
 const geistSans = Geist({
     variable: '--font-geist-sans',

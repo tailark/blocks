@@ -1,6 +1,6 @@
 'use client'
 import { RotateCw } from 'lucide-react'
-import { ThemeToggle } from './ThemeToggle'
+import { ThemeToggle } from './theme-toggle'
 import { Button } from './ui/button'
 
 export const DevToolbar = () => {

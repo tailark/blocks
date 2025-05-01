@@ -1,4 +1,4 @@
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
+import { ScrollArea, ScrollBar } from '@repo/core/ui/scroll-area'
 import { CategoryScrollManager } from './category-scroll-manager'
 import { ActiveCategoryLinks } from './active-category-links'
 
