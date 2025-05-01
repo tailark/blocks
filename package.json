@@ -2,6 +2,12 @@
   "name": "cnblocks",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Méschac Irung",
+    "email": "meschacirung@gmail.com",
+    "url": "https://x.com/MeschacIrung"
+  },
+  "packageManager": "pnpm@9.10.0",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -55,6 +61,7 @@
     "prettier-plugin-tailwindcss": "0.6.11",
     "shiki": "^2.4.1",
     "tailwindcss": "^4.1.3",
+    "turbo": "^2.5.2",
     "typescript": "^5"
   }
 }
