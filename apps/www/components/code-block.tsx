@@ -22,7 +22,7 @@ export async function highlight(code: string, lang: BundledLanguage) {
     }) as JSX.Element
 }
 
-type Props = {
+export interface CodeBlockProps {
     code: string | null
     lang: BundledLanguage
     initial?: JSX.Element
@@ -31,7 +31,7 @@ type Props = {
     className?: string
 }
 
-export default function CodeBlock({ code, lang, initial, maxHeight, preHighlighted, className }: Props) {
+export default function CodeBlock({ code, lang, initial, maxHeight, preHighlighted, className }: CodeBlockProps) {
     const [content, setContent] = useState<JSX.Element | null>(preHighlighted || initial || null)
 
     useLayoutEffect(() => {

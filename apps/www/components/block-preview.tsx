@@ -10,13 +10,14 @@ import { useCopyToClipboard } from '@/hooks/useClipboard'
 import { useMedia } from 'use-media'
 import { Button } from '@tailark/core/ui/button'
 import { cn, titleToNumber } from '@tailark/core/lib/utils'
-import CodeBlock from './code-block'
 import Link from 'next/link'
 import { OpenInV0Button } from './open-in-v0'
 import { isUrlCached } from '@/lib/serviceWorker'
+import { CodeEditor, File } from './code-editor'
 
 export interface BlockPreviewProps {
     code?: string
+    codes?: File
     preview: string
     title: string
     category: string
@@ -32,7 +33,7 @@ const LGSIZE = 82
 
 const getCacheKey = (src: string) => `iframe-cache-${src}`
 
-export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, preview, title, category, previewOnly }) => {
+export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview, title, category, previewOnly }) => {
     const [width, setWidth] = useState(DEFAULTSIZE)
     const [mode, setMode] = useState<'preview' | 'code'>('preview')
     const [iframeHeight, setIframeHeight] = useState(0)
@@ -150,7 +151,9 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, preview, title
     }, [preview, shouldLoadIframe])
 
     return (
-        <section className="group mb-16 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
+        <section
+            id={`${title}`}
+            className="group mb-16 scroll-my-6 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
             <div className="relative border-y">
                 <div
                     aria-hidden
@@ -159,7 +162,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, preview, title
                     <div className="to-(--color-border) absolute bottom-0 right-0 top-0 w-px bg-gradient-to-b from-transparent to-75%"></div>
                 </div>
 
-                <div className="relative z-10 mx-auto flex max-w-7xl justify-between py-1.5 pl-8 pr-6 [--color-border:var(--color-zinc-200)] md:py-2 lg:pl-6 lg:pr-2 dark:[--color-border:var(--color-zinc-800)]">
+                <div className="relative z-10 mx-auto flex max-w-7xl justify-between py-1.5 pl-8 pr-6 [--color-border:var(--color-zinc-200)] md:py-2 lg:pl-5 lg:pr-2 dark:[--color-border:var(--color-zinc-800)]">
                     <div className="-ml-3 flex items-center gap-3">
                         {code && (
                             <>
@@ -326,7 +329,8 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, preview, title
 
                     <div className="bg-white dark:bg-transparent">
                         {mode == 'code' && (
-                            <CodeBlock
+                            <CodeEditor
+                                files={codes}
                                 code={code as string}
                                 lang="tsx"
                                 maxHeight={iframeHeight}

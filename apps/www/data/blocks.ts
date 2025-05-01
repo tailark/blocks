@@ -1,3 +1,4 @@
+import { File } from '@/components/code-editor'
 import fs from 'fs'
 import path from 'path'
 export interface Block {
@@ -5,7 +6,8 @@ export interface Block {
     title: string
     category: string
     preview: string
-    code: string
+    code?: string,
+    codes?: File[]
 }
 
 function loadCode(filePath: string): string {
@@ -31,11 +33,44 @@ function loadCode(filePath: string): string {
             return replacements[type] || `@/${type}`;
         })
 
-        code = code.replace(/from\s+['"]\.\/([^'"]+)['"]/g, 'from "@/components/$1"')
+        // Replace relative imports with absolute imports
+        code = code.replace(/from\s+['"]\.\.\/([^'"]+)['"]|from\s+['"]\.\/?([^'"]+)['"]/g, (match, p1, p2) => {
+            const importPath = p1 || p2
+            return `from "@/components/${importPath}"`
+        })
         
         return code
     }
     return '// Code not found'
+}
+
+function loadAllComponentsFromFolder(folderPath: string, category: string): File[] {
+    const result: File[] = []
+    const fullPath = path.join(process.cwd(), folderPath)
+    
+    if (!fs.existsSync(fullPath)) {
+        return result
+    }
+    
+    // Get all TSX files in the folder
+    const files = fs.readdirSync(fullPath)
+        .filter(file => file.endsWith('.tsx'))
+    
+    // For each file, load its content
+    for (const file of files) {
+        // Rename index.tsx to match the category name
+        const fileName = file === 'index.tsx' ? `${category}.tsx` : file
+        const filePath = path.join(folderPath, file)
+        const code = loadCode(filePath)
+        
+        result.push({
+            name: fileName,
+            lang: 'tsx',
+            code: code
+        })
+    }
+    
+    return result
 }
 
 function generateBlocks(): Block[] {
@@ -58,14 +93,19 @@ function generateBlocks(): Block[] {
             .map(dirent => dirent.name)
         
         for (const variant of variants) {
-            const blockFilePath = path.join('../../packages/default-kit/blocks', category, variant, 'index.tsx')
+            const blockFolderPath = path.join('../../packages/default-kit/blocks', category, variant)
+            const blockFilePath = path.join(blockFolderPath, 'index.tsx')
+            
+            // Load all components from the folder
+            const allComponents = loadAllComponentsFromFolder(blockFolderPath, category)
             
             blocks.push({
                 slug: `${category}-${variant}`,
                 title: variant,
                 category: category,
                 preview: `/preview/${category}/${variant}`,
-                code: loadCode(blockFilePath)
+                code: loadCode(blockFilePath),
+                codes: allComponents
             })
         }
     }
