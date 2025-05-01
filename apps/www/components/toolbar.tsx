@@ -1,7 +1,7 @@
 'use client'
 import { RotateCw } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
-import { Button } from './ui/button'
+import { Button } from '@tailark/core/ui/button'
 
 export const DevToolbar = () => {
     const handleReload = () => {

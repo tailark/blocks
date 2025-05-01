@@ -2,7 +2,7 @@ import { Logo } from '@tailark/core/components/logo'
 import { Button } from '@tailark/core/ui/button'
 import { Input } from '@tailark/core/ui/input'
 import { Label } from '@tailark/core/ui/label'
-import { cn } from '@/lib/utils'
+import { cn } from '@tailark/core/lib/utils'
 import { ChevronsUpDown } from 'lucide-react'
 import Link from 'next/link'
 

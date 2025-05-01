@@ -1,6 +1,6 @@
 import { Gemini, Replit, MagicUI, VSCodium, MediaWiki, GooglePaLM } from '@tailark/core/components/logos'
+import { cn } from '@tailark/core/lib/utils'
 import { LogoIcon } from '@tailark/core/components/logo'
-import { cn } from '@/lib/utils'
 import { Button } from '@tailark/core/ui/button'
 import Link from 'next/link'
 

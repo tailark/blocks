@@ -1,9 +1,9 @@
 import { Gemini, Replit, MagicUI, VSCodium, MediaWiki, GooglePaLM } from '@tailark/core/components/logos'
 import { LogoIcon } from '@tailark/core/components/logo'
-import { cn } from '@/lib/utils'
+import { cn } from '@tailark/core/lib/utils'
 import { Button } from '@tailark/core/ui/button'
 import Link from 'next/link'
-import { InfiniteSlider } from '@tailark/core/components/motion-primitives/infinite-slider'
+import { InfiniteSlider } from '@tailark/core/motion-primitives/infinite-slider'
 
 export default function IntegrationsSection() {
     return (
