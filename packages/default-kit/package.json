@@ -1,0 +1,14 @@
+{
+  "name": "@repo/default",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "exports": {
+  },
+  "devDependencies": {
+    "@repo/core": "workspace:*",
+    "typescript": "latest"
+  }
+}

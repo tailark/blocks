@@ -1,6 +1,6 @@
-import SnippetPreview from '@/components/snippet-preview'
-import { Button } from '@/components/snippets/buttons/button'
-import { ButtonProps } from '@/components/ui/button'
+import SnippetPreview from '@repo/core/components/snippet-preview'
+import { Button } from '@repo/core/components/snippets/buttons/button'
+import { ButtonProps } from '@repo/core/ui/button'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

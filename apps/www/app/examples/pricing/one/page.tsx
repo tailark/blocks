@@ -1,7 +1,7 @@
 import { Cpu, Sparkles } from 'lucide-react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@repo/core/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@repo/core/ui/card'
 import { Check } from 'lucide-react'
 
 const tableData = [
@@ -73,7 +73,9 @@ export default function HeroSection() {
 
                                     <ul className="list-outside space-y-3 text-sm">
                                         {['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
-                                            <li key={index} className="flex items-center gap-2">
+                                            <li
+                                                key={index}
+                                                className="flex items-center gap-2">
                                                 <Check className="size-3" />
                                                 {item}
                                             </li>
@@ -82,7 +84,10 @@ export default function HeroSection() {
                                 </CardContent>
 
                                 <CardFooter className="mt-auto">
-                                    <Button asChild variant="outline" className="w-full">
+                                    <Button
+                                        asChild
+                                        variant="outline"
+                                        className="w-full">
                                         <Link href="">Get Started</Link>
                                     </Button>
                                 </CardFooter>
@@ -102,7 +107,9 @@ export default function HeroSection() {
                                         <hr className="border-dashed" />
                                         <ul className="list-outside space-y-3 text-sm">
                                             {['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
-                                                <li key={index} className="flex items-center gap-2">
+                                                <li
+                                                    key={index}
+                                                    className="flex items-center gap-2">
                                                     <Check className="size-3" />
                                                     {item}
                                                 </li>
@@ -111,7 +118,9 @@ export default function HeroSection() {
                                     </CardContent>
 
                                     <CardFooter>
-                                        <Button asChild className="w-full">
+                                        <Button
+                                            asChild
+                                            className="w-full">
                                             <Link href="">Get Started</Link>
                                         </Button>
                                     </CardFooter>
@@ -130,7 +139,9 @@ export default function HeroSection() {
 
                                     <ul className="list-outside space-y-3 text-sm">
                                         {['Everything in Pro Plan', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
-                                            <li key={index} className="flex items-center gap-2">
+                                            <li
+                                                key={index}
+                                                className="flex items-center gap-2">
                                                 <Check className="size-3" />
                                                 {item}
                                             </li>
@@ -139,7 +150,10 @@ export default function HeroSection() {
                                 </CardContent>
 
                                 <CardFooter className="mt-auto">
-                                    <Button asChild variant="outline" className="w-full">
+                                    <Button
+                                        asChild
+                                        variant="outline"
+                                        className="w-full">
                                         <Link href="">Get Started</Link>
                                     </Button>
                                 </CardFooter>
@@ -157,19 +171,27 @@ export default function HeroSection() {
                                         <th className="space-y-3">
                                             <span className="block">Free</span>
 
-                                            <Button asChild variant="outline" size="sm">
+                                            <Button
+                                                asChild
+                                                variant="outline"
+                                                size="sm">
                                                 <Link href="#">Get Started</Link>
                                             </Button>
                                         </th>
                                         <th className="bg-muted rounded-t-(--radius) space-y-3 px-4">
                                             <span className="block">Pro</span>
-                                            <Button asChild size="sm">
+                                            <Button
+                                                asChild
+                                                size="sm">
                                                 <Link href="#">Get Started</Link>
                                             </Button>
                                         </th>
                                         <th className="space-y-3">
                                             <span className="block">Startup</span>
-                                            <Button asChild variant="outline" size="sm">
+                                            <Button
+                                                asChild
+                                                variant="outline"
+                                                size="sm">
                                                 <Link href="#">Get Started</Link>
                                             </Button>
                                         </th>
@@ -186,12 +208,22 @@ export default function HeroSection() {
                                         <td></td>
                                     </tr>
                                     {tableData.slice(-4).map((row, index) => (
-                                        <tr key={index} className="*:border-b *:py-3">
+                                        <tr
+                                            key={index}
+                                            className="*:border-b *:py-3">
                                             <td className="text-muted-foreground">{row.feature}</td>
                                             <td>
                                                 {row.free === true ? (
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
-                                                        <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        fill="currentColor"
+                                                        className="size-4">
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                            clipRule="evenodd"
+                                                        />
                                                     </svg>
                                                 ) : (
                                                     row.free
@@ -200,8 +232,16 @@ export default function HeroSection() {
                                             <td className="bg-muted border-none px-4">
                                                 <div className="-mb-3 border-b py-3">
                                                     {row.pro === true ? (
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
-                                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 24 24"
+                                                            fill="currentColor"
+                                                            className="size-4">
+                                                            <path
+                                                                fillRule="evenodd"
+                                                                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                                clipRule="evenodd"
+                                                            />
                                                         </svg>
                                                     ) : (
                                                         row.pro
@@ -210,8 +250,16 @@ export default function HeroSection() {
                                             </td>
                                             <td>
                                                 {row.startup === true ? (
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
-                                                        <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        fill="currentColor"
+                                                        className="size-4">
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                            clipRule="evenodd"
+                                                        />
                                                     </svg>
                                                 ) : (
                                                     row.startup
@@ -229,12 +277,22 @@ export default function HeroSection() {
                                         <td></td>
                                     </tr>
                                     {tableData.map((row, index) => (
-                                        <tr key={index} className="*:border-b *:py-3">
+                                        <tr
+                                            key={index}
+                                            className="*:border-b *:py-3">
                                             <td className="text-muted-foreground">{row.feature}</td>
                                             <td>
                                                 {row.free === true ? (
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
-                                                        <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        fill="currentColor"
+                                                        className="size-4">
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                            clipRule="evenodd"
+                                                        />
                                                     </svg>
                                                 ) : (
                                                     row.free
@@ -243,8 +301,16 @@ export default function HeroSection() {
                                             <td className="bg-muted border-none px-4">
                                                 <div className="-mb-3 border-b py-3">
                                                     {row.pro === true ? (
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
-                                                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 24 24"
+                                                            fill="currentColor"
+                                                            className="size-4">
+                                                            <path
+                                                                fillRule="evenodd"
+                                                                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                                clipRule="evenodd"
+                                                            />
                                                         </svg>
                                                     ) : (
                                                         row.pro
@@ -253,8 +319,16 @@ export default function HeroSection() {
                                             </td>
                                             <td>
                                                 {row.startup === true ? (
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-4">
-                                                        <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 24 24"
+                                                        fill="currentColor"
+                                                        className="size-4">
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                                                            clipRule="evenodd"
+                                                        />
                                                     </svg>
                                                 ) : (
                                                     row.startup
@@ -277,17 +351,83 @@ export default function HeroSection() {
                     <div className="mx-auto max-w-5xl px-6">
                         <h2 className="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
                         <div className="mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/nvidia.svg" alt="Nvidia Logo" height="20" width="auto" />
-                            <img className="h-4 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/column.svg" alt="Column Logo" height="16" width="auto" />
-                            <img className="h-4 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/github.svg" alt="GitHub Logo" height="16" width="auto" />
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/nike.svg" alt="Nike Logo" height="20" width="auto" />
-                            <img className="h-4 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/laravel.svg" alt="Laravel Logo" height="16" width="auto" />
-                            <img className="h-7 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/lilly.svg" alt="Lilly Logo" height="28" width="auto" />
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg" alt="Lemon Squeezy Logo" height="20" width="auto" />
-                            <img className="h-6 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/openai.svg" alt="OpenAI Logo" height="24" width="auto" />
-                            <img className="h-4 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/tailwindcss.svg" alt="Tailwind CSS Logo" height="16" width="auto" />
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/vercel.svg" alt="Vercel Logo" height="20" width="auto" />
-                            <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/zapier.svg" alt="Zapier Logo" height="20" width="auto" />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/nvidia.svg"
+                                alt="Nvidia Logo"
+                                height="20"
+                                width="auto"
+                            />
+                            <img
+                                className="h-4 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/column.svg"
+                                alt="Column Logo"
+                                height="16"
+                                width="auto"
+                            />
+                            <img
+                                className="h-4 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/github.svg"
+                                alt="GitHub Logo"
+                                height="16"
+                                width="auto"
+                            />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/nike.svg"
+                                alt="Nike Logo"
+                                height="20"
+                                width="auto"
+                            />
+                            <img
+                                className="h-4 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/laravel.svg"
+                                alt="Laravel Logo"
+                                height="16"
+                                width="auto"
+                            />
+                            <img
+                                className="h-7 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/lilly.svg"
+                                alt="Lilly Logo"
+                                height="28"
+                                width="auto"
+                            />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
+                                alt="Lemon Squeezy Logo"
+                                height="20"
+                                width="auto"
+                            />
+                            <img
+                                className="h-6 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/openai.svg"
+                                alt="OpenAI Logo"
+                                height="24"
+                                width="auto"
+                            />
+                            <img
+                                className="h-4 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/tailwindcss.svg"
+                                alt="Tailwind CSS Logo"
+                                height="16"
+                                width="auto"
+                            />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/vercel.svg"
+                                alt="Vercel Logo"
+                                height="20"
+                                width="auto"
+                            />
+                            <img
+                                className="h-5 w-fit dark:invert"
+                                src="https://html.tailus.io/blocks/customers/zapier.svg"
+                                alt="Zapier Logo"
+                                height="20"
+                                width="auto"
+                            />
                         </div>
                     </div>
                 </section>

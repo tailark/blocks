@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '@repo/core/ui/button'
 import Link from 'next/link'
 import { sendGAEvent } from '@next/third-parties/google'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@repo/core/ui/tooltip'
 
 export function OpenInV0Button({ block, title, category }: { block: string; title: string; category: string }) {
     return (

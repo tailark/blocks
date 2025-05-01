@@ -25,7 +25,8 @@
     "./motion-primitives/animated-group": "./motion-primitives/animated-group.tsx",
     "./motion-primitives/infinite-slider": "./motion-primitives/infinite-slider.tsx",
     "./motion-primitives/progressive-blur": "./motion-primitives/progressive-blur.tsx",
-    "./motion-primitives/text-effect": "./motion-primitives/text-effect.tsx"
+    "./motion-primitives/text-effect": "./motion-primitives/text-effect.tsx",
+    "./components/logo" : "./components/logo.tsx"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",

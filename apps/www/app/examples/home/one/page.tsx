@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { Button } from '@repo/core/ui/button'
 import Image from 'next/image'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Card, CardContent, CardHeader } from '@repo/core/ui/card'
 import { Cpu, Lock, Sparkles, Zap } from 'lucide-react'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { ExampleFeatures } from '@/components/ex-features'
+import { Avatar, AvatarFallback, AvatarImage } from '@repo/core/ui/avatar'
+import { ExampleFeatures } from '@repo/core/components/ex-features'
 
 export default function HeroSection() {
     return (

@@ -330,6 +330,15 @@ importers:
         specifier: latest
         version: 5.8.3
 
+  packages/default-kit:
+    devDependencies:
+      '@repo/core':
+        specifier: workspace:*
+        version: link:../core
+      typescript:
+        specifier: latest
+        version: 5.8.3
+
 packages:
 
   '@alloc/quick-lru@5.2.0':

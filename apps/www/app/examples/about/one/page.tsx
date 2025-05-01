@@ -1,7 +1,7 @@
-import { LogoStroke } from '@/components/logo'
+import { LogoStroke } from '@repo/core/components/logo'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { Button } from '@repo/core/ui/button'
 
 const members = [
     {

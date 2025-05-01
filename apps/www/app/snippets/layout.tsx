@@ -1,5 +1,5 @@
-import { SiteFooter } from '@/components/site-footer'
-import { SiteHeader } from '@/components/site-header'
+import { SiteFooter } from '@repo/core/components/site-footer'
+import { SiteHeader } from '@repo/core/components/site-header'
 
 export default function CategoryLayout({
     children,
