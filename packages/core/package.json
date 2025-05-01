@@ -20,7 +20,12 @@
     "./ui/select": "./ui/select.tsx",
     "./ui/separator": "./ui/separator.tsx",
     "./ui/textarea": "./ui/textarea.tsx",
-    "./ui/tooltip": "./ui/tooltip.tsx"
+    "./ui/tooltip": "./ui/tooltip.tsx",
+    "./magicui/border-beam": "./magicui/border-beam.tsx",
+    "./motion-primitives/animated-group": "./motion-primitives/animated-group.tsx",
+    "./motion-primitives/infinite-slider": "./motion-primitives/infinite-slider.tsx",
+    "./motion-primitives/progressive-blur": "./motion-primitives/progressive-blur.tsx",
+    "./motion-primitives/text-effect": "./motion-primitives/text-effect.tsx"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
@@ -34,6 +39,8 @@
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.1.8",
     "clsx": "^2.1.1",
+    "motion": "^12.4.3",
+    "react-use-measure": "^2.1.7",
     "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
