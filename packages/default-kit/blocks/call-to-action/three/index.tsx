@@ -1,4 +1,4 @@
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import { Mail, SendHorizonal } from 'lucide-react'
 
 export default function CallToAction() {

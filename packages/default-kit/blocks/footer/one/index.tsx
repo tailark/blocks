@@ -1,4 +1,4 @@
-import { Logo } from '@repo/core/components/logo'
+import { Logo } from '@tailark/core/components/logo'
 import Link from 'next/link'
 
 const links = [

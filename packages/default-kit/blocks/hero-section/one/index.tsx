@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, ChevronRight } from 'lucide-react'
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import Image from 'next/image'
-import { TextEffect } from '@repo/core/components/motion-primitives/text-effect'
-import { AnimatedGroup } from '@repo/core/components/motion-primitives/animated-group'
-import { HeroHeader } from '@repo/core/components/hero5-header'
+import { TextEffect } from '@tailark/core/motion-primitives/text-effect'
+import { AnimatedGroup } from '@tailark/core/motion-primitives/animated-group'
+import { HeroHeader } from './header'
 
 const transitionVariants = {
     item: {

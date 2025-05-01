@@ -1,4 +1,4 @@
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import Link from 'next/link'
 
 export default function CallToAction() {

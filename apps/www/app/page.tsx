@@ -1,7 +1,7 @@
-import BlockPreview from '@repo/core/components/block-preview'
-import { SiteFooter } from '@repo/core/components/site-footer'
-import { SiteHeader } from '@repo/core/components/site-header'
-import { Button } from '@repo/core/ui/button'
+import BlockPreview from '@/components/block-preview'
+import { SiteFooter } from '@/components/site-footer'
+import { SiteHeader } from '@/components/site-header'
+import { Button } from '@tailark/core/ui/button'
 import Link from 'next/link'
 
 export default function Home() {

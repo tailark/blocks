@@ -1,9 +1,9 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Logo } from '@repo/core/components/logo'
-import { Button } from '@repo/core/ui/button'
-import { ThemeToggle } from '@repo/core/components/theme-toggle'
+import { Logo } from '@tailark/core/components/logo'
+import { Button } from '@tailark/core/ui/button'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 
 export const SiteHeader = () => {

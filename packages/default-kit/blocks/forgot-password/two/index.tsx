@@ -1,7 +1,7 @@
-import { LogoIcon } from '@repo/core/components/logo'
-import { Button } from '@repo/core/ui/button'
-import { Input } from '@repo/core/ui/input'
-import { Label } from '@repo/core/ui/label'
+import { LogoIcon } from '@tailark/core/components/logo'
+import { Button } from '@tailark/core/ui/button'
+import { Input } from '@tailark/core/ui/input'
+import { Label } from '@tailark/core/ui/label'
 import Link from 'next/link'
 
 export default function ForgotPasswordPage() {

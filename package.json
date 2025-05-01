@@ -9,10 +9,10 @@
   },
   "packageManager": "pnpm@9.10.0",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
     "registry:build": "shadcn build"
   },
   "dependencies": {

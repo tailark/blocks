@@ -1,4 +1,4 @@
-import BlockPreview from '@repo/core/components/block-preview'
+import BlockPreview from '@/components/block-preview'
 import { blocks, categories } from '@/data/blocks'
 import { notFound } from 'next/navigation'
 

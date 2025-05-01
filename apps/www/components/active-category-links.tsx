@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { cn } from '@repo/core/lib/utils'
+import { cn } from '@tailark/core/lib/utils'
 
 export function ActiveCategoryLinks({ categories }: { categories: string[] }) {
     const pathname = usePathname()

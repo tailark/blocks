@@ -1,9 +1,9 @@
 'use client'
-import { Logo } from '@repo/core/components/logo'
+import { Logo } from '@tailark/core/components/logo'
 import { Activity, Map as MapIcon, MessageCircle } from 'lucide-react'
 import DottedMap from 'dotted-map'
 import { Area, AreaChart, CartesianGrid } from 'recharts'
-import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@repo/core/ui/chart'
+import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@tailark/core/ui/chart'
 
 export const ExampleFeatures = () => {
     return (

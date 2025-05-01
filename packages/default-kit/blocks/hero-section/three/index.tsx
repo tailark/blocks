@@ -1,10 +1,10 @@
 import React from 'react'
 import { Mail, SendHorizonal } from 'lucide-react'
-import { Button } from '@repo/core/ui/button'
-import { TextEffect } from '@repo/core/components/motion-primitives/text-effect'
-import { AnimatedGroup } from '@repo/core/components/motion-primitives/animated-group'
-import { HeroHeader } from '@repo/core/components/hero5-header'
-import { LogoCloud } from '@repo/core/components/logo-cloud'
+import { Button } from '@tailark/core/ui/button'
+import { TextEffect } from '@tailark/core/motion-primitives/text-effect'
+import { AnimatedGroup } from '@tailark/core/motion-primitives/animated-group'
+import { HeroHeader } from './header'
+import { LogoCloud } from './logo-cloud'
 
 const transitionVariants = {
     item: {

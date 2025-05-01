@@ -1,7 +1,7 @@
-import { LogoStroke } from '@repo/core/components/logo'
+import { LogoStroke } from '@tailark/core/components/logo'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 
 const members = [
     {

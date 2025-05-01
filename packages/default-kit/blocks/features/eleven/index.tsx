@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@repo/core/ui/card'
+import { Card, CardContent, CardHeader } from '@tailark/core/ui/card'
 import { Globe } from 'lucide-react'
 import Image from 'next/image'
 

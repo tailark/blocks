@@ -1,5 +1,5 @@
 {
-  "name": "@repo/core",
+  "name": "@tailark/core",
   "type": "module",
   "scripts": {
     "dev": "tsc --watch",
@@ -26,7 +26,8 @@
     "./motion-primitives/infinite-slider": "./motion-primitives/infinite-slider.tsx",
     "./motion-primitives/progressive-blur": "./motion-primitives/progressive-blur.tsx",
     "./motion-primitives/text-effect": "./motion-primitives/text-effect.tsx",
-    "./components/logo" : "./components/logo.tsx"
+    "./components/logo" : "./components/logo.tsx",
+    "./components/logos" : "./components/logos/index.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",

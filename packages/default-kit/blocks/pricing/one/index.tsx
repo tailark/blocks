@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Button } from '@repo/core/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@repo/core/ui/card'
+import { Button } from '@tailark/core/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@tailark/core/ui/card'
 import { Check } from 'lucide-react'
 
 export default function Pricing() {

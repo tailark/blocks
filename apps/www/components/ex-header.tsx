@@ -1,8 +1,8 @@
 'use client'
 import { Menu, X } from 'lucide-react'
-import { Logo } from '@repo/core/components/logo'
+import { Logo } from '@tailark/core/components/logo'
 import { useState } from 'react'
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import Link from 'next/link'
 
 const menuItems = [

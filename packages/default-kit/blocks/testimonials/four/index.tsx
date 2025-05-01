@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@repo/core/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@tailark/core/ui/avatar'
 
 export default function TestimonialsSection() {
     return (

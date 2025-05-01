@@ -1,4 +1,4 @@
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 

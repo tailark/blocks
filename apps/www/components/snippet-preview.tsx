@@ -1,7 +1,7 @@
 'use client'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@repo/core/ui/dialog'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@tailark/core/ui/dialog'
 import { Check, Code2, Copy } from 'lucide-react'
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import CodeBlock from './code-block'
 
 import { useCopyToClipboard } from '@/hooks/useClipboard'

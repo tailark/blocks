@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { Logo } from '@repo/core/components/logo'
+import { Logo } from '@tailark/core/components/logo'
 import { ArrowRight, Menu, Rocket, X } from 'lucide-react'
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import Image from 'next/image'
 
 const menuItems = [

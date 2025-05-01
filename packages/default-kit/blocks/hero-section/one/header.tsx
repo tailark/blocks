@@ -1,10 +1,10 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from './logo'
+import { Logo } from '@tailark/core/components/logo'
 import { Menu, X } from 'lucide-react'
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import React from 'react'
-import { cn } from '@/lib/utils'
+import { cn } from '@tailark/core/lib/utils'
 
 const menuItems = [
     { name: 'Features', href: '#link' },

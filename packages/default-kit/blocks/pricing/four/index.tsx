@@ -1,4 +1,4 @@
-import { Button } from '@repo/core/ui/button'
+import { Button } from '@tailark/core/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 

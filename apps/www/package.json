@@ -1,5 +1,5 @@
 {
-  "name": "cnblocks",
+  "name": "@tailark/www",
   "version": "0.1.0",
   "private": true,
   "author": {
@@ -8,6 +8,10 @@
     "url": "https://x.com/MeschacIrung"
   },
   "packageManager": "pnpm@9.10.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -49,6 +53,8 @@
     "use-media": "^1.5.0"
   },
   "devDependencies": {
+    "@tailark/core": "workspace:*",
+    "@tailark/default": "workspace:*",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^20",

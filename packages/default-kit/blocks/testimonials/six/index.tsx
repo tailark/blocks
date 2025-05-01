@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@repo/core/ui/avatar'
-import { Card, CardContent } from '@repo/core/ui/card'
+import { Avatar, AvatarFallback, AvatarImage } from '@tailark/core/ui/avatar'
+import { Card, CardContent } from '@tailark/core/ui/card'
 
 type Testimonial = {
     name: string

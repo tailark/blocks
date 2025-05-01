@@ -1,5 +1,5 @@
-import { ExampleFooter } from '@repo/core/components/ex-footer'
-import { ExampleHeeader } from '@repo/core/components/ex-header'
+import { ExampleFooter } from '@/components/ex-footer'
+import { ExampleHeeader } from '@/components/ex-header'
 
 export default function CategoryLayout({
     children,

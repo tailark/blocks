@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@repo/core/ui/button'
-import { HeroHeader } from '@repo/core/components/hero9-header'
-import { InfiniteSlider } from '@repo/core/components/motion-primitives/infinite-slider'
-import { ProgressiveBlur } from '@repo/core/components/motion-primitives/progressive-blur'
+import { Button } from '@tailark/core/ui/button'
+import { HeroHeader } from './header'
+import { InfiniteSlider } from '@tailark/core/motion-primitives/infinite-slider'
+import { ProgressiveBlur } from '@tailark/core/motion-primitives/progressive-blur'
 import { ChevronRight } from 'lucide-react'
 
 export default function HeroSection() {

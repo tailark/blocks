@@ -1,5 +1,5 @@
-import { InfiniteSlider } from '@repo/core/components/motion-primitives/infinite-slider'
-import { ProgressiveBlur } from '@repo/core/components/motion-primitives/progressive-blur'
+import { InfiniteSlider } from '@tailark/core/components/motion-primitives/infinite-slider'
+import { ProgressiveBlur } from '@tailark/core/components/motion-primitives/progressive-blur'
 
 export default function LogoCloud() {
     return (

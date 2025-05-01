@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@repo/core/ui/card'
+import { Card, CardContent } from '@tailark/core/ui/card'
 import { Shield, Users } from 'lucide-react'
 
 export default function FeaturesSection() {

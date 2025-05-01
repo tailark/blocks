@@ -1,6 +1,6 @@
-import CategoryNavigation from '@repo/core/components/blocks-nav'
-import { SiteFooter } from '@repo/core/components/site-footer'
-import { SiteHeader } from '@repo/core/components/site-header'
+import CategoryNavigation from '@/components/blocks-nav'
+import { SiteFooter } from '@/components/site-footer'
+import { SiteHeader } from '@/components/site-header'
 import { categories } from '@/data/blocks'
 
 export default function CategoryLayout({

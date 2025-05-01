@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@repo/core/ui/card'
+import { Card, CardContent, CardHeader } from '@tailark/core/ui/card'
 import { Settings2, Sparkles, Zap } from 'lucide-react'
 import { ReactNode } from 'react'
 

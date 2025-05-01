@@ -1,9 +1,9 @@
-import { Card } from '@repo/core/ui/card'
-import { Input } from '@repo/core/ui/input'
-import { Textarea } from '@repo/core/ui/textarea'
-import { Button } from '@repo/core/ui/button'
-import { Label } from '@repo/core/ui/label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@repo/core/ui/select'
+import { Card } from '@tailark/core/ui/card'
+import { Input } from '@tailark/core/ui/input'
+import { Textarea } from '@tailark/core/ui/textarea'
+import { Button } from '@tailark/core/ui/button'
+import { Label } from '@tailark/core/ui/label'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@tailark/core/ui/select'
 import Link from 'next/link'
 
 export default function ContactSection() {

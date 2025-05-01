@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from '@repo/core/ui/card'
-import { Avatar, AvatarFallback, AvatarImage } from '@repo/core/ui/avatar'
+import { Card, CardContent, CardHeader } from '@tailark/core/ui/card'
+import { Avatar, AvatarFallback, AvatarImage } from '@tailark/core/ui/avatar'
 
 export default function Testimonials() {
     return (

@@ -1,5 +1,5 @@
-import { Gemini, Replit, GooglePaLM } from '@repo/core/components/logos'
-import { Button } from '@repo/core/ui/button'
+import { Gemini, Replit, GooglePaLM } from '@tailark/core/components/logos'
+import { Button } from '@tailark/core/ui/button'
 import Link from 'next/link'
 import { Plus } from 'lucide-react'
 

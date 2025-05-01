@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@repo/core/ui/button'
-import { Label } from '@repo/core/ui/label'
-import { Input } from '@repo/core/ui/input'
-import { Logo } from '@repo/core/components/logo'
+import { Button } from '@tailark/core/ui/button'
+import { Label } from '@tailark/core/ui/label'
+import { Input } from '@tailark/core/ui/input'
+import { Logo } from '@tailark/core/components/logo'
 
 const enterpriseLinks = [
     { href: '#', label: 'About' },

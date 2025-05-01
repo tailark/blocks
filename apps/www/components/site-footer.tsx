@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { LogoIcon } from './logo'
-import { Button } from './ui/button'
+import { LogoIcon } from '@tailark/core/components/logo'
+import { Button } from '@tailark/core/ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
 

@@ -1,10 +1,10 @@
 'use client'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@repo/core/ui/accordion'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@tailark/core/ui/accordion'
 import { ChartBarIncreasingIcon, Database, Fingerprint, IdCard } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { BorderBeam } from '@repo/core/components/magicui/border-beam'
+import { BorderBeam } from '@tailark/core/components/magicui/border-beam'
 
 export default function Features() {
     type ImageKey = 'item-1' | 'item-2' | 'item-3' | 'item-4'

@@ -1,6 +1,6 @@
-import SnippetPreview from '@repo/core/components/snippet-preview'
-import { Button } from '@repo/core/components/snippets/buttons/button'
-import { ButtonProps } from '@repo/core/ui/button'
+import SnippetPreview from '@tailark/core/components/snippet-preview'
+import { Button } from '@tailark/core/components/snippets/buttons/button'
+import { ButtonProps } from '@tailark/core/ui/button'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

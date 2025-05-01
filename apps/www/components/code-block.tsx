@@ -2,7 +2,7 @@
 // Source: https://github.com/origin-space/originui/blob/main/components/code-block.tsx
 'use client'
 
-import { cn } from '@repo/core/lib/utils'
+import { cn } from '@tailark/core/lib/utils'
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime'
 import { JSX, useLayoutEffect, useState } from 'react'
 import { Fragment, jsx, jsxs } from 'react/jsx-runtime'
