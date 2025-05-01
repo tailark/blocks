@@ -11,7 +11,29 @@ export interface Block {
 function loadCode(filePath: string): string {
     const fullPath = path.join(process.cwd(), filePath)
     if (fs.existsSync(fullPath)) {
-        return fs.readFileSync(fullPath, 'utf-8')
+        let code = fs.readFileSync(fullPath, 'utf-8')
+        
+        code = code.replace(/<!--.*?-->/g, '').trim()
+
+        const tailarkPattern = /@tailark\/([a-zA-Z0-9-]+)\/([a-zA-Z0-9-]+)/g
+        code = code.replace(tailarkPattern, (match, kit, type) => {
+            const replacements: Record<string, string> = {
+                'ui': '@/components/ui',
+                'components': '@/components',
+                'lib': '@/lib',
+                'hooks': '@/hooks',
+                'styles': '@/styles',
+                'public': '@/public',
+                'motion-primitives': '@/components/motion-primitives',
+                'magic-ui': '@/components/magic-ui'
+            }
+            
+            return replacements[type] || `@/${type}`;
+        })
+
+        code = code.replace(/from\s+['"]\.\/([^'"]+)['"]/g, 'from "@/components/$1"')
+        
+        return code
     }
     return '// Code not found'
 }
@@ -48,7 +70,6 @@ function generateBlocks(): Block[] {
         }
     }
     
-    console.log(`Found ${blocks.length} blocks in ${defaultKitDir}`)
     return blocks
 }
 
