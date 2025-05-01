@@ -1,5 +1,5 @@
-import SnippetPreview from '@tailark/core/components/snippet-preview'
-import { Button } from '@tailark/core/components/snippets/buttons/button'
+import SnippetPreview from '@/components/snippet-preview'
+import { Button } from '@/components/snippets/buttons/button'
 import { ButtonProps } from '@tailark/core/ui/button'
 import { Metadata } from 'next'
 
