@@ -1,0 +1,27 @@
+{
+    "printWidth": 500,
+    "semi": false,
+    "tabWidth": 4,
+    "parser": "babel",
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "jsxBracketSameLine": true,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "useTabs": false,
+    "singleAttributePerLine": true,
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ],
+    "tailwindStylesheet": "./app/global.css",
+    "overrides": [
+        {
+            "files": "*.tsx",
+            "options": {
+                "parser": "babel-ts"
+            }
+        }
+    ]
+}
