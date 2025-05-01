@@ -17,7 +17,7 @@ import { CodeEditor, File } from './code-editor'
 
 export interface BlockPreviewProps {
     code?: string
-    codes?: File
+    codes?: File[]
     preview: string
     title: string
     category: string
