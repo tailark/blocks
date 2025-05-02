@@ -26,8 +26,8 @@
     "./motion-primitives/infinite-slider": "./motion-primitives/infinite-slider.tsx",
     "./motion-primitives/progressive-blur": "./motion-primitives/progressive-blur.tsx",
     "./motion-primitives/text-effect": "./motion-primitives/text-effect.tsx",
-    "./components/logo" : "./components/logo.tsx",
-    "./components/logos" : "./components/logos/index.ts"
+    "./components/logo": "./components/logo.tsx",
+    "./components/logos": "./components/logos/index.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
@@ -40,6 +40,7 @@
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.1.8",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "motion": "^12.4.3",
     "react-use-measure": "^2.1.7",

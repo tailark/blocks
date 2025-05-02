@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { sendGAEvent } from '@next/third-parties/google'
 
-type EventName = 'block_copy' | 'block_cli_copy' | 'snippet_copy';
+type EventName = 'block_copy' | 'block_cli_copy' | 'snippet_copy' | 'block_registry_copy';
 
 interface BlockProps {
     title?: string;

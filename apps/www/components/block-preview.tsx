@@ -2,13 +2,14 @@
 
 import type React from 'react'
 import { useState, useRef, useEffect } from 'react'
-import { Check, Code2, Copy, Eye, Maximize, Terminal } from 'lucide-react'
+import { Check, Code2, Copy, Eye, Link2, Maximize, Sparkles, Terminal } from 'lucide-react'
 import { Panel, PanelGroup, PanelResizeHandle, type ImperativePanelGroupHandle } from 'react-resizable-panels'
 import { Separator } from '@tailark/core/ui/separator'
 import * as RadioGroup from '@radix-ui/react-radio-group'
 import { useCopyToClipboard } from '@/hooks/useClipboard'
 import { useMedia } from 'use-media'
 import { Button } from '@tailark/core/ui/button'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@tailark/core/ui/tooltip'
 import { cn, titleToNumber } from '@tailark/core/lib/utils'
 import Link from 'next/link'
 import { OpenInV0Button } from './open-in-v0'
@@ -20,6 +21,7 @@ export interface BlockPreviewProps {
     codes?: File[]
     preview: string
     title: string
+    description?: string
     category: string
     previewOnly?: boolean
 }
@@ -41,10 +43,11 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
     const [cachedHeight, setCachedHeight] = useState<number | null>(null)
     const [isIframeCached, setIsIframeCached] = useState(false)
 
-    const terminalCode = `pnpm dlx shadcn@canary add https://tailark.com/r/${category}-${titleToNumber(title)}.json`
+    const terminalCode = `pnpm dlx shadcn@latest add https://tailark.com/r/${category}-${titleToNumber(title)}.json`
+    const registryCode = `https://tailark.com/r/${category}-${titleToNumber(title)}.json`
 
-    const { copied, copy } = useCopyToClipboard({ code: code as string, title, category, eventName: 'block_copy' })
     const { copied: cliCopied, copy: cliCopy } = useCopyToClipboard({ code: terminalCode, title, category, eventName: 'block_cli_copy' })
+    const { copied: registryCopied, copy: registryCopy } = useCopyToClipboard({ code: registryCode, title, category, eventName: 'block_registry_copy' })
 
     const ref = useRef<ImperativePanelGroupHandle>(null)
     const isLarge = useMedia('(min-width: 1024px)')
@@ -204,18 +207,14 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                 />{' '}
                             </>
                         )}
-                        <Button
-                            asChild
-                            variant="ghost"
-                            size="sm"
-                            className="size-8">
-                            <Link
-                                href={preview}
-                                passHref
-                                target="_blank">
-                                <Maximize className="size-4" />
-                            </Link>
-                        </Button>
+                        <TooltipButton
+                            tooltip="View in full screen"
+                            icon={<Maximize className="size-4" />}
+                            asLink={{
+                                href: preview,
+                                target: '_blank',
+                            }}
+                        />
                         <Separator
                             orientation="vertical"
                             className="hidden !h-4 lg:block"
@@ -229,13 +228,24 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                 <Button
                                     onClick={cliCopy}
                                     size="sm"
-                                    className="size-8 shadow-none md:w-fit"
+                                    className="size-8 md:w-fit"
                                     variant="outline"
                                     aria-label="copy code">
-                                    {cliCopied ? <Check className="size-4" /> : <Terminal className="!size-3.5" />}
-                                    <span className="hidden font-mono text-xs md:block">
-                                        pnpm dlx shadcn@latest add {category}-{titleToNumber(title)}
-                                    </span>
+                                    {cliCopied ? <Check className="size-4" /> : <Terminal className="!size-3.5 opacity-50" />}
+                                    <span className="hidden font-mono text-xs md:block">CLI</span>
+                                </Button>
+                                <Separator
+                                    className="!h-4"
+                                    orientation="vertical"
+                                />
+                                <Button
+                                    onClick={registryCopy}
+                                    size="sm"
+                                    className="size-8 md:w-fit"
+                                    variant="outline"
+                                    aria-label="copy code">
+                                    {registryCopied ? <Check className="size-4" /> : <Link2 className="!size-3.5 opacity-50" />}
+                                    <span className="hidden font-mono text-xs md:block">Registry</span>
                                 </Button>
                                 <Separator
                                     className="!h-4"
@@ -245,19 +255,6 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                     {...{ title, category }}
                                     block={`${category}-${titleToNumber(title)}`}
                                 />
-                                <Separator
-                                    className="!h-4"
-                                    orientation="vertical"
-                                />
-
-                                <Button
-                                    onClick={copy}
-                                    size="sm"
-                                    variant="ghost"
-                                    aria-label="copy code"
-                                    className="size-8">
-                                    {copied ? <Check className="size-4" /> : <Copy className="!size-3.5" />}
-                                </Button>
                             </>
                         )}
                     </div>
@@ -344,3 +341,58 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
 }
 
 export default BlockPreview
+
+interface TooltipButtonProps {
+    onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    tooltip: string
+    icon: React.ReactNode
+    asChild?: boolean
+    variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'
+    size?: 'default' | 'sm' | 'lg' | 'icon'
+    className?: string
+    children?: React.ReactNode
+    asLink?: {
+        href: string
+        target?: string
+    }
+}
+
+const TooltipButton = ({ onClick, tooltip, icon, asChild = false, variant = 'ghost', size = 'sm', className, children, asLink }: TooltipButtonProps) => {
+    const buttonContent = (
+        <>
+            {icon}
+            {children}
+        </>
+    )
+
+    const buttonProps = {
+        onClick: asLink ? undefined : onClick,
+        variant,
+        size,
+        className: cn('size-8', className),
+        asChild: asLink ? true : asChild,
+    }
+
+    return (
+        <TooltipProvider>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    {asLink ? (
+                        <Button {...buttonProps}>
+                            <Link
+                                href={asLink.href}
+                                target={asLink.target || '_blank'}>
+                                {buttonContent}
+                            </Link>
+                        </Button>
+                    ) : (
+                        <Button {...buttonProps}>{buttonContent}</Button>
+                    )}
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>{tooltip}</p>
+                </TooltipContent>
+            </Tooltip>
+        </TooltipProvider>
+    )
+}

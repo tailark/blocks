@@ -4,6 +4,7 @@ import path from 'path'
 export interface Block {
     slug: string
     title: string
+    description: string
     category: string
     preview: string
     code?: string,
@@ -99,9 +100,19 @@ function generateBlocks(): Block[] {
             // Load all components from the folder
             const allComponents = loadAllComponentsFromFolder(blockFolderPath, category)
             
+            // Format the category and variant for display (convert kebab-case to Title Case)
+            const formattedCategory = category.split('-').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ');
+            
+            const formattedVariant = variant.split('-').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ');
+            
             blocks.push({
                 slug: `${category}-${variant}`,
-                title: variant,
+                title: `${formattedCategory} block ${formattedVariant}`,
+                description: `Beautiful ${formattedCategory.toLowerCase()} block for your Shadcn UI marketing website (variant ${formattedVariant})`,
                 category: category,
                 preview: `/preview/${category}/${variant}`,
                 code: loadCode(blockFilePath),
