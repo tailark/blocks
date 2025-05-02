@@ -1,6 +1,5 @@
-'use client'
-import React, { Suspense, use } from 'react'
-import dynamic from 'next/dynamic'
+import React, { Suspense } from 'react'
+import { notFound } from 'next/navigation'
 import * as BlocksModule from '@tailark/default/blocks'
 
 const formatComponentName = (category: string, variant: string): string => {
@@ -14,32 +13,20 @@ const formatComponentName = (category: string, variant: string): string => {
     )
 }
 
-export default function PreviewPage({ params }: { params: Promise<{ category: string; variant: string }> }) {
-    const unwrappedParams = use(params)
+export default async function PreviewPage({ params }: { params: Promise<{ category: string; variant: string }> }) {
+    const unwrappedParams = await params
     const { category, variant } = unwrappedParams
-
     const componentName = formatComponentName(category, variant)
 
-    const BlockComponent = dynamic(
-        () =>
-            import('@tailark/default/blocks').then((mod) => {
-                const blocks = mod as typeof BlocksModule
-                if (!blocks[componentName as keyof typeof BlocksModule]) {
-                    throw new Error(`Component ${componentName} not found`)
-                }
-                return blocks[componentName as keyof typeof BlocksModule]
-            }),
-        {
-            loading: () => <div className="flex h-screen items-center justify-center">Loading...</div>,
-            ssr: false,
-        }
-    )
+    if (!(componentName in BlocksModule)) {
+        notFound()
+    }
+
+    const BlockComponent = BlocksModule[componentName as keyof typeof BlocksModule]
 
     return (
-        <div className="preview">
-            <Suspense fallback={<div className="flex h-screen items-center justify-center">Loading...</div>}>
-                <BlockComponent />
-            </Suspense>
-        </div>
+        <Suspense fallback={<div className="flex h-screen items-center justify-center">Loading...</div>}>
+            <BlockComponent />
+        </Suspense>
     )
 }

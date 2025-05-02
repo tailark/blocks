@@ -2,6 +2,7 @@ import { File } from '@/components/code-editor'
 import fs from 'fs'
 import path from 'path'
 export interface Block {
+    id:string
     slug: string
     title: string
     description: string
@@ -110,6 +111,7 @@ function generateBlocks(): Block[] {
             ).join(' ');
             
             blocks.push({
+                id : variant,
                 slug: `${category}-${variant}`,
                 title: `${formattedCategory} block ${formattedVariant}`,
                 description: `Beautiful ${formattedCategory.toLowerCase()} block for your Shadcn UI marketing website (variant ${formattedVariant})`,

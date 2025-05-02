@@ -29,12 +29,14 @@ export default function Home() {
                 preview="/examples/home/one"
                 category="page"
                 title="Home page"
+                id="one"
             />
             <BlockPreview
                 previewOnly
                 preview="/examples/about/one"
                 category="page"
                 title="About page"
+                id="two"
             />
             <SiteFooter />
         </>

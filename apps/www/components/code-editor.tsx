@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { CheckIcon, ChevronDown, Copy } from 'lucide-react'
 import CodeBlock, { CodeBlockProps } from './code-block'
 import type { BundledLanguage } from 'shiki/bundle/web'
 import * as RadioGroup from '@radix-ui/react-radio-group'
 import { cn } from '@tailark/core/lib/utils'
+import { useCopyToClipboard } from '@/hooks/useClipboard'
+import { Button } from '@tailark/core/ui/button'
 
 export type File = {
     name: string
@@ -13,15 +15,38 @@ export type File = {
 
 interface CodeEditorProps extends CodeBlockProps {
     files?: File[]
+    id: string
+    category: string
+}
+interface CopyButtonProps {
+    copied: boolean
+    onCopy: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
-export const CodeEditor = ({ files, code, lang = 'tsx', maxHeight, className }: CodeEditorProps) => {
+const CopyButton = ({ copied, onCopy }: CopyButtonProps) => {
+    return (
+        <Button
+            className="bg-muted/10 hover:bg-muted/25 dark:hover:bg-muted/50 absolute right-2 top-2 h-7 border border-white/15 pl-2.5 text-white shadow shadow-black/25 hover:text-white"
+            variant="ghost"
+            size="sm"
+            onClick={onCopy}>
+            {copied ? <CheckIcon className="!size-3" /> : <Copy className="!size-3 opacity-50" />}
+            Copy
+        </Button>
+    )
+}
+
+export const CodeEditor = ({ files, code, id, category, lang = 'tsx', maxHeight, className }: CodeEditorProps) => {
     const [activeFileIndex, setActiveFileIndex] = useState(0)
+
+    const currentCode = files && files[activeFileIndex]?.code ? files[activeFileIndex].code : (code as string) || ''
+
+    const { copied, copy } = useCopyToClipboard({ code: currentCode, title: id, category, eventName: 'block_copy' })
 
     return (
         <>
             {files && files.length > 1 ? (
-                <div className="grid grid-cols-[auto_1fr] border-l [--color-border:var(--color-zinc-800)] dark:[--color-border:inherit]">
+                <div className="flex border-l [--color-border:var(--color-zinc-800)] dark:[--color-border:inherit]">
                     <div className="text-foreground bg-background hidden w-64 font-mono [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25">
                         <div className="pb-5.5 pt-1.5 font-mono text-xs">
                             <div>
@@ -77,21 +102,32 @@ export const CodeEditor = ({ files, code, lang = 'tsx', maxHeight, className }: 
                             </div>
                         </div>
                     </div>
-
-                    <CodeBlock
-                        code={files[activeFileIndex].code}
-                        maxHeight={maxHeight}
-                        lang={files[activeFileIndex].lang as BundledLanguage}
-                        className={cn('max-w-full overflow-auto', className)}
-                    />
+                    <div className="relative w-full sm:w-[calc(100%-16rem)]">
+                        <CopyButton
+                            copied={copied}
+                            onCopy={copy}
+                        />
+                        <CodeBlock
+                            code={files[activeFileIndex].code}
+                            maxHeight={maxHeight}
+                            lang={files[activeFileIndex].lang as BundledLanguage}
+                            className={cn('max-w-full overflow-auto', className)}
+                        />
+                    </div>
                 </div>
             ) : (
-                <CodeBlock
-                    code={code}
-                    maxHeight={maxHeight}
-                    lang={lang}
-                    className={className}
-                />
+                <div className="relative">
+                    <CopyButton
+                        copied={copied}
+                        onCopy={copy}
+                    />
+                    <CodeBlock
+                        code={code}
+                        maxHeight={maxHeight}
+                        lang={lang}
+                        className={className}
+                    />
+                </div>
             )}
         </>
     )

@@ -10,7 +10,7 @@ import { useCopyToClipboard } from '@/hooks/useClipboard'
 import { useMedia } from 'use-media'
 import { Button } from '@tailark/core/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@tailark/core/ui/tooltip'
-import { cn, titleToNumber } from '@tailark/core/lib/utils'
+import { cn, stringToNumber } from '@tailark/core/lib/utils'
 import Link from 'next/link'
 import { OpenInV0Button } from './open-in-v0'
 import { isUrlCached } from '@/lib/serviceWorker'
@@ -21,6 +21,7 @@ export interface BlockPreviewProps {
     codes?: File[]
     preview: string
     title: string
+    id: string
     description?: string
     category: string
     previewOnly?: boolean
@@ -35,7 +36,7 @@ const LGSIZE = 82
 
 const getCacheKey = (src: string) => `iframe-cache-${src}`
 
-export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview, title, category, previewOnly }) => {
+export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview, title, id, category, previewOnly }) => {
     const [width, setWidth] = useState(DEFAULTSIZE)
     const [mode, setMode] = useState<'preview' | 'code'>('preview')
     const [iframeHeight, setIframeHeight] = useState(0)
@@ -43,11 +44,11 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
     const [cachedHeight, setCachedHeight] = useState<number | null>(null)
     const [isIframeCached, setIsIframeCached] = useState(false)
 
-    const terminalCode = `pnpm dlx shadcn@latest add https://tailark.com/r/${category}-${titleToNumber(title)}.json`
-    const registryCode = `https://tailark.com/r/${category}-${titleToNumber(title)}.json`
+    const terminalCode = `pnpm dlx shadcn@latest add https://tailark.com/r/${category}-${stringToNumber(id)}.json`
+    const registryCode = `https://tailark.com/r/${category}-${stringToNumber(id)}.json`
 
-    const { copied: cliCopied, copy: cliCopy } = useCopyToClipboard({ code: terminalCode, title, category, eventName: 'block_cli_copy' })
-    const { copied: registryCopied, copy: registryCopy } = useCopyToClipboard({ code: registryCode, title, category, eventName: 'block_registry_copy' })
+    const { copied: cliCopied, copy: cliCopy } = useCopyToClipboard({ code: terminalCode, title: id, category, eventName: 'block_cli_copy' })
+    const { copied: registryCopied, copy: registryCopy } = useCopyToClipboard({ code: registryCode, title: id, category, eventName: 'block_registry_copy' })
 
     const ref = useRef<ImperativePanelGroupHandle>(null)
     const isLarge = useMedia('(min-width: 1024px)')
@@ -155,7 +156,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
 
     return (
         <section
-            id={`${title}`}
+            id={id}
             className="group mb-16 scroll-my-6 border-b [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
             <div className="relative border-y">
                 <div
@@ -193,18 +194,17 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
 
                                 <Separator
                                     orientation="vertical"
-                                    className="hidden !h-4 lg:block"
+                                    className="hidden !h-4 border-r lg:block"
                                 />
                             </>
                         )}
                         {previewOnly && (
                             <>
-                                {' '}
                                 <span className="ml-2 text-sm capitalize">{title}</span>
                                 <Separator
                                     orientation="vertical"
-                                    className="!h-4"
-                                />{' '}
+                                    className="!h-4 border-r"
+                                />
                             </>
                         )}
                         <TooltipButton
@@ -217,7 +217,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                         />
                         <Separator
                             orientation="vertical"
-                            className="hidden !h-4 lg:block"
+                            className="hidden !h-4 border-r lg:block"
                         />
                         <span className="text-muted-foreground hidden text-sm lg:block">{width < MDSIZE ? 'Mobile' : width < LGSIZE ? 'Tablet' : 'Desktop'}</span>{' '}
                     </div>
@@ -229,31 +229,29 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                     onClick={cliCopy}
                                     size="sm"
                                     className="size-8 md:w-fit"
-                                    variant="outline"
+                                    variant="ghost"
                                     aria-label="copy code">
                                     {cliCopied ? <Check className="size-4" /> : <Terminal className="!size-3.5 opacity-50" />}
-                                    <span className="hidden font-mono text-xs md:block">CLI</span>
+                                    <span className="hidden font-mono text-xs md:block">
+                                        pnpm dlx shadcn add {category}-{stringToNumber(id)}
+                                    </span>
                                 </Button>
                                 <Separator
-                                    className="!h-4"
+                                    className="!h-4 border-r"
                                     orientation="vertical"
                                 />
-                                <Button
+                                <TooltipButton
+                                    tooltip="Registry MCP URL"
+                                    icon={registryCopied ? <Check className="size-4" /> : <MCPLogo />}
                                     onClick={registryCopy}
-                                    size="sm"
-                                    className="size-8 md:w-fit"
-                                    variant="outline"
-                                    aria-label="copy code">
-                                    {registryCopied ? <Check className="size-4" /> : <Link2 className="!size-3.5 opacity-50" />}
-                                    <span className="hidden font-mono text-xs md:block">Registry</span>
-                                </Button>
+                                />
                                 <Separator
-                                    className="!h-4"
+                                    className="!h-4 border-r"
                                     orientation="vertical"
                                 />
                                 <OpenInV0Button
                                     {...{ title, category }}
-                                    block={`${category}-${titleToNumber(title)}`}
+                                    block={`${category}-${stringToNumber(id)}`}
                                 />
                             </>
                         )}
@@ -331,6 +329,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                 code={code as string}
                                 lang="tsx"
                                 maxHeight={iframeHeight}
+                                {...{ id, category }}
                             />
                         )}
                     </div>
@@ -389,10 +388,25 @@ const TooltipButton = ({ onClick, tooltip, icon, asChild = false, variant = 'gho
                         <Button {...buttonProps}>{buttonContent}</Button>
                     )}
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent className="border">
                     <p>{tooltip}</p>
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
     )
 }
+
+const MCPLogo = ({ className }: { className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        fillRule="evenodd"
+        height="1em"
+        viewBox="0 0 24 24"
+        width="1em"
+        className={cn('size-4', className)}>
+        <title>ModelContextProtocol</title>
+        <path d="M15.688 2.343a2.588 2.588 0 00-3.61 0l-9.626 9.44a.863.863 0 01-1.203 0 .823.823 0 010-1.18l9.626-9.44a4.313 4.313 0 016.016 0 4.116 4.116 0 011.204 3.54 4.3 4.3 0 013.609 1.18l.05.05a4.115 4.115 0 010 5.9l-8.706 8.537a.274.274 0 000 .393l1.788 1.754a.823.823 0 010 1.18.863.863 0 01-1.203 0l-1.788-1.753a1.92 1.92 0 010-2.754l8.706-8.538a2.47 2.47 0 000-3.54l-.05-.049a2.588 2.588 0 00-3.607-.003l-7.172 7.034-.002.002-.098.097a.863.863 0 01-1.204 0 .823.823 0 010-1.18l7.273-7.133a2.47 2.47 0 00-.003-3.537z" />
+        <path d="M14.485 4.703a.823.823 0 000-1.18.863.863 0 00-1.204 0l-7.119 6.982a4.115 4.115 0 000 5.9 4.314 4.314 0 006.016 0l7.12-6.982a.823.823 0 000-1.18.863.863 0 00-1.204 0l-7.119 6.982a2.588 2.588 0 01-3.61 0 2.47 2.47 0 010-3.54l7.12-6.982z" />
+    </svg>
+)
