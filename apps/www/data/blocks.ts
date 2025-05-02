@@ -35,7 +35,6 @@ function loadCode(filePath: string): string {
             return replacements[type] || `@/${type}`;
         })
 
-        // Replace relative imports with absolute imports
         code = code.replace(/from\s+['"]\.\.\/([^'"]+)['"]|from\s+['"]\.\/?([^'"]+)['"]/g, (match, p1, p2) => {
             const importPath = p1 || p2
             return `from "@/components/${importPath}"`
@@ -54,13 +53,10 @@ function loadAllComponentsFromFolder(folderPath: string, category: string): File
         return result
     }
     
-    // Get all TSX files in the folder
     const files = fs.readdirSync(fullPath)
         .filter(file => file.endsWith('.tsx'))
     
-    // For each file, load its content
     for (const file of files) {
-        // Rename index.tsx to match the category name
         const fileName = file === 'index.tsx' ? `${category}.tsx` : file
         const filePath = path.join(folderPath, file)
         const code = loadCode(filePath)
@@ -98,10 +94,8 @@ function generateBlocks(): Block[] {
             const blockFolderPath = path.join('../../packages/default-kit/blocks', category, variant)
             const blockFilePath = path.join(blockFolderPath, 'index.tsx')
             
-            // Load all components from the folder
             const allComponents = loadAllComponentsFromFolder(blockFolderPath, category)
             
-            // Format the category and variant for display (convert kebab-case to Title Case)
             const formattedCategory = category.split('-').map(word => 
                 word.charAt(0).toUpperCase() + word.slice(1)
             ).join(' ');
@@ -127,4 +121,39 @@ function generateBlocks(): Block[] {
 }
 
 export const blocks: Block[] = generateBlocks()
-export const categories = [...new Set(blocks.map((b) => b.category))]
+
+const categoryOrder = [
+    'hero-section',
+    'logo-cloud',
+    'features',
+    'integrations',
+    'content',
+    'stats',
+    'team',
+    'testimonials',
+    'call-to-action',
+    'footer',
+    'pricing',
+    'comparator',
+    'faqs',
+    'login',
+    'sign-up',
+    'forgot-password',
+    'contact'
+]
+
+const uniqueCategories = [...new Set(blocks.map((b) => b.category))]
+
+export const categories = uniqueCategories.sort((a, b) => {
+    const indexA = categoryOrder.indexOf(a)
+    const indexB = categoryOrder.indexOf(b)
+    
+    if (indexA !== -1 && indexB !== -1) {
+        return indexA - indexB
+    }
+    
+    if (indexA !== -1) return -1
+    if (indexB !== -1) return 1
+    
+    return a.localeCompare(b)
+})

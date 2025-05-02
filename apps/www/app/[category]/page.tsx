@@ -1,6 +1,7 @@
 import BlockPreview from '@/components/block-preview'
 import { blocks, categories } from '@/data/blocks'
 import { notFound } from 'next/navigation'
+import { stringToNumber } from '@tailark/core/lib/utils'
 
 interface PageProps {
     params: Promise<{ category: string }>
@@ -24,7 +25,12 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function CategoryPage({ params }: PageProps) {
     const { category } = await params
-    const categoryBlocks = blocks.filter((b) => b.category === category)
+
+    const categoryBlocks = blocks
+        .filter((b) => b.category === category)
+        .sort((a, b) => {
+            return stringToNumber(a.id) - stringToNumber(b.id)
+        })
 
     if (categoryBlocks.length === 0) {
         notFound()
