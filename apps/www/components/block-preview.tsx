@@ -2,7 +2,7 @@
 
 import type React from 'react'
 import { useState, useRef, useEffect } from 'react'
-import { Check, Code2, Copy, Eye, Link2, Maximize, Sparkles, Terminal } from 'lucide-react'
+import { Check, Code2, Eye, Maximize, Terminal } from 'lucide-react'
 import { Panel, PanelGroup, PanelResizeHandle, type ImperativePanelGroupHandle } from 'react-resizable-panels'
 import { Separator } from '@tailark/core/ui/separator'
 import * as RadioGroup from '@radix-ui/react-radio-group'

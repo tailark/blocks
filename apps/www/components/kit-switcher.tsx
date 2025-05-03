@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
-import { BookOpen, Egg, MoonStar } from 'lucide-react'
+import { BookOpen, MoonStar } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { getClientKits } from '@/lib/get-kits'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@tailark/core/ui/select'
@@ -62,6 +62,7 @@ export function KitSwitcher() {
                     <SelectLabel className="mx-2 mb-1 border-b border-dashed px-0 pb-3">Choose a kit</SelectLabel>
                     {kits.map((kit) => (
                         <SelectItem
+                            key={kit.id}
                             value={kit.id}
                             className={cn('hover:bg-muted rounded py-2', selectedKitId === kit.id && 'font-medium')}>
                             <div className="flex items-center gap-2">

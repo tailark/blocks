@@ -1,0 +1,12 @@
+{
+  "extends": "next/core-web-vitals",
+  "settings": {
+    "next": {
+      "rootDir": "apps/www"
+    }
+  },
+  "rules": {
+    "@next/next/no-html-link-for-pages": "off"
+  },
+  "ignorePatterns": [".next/", "node_modules/"]
+}

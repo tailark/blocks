@@ -6,10 +6,15 @@
     "build": "tsc"
   },
   "exports": {
-    "./blocks" : "./blocks/index.ts"
+    "./blocks": "./blocks/index.ts"
   },
   "dependencies": {
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "dotted-map": "^2.2.3",
+    "lucide-react": "^0.475.0",
+    "motion": "^12.4.3",
+    "recharts": "^2.15.1",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
     "@tailark/core": "workspace:*",
