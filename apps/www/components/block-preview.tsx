@@ -194,7 +194,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
 
                                 <Separator
                                     orientation="vertical"
-                                    className="hidden !h-4 border-r lg:block"
+                                    className="hidden !h-4 lg:block"
                                 />
                             </>
                         )}
@@ -203,7 +203,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                 <span className="ml-2 text-sm capitalize">{title}</span>
                                 <Separator
                                     orientation="vertical"
-                                    className="!h-4 border-r"
+                                    className="!h-4"
                                 />
                             </>
                         )}
@@ -217,7 +217,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                         />
                         <Separator
                             orientation="vertical"
-                            className="hidden !h-4 border-r lg:block"
+                            className="hidden !h-4 lg:block"
                         />
                         <span className="text-muted-foreground hidden text-sm lg:block">{width < MDSIZE ? 'Mobile' : width < LGSIZE ? 'Tablet' : 'Desktop'}</span>{' '}
                     </div>
@@ -237,7 +237,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                     </span>
                                 </Button>
                                 <Separator
-                                    className="!h-4 border-r"
+                                    className="!h-4"
                                     orientation="vertical"
                                 />
                                 <TooltipButton
@@ -246,7 +246,7 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                     onClick={registryCopy}
                                 />
                                 <Separator
-                                    className="!h-4 border-r"
+                                    className="!h-4"
                                     orientation="vertical"
                                 />
                                 <OpenInV0Button
