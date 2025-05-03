@@ -5,7 +5,7 @@ import { ActiveCategoryLinks } from './active-category-links'
 const BlocksNav = ({ categories }: { categories: string[] }) => {
     return (
         <div className="dark:border-border/50 relative z-50 border-b">
-            <div className="mx-auto max-w-7xl">
+            <div className="mx-auto max-w-7xl overflow-hidden lg:overflow-visible">
                 <nav className="flex items-center lg:-mx-3">
                     <ScrollArea
                         className="relative -mb-px w-full"
