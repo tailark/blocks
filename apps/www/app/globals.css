@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@source "../../../packages/core";
+@source "../../../packages/default-kit";
 
 @plugin 'tailwindcss-animate';
 
