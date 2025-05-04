@@ -209,7 +209,7 @@ importers:
         specifier: ^12.4.3
         version: 12.9.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
-        specifier: ^19.0.0
+        specifier: ^19.1.0
         version: 19.1.0
       react-dom:
         specifier: ^19.0.0
@@ -242,6 +242,12 @@ importers:
       motion:
         specifier: ^12.4.3
         version: 12.9.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      next:
+        specifier: 15.2.1
+        version: 15.2.1(@babel/core@7.27.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: ^19.1.0
+        version: 19.1.0
       recharts:
         specifier: ^2.15.1
         version: 2.15.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)

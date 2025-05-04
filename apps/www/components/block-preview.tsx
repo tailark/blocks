@@ -388,7 +388,7 @@ const TooltipButton = ({ onClick, tooltip, icon, asChild = false, variant = 'gho
                         <Button {...buttonProps}>{buttonContent}</Button>
                     )}
                 </TooltipTrigger>
-                <TooltipContent className="border">
+                <TooltipContent>
                     <p>{tooltip}</p>
                 </TooltipContent>
             </Tooltip>

@@ -155,6 +155,6 @@
 
   .line{
     counter-increment: css-counter 1;
-    @apply relative pl-8 before:absolute before:text-white/20 before:inset-y-0 before:transition-colors before:duration-200 before:content-[counter(css-counter)] before:text-xs before:left-0 before:my-auto hover:before:text-white
+    @apply relative pl-7 before:absolute before:text-white/20 before:inset-y-0 before:transition-colors before:duration-200 before:content-[counter(css-counter)] before:text-xs before:left-0 before:my-auto hover:before:text-white
   }
 }
