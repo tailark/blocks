@@ -1,6 +1,7 @@
 import { File } from '@/components/code-editor'
 import fs from 'fs'
 import path from 'path'
+
 export interface Block {
     id:string
     slug: string
@@ -10,6 +11,7 @@ export interface Block {
     preview: string
     code?: string,
     codes?: File[]
+    kit?: string
 }
 
 function loadCode(filePath: string): string {
@@ -73,47 +75,71 @@ function loadAllComponentsFromFolder(folderPath: string, category: string): File
 
 function generateBlocks(): Block[] {
     const blocks: Block[] = []
-    const defaultKitDir = path.join(process.cwd(), '../../packages/default-kit/blocks')
-    
-    if (!fs.existsSync(defaultKitDir)) {
-        console.warn(`Default kit directory not found at ${defaultKitDir}`)
-        return blocks
-    }
-    
-    const categories = fs.readdirSync(defaultKitDir, { withFileTypes: true })
-        .filter(dirent => dirent.isDirectory())
-        .map(dirent => dirent.name)
-    
-    for (const category of categories) {
-        const categoryDir = path.join(defaultKitDir, category)
-        const variants = fs.readdirSync(categoryDir, { withFileTypes: true })
+
+    const packagesDir = path.join(process.cwd(), '../../packages')
+
+    const kitNames = fs.existsSync(packagesDir) 
+        ? fs.readdirSync(packagesDir, { withFileTypes: true })
+            .filter(dirent => dirent.isDirectory() && dirent.name.endsWith('-kit'))
+            .map(dirent => dirent.name)
+        : ['default-kit', 'mist-kit'] 
+
+    for (const kitName of kitNames) {
+        const kitDir = path.join(process.cwd(), '../../packages', kitName, 'blocks')
+        
+        if (!fs.existsSync(kitDir)) {
+            console.warn(`${kitName} directory not found at ${kitDir}`)
+            continue
+        }
+        
+        const categories = fs.readdirSync(kitDir, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory())
             .map(dirent => dirent.name)
         
-        for (const variant of variants) {
-            const blockFolderPath = path.join('../../packages/default-kit/blocks', category, variant)
-            const blockFilePath = path.join(blockFolderPath, 'index.tsx')
+        for (const category of categories) {
+            const categoryDir = path.join(kitDir, category)
+            if (!fs.statSync(categoryDir).isDirectory()) {
+                continue
+            }
+            const variants = fs.readdirSync(categoryDir, { withFileTypes: true })
+                .filter(dirent => dirent.isDirectory())
+                .map(dirent => dirent.name)
             
-            const allComponents = loadAllComponentsFromFolder(blockFolderPath, category)
-            
-            const formattedCategory = category.split('-').map(word => 
-                word.charAt(0).toUpperCase() + word.slice(1)
-            ).join(' ');
-            
-            const formattedVariant = variant.split('-').map(word => 
-                word.charAt(0).toUpperCase() + word.slice(1)
-            ).join(' ');
-            
-            blocks.push({
-                id : variant,
-                slug: `${category}-${variant}`,
-                title: `${formattedCategory} block ${formattedVariant}`,
-                description: `Beautiful ${formattedCategory.toLowerCase()} block for your Shadcn UI marketing website (variant ${formattedVariant})`,
-                category: category,
-                preview: `/preview/${category}/${variant}`,
-                code: loadCode(blockFilePath),
-                codes: allComponents
-            })
+            for (const variant of variants) {
+                const blockFolderPath = path.join('../../packages', kitName, 'blocks', category, variant)
+                const blockFilePath = path.join(blockFolderPath, 'index.tsx')
+                
+                const fullVariantPath = path.join(categoryDir, variant)
+                if (!fs.existsSync(fullVariantPath) || !fs.statSync(fullVariantPath).isDirectory()) {
+                     console.warn(`Variant path is not a directory or does not exist: ${fullVariantPath}`)
+                     continue;
+                }
+
+                const allComponents = loadAllComponentsFromFolder(blockFolderPath, category)
+                
+                const formattedCategory = category.split('-').map(word => 
+                    word.charAt(0).toUpperCase() + word.slice(1)
+                ).join(' ');
+                
+                const formattedVariant = variant.split('-').map(word => 
+                    word.charAt(0).toUpperCase() + word.slice(1)
+                ).join(' ');
+                
+                blocks.push({
+                    id : variant,
+                    slug: `${category}-${variant}`,
+                    title: `${formattedCategory} block ${formattedVariant} (${kitName})`,
+                    description: `Beautiful ${formattedCategory.toLowerCase()} block from ${kitName} for your marketing website (variant ${formattedVariant})`,
+                    category: category,
+                    // Set preview path based on kit name, removing '-kit' suffix for non-default
+                    preview: kitName === 'default-kit' 
+                             ? `/preview/${category}/${variant}` 
+                             : `/preview/${kitName.replace('-kit', '')}/${category}/${variant}`,
+                    code: loadCode(blockFilePath),
+                    codes: allComponents,
+                    kit: kitName // Keep the full kit name internally
+                })
+            }
         }
     }
     

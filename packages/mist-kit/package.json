@@ -1,0 +1,27 @@
+{
+  "name": "@tailark/mist",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "exports": {
+    "./blocks": "./blocks/index.ts"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dotted-map": "^2.2.3",
+    "lucide-react": "^0.475.0",
+    "motion": "^12.4.3",
+    "next": "15.2.1",
+    "react": "^19.1.0",
+    "recharts": "^2.15.1",
+    "swiper": "^11.2.4"
+  },
+  "devDependencies": {
+    "@tailark/core": "workspace:*",
+    "typescript": "latest"
+  }
+}
