@@ -1,9 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from './../../../components/ui/button'
-import Image from 'next/image'
+import { Button } from '@/components/ui/button'
 import { HeroHeader } from './header'
-import { ArrowUp, Globe, Plus, Sparkle } from 'lucide-react'
+import { ArrowUp, Globe, Plus } from 'lucide-react'
 
 export default function HeroSection() {
     return (

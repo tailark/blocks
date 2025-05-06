@@ -15,8 +15,7 @@
     "utils": "@/lib/utils",
     "ui": "@tailark/core/ui",
     "lib": "@/lib",
-    "hooks": "@/hooks",
-    "data": "@/data"
+    "hooks": "@/hooks"
   },
   "iconLibrary": "lucide"
 }

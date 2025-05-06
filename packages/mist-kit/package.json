@@ -1,27 +1,34 @@
 {
   "name": "@tailark/mist",
-  "type": "module",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc"
-  },
-  "exports": {
-    "./blocks": "./blocks/index.ts"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "dotted-map": "^2.2.3",
     "lucide-react": "^0.475.0",
-    "motion": "^12.4.3",
-    "next": "15.2.1",
-    "react": "^19.1.0",
-    "recharts": "^2.15.1",
-    "swiper": "^11.2.4"
+    "next": "15.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailark/core": "workspace:*",
-    "typescript": "latest"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.2.9",
+    "typescript": "^5"
   }
 }
