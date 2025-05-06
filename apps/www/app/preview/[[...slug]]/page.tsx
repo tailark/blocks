@@ -1,6 +1,7 @@
 import React, { Suspense, use } from 'react'
 import { notFound } from 'next/navigation'
 import { formatComponentName } from '@/lib/utils'
+import { cn } from '@tailark/core/lib/utils'
 
 const kitBlockModules: Record<string, () => Promise<any>> = {
     'default-kit': () => import('@tailark/default/blocks'),
@@ -61,8 +62,12 @@ export default function PreviewPage({ params }: { params: Promise<{ slug?: strin
     })
 
     return (
-        <Suspense fallback={<div className="flex h-screen items-center justify-center">Loading block...</div>}>
-            <LazyBlockComponent />
-        </Suspense>
+        <div
+            data-theme={kitShortName == 'mist' && 'mist'}
+            className={cn(kitShortName == 'mist' && 'scheme-light bg-background')}>
+            <Suspense fallback={<div className="flex h-screen items-center justify-center">Loading block...</div>}>
+                <LazyBlockComponent />
+            </Suspense>
+        </div>
     )
 }

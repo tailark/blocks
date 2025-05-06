@@ -1,17 +1,27 @@
 {
-  "name": "cnblocks",
+  "name": "tailark",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Méschac Irung",
+    "email": "meschacirung@gmail.com",
+    "url": "https://x.com/MeschacIrung"
+  },
+  "packageManager": "pnpm@9.10.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "lint": "eslint .",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "registry:build": "shadcn build"
   },
-  "dependencies": {
-    "lucide-react": "^0.475.0"
-  },
   "devDependencies": {
-    "eslint": "^9",
     "prettier": "3.5.1",
+    "prettier-plugin-tailwindcss": "0.6.11",
     "typescript": "^5"
   }
 }

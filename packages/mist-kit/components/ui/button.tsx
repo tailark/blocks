@@ -4,14 +4,14 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 import { cn } from '@tailark/core/lib/utils'
 
-const buttonVariants = cva('cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0', {
+const buttonVariants = cva('cursor-pointer font-medium inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0', {
     variants: {
         variant: {
             default: 'bg-primary text-primary-foreground hover:brightness-95',
             destructive: 'bg-destructive text-destructive-foreground shadow-md hover:bg-destructive/90',
-            outline: 'shadow-sm shadow-black/15 border border-transparent bg-background ring-1 ring-foreground/10 duration-200 hover:bg-muted/50 dark:ring-foreground/15 dark:hover:bg-muted/50',
-            secondary: 'bg-blue-100 text-blue-700 hover:bg-secondary/80',
-            ghost: 'hover:bg-black/5 hover:text-accent-foreground',
+            outline: 'shadow-sm text-foreground shadow-black/15 border border-transparent bg-background ring-1 ring-foreground/10 duration-200 hover:bg-muted/50',
+            secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+            ghost: 'hover:bg-black/5 text-foreground/75 hover:text-foreground',
             link: 'text-primary underline-offset-4 hover:underline',
         },
         size: {
