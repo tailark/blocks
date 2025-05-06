@@ -131,10 +131,8 @@ function generateBlocks(): Block[] {
                     title: `${formattedCategory} block ${formattedVariant} (${kitName})`,
                     description: `Beautiful ${formattedCategory.toLowerCase()} block from ${kitName} for your marketing website (variant ${formattedVariant})`,
                     category: category,
-                    // Set preview path based on kit name, removing '-kit' suffix for non-default
-                    preview: kitName === 'default-kit' 
-                             ? `/preview/${category}/${variant}` 
-                             : `/preview/${kitName.replace('-kit', '')}/${category}/${variant}`,
+                    // Generate preview path including the kit short name for all kits
+                    preview: `/preview/${kitName.replace('-kit', '')}/${category}/${variant}`,
                     code: loadCode(blockFilePath),
                     codes: allComponents,
                     kit: kitName // Keep the full kit name internally

@@ -1,59 +1,67 @@
 import React, { Suspense, use } from 'react'
 import { notFound } from 'next/navigation'
-
-const formatComponentName = (category: string, variant: string): string => {
-    const categoryFormatted = category
-        .split('-')
-        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-        .join('')
-    const variantFormatted = variant
-        .split('-')
-        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-        .join('')
-    return `${categoryFormatted}${variantFormatted}`
-}
+import { formatComponentName } from '@/lib/utils'
 
 const kitBlockModules: Record<string, () => Promise<any>> = {
     'default-kit': () => import('@tailark/default/blocks'),
     'mist-kit': () => import('@tailark/mist/blocks'),
 }
 
-export default function PreviewPage({ params }: { params: Promise<{ kit: string; category: string; variant: string }> }) {
-    const { kit: kitShortName, category, variant } = use(params)
+export default function PreviewPage({ params }: { params: Promise<{ slug?: string[] }> }) {
+    const { slug } = use(params)
 
-    const kitFullName = `${kitShortName}-kit`
+    let kitShortName: string
+    let category: string
+    let variant: string
+    let kitFullName: string
+
+    if (!slug || slug.length < 2 || slug.length > 3) {
+        console.error('Invalid slug structure:', slug)
+        notFound()
+    }
+
+    if (slug.length === 2) {
+        kitShortName = 'default'
+        category = slug[0]
+        variant = slug[1]
+        kitFullName = 'default-kit'
+    } else {
+        kitShortName = slug[0]
+        category = slug[1]
+        variant = slug[2]
+        kitFullName = `${kitShortName}-kit`
+    }
 
     const loadBlocksModule = kitBlockModules[kitFullName]
 
     if (!loadBlocksModule) {
-        console.error(`Invalid kit name (derived from short name): ${kitFullName}`)
+        console.error(`Invalid or unsupported kit name: ${kitFullName}`)
         notFound()
     }
 
     const componentName = formatComponentName(category, variant)
 
-    // Dynamically load the component based on kit and component name
     const LazyBlockComponent = React.lazy(async () => {
         console.log(`Attempting to load module for kit: ${kitFullName}`)
         try {
             const BlocksModule = await loadBlocksModule()
             console.log(`Successfully loaded module for kit: ${kitFullName}`, BlocksModule)
+
             if (!(componentName in BlocksModule)) {
                 console.error(`Component ${componentName} not found in kit ${kitFullName}`)
-                throw new Error('Component not found') // Caught below to trigger notFound()
+                throw new Error('Component not found')
             }
+
             console.log(`Component ${componentName} found in kit: ${kitFullName}`)
-            // Return the component in the format React.lazy expects
             return { default: BlocksModule[componentName as keyof typeof BlocksModule] }
         } catch (error) {
             console.error(`Error loading component ${componentName} from kit ${kitFullName}:`, error)
-            throw new Error('Failed to load component') // Re-throw to ensure React.lazy catches it
+            throw new Error('Failed to load component')
         }
     })
 
     return (
         <Suspense fallback={<div className="flex h-screen items-center justify-center">Loading block...</div>}>
-            {/* Use a key to force remount on param change if needed, although Suspense should handle it */}
             <LazyBlockComponent />
         </Suspense>
     )

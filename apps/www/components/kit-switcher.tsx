@@ -16,7 +16,7 @@ export function KitSwitcher() {
 
     useEffect(() => {
         const pathParts = pathname.split('/')
-        const kitIdFromPath = pathParts[1]?.endsWith('-kit') ? pathParts[1] : 'default'
+        const kitIdFromPath = pathParts[1] === 'mist' ? 'mist-kit' : 'default'
         const kitExists = kits.some((kit) => kit.id === kitIdFromPath)
 
         setSelectedKitId(kitExists ? kitIdFromPath : 'default')
@@ -27,7 +27,7 @@ export function KitSwitcher() {
 
         if (value === 'default') {
             const pathParts = pathname.split('/')
-            if (pathParts.length > 1 && pathParts[1]?.endsWith('-kit')) {
+            if (pathParts[1] === 'mist') {
                 if (pathParts.length > 2) {
                     router.push(`/${pathParts[2]}`)
                 } else {
@@ -35,13 +35,15 @@ export function KitSwitcher() {
                 }
             }
         } else {
+            const routeKitId = value === 'mist-kit' ? 'mist' : value
             const pathParts = pathname.split('/')
-            if (pathParts.length > 1 && !pathParts[1]?.endsWith('-kit')) {
-                router.push(`/${value}/${pathParts[1]}`)
-            } else if (pathParts.length > 2 && pathParts[1]?.endsWith('-kit')) {
-                router.push(`/${value}/${pathParts[2]}`)
+
+            if (pathParts[1] === 'mist') {
+                router.push(`/${routeKitId}${pathParts.length > 2 ? `/${pathParts[2]}` : ''}`)
+            } else if (pathParts[1] && pathParts[1] !== '') {
+                router.push(`/${routeKitId}/${pathParts[1]}`)
             } else {
-                router.push(`/${value}`)
+                router.push(`/${routeKitId}`)
             }
         }
     }

@@ -12,7 +12,7 @@ export default function CategoryLayout({
         <>
             <SiteHeader />
             <CategoryNavigation categories={categories} />
-            <main className="overflow-x-hidden">{children}</main>
+            <main>{children}</main>
 
             <SiteFooter />
         </>
