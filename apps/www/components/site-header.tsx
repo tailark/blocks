@@ -147,10 +147,10 @@ export const SiteHeader = () => {
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </DialogTrigger>
-                        <DialogContent className="bg-background fixed inset-1 w-[calc(100vw-4px)] px-0 py-2">
+                        <DialogContent className="inset-y-4 translate-y-0 px-0 py-2">
                             <DialogTitle className="sr-only">Mobile menu</DialogTitle>
                             <div className="flex flex-col gap-3">
-                                <div className="flex items-center justify-between px-6 pt-2">
+                                <div className="flex items-center justify-between pl-6 pr-3 pt-2">
                                     <Link
                                         href="/"
                                         className="flex w-fit items-center gap-2"
@@ -167,7 +167,7 @@ export const SiteHeader = () => {
                                     </DialogClose>
                                 </div>
 
-                                <div className="border-y py-2 pl-6 pr-3">
+                                <div className="pr-1.25 border-y py-2 pl-6">
                                     <KitSwitcher />
                                 </div>
 
