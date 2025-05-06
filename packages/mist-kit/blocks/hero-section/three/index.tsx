@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { HeroHeader } from './header'
 import Image from 'next/image'
+import { Apple, Box, Rocket } from 'lucide-react'
 
 export default function HeroSection() {
     return (
@@ -10,28 +11,45 @@ export default function HeroSection() {
             <HeroHeader />
             <main className="bg-muted overflow-hidden">
                 <section>
-                    <div className="relative py-36">
+                    <div className="relative pb-36">
                         <div className="mx-auto max-w-5xl px-6">
-                            <div className="w-1/2">
+                            <div className="perspective-midrange relative overflow-hidden pt-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+                                <div className="rotate-y-12 relative h-80 overflow-hidden">
+                                    <div className="bg-background max-w-76 m-auto rounded-3xl border p-2 shadow-xl">
+                                        <Image
+                                            className="rounded-2xl border border-black/5"
+                                            src="/mist/notion-mobile-2.png"
+                                            alt="app screen"
+                                            width="2880"
+                                            height="1842"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="text-center">
                                 <div>
-                                    <h1 className="mt-8 max-w-3xl text-balance text-4xl font-bold md:text-5xl lg:text-6xl">Let your AI Personal assistant manage your meetings.</h1>
-                                    <p className="my-6 max-w-2xl text-balance text-xl">Highly customizable components for building modern websites</p>
+                                    <h1 className="mx-auto max-w-2xl text-balance text-4xl font-bold md:text-5xl lg:mt-8">
+                                        Your <span className="bg-linear-to-r/increasing to-primary from-emerald-300 bg-clip-text text-transparent">Personal AI</span>, With you Anywhere
+                                    </h1>
+                                    <p className="mx-auto my-6 max-w-2xl text-balance text-xl">Craft. Build. Ship Modern Websites.</p>
 
-                                    <div className="flex items-center gap-3">
+                                    <div className="flex items-center justify-center gap-3">
                                         <Button
-                                            asChild
-                                            size="lg">
-                                            <Link href="#link">
-                                                <span className="text-nowrap">Start Building</span>
-                                            </Link>
-                                        </Button>
-                                        <Button
-                                            key={2}
                                             asChild
                                             size="lg"
                                             variant="outline">
                                             <Link href="#link">
-                                                <span className="text-nowrap">Request a demo</span>
+                                                <Apple className="fill-foreground" />
+                                                <span className="text-nowrap">Get it Now</span>
+                                            </Link>
+                                        </Button>
+                                        <Button
+                                            asChild
+                                            size="lg"
+                                            variant="outline">
+                                            <Link href="#link">
+                                                <Box className="fill-foreground" />
+                                                <span className="text-nowrap">Get it Now</span>
                                             </Link>
                                         </Button>
                                     </div>
@@ -39,10 +57,10 @@ export default function HeroSection() {
 
                                 <div className="mt-8">
                                     <p className="text-muted-foreground text-sm">Trusted by teams at :</p>
-                                    <div className="mt-4 flex items-center gap-12">
+                                    <div className="mt-4 flex items-center justify-center gap-12">
                                         <div className="flex">
                                             <img
-                                                className="mx-auto h-5 w-fit dark:invert"
+                                                className="mx-auto h-5 w-fit"
                                                 src="https://html.tailus.io/blocks/customers/nvidia.svg"
                                                 alt="Nvidia Logo"
                                                 height="20"
@@ -52,7 +70,7 @@ export default function HeroSection() {
 
                                         <div className="flex">
                                             <img
-                                                className="mx-auto h-4 w-fit dark:invert"
+                                                className="mx-auto h-4 w-fit"
                                                 src="https://html.tailus.io/blocks/customers/column.svg"
                                                 alt="Column Logo"
                                                 height="16"
@@ -61,7 +79,7 @@ export default function HeroSection() {
                                         </div>
                                         <div className="flex">
                                             <img
-                                                className="mx-auto h-4 w-fit dark:invert"
+                                                className="mx-auto h-4 w-fit"
                                                 src="https://html.tailus.io/blocks/customers/github.svg"
                                                 alt="GitHub Logo"
                                                 height="16"
@@ -70,7 +88,7 @@ export default function HeroSection() {
                                         </div>
                                         <div className="flex">
                                             <img
-                                                className="mx-auto h-5 w-fit dark:invert"
+                                                className="mx-auto h-5 w-fit"
                                                 src="https://html.tailus.io/blocks/customers/nike.svg"
                                                 alt="Nike Logo"
                                                 height="20"
@@ -79,21 +97,6 @@ export default function HeroSection() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="absolute inset-y-0 left-1/2 right-0 overflow-hidden">
-                                <img
-                                    className="-translate-x-1/20 absolute inset-0 mix-blend-darken"
-                                    src="https://images.unsplash.com/photo-1577713523629-77904e534cc4?q=80&w=2357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt=""
-                                />
-                                <Image
-                                    className="rounded-(--radius) absolute -right-20 bottom-6 left-20 top-20 my-auto border border-black/5 shadow-xl"
-                                    src="/mist/notion-2.png"
-                                    alt="app screen"
-                                    width="2880"
-                                    height="1842"
-                                />
                             </div>
                         </div>
                     </div>

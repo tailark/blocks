@@ -14,7 +14,7 @@ export default function HeroSection() {
                         <div className="mx-auto max-w-5xl px-6">
                             <div>
                                 <h1 className="mt-8 max-w-2xl text-balance text-5xl font-bold lg:text-6xl">Build 10x Faster with Mist</h1>
-                                <p className="text-foreground my-6 max-w-2xl text-balance text-2xl">Write. Plan. Collaborate. With a little help from AI.</p>
+                                <p className="text-foreground my-6 max-w-2xl text-balance text-2xl">Craft. Build. Ship Modern Websites With AI Support.</p>
 
                                 <div className="flex flex-col items-center gap-3 *:w-full sm:flex-row sm:*:w-fit">
                                     <Button
