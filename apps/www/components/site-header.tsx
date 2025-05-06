@@ -30,10 +30,11 @@ export const SiteHeader = () => {
                         <span className="sr-only font-bold">ns UI</span>
                     </Link>
                     <span
+                        aria-hidden
                         className="hidden h-4 w-px rounded-full bg-black/20 sm:block dark:bg-white/10"
                         style={{ rotate: '20deg' }}
                     />
-                    <div className="hidden w-24 sm:block">
+                    <div className="hidden sm:block">
                         <KitSwitcher />
                     </div>
                 </div>
@@ -63,9 +64,9 @@ export const SiteHeader = () => {
                             </Link>
                         </Button>
                     </div>
-                    <Separator
-                        orientation="vertical"
-                        className="h-4"
+                    <span
+                        aria-hidden
+                        className="hidden h-4 w-px rounded-full bg-black/20 sm:block dark:bg-white/10"
                     />
                     <div className="flex items-center gap-2">
                         <Button

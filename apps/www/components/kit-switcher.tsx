@@ -52,7 +52,7 @@ export function KitSwitcher() {
         <Select
             value={selectedKitId}
             onValueChange={handleKitChange}>
-            <SelectTrigger className="hover:bg-muted -ml-2 h-8 w-full gap-3 border-none px-1.5 font-medium shadow-none">
+            <SelectTrigger className="hover:bg-muted -ml-2 h-8 gap-3 border-none pl-1.5 pr-3 font-medium shadow-none">
                 <div className="flex items-center gap-2">
                     <SelectValue placeholder="Select kit" />
                 </div>
