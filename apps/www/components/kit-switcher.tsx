@@ -8,22 +8,36 @@ import { getClientKits } from '@/lib/get-kits'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@tailark/core/ui/select'
 
 const kits = getClientKits()
+const STORAGE_KEY = 'selected-kit-id'
 
 export function KitSwitcher() {
     const router = useRouter()
     const pathname = usePathname()
     const [selectedKitId, setSelectedKitId] = useState<string>(kits[0].id)
 
-    useEffect(() => {
-        const pathParts = pathname.split('/')
-        const kitIdFromPath = pathParts[1] === 'mist' ? 'mist-kit' : 'default'
-        const kitExists = kits.some((kit) => kit.id === kitIdFromPath)
+    const isDisabled = pathname.startsWith('/snippets')
 
-        setSelectedKitId(kitExists ? kitIdFromPath : 'default')
+    useEffect(() => {
+        const savedKit = localStorage.getItem(STORAGE_KEY)
+
+        if (!savedKit) {
+            const pathParts = pathname.split('/')
+            const kitIdFromPath = pathParts[1] === 'mist' ? 'mist-kit' : 'default'
+            const kitExists = kits.some((kit) => kit.id === kitIdFromPath)
+
+            const kitToUse = kitExists ? kitIdFromPath : 'default'
+            setSelectedKitId(kitToUse)
+            localStorage.setItem(STORAGE_KEY, kitToUse)
+        } else {
+            setSelectedKitId(savedKit)
+        }
     }, [pathname])
 
     const handleKitChange = (value: string) => {
+        if (isDisabled) return
+
         setSelectedKitId(value)
+        localStorage.setItem(STORAGE_KEY, value)
 
         if (value === 'default') {
             const pathParts = pathname.split('/')
@@ -51,7 +65,8 @@ export function KitSwitcher() {
     return (
         <Select
             value={selectedKitId}
-            onValueChange={handleKitChange}>
+            onValueChange={handleKitChange}
+            disabled={isDisabled}>
             <SelectTrigger className="hover:bg-muted -ml-2 h-8 gap-3 border-none pl-1.5 pr-3 font-medium shadow-none">
                 <div className="flex items-center gap-2">
                     <SelectValue placeholder="Select kit" />

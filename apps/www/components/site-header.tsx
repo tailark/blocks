@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Logo } from '@tailark/core/components/logo'
 import { Button } from '@tailark/core/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
@@ -14,10 +14,30 @@ import { Dialog, DialogClose, DialogTitle, DialogContent, DialogTrigger } from '
 export const SiteHeader = () => {
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
+    const [currentKitId, setCurrentKitId] = useState('default')
 
     const isActive = (path: string) => {
         return pathname === path || pathname.startsWith(`${path}/`)
     }
+
+    useEffect(() => {
+        const savedKit = localStorage.getItem('selected-kit-id')
+        if (savedKit) {
+            setCurrentKitId(savedKit)
+        }
+    }, [])
+
+    const blocksBasePath = () => {
+        if (currentKitId === 'default') {
+            return '/hero-section'
+        } else if (currentKitId === 'mist-kit') {
+            return '/mist/hero-section'
+        } else {
+            return `/${currentKitId}/hero-section`
+        }
+    }
+
+    const blocksHref = blocksBasePath()
 
     return (
         <header className="border-b dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
@@ -45,9 +65,9 @@ export const SiteHeader = () => {
                             asChild
                             size="sm"
                             variant="link"
-                            className={cn('text-foreground/75 rounded-full', isActive('/hero-section') && 'text-foreground')}>
+                            className={cn('text-foreground/75 rounded-full', isActive(blocksHref) && 'text-foreground')}>
                             <Link
-                                href="/hero-section"
+                                href={blocksHref}
                                 className="!text-sm">
                                 Blocks
                             </Link>
@@ -176,9 +196,9 @@ export const SiteHeader = () => {
                                         asChild
                                         size="sm"
                                         variant="ghost"
-                                        className={cn('justify-start', isActive('/hero-section') && 'bg-accent')}>
+                                        className={cn('justify-start', isActive(blocksHref) && 'bg-accent')}>
                                         <Link
-                                            href="/hero-section"
+                                            href={blocksHref}
                                             className="!text-sm"
                                             onClick={() => setIsOpen(false)}>
                                             Blocks
