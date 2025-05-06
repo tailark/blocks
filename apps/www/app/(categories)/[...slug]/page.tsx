@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { blocks } from '@/data/blocks'
 import BlockPreview from '@/components/block-preview'
 import { stringToNumber } from '@tailark/core/lib/utils'
+import CategoryNotFound from '@/components/category-not-found'
 
 interface PageProps {
     params: Promise<{ slug: string[] }>
@@ -91,16 +92,19 @@ export default function BlocksCategoryPage({ params }: { params: Promise<{ slug:
         })
 
     if (categoryBlocks.length === 0) {
-        const categoryExists = blocks.some((b) => b.category === category)
-        if (!categoryExists) {
-            console.error(`Category '${category}' not found in any kit.`)
-        } else {
-            console.error(
-                `Category '${category}' found, but not in kit '${kitFullName}'. Blocks found:`,
-                blocks.filter((b) => b.category === category).map((b) => b.kit)
+        const kitExists = blocks.some((b) => b.kit === kitFullName)
+
+        if (kitExists) {
+            return (
+                <CategoryNotFound
+                    categoryName={category}
+                    kitName={kitFullName}
+                />
             )
+        } else {
+            console.error(`Kit '${kitFullName}' not found.`)
+            notFound()
         }
-        notFound()
     }
 
     const kitDisplay = kitFullName === 'default-kit' ? 'Shadcn' : kitFullName.replace('-kit', '').charAt(0).toUpperCase() + kitFullName.replace('-kit', '').slice(1)
