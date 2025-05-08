@@ -6,3 +6,4 @@ export { default as HeroSectionFour } from './hero-section/four'
 
 // Features Blocks
 export { default as FeaturesOne } from './features/one'
+export { default as FeaturesTwo } from './features/two'
