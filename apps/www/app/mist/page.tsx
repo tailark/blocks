@@ -29,7 +29,14 @@ export default function Home() {
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/hero-section/three"
+                preview="/preview/mist/features/one"
+                category="page"
+                title="About page"
+                id="two"
+            />
+            <BlockPreview
+                previewOnly
+                preview="/preview/mist/content/two"
                 category="page"
                 title="About page"
                 id="two"
