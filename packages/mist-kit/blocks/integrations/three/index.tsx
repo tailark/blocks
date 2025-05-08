@@ -1,11 +1,9 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { ChevronRight } from 'lucide-react'
-import Link from 'next/link'
 import * as React from 'react'
 import { Gemini, Replit, MagicUI, VSCodium, MediaWiki, GooglePaLM } from '@tailark/core/components/logos'
 
-export default function IntegrationsSection() {
+export default function Integrations() {
     return (
         <section>
             <div className="py-32">

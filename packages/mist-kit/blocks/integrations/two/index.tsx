@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Gemini, GooglePaLM, Replit, MediaWiki, MagicUI, VSCodium } from '@tailark/core/components/logos'
 import Link from 'next/link'
 
-export default function LogoCloud() {
+export default function Integrations() {
     return (
         <section>
             <div className="mx-auto max-w-5xl px-6 py-8">

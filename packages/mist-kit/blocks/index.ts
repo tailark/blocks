@@ -23,7 +23,10 @@ export { default as FeaturesTen } from './features/ten'
 export { default as ContentOne } from './content/one'
 export { default as ContentTwo } from './content/two'
 
-// Content Blocks
+// Integrations Blocks
 export { default as IntegrationsOne } from './integrations/one'
 export { default as IntegrationsTwo } from './integrations/two'
 export { default as IntegrationsThree } from './integrations/three'
+
+// Stats Blocks
+export { default as StatsOne } from './stats/one'
