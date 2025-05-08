@@ -27,24 +27,25 @@ export const SiteHeader = () => {
         }
     }, [])
 
-    const blocksBasePath = () => {
+    const getBasePath = (isHome: boolean = false) => {
         if (currentKitId === 'default') {
-            return '/hero-section'
+            return isHome ? '/' : '/hero-section'
         } else if (currentKitId === 'mist-kit') {
-            return '/mist/hero-section'
+            return `/mist${isHome ? '/' : '/hero-section'}`
         } else {
-            return `/${currentKitId}/hero-section`
+            return `/${currentKitId}${isHome ? '/' : '/hero-section'}`
         }
     }
 
-    const blocksHref = blocksBasePath()
+    const blocksHref = getBasePath(false)
+    const homeHref = getBasePath(true)
 
     return (
         <header className="border-b dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-4">
                 <div className="flex items-center gap-4">
                     <Link
-                        href="/"
+                        href={homeHref}
                         className="flex w-fit items-center gap-2">
                         <Logo />
                         <span className="sr-only font-bold">ns UI</span>
