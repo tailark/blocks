@@ -4,6 +4,9 @@ export { default as HeroSectionTwo } from './hero-section/two'
 export { default as HeroSectionThree } from './hero-section/three'
 export { default as HeroSectionFour } from './hero-section/four'
 
+// Logo Cloud Blocks
+export { default as LogoCloudOne } from './logo-cloud/one'
+
 // Features Blocks
 export { default as FeaturesOne } from './features/one'
 export { default as FeaturesTwo } from './features/two'
@@ -16,6 +19,11 @@ export { default as FeaturesEight } from './features/eight'
 export { default as FeaturesNine } from './features/nine'
 export { default as FeaturesTen } from './features/ten'
 
-// Features Blocks
+// Content Blocks
 export { default as ContentOne } from './content/one'
 export { default as ContentTwo } from './content/two'
+
+// Content Blocks
+export { default as IntegrationsOne } from './integrations/one'
+export { default as IntegrationsTwo } from './integrations/two'
+export { default as IntegrationsThree } from './integrations/three'
