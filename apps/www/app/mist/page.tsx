@@ -36,7 +36,28 @@ export default function Home() {
             />
             <BlockPreview
                 previewOnly
+                preview="/preview/mist/features/six"
+                category="page"
+                title="About page"
+                id="two"
+            />
+            <BlockPreview
+                previewOnly
+                preview="/preview/mist/integrations/one"
+                category="page"
+                title="About page"
+                id="two"
+            />
+            <BlockPreview
+                previewOnly
                 preview="/preview/mist/content/two"
+                category="page"
+                title="About page"
+                id="two"
+            />
+            <BlockPreview
+                previewOnly
+                preview="/preview/mist/stats/one"
                 category="page"
                 title="About page"
                 id="two"

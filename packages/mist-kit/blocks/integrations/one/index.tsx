@@ -2,7 +2,7 @@ import { Gemini, GooglePaLM, Replit, MediaWiki, MagicUI, VSCodium } from '@taila
 
 export default function Integrations() {
     return (
-        <section className="bg-muted">
+        <section>
             <div className="mx-auto max-w-5xl px-6 py-8">
                 <div className="flex flex-wrap items-center gap-4">
                     <p className="text-muted-foreground font-medium">Integrate with : </p>
