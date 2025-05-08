@@ -46,11 +46,11 @@ export const CodeEditor = ({ files, code, id, category, lang = 'tsx', maxHeight,
     return (
         <>
             {files && files.length > 1 ? (
-                <div className="flex border-l [--color-border:var(--color-zinc-800)] dark:[--color-border:inherit]">
-                    <div className="text-foreground bg-background hidden w-64 font-mono [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25">
+                <div className="scheme-dark flex border-l border-zinc-800 dark:[--color-border:inherit]">
+                    <div className="hidden w-64 bg-zinc-950 font-mono text-white [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25">
                         <div className="pb-5.5 pt-1.5 font-mono text-xs">
                             <div>
-                                <div className="pr-5.5 hover:bg-muted/50 flex items-center gap-1.5 py-2 pl-4">
+                                <div className="pr-5.5 dark:hover:bg-muted/50 flex items-center gap-1.5 py-2 pl-4 hover:bg-white/5">
                                     <ChevronDown className="size-4 opacity-50" />
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ export const CodeEditor = ({ files, code, id, category, lang = 'tsx', maxHeight,
                                             key={index}
                                             aria-label={`${name} code`}
                                             value={String(index)}
-                                            className="pr-5.5 hover:bg-muted/50 data-[state=checked]:bg-muted/50 flex w-full items-center gap-1.5 py-2 pl-12">
+                                            className="pr-5.5 dark:hover:bg-muted/50 dark:data-[state=checked]:bg-muted/50 flex w-full items-center gap-1.5 py-2 pl-12 hover:bg-zinc-800/50 data-[state=checked]:bg-zinc-800/50">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 className="size-3.5"
