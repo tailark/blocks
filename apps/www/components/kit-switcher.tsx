@@ -18,20 +18,35 @@ export function KitSwitcher() {
     const isDisabled = pathname.startsWith('/snippets')
 
     useEffect(() => {
-        const savedKit = localStorage.getItem(STORAGE_KEY)
+        const pathParts = pathname.split('/')
+        const firstPathSegment = pathParts[1]
 
-        if (!savedKit) {
-            const pathParts = pathname.split('/')
-            const kitIdFromPath = pathParts[1] === 'mist' ? 'mist-kit' : 'default'
-            const kitExists = kits.some((kit) => kit.id === kitIdFromPath)
+        let derivedKitId: string
 
-            const kitToUse = kitExists ? kitIdFromPath : 'default'
-            setSelectedKitId(kitToUse)
-            localStorage.setItem(STORAGE_KEY, kitToUse)
+        if (firstPathSegment === 'mist') {
+            derivedKitId = 'mist-kit'
         } else {
-            setSelectedKitId(savedKit)
+            const matchedKit = kits.find((kit) => kit.id === firstPathSegment && kit.id !== 'default')
+            if (matchedKit) {
+                derivedKitId = matchedKit.id
+            } else {
+                derivedKitId = 'default'
+            }
         }
-    }, [pathname])
+
+        if (!kits.some((kit) => kit.id === derivedKitId)) {
+            derivedKitId = 'default'
+        }
+
+        if (selectedKitId !== derivedKitId) {
+            setSelectedKitId(derivedKitId)
+        }
+
+        const storedKit = localStorage.getItem(STORAGE_KEY)
+        if (storedKit !== derivedKitId) {
+            localStorage.setItem(STORAGE_KEY, derivedKitId)
+        }
+    }, [pathname, selectedKitId, kits])
 
     const handleKitChange = (value: string) => {
         if (isDisabled) return
