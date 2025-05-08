@@ -11,6 +11,10 @@ export { default as FeaturesThree } from './features/three'
 export { default as FeaturesFour } from './features/four'
 export { default as FeaturesFive } from './features/five'
 export { default as FeaturesSix } from './features/six'
+export { default as FeaturesSeven } from './features/seven'
+export { default as FeaturesEight } from './features/eight'
+export { default as FeaturesNine } from './features/nine'
+export { default as FeaturesTen } from './features/ten'
 
 // Features Blocks
 export { default as ContentOne } from './content/one'
