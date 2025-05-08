@@ -57,7 +57,7 @@ export default function HeroSection() {
                             </div>
 
                             <div className="mt-8">
-                                <p className="text-muted-foreground text-sm">Trusted by teams at :</p>
+                                <p className="text-muted-foreground text-center">Trusted by teams at :</p>
                                 <div className="mt-4 flex items-center justify-center gap-12">
                                     <div className="flex">
                                         <img
