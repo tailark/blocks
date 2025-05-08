@@ -3,35 +3,41 @@ import { cn } from '@tailark/core/lib/utils'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { Bold, Calendar1, Ellipsis, Italic, Strikethrough, Underline } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 
-export default function ContentSection() {
+export default function FeaturesSection() {
     return (
         <section>
-            <div className="bg-muted/50 py-24">
+            <div className="py-24">
                 <div className="mx-auto w-full max-w-5xl px-6">
                     <div>
-                        <span className="text-primary">Smart Editor</span>
-                        <h2 className="text-foreground mt-4 text-4xl font-semibold">Ask Tailark to Edit anything</h2>
-                        <p className="text-muted-foreground mb-12 mt-4 text-lg">Saving you time is our priority. And chat actions is the way we achieve that. You can ask Amie to draft emails, create or update meetings, rewrite summaries, create mind maps from summaries, and more.</p>
+                        <h2 className="text-foreground mt-4 text-4xl font-semibold">A Personalized AI Assistant</h2>
+                        <p className="text-muted-foreground mb-12 mt-4 text-balance text-lg">With Tailark, you have a personal AI assistant at your fingertips. Ask Amie to help you with any email-related tasks, from writing emails from scratch to summarizing conversations.</p>
                     </div>
 
-                    <div className="border-foreground/5 space-y-6 [--color-border:color-mix(in_oklab,var(--color-foreground)10%,transparent)] sm:space-y-0 sm:divide-y">
-                        <div className="grid sm:grid-cols-5">
-                            <CodeIllustration className="sm:col-span-2" />
-                            <div className="mt-6 sm:col-span-3 sm:mt-0 sm:border-l sm:pl-12">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                        <Card
+                            variant="soft"
+                            className="p-6">
+                            <div className="flex aspect-video items-center justify-center">
+                                <CodeIllustration className="w-full" />
+                            </div>
+                            <div className="text-center">
                                 <h3 className="text-foreground text-xl font-semibold">Marketing Campaigns</h3>
-                                <p className="text-muted-foreground mt-4 text-lg">We'll put together your schedule on automatically. You'll keep app deadlines, and will work on the highest priority items first.</p>
+                                <p className="text-muted-foreground mt-4 text-balance text-lg">Effortlessly plan and execute your marketing campaigns organized.</p>
                             </div>
-                        </div>
-                        <div className="grid sm:grid-cols-5">
-                            <div className="flex items-center justify-center pt-12 sm:col-span-2">
-                                <ScheduleIllustation className="pt-8" />
+                        </Card>
+                        <Card
+                            variant="soft"
+                            className="p-6">
+                            <div className="flex aspect-video items-center justify-center">
+                                <ScheduleIllustation className="border" />
                             </div>
-                            <div className="mt-6 sm:col-span-3 sm:mt-0 sm:border-l sm:pl-12 sm:pt-12">
+                            <div className="text-center">
                                 <h3 className="text-foreground text-xl font-semibold">AI Meeting Scheduler</h3>
-                                <p className="text-muted-foreground mt-4 text-lg">Ask the chat to create or update your events. Ask it how much time you've spent on demo calls last week. Or have it prepare today's agendas.</p>
+                                <p className="text-muted-foreground mt-4 text-balance text-lg">Effortlessly book and manage your meetings. Stay on top of your schedule.</p>
                             </div>
-                        </div>
+                        </Card>
                     </div>
                 </div>
             </div>
