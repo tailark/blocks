@@ -50,3 +50,8 @@ export { default as PricingTwo } from './pricing/two'
 
 // Comparator Blocks
 export { default as ComparatorOne } from './comparator/one'
+
+// Faqs Blocks
+export { default as FaqsOne } from './faqs/one'
+export { default as FaqsTwo } from './faqs/two'
+export { default as FaqsThree } from './faqs/three'
