@@ -23,6 +23,11 @@ export { default as FeaturesTen } from './features/ten'
 export { default as ContentOne } from './content/one'
 export { default as ContentTwo } from './content/two'
 
+// Call To Action blocks
+export { default as CallToActionOne } from './call-to-action/one'
+export { default as CallToActionTwo } from './call-to-action/two'
+export { default as CallToActionThree } from './call-to-action/three'
+
 // Integrations Blocks
 export { default as IntegrationsOne } from './integrations/one'
 export { default as IntegrationsTwo } from './integrations/two'
