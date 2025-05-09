@@ -47,3 +47,6 @@ export { default as TestimonialsFour } from './testimonials/four'
 // Pricing Blocks
 export { default as PricingOne } from './pricing/one'
 export { default as PricingTwo } from './pricing/two'
+
+// Comparator Blocks
+export { default as ComparatorOne } from './comparator/one'
