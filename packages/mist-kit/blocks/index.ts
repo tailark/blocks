@@ -30,3 +30,6 @@ export { default as IntegrationsThree } from './integrations/three'
 
 // Stats Blocks
 export { default as StatsOne } from './stats/one'
+export { default as StatsTwo } from './stats/two'
+export { default as StatsThree } from './stats/three'
+export { default as StatsFour } from './stats/four'

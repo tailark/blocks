@@ -15,7 +15,7 @@ export default function Home() {
                         <p className="mb-6 mt-3 text-balance text-base">Speed up your workflow with responsive, pre-built UI blocks designed for marketing websites.</p>
 
                         <Button>
-                            <Link href="/hero-section">Explore blocks</Link>
+                            <Link href="/mist/hero-section">Explore blocks</Link>
                         </Button>
                     </div>
                 </div>
@@ -50,14 +50,21 @@ export default function Home() {
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/content/two"
+                preview="/preview/mist/features/seven"
                 category="page"
                 title="About page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/stats/one"
+                preview="/preview/mist/stats/four"
+                category="page"
+                title="About page"
+                id="two"
+            />
+            <BlockPreview
+                previewOnly
+                preview="/preview/mist/content/two"
                 category="page"
                 title="About page"
                 id="two"
