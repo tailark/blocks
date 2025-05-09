@@ -37,3 +37,9 @@ export { default as StatsFour } from './stats/four'
 // Team Blocks
 export { default as TeamOne } from './team/one'
 export { default as TeamTwo } from './team/two'
+
+// Testimonial Blocks
+export { default as TestimonialsOne } from './testimonials/one'
+export { default as TestimonialsTwo } from './testimonials/two'
+export { default as TestimonialsThree } from './testimonials/three'
+export { default as TestimonialsFour } from './testimonials/four'
