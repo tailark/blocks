@@ -69,6 +69,20 @@ export default function Home() {
                 title="About page"
                 id="two"
             />
+            <BlockPreview
+                previewOnly
+                preview="/preview/mist/testimonials/two"
+                category="page"
+                title="About page"
+                id="two"
+            />
+            <BlockPreview
+                previewOnly
+                preview="/preview/mist/team/one"
+                category="page"
+                title="About page"
+                id="two"
+            />
             <SiteFooter />
         </>
     )
