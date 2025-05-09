@@ -50,7 +50,8 @@
     "react-dom": "^19.0.0",
     "react-use-measure": "^2.1.7",
     "recharts": "^2.15.1",
-    "tailwind-merge": "^3.0.1"
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
     "typescript": "latest"
