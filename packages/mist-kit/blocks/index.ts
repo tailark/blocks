@@ -19,6 +19,12 @@ export { default as FeaturesEight } from './features/eight'
 export { default as FeaturesNine } from './features/nine'
 export { default as FeaturesTen } from './features/ten'
 
+// Footer Blocks
+export { default as FooterOne } from './footer/one'
+export { default as FooterTwo } from './footer/two'
+export { default as FooterThree } from './footer/three'
+export { default as FooterFour } from './footer/four'
+
 // Content Blocks
 export { default as ContentOne } from './content/one'
 export { default as ContentTwo } from './content/two'
