@@ -63,14 +63,14 @@ export async function generateMetadata({ params }: PageProps) {
     }
 
     const { kitShortName, category } = parsed
-    const kitDisplay = kitShortName === 'default' ? 'Shadcn' : kitShortName.charAt(0).toUpperCase() + kitShortName.slice(1)
+    const kitDisplay = kitShortName === 'default' ? '' : kitShortName.charAt(0).toUpperCase() + kitShortName.slice(1)
     const categoryDisplay = category
         .split('-')
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join(' ')
 
     return {
-        title: `${kitDisplay} ${categoryDisplay} Blocks | Tailark`,
+        title: `Shadcn ${categoryDisplay} Blocks | Tailark ${kitDisplay}`,
     }
 }
 
