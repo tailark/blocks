@@ -55,3 +55,6 @@ export { default as ComparatorOne } from './comparator/one'
 export { default as FaqsOne } from './faqs/one'
 export { default as FaqsTwo } from './faqs/two'
 export { default as FaqsThree } from './faqs/three'
+
+// Contact Blocks
+export { default as ContactOne } from './contact/one'
