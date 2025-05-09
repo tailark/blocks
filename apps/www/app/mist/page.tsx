@@ -2,6 +2,7 @@ import BlockPreview from '@/components/block-preview'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { Button } from '@tailark/core/ui/button'
+import { Book, BookOpen, Notebook, Pen, Scroll } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {
@@ -9,10 +10,12 @@ export default function Home() {
         <>
             <SiteHeader />
             <section>
-                <div className="mx-4 max-w-7xl border-x px-4 py-16 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
-                    <div className="mx-auto max-w-xl text-center">
-                        <h1 className="text-balance text-3xl font-bold sm:text-4xl">Shadcn Marketing Blocks</h1>
-                        <p className="mb-6 mt-3 text-balance text-base">Speed up your workflow with responsive, pre-built UI blocks designed for marketing websites.</p>
+                <div className="mx-4 max-w-7xl px-4 py-12 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
+                    <div className="mx-auto max-w-md text-center">
+                        <h1 className="inline-flex flex-wrap justify-center gap-2 text-balance text-3xl font-semibold sm:text-4xl">
+                            Shadcn Blocks <span className="text-muted-foreground">for</span> Wiki-Style <MistKitLogo /> Websites
+                        </h1>
+                        <p className="text-forground/60 mx-auto mb-6 mt-4 max-w-md text-balance text-lg">Craft Sleek, Notion-Inspired Marketing Pages. Built on top of Shadcn UI.</p>
 
                         <Button>
                             <Link href="/mist/hero-section">Explore blocks</Link>
@@ -87,3 +90,13 @@ export default function Home() {
         </>
     )
 }
+
+const MistKitLogo = () => (
+    <div
+        aria-hidden
+        className="border-background dark:inset-ring dark:inset-ring-white/25 bg-linear-to-b dark:inset-shadow-2xs dark:inset-shadow-white/25 rounded-(--radius) relative flex size-9 translate-y-0.5 items-center justify-center border from-lime-300 to-teal-600 shadow-lg shadow-black/20 ring-1 ring-black/10 dark:border-0 dark:shadow-white/10 dark:ring-black/50">
+        <BookOpen className="mask-b-from-25% size-6 fill-white stroke-white drop-shadow-sm" />
+        <BookOpen className="absolute inset-0 m-auto size-6 fill-white stroke-white opacity-65 drop-shadow-sm" />
+        <div className="z-1 h-4.5 absolute inset-2 m-auto w-px translate-y-px rounded-full bg-black/10"></div>
+    </div>
+)
