@@ -33,3 +33,7 @@ export { default as StatsOne } from './stats/one'
 export { default as StatsTwo } from './stats/two'
 export { default as StatsThree } from './stats/three'
 export { default as StatsFour } from './stats/four'
+
+// Team Blocks
+export { default as TeamOne } from './team/one'
+export { default as TeamTwo } from './team/two'
