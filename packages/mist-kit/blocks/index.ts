@@ -58,3 +58,12 @@ export { default as FaqsThree } from './faqs/three'
 
 // Contact Blocks
 export { default as ContactOne } from './contact/one'
+
+// Login Blocks
+export { default as LoginOne } from './login/one'
+
+// Sign Up Blocks
+export { default as SignUpOne } from './sign-up/one'
+
+// Sign Up Blocks
+export { default as ForgotPasswordOne } from './forgot-password/one'
