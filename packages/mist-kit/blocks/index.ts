@@ -43,3 +43,7 @@ export { default as TestimonialsOne } from './testimonials/one'
 export { default as TestimonialsTwo } from './testimonials/two'
 export { default as TestimonialsThree } from './testimonials/three'
 export { default as TestimonialsFour } from './testimonials/four'
+
+// Pricing Blocks
+export { default as PricingOne } from './pricing/one'
+export { default as PricingTwo } from './pricing/two'

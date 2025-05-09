@@ -7,6 +7,7 @@ const buttonVariants = cva('cursor-pointer font-medium inline-flex items-center 
     variants: {
         variant: {
             default: 'bg-primary text-primary-foreground hover:brightness-95',
+            neutral: 'bg-foreground text-background hover:brightness-95',
             destructive: 'bg-destructive text-destructive-foreground shadow-md hover:bg-destructive/90',
             outline: 'shadow-sm text-foreground shadow-black/15 border border-transparent bg-background ring-1 ring-foreground/10 duration-200 hover:bg-muted/50',
             secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
