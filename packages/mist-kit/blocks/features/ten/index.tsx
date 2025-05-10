@@ -12,10 +12,10 @@ export default function FeaturesSection() {
         <section>
             <div className="py-24">
                 <div className="mx-auto w-full max-w-3xl px-6">
-                    <div>
-                        <h2 className="text-foreground text-balance text-center text-4xl font-semibold">Empowering developers with AI-driven solutions</h2>
-                    </div>
-                    <div className="mt-16 grid gap-12 sm:grid-cols-2">
+                    <h2 className="text-foreground text-balance text-3xl font-semibold md:text-4xl">
+                        <span className="text-muted-foreground">Empowering Marketing teams with</span> AI-driven solutions
+                    </h2>
+                    <div className="mt-12 grid gap-12 sm:grid-cols-2">
                         <div className="col-span-full space-y-4">
                             <Card
                                 variant="soft"

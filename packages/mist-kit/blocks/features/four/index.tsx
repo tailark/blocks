@@ -11,8 +11,8 @@ export default function FeaturesSection() {
             <div className="bg-muted/50 py-24">
                 <div className="mx-auto w-full max-w-5xl px-6">
                     <div>
-                        <h2 className="text-foreground mt-4 text-4xl font-semibold">A Personalized AI Assistant</h2>
-                        <p className="text-muted-foreground mb-12 mt-4 text-balance text-lg">With Tailark, you have a personal AI assistant at your fingertips. Ask Amie to help you with any email-related tasks, from writing emails from scratch to summarizing conversations.</p>
+                        <h2 className="text-foreground mt-4 text-4xl font-semibold">Personal AI, with you Anywhere</h2>
+                        <p className="text-muted-foreground mb-12 mt-4 text-balance text-lg">Quick AI lives a single hotkey away - ready to quickly appear as a floating window above your other apps. Get instant assistance whether you're browsing, coding, or writing documents.</p>
                     </div>
 
                     <div className="grid gap-4 sm:grid-cols-2">

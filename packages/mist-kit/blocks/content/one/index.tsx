@@ -12,7 +12,7 @@ export default function ContentSection() {
                     <div>
                         <span className="text-primary">Smart Editor</span>
                         <h2 className="text-foreground mt-4 text-4xl font-semibold">Ask Tailark to Edit anything</h2>
-                        <p className="text-muted-foreground mb-12 mt-4 text-lg">Saving you time is our priority. And chat actions is the way we achieve that. You can ask Amie to draft emails, create or update meetings, rewrite summaries, create mind maps from summaries, and more.</p>
+                        <p className="text-muted-foreground mb-12 mt-4 text-lg">Efficient content creation is our mission. With Tailark, you can effortlessly edit text, generate code snippets, format documents, create visualizations from data, and seamlessly integrate with your existing workflow.</p>
                     </div>
 
                     <div className="border-foreground/5 space-y-6 [--color-border:color-mix(in_oklab,var(--color-foreground)10%,transparent)] sm:space-y-0 sm:divide-y">
