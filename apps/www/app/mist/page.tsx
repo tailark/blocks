@@ -2,7 +2,7 @@ import BlockPreview from '@/components/block-preview'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { Button } from '@tailark/core/ui/button'
-import { Book, BookOpen, Notebook, Pen, Scroll } from 'lucide-react'
+import { BookOpen } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {
