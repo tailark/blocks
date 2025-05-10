@@ -31,6 +31,8 @@ export { default as FooterFour } from './footer/four'
 // Content Blocks
 export { default as ContentOne } from './content/one'
 export { default as ContentTwo } from './content/two'
+export { default as ContentThree } from './content/three'
+export { default as ContentFour } from './content/four'
 
 // Call To Action blocks
 export { default as CallToActionOne } from './call-to-action/one'
