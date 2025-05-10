@@ -46,7 +46,7 @@ export function KitSwitcher() {
         if (storedKit !== derivedKitId) {
             localStorage.setItem(STORAGE_KEY, derivedKitId)
         }
-    }, [pathname, selectedKitId, kits])
+    }, [pathname, selectedKitId])
 
     const handleKitChange = (value: string) => {
         if (isDisabled) return
