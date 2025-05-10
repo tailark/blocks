@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { formatComponentName } from '@/lib/utils'
 import { cn } from '@tailark/core/lib/utils'
 
-const kitBlockModules: Record<string, () => Promise<any>> = {
+const kitBlockModules: Record<string, () => Promise<Record<string, React.ElementType>>> = {
     'default-kit': () => import('@tailark/default/blocks'),
     'mist-kit': () => import('@tailark/mist/blocks'),
 }
@@ -54,7 +54,7 @@ export default function PreviewPage({ params }: { params: Promise<{ slug?: strin
             }
 
             console.log(`Component ${componentName} found in kit: ${kitFullName}`)
-            return { default: BlocksModule[componentName as keyof typeof BlocksModule] }
+            return { default: BlocksModule[componentName as keyof typeof BlocksModule] as React.ComponentType<Record<string, unknown>> }
         } catch (error) {
             console.error(`Error loading component ${componentName} from kit ${kitFullName}:`, error)
             throw new Error('Failed to load component')
