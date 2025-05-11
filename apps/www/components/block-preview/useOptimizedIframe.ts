@@ -1,22 +1,19 @@
-// /Users/irung/Documents/cnblocks/apps/www/components/block-preview/useOptimizedIframe.ts
-'use client'
-
 import { useState, useRef, useEffect, RefObject } from 'react'
-import { isUrlCached } from '../../lib/serviceWorker' // Adjusted path
+import { isUrlCached } from '@/lib/serviceWorker' 
 
 const getCacheKey = (src: string) => `iframe-cache-${src}`
 
 interface UseOptimizedIframeProps {
     previewUrl: string
-    containerRef: RefObject<HTMLElement | null> // Allow null for the ref's .current or the ref itself
+    containerRef: RefObject<HTMLElement | null> 
 }
 
 interface UseOptimizedIframeReturn {
-    iframeRef: RefObject<HTMLIFrameElement | null> // Allow null
+    iframeRef: RefObject<HTMLIFrameElement | null>
     shouldLoadIframe: boolean
     currentIframeHeight: number
     isIframeCached: boolean
-    setIframeHeightState: (height: number) => void // Allow parent to manually set height if needed
+    setIframeHeightState: (height: number) => void 
 }
 
 export const useOptimizedIframe = ({
@@ -57,7 +54,6 @@ export const useOptimizedIframe = ({
                 const isCached = await isUrlCached(previewUrl)
                 setIsIframeCached(isCached)
                 if (isCached) {
-                    // If already in SW cache, we can load eagerly
                     setShouldLoadIframe(true) 
                 }
             } catch (error) {
@@ -73,12 +69,11 @@ export const useOptimizedIframe = ({
             if (cached) {
                 const { height, timestamp } = JSON.parse(cached)
                 const now = Date.now()
-                // Cache for 24 hours
                 if (now - timestamp < 24 * 60 * 60 * 1000) { 
                     setCachedHeight(height)
-                    setIframeHeight(height) // Initialize with cached height
+                    setIframeHeight(height) 
                 } else {
-                    localStorage.removeItem(cacheKey) // Expire old cache
+                    localStorage.removeItem(cacheKey) 
                 }
             }
         } catch (error) {
@@ -92,11 +87,10 @@ export const useOptimizedIframe = ({
 
         const handleLoad = () => {
             try {
-                // Ensure contentWindow and body are accessible
                 if (iframe.contentWindow && iframe.contentWindow.document.body) {
                     const contentHeight = iframe.contentWindow.document.body.scrollHeight
                     setIframeHeight(contentHeight)
-                    setCachedHeight(contentHeight) // Update cached height for next time
+                    setCachedHeight(contentHeight) 
 
                     const cacheKey = getCacheKey(previewUrl)
                     const cacheValue = JSON.stringify({
@@ -106,7 +100,6 @@ export const useOptimizedIframe = ({
                     localStorage.setItem(cacheKey, cacheValue)
                 }
             } catch (e) {
-                // Common error if iframe content is cross-origin and doesn't allow access
                 console.warn('Error accessing iframe content for height calculation:', e)
             }
         }
@@ -120,13 +113,11 @@ export const useOptimizedIframe = ({
     useEffect(() => {
         if (!containerRef.current || shouldLoadIframe || isIframeCached) return
 
-        // Preload the iframe document if it's not in SW cache and not yet visible
         const linkElement = document.createElement('link')
         linkElement.rel = 'preload'
         linkElement.href = previewUrl
         linkElement.as = 'document'
 
-        // Avoid adding duplicate preload links
         if (!document.head.querySelector(`link[rel="preload"][href="${previewUrl}"]`)) {
             document.head.appendChild(linkElement)
         }
@@ -142,8 +133,8 @@ export const useOptimizedIframe = ({
     return {
         iframeRef,
         shouldLoadIframe,
-        currentIframeHeight: cachedHeight || iframeHeight || 0, // Ensure it's always a number
+        currentIframeHeight: cachedHeight || iframeHeight || 0, 
         isIframeCached,
-        setIframeHeightState: setIframeHeight // Expose setter if needed
+        setIframeHeightState: setIframeHeight
     }
 }

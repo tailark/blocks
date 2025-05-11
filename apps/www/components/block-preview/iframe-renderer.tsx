@@ -23,7 +23,7 @@ const IframeRenderer: React.FC<IframeRendererProps> = ({ src, title, ariaLabel, 
             title={title}
             aria-label={ariaLabel || `${title}-preview`}
             height={height}
-            className={cn('block h-[var(--iframe-height)] min-h-56 w-full duration-200', !height && '@starting:opacity-0 @starting:blur-xl', isCached && '!opacity-100 !blur-none', className)}
+            className={cn('block h-[var(--iframe-height)] min-h-56 w-full duration-200', !height && '@starting:opacity-0 @starting:blur-xl', className)}
             src={src}
             id={id}
             sandbox="allow-scripts allow-same-origin"
@@ -32,7 +32,7 @@ const IframeRenderer: React.FC<IframeRendererProps> = ({ src, title, ariaLabel, 
                     ...style,
                     '--iframe-height': `${height}px`,
                     display: 'block',
-                    willChange: 'opacity, filter, height',
+                    willChange: 'height',
                 } as React.CSSProperties
             }
         />
