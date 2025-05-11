@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { sendGAEvent } from '@next/third-parties/google'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@tailark/core/ui/tooltip'
 
-export function OpenInV0Button({ block, title, category }: { block: string; title: string; category: string }) {
+export function OpenInV0Button({ registryUrl, title, category }: { registryUrl: string; title: string; category: string }) {
     return (
         <TooltipProvider>
             <Tooltip>
@@ -20,7 +20,7 @@ export function OpenInV0Button({ block, title, category }: { block: string; titl
                             })
                         }>
                         <Link
-                            href={`https://v0.dev/chat/api/open?url=https://tailark.com/r/${block}.json`}
+                            href={`https://v0.dev/chat/api/open?url=${registryUrl}`}
                             target="_blank"
                             rel="noreferrer">
                             <svg

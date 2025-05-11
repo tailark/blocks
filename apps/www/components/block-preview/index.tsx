@@ -75,7 +75,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                     onModeChange={setMode}
                     onCliCopy={cliCopy}
                     onRegistryLinkCopy={registryLinkCopy}
-                    {...{ panelGroupRef, mode, setMode, codeAvailable, previewOnly, previewLink, title, id, category, cliCopied, cliCopy, registryLinkCopied }}
+                    {...{ panelGroupRef, mode, setMode, codeAvailable, previewOnly, previewLink, title, id, category, cliCopied, cliCopy, registryUrl, registryLinkCopied }}
                 />
             </div>
 
