@@ -290,14 +290,17 @@ export const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, preview
                                             allowFullScreen
                                             ref={iframeRef}
                                             title={title}
+                                            aria-label={`${category}-${title}-block`}
                                             height={cachedHeight || iframeHeight}
-                                            className={cn('h-(--iframe-height) block min-h-56 w-full duration-200 will-change-auto', !cachedHeight && '@starting:opacity-0 @starting:blur-xl', isIframeCached && '!opacity-100 !blur-none')}
+                                            className={cn('h-(--iframe-height) block min-h-56 w-full duration-200', !cachedHeight && '@starting:opacity-0 @starting:blur-xl', isIframeCached && '!opacity-100 !blur-none')}
                                             src={preview}
                                             id={`block-${title}`}
+                                            sandbox="allow-scripts allow-same-origin"
                                             style={
                                                 {
                                                     '--iframe-height': `${cachedHeight || iframeHeight}px`,
                                                     display: 'block',
+                                                    willChange: 'opacity, filter, height',
                                                 } as React.CSSProperties
                                             }
                                         />
