@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mist-features-2",
+  "type": "registry:block",
+  "title": "Features Two",
+  "description": "Mist Kit Features block, variant two",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "../../packages/mist-kit/blocks/features/two/index.tsx",
+      "content": "import { Card } from '@/components/ui/card'\n\nexport default function Features() {\n    return (\n        <section>\n            <div className=\"bg-muted/50 py-24\">\n                <div className=\"mx-auto max-w-5xl px-6\">\n                    <div>\n                        <h2 className=\"text-foreground text-4xl font-semibold\">Effortless Task Management</h2>\n                        <p className=\"text-muted-foreground mb-12 mt-4 text-balance text-lg\">Automate your tasks and workflows by connecting your favorite tools like Notion, Todoist, and more. AI-powered scheduling helps you stay on track and adapt to changing priorities.</p>\n                    </div>\n                    <div className=\"mt-8 grid gap-4 sm:grid-cols-2 md:mt-16 md:grid-cols-3\">\n                        <div className=\"space-y-4\">\n                            <Card\n                                className=\"aspect-video overflow-hidden px-6\"\n                                variant=\"soft\">\n                                <Card className=\"h-full translate-y-6\" />\n                            </Card>\n                            <div className=\"sm:max-w-sm\">\n                                <h3 className=\"text-foreground text-xl font-semibold\">Marketing Campaigns</h3>\n                                <p className=\"text-muted-foreground my-4 text-lg\">Effortlessly book and manage your meetings. Stay on top of your schedule.</p>\n                            </div>\n                        </div>\n                        <div className=\"space-y-4\">\n                            <Card\n                                className=\"aspect-video overflow-hidden p-6\"\n                                variant=\"soft\">\n                                <Card className=\"h-full\" />\n                            </Card>\n                            <div className=\"sm:max-w-sm\">\n                                <h3 className=\"text-foreground text-xl font-semibold\">AI Meeting Scheduler</h3>\n                                <p className=\"text-muted-foreground my-4 text-lg\">Effortlessly book and manage your meetings. Stay on top of your schedule.</p>\n                            </div>\n                        </div>\n                        <div className=\"space-y-4\">\n                            <Card\n                                className=\"aspect-video overflow-hidden\"\n                                variant=\"soft\">\n                                <Card className=\"translate-6 h-full\" />\n                            </Card>\n                            <div className=\"sm:max-w-sm\">\n                                <h3 className=\"text-foreground text-xl font-semibold\">AI Meeting Scheduler</h3>\n                                <p className=\"text-muted-foreground my-4 text-lg\">Effortlessly book and manage your meetings. Stay on top of your schedule.</p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+      "type": "registry:component",
+      "target": "components/features-two.tsx"
+    }
+  ]
+}

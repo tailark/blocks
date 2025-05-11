@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mist-stats-1",
+  "type": "registry:block",
+  "title": "Stats block",
+  "description": "Mist Kit Stats block, variant one",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "../../packages/mist-kit/blocks/stats/one/index.tsx",
+      "content": "import { Card } from '@/components/ui/card'\n\nexport default function StatsSection() {\n    return (\n        <section className=\"bg-muted py-12 md:py-20\">\n            <div className=\"mx-auto max-w-5xl px-6\">\n                <Card className=\"grid gap-0.5 divide-y *:py-8 *:text-center md:grid-cols-3 md:divide-x md:divide-y-0\">\n                    <div>\n                        <div className=\"text-foreground space-y-1 text-4xl font-bold\">+1200</div>\n                        <p className=\"text-muted-foreground\">Stars on GitHub</p>\n                    </div>\n                    <div>\n                        <div className=\"text-foreground space-y-1 text-4xl font-bold\">56%</div>\n                        <p className=\"text-muted-foreground\">Conversion rate</p>\n                    </div>\n                    <div>\n                        <div className=\"text-foreground space-y-1 text-4xl font-bold\">+500</div>\n                        <p className=\"text-muted-foreground\">Powered Apps</p>\n                    </div>\n                </Card>\n            </div>\n        </section>\n    )\n}\n",
+      "type": "registry:component",
+      "target": "components/stats-one.tsx"
+    }
+  ]
+}

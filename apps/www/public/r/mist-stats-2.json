@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mist-stats-2",
+  "type": "registry:block",
+  "title": "Stats block",
+  "description": "Mist Kit Stats block, variant two",
+  "files": [
+    {
+      "path": "../../packages/mist-kit/blocks/stats/two/index.tsx",
+      "content": "export default function StatsSection() {\n    return (\n        <section>\n            <div className=\"bg-muted/50 py-24\">\n                <div className=\"mx-auto max-w-5xl px-6\">\n                    <div>\n                        <h2 className=\"text-4xl font-semibold lg:text-5xl\">Tailark in numbers</h2>\n                        <p className=\"text-muted-foreground mt-4 text-balance text-lg\">Our platform continues to grow with developers and businesses using our tools to create innovative solutions and enhance productivity.</p>\n                    </div>\n                    <div className=\"mt-8 grid grid-cols-2 gap-4 md:mt-16 md:grid-cols-4\">\n                        <div>\n                            <div className=\"text-foreground text-4xl font-bold\">90+</div>\n                            <p className=\"text-muted-foreground\">Integrations</p>\n                        </div>\n                        <div>\n                            <div className=\"text-foreground text-4xl font-bold\">56%</div>\n                            <p className=\"text-muted-foreground\">Productivity Boost</p>\n                        </div>\n                        <div>\n                            <div className=\"text-foreground text-4xl font-bold\">24/7</div>\n                            <p className=\"text-muted-foreground\">Customer Support</p>\n                        </div>\n                        <div>\n                            <div className=\"text-foreground text-4xl font-bold\">10k+</div>\n                            <p className=\"text-muted-foreground\">Active Users</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+      "type": "registry:component",
+      "target": "components/stats-two.tsx"
+    }
+  ]
+}

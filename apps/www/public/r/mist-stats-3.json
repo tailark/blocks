@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mist-stats-3",
+  "type": "registry:block",
+  "title": "Stats block",
+  "description": "Mist Kit Stats block, variant three",
+  "files": [
+    {
+      "path": "../../packages/mist-kit/blocks/stats/three/index.tsx",
+      "content": "import { ArrowRight } from 'lucide-react'\n\nexport default function StatsSection() {\n    return (\n        <section>\n            <div className=\"py-24\">\n                <div className=\"mx-auto max-w-5xl px-6\">\n                    <div>\n                        <h2 className=\"text-2xl font-semibold\">Tailark in numbers</h2>\n                        <p className=\"text-muted-foreground mt-4 text-balance text-lg\">Our platform continues to grow with developers and businesses using our tools to create innovative solutions and enhance productivity.</p>\n                    </div>\n                    <ul\n                        role=\"list\"\n                        className=\"text-muted-foreground mt-8 space-y-2\">\n                        {[\n                            { value: '90+', label: 'Integrations' },\n                            { value: '56%', label: 'Productivity Boost' },\n                            { value: '24/7', label: 'Customer Support' },\n                            { value: '10k+', label: 'Active Users' },\n                        ].map((stat, index) => (\n                            <li\n                                key={index}\n                                className=\"-ml-0.5 flex items-center gap-1.5\">\n                                <ArrowRight className=\"size-4 opacity-50\" />\n                                <span className=\"text-foreground font-medium\">{stat.value}</span> {stat.label}\n                            </li>\n                        ))}\n                    </ul>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+      "type": "registry:component",
+      "target": "components/stats-three.tsx"
+    }
+  ]
+}

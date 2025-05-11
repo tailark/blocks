@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mist-call-to-action-2",
+  "type": "registry:block",
+  "title": "Call To Action 2",
+  "description": "Mist Kit Call To Action block, variant 2",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "../../packages/mist-kit/blocks/call-to-action/two/index.tsx",
+      "content": "import { Button } from '@/components/ui/button'\nimport Link from 'next/link'\n\nexport default function StatsSection() {\n    return (\n        <section>\n            <div className=\"py-12\">\n                <div className=\"mx-auto max-w-5xl px-6\">\n                    <div className=\"flex flex-wrap items-center justify-between gap-6\">\n                        <div>\n                            <h2 className=\"text-foreground text-balance text-3xl font-semibold lg:text-4xl\">Build 10x Faster with Mist</h2>\n                        </div>\n                        <div className=\"flex justify-end gap-3\">\n                            <Button\n                                asChild\n                                variant=\"outline\"\n                                size=\"lg\">\n                                <Link href=\"#\">Get a Demo</Link>\n                            </Button>\n                            <Button\n                                asChild\n                                size=\"lg\">\n                                <Link href=\"#\">Get Started</Link>\n                            </Button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+      "type": "registry:component",
+      "target": "components/call-to-action.tsx"
+    }
+  ]
+}

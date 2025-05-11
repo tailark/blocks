@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "mist-logo-cloud-2",
+  "type": "registry:block",
+  "title": "Logo Cloud One",
+  "description": "Mist Kit Logo Cloud block, variant two",
+  "files": [
+    {
+      "path": "../../packages/mist-kit/blocks/logo-cloud/two/index.tsx",
+      "content": "export default function LogoCloud() {\n    return (\n        <section>\n            <div className=\"mx-auto max-w-5xl px-6 py-8\">\n                <div className=\"flex flex-wrap items-center gap-4\">\n                    <p className=\"text-muted-foreground text-center\">Trusted by teams at :</p>\n                    <div className=\"flex items-center justify-center gap-8\">\n                        <div className=\"flex\">\n                            <img\n                                className=\"mx-auto h-4 w-fit\"\n                                src=\"https://html.tailus.io/blocks/customers/nvidia.svg\"\n                                alt=\"Nvidia Logo\"\n                                height=\"20\"\n                                width=\"auto\"\n                            />\n                        </div>\n\n                        <div className=\"flex\">\n                            <img\n                                className=\"mx-auto h-3 w-fit\"\n                                src=\"https://html.tailus.io/blocks/customers/column.svg\"\n                                alt=\"Column Logo\"\n                                height=\"16\"\n                                width=\"auto\"\n                            />\n                        </div>\n                        <div className=\"flex\">\n                            <img\n                                className=\"mx-auto h-3 w-fit\"\n                                src=\"https://html.tailus.io/blocks/customers/github.svg\"\n                                alt=\"GitHub Logo\"\n                                height=\"16\"\n                                width=\"auto\"\n                            />\n                        </div>\n                        <div className=\"flex\">\n                            <img\n                                className=\"mx-auto h-4 w-fit\"\n                                src=\"https://html.tailus.io/blocks/customers/nike.svg\"\n                                alt=\"Nike Logo\"\n                                height=\"20\"\n                                width=\"auto\"\n                            />\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n    )\n}\n",
+      "type": "registry:component",
+      "target": "components/logo-cloud-two.tsx"
+    }
+  ]
+}
