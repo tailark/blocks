@@ -35,7 +35,6 @@ export default function CodeBlock({ code, lang, initial, maxHeight, preHighlight
     const [content, setContent] = useState<JSX.Element | null>(preHighlighted || initial || null)
 
     useLayoutEffect(() => {
-        // If we have pre-highlighted content, use that
         if (preHighlighted) {
             setContent(preHighlighted)
             return

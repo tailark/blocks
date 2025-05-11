@@ -8,7 +8,7 @@ export interface Block {
     title: string
     description: string
     category: string
-    preview: string
+    previewLink: string
     code?: string,
     codes?: File[]
     kit?: string
@@ -131,11 +131,10 @@ function generateBlocks(): Block[] {
                     title: `${formattedCategory} block ${formattedVariant} (${kitName})`,
                     description: `Beautiful ${formattedCategory.toLowerCase()} block from ${kitName} for your marketing website (variant ${formattedVariant})`,
                     category: category,
-                    // Generate preview path including the kit short name for all kits
-                    preview: `/preview/${kitName.replace('-kit', '')}/${category}/${variant}`,
+                    previewLink: `/preview/${kitName.replace('-kit', '')}/${category}/${variant}`,
                     code: loadCode(blockFilePath),
                     codes: allComponents,
-                    kit: kitName // Keep the full kit name internally
+                    kit: kitName 
                 })
             }
         }

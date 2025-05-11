@@ -25,14 +25,14 @@ export default function Home() {
             </section>
             <BlockPreview
                 previewOnly
-                preview="/examples/home/one"
+                previewLink="/examples/home/one"
                 category="page"
                 title="Home page"
                 id="one"
             />
             <BlockPreview
                 previewOnly
-                preview="/examples/about/one"
+                previewLink="/examples/about/one"
                 category="page"
                 title="About page"
                 id="two"

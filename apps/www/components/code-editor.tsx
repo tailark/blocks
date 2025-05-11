@@ -46,7 +46,7 @@ export const CodeEditor = ({ files, code, id, category, lang = 'tsx', maxHeight,
     return (
         <>
             {files && files.length > 1 ? (
-                <div className="scheme-dark flex border-l border-zinc-800 dark:[--color-border:inherit]">
+                <div className="scheme-dark flex">
                     <div className="hidden w-64 bg-zinc-950 font-mono text-white [--color-background:var(--color-zinc-900)] [--color-foreground:white] [--color-muted:var(--color-zinc-800)] sm:block dark:bg-zinc-900/25">
                         <div className="pb-5.5 pt-1.5 font-mono text-xs">
                             <div>
@@ -125,7 +125,7 @@ export const CodeEditor = ({ files, code, id, category, lang = 'tsx', maxHeight,
                         code={code}
                         maxHeight={maxHeight}
                         lang={lang}
-                        className={className}
+                        className={cn('lg:*:!border-l-0', className)}
                     />
                 </div>
             )}

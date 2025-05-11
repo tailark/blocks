@@ -27,3 +27,5 @@ export function getClientKits(): Kit[] {
     { id: 'mist-kit', name: "Mist" },
   ]
 }
+
+export type Kits = "default" | "mist";

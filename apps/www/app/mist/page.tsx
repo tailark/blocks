@@ -25,63 +25,63 @@ export default function Home() {
             </section>
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/hero-section/one"
+                previewLink="/preview/mist/hero-section/one"
                 category="page"
                 title="Home page"
                 id="one"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/features/one"
+                previewLink="/preview/mist/features/one"
                 category="page"
                 title="About page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/features/six"
+                previewLink="/preview/mist/features/six"
                 category="page"
                 title="About page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/integrations/one"
+                previewLink="/preview/mist/integrations/one"
                 category="page"
                 title="About page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/features/seven"
+                previewLink="/preview/mist/features/seven"
                 category="page"
                 title="About page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/stats/four"
+                previewLink="/preview/mist/stats/four"
                 category="page"
                 title="About page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/content/two"
+                previewLink="/preview/mist/content/two"
                 category="page"
                 title="About page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/testimonials/two"
+                previewLink="/preview/mist/testimonials/two"
                 category="page"
                 title="About page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                preview="/preview/mist/team/one"
+                previewLink="/preview/mist/team/one"
                 category="page"
                 title="About page"
                 id="two"
