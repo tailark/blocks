@@ -15,7 +15,7 @@
         {
           "path": "../../packages/mist-kit/blocks/call-to-action/one/index.tsx",
           "type": "registry:component",
-          "target": "components/call-to-action.tsx"
+          "target": "components/call-to-action-one.tsx"
         }
       ]
     },
@@ -31,7 +31,7 @@
         {
           "path": "../../packages/mist-kit/blocks/call-to-action/two/index.tsx",
           "type": "registry:component",
-          "target": "components/call-to-action.tsx"
+          "target": "components/call-to-action-two.tsx"
         }
       ]
     },
@@ -47,7 +47,7 @@
         {
           "path": "../../packages/mist-kit/blocks/call-to-action/three/index.tsx",
           "type": "registry:component",
-          "target": "components/call-to-action.tsx"
+          "target": "components/call-to-action-three.tsx"
         }
       ]
     },
@@ -63,7 +63,7 @@
         {
           "path": "../../packages/mist-kit/blocks/comparator/one/index.tsx",
           "type": "registry:component",
-          "target": "components/pricing-comparator.tsx"
+          "target": "components/pricing-comparator-one.tsx"
         }
       ]
     },
@@ -84,7 +84,7 @@
         {
           "path": "../../packages/mist-kit/blocks/contact/one/index.tsx",
           "type": "registry:component",
-          "target": "components/contact-section.tsx"
+          "target": "components/contact-section-one.tsx"
         }
       ]
     },
@@ -160,7 +160,7 @@
         {
           "path": "../../packages/mist-kit/blocks/faqs/one/index.tsx",
           "type": "registry:component",
-          "target": "components/faqs-section.tsx"
+          "target": "components/faqs-section-one.tsx"
         }
       ]
     },
@@ -176,7 +176,7 @@
         {
           "path": "../../packages/mist-kit/blocks/faqs/two/index.tsx",
           "type": "registry:component",
-          "target": "components/faqs-section.tsx"
+          "target": "components/faqs-section-two.tsx"
         }
       ]
     },
@@ -192,7 +192,7 @@
         {
           "path": "../../packages/mist-kit/blocks/faqs/three/index.tsx",
           "type": "registry:component",
-          "target": "components/faqs-section.tsx"
+          "target": "components/faqs-section-three.tsx"
         }
       ]
     },
@@ -208,7 +208,7 @@
         {
           "path": "../../packages/mist-kit/blocks/features/one/index.tsx",
           "type": "registry:component",
-          "target": "components/features-1.tsx"
+          "target": "components/features-one.tsx"
         },
         {
           "path": "../../packages/mist-kit/blocks/features/one/table.tsx",
@@ -395,7 +395,7 @@
         {
           "path": "../../packages/mist-kit/blocks/footer/one/index.tsx",
           "type": "registry:component",
-          "target": "components/footer.tsx"
+          "target": "components/footer-one.tsx"
         },
         {
           "path": "../../packages/core/components/logo.tsx",
@@ -413,7 +413,7 @@
         {
           "path": "../../packages/mist-kit/blocks/footer/two/index.tsx",
           "type": "registry:component",
-          "target": "components/footer.tsx"
+          "target": "components/footer-two.tsx"
         },
         {
           "path": "../../packages/core/components/logo.tsx",
@@ -431,7 +431,7 @@
         {
           "path": "../../packages/mist-kit/blocks/footer/three/index.tsx",
           "type": "registry:component",
-          "target": "components/footer.tsx"
+          "target": "components/footer-three.tsx"
         },
         {
           "path": "../../packages/core/components/logo.tsx",
@@ -449,7 +449,7 @@
         {
           "path": "../../packages/mist-kit/blocks/footer/four/index.tsx",
           "type": "registry:component",
-          "target": "components/footer.tsx"
+          "target": "components/footer-four.tsx"
         },
         {
           "path": "../../packages/core/components/logo.tsx",
@@ -472,7 +472,7 @@
         {
           "path": "../../packages/mist-kit/blocks/forgot-password/one/index.tsx",
           "type": "registry:component",
-          "target": "components/forgot-password.tsx"
+          "target": "components/forgot-password-one.tsx"
         },
         {
           "path": "../../packages/core/components/logo.tsx",
@@ -493,7 +493,7 @@
         {
           "path": "../../packages/mist-kit/blocks/hero-section/one/index.tsx",
           "type": "registry:component",
-          "target": "components/hero-section.tsx"
+          "target": "components/hero-section-one.tsx"
         },
         {
           "path": "../../packages/mist-kit/blocks/hero-section/one/header.tsx",
@@ -519,7 +519,7 @@
         {
           "path": "../../packages/mist-kit/blocks/hero-section/two/index.tsx",
           "type": "registry:component",
-          "target": "components/hero-section.tsx"
+          "target": "components/hero-section-two.tsx"
         },
         {
           "path": "../../packages/mist-kit/blocks/hero-section/two/header.tsx",
@@ -545,7 +545,7 @@
         {
           "path": "../../packages/mist-kit/blocks/hero-section/three/index.tsx",
           "type": "registry:component",
-          "target": "components/hero-section.tsx"
+          "target": "components/hero-section-three.tsx"
         },
         {
           "path": "../../packages/mist-kit/blocks/hero-section/three/header.tsx",
@@ -571,7 +571,7 @@
         {
           "path": "../../packages/mist-kit/blocks/hero-section/four/index.tsx",
           "type": "registry:component",
-          "target": "components/hero-section.tsx"
+          "target": "components/hero-section-four.tsx"
         },
         {
           "path": "../../packages/mist-kit/blocks/hero-section/four/header.tsx",
@@ -597,7 +597,7 @@
         {
           "path": "../../packages/mist-kit/blocks/hero-section/five/index.tsx",
           "type": "registry:component",
-          "target": "components/hero-section.tsx"
+          "target": "components/hero-section-five.tsx"
         }
       ]
     },
@@ -613,7 +613,7 @@
         {
           "path": "../../packages/mist-kit/blocks/hero-section/six/index.tsx",
           "type": "registry:component",
-          "target": "components/hero-section.tsx"
+          "target": "components/hero-section-six.tsx"
         }
       ]
     },
@@ -775,7 +775,7 @@
         {
           "path": "../../packages/mist-kit/blocks/login/one/index.tsx",
           "type": "registry:component",
-          "target": "components/login.tsx"
+          "target": "components/login-one.tsx"
         },
         {
           "path": "../../packages/core/components/logo.tsx",
@@ -823,7 +823,7 @@
         {
           "path": "../../packages/mist-kit/blocks/pricing/one/index.tsx",
           "type": "registry:component",
-          "target": "components/pricing-section.tsx"
+          "target": "components/pricing-section-one.tsx"
         },
         {
           "path": "../../packages/core/components/logo.tsx",
@@ -845,7 +845,7 @@
         {
           "path": "../../packages/mist-kit/blocks/pricing/two/index.tsx",
           "type": "registry:component",
-          "target": "components/pricing-two.tsx"
+          "target": "components/pricing-section-two.tsx"
         }
       ]
     },
@@ -863,7 +863,7 @@
         {
           "path": "../../packages/mist-kit/blocks/sign-up/one/index.tsx",
           "type": "registry:component",
-          "target": "components/sign-up.tsx"
+          "target": "components/sign-up-one.tsx"
         },
         {
           "path": "../../packages/core/components/logo.tsx",
