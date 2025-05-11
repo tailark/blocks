@@ -13,7 +13,7 @@
     "../../**/*.tsx",
     "../../.next/types/**/*.ts",
     "../../packages/core/tsconfig.json",
-    "../../packages/default-kit/tsconfig.json",
+    "../../packages/dusk-kit/tsconfig.json",
     ".next/types/**/*.ts"
   ]
 }

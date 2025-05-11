@@ -14,7 +14,7 @@ import { Dialog, DialogClose, DialogTitle, DialogContent, DialogTrigger } from '
 export const SiteHeader = () => {
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
-    const [currentKitId, setCurrentKitId] = useState('default')
+    const [currentKitId, setCurrentKitId] = useState('dusk')
 
     const isActive = (path: string) => {
         return pathname === path || pathname.startsWith(`${path}/`)
@@ -28,7 +28,7 @@ export const SiteHeader = () => {
     }, [])
 
     const getBasePath = (isHome: boolean = false) => {
-        if (currentKitId === 'default') {
+        if (currentKitId === 'dusk-kit') {
             return isHome ? '/' : '/hero-section'
         } else if (currentKitId === 'mist-kit') {
             return `/mist${isHome ? '/' : '/hero-section'}`

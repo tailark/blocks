@@ -26,16 +26,16 @@ export function KitSwitcher() {
         if (firstPathSegment === 'mist') {
             derivedKitId = 'mist-kit'
         } else {
-            const matchedKit = kits.find((kit) => kit.id === firstPathSegment && kit.id !== 'default')
+            const matchedKit = kits.find((kit) => kit.id === firstPathSegment && kit.id !== 'dusk-kit')
             if (matchedKit) {
                 derivedKitId = matchedKit.id
             } else {
-                derivedKitId = 'default'
+                derivedKitId = 'dusk-kit'
             }
         }
 
         if (!kits.some((kit) => kit.id === derivedKitId)) {
-            derivedKitId = 'default'
+            derivedKitId = 'dusk-kit'
         }
 
         if (selectedKitId !== derivedKitId) {
@@ -54,7 +54,7 @@ export function KitSwitcher() {
         setSelectedKitId(value)
         localStorage.setItem(STORAGE_KEY, value)
 
-        if (value === 'default') {
+        if (value === 'dusk-kit') {
             const pathParts = pathname.split('/')
             if (pathParts[1] === 'mist') {
                 if (pathParts.length > 2) {
@@ -98,7 +98,7 @@ export function KitSwitcher() {
                             value={kit.id}
                             className={cn('hover:bg-muted rounded py-2', selectedKitId === kit.id && 'font-medium')}>
                             <div className="flex items-center gap-2">
-                                {kit.id === 'default' && <DefaultKitLogo />}
+                                {kit.id === 'dusk-kit' && <DuskKitLogo />}
                                 {kit.id === 'mist-kit' && <MistKitLogo />}
                                 <div className="flex items-center gap-1.5">
                                     {kit.name}
@@ -117,7 +117,7 @@ export function KitSwitcher() {
     )
 }
 
-const DefaultKitLogo = () => (
+const DuskKitLogo = () => (
     <div className="border-background dark:inset-ring dark:inset-ring-white/25 bg-linear-to-b dark:inset-shadow-2xs dark:inset-shadow-white/25 relative flex size-5 items-center justify-center rounded border from-purple-300 to-blue-600 shadow-md shadow-black/20 ring-1 ring-black/10 dark:border-0 dark:shadow-white/10 dark:ring-black/50">
         <div className="absolute inset-x-0 inset-y-1.5 border-y border-dotted border-white/25"></div>
         <div className="absolute inset-x-1.5 inset-y-0 border-x border-dotted border-white/25"></div>

@@ -126,9 +126,9 @@ importers:
       '@tailark/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@tailark/default':
+      '@tailark/dusk':
         specifier: workspace:*
-        version: link:../../packages/default-kit
+        version: link:../../packages/dusk-kit
       '@tailark/mist':
         specifier: workspace:*
         version: link:../../packages/mist-kit
@@ -242,8 +242,14 @@ importers:
         specifier: latest
         version: 5.8.3
 
-  packages/default-kit:
+  packages/dusk-kit:
     dependencies:
+      '@tailark/core':
+        specifier: workspace:*
+        version: link:../core
+      class-variance-authority:
+        specifier: ^0.7.1
+        version: 0.7.1
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -257,37 +263,6 @@ importers:
         specifier: ^12.4.3
         version: 12.9.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next:
-        specifier: 15.2.1
-        version: 15.2.1(@babel/core@7.27.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react:
-        specifier: ^19.1.0
-        version: 19.1.0
-      recharts:
-        specifier: ^2.15.1
-        version: 2.15.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      swiper:
-        specifier: ^11.2.4
-        version: 11.2.6
-    devDependencies:
-      '@tailark/core':
-        specifier: workspace:*
-        version: link:../core
-      typescript:
-        specifier: latest
-        version: 5.8.3
-
-  packages/dusk-kit:
-    dependencies:
-      class-variance-authority:
-        specifier: ^0.7.1
-        version: 0.7.1
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      lucide-react:
-        specifier: ^0.475.0
-        version: 0.475.0(react@19.1.0)
-      next:
         specifier: 15.3.2
         version: 15.3.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react:
@@ -296,6 +271,12 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
+      recharts:
+        specifier: ^2.15.1
+        version: 2.15.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      swiper:
+        specifier: ^11.2.4
+        version: 11.2.6
       tailwind-merge:
         specifier: ^3.0.1
         version: 3.2.0

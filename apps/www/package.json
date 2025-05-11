@@ -57,7 +57,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailark/core": "workspace:*",
-    "@tailark/default": "workspace:*",
+    "@tailark/dusk": "workspace:*",
     "@tailark/mist": "workspace:*",
     "@tailwindcss/postcss": "^4.1.6",
     "@types/node": "^20",

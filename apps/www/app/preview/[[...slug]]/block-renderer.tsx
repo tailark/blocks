@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { defaultKitBlockMap } from '@tailark/default/blocks'
+import { duskKitBlockMap } from '@tailark/dusk/blocks'
 import { mistKitBlockMap } from '@tailark/mist/blocks'
 import React from 'react'
 import { Suspense } from 'react'
@@ -14,7 +14,7 @@ type SpecificBlockLoaderComponentType = React.ComponentType<Record<string, unkno
 type BlockLoaderFunctionType = () => Promise<SpecificBlockLoaderComponentType>
 
 const kitBlockMaps = {
-    default: defaultKitBlockMap,
+    dusk: duskKitBlockMap,
     mist: mistKitBlockMap,
 }
 

@@ -10,7 +10,7 @@ export interface Kit {
  */
 export async function getKits(): Promise<Kit[]> {
   const kits: Kit[] = [
-    { id: 'default', name: 'Dusk' },
+    { id: 'dusk-ki', name: 'Dusk' },
     { id: 'mist-kit', name: 'Mist' },
   ]
   
@@ -23,9 +23,9 @@ export async function getKits(): Promise<Kit[]> {
  */
 export function getClientKits(): Kit[] {
   return [
-    { id: 'default', name: 'Dusk' },
+    { id: 'dusk-kit', name: 'Dusk' },
     { id: 'mist-kit', name: "Mist" },
   ]
 }
 
-export type Kits = "default" | "mist";
+export type Kits = "dusk" | "mist";

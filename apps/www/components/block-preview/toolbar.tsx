@@ -66,6 +66,15 @@ const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeC
                             orientation="vertical"
                             className="hidden !h-4 lg:block"
                         />
+                        <TooltipButton
+                            tooltip="View in full screen"
+                            className="size-8"
+                            icon={<Maximize className="size-4" />}
+                            asLink={{
+                                href: previewLink,
+                                target: '_blank',
+                            }}
+                        />
                     </>
                 )}
                 {previewOnly && (

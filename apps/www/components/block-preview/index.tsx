@@ -26,7 +26,7 @@ export interface BlockPreviewProps {
 const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, title, id, category, kit, previewOnly = false }) => {
     const [mode, setMode] = useState<'preview' | 'code'>('preview')
 
-    const registryUrl = kit === 'default-kit' ? `https://tailark.com/r/${category}-${stringToNumber(id)}.json` : `https://tailark.com/r/${kit?.replace('-kit', '')}-${category}-${stringToNumber(id)}.json`
+    const registryUrl = kit === 'dusk-kit' ? `https://tailark.com/r/${category}-${stringToNumber(id)}.json` : `https://tailark.com/r/${kit?.replace('-kit', '')}-${category}-${stringToNumber(id)}.json`
 
     const terminalCode = `pnpm dlx shadcn@latest add ${registryUrl}`
     const registryCode = registryUrl

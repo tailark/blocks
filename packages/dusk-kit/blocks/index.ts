@@ -1,9 +1,9 @@
 /**
- * Default Kit Blocks
- * This file exports all blocks from the default-kit package
+ * Dusk Kit Blocks
+ * This file exports all blocks from the dusk-kit package
  */
 
-export const defaultKitBlockMap = {
+export const duskKitBlockMap = {
     'call-to-action': {
         one: () => import('./call-to-action/one').then((mod) => mod.default),
         two: () => import('./call-to-action/two').then((mod) => mod.default),

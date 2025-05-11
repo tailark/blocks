@@ -15,10 +15,10 @@ function getKitDetailsFromSlug(slug: string[]): { kitShortName: string; kitFullN
 
     if (!slug || slug.length === 0) {
         kitShortName = 'default'
-        kitFullName = 'default-kit'
+        kitFullName = 'dusk-kit'
     } else if (slug.length === 1) {
         kitShortName = 'default'
-        kitFullName = 'default-kit'
+        kitFullName = 'dusk-kit'
     } else {
         kitShortName = slug[0]
         kitFullName = `${kitShortName}-kit`

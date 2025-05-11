@@ -82,7 +82,7 @@ function generateBlocks(): Block[] {
         ? fs.readdirSync(packagesDir, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory() && dirent.name.endsWith('-kit'))
             .map(dirent => dirent.name)
-        : ['default-kit', 'mist-kit'] 
+        : ['dusk-kit', 'mist-kit'] 
 
     for (const kitName of kitNames) {
         const kitDir = path.join(process.cwd(), '../../packages', kitName, 'blocks')

@@ -13,7 +13,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/call-to-action/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/call-to-action/one/index.tsx",
           "type": "registry:component",
           "target": "components/call-to-action.tsx"
         }
@@ -29,7 +29,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/call-to-action/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/call-to-action/two/index.tsx",
           "type": "registry:component",
           "target": "components/call-to-action.tsx"
         }
@@ -45,7 +45,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/call-to-action/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/call-to-action/three/index.tsx",
           "type": "registry:component",
           "target": "components/call-to-action.tsx"
         }
@@ -62,7 +62,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/comparator/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/comparator/one/index.tsx",
           "type": "registry:component",
           "target": "components/pricing-comparator.tsx"
         }
@@ -76,7 +76,7 @@
       "description": "Shadcn/ui website content block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/content/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/content/one/index.tsx",
           "type": "registry:component",
           "target": "components/content-1.tsx"
         }
@@ -89,7 +89,7 @@
       "description": "Shadcn/ui website content block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/content/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/content/two/index.tsx",
           "type": "registry:component",
           "target": "components/content-2.tsx"
         }
@@ -102,7 +102,7 @@
       "description": "Shadcn/ui website content block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/content/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/content/three/index.tsx",
           "type": "registry:component",
           "target": "components/content-3.tsx"
         }
@@ -118,7 +118,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/content/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/content/four/index.tsx",
           "type": "registry:component",
           "target": "components/content-4.tsx"
         }
@@ -131,7 +131,7 @@
       "description": "Shadcn/ui website content block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/content/five/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/content/five/index.tsx",
           "type": "registry:component",
           "target": "components/content-5.tsx"
         }
@@ -144,7 +144,7 @@
       "description": "Shadcn/ui website content block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/content/six/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/content/six/index.tsx",
           "type": "registry:component",
           "target": "components/content-6.tsx"
         }
@@ -157,7 +157,7 @@
       "description": "Shadcn/ui website content block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/content/seven/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/content/seven/index.tsx",
           "type": "registry:component",
           "target": "components/content-7.tsx"
         }
@@ -171,7 +171,7 @@
       "description": "Shadcn/ui Frequently Asqued Questions block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/faqs/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/faqs/one/index.tsx",
           "type": "registry:component",
           "target": "components/faqs.tsx"
         }
@@ -188,7 +188,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/faqs/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/faqs/two/index.tsx",
           "type": "registry:component",
           "target": "components/faqs-2.tsx"
         }
@@ -205,7 +205,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/faqs/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/faqs/three/index.tsx",
           "type": "registry:component",
           "target": "components/faqs-3.tsx"
         }
@@ -222,7 +222,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/faqs/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/faqs/four/index.tsx",
           "type": "registry:component",
           "target": "components/faqs-4.tsx"
         }
@@ -238,7 +238,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/one/index.tsx",
           "type": "registry:component",
           "target": "components/features-1.tsx"
         }
@@ -254,7 +254,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/two/index.tsx",
           "type": "registry:component",
           "target": "components/features-2.tsx"
         }
@@ -270,7 +270,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/three/index.tsx",
           "type": "registry:component",
           "target": "components/features-3.tsx"
         }
@@ -283,7 +283,7 @@
       "description": "Shadcn/ui website features block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/four/index.tsx",
           "type": "registry:component",
           "target": "components/features-4.tsx"
         }
@@ -296,7 +296,7 @@
       "description": "Shadcn/ui website features block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/five/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/five/index.tsx",
           "type": "registry:component",
           "target": "components/features-5.tsx"
         }
@@ -309,7 +309,7 @@
       "description": "Shadcn/ui website features block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/six/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/six/index.tsx",
           "type": "registry:component",
           "target": "components/features-6.tsx"
         }
@@ -322,7 +322,7 @@
       "description": "Shadcn/ui website features block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/seven/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/seven/index.tsx",
           "type": "registry:component",
           "target": "components/features-7.tsx"
         }
@@ -338,7 +338,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/eight/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/eight/index.tsx",
           "type": "registry:component",
           "target": "components/features-8.tsx"
         }
@@ -358,7 +358,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/nine/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/nine/index.tsx",
           "type": "registry:component",
           "target": "components/features-9.tsx"
         },
@@ -378,7 +378,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/ten/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/ten/index.tsx",
           "type": "registry:component",
           "target": "components/features-10.tsx"
         }
@@ -394,7 +394,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/eleven/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/eleven/index.tsx",
           "type": "registry:component",
           "target": "components/features-11.tsx"
         }
@@ -414,7 +414,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/features/twelve/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/features/twelve/index.tsx",
           "type": "registry:component",
           "target": "components/features-12.tsx"
         }
@@ -427,7 +427,7 @@
       "description": "Shadcn/ui website footer block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/footer/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/footer/one/index.tsx",
           "type": "registry:component",
           "target": "components/footer.tsx"
         },
@@ -444,7 +444,7 @@
       "description": "Shadcn/ui website footer block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/footer/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/footer/two/index.tsx",
           "type": "registry:component",
           "target": "components/footer.tsx"
         },
@@ -466,7 +466,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/footer/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/footer/three/index.tsx",
           "type": "registry:component",
           "target": "components/footer.tsx"
         },
@@ -483,7 +483,7 @@
       "description": "Shadcn/ui website footer block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/footer/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/footer/four/index.tsx",
           "type": "registry:component",
           "target": "components/footer.tsx"
         },
@@ -505,7 +505,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/footer/five/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/footer/five/index.tsx",
           "type": "registry:component",
           "target": "components/footer.tsx"
         },
@@ -527,7 +527,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/one/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -536,7 +536,7 @@
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/default-kit/blocks/hero-section/one/header.tsx",
+          "path" : "../../packages/dusk-kit/blocks/hero-section/one/header.tsx",
           "type": "registry:component"
         }
       ]
@@ -553,7 +553,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/two/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -562,7 +562,7 @@
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/default-kit/blocks/hero-section/two/header.tsx",
+          "path" : "../../packages/dusk-kit/blocks/hero-section/two/header.tsx",
           "type": "registry:component"
         }
       ]
@@ -579,7 +579,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/three/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -588,11 +588,11 @@
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/default-kit/blocks/hero-section/three/header.tsx",
+          "path" : "../../packages/dusk-kit/blocks/hero-section/three/header.tsx",
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/default-kit/blocks/hero-section/three/logo-cloud.tsx",
+          "path" : "../../packages/dusk-kit/blocks/hero-section/three/logo-cloud.tsx",
           "type": "registry:component"
         }
       ]
@@ -609,7 +609,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/four/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -618,7 +618,7 @@
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/default-kit/blocks/hero-section/four/header.tsx",
+          "path" : "../../packages/dusk-kit/blocks/hero-section/four/header.tsx",
           "type": "registry:component"
         }
       ]
@@ -635,7 +635,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/five/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/five/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -644,7 +644,7 @@
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/default-kit/blocks/hero-section/five/header.tsx",
+          "path" : "../../packages/dusk-kit/blocks/hero-section/five/header.tsx",
           "type": "registry:component"
         }
       ]
@@ -659,7 +659,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/six/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/six/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -682,7 +682,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/seven/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/seven/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -702,7 +702,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/eight/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/eight/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -722,7 +722,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/hero-section/nine/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/hero-section/nine/index.tsx",
           "type": "registry:component",
           "target": "components/hero-section.tsx"
         },
@@ -744,7 +744,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/login/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/login/one/index.tsx",
           "type": "registry:component",
           "target": "components/login.tsx"
         },
@@ -766,7 +766,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/login/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/login/two/index.tsx",
           "type": "registry:component",
           "target": "components/login.tsx"
         },
@@ -788,7 +788,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/login/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/login/three/index.tsx",
           "type": "registry:component",
           "target": "components/login.tsx"
         },
@@ -809,7 +809,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/sign-up/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/sign-up/one/index.tsx",
           "type": "registry:component",
           "target": "components/sign-up.tsx"
         },
@@ -831,7 +831,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/sign-up/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/sign-up/two/index.tsx",
           "type": "registry:component",
           "target": "components/sign-up.tsx"
         },
@@ -853,7 +853,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/sign-up/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/sign-up/three/index.tsx",
           "type": "registry:component",
           "target": "components/sign-up.tsx"
         },
@@ -875,7 +875,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/forgot-password/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/forgot-password/one/index.tsx",
           "type": "registry:component",
           "target": "components/forgot-password.tsx"
         },
@@ -897,7 +897,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/forgot-password/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/forgot-password/two/index.tsx",
           "type": "registry:component",
           "target": "components/forgot-password.tsx"
         },
@@ -914,7 +914,7 @@
       "description": "Shadcn/ui website stats block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/stats/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/stats/one/index.tsx",
           "type": "registry:component",
           "target": "components/stats.tsx"
         }
@@ -927,7 +927,7 @@
       "description": "Shadcn/ui website stats block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/stats/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/stats/two/index.tsx",
           "type": "registry:component",
           "target": "components/stats-2.tsx"
         }
@@ -940,7 +940,7 @@
       "description": "Shadcn/ui website stats block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/stats/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/stats/three/index.tsx",
           "type": "registry:component",
           "target": "components/stats-3.tsx"
         }
@@ -953,7 +953,7 @@
       "description": "Shadcn/ui website stats block",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/stats/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/stats/four/index.tsx",
           "type": "registry:component",
           "target": "components/stats-4.tsx"
         }
@@ -966,7 +966,7 @@
       "description": "Shadcn/ui website team section",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/team/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/team/one/index.tsx",
           "type": "registry:component",
           "target": "components/team.tsx"
         }
@@ -979,7 +979,7 @@
       "description": "Shadcn/ui website team section",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/team/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/team/two/index.tsx",
           "type": "registry:component",
           "target": "components/team.tsx"
         }
@@ -996,7 +996,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/testimonials/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/testimonials/one/index.tsx",
           "type": "registry:component",
           "target": "components/testimonials.tsx"
         }
@@ -1013,7 +1013,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/testimonials/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/testimonials/two/index.tsx",
           "type": "registry:component",
           "target": "components/testimonials.tsx"
         }
@@ -1026,7 +1026,7 @@
       "description": "Shadcn/ui website testimonials section",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/testimonials/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/testimonials/three/index.tsx",
           "type": "registry:component",
           "target": "components/testimonials.tsx"
         }
@@ -1042,7 +1042,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/testimonials/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/testimonials/four/index.tsx",
           "type": "registry:component",
           "target": "components/testimonials.tsx"
         }
@@ -1059,7 +1059,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/testimonials/five/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/testimonials/five/index.tsx",
           "type": "registry:component",
           "target": "components/testimonials.tsx"
         }
@@ -1076,7 +1076,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/testimonials/six/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/testimonials/six/index.tsx",
           "type": "registry:component",
           "target": "components/testimonials.tsx"
         }
@@ -1089,7 +1089,7 @@
       "description": "Shadcn/ui website logo cloud section",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/logo-cloud/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/logo-cloud/one/index.tsx",
           "type": "registry:component",
           "target": "components/logo-cloud.tsx"
         }
@@ -1102,7 +1102,7 @@
       "description": "Shadcn/ui website logo cloud section",
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/logo-cloud/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/logo-cloud/two/index.tsx",
           "type": "registry:component",
           "target": "components/logo-cloud.tsx"
         }
@@ -1119,7 +1119,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/logo-cloud/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/logo-cloud/three/index.tsx",
           "type": "registry:component",
           "target": "components/logo-cloud.tsx"
         }
@@ -1136,7 +1136,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/pricing/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/pricing/one/index.tsx",
           "type": "registry:component",
           "target": "components/pricing.tsx"
         }
@@ -1153,7 +1153,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/pricing/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/pricing/one/index.tsx",
           "type": "registry:component",
           "target": "components/pricing.tsx"
         }
@@ -1170,7 +1170,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/pricing/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/pricing/two/index.tsx",
           "type": "registry:component",
           "target": "components/pricing.tsx"
         }
@@ -1187,7 +1187,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/pricing/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/pricing/three/index.tsx",
           "type": "registry:component",
           "target": "components/pricing.tsx"
         }
@@ -1203,7 +1203,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/pricing/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/pricing/four/index.tsx",
           "type": "registry:component",
           "target": "components/pricing.tsx"
         }
@@ -1219,7 +1219,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/pricing/five/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/pricing/five/index.tsx",
           "type": "registry:component",
           "target": "components/pricing.tsx"
         }
@@ -1240,7 +1240,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/contact/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/contact/one/index.tsx",
           "type": "registry:component",
           "target": "components/contact.tsx"
         }
@@ -1261,7 +1261,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/contact/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/contact/two/index.tsx",
           "type": "registry:component",
           "target": "components/contact.tsx"
         }
@@ -1278,7 +1278,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/integrations/one/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/integrations/one/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-1.tsx"
         },
@@ -1329,7 +1329,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/integrations/two/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/integrations/two/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-2.tsx"
         },
@@ -1384,7 +1384,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/integrations/three/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/integrations/three/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-3.tsx"
         },
@@ -1439,7 +1439,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/integrations/four/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/integrations/four/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-4.tsx"
         },
@@ -1494,7 +1494,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/integrations/five/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/integrations/five/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-5.tsx"
         },
@@ -1549,7 +1549,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/integrations/six/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/integrations/six/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-6.tsx"
         },
@@ -1601,7 +1601,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/integrations/seven/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/integrations/seven/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-7.tsx"
         },
@@ -1661,7 +1661,7 @@
       ],
       "files": [
         {
-          "path": "../../packages/default-kit/blocks/integrations/eight/index.tsx",
+          "path": "../../packages/dusk-kit/blocks/integrations/eight/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-8.tsx"
         },

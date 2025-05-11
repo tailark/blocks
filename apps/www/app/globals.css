@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @source "../../../packages/core";
-@source "../../../packages/default-kit";
+@source "../../../packages/dusk-kit";
 @source "../../../packages/mist-kit";
 
 @plugin 'tailwindcss-animate';

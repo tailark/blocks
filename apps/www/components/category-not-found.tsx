@@ -9,7 +9,7 @@ export default function CategoryNotFound({ categoryName, kitName }: { categoryNa
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join(' ')
 
-    const kitDisplay = kitName === 'default-kit' ? 'Shadcn' : kitName.replace('-kit', '').charAt(0).toUpperCase() + kitName.replace('-kit', '').slice(1)
+    const kitDisplay = kitName === 'dusk-kit' ? 'Shadcn' : kitName.replace('-kit', '').charAt(0).toUpperCase() + kitName.replace('-kit', '').slice(1)
 
     return (
         <section className="bg-muted mb-6 flex min-h-[calc(100dvh-6rem)] flex-col items-center justify-center gap-4 border-b py-16 text-center md:mb-12 dark:bg-transparent">

@@ -18,7 +18,7 @@ function getKitAndCategory(slug: string[]): { kitShortName: string; category: st
     let category: string
 
     if (slug.length === 1) {
-        kitShortName = 'default'
+        kitShortName = 'dusk'
         category = slug[0]
     } else {
         kitShortName = slug[0]
@@ -40,7 +40,7 @@ export async function generateStaticParams() {
         }
 
         const kitShortName = block.kit.replace('-kit', '')
-        if (block.kit === 'default-kit') {
+        if (block.kit === 'dusk-kit') {
             if (typeof block.category === 'string') {
                 uniquePaths.add(JSON.stringify({ slug: [block.category] }))
             }
@@ -107,7 +107,7 @@ export default function BlocksCategoryPage({ params }: { params: Promise<{ slug:
         }
     }
 
-    const kitDisplay = kitFullName === 'default-kit' ? 'Shadcn' : kitFullName.replace('-kit', '').charAt(0).toUpperCase() + kitFullName.replace('-kit', '').slice(1)
+    const kitDisplay = kitFullName === 'dusk-kit' ? 'Shadcn' : kitFullName.replace('-kit', '').charAt(0).toUpperCase() + kitFullName.replace('-kit', '').slice(1)
     const categoryDisplay = category
         .split('-')
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
