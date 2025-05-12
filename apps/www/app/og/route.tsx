@@ -24,13 +24,13 @@ export async function GET(request: NextRequest) {
 
         if (type === 'category') {
             if (slug.length === 2 || (kit && category)) {
-                title = `${kit} - ${category}`
+                title = `Tailark ${kit} - ${category} blocks`
             } else if (slug.length === 1 || (!category && kit)) {
                 title = kit
             }
         } else if (type === 'preview') {
             if (slug.length >= 3 || (kit && category && variant)) {
-                title = `${kit} - ${category} - ${variant}`
+                title = `Tailark ${kit} - ${category} ${variant} preview`
             } else if (slug.length > 0 || kit) {
                 const parts = [kit, category, variant].filter(Boolean)
                 title = parts.join(' / ')
@@ -39,22 +39,77 @@ export async function GET(request: NextRequest) {
 
         return new ImageResponse(
             (
-                <div className="bg-black">
-                    <div className="absolute inset-x-0 inset-y-6 border-y border-white/15"></div>
-                    <div className="absolute inset-x-6 inset-y-0 border-x border-white/15"></div>
-                    <div className="flex justify-between p-12 font-bold text-white">
+                <div style={{ display: 'flex', flexDirection: 'column', padding: '3rem', width: '100%', height: '100%', background: '#030510' }}>
+                    <div style={{ position: 'absolute', left: 0, right: 0, top: '3rem', bottom: '3rem', borderTop: '1px dashed rgba(255,255,255,0.15)', borderBottom: '1px dashed rgba(255,255,255,0.15)' }}></div>
+                    <div style={{ position: 'absolute', left: '3rem', right: '3rem', top: 0, bottom: 0, borderLeft: '1px dashed rgba(255,255,255,0.15)', borderRight: '1px dashed rgba(255,255,255,0.15)' }}></div>
+
+                    <div style={{ position: 'absolute', left: '3rem', right: '3rem', top: '3rem', height: '1rem', width: '1rem', borderLeft: '1px solid white', borderTop: '1px solid white' }}></div>
+                    <div style={{ position: 'absolute', right: '3rem', bottom: '3rem', height: '1rem', width: '1rem', borderRight: '1px solid white', borderBottom: '1px solid white' }}></div>
+
+                    <div style={{ position: 'absolute', right: '2.9rem', top: '2.9rem', width: '0.25rem', height: '0.25rem', borderRadius: '100%', background: 'white' }}></div>
+                    <div style={{ position: 'absolute', left: '2.9rem', bottom: '2.9rem', width: '0.25rem', height: '0.25rem', borderRadius: '100%', background: 'white' }}></div>
+                    <div style={{ position: 'absolute', left: '6rem', bottom: '6rem', color: '#9D9D9D' }}>Proudly built in DR Congo 🇨🇩</div>
+                    <svg
+                        style={{ position: 'absolute', left: '0', top: '-50%', width: '100vw', height: '100%' }}
+                        viewBox="0 0 200 198"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_f_346_89)">
+                            <path
+                                d="M56.5 -445L66.6703 -255.747L109.55 -440.359L86.7018 -252.214L160.987 -426.576L105.816 -245.258L209.25 -404.071L123.431 -235.087L252.872 -373.527L139.013 -222.013L290.527 -335.872L152.087 -206.431L321.071 -292.25L162.258 -188.816L343.576 -243.987L169.214 -169.702L357.359 -192.55L172.747 -149.67L362 -139.5L172.747 -129.33L357.359 -86.4505L169.214 -109.298L343.576 -35.0128L162.258 -90.1844L321.071 13.25L152.087 -72.569L290.527 56.8716L139.013 -56.9873L252.872 94.5266L123.431 -43.9127L209.25 125.071L105.816 -33.7424L160.987 147.576L86.7018 -26.7855L109.55 161.359L66.6703 -23.2534L56.5 166L46.3297 -23.2534L3.45049 161.359L26.2982 -26.7855L-47.9872 147.576L7.18442 -33.7424L-96.25 125.071L-10.431 -43.9127L-139.872 94.5266L-26.0127 -56.9873L-177.527 56.8716L-39.0874 -72.569L-208.071 13.25L-49.2576 -90.1844L-230.576 -35.0128L-56.2145 -109.298L-244.359 -86.4505L-59.7466 -129.33L-249 -139.5L-59.7466 -149.67L-244.359 -192.55L-56.2145 -169.702L-230.576 -243.987L-49.2576 -188.816L-208.071 -292.25L-39.0874 -206.431L-177.527 -335.872L-26.0127 -222.013L-139.872 -373.527L-10.431 -235.087L-96.25 -404.071L7.18442 -245.258L-47.9872 -426.576L26.2982 -252.214L3.45049 -440.359L46.3297 -255.747L56.5 -445Z"
+                                fill="url(#paint0_linear_346_89)"
+                            />
+                        </g>
+                        <defs>
+                            <filter
+                                id="filter0_f_346_89"
+                                x="-281"
+                                y="-477"
+                                width="675"
+                                height="675"
+                                filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                                <feFlood
+                                    flood-opacity="0"
+                                    result="BackgroundImageFix"
+                                />
+                                <feBlend
+                                    mode="normal"
+                                    in="SourceGraphic"
+                                    in2="BackgroundImageFix"
+                                    result="shape"
+                                />
+                                <feGaussianBlur
+                                    stdDeviation="16"
+                                    result="effect1_foregroundBlur_346_89"
+                                />
+                            </filter>
+                            <linearGradient
+                                id="paint0_linear_346_89"
+                                x1="89.0301"
+                                y1="-89.5262"
+                                x2="270.539"
+                                y2="81.1389"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" />
+                                <stop
+                                    offset="1"
+                                    stop-color="white"
+                                />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', padding: '3rem', justifyContent: 'space-between', background: 'rgba(255, 255, 255, 0.025)' }}>
                         <svg
-                            viewBox="0 0 78 18"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 18 18"
                             fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-auto">
+                            xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3 0H5V18H3V0ZM13 0H15V18H13V0ZM18 3V5H0V3H18ZM0 15V13H18V15H0Z"
                                 fill="url(#logo-gradient)"
-                            />
-                            <path
-                                d="M27.06 7.054V12.239C27.06 12.5903 27.1393 12.8453 27.298 13.004C27.468 13.1513 27.7513 13.225 28.148 13.225H29.338V14.84H27.808C26.9353 14.84 26.2667 14.636 25.802 14.228C25.3373 13.82 25.105 13.157 25.105 12.239V7.054H24V5.473H25.105V3.144H27.06V5.473H29.338V7.054H27.06ZM30.4782 10.114C30.4782 9.17333 30.6709 8.34033 31.0562 7.615C31.4529 6.88967 31.9855 6.32867 32.6542 5.932C33.3342 5.524 34.0822 5.32 34.8982 5.32C35.6349 5.32 36.2752 5.46733 36.8192 5.762C37.3745 6.04533 37.8165 6.40233 38.1452 6.833V5.473H40.1002V14.84H38.1452V13.446C37.8165 13.888 37.3689 14.2563 36.8022 14.551C36.2355 14.8457 35.5895 14.993 34.8642 14.993C34.0595 14.993 33.3229 14.789 32.6542 14.381C31.9855 13.9617 31.4529 13.3837 31.0562 12.647C30.6709 11.899 30.4782 11.0547 30.4782 10.114ZM38.1452 10.148C38.1452 9.502 38.0092 8.941 37.7372 8.465C37.4765 7.989 37.1309 7.62633 36.7002 7.377C36.2695 7.12767 35.8049 7.003 35.3062 7.003C34.8075 7.003 34.3429 7.12767 33.9122 7.377C33.4815 7.615 33.1302 7.972 32.8582 8.448C32.5975 8.91267 32.4672 9.468 32.4672 10.114C32.4672 10.76 32.5975 11.3267 32.8582 11.814C33.1302 12.3013 33.4815 12.6753 33.9122 12.936C34.3542 13.1853 34.8189 13.31 35.3062 13.31C35.8049 13.31 36.2695 13.1853 36.7002 12.936C37.1309 12.6867 37.4765 12.324 37.7372 11.848C38.0092 11.3607 38.1452 10.794 38.1452 10.148ZM43.6317 4.232C43.2803 4.232 42.9857 4.113 42.7477 3.875C42.5097 3.637 42.3907 3.34233 42.3907 2.991C42.3907 2.63967 42.5097 2.345 42.7477 2.107C42.9857 1.869 43.2803 1.75 43.6317 1.75C43.9717 1.75 44.2607 1.869 44.4987 2.107C44.7367 2.345 44.8557 2.63967 44.8557 2.991C44.8557 3.34233 44.7367 3.637 44.4987 3.875C44.2607 4.113 43.9717 4.232 43.6317 4.232ZM44.5837 5.473V14.84H42.6457V5.473H44.5837ZM49.0661 2.26V14.84H47.1281V2.26H49.0661ZM50.9645 10.114C50.9645 9.17333 51.1572 8.34033 51.5425 7.615C51.9392 6.88967 52.4719 6.32867 53.1405 5.932C53.8205 5.524 54.5685 5.32 55.3845 5.32C56.1212 5.32 56.7615 5.46733 57.3055 5.762C57.8609 6.04533 58.3029 6.40233 58.6315 6.833V5.473H60.5865V14.84H58.6315V13.446C58.3029 13.888 57.8552 14.2563 57.2885 14.551C56.7219 14.8457 56.0759 14.993 55.3505 14.993C54.5459 14.993 53.8092 14.789 53.1405 14.381C52.4719 13.9617 51.9392 13.3837 51.5425 12.647C51.1572 11.899 50.9645 11.0547 50.9645 10.114ZM58.6315 10.148C58.6315 9.502 58.4955 8.941 58.2235 8.465C57.9629 7.989 57.6172 7.62633 57.1865 7.377C56.7559 7.12767 56.2912 7.003 55.7925 7.003C55.2939 7.003 54.8292 7.12767 54.3985 7.377C53.9679 7.615 53.6165 7.972 53.3445 8.448C53.0839 8.91267 52.9535 9.468 52.9535 10.114C52.9535 10.76 53.0839 11.3267 53.3445 11.814C53.6165 12.3013 53.9679 12.6753 54.3985 12.936C54.8405 13.1853 55.3052 13.31 55.7925 13.31C56.2912 13.31 56.7559 13.1853 57.1865 12.936C57.6172 12.6867 57.9629 12.324 58.2235 11.848C58.4955 11.3607 58.6315 10.794 58.6315 10.148ZM65.07 6.833C65.3533 6.357 65.7273 5.98867 66.192 5.728C66.668 5.456 67.229 5.32 67.875 5.32V7.326H67.382C66.6227 7.326 66.0447 7.51867 65.648 7.904C65.2627 8.28933 65.07 8.958 65.07 9.91V14.84H63.132V5.473H65.07V6.833ZM73.3624 10.165L77.6804 14.84H75.0624L71.5944 10.811V14.84H69.6564V2.26H71.5944V9.57L74.9944 5.473H77.6804L73.3624 10.165Z"
-                                fill="white"
                             />
                             <defs>
                                 <linearGradient
@@ -72,7 +127,7 @@ export async function GET(request: NextRequest) {
                                 </linearGradient>
                             </defs>
                         </svg>
-                        <div className="max-w-1/2 text-balance font-sans text-5xl font-semibold capitalize tracking-tighter">{title}</div>
+                        <div style={{ maxWidth: '75%', fontFamily: 'sans-serif', lineHeight: '1.125em', marginBottom: '6rem', fontSize: '4rem', fontWeight: '700', textTransform: 'capitalize', letterSpacing: '-0.05em', color: 'transparent', textWrap: 'balance', backgroundClip: 'text', backgroundImage: 'linear-gradient(to bottom, white, #686868)' }}>{title}</div>
                     </div>
                 </div>
             ),

@@ -4,7 +4,7 @@ Speed up your workflow with responsive, pre-built shadcn-UI and Tailwindcss bloc
 
 [Tailark](https://tailark.com)
 
-![Tailark Image](app/opengraph-image.png)
+![Tailark Image](apps/www/app/opengraph-image.png)
 
 
 ## Getting Started
