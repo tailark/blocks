@@ -363,7 +363,7 @@
           "target": "components/features-9.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -432,7 +432,7 @@
           "target": "components/footer.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -449,7 +449,7 @@
           "target": "components/footer.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -471,7 +471,7 @@
           "target": "components/footer.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -488,7 +488,7 @@
           "target": "components/footer.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -510,7 +510,7 @@
           "target": "components/footer.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -532,7 +532,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
@@ -558,7 +558,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
@@ -584,7 +584,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
@@ -614,7 +614,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
@@ -640,7 +640,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
@@ -664,7 +664,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -687,7 +687,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -707,7 +707,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -727,7 +727,7 @@
           "target": "components/hero-section.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -749,7 +749,7 @@
           "target": "components/login.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -771,7 +771,7 @@
           "target": "components/login.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -793,7 +793,7 @@
           "target": "components/login.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -814,7 +814,7 @@
           "target": "components/sign-up.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -836,7 +836,7 @@
           "target": "components/sign-up.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -858,7 +858,7 @@
           "target": "components/sign-up.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -880,7 +880,7 @@
           "target": "components/forgot-password.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -902,7 +902,7 @@
           "target": "components/forgot-password.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         }
       ]
@@ -1283,37 +1283,37 @@
           "target": "components/integrations-1.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/index.ts",
+          "path" : "../../packages/core/src/components/logos/index.ts",
           "type": "registry:component",
           "target": "components/logos/index.ts"
         },
         {
-          "path" : "../../packages/core/components/logos/Gemini.tsx",
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
           "type": "registry:component",
           "target": "components/logos/Gemini.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/GooglePaLM.tsx",
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
           "type": "registry:component",
           "target": "components/logos/GooglePaLM.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/MagicUI.tsx",
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
           "type": "registry:component",
           "target": "components/logos/MagicUI.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/MediaWiki.tsx",
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
           "type": "registry:component",
           "target": "components/logos/MediaWiki.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/Replit.tsx",
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
           "type": "registry:component",
           "target": "components/logos/Replit.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/VSCodium.tsx",
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
           "type": "registry:component",
           "target": "components/logos/VSCodium.tsx" 
         }
@@ -1334,41 +1334,41 @@
           "target": "components/integrations-2.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/core/components/logos/index.ts",
+          "path" : "../../packages/core/src/components/logos/index.ts",
           "type": "registry:component",
           "target": "components/logos/index.ts"
         },
         {
-          "path" : "../../packages/core/components/logos/Gemini.tsx",
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
           "type": "registry:component",
           "target": "components/logos/Gemini.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/GooglePaLM.tsx",
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
           "type": "registry:component",
           "target": "components/logos/GooglePaLM.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/MagicUI.tsx",
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
           "type": "registry:component",
           "target": "components/logos/MagicUI.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/MediaWiki.tsx",
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
           "type": "registry:component",
           "target": "components/logos/MediaWiki.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/Replit.tsx",
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
           "type": "registry:component",
           "target": "components/logos/Replit.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/VSCodium.tsx",
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
           "type": "registry:component",
           "target": "components/logos/VSCodium.tsx" 
         }
@@ -1389,41 +1389,41 @@
           "target": "components/integrations-3.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/core/components/logos/index.ts",
+          "path" : "../../packages/core/src/components/logos/index.ts",
           "type": "registry:component",
           "target": "components/logos/index.ts"
         },
         {
-          "path" : "../../packages/core/components/logos/Gemini.tsx",
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
           "type": "registry:component",
           "target": "components/logos/Gemini.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/GooglePaLM.tsx",
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
           "type": "registry:component",
           "target": "components/logos/GooglePaLM.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/MagicUI.tsx",
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
           "type": "registry:component",
           "target": "components/logos/MagicUI.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/MediaWiki.tsx",
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
           "type": "registry:component",
           "target": "components/logos/MediaWiki.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/Replit.tsx",
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
           "type": "registry:component",
           "target": "components/logos/Replit.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/VSCodium.tsx",
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
           "type": "registry:component",
           "target": "components/logos/VSCodium.tsx" 
         }
@@ -1444,41 +1444,41 @@
           "target": "components/integrations-4.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/core/components/logos/index.ts",
+          "path" : "../../packages/core/src/components/logos/index.ts",
           "type": "registry:component",
           "target": "components/logos/index.ts"
         },
         {
-          "path" : "../../packages/core/components/logos/Gemini.tsx",
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
           "type": "registry:component",
           "target": "components/logos/Gemini.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/GooglePaLM.tsx",
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
           "type": "registry:component",
           "target": "components/logos/GooglePaLM.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/MagicUI.tsx",
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
           "type": "registry:component",
           "target": "components/logos/MagicUI.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/MediaWiki.tsx",
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
           "type": "registry:component",
           "target": "components/logos/MediaWiki.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/Replit.tsx",
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
           "type": "registry:component",
           "target": "components/logos/Replit.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/VSCodium.tsx",
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
           "type": "registry:component",
           "target": "components/logos/VSCodium.tsx" 
         }
@@ -1499,41 +1499,41 @@
           "target": "components/integrations-5.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/core/components/logos/index.ts",
+          "path" : "../../packages/core/src/components/logos/index.ts",
           "type": "registry:component",
           "target": "components/logos/index.ts"
         },
         {
-          "path" : "../../packages/core/components/logos/Gemini.tsx",
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
           "type": "registry:component",
           "target": "components/logos/Gemini.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/GooglePaLM.tsx",
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
           "type": "registry:component",
           "target": "components/logos/GooglePaLM.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/MagicUI.tsx",
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
           "type": "registry:component",
           "target": "components/logos/MagicUI.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/MediaWiki.tsx",
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
           "type": "registry:component",
           "target": "components/logos/MediaWiki.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/Replit.tsx",
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
           "type": "registry:component",
           "target": "components/logos/Replit.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/VSCodium.tsx",
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
           "type": "registry:component",
           "target": "components/logos/VSCodium.tsx" 
         }
@@ -1554,37 +1554,37 @@
           "target": "components/integrations-6.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/index.ts",
+          "path" : "../../packages/core/src/components/logos/index.ts",
           "type": "registry:component",
           "target": "components/logos/index.ts"
         },
         {
-          "path" : "../../packages/core/components/logos/Gemini.tsx",
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
           "type": "registry:component",
           "target": "components/logos/Gemini.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/GooglePaLM.tsx",
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
           "type": "registry:component",
           "target": "components/logos/GooglePaLM.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/MagicUI.tsx",
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
           "type": "registry:component",
           "target": "components/logos/MagicUI.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/MediaWiki.tsx",
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
           "type": "registry:component",
           "target": "components/logos/MediaWiki.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/Replit.tsx",
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
           "type": "registry:component",
           "target": "components/logos/Replit.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/VSCodium.tsx",
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
           "type": "registry:component",
           "target": "components/logos/VSCodium.tsx" 
         }
@@ -1606,46 +1606,46 @@
           "target": "components/integrations-7.tsx"
         },
         {
-          "path" : "../../packages/core/components/logo.tsx",
+          "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
         },
         {
-          "path" : "../../packages/core/components/logos/index.ts",
+          "path" : "../../packages/core/src/components/logos/index.ts",
           "type": "registry:component",
           "target": "components/logos/index.ts"
         },
         {
-          "path" : "../../packages/core/components/logos/Gemini.tsx",
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
           "type": "registry:component",
           "target": "components/logos/Gemini.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/GooglePaLM.tsx",
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
           "type": "registry:component",
           "target": "components/logos/GooglePaLM.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/MagicUI.tsx",
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
           "type": "registry:component",
           "target": "components/logos/MagicUI.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/MediaWiki.tsx",
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
           "type": "registry:component",
           "target": "components/logos/MediaWiki.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/Replit.tsx",
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
           "type": "registry:component",
           "target": "components/logos/Replit.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/VSCodium.tsx",
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
           "type": "registry:component",
           "target": "components/logos/VSCodium.tsx" 
         },
         {
-          "path" : "../../packages/core/motion-primitives/infinite-slider.tsx",
+          "path" : "../../packages/core/src/motion-primitives/infinite-slider.tsx",
           "type": "registry:component"
         }
       ]
@@ -1666,37 +1666,37 @@
           "target": "components/integrations-8.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/index.ts",
+          "path" : "../../packages/core/src/components/logos/index.ts",
           "type": "registry:component",
           "target": "components/logos/index.ts"
         },
         {
-          "path" : "../../packages/core/components/logos/Gemini.tsx",
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
           "type": "registry:component",
           "target": "components/logos/Gemini.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/GooglePaLM.tsx",
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
           "type": "registry:component",
           "target": "components/logos/GooglePaLM.tsx"
         },
         {
-          "path" : "../../packages/core/components/logos/MagicUI.tsx",
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
           "type": "registry:component",
           "target": "components/logos/MagicUI.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/MediaWiki.tsx",
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
           "type": "registry:component",
           "target": "components/logos/MediaWiki.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/Replit.tsx",
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
           "type": "registry:component",
           "target": "components/logos/Replit.tsx" 
         },
         {
-          "path" : "../../packages/core/components/logos/VSCodium.tsx",
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
           "type": "registry:component",
           "target": "components/logos/VSCodium.tsx" 
         }
