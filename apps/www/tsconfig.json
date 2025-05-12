@@ -1,10 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"],
+      "@tailark/core/*" : ["../../packages/core/src/*"],
+      "@tailark/mist/*" : ["../../packages/mist-kit/*"],
+      "@tailark/dusk/*" : ["../../packages/dusk-kit/*"]
     }
   },
   "include": [

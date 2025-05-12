@@ -1,33 +1,13 @@
 {
   "name": "@tailark/core",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc"
-  },
-  "exports": {
-    "./lib/utils": "./lib/utils.ts",
-    "./ui/accordion": "./ui/accordion.tsx",
-    "./ui/avatar": "./ui/avatar.tsx",
-    "./ui/button": "./ui/button.tsx",
-    "./ui/card": "./ui/card.tsx",
-    "./ui/chart": "./ui/chart.tsx",
-    "./ui/dialog": "./ui/dialog.tsx",
-    "./ui/input": "./ui/input.tsx",
-    "./ui/label": "./ui/label.tsx",
-    "./ui/radio-group": "./ui/radio-group.tsx",
-    "./ui/scroll-area": "./ui/scroll-area.tsx",
-    "./ui/select": "./ui/select.tsx",
-    "./ui/separator": "./ui/separator.tsx",
-    "./ui/textarea": "./ui/textarea.tsx",
-    "./ui/tooltip": "./ui/tooltip.tsx",
-    "./magicui/border-beam": "./magicui/border-beam.tsx",
-    "./motion-primitives/animated-group": "./motion-primitives/animated-group.tsx",
-    "./motion-primitives/infinite-slider": "./motion-primitives/infinite-slider.tsx",
-    "./motion-primitives/progressive-blur": "./motion-primitives/progressive-blur.tsx",
-    "./motion-primitives/text-effect": "./motion-primitives/text-effect.tsx",
-    "./components/logo": "./components/logo.tsx",
-    "./components/logos": "./components/logos/index.ts"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
@@ -42,18 +22,30 @@
     "@radix-ui/react-toggle": "^1.1.8",
     "@radix-ui/react-toggle-group": "^1.1.9",
     "@radix-ui/react-tooltip": "^1.1.8",
+    "@tailwindcss/vite": "^4.1.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.475.0",
     "motion": "^12.4.3",
     "react": "^19.1.0",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.1.0",
     "react-use-measure": "^2.1.7",
     "recharts": "^2.15.1",
     "tailwind-merge": "^3.0.1",
     "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
-    "typescript": "latest"
+    "@eslint/js": "^9.25.0",
+    "@types/node": "^20",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.5"
   }
 }
