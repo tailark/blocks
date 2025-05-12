@@ -71,6 +71,15 @@ export async function generateMetadata({ params }: PageProps) {
 
     return {
         title: `Shadcn ${categoryDisplay} Blocks | Tailark ${kitDisplay}`,
+        metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://tailark.com'),
+        openGraph: {
+            title: `${kitShortName} - ${category}`,
+            images: [`/og?type=category&slug=${slug.join(',')}`],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            images: [`/og?type=category&slug=${slug.join(',')}`],
+        },
     }
 }
 

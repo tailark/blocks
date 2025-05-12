@@ -4,6 +4,12 @@ import { SiteHeader } from '@/components/site-header'
 import { Button } from '@tailark/core/ui/button'
 import { BookOpen } from 'lucide-react'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Wiki-Style Marketing Blocks | Tailark Mist',
+    description: 'Build elegant, wiki-style marketing websites with pre-built UI blocks based on Shadcn UI',
+}
 
 export default function Home() {
     return (
