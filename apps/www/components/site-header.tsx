@@ -8,7 +8,7 @@ import { ThemeToggle } from '@/components/theme-toggle'
 import { KitSwitcher } from '@/components/kit-switcher'
 import { cn } from '@/lib/utils'
 import { Separator } from '@tailark/core/ui/separator'
-import { Menu, X } from 'lucide-react'
+import { CircleArrowOutUpRightIcon, Menu, X } from 'lucide-react'
 import { Dialog, DialogClose, DialogTitle, DialogContent, DialogTrigger } from '@tailark/core/ui/dialog'
 
 export const SiteHeader = () => {
@@ -43,7 +43,7 @@ export const SiteHeader = () => {
     return (
         <header className="border-b dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-4">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center">
                     <Link
                         href={homeHref}
                         className="flex w-fit items-center gap-2">
@@ -52,12 +52,29 @@ export const SiteHeader = () => {
                     </Link>
                     <span
                         aria-hidden
-                        className="hidden h-4 w-px rounded-full bg-black/20 sm:block dark:bg-white/10"
+                        className="mx-4 hidden h-4 w-px rounded-full bg-black/20 sm:block dark:bg-white/10"
                         style={{ rotate: '20deg' }}
                     />
                     <div className="hidden sm:block">
                         <KitSwitcher />
                     </div>
+                    {currentKitId == 'mist-kit' && (
+                        <Button
+                            asChild
+                            size="sm"
+                            variant="link"
+                            className="text-foreground/75 rounded-full">
+                            <Link
+                                target="_blank"
+                                href="https://github.com/tailark/blocks/packages/mist-kit?tab=readme-ov-file">
+                                Docs
+                                <CircleArrowOutUpRightIcon
+                                    strokeWidth={2}
+                                    className="size-3! opacity-50"
+                                />
+                            </Link>
+                        </Button>
+                    )}
                 </div>
 
                 <div className="-mr-2 hidden items-center gap-4 sm:flex">

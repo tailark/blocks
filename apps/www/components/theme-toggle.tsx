@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { Moon, Sun } from 'lucide-react'
+import { MoonStar, SunDim } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 import { Button } from '@tailark/core/ui/button'
@@ -19,7 +19,7 @@ export const ThemeToggle = () => {
             <Button
                 variant="ghost"
                 className="size-8 rounded-full">
-                <Sun className="size-4" />
+                <SunDim className="size-5!" />
             </Button>
         )
     }
@@ -29,7 +29,7 @@ export const ThemeToggle = () => {
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             variant="ghost"
             className="size-8 rounded-full">
-            {theme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />}
+            {theme === 'dark' ? <SunDim className="size-5!" /> : <MoonStar />}
         </Button>
     )
 }

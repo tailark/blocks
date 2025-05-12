@@ -17,7 +17,7 @@ export default function Home() {
                         </h1>
                         <p className="text-forground/60 mx-auto mb-6 mt-4 max-w-md text-balance text-lg">Modern, Responsive, pre-built UI blocks designed for marketing websites.</p>
 
-                        <Button>
+                        <Button asChild>
                             <Link href="/hero-section">Explore blocks</Link>
                         </Button>
                     </div>

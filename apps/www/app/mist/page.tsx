@@ -2,7 +2,7 @@ import BlockPreview from '@/components/block-preview'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { Button } from '@tailark/core/ui/button'
-import { BookOpen } from 'lucide-react'
+import { BookOpen, CircleArrowOutUpRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
@@ -23,8 +23,22 @@ export default function Home() {
                         </h1>
                         <p className="text-forground/60 mx-auto mb-6 mt-4 max-w-md text-balance text-lg">Craft Sleek, Notion-Inspired Marketing Pages. Built on top of Shadcn UI.</p>
 
-                        <Button>
+                        <Button asChild>
                             <Link href="/mist/hero-section">Explore blocks</Link>
+                        </Button>
+                        <Button
+                            variant="outline"
+                            className="ml-3 pr-3.5"
+                            asChild>
+                            <Link
+                                target="_blank"
+                                href="https://github.com/tailark/blocks/packages/mist-kit?tab=readme-ov-file">
+                                Docs
+                                <CircleArrowOutUpRightIcon
+                                    strokeWidth={2}
+                                    className="size-3! opacity-50"
+                                />
+                            </Link>
                         </Button>
                     </div>
                 </div>
@@ -33,64 +47,92 @@ export default function Home() {
                 previewOnly
                 previewLink="/preview/mist/hero-section/one"
                 category="page"
-                title="Home page"
+                title="Hero section"
                 id="one"
             />
             <BlockPreview
                 previewOnly
                 previewLink="/preview/mist/features/one"
                 category="page"
-                title="About page"
-                id="two"
+                title="Features section"
+                id="one"
             />
             <BlockPreview
                 previewOnly
                 previewLink="/preview/mist/features/six"
                 category="page"
-                title="About page"
-                id="two"
+                title="Features section"
+                id="six"
             />
             <BlockPreview
                 previewOnly
-                previewLink="/preview/mist/integrations/one"
+                previewLink="/preview/mist/features/ten"
                 category="page"
-                title="About page"
-                id="two"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/features/seven"
-                category="page"
-                title="About page"
-                id="two"
+                title="Features section"
+                id="ten"
             />
             <BlockPreview
                 previewOnly
                 previewLink="/preview/mist/stats/four"
                 category="page"
                 title="About page"
+                id="four"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/mist/pricing/two"
+                category="page"
+                title="Pricing page"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                previewLink="/preview/mist/content/two"
+                previewLink="/preview/mist/comparator/one"
                 category="page"
-                title="About page"
+                title="Comparator section"
+                id="one"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/mist/team/one"
+                category="page"
+                title="Team section"
+                id="one"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/mist/contact/one"
+                category="page"
+                title="Contact page"
+                id="one"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/mist/login/one"
+                category="page"
+                title="Login page"
+                id="one"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/mist/faqs/two"
+                category="page"
+                title="FAQs section"
                 id="two"
             />
             <BlockPreview
                 previewOnly
                 previewLink="/preview/mist/testimonials/two"
                 category="page"
-                title="About page"
+                title="Testimonials section"
                 id="two"
             />
             <BlockPreview
                 previewOnly
-                previewLink="/preview/mist/team/one"
+                previewLink="/preview/mist/footer/three"
                 category="page"
-                title="About page"
-                id="two"
+                title="Footer"
+                id="three"
             />
             <SiteFooter />
         </>
