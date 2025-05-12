@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { clearIframeCache, updateServiceWorker } from '@/lib/serviceWorker'
-import { Button } from '../ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
+import { Button } from '@tailark/core/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@tailark/core/ui/card'
 
 export function CacheControl() {
     const [isClearing, setIsClearing] = useState(false)

@@ -1,8 +1,9 @@
 import BlockRenderer from './block-renderer'
 import { cn } from '@tailark/core/lib/utils'
+import { use } from 'react'
 
-export default async function PreviewPage({ params }: { params: { slug: string[] } }) {
-    const { slug } = await params
+export default function PreviewPage({ params }: { params: Promise<{ slug: string[] }> }) {
+    const { slug } = use(params)
 
     if (!slug || slug.length < 3) {
         return <div className="flex h-screen items-center justify-center">Invalid path. Please use the format /preview/kit-name/category/variant.</div>
