@@ -1,4 +1,4 @@
-import { Card } from './../../../components/ui/card'
+import { Card } from '@mist/components/ui/card'
 import { CalendarCheck, Layout, Sparkles, Target } from 'lucide-react'
 import Image from 'next/image'
 

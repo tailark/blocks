@@ -1,5 +1,5 @@
-import { Button } from './../../../components/ui/button'
-import { Card } from './../../../components/ui/card'
+import { Button } from '@mist/components/ui/button'
+import { Card } from '@mist/components/ui/card'
 import { ArrowUp, CalendarCheck, Globe, Play, Plus, Signature, Sparkles, Target } from 'lucide-react'
 
 const MESCHAC_AVATAR = 'https://avatars.githubusercontent.com/u/47919550?v=4'

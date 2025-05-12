@@ -21,7 +21,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@tailark/core/*" : ["../core/src/*"]
+      "@tailark/core/*" : ["../core/src/*"],
+      "@mist/*" : ["../mist-kit/*"]
     }
   }
 }

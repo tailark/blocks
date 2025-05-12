@@ -1,5 +1,5 @@
-import { Button } from './../../../components/ui/button'
-import { Card } from './../../../components/ui/card'
+import { Button } from '@mist/components/ui/button'
+import { Card } from '@mist/components/ui/card'
 import { ArrowUp, Globe, Plus, Sparkles } from 'lucide-react'
 
 export default function FeaturesSection() {

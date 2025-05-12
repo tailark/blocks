@@ -1,4 +1,4 @@
-import { Card } from './../../../components/ui/card'
+import { Card } from '@mist/components/ui/card'
 
 export default function StatsSection() {
     return (

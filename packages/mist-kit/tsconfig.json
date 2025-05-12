@@ -1,9 +1,10 @@
 {
   "extends": "@tailark/ts-config/base.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "paths": {
-      "#*": ["./*"],
-      "@tailark/core/*": ["./../core/src/*"]
+      "@tailark/core/*": ["./../core/src/*"],
+      "@mist/*" : ["./*"]
     }
   },
   "exclude": [

@@ -6,7 +6,8 @@
       "@/*": ["./*"],
       "@tailark/core/*" : ["../../packages/core/src/*"],
       "@tailark/mist/*" : ["../../packages/mist-kit/*"],
-      "@tailark/dusk/*" : ["../../packages/dusk-kit/*"]
+      "@tailark/dusk/*" : ["../../packages/dusk-kit/*"],
+      "@mist/*" : ["../../packages/mist-kit/*"]
     }
   },
   "include": [

@@ -2,7 +2,7 @@
 import { cn } from '@tailark/core/lib/utils'
 import { ToggleGroup, ToggleGroupItem } from '@tailark/core/ui/toggle-group'
 import { Bold, Calendar1, Ellipsis, Italic, Strikethrough, Underline } from 'lucide-react'
-import { Button } from './../../../components/ui/button'
+import { Button } from '@mist/components/ui/button'
 
 export default function ContentSection() {
     return (

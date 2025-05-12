@@ -1,4 +1,4 @@
-import { Button } from './../../../components/ui/button'
+import { Button } from '@mist/components/ui/button'
 import { Check, Sparkles, Star } from 'lucide-react'
 import Link from 'next/link'
 
