@@ -1,8 +1,8 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '#components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@tailark/core/ui/avatar'
 import { ChevronRight, Twitter } from 'lucide-react'
 import Link from 'next/link'
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '#components/ui/hover-card'
 
 const members = [
     { src: 'https://avatars.githubusercontent.com/u/47919550?v=4', name: 'Meschac Irung', role: 'Frontend Engineer' },

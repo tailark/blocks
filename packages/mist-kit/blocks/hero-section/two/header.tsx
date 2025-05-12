@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { Logo, LogoIcon } from '@tailark/core/components/logo'
 import { Menu, X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Button } from '#components/ui/button'
 import React from 'react'
 import { cn } from '@tailark/core/lib/utils'
 

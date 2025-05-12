@@ -1,5 +1,4 @@
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
+import { Card } from '#components/ui/card'
 import * as React from 'react'
 import { Gemini, Replit, MagicUI, VSCodium, MediaWiki, GooglePaLM } from '@tailark/core/components/logos'
 

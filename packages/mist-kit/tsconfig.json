@@ -1,5 +1,9 @@
 {
   "extends": "@tailark/ts-config/base.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "compilerOptions": {
+    "paths": {
+      "#*" : ["./*"]
+    }
+  },
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { Button } from '#components/ui/button'
 import Image from 'next/image'
 import { BookOpen } from 'lucide-react'
 import { cn } from '@tailark/core/lib/utils'

@@ -1,4 +1,4 @@
-import { Card } from '@/components/ui/card'
+import { Card } from '#components/ui/card'
 import { Table } from './table'
 
 export default function Features() {

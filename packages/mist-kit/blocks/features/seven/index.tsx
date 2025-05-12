@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
+import { Button } from '#components/ui/button'
+import { Card } from '#components/ui/card'
 import { ArrowUp, CalendarCheck, Globe, Layout, Play, Plus, Signature, Sparkles, Target } from 'lucide-react'
 import Image from 'next/image'
 

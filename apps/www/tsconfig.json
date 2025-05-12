@@ -10,13 +10,10 @@
     }
   },
   "include": [
-    "../../next-env.d.ts",
-    "../../**/*.ts",
-    "../../**/*.tsx",
-    "../../.next/types/**/*.ts",
-    "../../packages/core/tsconfig.json",
-    "../../packages/dusk-kit/tsconfig.json",
-    "../../packages/mist-kit/tsconfig.json",
+    "./next-env.d.ts",
+    "./**/*.ts",
+    "./**/*.tsx",
     ".next/types/**/*.ts"
-  ]
+  ],
+  "exclude": ["node_modules", "dist"]
 }
