@@ -31,7 +31,7 @@ function loadCode(filePath: string): string {
                 'styles': '@/styles',
                 'public': '@/public',
                 'motion-primitives': '@/components/motion-primitives',
-                'magic-ui': '@/components/magic-ui'
+                'magic-ui': '@/components/magic-ui',
             }
             
             return replacements[type] || `@/${type}`;
@@ -41,6 +41,8 @@ function loadCode(filePath: string): string {
             const importPath = p1 || p2
             return `from "@/components/${importPath}"`
         })
+
+        code = code.replace('@mist', '@')
         
         return code
     }
@@ -86,6 +88,7 @@ function generateBlocks(): Block[] {
 
     for (const kitName of kitNames) {
         const kitDir = path.join(process.cwd(), '../../packages', kitName, 'blocks')
+        const kitShortName = kitName.replace('-kit', '')
         
         if (!fs.existsSync(kitDir)) {
             console.warn(`${kitName} directory not found at ${kitDir}`)
@@ -131,7 +134,7 @@ function generateBlocks(): Block[] {
                     title: `${formattedCategory} block ${formattedVariant} (${kitName})`,
                     description: `Beautiful ${formattedCategory.toLowerCase()} block from ${kitName} for your marketing website (variant ${formattedVariant})`,
                     category: category,
-                    previewLink: `/preview/${kitName.replace('-kit', '')}/${category}/${variant}`,
+                    previewLink: `/preview/${kitShortName}/${category}/${variant}`,
                     code: loadCode(blockFilePath),
                     codes: allComponents,
                     kit: kitName 
