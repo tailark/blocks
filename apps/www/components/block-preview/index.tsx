@@ -80,7 +80,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
             </div>
 
             <div className="relative mx-auto max-w-7xl px-4 lg:px-0">
-                <div className="border-foreground/[0.075] lg:border-x">
+                <div className={cn('border-foreground/[0.075] border-r sm:border-x')}>
                     <div
                         aria-hidden
                         className="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
@@ -98,7 +98,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                                 order={1}
                                 defaultSize={DEFAULTSIZE}
                                 minSize={30}
-                                className="border-foreground/[0.075] h-fit min-h-56 border-r">
+                                className="border-foreground/[0.075] h-fit min-h-56 lg:border-r">
                                 <div
                                     ref={iframeContainerRef}
                                     className="min-h-56">
