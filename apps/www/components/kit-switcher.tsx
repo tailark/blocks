@@ -18,6 +18,14 @@ export function KitSwitcher() {
     const isDisabled = pathname.startsWith('/snippets')
 
     useEffect(() => {
+        if (isDisabled) {
+            const storedKit = localStorage.getItem(STORAGE_KEY)
+            if (storedKit && storedKit !== selectedKitId) {
+                setSelectedKitId(storedKit)
+            }
+            return
+        }
+
         const pathParts = pathname.split('/')
         const firstPathSegment = pathParts[1]
 
@@ -42,11 +50,10 @@ export function KitSwitcher() {
             setSelectedKitId(derivedKitId)
         }
 
-        const storedKit = localStorage.getItem(STORAGE_KEY)
-        if (storedKit !== derivedKitId) {
+        if (!isDisabled && !localStorage.getItem(STORAGE_KEY)) {
             localStorage.setItem(STORAGE_KEY, derivedKitId)
         }
-    }, [pathname, selectedKitId])
+    }, [pathname, selectedKitId, isDisabled])
 
     const handleKitChange = (value: string) => {
         if (isDisabled) return
@@ -80,6 +87,7 @@ export function KitSwitcher() {
     return (
         <Select
             value={selectedKitId}
+            defaultValue={selectedKitId}
             onValueChange={handleKitChange}
             disabled={isDisabled}>
             <SelectTrigger className="hover:bg-muted -ml-2 h-8 gap-3 border-none pl-1.5 pr-3 font-medium shadow-none">
