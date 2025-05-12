@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
 
                     <div style={{ position: 'absolute', right: '2.9rem', top: '2.9rem', width: '0.25rem', height: '0.25rem', borderRadius: '100%', background: 'white' }}></div>
                     <div style={{ position: 'absolute', left: '2.9rem', bottom: '2.9rem', width: '0.25rem', height: '0.25rem', borderRadius: '100%', background: 'white' }}></div>
-                    <div style={{ position: 'absolute', left: '6rem', bottom: '6rem', color: '#9D9D9D' }}>Proudly built in DR Congo 🇨🇩</div>
+                    <div style={{ position: 'absolute', left: '6rem', bottom: '6rem', color: '#9D9D9D' }}>Cooked with ♥️💛💙 in DR Congo 🇨🇩</div>
                     <svg
                         style={{ position: 'absolute', left: '0', top: '-50%', width: '100vw', height: '100%' }}
                         viewBox="0 0 200 198"
