@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@tailark/ts-config/base.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
@@ -16,6 +16,7 @@
     "../../.next/types/**/*.ts",
     "../../packages/core/tsconfig.json",
     "../../packages/dusk-kit/tsconfig.json",
+    "../../packages/mist-kit/tsconfig.json",
     ".next/types/**/*.ts"
   ]
 }

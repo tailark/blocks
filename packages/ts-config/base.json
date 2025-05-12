@@ -18,13 +18,12 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@tailark/core/*" : ["../core/src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "packages/core/tsconfig.json", "packages/dusk-kit/tsconfig.json"],
-  "exclude": ["node_modules"],
-  "overrides": {
-    "react-is": "^19.0.0-rc-69d4b800-20241021"
-  }
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

@@ -132,6 +132,9 @@ importers:
       '@tailark/mist':
         specifier: workspace:*
         version: link:../../packages/mist-kit
+      '@tailark/ts-config':
+        specifier: workspace:*
+        version: link:../../packages/ts-config
       '@tailwindcss/postcss':
         specifier: ^4.1.6
         version: 4.1.6
@@ -166,7 +169,7 @@ importers:
         specifier: ^4.1.6
         version: 4.1.6
       typescript:
-        specifier: ^5
+        specifier: latest
         version: 5.8.3
 
   packages/core:
@@ -393,6 +396,9 @@ importers:
       '@tailark/core':
         specifier: workspace:*
         version: link:../core
+      '@tailark/ts-config':
+        specifier: workspace:*
+        version: link:../ts-config
       '@tailwindcss/postcss':
         specifier: ^4.1.6
         version: 4.1.6
@@ -418,8 +424,10 @@ importers:
         specifier: ^1.2.9
         version: 1.2.9
       typescript:
-        specifier: ^5
+        specifier: latest
         version: 5.8.3
+
+  packages/ts-config: {}
 
 packages:
 
