@@ -23,14 +23,5 @@
       "@/*": ["./*"],
       "@tailark/core/*" : ["../core/src/*"]
     }
-  },
-  "include": [
-    "next-env.d.ts", 
-    "**/*.ts", 
-    "**/*.tsx", 
-    ".next/types/**/*.ts",  
-    "../core/tsconfig.json",
-    "../dusk-kit/tsconfig.json",
-    "../mist-kit/tsconfig.json"],
-  "exclude": ["node_modules", "dist"]
+  }
 }

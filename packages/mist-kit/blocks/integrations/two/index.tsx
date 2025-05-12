@@ -1,4 +1,4 @@
-import { Button } from '#components/ui/button'
+import { Button } from './../../../components/ui/button'
 import { Gemini, GooglePaLM, Replit, MediaWiki, MagicUI, VSCodium } from '@tailark/core/components/logos'
 import Link from 'next/link'
 

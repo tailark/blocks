@@ -1,4 +1,4 @@
-import { Button } from '#components/ui/button'
+import { Button } from './../../../components/ui/button'
 import { Calendar, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 

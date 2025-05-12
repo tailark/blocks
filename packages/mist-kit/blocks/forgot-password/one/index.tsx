@@ -1,5 +1,5 @@
 import { LogoIcon } from '@tailark/core/components/logo'
-import { Button } from '#components/ui/button'
+import { Button } from './../../../components/ui/button'
 import { Input } from '@tailark/core/ui/input'
 import { Label } from '@tailark/core/ui/label'
 import Link from 'next/link'

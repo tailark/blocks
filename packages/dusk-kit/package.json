@@ -2,18 +2,18 @@
   "name": "@tailark/dusk",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "exports": {
-    "./*": {
-      "types": "./*.ts",
-      "default": "./dist/*.js"
-    }
+  "imports": {
+    "#*": "./*",
+    "#components/*":[
+      "./components/*.ts",
+      "./components/*.tsx"
+    ]
   },
   "dependencies": {
     "@tailark/core": "workspace:*",
@@ -40,6 +40,6 @@
     "eslint-config-next": "15.3.2",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.2.9",
-    "typescript": "^5"
+    "typescript": "latest"
   }
 }

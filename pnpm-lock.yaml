@@ -355,7 +355,7 @@ importers:
         specifier: ^1.2.9
         version: 1.2.9
       typescript:
-        specifier: ^5
+        specifier: latest
         version: 5.8.3
 
   packages/mist-kit:

@@ -8,12 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "exports": {
-    "./*": {
-      "types": "./*.ts",
-      "default": "./dist/*.js"
-    }
-  },
   "imports": {
     "#*": "./*",
     "#components/*":[
