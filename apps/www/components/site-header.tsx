@@ -66,7 +66,7 @@ export const SiteHeader = () => {
                             className="text-foreground/75 rounded-full">
                             <Link
                                 target="_blank"
-                                href="https://github.com/tailark/blocks/packages/mist-kit?tab=readme-ov-file">
+                                href="https://github.com/tailark/blocks/blob/main/packages/mist-kit/README.md">
                                 Docs
                                 <CircleArrowOutUpRightIcon
                                     strokeWidth={2}
