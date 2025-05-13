@@ -23,7 +23,7 @@ export default function FeaturesSection() {
                             <div className="mask-b-from-95% -ml-2 -mt-2 mr-0.5 pl-2 pt-2">
                                 <div className="bg-background rounded-tl-(--radius) ring-foreground/5 relative mx-auto mt-8 h-96 overflow-hidden border border-transparent shadow ring-1">
                                     <Image
-                                        src="/mist/notion-2.png"
+                                        src="/mist/tailark-2.png"
                                         alt="app screen"
                                         width="2880"
                                         height="1842"

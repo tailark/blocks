@@ -82,7 +82,7 @@ export default function HeroSection() {
                             <div className="relative -mr-56 mt-16 sm:mr-0">
                                 <div className="bg-background rounded-(--radius) relative mx-auto overflow-hidden border border-transparent shadow-lg shadow-black/10 ring-1 ring-black/10">
                                     <Image
-                                        src="/mist/notion-2.png"
+                                        src="/mist/tailark-2.png"
                                         alt="app screen"
                                         width="2880"
                                         height="1842"

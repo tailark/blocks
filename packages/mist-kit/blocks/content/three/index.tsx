@@ -21,7 +21,7 @@ export default function ContentSection() {
 
                             <div className="bg-background rounded-(--radius) relative m-4 overflow-hidden border border-transparent shadow-xl shadow-black/15 ring-1 ring-black/10 sm:m-8 md:m-12">
                                 <Image
-                                    src="/mist/notion-3.png"
+                                    src="/mist/tailark-3.png"
                                     alt="app screen"
                                     width="2880"
                                     height="1842"

@@ -81,7 +81,7 @@ export default function HeroSection() {
                             <div className="before:border-foreground/5 before:bg-foreground/5 relative h-full before:absolute before:-inset-x-4 before:bottom-7 before:top-0 before:skew-x-6 before:rounded-[calc(var(--radius)+1rem)] before:border">
                                 <div className="bg-background rounded-(--radius) shadow-foreground/10 ring-foreground/5 relative h-full -translate-y-12 skew-x-6 overflow-hidden border border-transparent shadow-md ring-1">
                                     <Image
-                                        src="/mist/notion.png"
+                                        src="/mist/tailark.png"
                                         alt="app screen"
                                         width="2880"
                                         height="1842"
