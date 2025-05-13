@@ -80,7 +80,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
             </div>
 
             <div className="relative mx-auto max-w-7xl px-4 lg:px-0">
-                <div className={cn('border-foreground/[0.075] border-r sm:border-x')}>
+                <div className={cn('border-foreground/[0.075] border-x')}>
                     <div
                         aria-hidden
                         className="absolute inset-x-4 -bottom-14 mx-auto h-14 max-w-7xl lg:inset-x-0">
