@@ -26,6 +26,7 @@ Copy and paste the following CSS variables into your project's global CSS (e.g.,
     --accent: var(--color-zinc-700);
     --accent-foreground: var(--color-white);
     --destructive: var(--color-red-600);
+    --destructive-foreground: var(--color-white);
     --border: var(--color-zinc-200);
     --input: var(--color-zinc-200);
     --ring: var(--color-indigo-500);
