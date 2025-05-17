@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import { Panel, PanelGroup, PanelResizeHandle, type ImperativePanelGroupHandle } from 'react-resizable-panels'
 import { useCopyToClipboard } from '@/hooks/useClipboard'
 import { useMedia } from 'use-media'
@@ -49,12 +49,6 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
         previewUrl: previewLink,
         containerRef: iframeContainerRef,
     })
-
-    useEffect(() => {
-        if (!code && (!codes || codes.length === 0)) {
-            setMode('preview')
-        }
-    }, [code, codes])
 
     const codeContentForEditor = codes || (code ? [{ name: 'index.tsx', language: 'tsx', code, active: true }] : [])
     const codeAvailable = !!(code || (codes && codes.length > 0))
