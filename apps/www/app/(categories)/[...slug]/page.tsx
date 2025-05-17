@@ -10,6 +10,10 @@ interface PageProps {
 }
 
 function getKitAndCategory(slug: string[]): { kitShortName: string; category: string; kitFullName: string } | null {
+    if (slug[0] === '.well-known') {
+        return null
+    }
+
     if (slug.length < 1 || slug.length > 2) {
         return null
     }
