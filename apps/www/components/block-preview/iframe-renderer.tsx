@@ -25,7 +25,7 @@ const IframeRenderer: React.FC<IframeRendererProps> = ({ src, title, ariaLabel, 
             const url = new URL(src, window.location.origin)
             url.searchParams.set('_', Date.now().toString())
             return url.toString()
-        } catch (e) {
+        } catch {
             return src
         }
     }, [src])
