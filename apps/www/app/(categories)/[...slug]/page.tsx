@@ -89,6 +89,9 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default function BlocksCategoryPage({ params }: { params: Promise<{ slug: string[] }> }) {
     const { slug } = use(params)
+    if (slug[0] === '_next' || slug[0] === '.well-known') {
+        return null
+    }
     const parsed = getKitAndCategory(slug)
 
     if (!parsed) {
