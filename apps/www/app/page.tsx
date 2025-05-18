@@ -25,16 +25,72 @@ export default function Home() {
             </section>
             <BlockPreview
                 previewOnly
-                previewLink="/examples/home/one"
+                previewLink="/preview/dusk/hero-section/one"
                 category="page"
-                title="Home page"
+                title="Hero section"
                 id="one"
             />
             <BlockPreview
                 previewOnly
-                previewLink="/examples/about/one"
+                previewLink="/preview/dusk/hero-section/nine"
                 category="page"
-                title="About page"
+                title="Hero section"
+                id="nine"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/dusk/features/eleven"
+                category="page"
+                title="Features section"
+                id="eleven"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/dusk/features/nine"
+                category="page"
+                title="Features section"
+                id="nine"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/dusk/integrations/three"
+                category="page"
+                title="Integrations section"
+                id="three"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/dusk/team/one"
+                category="page"
+                title="Team section"
+                id="one"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/dusk/pricing/five"
+                category="page"
+                title="Pricing section"
+                id="five"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/dusk/comparator/one"
+                category="page"
+                title="Comparator section"
+                id="one"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/dusk/faqs/two"
+                category="page"
+                title="FAQs section"
+                id="two"
+            />
+            <BlockPreview
+                previewOnly
+                previewLink="/preview/dusk/contact/two"
+                category="page"
+                title="Contact section"
                 id="two"
             />
             <SiteFooter />
