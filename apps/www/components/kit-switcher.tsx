@@ -10,77 +10,107 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 const kits = getClientKits()
 const STORAGE_KEY = 'selected-kit-id'
 
+const getKitIdFromPathnameInternal = (path: string, availableKits: Array<{ id: string }>, defaultKitId: string = 'dusk-kit'): string => {
+    const pathParts = path.split('/')
+    const firstSegment = pathParts[1]
+
+    if (firstSegment === 'mist') {
+        return 'mist-kit'
+    }
+    if (availableKits.some((kit) => kit.id === firstSegment && kit.id !== defaultKitId)) {
+        return firstSegment
+    }
+    return defaultKitId
+}
+
 export function KitSwitcher() {
     const router = useRouter()
     const pathname = usePathname()
-    const [selectedKitId, setSelectedKitId] = useState<string>(kits[0].id)
+    const [selectedKitId, setSelectedKitId] = useState<string>(() => {
+        if (typeof window !== 'undefined') {
+            const storedKit = localStorage.getItem(STORAGE_KEY)
+            if (storedKit && kits.some((kit) => kit.id === storedKit)) {
+                return storedKit
+            }
+        }
+        return kits[0]?.id || 'dusk-kit'
+    })
 
     const isDisabled = pathname.startsWith('/snippets')
 
     useEffect(() => {
         if (isDisabled) {
             const storedKit = localStorage.getItem(STORAGE_KEY)
-            if (storedKit && storedKit !== selectedKitId) {
+            if (storedKit && kits.some((k) => k.id === storedKit) && selectedKitId !== storedKit) {
                 setSelectedKitId(storedKit)
             }
             return
         }
 
-        const pathParts = pathname.split('/')
-        const firstPathSegment = pathParts[1]
+        const currentKitIdFromPath = getKitIdFromPathnameInternal(pathname, kits, 'dusk-kit')
+        const storedKitId = localStorage.getItem(STORAGE_KEY)
 
-        let derivedKitId: string
+        let targetKitId: string
 
-        if (firstPathSegment === 'mist') {
-            derivedKitId = 'mist-kit'
-        } else {
-            const matchedKit = kits.find((kit) => kit.id === firstPathSegment && kit.id !== 'dusk-kit')
-            if (matchedKit) {
-                derivedKitId = matchedKit.id
+        if (pathname === '/') {
+            if (storedKitId && kits.some((kit) => kit.id === storedKitId)) {
+                targetKitId = storedKitId
+                if (targetKitId !== 'dusk-kit') {
+                    const kitPathSegment = targetKitId === 'mist-kit' ? 'mist' : targetKitId
+                    router.push(`/${kitPathSegment}`)
+                    return
+                }
             } else {
-                derivedKitId = 'dusk-kit'
+                targetKitId = 'dusk-kit'
             }
+        } else {
+            targetKitId = currentKitIdFromPath
         }
 
-        if (!kits.some((kit) => kit.id === derivedKitId)) {
-            derivedKitId = 'dusk-kit'
+        if (!kits.some((kit) => kit.id === targetKitId)) {
+            targetKitId = 'dusk-kit'
         }
 
-        if (selectedKitId !== derivedKitId) {
-            setSelectedKitId(derivedKitId)
+        if (selectedKitId !== targetKitId) {
+            setSelectedKitId(targetKitId)
         }
 
-        if (!isDisabled && !localStorage.getItem(STORAGE_KEY)) {
-            localStorage.setItem(STORAGE_KEY, derivedKitId)
+        if (localStorage.getItem(STORAGE_KEY) !== targetKitId) {
+            localStorage.setItem(STORAGE_KEY, targetKitId)
         }
-    }, [pathname, selectedKitId, isDisabled])
+    }, [pathname, router, isDisabled])
 
-    const handleKitChange = (value: string) => {
+    const handleKitChange = (newlySelectedKitId: string) => {
         if (isDisabled) return
 
-        setSelectedKitId(value)
-        localStorage.setItem(STORAGE_KEY, value)
+        setSelectedKitId(newlySelectedKitId)
+        localStorage.setItem(STORAGE_KEY, newlySelectedKitId)
 
-        if (value === 'dusk-kit') {
-            const pathParts = pathname.split('/')
-            if (pathParts[1] === 'mist') {
-                if (pathParts.length > 2) {
-                    router.push(`/${pathParts[2]}`)
-                } else {
-                    router.push('/')
-                }
+        const currentKitIdFromPath = getKitIdFromPathnameInternal(pathname, kits, 'dusk-kit')
+        const pathSegments = pathname.split('/').filter(Boolean)
+        let newPath: string
+
+        const newKitRouteSegment = newlySelectedKitId === 'mist-kit' ? 'mist' : newlySelectedKitId
+
+        let remainingPath = ''
+        if (currentKitIdFromPath !== 'dusk-kit') {
+            if (pathSegments.length > 1) {
+                remainingPath = pathSegments.slice(1).join('/')
             }
         } else {
-            const routeKitId = value === 'mist-kit' ? 'mist' : value
-            const pathParts = pathname.split('/')
-
-            if (pathParts[1] === 'mist') {
-                router.push(`/${routeKitId}${pathParts.length > 2 ? `/${pathParts[2]}` : ''}`)
-            } else if (pathParts[1] && pathParts[1] !== '') {
-                router.push(`/${routeKitId}/${pathParts[1]}`)
-            } else {
-                router.push(`/${routeKitId}`)
+            if (pathSegments.length > 0) {
+                remainingPath = pathSegments.join('/')
             }
+        }
+
+        if (newlySelectedKitId === 'dusk-kit') {
+            newPath = remainingPath ? `/${remainingPath}` : '/'
+        } else {
+            newPath = remainingPath ? `/${newKitRouteSegment}/${remainingPath}` : `/${newKitRouteSegment}`
+        }
+
+        if (newPath !== pathname) {
+            router.push(newPath)
         }
     }
 
