@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef } from 'react'
+import React, { useReducer, useRef, useEffect } from 'react'
 import { Panel, PanelGroup, PanelResizeHandle, type ImperativePanelGroupHandle } from 'react-resizable-panels'
 import { useCopyToClipboard } from '@/hooks/useClipboard'
 import { useMedia } from 'use-media'
@@ -11,6 +11,7 @@ import { useOptimizedIframe } from './useOptimizedIframe'
 import IframeRenderer from './iframe-renderer'
 import LoadingSpinner from './loading-spinner'
 import BlockPreviewToolbar, { DEFAULTSIZE } from './toolbar'
+import { initialState, previewReducer, usePreviewActions } from './state'
 
 export interface BlockPreviewProps {
     code?: string
@@ -24,26 +25,50 @@ export interface BlockPreviewProps {
 }
 
 const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, title, id, category, kit, previewOnly = false }) => {
-    const [mode, setMode] = useState<'preview' | 'code'>('preview')
+    const [state, dispatch] = useReducer(previewReducer, initialState)
+    const { mode } = state
 
     const registryUrl = kit === 'dusk-kit' ? `https://tailark.com/r/${category}-${stringToNumber(id)}.json` : `https://tailark.com/r/${kit?.replace('-kit', '')}-${category}-${stringToNumber(id)}.json`
 
     const terminalCode = `pnpm dlx shadcn@latest add ${registryUrl}`
     const registryCode = registryUrl
 
-    const { copied: cliCopied, copy: cliCopy } = useCopyToClipboard({
+    const cliCopyProps = {
         code: terminalCode,
         title: id,
         category,
-        eventName: 'block_cli_copy',
-    })
+        eventName: 'block_cli_copy' as const,
+    }
 
-    const { copied: registryLinkCopied, copy: registryLinkCopy } = useCopyToClipboard({ code: registryCode, title: id, category, eventName: 'block_registry_copy' })
+    const registryLinkProps = {
+        code: registryCode,
+        title: id,
+        category,
+        eventName: 'block_registry_copy' as const,
+    }
+
+    const { copy: _cliCopy } = useCopyToClipboard(cliCopyProps)
+    const { copy: _registryLinkCopy } = useCopyToClipboard(registryLinkProps)
+
+    const handleCliCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        _cliCopy(e as unknown as React.MouseEvent<HTMLButtonElement, MouseEvent>)
+        dispatch({ type: 'SET_COPIED_CLI', payload: true })
+        setTimeout(() => dispatch({ type: 'SET_COPIED_CLI', payload: false }), 2000)
+    }
+
+    const handleRegistryCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        _registryLinkCopy(e as unknown as React.MouseEvent<HTMLButtonElement, MouseEvent>)
+        dispatch({ type: 'SET_COPIED_REGISTRY', payload: true })
+        setTimeout(() => dispatch({ type: 'SET_COPIED_REGISTRY', payload: false }), 2000)
+    }
 
     const panelGroupRef = useRef<ImperativePanelGroupHandle>(null)
     const isLargeScreen = useMedia('(min-width: 1024px)')
-
     const iframeContainerRef = useRef<HTMLDivElement>(null)
+
+    const { handleModeChange, togglePanel, setPanelSizes } = usePreviewActions(state, dispatch, panelGroupRef, handleCliCopy, handleRegistryCopy)
 
     const { iframeRef, shouldLoadIframe, currentIframeHeight, isIframeCached } = useOptimizedIframe({
         previewUrl: previewLink,
@@ -66,10 +91,20 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                 </div>
 
                 <BlockPreviewToolbar
-                    onModeChange={setMode}
-                    onCliCopy={cliCopy}
-                    onRegistryLinkCopy={registryLinkCopy}
-                    {...{ panelGroupRef, mode, setMode, codeAvailable, previewOnly, previewLink, title, id, category, cliCopied, cliCopy, registryUrl, registryLinkCopied }}
+                    mode={state.mode}
+                    onModeChange={handleModeChange}
+                    onCliCopy={handleCliCopy}
+                    onRegistryLinkCopy={handleRegistryCopy}
+                    onTogglePanel={togglePanel}
+                    codeAvailable={codeAvailable}
+                    previewOnly={previewOnly}
+                    previewLink={previewLink}
+                    title={title}
+                    id={id}
+                    category={category}
+                    cliCopied={state.copied.cli}
+                    registryLinkCopied={state.copied.registry}
+                    panelGroupRef={panelGroupRef}
                 />
             </div>
 
@@ -83,10 +118,10 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                     </div>
                     <div className={cn('bg-white dark:bg-transparent', mode === 'code' && 'hidden')}>
                         <PanelGroup
-                            direction="horizontal"
-                            tagName="div"
                             ref={panelGroupRef}
-                            id={`block-panel-group-${id}`}>
+                            direction={isLargeScreen ? 'horizontal' : 'vertical'}
+                            className="h-full"
+                            onLayout={setPanelSizes}>
                             <Panel
                                 id={`block-panel-${id}`}
                                 order={1}

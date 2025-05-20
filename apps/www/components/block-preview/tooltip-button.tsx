@@ -3,14 +3,14 @@ import { Button, ButtonProps } from '@tailark/core/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@tailark/core/ui/tooltip'
 import Link from 'next/link'
 
-export interface TooltipButtonProps extends ButtonProps {
+export interface TooltipButtonProps extends Omit<ButtonProps, 'onClick'> {
     tooltip: string
     icon?: React.ReactNode
     asLink?: {
         href: string
         target?: string
     }
-    onClick?: React.MouseEventHandler<HTMLButtonElement>
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
     className?: string
     children?: React.ReactNode
 }

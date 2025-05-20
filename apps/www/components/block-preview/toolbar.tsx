@@ -8,8 +8,8 @@ import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 import { OpenInV0Button } from './open-in-v0'
 import TooltipButton from './tooltip-button'
 import { MCPLogo } from './mcp-logo'
-import { Button } from '@tailark/core/ui/button'
 import { titleToNumber } from '@/lib/utils'
+import { Button } from '@tailark/core/ui/button'
 
 const radioItem = 'rounded-md duration-200 flex items-center justify-center h-8 px-2.5 gap-2 transition-[color] data-[state=checked]:bg-muted'
 
@@ -21,6 +21,9 @@ export const LGSIZE = 82
 interface BlockPreviewToolbarProps {
     mode: 'preview' | 'code'
     onModeChange: (mode: 'preview' | 'code') => void
+    onCliCopy: (e: React.MouseEvent<HTMLButtonElement>) => void
+    onRegistryLinkCopy: (e: React.MouseEvent<HTMLButtonElement>) => void
+    onTogglePanel: () => void
     codeAvailable: boolean
     previewOnly?: boolean
     title: string
@@ -29,13 +32,10 @@ interface BlockPreviewToolbarProps {
     category: string
     cliCopied: boolean
     registryLinkCopied: boolean
-    registryUrl: string
-    onCliCopy: React.MouseEventHandler<HTMLButtonElement>
-    onRegistryLinkCopy: React.MouseEventHandler<HTMLButtonElement>
     panelGroupRef: React.RefObject<ImperativePanelGroupHandle | null>
 }
 
-const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeChange, codeAvailable, previewOnly, registryUrl, title, id, category, registryLinkCopied, cliCopied, onCliCopy, onRegistryLinkCopy, previewLink }) => {
+const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeChange, codeAvailable, previewOnly, title, id, previewLink, category, cliCopied, registryLinkCopied, onCliCopy, onRegistryLinkCopy, onTogglePanel, panelGroupRef }) => {
     return (
         <div className="relative z-10 mx-auto flex max-w-7xl justify-between py-1.5 pl-8 pr-6 [--color-border:var(--color-zinc-200)] md:py-2 lg:pl-5 lg:pr-2 dark:[--color-border:var(--color-zinc-800)]">
             <div className="-ml-3 flex items-center gap-3">
@@ -101,11 +101,9 @@ const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeC
                 <div className="flex items-center gap-1.5">
                     <Button
                         onClick={onCliCopy}
-                        size="sm"
-                        className="size-8 shadow-none md:w-fit"
                         variant="ghost"
-                        aria-label="copy code">
-                        {cliCopied ? <Check className="size-4" /> : <Terminal className="!size-3.5" />}
+                        aria-label="Copy CLI">
+                        {cliCopied ? <Check className="size-4" /> : <Terminal className="size-4" />}
                         <span className="hidden font-mono text-xs md:block">
                             pnpm dlx shadcn@latest add {category}-{titleToNumber(id)}
                         </span>
@@ -117,10 +115,10 @@ const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeC
                     />
 
                     <TooltipButton
-                        tooltip="Registry MCP URL"
-                        className="size-8"
-                        icon={registryLinkCopied ? <Check className="size-4" /> : <MCPLogo />}
+                        tooltip={registryLinkCopied ? 'Copied!' : 'Copy registry URL'}
                         onClick={onRegistryLinkCopy}
+                        className="size-8"
+                        icon={registryLinkCopied ? <Check className="size-4" /> : <MCPLogo className="size-4" />}
                     />
 
                     <Separator
@@ -131,7 +129,7 @@ const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeC
                     <OpenInV0Button
                         title={title}
                         category={category}
-                        registryUrl={registryUrl}
+                        registryUrl={`https://tailark.com/r/${category}-${titleToNumber(id)}.json`}
                     />
                 </div>
             )}
