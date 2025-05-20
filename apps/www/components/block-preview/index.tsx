@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useReducer, useRef, useEffect } from 'react'
+import React, { useReducer, useRef } from 'react'
 import { Panel, PanelGroup, PanelResizeHandle, type ImperativePanelGroupHandle } from 'react-resizable-panels'
 import { useCopyToClipboard } from '@/hooks/useClipboard'
 import { useMedia } from 'use-media'
@@ -68,7 +68,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
     const isLargeScreen = useMedia('(min-width: 1024px)')
     const iframeContainerRef = useRef<HTMLDivElement>(null)
 
-    const { handleModeChange, togglePanel, setPanelSizes } = usePreviewActions(state, dispatch, panelGroupRef, handleCliCopy, handleRegistryCopy)
+    const { handleModeChange, setPanelSizes } = usePreviewActions(state, dispatch, panelGroupRef, handleCliCopy, handleRegistryCopy)
 
     const { iframeRef, shouldLoadIframe, currentIframeHeight, isIframeCached } = useOptimizedIframe({
         previewUrl: previewLink,
@@ -95,7 +95,6 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                     onModeChange={handleModeChange}
                     onCliCopy={handleCliCopy}
                     onRegistryLinkCopy={handleRegistryCopy}
-                    onTogglePanel={togglePanel}
                     codeAvailable={codeAvailable}
                     previewOnly={previewOnly}
                     previewLink={previewLink}
@@ -104,7 +103,6 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                     category={category}
                     cliCopied={state.copied.cli}
                     registryLinkCopied={state.copied.registry}
-                    panelGroupRef={panelGroupRef}
                 />
             </div>
 

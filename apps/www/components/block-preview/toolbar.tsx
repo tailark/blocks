@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { Check, Code2, Eye, Maximize, Terminal } from 'lucide-react'
-import { type ImperativePanelGroupHandle } from 'react-resizable-panels'
 import { Separator } from '@tailark/core/ui/separator'
 import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 import { OpenInV0Button } from './open-in-v0'
@@ -23,7 +22,6 @@ interface BlockPreviewToolbarProps {
     onModeChange: (mode: 'preview' | 'code') => void
     onCliCopy: (e: React.MouseEvent<HTMLButtonElement>) => void
     onRegistryLinkCopy: (e: React.MouseEvent<HTMLButtonElement>) => void
-    onTogglePanel: () => void
     codeAvailable: boolean
     previewOnly?: boolean
     title: string
@@ -32,10 +30,9 @@ interface BlockPreviewToolbarProps {
     category: string
     cliCopied: boolean
     registryLinkCopied: boolean
-    panelGroupRef: React.RefObject<ImperativePanelGroupHandle | null>
 }
 
-const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeChange, codeAvailable, previewOnly, title, id, previewLink, category, cliCopied, registryLinkCopied, onCliCopy, onRegistryLinkCopy, onTogglePanel, panelGroupRef }) => {
+const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeChange, codeAvailable, previewOnly, title, id, previewLink, category, cliCopied, registryLinkCopied, onCliCopy, onRegistryLinkCopy }) => {
     return (
         <div className="relative z-10 mx-auto flex max-w-7xl justify-between py-1.5 pl-8 pr-6 [--color-border:var(--color-zinc-200)] md:py-2 lg:pl-5 lg:pr-2 dark:[--color-border:var(--color-zinc-800)]">
             <div className="-ml-3 flex items-center gap-3">
