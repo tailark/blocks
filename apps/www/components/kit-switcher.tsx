@@ -78,7 +78,7 @@ export function KitSwitcher() {
         if (localStorage.getItem(STORAGE_KEY) !== targetKitId) {
             localStorage.setItem(STORAGE_KEY, targetKitId)
         }
-    }, [pathname, router, selectedKitId, isDisabled])
+    }, [pathname, router, isDisabled])
 
     const handleKitChange = (newlySelectedKitId: string) => {
         if (isDisabled) return
