@@ -13,7 +13,7 @@ export default function Home() {
                 <div className="mx-4 max-w-7xl px-4 py-12 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
                     <div className="mx-auto max-w-sm text-center">
                         <h1 className="inline-flex flex-wrap justify-center gap-2 text-balance text-3xl font-semibold sm:text-4xl">
-                            Shadcn Blocks <span className="text-muted-foreground">for</span> Mordern <DuskKitLogo /> Websites
+                            Shadcn Blocks <span className="text-muted-foreground">for</span> Modern <DuskKitLogo /> Websites
                         </h1>
                         <p className="text-forground/60 mx-auto mb-6 mt-4 max-w-md text-balance text-lg">Modern, Responsive, pre-built UI blocks designed for marketing websites.</p>
 
