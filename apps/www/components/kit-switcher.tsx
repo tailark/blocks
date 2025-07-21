@@ -157,8 +157,8 @@ export function KitSwitcher() {
                             <QuartzKitLogo />
                             <div className="flex items-center gap-1.5">
                                 Quartz
-                                <span className="rounded-full border border-black/5 bg-gradient-to-b from-amber-50 to-rose-50 px-1.5 py-1 text-[9px] font-medium leading-none dark:border-0 dark:from-amber-300/15 dark:to-rose-500/10">
-                                    <span className="bg-gradient-to-r from-amber-950 to-rose-800 bg-clip-text text-transparent dark:from-amber-200 dark:to-rose-300">NEW</span>
+                                <span className="rounded-full border border-black/5 bg-gradient-to-b from-emerald-50 to-indigo-50 px-1.5 py-1 text-[9px] font-medium leading-none dark:border-0 dark:from-emerald-300/15 dark:to-indigo-500/10">
+                                    <span className="bg-gradient-to-r from-emerald-700 to-indigo-800 bg-clip-text text-transparent dark:from-emerald-200 dark:to-indigo-300">NEW</span>
                                 </span>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ export function KitSwitcher() {
 }
 
 const QuartzKitLogo = () => (
-    <div className="bg-linear-to-b relative flex size-5 items-center justify-center rounded from-amber-400 to-rose-500 shadow-md shadow-black/25 before:absolute before:inset-px before:rounded-[3px] before:border before:border-white/40 before:ring-1 before:ring-black/25 dark:before:border-transparent dark:before:ring-white/25">
+    <div className="bg-linear-to-br relative flex size-5 items-center justify-center rounded from-emerald-400 to-indigo-500 shadow-md shadow-black/25 before:absolute before:inset-px before:rounded-[3px] before:border before:border-white/40 before:ring-1 before:ring-black/25 dark:before:border-transparent dark:before:ring-white/25">
         <div className="absolute inset-x-px inset-y-1.5 border-y border-dotted border-white/25"></div>
         <div className="absolute inset-x-1.5 inset-y-px border-x border-dotted border-white/25"></div>
         <Gem className="size-3 fill-white stroke-white drop-shadow" />

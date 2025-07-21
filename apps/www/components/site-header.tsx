@@ -8,7 +8,7 @@ import { ThemeToggle } from '@/components/theme-toggle'
 import { KitSwitcher } from '@/components/kit-switcher'
 import { cn } from '@/lib/utils'
 import { Separator } from '@tailark/core/ui/separator'
-import { CircleArrowOutUpRightIcon, Menu, X } from 'lucide-react'
+import { ArrowRight, CircleArrowOutUpRightIcon, Menu, X } from 'lucide-react'
 import { Dialog, DialogClose, DialogTitle, DialogContent, DialogTrigger } from '@tailark/core/ui/dialog'
 
 export const SiteHeader = () => {
@@ -41,14 +41,14 @@ export const SiteHeader = () => {
     const homeHref = getBasePath(true)
 
     return (
-        <header className="border-b dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
+        <header className="border-foreground/5 border-b">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-4">
                 <div className="flex items-center">
                     <Link
                         href={homeHref}
                         className="flex w-fit items-center gap-2">
                         <Logo />
-                        <span className="sr-only font-bold">ns UI</span>
+                        <span className="sr-only font-bold">Tailark</span>
                     </Link>
                     <span
                         aria-hidden
@@ -76,6 +76,18 @@ export const SiteHeader = () => {
                         </Button>
                     )}
                 </div>
+                {pathname !== '/' && pathname !== '/mist' && (
+                    <Link
+                        href="https://pro.tailark.com/"
+                        className="rounded-(--radius) inset-ring-foreground/[0.065] inset-ring-1 bg-linear-to-r mx-auto hidden w-fit items-center gap-2 from-indigo-500/10 to-emerald-500/10 p-1 px-2 hover:bg-indigo-500/15 lg:flex">
+                        <span className="bg-linear-to-r from-indigo-950 to-emerald-950 bg-clip-text text-xs font-medium text-transparent dark:from-indigo-200 dark:to-emerald-100">
+                            Introducing Quartz Kit - <span className="font-normal">A complete kit for founders</span>{' '}
+                        </span>
+                        <span className="bg-foreground/5 block h-4 w-px"></span>
+
+                        <ArrowRight className="size-3" />
+                    </Link>
+                )}
 
                 <div className="-mr-2 hidden items-center gap-4 sm:flex">
                     <div className="flex items-center gap-1">
