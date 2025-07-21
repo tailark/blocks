@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
-import { BookOpen, MoonStar } from 'lucide-react'
+import { BookOpen, Gem, MoonStar } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { getClientKits } from '@/lib/get-kits'
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@tailark/core/ui/select'
@@ -81,6 +81,11 @@ export function KitSwitcher() {
     }, [pathname, router, isDisabled])
 
     const handleKitChange = (newlySelectedKitId: string) => {
+        if (newlySelectedKitId === 'quartz-kit') {
+            window.open('https://pro.tailark.com', '_parent')
+            return
+        }
+
         if (isDisabled) return
 
         setSelectedKitId(newlySelectedKitId)
@@ -129,7 +134,7 @@ export function KitSwitcher() {
                 sideOffset={6}
                 className="bg-background dark:ring-border w-36 -translate-x-[7px] rounded-lg border-transparent px-0 shadow-xl ring-1 ring-black/10">
                 <SelectGroup>
-                    <SelectLabel className="mx-2 mb-1 border-b border-dashed px-0 pb-3">Choose a kit</SelectLabel>
+                    <SelectLabel className="mx-2 px-0 pb-1">Free kits</SelectLabel>
                     {kits.map((kit) => (
                         <SelectItem
                             key={kit.id}
@@ -138,22 +143,39 @@ export function KitSwitcher() {
                             <div className="flex items-center gap-2">
                                 {kit.id === 'dusk-kit' && <DuskKitLogo />}
                                 {kit.id === 'mist-kit' && <MistKitLogo />}
-                                <div className="flex items-center gap-1.5">
-                                    {kit.name}
-                                    {kit.id === 'mist-kit' && (
-                                        <span className="rounded-full border border-black/5 bg-gradient-to-b from-lime-50 to-teal-50 px-1.5 py-1 text-[9px] font-medium leading-none dark:border-0 dark:from-lime-300/15 dark:to-teal-500/10">
-                                            <span className="bg-gradient-to-r from-lime-600 to-teal-800 bg-clip-text text-transparent dark:from-lime-200 dark:to-teal-300">NEW</span>
-                                        </span>
-                                    )}
-                                </div>
+                                <div className="flex items-center gap-1.5">{kit.name}</div>
                             </div>
                         </SelectItem>
                     ))}
+                </SelectGroup>
+                <SelectGroup>
+                    <SelectLabel className="mx-2 mt-2 border-t border-dashed px-0 pb-1 pt-2">Premium kits</SelectLabel>
+                    <SelectItem
+                        value="quartz-kit"
+                        className="hover:bg-muted rounded py-2">
+                        <div className="flex items-center gap-2">
+                            <QuartzKitLogo />
+                            <div className="flex items-center gap-1.5">
+                                Quartz
+                                <span className="rounded-full border border-black/5 bg-gradient-to-b from-amber-50 to-rose-50 px-1.5 py-1 text-[9px] font-medium leading-none dark:border-0 dark:from-amber-300/15 dark:to-rose-500/10">
+                                    <span className="bg-gradient-to-r from-amber-950 to-rose-800 bg-clip-text text-transparent dark:from-amber-200 dark:to-rose-300">NEW</span>
+                                </span>
+                            </div>
+                        </div>
+                    </SelectItem>
                 </SelectGroup>
             </SelectContent>
         </Select>
     )
 }
+
+const QuartzKitLogo = () => (
+    <div className="bg-linear-to-b relative flex size-5 items-center justify-center rounded from-amber-400 to-rose-500 shadow-md shadow-black/25 before:absolute before:inset-px before:rounded-[3px] before:border before:border-white/40 before:ring-1 before:ring-black/25 dark:before:border-transparent dark:before:ring-white/25">
+        <div className="absolute inset-x-px inset-y-1.5 border-y border-dotted border-white/25"></div>
+        <div className="absolute inset-x-1.5 inset-y-px border-x border-dotted border-white/25"></div>
+        <Gem className="size-3 fill-white stroke-white drop-shadow" />
+    </div>
+)
 
 const DuskKitLogo = () => (
     <div className="border-background dark:inset-ring dark:inset-ring-white/25 bg-linear-to-b dark:inset-shadow-2xs dark:inset-shadow-white/25 relative flex size-5 items-center justify-center rounded border from-purple-300 to-blue-600 shadow-md shadow-black/20 ring-1 ring-black/10 dark:border-0 dark:shadow-white/10 dark:ring-black/50">
