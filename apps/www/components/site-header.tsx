@@ -75,19 +75,18 @@ export const SiteHeader = () => {
                             </Link>
                         </Button>
                     )}
-                </div>
-                {pathname !== '/' && pathname !== '/mist' && (
-                    <Link
-                        href="https://pro.tailark.com/"
-                        className="rounded-(--radius) inset-ring-foreground/[0.065] inset-ring-1 bg-linear-to-r mx-auto hidden w-fit items-center gap-2 from-indigo-500/10 to-emerald-500/10 p-1 px-2 hover:bg-indigo-500/15 lg:flex">
-                        <span className="bg-linear-to-r from-indigo-950 to-emerald-950 bg-clip-text text-xs font-medium text-transparent dark:from-indigo-200 dark:to-emerald-100">
-                            Introducing Quartz Kit - <span className="font-normal">A complete kit for founders</span>{' '}
-                        </span>
-                        <span className="bg-foreground/5 block h-4 w-px"></span>
 
-                        <ArrowRight className="size-3" />
-                    </Link>
-                )}
+                    {pathname !== '/' && pathname !== '/mist' && (
+                        <Link
+                            href="https://pro.tailark.com/"
+                            className="rounded-(--radius) inset-ring-foreground/[0.065] inset-ring-1 bg-linear-to-r mx-auto hidden w-fit items-center gap-2 from-indigo-500/10 to-emerald-500/10 p-1 px-2 hover:bg-indigo-500/15 lg:flex">
+                            <span className="bg-linear-to-r from-indigo-950 to-emerald-950 bg-clip-text text-xs font-medium text-transparent dark:from-indigo-200 dark:to-emerald-100">Build enterprise-grade websites with premium blocks</span>
+                            <span className="bg-foreground/5 block h-4 w-px"></span>
+
+                            <ArrowRight className="size-3" />
+                        </Link>
+                    )}
+                </div>
 
                 <div className="-mr-2 hidden items-center gap-4 sm:flex">
                     <div className="flex items-center gap-1">
@@ -111,6 +110,17 @@ export const SiteHeader = () => {
                                 href="/snippets/button"
                                 className="!text-sm">
                                 Snippets
+                            </Link>
+                        </Button>
+                        <Button
+                            asChild
+                            size="sm"
+                            variant="link"
+                            className="text-foreground/75 rounded-full">
+                            <Link
+                                href="https://pro.tailark.com"
+                                className="!text-sm">
+                                Pro
                             </Link>
                         </Button>
                     </div>
@@ -244,6 +254,17 @@ export const SiteHeader = () => {
                                             className="!text-sm"
                                             onClick={() => setIsOpen(false)}>
                                             Snippets
+                                        </Link>
+                                    </Button>
+                                    <Button
+                                        asChild
+                                        size="sm"
+                                        variant="link"
+                                        className="text-foreground/75 rounded-full">
+                                        <Link
+                                            href="https://pro.tailark.com"
+                                            className="!text-sm">
+                                            Pro
                                         </Link>
                                     </Button>
                                 </div>
