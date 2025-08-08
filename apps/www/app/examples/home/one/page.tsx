@@ -342,7 +342,7 @@ export default function HeroSection() {
                         <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl">APIs and platforms helping developers</h2>
                         <div className="relative">
                             <div className="relative z-10 space-y-4 md:w-1/2">
-                                <p className="text-body">
+                                <p>
                                     Lyra is evolving to be more than just the models. <span className="text-title font-medium">It supports an entire ecosystem</span> — from products innovate.
                                 </p>
                                 <p>It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate</p>
