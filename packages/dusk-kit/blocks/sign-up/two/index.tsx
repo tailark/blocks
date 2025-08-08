@@ -18,7 +18,7 @@ export default function LoginPage() {
                             className="mx-auto block w-fit">
                             <LogoIcon />
                         </Link>
-                        <h1 className="text-title mb-1 mt-4 text-xl font-semibold">Create a Tailark Account</h1>
+                        <h1 className="mb-1 mt-4 text-xl font-semibold">Create a Tailark Account</h1>
                         <p className="text-sm">Welcome! Create an account to get started</p>
                     </div>
 
@@ -70,7 +70,7 @@ export default function LoginPage() {
                             <div className="flex items-center justify-between">
                                 <Label
                                     htmlFor="pwd"
-                                    className="text-title text-sm">
+                                    className="text-sm">
                                     Password
                                 </Label>
                                 <Button

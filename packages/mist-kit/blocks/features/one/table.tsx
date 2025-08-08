@@ -79,7 +79,7 @@ export const Table = ({ className }: { className?: string }) => {
                                 <span className={cn('rounded-full px-2 py-1 text-xs', customer.statusVariant == 'success' && 'bg-lime-500/15 text-lime-800', customer.statusVariant == 'danger' && 'bg-red-500/15 text-red-800', customer.statusVariant == 'warning' && 'bg-yellow-500/15 text-yellow-800')}>{customer.status}</span>
                             </td>
                             <td>
-                                <div className="text-title flex items-center gap-2">
+                                <div className="flex items-center gap-2">
                                     <div className="size-6 overflow-hidden rounded-full">
                                         <img
                                             src={customer.avatar}

@@ -343,7 +343,7 @@ export default function HeroSection() {
                         <div className="relative">
                             <div className="relative z-10 space-y-4 md:w-1/2">
                                 <p>
-                                    Lyra is evolving to be more than just the models. <span className="text-title font-medium">It supports an entire ecosystem</span> — from products innovate.
+                                    Lyra is evolving to be more than just the models. <span className="font-medium">It supports an entire ecosystem</span> — from products innovate.
                                 </p>
                                 <p>It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate</p>
 

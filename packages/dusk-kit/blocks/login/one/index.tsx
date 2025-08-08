@@ -91,7 +91,7 @@ export default function LoginPage() {
                             <div className="flex items-center justify-between">
                                 <Label
                                     htmlFor="pwd"
-                                    className="text-title text-sm">
+                                    className="text-sm">
                                     Password
                                 </Label>
                                 <Button
