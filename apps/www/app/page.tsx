@@ -6,6 +6,78 @@ import { ArrowRight, MoonStar } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {
+    const blocks = [
+        {
+            kit: 'dusk',
+            category: 'hero-section',
+            id: 'one',
+            title: 'Hero section',
+            previewLink: '/preview/dusk/hero-section/one',
+        },
+        {
+            kit: 'dusk',
+            category: 'hero-section',
+            id: 'nine',
+            title: 'Hero section',
+            previewLink: '/preview/dusk/hero-section/nine',
+        },
+        {
+            kit: 'dusk',
+            category: 'features',
+            id: 'eleven',
+            title: 'Features section',
+            previewLink: '/preview/dusk/features/eleven',
+        },
+        {
+            kit: 'dusk',
+            category: 'features',
+            id: 'nine',
+            title: 'Features section',
+            previewLink: '/preview/dusk/features/nine',
+        },
+        {
+            kit: 'dusk',
+            category: 'integrations',
+            id: 'three',
+            title: 'Integrations section',
+            previewLink: '/preview/dusk/integrations/three',
+        },
+        {
+            kit: 'dusk',
+            category: 'team',
+            id: 'one',
+            title: 'Team section',
+            previewLink: '/preview/dusk/team/one',
+        },
+        {
+            kit: 'dusk',
+            category: 'pricing',
+            id: 'five',
+            title: 'Pricing section',
+            previewLink: '/preview/dusk/pricing/five',
+        },
+        {
+            kit: 'dusk',
+            category: 'comparator',
+            id: 'one',
+            title: 'Comparator section',
+            previewLink: '/preview/dusk/comparator/one',
+        },
+        {
+            kit: 'dusk',
+            category: 'faqs',
+            id: 'two',
+            title: 'FAQs section',
+            previewLink: '/preview/dusk/faqs/two',
+        },
+        {
+            kit: 'dusk',
+            category: 'contact',
+            id: 'two',
+            title: 'Contact section',
+            previewLink: '/preview/dusk/contact/two',
+        },
+    ]
     return (
         <>
             <SiteHeader />
@@ -32,76 +104,13 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/hero-section/one"
-                category="page"
-                title="Hero section"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/hero-section/nine"
-                category="page"
-                title="Hero section"
-                id="nine"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/features/eleven"
-                category="page"
-                title="Features section"
-                id="eleven"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/features/nine"
-                category="page"
-                title="Features section"
-                id="nine"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/integrations/three"
-                category="page"
-                title="Integrations section"
-                id="three"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/team/one"
-                category="page"
-                title="Team section"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/pricing/five"
-                category="page"
-                title="Pricing section"
-                id="five"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/comparator/one"
-                category="page"
-                title="Comparator section"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/faqs/two"
-                category="page"
-                title="FAQs section"
-                id="two"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/dusk/contact/two"
-                category="page"
-                title="Contact section"
-                id="two"
-            />
+            {blocks.map((block, index) => (
+                <BlockPreview
+                    key={index}
+                    previewOnly
+                    {...block}
+                />
+            ))}
             <SiteFooter />
         </>
     )

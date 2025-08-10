@@ -12,6 +12,106 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+    const blocks = [
+        {
+            kit: 'mist',
+            category: 'hero-section',
+            id: 'one',
+            title: 'Hero section',
+            previewLink: '/preview/mist/hero-section/one',
+        },
+        {
+            kit: 'mist',
+            category: 'features',
+            id: 'one',
+            title: 'Features section',
+            previewLink: '/preview/mist/features/one',
+        },
+        {
+            kit: 'mist',
+            category: 'features',
+            id: 'six',
+            title: 'Features section',
+            previewLink: '/preview/mist/features/six',
+        },
+        {
+            kit: 'mist',
+            category: 'features',
+            id: 'ten',
+            title: 'Features section',
+            previewLink: '/preview/mist/features/ten',
+        },
+        {
+            kit: 'mist',
+            category: 'stats',
+            id: 'four',
+            title: 'Stats section',
+            previewLink: '/preview/mist/stats/four',
+        },
+        {
+            kit: 'mist',
+            category: 'pricing',
+            id: 'one',
+            title: 'Pricing section',
+            previewLink: '/preview/mist/pricing/one',
+        },
+        {
+            kit: 'mist',
+            category: 'pricing',
+            id: 'two',
+            title: 'Pricing section',
+            previewLink: '/preview/mist/pricing/two',
+        },
+        {
+            kit: 'mist',
+            category: 'comparator',
+            id: 'one',
+            title: 'Comparator section',
+            previewLink: '/preview/mist/comparator/one',
+        },
+        {
+            kit: 'mist',
+            category: 'team',
+            id: 'one',
+            title: 'Team section',
+            previewLink: '/preview/mist/team/one',
+        },
+        {
+            kit: 'mist',
+            category: 'contact',
+            id: 'one',
+            title: 'Contact section',
+            previewLink: '/preview/mist/contact/one',
+        },
+        {
+            kit: 'mist',
+            category: 'login',
+            id: 'one',
+            title: 'Login section',
+            previewLink: '/preview/mist/login/one',
+        },
+        {
+            kit: 'mist',
+            category: 'faqs',
+            id: 'two',
+            title: 'FAQs section',
+            previewLink: '/preview/mist/faqs/two',
+        },
+        {
+            kit: 'mist',
+            category: 'testimonials',
+            id: 'two',
+            title: 'Testimonials section',
+            previewLink: '/preview/mist/testimonials/two',
+        },
+        {
+            kit: 'mist',
+            category: 'footer',
+            id: 'three',
+            title: 'Footer',
+            previewLink: '/preview/mist/footer/three',
+        },
+    ]
     return (
         <>
             <SiteHeader />
@@ -41,7 +141,7 @@ export default function Home() {
                             asChild>
                             <Link
                                 target="_blank"
-                                href="https://github.com/tailark/blocks/packages/mist-kit?tab=readme-ov-file">
+                                href="https://github.com/tailark/blocks/blob/main/packages/mist-kit/README.md">
                                 Docs
                                 <CircleArrowOutUpRightIcon
                                     strokeWidth={2}
@@ -52,97 +152,13 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/hero-section/one"
-                category="page"
-                title="Hero section"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/features/one"
-                category="page"
-                title="Features section"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/features/six"
-                category="page"
-                title="Features section"
-                id="six"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/features/ten"
-                category="page"
-                title="Features section"
-                id="ten"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/stats/four"
-                category="page"
-                title="About page"
-                id="four"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/pricing/two"
-                category="page"
-                title="Pricing page"
-                id="two"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/comparator/one"
-                category="page"
-                title="Comparator section"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/team/one"
-                category="page"
-                title="Team section"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/contact/one"
-                category="page"
-                title="Contact page"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/login/one"
-                category="page"
-                title="Login page"
-                id="one"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/faqs/two"
-                category="page"
-                title="FAQs section"
-                id="two"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/testimonials/two"
-                category="page"
-                title="Testimonials section"
-                id="two"
-            />
-            <BlockPreview
-                previewOnly
-                previewLink="/preview/mist/footer/three"
-                category="page"
-                title="Footer"
-                id="three"
-            />
+            {blocks.map((block, index) => (
+                <BlockPreview
+                    key={index}
+                    previewOnly
+                    {...block}
+                />
+            ))}
             <SiteFooter />
         </>
     )
