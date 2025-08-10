@@ -110,7 +110,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                 />
             </div>
 
-            <div className="relative mx-auto max-w-7xl px-4 lg:px-0">
+            <div className="relative mx-auto h-fit max-w-7xl px-4 lg:px-0">
                 <div className={cn('border-foreground/[0.075] border-x')}>
                     <div
                         aria-hidden
@@ -118,22 +118,21 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                         <div className="absolute bottom-0 left-0 top-0 w-px bg-gradient-to-b from-[color-mix(in_oklab,var(--color-foreground)_7.5%,transparent)]"></div>
                         <div className="absolute bottom-0 right-0 top-0 w-px bg-gradient-to-b from-[color-mix(in_oklab,var(--color-foreground)_7.5%,transparent)]"></div>
                     </div>
-                    <div className={cn('bg-white dark:bg-transparent', mode === 'code' && 'hidden')}>
+                    <div className={cn('h-[calc(var(--block-height)-51px)] bg-white lg:h-[calc(var(--block-height)-48px)] dark:bg-transparent', mode === 'code' && 'hidden')}>
                         <PanelGroup
                             ref={panelGroupRef}
                             direction={isLargeScreen ? 'horizontal' : 'vertical'}
-                            className="h-full"
+                            className="h-fit"
                             onLayout={setPanelSizes}>
                             <Panel
                                 id={`block-panel-${id}`}
                                 order={1}
                                 defaultSize={DEFAULTSIZE}
                                 minSize={30}
-                                className="border-foreground/[0.075] h-fit lg:border-r">
+                                className="border-foreground/[0.075] lg:border-r">
                                 <div
                                     ref={iframeContainerRef}
-                                    style={{ height: `${height}px` }}
-                                    className="relative">
+                                    className="relative h-[calc(var(--block-height)-51px)] lg:h-[calc(var(--block-height)-48px)]">
                                     {shouldLoadIframe ? (
                                         <IframeRenderer
                                             src={previewLink}
