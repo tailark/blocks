@@ -34,7 +34,7 @@ interface BlockPreviewToolbarProps {
 
 const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeChange, codeAvailable, previewOnly, title, id, previewLink, category, cliCopied, registryLinkCopied, onCliCopy, onRegistryLinkCopy }) => {
     return (
-        <div className="relative z-10 mx-auto flex max-w-7xl justify-between py-1.5 pl-8 pr-6 [--color-border:var(--color-zinc-200)] md:py-2 lg:pl-5 lg:pr-2 dark:[--color-border:var(--color-zinc-800)]">
+        <div className="relative z-10 mx-auto flex h-12 max-w-7xl justify-between pl-8 pr-6 [--color-border:var(--color-zinc-200)] md:py-2 lg:pl-5 lg:pr-2 dark:[--color-border:var(--color-zinc-800)]">
             <div className="-ml-3 flex items-center gap-3">
                 {codeAvailable && !previewOnly && (
                     <>

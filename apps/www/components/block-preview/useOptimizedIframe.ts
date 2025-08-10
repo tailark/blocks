@@ -11,18 +11,14 @@ interface UseOptimizedIframeProps {
 interface UseOptimizedIframeReturn {
     iframeRef: RefObject<HTMLIFrameElement | null>
     shouldLoadIframe: boolean
-    currentIframeHeight: number
     isIframeCached: boolean
-    setIframeHeightState: (height: number) => void 
 }
 
 export const useOptimizedIframe = ({
     previewUrl,
     containerRef,
 }: UseOptimizedIframeProps): UseOptimizedIframeReturn => {
-    const [iframeHeight, setIframeHeight] = useState(0)
     const [shouldLoadIframe, setShouldLoadIframe] = useState(false)
-    const [cachedHeight, setCachedHeight] = useState<number | null>(null)
     const [isIframeCached, setIsIframeCached] = useState(false)
 
     const iframeRef = useRef<HTMLIFrameElement | null>(null)
@@ -67,11 +63,10 @@ export const useOptimizedIframe = ({
             const cacheKey = getCacheKey(previewUrl)
             const cached = localStorage.getItem(cacheKey)
             if (cached) {
-                const { height, timestamp } = JSON.parse(cached)
+                const { timestamp } = JSON.parse(cached)
                 const now = Date.now()
                 if (now - timestamp < 24 * 60 * 60 * 1000) { 
-                    setCachedHeight(height)
-                    setIframeHeight(height) 
+                    setShouldLoadIframe(true) 
                 } else {
                     localStorage.removeItem(cacheKey) 
                 }
@@ -88,19 +83,14 @@ export const useOptimizedIframe = ({
         const handleLoad = () => {
             try {
                 if (iframe.contentWindow && iframe.contentWindow.document.body) {
-                    const contentHeight = iframe.contentWindow.document.body.scrollHeight
-                    setIframeHeight(contentHeight)
-                    setCachedHeight(contentHeight) 
-
                     const cacheKey = getCacheKey(previewUrl)
                     const cacheValue = JSON.stringify({
-                        height: contentHeight,
                         timestamp: Date.now(),
                     })
                     localStorage.setItem(cacheKey, cacheValue)
                 }
             } catch (e) {
-                console.warn('Error accessing iframe content for height calculation:', e)
+                console.warn('Error accessing iframe content:', e)
             }
         }
 
@@ -133,8 +123,6 @@ export const useOptimizedIframe = ({
     return {
         iframeRef,
         shouldLoadIframe,
-        currentIframeHeight: cachedHeight || iframeHeight || 0, 
         isIframeCached,
-        setIframeHeightState: setIframeHeight
     }
 }

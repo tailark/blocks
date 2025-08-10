@@ -12,6 +12,8 @@ import IframeRenderer from './iframe-renderer'
 import LoadingSpinner from './loading-spinner'
 import BlockPreviewToolbar, { DEFAULTSIZE } from './toolbar'
 import { initialState, previewReducer, usePreviewActions } from './state'
+import { blockHeights } from '@/data/blocks-height'
+import { BlockPreviewWrapper } from './preview-wrapper'
 
 export interface BlockPreviewProps {
     code?: string
@@ -70,7 +72,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
 
     const { handleModeChange, setPanelSizes } = usePreviewActions(state, dispatch, panelGroupRef, handleCliCopy, handleRegistryCopy)
 
-    const { iframeRef, shouldLoadIframe, currentIframeHeight, isIframeCached } = useOptimizedIframe({
+    const { iframeRef, shouldLoadIframe, isIframeCached } = useOptimizedIframe({
         previewUrl: previewLink,
         containerRef: iframeContainerRef,
     })
@@ -78,10 +80,12 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
     const codeContentForEditor = codes || (code ? [{ name: 'index.tsx', language: 'tsx', code, active: true }] : [])
     const codeAvailable = !!(code || (codes && codes.length > 0))
 
+    const height = blockHeights[`${kit?.replace('-kit', '')}/${category}/${id}`]
+
     return (
-        <section
+        <BlockPreviewWrapper
             id={id}
-            className="border-foreground/[0.075] group mb-16 scroll-my-6 border-b">
+            height={height}>
             <div className="border-foreground/[0.075] relative border-y">
                 <div
                     aria-hidden
@@ -125,10 +129,11 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                                 order={1}
                                 defaultSize={DEFAULTSIZE}
                                 minSize={30}
-                                className="border-foreground/[0.075] h-fit min-h-56 lg:border-r">
+                                className="border-foreground/[0.075] h-fit lg:border-r">
                                 <div
                                     ref={iframeContainerRef}
-                                    className="min-h-56">
+                                    style={{ height: `${height}px` }}
+                                    className="relative">
                                     {shouldLoadIframe ? (
                                         <IframeRenderer
                                             src={previewLink}
@@ -136,7 +141,6 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                                             ariaLabel={`${category}-${title}-block-preview`}
                                             id={`iframe-${id}`}
                                             iframeRef={iframeRef}
-                                            height={currentIframeHeight}
                                             isCached={isIframeCached}
                                         />
                                     ) : (
@@ -165,12 +169,12 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                             category={category}
                             code={code as string}
                             lang="tsx"
-                            maxHeight={currentIframeHeight}
+                            maxHeight={height}
                         />
                     )}
                 </div>
             </div>
-        </section>
+        </BlockPreviewWrapper>
     )
 }
 

@@ -1,5 +1,5 @@
 'use client'
-import React, { CSSProperties, RefObject, useMemo } from 'react'
+import React, { RefObject, useMemo } from 'react'
 import { cn } from '@tailark/core/lib/utils'
 import { clearIframeCache } from '@/lib/serviceWorker'
 
@@ -9,13 +9,11 @@ interface IframeRendererProps {
     ariaLabel?: string
     id: string
     iframeRef: RefObject<HTMLIFrameElement | null>
-    height: number
     isCached: boolean
     className?: string
-    style?: React.CSSProperties
 }
 
-const IframeRenderer: React.FC<IframeRendererProps> = ({ src, title, ariaLabel, id, iframeRef, height, isCached, className, style }) => {
+const IframeRenderer: React.FC<IframeRendererProps> = ({ src, title, ariaLabel, id, iframeRef, isCached, className }) => {
     const handleLoad = () => {
         clearIframeCache(src)
     }
@@ -38,20 +36,11 @@ const IframeRenderer: React.FC<IframeRendererProps> = ({ src, title, ariaLabel, 
             ref={iframeRef}
             title={title}
             aria-label={ariaLabel || `${title}-preview`}
-            height={height}
-            className={cn('block h-[var(--iframe-height)] min-h-56 w-full duration-200', !height && '@starting:opacity-0 @starting:blur-xl', className)}
+            className={cn('absolute inset-0 size-full', className)}
             src={urlWithCacheBusting}
             id={id}
             onLoad={handleLoad}
             sandbox="allow-scripts allow-same-origin"
-            style={
-                {
-                    ...style,
-                    '--iframe-height': `${height}px`,
-                    display: 'block',
-                    willChange: 'height',
-                } as CSSProperties
-            }
         />
     )
 }

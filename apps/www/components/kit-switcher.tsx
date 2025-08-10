@@ -78,7 +78,7 @@ export function KitSwitcher() {
         if (localStorage.getItem(STORAGE_KEY) !== targetKitId) {
             localStorage.setItem(STORAGE_KEY, targetKitId)
         }
-    }, [pathname, router, isDisabled])
+    }, [pathname, router, isDisabled, selectedKitId])
 
     const handleKitChange = (newlySelectedKitId: string) => {
         if (newlySelectedKitId === 'quartz-kit') {
