@@ -1,0 +1,1044 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Tailark  Mist",
+  "homepage": "https://tailark.com/mist",
+  "author" : "Méschac Irung <meschacirung@gmail.com>",
+  "items": [
+    {
+      "name": "mist-call-to-action-1",
+      "type": "registry:block",
+      "title": "Call To Action 1",
+      "description": "Mist Kit Call To Action block, variant 1",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/call-to-action/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/call-to-action-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-call-to-action-2",
+      "type": "registry:block",
+      "title": "Call To Action 2",
+      "description": "Mist Kit Call To Action block, variant 2",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/call-to-action/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/call-to-action-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-call-to-action-3",
+      "type": "registry:block",
+      "title": "Call To Action 3",
+      "description": "Mist Kit Call To Action block, variant 3",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/call-to-action/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/call-to-action-three.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-comparator-1",
+      "type": "registry:block",
+      "title": "Comparator One",
+      "description": "Mist Kit Comparator block, variant one",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/comparator/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing-comparator-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-contact-1",
+      "type": "registry:block",
+      "title": "Contact One",
+      "description": "Mist Kit Contact block, variant one",
+       "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "textarea",
+        "label",
+        "select"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/contact/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/contact-section-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-content-1",
+      "type": "registry:block",
+      "title": "Content One",
+      "description": "Mist Kit Content block, variant one",
+       "registryDependencies": [
+        "toggle",
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/content/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-content-2",
+      "type": "registry:block",
+      "title": "Content Two",
+      "description": "Mist Kit Content block, variant two",
+      "registryDependencies": [
+        "toggle",
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/content/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-content-3",
+      "type": "registry:block",
+      "title": "Content Three",
+      "description": "Mist Kit Content block, variant three",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/content/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-three.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-content-4",
+      "type": "registry:block",
+      "title": "Content Four",
+      "description": "Mist Kit Content block, variant four",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/content/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-four.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-faqs-1",
+      "type": "registry:block",
+      "title": "FAQs One",
+      "description": "Mist Kit FAQs block, variant one",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/faqs/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-section-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-faqs-2",
+      "type": "registry:block",
+      "title": "FAQs Two",
+      "description": "Mist Kit FAQs block, variant two",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/faqs/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-section-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-faqs-3",
+      "type": "registry:block",
+      "title": "FAQs Three",
+      "description": "Mist Kit FAQs block, variant three",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/faqs/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-section-three.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-1",
+      "type": "registry:block",
+      "title": "Features One",
+      "description": "Mist Kit Features block, variant one",
+      "registryDependencies": [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-one.tsx"
+        },
+        {
+          "path": "../../packages/mist-kit/blocks/features/one/table.tsx",
+          "type": "registry:component",
+          "target": "components/table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-2",
+      "type": "registry:block",
+      "title": "Features Two",
+      "description": "Mist Kit Features block, variant two",
+       "registryDependencies": [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-3",
+      "type": "registry:block",
+      "title": "Features Three",
+      "description": "Mist Kit Features block, variant three",
+      "registryDependencies": [
+        "card",
+        "toggle",
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-three.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-4",
+      "type": "registry:block",
+      "title": "Features Four",
+      "description": "Mist Kit Features block, variant four",
+      "registryDependencies": [
+        "card",
+        "toggle",
+        "toggle-group"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-four.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-5",
+      "type": "registry:block",
+      "title": "Features Five",
+      "description": "Mist Kit Features block, variant five",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-five.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-6",
+      "type": "registry:block",
+      "title": "Features Six",
+      "description": "Mist Kit Features block, variant six",
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/six/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-six.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-7",
+      "type": "registry:block",
+      "title": "Features Seven",
+      "description": "Mist Kit Features block, variant seven",
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/seven/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-seven.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-8",
+      "type": "registry:block",
+      "title": "Features Eight",
+      "description": "Mist Kit Features block, variant eight",
+      "registryDependencies": [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/eight/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-eight.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-9",
+      "type": "registry:block",
+      "title": "Features Nine",
+      "description": "Mist Kit Features block, variant nine",
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/nine/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-nine.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-10",
+      "type": "registry:block",
+      "title": "Features Ten",
+      "description": "Mist Kit Features block, variant ten",
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/ten/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-ten.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-features-11",
+      "type": "registry:block",
+      "title": "Features Eleven",
+      "description": "Mist Kit Features block, variant eleven",
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/features/eleven/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-eleven.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-footer-1",
+      "type": "registry:block",
+      "title": "Footer One",
+      "description": "Mist Kit Footer block, variant one",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/footer/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer-one.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-footer-2",
+      "type": "registry:block",
+      "title": "Footer Two",
+      "description": "Mist Kit Footer block, variant two",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/footer/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer-two.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-footer-3",
+      "type": "registry:block",
+      "title": "Footer Three",
+      "description": "Mist Kit Footer block, variant three",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/footer/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer-three.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-footer-4",
+      "type": "registry:block",
+      "title": "Footer Four",
+      "description": "Mist Kit Footer block, variant four",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/footer/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer-four.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-forgot-password-1",
+      "type": "registry:block",
+      "title": "Forgot password block",
+      "description": "Mist Kit Forgot password block, variant one",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/forgot-password/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/forgot-password-one.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-hero-section-1",
+      "type": "registry:block",
+      "title": "Hero Section One",
+      "description": "Mist Kit Hero Section block, variant one",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section-one.tsx"
+        },
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/one/header.tsx",
+          "type": "registry:component",
+          "target": "components/header.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+        {
+      "name": "mist-hero-section-2",
+      "type": "registry:block",
+      "title": "Hero Section Two",
+      "description": "Mist Kit Hero Section block, variant two",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section-two.tsx"
+        },
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/two/header.tsx",
+          "type": "registry:component",
+          "target": "components/header.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-hero-section-3",
+      "type": "registry:block",
+      "title": "Hero Section Three",
+      "description": "Mist Kit Hero Section block, variant three",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section-three.tsx"
+        },
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/three/header.tsx",
+          "type": "registry:component",
+          "target": "components/header.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-hero-section-4",
+      "type": "registry:block",
+      "title": "Hero Section Four",
+      "description": "Mist Kit Hero Section block, variant four",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section-four.tsx"
+        },
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/four/header.tsx",
+          "type": "registry:component",
+          "target": "components/header.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-hero-section-5",
+      "type": "registry:block",
+      "title": "Hero Section Five",
+      "description": "Mist Kit Hero Section block, variant five",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section-five.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-hero-section-6",
+      "type": "registry:block",
+      "title": "Hero Section Six",
+      "description": "Mist Kit Hero Section block, variant six",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/hero-section/six/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section-six.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-integrations-1",
+      "type": "registry:block",
+      "title": "Integrations block",
+      "description": "Mist Kit Integrations block, variant one",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/integrations/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-one.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "mist-integrations-2",
+      "type": "registry:block",
+      "title": "Integrations block",
+      "description": "Mist Kit Integrations block, variant two",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/integrations/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-two.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "mist-integrations-3",
+      "type": "registry:block",
+      "title": "Integrations block",
+      "description": "Mist Kit Integrations block, variant three",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/integrations/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-three.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "mist-login-1",
+      "type": "registry:block",
+      "title": "Login block",
+      "description": "Mist Kit Login block, variant one",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/login/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/login-one.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-logo-cloud-1",
+      "type": "registry:block",
+      "title": "Logo Cloud One",
+      "description": "Mist Kit Logo Cloud block, variant one",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/logo-cloud/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/logo-cloud-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-logo-cloud-2",
+      "type": "registry:block",
+      "title": "Logo Cloud One",
+      "description": "Mist Kit Logo Cloud block, variant two",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/logo-cloud/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/logo-cloud-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-pricing-1",
+      "type": "registry:block",
+      "title": "Pricing One",
+      "description": "Mist Kit Pricing block, variant one",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/pricing/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing-section-one.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-pricing-2",
+      "type": "registry:block",
+      "title": "Pricing Two",
+      "description": "Mist Kit Pricing block, variant two",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/pricing/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing-section-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-sign-up-1",
+      "type": "registry:block",
+      "title": "Sign Up block",
+      "description": "Mist Kit Sign Up block, variant two",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/sign-up/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/sign-up-one.tsx"
+        },
+        {
+          "path": "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component",
+          "target": "components/logo.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-stats-1",
+      "type": "registry:block",
+      "title": "Stats block",
+      "description": "Mist Kit Stats block, variant one",
+      "registryDependencies": [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/stats/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/stats-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-stats-2",
+      "type": "registry:block",
+      "title": "Stats block",
+      "description": "Mist Kit Stats block, variant two",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/stats/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/stats-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-stats-3",
+      "type": "registry:block",
+      "title": "Stats block",
+      "description": "Mist Kit Stats block, variant three",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/stats/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/stats-three.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-stats-4",
+      "type": "registry:block",
+      "title": "Stats block",
+      "description": "Mist Kit Stats block, variant four",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/stats/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/stats-four.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-team-1",
+      "type": "registry:block",
+      "title": "Team section block",
+      "description": "Mist Kit Team section block, variant one",
+      "registryDependencies": [
+        "avatar",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/team/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/team-section-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-team-2",
+      "type": "registry:block",
+      "title": "Team section block",
+      "description": "Mist Kit Team section block, variant two",
+      "registryDependencies": [
+        "avatar",
+        "button",
+        "hover-card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/team/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/team-section-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-testimonials-1",
+      "type": "registry:block",
+      "title": "Testimonials One",
+      "description": "Mist Kit Testimonials block, variant one",
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/testimonials/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials-one.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-testimonials-2",
+      "type": "registry:block",
+      "title": "Testimonials Two",
+      "description": "Mist Kit Testimonials block, variant two",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/testimonials/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials-two.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-testimonials-3",
+      "type": "registry:block",
+      "title": "Testimonials Three",
+      "description": "Mist Kit Testimonials block, variant three",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/testimonials/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials-three.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-testimonials-4",
+      "type": "registry:block",
+      "title": "Testimonials Four",
+      "description": "Mist Kit Testimonials block, variant four",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/testimonials/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials-four.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mist-testimonials-5",
+      "type": "registry:block",
+      "title": "Testimonials Five",
+      "description": "Mist Kit Testimonials block, variant five",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "../../packages/mist-kit/blocks/testimonials/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials-five.tsx"
+        }
+      ]
+    }
+  ]
+}

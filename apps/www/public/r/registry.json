@@ -1,0 +1,1707 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Tailark Dusk",
+  "homepage": "https://tailark.com",
+  "author" : "Méschac Irung <meschacirung@gmail.com>",
+  "items": [
+    {
+      "name": "call-to-action-1",
+      "type": "registry:block",
+      "title": "Call To Action 1",
+      "description": "Shadcn/ui call to action block",
+      "registryDependencies" : [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/call-to-action/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/call-to-action.tsx"
+        }
+      ]
+    },
+    {
+      "name": "call-to-action-2",
+      "type": "registry:block",
+      "title": "Call To Action 2",
+      "description": "Shadcn/ui call to action block",
+      "registryDependencies" : [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/call-to-action/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/call-to-action.tsx"
+        }
+      ]
+    },
+    {
+      "name": "call-to-action-3",
+      "type": "registry:block",
+      "title": "Call To Action 3",
+      "description": "Shadcn/ui call to action block",
+      "registryDependencies" : [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/call-to-action/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/call-to-action.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "comparator-1",
+      "type": "registry:block",
+      "title": "Pricing Comparator 1",
+      "description": "Shadcn/ui pricing comparator table block",
+      "registryDependencies" : [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/comparator/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing-comparator.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "content-1",
+      "type": "registry:block",
+      "title": "Content Block 1",
+      "description": "Shadcn/ui website content block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/content/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-1.tsx"
+        }
+      ]
+    },
+    {
+      "name": "content-2",
+      "type": "registry:block",
+      "title": "Content Block 2",
+      "description": "Shadcn/ui website content block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/content/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-2.tsx"
+        }
+      ]
+    },
+    {
+      "name": "content-3",
+      "type": "registry:block",
+      "title": "Content Block 3",
+      "description": "Shadcn/ui website content block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/content/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-3.tsx"
+        }
+      ]
+    },
+    {
+      "name": "content-4",
+      "type": "registry:block",
+      "title": "Content Block 4",
+      "description": "Shadcn/ui website content block",
+      "registryDependencies" : [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/content/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-4.tsx"
+        }
+      ]
+    },
+    {
+      "name": "content-5",
+      "type": "registry:block",
+      "title": "Content Block 5",
+      "description": "Shadcn/ui website content block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/content/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-5.tsx"
+        }
+      ]
+    },
+    {
+      "name": "content-6",
+      "type": "registry:block",
+      "title": "Content Block 6",
+      "description": "Shadcn/ui website content block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/content/six/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-6.tsx"
+        }
+      ]
+    },
+    {
+      "name": "content-7",
+      "type": "registry:block",
+      "title": "Content Block 7",
+      "description": "Shadcn/ui website content block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/content/seven/index.tsx",
+          "type": "registry:component",
+          "target": "components/content-7.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "faqs-1",
+      "type": "registry:block",
+      "title": "FAQs Block 1",
+      "description": "Shadcn/ui Frequently Asqued Questions block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/faqs/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/faqs.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "faqs-2",
+      "type": "registry:block",
+      "title": "FAQs Block 2",
+      "description": "Shadcn/ui FAQs block with accordion component",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/faqs/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-2.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "faqs-3",
+      "type": "registry:block",
+      "title": "FAQs Block 3",
+      "description": "Shadcn/ui FAQs block with accordion component and icons",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/faqs/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-3.tsx"
+        }
+      ]
+    },
+
+    {
+      "name": "faqs-4",
+      "type": "registry:block",
+      "title": "FAQs Block 4",
+      "description": "Shadcn/ui FAQs block with accordion component and icons",
+      "registryDependencies": [
+        "accordion"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/faqs/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-4.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-1",
+      "type": "registry:block",
+      "title": "Features Block 1",
+      "description": "Shadcn/ui website features block",
+      "registryDependencies" : [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-1.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-2",
+      "type": "registry:block",
+      "title": "Features Block 2",
+      "description": "Shadcn/ui website features block",
+      "registryDependencies" : [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-2.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-3",
+      "type": "registry:block",
+      "title": "Features Block 3",
+      "description": "Shadcn/ui website features block",
+      "registryDependencies" : [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-3.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-4",
+      "type": "registry:block",
+      "title": "Features Block 4",
+      "description": "Shadcn/ui website features block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-4.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-5",
+      "type": "registry:block",
+      "title": "Features Block 5",
+      "description": "Shadcn/ui website features block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-5.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-6",
+      "type": "registry:block",
+      "title": "Features Block 6",
+      "description": "Shadcn/ui website features block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/six/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-6.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-7",
+      "type": "registry:block",
+      "title": "Features Block 7",
+      "description": "Shadcn/ui website features block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/seven/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-7.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-8",
+      "type": "registry:block",
+      "title": "Features Block 8",
+      "description": "Shadcn/ui website features block",
+      "registryDependencies" : [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/eight/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-8.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-9",
+      "type": "registry:block",
+      "title": "Features Block 9",
+      "description": "Shadcn/ui website features block",
+      "registryDependencies" : [
+        "card",
+        "chart"
+      ],
+      "dependencies": [
+        "dotted-map"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/nine/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-9.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "features-10",
+      "type": "registry:block",
+      "title": "Features Block 10",
+      "description": "Shadcn/ui website features block with cards and circular UI elements",
+      "registryDependencies" : [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/ten/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-10.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-11",
+      "type": "registry:block",
+      "title": "Features Block 11",
+      "description": "Shadcn/ui website features block with grid layout and images",
+      "registryDependencies" : [
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/eleven/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-11.tsx"
+        }
+      ]
+    },
+    {
+      "name": "features-12",
+      "type": "registry:block",
+      "title": "Features Block 12",
+      "description": "Shadcn/ui website features block with accordion and animated images",
+      "registryDependencies" : [
+        "accordion",
+        "https://magicui.design/r/border-beam"
+      ],
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/features/twelve/index.tsx",
+          "type": "registry:component",
+          "target": "components/features-12.tsx"
+        }
+      ]
+    },
+    {
+      "name": "footer-1",
+      "type": "registry:block",
+      "title": "Footer Block 1",
+      "description": "Shadcn/ui website footer block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/footer/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-2",
+      "type": "registry:block",
+      "title": "Footer Block 2",
+      "description": "Shadcn/ui website footer block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/footer/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-3",
+      "type": "registry:block",
+      "title": "Footer Block 3",
+      "description": "Shadcn/ui website footer block",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/footer/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-4",
+      "type": "registry:block",
+      "title": "Footer Block 4",
+      "description": "Shadcn/ui website footer block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/footer/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-5",
+      "type": "registry:block",
+      "title": "Footer Block 5",
+      "description": "Shadcn/ui website footer block",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/footer/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-1",
+      "type": "registry:block",
+      "title": "Hero Section 1",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button",
+        "https://motion-primitives.com/c/text-effect.json",
+        "https://motion-primitives.com/c/animated-group.json"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/dusk-kit/blocks/hero-section/one/header.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-2",
+      "type": "registry:block",
+      "title": "Hero Section 2",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button",
+        "https://motion-primitives.com/c/text-effect.json",
+        "https://motion-primitives.com/c/animated-group.json"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/dusk-kit/blocks/hero-section/two/header.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-3",
+      "type": "registry:block",
+      "title": "Hero Section 3",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button",
+        "https://motion-primitives.com/c/text-effect.json",
+        "https://motion-primitives.com/c/animated-group.json"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/dusk-kit/blocks/hero-section/three/header.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/dusk-kit/blocks/hero-section/three/logo-cloud.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-4",
+      "type": "registry:block",
+      "title": "Hero Section 4",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button",
+        "https://motion-primitives.com/c/infinite-slider.json",
+        "https://motion-primitives.com/c/progressive-blur.json"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/dusk-kit/blocks/hero-section/four/header.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-5",
+      "type": "registry:block",
+      "title": "Hero Section 5",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button",
+        "https://motion-primitives.com/c/infinite-slider.json",
+        "https://motion-primitives.com/c/progressive-blur.json"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/dusk-kit/blocks/hero-section/five/header.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-6",
+      "type": "registry:block",
+      "title": "Hero Section 6",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/six/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-7",
+      "type": "registry:block",
+      "title": "Hero Section 7",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button"
+      ],
+      "dependencies": [
+        "swiper"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/seven/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-8",
+      "type": "registry:block",
+      "title": "Hero Section 8",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/eight/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "hero-section-9",
+      "type": "registry:block",
+      "title": "Hero Section 9",
+      "description": "Shadcn/ui website Hero Section",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/hero-section/nine/index.tsx",
+          "type": "registry:component",
+          "target": "components/hero-section.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-1",
+      "type": "registry:block",
+      "title": "Login Page 1",
+      "description": "Shadcn/ui Login Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/login/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/login.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-2",
+      "type": "registry:block",
+      "title": "Login Page 2",
+      "description": "Shadcn/ui Login Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/login/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/login.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-3",
+      "type": "registry:block",
+      "title": "Login Page 3",
+      "description": "Shadcn/ui Login Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/login/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/login.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },{
+      "name": "sign-up-1",
+      "type": "registry:block",
+      "title": "Sign Up Page 1",
+      "description": "Shadcn/ui Sign Up Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/sign-up/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/sign-up.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-2",
+      "type": "registry:block",
+      "title": "Sign Up Page 2",
+      "description": "Shadcn/ui Sign Up Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/sign-up/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/sign-up.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sign-up-3",
+      "type": "registry:block",
+      "title": "Sign Up Page 3",
+      "description": "Shadcn/ui Sign Up Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/sign-up/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/sign-up.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "forgot-password-1",
+      "type": "registry:block",
+      "title": "Forgot Password Page 1",
+      "description": "Shadcn/ui Forgot Password Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/forgot-password/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/forgot-password.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "forgot-password-2",
+      "type": "registry:block",
+      "title": "Forgot Password Page 2",
+      "description": "Shadcn/ui Forgot Password Page",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/forgot-password/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/forgot-password.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "stats-1",
+      "type": "registry:block",
+      "title": "Stats Block 1",
+      "description": "Shadcn/ui website stats block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/stats/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/stats.tsx"
+        }
+      ]
+    },
+    {
+      "name": "stats-2",
+      "type": "registry:block",
+      "title": "Stats Block 2",
+      "description": "Shadcn/ui website stats block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/stats/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/stats-2.tsx"
+        }
+      ]
+    },
+    {
+      "name": "stats-3",
+      "type": "registry:block",
+      "title": "Stats Block 3",
+      "description": "Shadcn/ui website stats block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/stats/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/stats-3.tsx"
+        }
+      ]
+    },
+    {
+      "name": "stats-4",
+      "type": "registry:block",
+      "title": "Stats Block 4",
+      "description": "Shadcn/ui website stats block",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/stats/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/stats-4.tsx"
+        }
+      ]
+    },
+    {
+      "name": "team-1",
+      "type": "registry:block",
+      "title": "Team Section 1",
+      "description": "Shadcn/ui website team section",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/team/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/team.tsx"
+        }
+      ]
+    },
+    {
+      "name": "team-2",
+      "type": "registry:block",
+      "title": "Team Section 2",
+      "description": "Shadcn/ui website team section",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/team/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/team.tsx"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-1",
+      "type": "registry:block",
+      "title": "Testimonials Section 1",
+      "description": "Shadcn/ui website testimonials section",
+      "registryDependencies": [
+        "card",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/testimonials/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials.tsx"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-2",
+      "type": "registry:block",
+      "title": "Testimonials Section 2",
+      "description": "Shadcn/ui website testimonials section",
+      "registryDependencies": [
+        "card",
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/testimonials/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials.tsx"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-3",
+      "type": "registry:block",
+      "title": "Testimonials Section 3",
+      "description": "Shadcn/ui website testimonials section",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/testimonials/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials.tsx"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-4",
+      "type": "registry:block",
+      "title": "Testimonials Section 4",
+      "description": "Shadcn/ui website testimonials section",
+      "registryDependencies": [
+        "avatar"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/testimonials/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials.tsx"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-5",
+      "type": "registry:block",
+      "title": "Testimonials Section 5",
+      "description": "Shadcn/ui website testimonials section",
+      "registryDependencies": [
+        "avatar",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/testimonials/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials.tsx"
+        }
+      ]
+    },
+    {
+      "name": "testimonials-6",
+      "type": "registry:block",
+      "title": "Testimonials Section 6",
+      "description": "Shadcn/ui website testimonials section",
+      "registryDependencies": [
+        "avatar",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/testimonials/six/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials.tsx"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-1",
+      "type": "registry:block",
+      "title": "Logo Cloud 1",
+      "description": "Shadcn/ui website logo cloud section",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/logo-cloud/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/logo-cloud.tsx"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-2",
+      "type": "registry:block",
+      "title": "Logo Cloud 2",
+      "description": "Shadcn/ui website logo cloud section",
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/logo-cloud/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/logo-cloud.tsx"
+        }
+      ]
+    },
+    {
+      "name": "logo-cloud-3",
+      "type": "registry:block",
+      "title": "Logo Cloud 3",
+      "description": "Shadcn/ui website logo cloud section",
+      "registryDependencies": [
+        "https://motion-primitives.com/c/infinite-slider.json",
+        "https://motion-primitives.com/c/progressive-blur.json"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/logo-cloud/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/logo-cloud.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing-1",
+      "type": "registry:block",
+      "title": "Pricing Block 1",
+      "description": "Shadcn/ui website pricing section",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/pricing/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing-1",
+      "type": "registry:block",
+      "title": "Pricing Block 1",
+      "description": "Shadcn/ui website pricing section",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/pricing/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing-2",
+      "type": "registry:block",
+      "title": "Pricing Block 2",
+      "description": "Shadcn/ui website pricing section",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/pricing/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing-3",
+      "type": "registry:block",
+      "title": "Pricing Block 3",
+      "description": "Shadcn/ui website pricing section",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/pricing/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing-4",
+      "type": "registry:block",
+      "title": "Pricing Block 4",
+      "description": "Shadcn/ui website pricing section",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/pricing/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pricing-5",
+      "type": "registry:block",
+      "title": "Pricing Block 5",
+      "description": "Shadcn/ui website pricing section",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/pricing/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing.tsx"
+        }
+      ]
+    },
+    {
+      "name": "contact-1",
+      "type": "registry:block",
+      "title": "Contact Block 1",
+      "description": "Shadcn/ui website contact section",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label",
+        "textarea",
+        "select",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/contact/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/contact.tsx"
+        }
+      ]
+    },
+    {
+      "name": "contact-2",
+      "type": "registry:block",
+      "title": "Contact Block 2",
+      "description": "Shadcn/ui website contact section",
+      "registryDependencies": [
+        "button",
+        "input",
+        "label",
+        "textarea",
+        "select",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/contact/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/contact.tsx"
+        }
+      ]
+    },
+    {
+      "name": "integrations-1",
+      "type": "registry:block",
+      "title": "Integrations Block 1",
+      "description": "Shadcn/ui website integrations section",
+      "registryDependencies": [
+        "card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/integrations/one/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-1.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-2",
+      "type": "registry:block",
+      "title": "Integrations Block 2",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/integrations/two/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-2.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-3",
+      "type": "registry:block",
+      "title": "Integrations Block 3",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/integrations/three/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-3.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-4",
+      "type": "registry:block",
+      "title": "Integrations Block 4",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/integrations/four/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-4.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-5",
+      "type": "registry:block",
+      "title": "Integrations Block 5",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/integrations/five/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-5.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-6",
+      "type": "registry:block",
+      "title": "Integrations Block 6",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/integrations/six/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-6.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    },
+    {
+      "name": "integrations-7",
+      "type": "registry:block",
+      "title": "Integrations Block 7",
+      "description": "Shadcn/ui website integrations block",
+      "registryDependencies": [
+        "button",
+        "https://motion-primitives.com/c/infinite-slider.json"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/integrations/seven/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-7.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/motion-primitives/infinite-slider.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "integrations-8",
+      "type": "registry:block",
+      "title": "Integrations Block 8",
+      "description": "Shadcn/ui website integrations",
+      "registryDependencies": [
+        "hover-card",
+        "button"
+      ],
+      "files": [
+        {
+          "path": "../../packages/dusk-kit/blocks/integrations/eight/index.tsx",
+          "type": "registry:component",
+          "target": "components/integrations-8.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/index.ts",
+          "type": "registry:component",
+          "target": "components/logos/index.ts"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Gemini.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
+          "type": "registry:component",
+          "target": "components/logos/GooglePaLM.tsx"
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MagicUI.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
+          "type": "registry:component",
+          "target": "components/logos/MediaWiki.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/Replit.tsx",
+          "type": "registry:component",
+          "target": "components/logos/Replit.tsx" 
+        },
+        {
+          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
+          "type": "registry:component",
+          "target": "components/logos/VSCodium.tsx" 
+        }
+      ]
+    }
+  ]
+}
