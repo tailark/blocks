@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Tailark",
   "homepage": "https://tailark.com",
+  "author" : "Méschac Irung <meschacirung@gmail.com>",
   "items": [
     {
       "name": "call-to-action-1",
@@ -537,7 +538,8 @@
         },
         {
           "path" : "../../packages/dusk-kit/blocks/hero-section/one/header.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/header.tsx"
         }
       ]
     },
@@ -563,7 +565,8 @@
         },
         {
           "path" : "../../packages/dusk-kit/blocks/hero-section/two/header.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/header.tsx"
         }
       ]
     },
@@ -589,11 +592,13 @@
         },
         {
           "path" : "../../packages/dusk-kit/blocks/hero-section/three/header.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/header.tsx"
         },
         {
           "path" : "../../packages/dusk-kit/blocks/hero-section/three/logo-cloud.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/logo-cloud.tsx"
         }
       ]
     },
@@ -619,7 +624,8 @@
         },
         {
           "path" : "../../packages/dusk-kit/blocks/hero-section/four/header.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/header.tsx"
         }
       ]
     },
@@ -645,7 +651,8 @@
         },
         {
           "path" : "../../packages/dusk-kit/blocks/hero-section/five/header.tsx",
-          "type": "registry:component"
+          "type": "registry:component",
+          "target": "components/header.tsx"
         }
       ]
     },
