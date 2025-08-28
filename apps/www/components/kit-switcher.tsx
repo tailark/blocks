@@ -53,13 +53,10 @@ export function KitSwitcher() {
         let targetKitId: string
 
         if (pathname === '/') {
+            // On the root path, do not auto-redirect based on stored kit.
+            // Just sync the selected kit state; navigation occurs only on explicit user selection.
             if (storedKitId && kits.some((kit) => kit.id === storedKitId)) {
                 targetKitId = storedKitId
-                if (targetKitId !== 'dusk-kit') {
-                    const kitPathSegment = targetKitId === 'mist-kit' ? 'mist' : targetKitId
-                    router.push(`/${kitPathSegment}`)
-                    return
-                }
             } else {
                 targetKitId = 'dusk-kit'
             }
@@ -78,7 +75,7 @@ export function KitSwitcher() {
         if (localStorage.getItem(STORAGE_KEY) !== targetKitId) {
             localStorage.setItem(STORAGE_KEY, targetKitId)
         }
-    }, [pathname, router, isDisabled, selectedKitId])
+    }, [pathname, router, isDisabled])
 
     const handleKitChange = (newlySelectedKitId: string) => {
         if (newlySelectedKitId === 'quartz-kit') {
