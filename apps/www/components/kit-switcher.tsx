@@ -36,7 +36,7 @@ export function KitSwitcher() {
         return kits[0]?.id || 'dusk-kit'
     })
 
-    const isDisabled = pathname.startsWith('/snippets')
+    const isDisabled = pathname.startsWith('/snippets') || pathname.startsWith('/docs')
 
     useEffect(() => {
         if (isDisabled) {

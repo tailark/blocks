@@ -116,6 +116,17 @@ export const SiteHeader = () => {
                             asChild
                             size="sm"
                             variant="link"
+                            className={cn('text-foreground/75 rounded-full', isActive('/docs') && 'text-foreground')}>
+                            <Link
+                                href="/docs"
+                                className="!text-sm">
+                                Docs
+                            </Link>
+                        </Button>
+                        <Button
+                            asChild
+                            size="sm"
+                            variant="link"
                             className="text-foreground/75 rounded-full">
                             <Link
                                 href="https://pro.tailark.com"
@@ -254,6 +265,18 @@ export const SiteHeader = () => {
                                             className="!text-sm"
                                             onClick={() => setIsOpen(false)}>
                                             Snippets
+                                        </Link>
+                                    </Button>
+                                    <Button
+                                        asChild
+                                        size="sm"
+                                        variant="ghost"
+                                        className={cn('justify-start', isActive('/docs') && 'bg-accent')}>
+                                        <Link
+                                            href="/docs"
+                                            className="!text-sm"
+                                            onClick={() => setIsOpen(false)}>
+                                            Docs
                                         </Link>
                                     </Button>
                                     <Button
