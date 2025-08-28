@@ -43,7 +43,9 @@ function SelectTrigger({ className, children, ...props }: React.ComponentProps<t
             )}
             {...props}>
             {children}
-            <SelectPrimitive.Icon asChild>
+            <SelectPrimitive.Icon
+                data-slot="select-icon"
+                asChild>
                 <ChevronsUpDown className="size-3 opacity-50" />
             </SelectPrimitive.Icon>
         </SelectPrimitive.Trigger>
@@ -63,7 +65,11 @@ function SelectContent({ className, children, position = 'popper', ...props }: R
                 position={position}
                 {...props}>
                 <SelectScrollUpButton />
-                <SelectPrimitive.Viewport className={cn('p-1', position === 'popper' && 'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)] scroll-my-1')}>{children}</SelectPrimitive.Viewport>
+                <SelectPrimitive.Viewport
+                    data-slot="select-viewport"
+                    className={cn(position === 'popper' && 'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)] scroll-my-1')}>
+                    {children}
+                </SelectPrimitive.Viewport>
                 <SelectScrollDownButton />
             </SelectPrimitive.Content>
         </SelectPrimitive.Portal>
@@ -86,7 +92,9 @@ function SelectItem({ className, children, ...props }: React.ComponentProps<type
             data-slot="select-item"
             className={cn("focus:bg-accent focus:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground outline-hidden *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 relative flex w-full cursor-default select-none items-center gap-2 rounded-sm py-1.5 pl-2 pr-8 text-sm data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0", className)}
             {...props}>
-            <span className="absolute right-2 flex size-3.5 items-center justify-center">
+            <span
+                data-slot="select-item-indicator"
+                className="absolute right-2 flex size-3.5 items-center justify-center">
                 <SelectPrimitive.ItemIndicator>
                     <CheckIcon
                         className="size-3"

@@ -6,14 +6,15 @@ import { useCopyToClipboard } from '@/hooks/useClipboard'
 import { useMedia } from 'use-media'
 import { cn, stringToNumber } from '@tailark/core/lib/utils'
 import { CodeEditor, File as CodeFile } from '@/components/code-editor'
-
 import { useOptimizedIframe } from './useOptimizedIframe'
 import IframeRenderer from './iframe-renderer'
 import LoadingSpinner from './loading-spinner'
-import BlockPreviewToolbar, { DEFAULTSIZE } from './toolbar'
+import BlockPreviewToolbar, { DEFAULTSIZE, prompts } from './toolbar'
 import { initialState, previewReducer, usePreviewActions } from './state'
 import { blockHeights } from '@/data/blocks-height'
 import { BlockPreviewWrapper } from './preview-wrapper'
+import { promptStore } from '@/lib/store/prompt'
+import { useStore } from '@nanostores/react'
 
 export interface BlockPreviewProps {
     code?: string
@@ -30,10 +31,11 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
     const [state, dispatch] = useReducer(previewReducer, initialState)
     const { mode } = state
 
-    const registryUrl = kit === 'dusk-kit' ? `https://tailark.com/r/${category}-${stringToNumber(id)}.json` : `https://tailark.com/r/${kit?.replace('-kit', '')}-${category}-${stringToNumber(id)}.json`
+    const prompt = useStore(promptStore)
 
-    const terminalCode = `pnpm dlx shadcn@latest add ${registryUrl}`
-    const registryCode = registryUrl
+    const registryUrl = kit === 'dusk-kit' ? `${category}-${stringToNumber(id)}` : `${kit?.replace('-kit', '')}-${category}-${stringToNumber(id)}`
+    const kitName = kit === 'dusk-kit' ? '' : kit?.replace('kit', '')
+    const terminalCode = `${prompts[prompt]} shadcn add @tailark/${registryUrl}`
 
     const cliCopyProps = {
         code: terminalCode,
@@ -42,15 +44,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
         eventName: 'block_cli_copy' as const,
     }
 
-    const registryLinkProps = {
-        code: registryCode,
-        title: id,
-        category,
-        eventName: 'block_registry_copy' as const,
-    }
-
     const { copy: _cliCopy } = useCopyToClipboard(cliCopyProps)
-    const { copy: _registryLinkCopy } = useCopyToClipboard(registryLinkProps)
 
     const handleCliCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
@@ -59,18 +53,11 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
         setTimeout(() => dispatch({ type: 'SET_COPIED_CLI', payload: false }), 2000)
     }
 
-    const handleRegistryCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault()
-        _registryLinkCopy(e as unknown as React.MouseEvent<HTMLButtonElement, MouseEvent>)
-        dispatch({ type: 'SET_COPIED_REGISTRY', payload: true })
-        setTimeout(() => dispatch({ type: 'SET_COPIED_REGISTRY', payload: false }), 2000)
-    }
-
     const panelGroupRef = useRef<ImperativePanelGroupHandle>(null)
     const isLargeScreen = useMedia('(min-width: 1024px)')
     const iframeContainerRef = useRef<HTMLDivElement>(null)
 
-    const { handleModeChange, setPanelSizes } = usePreviewActions(state, dispatch, panelGroupRef, handleCliCopy, handleRegistryCopy)
+    const { handleModeChange, setPanelSizes } = usePreviewActions(state, dispatch, panelGroupRef, handleCliCopy)
 
     const { iframeRef, shouldLoadIframe, isIframeCached } = useOptimizedIframe({
         previewUrl: previewLink,
@@ -98,7 +85,6 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                     mode={state.mode}
                     onModeChange={handleModeChange}
                     onCliCopy={handleCliCopy}
-                    onRegistryLinkCopy={handleRegistryCopy}
                     codeAvailable={codeAvailable}
                     previewOnly={previewOnly}
                     previewLink={previewLink}
@@ -106,7 +92,7 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
                     id={id}
                     category={category}
                     cliCopied={state.copied.cli}
-                    registryLinkCopied={state.copied.registry}
+                    kit={kitName}
                 />
             </div>
 

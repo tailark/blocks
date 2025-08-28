@@ -6,7 +6,6 @@ export interface PreviewState {
   mode: PreviewMode;
   copied: {
     cli: boolean;
-    registry: boolean;
   };
   panelSizes: {
     preview: number;
@@ -18,7 +17,6 @@ export interface PreviewState {
 type PreviewAction =
   | { type: 'SET_MODE'; payload: PreviewMode }
   | { type: 'SET_COPIED_CLI'; payload: boolean }
-  | { type: 'SET_COPIED_REGISTRY'; payload: boolean }
   | { type: 'SET_PANEL_SIZES'; payload: { preview: number; code: number } }
   | { type: 'TOGGLE_PANEL' };
 
@@ -26,7 +24,6 @@ export const initialState: PreviewState = {
   mode: 'preview',
   copied: {
     cli: false,
-    registry: false,
   },
   panelSizes: {
     preview: 50,
@@ -41,8 +38,6 @@ export const previewReducer = (state: PreviewState, action: PreviewAction): Prev
       return { ...state, mode: action.payload };
     case 'SET_COPIED_CLI':
       return { ...state, copied: { ...state.copied, cli: action.payload } };
-    case 'SET_COPIED_REGISTRY':
-      return { ...state, copied: { ...state.copied, registry: action.payload } };
     case 'SET_PANEL_SIZES':
       return { ...state, panelSizes: action.payload };
     case 'TOGGLE_PANEL':
@@ -62,7 +57,6 @@ export const previewReducer = (state: PreviewState, action: PreviewAction): Prev
 interface PreviewActions {
   handleModeChange: (mode: PreviewMode) => void;
   handleCliCopy: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  handleRegistryLinkCopy: (e: React.MouseEvent<HTMLButtonElement>) => void;
   togglePanel: () => void;
   setPanelSizes: (sizes: number[]) => void;
 }
@@ -72,7 +66,6 @@ export const usePreviewActions = (
   dispatch: React.Dispatch<PreviewAction>,
   panelGroupRef: React.RefObject<ImperativePanelGroupHandle | null>,
   onCliCopy: (e: React.MouseEvent<HTMLButtonElement>) => void,
-  onRegistryLinkCopy: (e: React.MouseEvent<HTMLButtonElement>) => void
 ): PreviewActions => {
   const handleModeChange = (mode: PreviewMode) => {
     dispatch({ type: 'SET_MODE', payload: mode });
@@ -81,11 +74,6 @@ export const usePreviewActions = (
   const handleCliCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     onCliCopy(e);
-  };
-
-  const handleRegistryLinkCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    onRegistryLinkCopy(e);
   };
 
   const togglePanel = () => {
@@ -108,7 +96,6 @@ export const usePreviewActions = (
   return {
     handleModeChange,
     handleCliCopy,
-    handleRegistryLinkCopy,
     togglePanel,
     setPanelSizes,
   };
