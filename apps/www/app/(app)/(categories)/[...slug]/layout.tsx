@@ -2,7 +2,6 @@ import React, { use } from 'react'
 import { blocks, categories } from '@/data/blocks'
 import BlocksNav from '@/components/blocks-nav'
 import { SiteFooter } from '@/components/site-footer'
-import { SiteHeader } from '@/components/site-header'
 
 interface LayoutProps {
     children: React.ReactNode
@@ -34,7 +33,6 @@ export default function CategoryLayout({ children, params }: LayoutProps) {
 
     return (
         <>
-            <SiteHeader />
             <BlocksNav
                 currentKitFullName={kitFullName}
                 currentKitShortName={kitShortName}
