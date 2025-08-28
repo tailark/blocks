@@ -18,5 +18,8 @@
     "hooks": "@/hooks",
     "data": "@/data"
   },
-  "iconLibrary": "lucide"
+  "iconLibrary": "lucide",
+  "registries": {
+    "@tailark":"http://localhost:3000/r/{name}.json"
+  }
 }
