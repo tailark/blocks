@@ -109,27 +109,22 @@ export default function HeroSection() {
                                 </div>
                             </div>
                         </div>
-                        <div className="relative mt-16">
-                            <div
-                                aria-hidden
-                                className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
+
+                        <div className="mask-b-from-55% relative mx-auto mt-16 max-w-6xl overflow-hidden px-4">
+                            <Image
+                                className="z-2 border-border/25 relative hidden rounded-2xl border dark:block"
+                                src="/music.png"
+                                alt="app screen"
+                                width={2796}
+                                height={2008}
                             />
-                            <div className="relative mx-auto max-w-6xl overflow-hidden px-4">
-                                <Image
-                                    className="z-2 border-border/25 relative hidden rounded-2xl border dark:block"
-                                    src="/music.png"
-                                    alt="app screen"
-                                    width={2796}
-                                    height={2008}
-                                />
-                                <Image
-                                    className="z-2 border-border/25 relative rounded-2xl border dark:hidden"
-                                    src="/music-light.png"
-                                    alt="app screen"
-                                    width={2796}
-                                    height={2008}
-                                />
-                            </div>
+                            <Image
+                                className="z-2 border-border/25 relative rounded-2xl border dark:hidden"
+                                src="/music-light.png"
+                                alt="app screen"
+                                width={2796}
+                                height={2008}
+                            />
                         </div>
                     </div>
                 </section>
