@@ -15,9 +15,7 @@ export default function Features() {
                             </div>
                         </CardHeader>
 
-                        <div className="relative h-fit pl-6 md:pl-12">
-                            <div className="absolute -inset-6 [background:radial-gradient(75%_95%_at_50%_0%,transparent,var(--color-background)_100%)]"></div>
-
+                        <div className="mask-b-from-75% mask-b-to-95% relative h-fit pl-6 md:pl-12">
                             <div className="bg-background overflow-hidden rounded-tl-lg border-l border-t pl-2 pt-2 dark:bg-zinc-950">
                                 <Image
                                     src="/mail2.png"
@@ -41,8 +39,7 @@ export default function Features() {
                         <p className="mx-auto my-6 max-w-md text-balance px-6 text-center text-lg font-semibold sm:text-2xl md:p-6">Advanced UX, Instantly locate all your assets.</p>
 
                         <CardContent className="mt-auto h-fit">
-                            <div className="relative mb-6 sm:mb-0">
-                                <div className="absolute -inset-6 [background:radial-gradient(50%_75%_at_75%_50%,transparent,var(--color-background)_100%)]"></div>
+                            <div className="mask-radial-at-right mask-radial-from-75% mask-radial-[75%_75%] relative max-sm:mb-6">
                                 <div className="aspect-76/59 overflow-hidden rounded-r-lg border">
                                     <Image
                                         src="/origin-cal-dark.png"
