@@ -30,10 +30,7 @@ export default function ContentSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-12 h-fit md:absolute md:-inset-y-12 md:inset-x-0 md:mt-0">
-                        <div
-                            aria-hidden
-                            className="bg-linear-to-l z-1 to-background absolute inset-0 hidden from-transparent to-55% md:block"></div>
+                    <div className="md:mask-l-from-35% md:mask-l-to-55% mt-12 h-fit md:absolute md:-inset-y-12 md:inset-x-0 md:mt-0">
                         <div className="border-border/50 relative rounded-2xl border border-dotted p-2">
                             <Image
                                 src="/charts.png"
