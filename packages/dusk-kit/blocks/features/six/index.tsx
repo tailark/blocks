@@ -9,12 +9,29 @@ export default function FeaturesSection() {
                     <h2 className="text-4xl font-semibold">The Lyra ecosystem brings together our models</h2>
                     <p className="max-w-sm sm:ml-auto">Empower your team with workflows that adapt to your needs, whether you prefer git synchronization or a AI Agents interface.</p>
                 </div>
-                <div className="relative rounded-3xl p-3 md:-mx-8 lg:col-span-3">
-                    <div className="aspect-88/36 relative">
-                        <div className="bg-linear-to-t z-1 from-background absolute inset-0 to-transparent"></div>
-                        <Image src="/mail-upper.png" className="absolute inset-0 z-10" alt="payments illustration dark" width={2797} height={1137} />
-                        <Image src="/mail-back.png" className="hidden dark:block" alt="payments illustration dark" width={2797} height={1137} />
-                        <Image src="/mail-back-light.png" className="dark:hidden" alt="payments illustration light" width={2797} height={1137} />
+                <div className="px-3 pt-3 md:-mx-8">
+                    <div className="aspect-88/36 mask-b-from-75% mask-b-to-95% relative">
+                        <Image
+                            src="/mail-upper.png"
+                            className="absolute inset-0 z-10"
+                            alt="payments illustration dark"
+                            width={2797}
+                            height={1137}
+                        />
+                        <Image
+                            src="/mail-back.png"
+                            className="hidden dark:block"
+                            alt="payments illustration dark"
+                            width={2797}
+                            height={1137}
+                        />
+                        <Image
+                            src="/mail-back-light.png"
+                            className="dark:hidden"
+                            alt="payments illustration light"
+                            width={2797}
+                            height={1137}
+                        />
                     </div>
                 </div>
                 <div className="relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4">

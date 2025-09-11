@@ -9,14 +9,31 @@ export default function FeaturesSection() {
                     <h2 className="text-4xl font-semibold lg:text-5xl">Built for Scaling teams</h2>
                     <p className="mt-6 text-lg">Empower your team with workflows that adapt to your needs, whether you prefer git synchronization or a AI Agents interface.</p>
                 </div>
-                <div className="relative -mx-4 rounded-3xl p-3 md:-mx-12 lg:col-span-3">
+                <div className="mask-b-from-75% mask-l-from-75% mask-b-to-95% mask-l-to-95% relative -mx-4 pr-3 pt-3 md:-mx-12">
                     <div className="perspective-midrange">
                         <div className="rotate-x-6 -skew-2">
                             <div className="aspect-88/36 relative">
-                                <div className="bg-radial-[at_75%_25%] to-background z-1 -inset-17 absolute from-transparent to-75%"></div>
-                                <Image src="/mail-upper.png" className="absolute inset-0 z-10" alt="payments illustration dark" width={2797} height={1137} />
-                                <Image src="/mail-back.png" className="hidden dark:block" alt="payments illustration dark" width={2797} height={1137} />
-                                <Image src="/mail-back-light.png" className="dark:hidden" alt="payments illustration light" width={2797} height={1137} />
+                                <Image
+                                    src="/mail-upper.png"
+                                    className="absolute inset-0 z-10"
+                                    alt="payments illustration dark"
+                                    width={2797}
+                                    height={1137}
+                                />
+                                <Image
+                                    src="/mail-back.png"
+                                    className="hidden dark:block"
+                                    alt="payments illustration dark"
+                                    width={2797}
+                                    height={1137}
+                                />
+                                <Image
+                                    src="/mail-back-light.png"
+                                    className="dark:hidden"
+                                    alt="payments illustration light"
+                                    width={2797}
+                                    height={1137}
+                                />
                             </div>
                         </div>
                     </div>

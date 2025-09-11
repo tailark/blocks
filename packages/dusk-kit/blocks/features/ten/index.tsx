@@ -18,8 +18,11 @@ export default function Features() {
                             />
                         </CardHeader>
 
-                        <div className="relative mb-6 border-t border-dashed sm:mb-0">
-                            <div className="absolute inset-0 [background:radial-gradient(125%_125%_at_50%_0%,transparent_40%,var(--color-blue-600),var(--color-white)_100%)]"></div>
+                        <div className="relative border-t border-dashed max-sm:mb-6">
+                            <div
+                                aria-hidden
+                                className="absolute inset-0 [background:radial-gradient(125%_125%_at_50%_0%,transparent_40%,var(--color-blue-600),var(--color-white)_100%)]"
+                            />
                             <div className="aspect-76/59 p-1 px-6">
                                 <DualModeImage
                                     darkSrc="/payments.png"
@@ -42,9 +45,8 @@ export default function Features() {
                         </CardHeader>
 
                         <CardContent>
-                            <div className="relative mb-6 sm:mb-0">
-                                <div className="absolute -inset-6 [background:radial-gradient(50%_50%_at_75%_50%,transparent,var(--color-background)_100%)]"></div>
-                                <div className="aspect-76/59 border">
+                            <div className="mask-radial-at-right mask-radial-from-75% mask-radial-[75%_75%] relative max-sm:mb-6">
+                                <div className="aspect-76/59 overflow-hidden rounded-lg border">
                                     <DualModeImage
                                         darkSrc="/origin-cal-dark.png"
                                         lightSrc="/origin-cal.png"

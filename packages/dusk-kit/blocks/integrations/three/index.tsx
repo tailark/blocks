@@ -11,7 +11,10 @@ export default function IntegrationsSection() {
                 <div className="mx-auto max-w-5xl px-6">
                     <div className="grid items-center sm:grid-cols-2">
                         <div className="dark:bg-muted/50 relative mx-auto w-fit">
-                            <div className="bg-radial to-muted dark:to-background absolute inset-0 z-10 from-transparent to-75%"></div>
+                            <div
+                                aria-hidden
+                                className="bg-radial to-muted dark:to-background absolute inset-0 z-10 from-transparent to-75%"
+                            />
                             <div className="mx-auto mb-2 flex w-fit justify-center gap-2">
                                 <IntegrationCard>
                                     <Gemini />

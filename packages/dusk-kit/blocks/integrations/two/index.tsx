@@ -12,7 +12,8 @@ export default function IntegrationsSection() {
                     <div className="dark:bg-muted/50 relative mx-auto w-fit">
                         <div
                             role="presentation"
-                            className="bg-radial to-muted dark:to-background absolute inset-0 z-10 from-transparent to-75%"></div>
+                            className="bg-radial to-muted dark:to-background absolute inset-0 z-10 from-transparent to-75%"
+                        />
                         <div className="mx-auto mb-2 flex w-fit justify-center gap-2">
                             <IntegrationCard>
                                 <Gemini />
