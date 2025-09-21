@@ -4,7 +4,7 @@ import { Input } from '@tailark/core/ui/input'
 import { Label } from '@tailark/core/ui/label'
 import Link from 'next/link'
 
-export default function LoginPage() {
+export default function SignUpPage() {
     return (
         <section className="bg-linear-to-b from-muted to-background flex min-h-screen px-4 py-16 md:py-32">
             <form
