@@ -1,4 +1,4 @@
-import { LogoStroke } from '@tailark/core/components/logo'
+import { LogoIcon } from '@tailark/core/components/logo'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@tailark/core/ui/button'
@@ -97,7 +97,7 @@ export default function HeroSection() {
                             aria-hidden
                             className="relative -mx-4 mb-8 aspect-video md:mb-16">
                             <div className="bg-background absolute inset-0 m-auto size-fit p-8">
-                                <LogoStroke className="h-fit w-20 text-blue-500" />
+                                <LogoIcon className="h-fit w-20" />
                             </div>
                             <div className="absolute inset-0 -z-10 bg-[radial-gradient(var(--color-foreground)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
                         </div>
