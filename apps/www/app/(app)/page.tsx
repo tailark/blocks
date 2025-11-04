@@ -1,7 +1,7 @@
 import BlockPreview from '@/components/block-preview'
 import { SiteFooter } from '@/components/site-footer'
 import { Button } from '@tailark/core/ui/button'
-import { ArrowRight, MoonStar } from 'lucide-react'
+import { MoonStar } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {

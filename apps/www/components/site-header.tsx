@@ -144,42 +144,6 @@ export const SiteHeader = () => {
                             size="sm"
                             className="size-8 rounded-full">
                             <Link
-                                href="https://x.com/MeschacIrung/"
-                                target="_blank"
-                                aria-label="x/twitter"
-                                rel="noreferrer"
-                                className="text-sm">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="14"
-                                    height="14"
-                                    viewBox="0 0 14 14"
-                                    className="size-4">
-                                    <g fill="none">
-                                        <g clipPath="url(#primeTwitter0)">
-                                            <path
-                                                fill="currentColor"
-                                                d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z"
-                                            />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="primeTwitter0">
-                                                <path
-                                                    fill="#fff"
-                                                    d="M0 0h14v14H0z"
-                                                />
-                                            </clipPath>
-                                        </defs>
-                                    </g>
-                                </svg>
-                            </Link>
-                        </Button>
-                        <Button
-                            asChild
-                            variant="ghost"
-                            size="sm"
-                            className="size-8 rounded-full">
-                            <Link
                                 href="https://github.com/tailark/blocks"
                                 target="_blank"
                                 aria-label="GitHub"
