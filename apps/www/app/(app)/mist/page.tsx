@@ -116,16 +116,7 @@ export default function Home() {
             <section>
                 <div className="mx-4 max-w-7xl px-4 py-12 [--color-border:color-mix(in_oklab,var(--color-zinc-200)_75%,transparent)] md:mx-auto dark:[--color-border:color-mix(in_oklab,var(--color-zinc-800)_60%,transparent)]">
                     <div className="mx-auto max-w-md text-center">
-                        <Link
-                            href="https://pro.tailark.com"
-                            className="rounded-(--radius) dark:hover:bg-muted/25 ring-foreground/25 mx-auto flex w-fit items-center gap-2 p-1 pr-3 shadow-sm ring-1">
-                            <span className="bg-muted rounded-[calc(var(--radius)-0.25rem)] px-2 py-1 text-xs">Pro</span>
-                            <span className="line-clamp-1 text-sm">Complete pages and 25% Off All Plans</span>
-                            <span className="bg-(--color-border) block h-4 w-px"></span>
-
-                            <ArrowRight className="size-4" />
-                        </Link>
-                        <h1 className="mt-8 inline-flex flex-wrap justify-center gap-2 text-balance text-3xl font-semibold sm:text-4xl">
+                        <h1 className="inline-flex flex-wrap justify-center gap-2 text-balance text-3xl font-semibold sm:text-4xl">
                             Shadcn Blocks <span className="text-muted-foreground">for</span> Wiki-Style <MistKitLogo /> Websites
                         </h1>
                         <p className="text-forground/60 mx-auto mb-6 mt-4 max-w-md text-balance text-lg">Craft Sleek, Notion-Inspired Marketing Pages. Built on top of Shadcn UI.</p>
