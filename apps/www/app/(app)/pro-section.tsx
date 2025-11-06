@@ -21,7 +21,7 @@ export const ProSection = () => {
                     }}
                 />
 
-                <div className="relative z-10 pt-6 lg:pt-20">
+                <div className="relative z-10 pt-6 md:pt-20">
                     <div className="mx-auto px-4 lg:px-6 2xl:max-w-7xl">
                         <div className="mx-auto lg:w-1/2">
                             <div className="max-w-xl max-md:mx-auto max-md:text-center">

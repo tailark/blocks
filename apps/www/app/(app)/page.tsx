@@ -157,6 +157,7 @@ export default function Home() {
 
                 <div className="@container mx-auto px-4 pt-12 lg:px-6 2xl:max-w-7xl">
                     <div className="mx-auto lg:w-1/2">
+                        <h2 className="sr-only">Testimonials</h2>
                         <div className="ring-foreground/6.5 bg-card @md:grid-cols-2 @max-md:divide-y @md:divide-x mx-auto grid max-w-xl rounded-xl border border-transparent shadow-md shadow-black/5 ring-1">
                             {testimonials.map((testimonial, index) => (
                                 <div

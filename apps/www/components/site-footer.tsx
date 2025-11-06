@@ -9,6 +9,7 @@ export const SiteFooter = () => (
         <div className="mx-auto max-w-7xl px-10 lg:px-6">
             <Link
                 href="/"
+                aria-label="go home"
                 className="hover:bg-muted -m-2 inline-block rounded-full p-2 duration-200">
                 <LogoIcon className="size-5" />
             </Link>

@@ -18,6 +18,7 @@ export const ThemeToggle = () => {
         return (
             <Button
                 variant="ghost"
+                aria-label="toggle theme"
                 className="size-8 rounded-full">
                 <SunDim className="size-5!" />
             </Button>
@@ -28,6 +29,7 @@ export const ThemeToggle = () => {
         <Button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             variant="ghost"
+            aria-label="toggle theme"
             className="size-8 rounded-full">
             {theme === 'dark' ? <SunDim className="size-5!" /> : <MoonStar />}
         </Button>
