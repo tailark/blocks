@@ -1,44 +1,23 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Logo } from '@tailark/core/components/logo'
 import { Button } from '@tailark/core/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { KitSwitcher } from '@/components/kit-switcher'
 import { cn } from '@/lib/utils'
 import { Separator } from '@tailark/core/ui/separator'
-import { CircleArrowOutUpRightIcon, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { Dialog, DialogClose, DialogTitle, DialogContent, DialogTrigger } from '@tailark/core/ui/dialog'
 
 export const SiteHeader = () => {
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
-    const [currentKitId, setCurrentKitId] = useState('dusk')
 
     const isActive = (path: string) => {
         return pathname === path || pathname.startsWith(`${path}/`)
     }
-
-    useEffect(() => {
-        const savedKit = localStorage.getItem('selected-kit-id')
-        if (savedKit) {
-            setCurrentKitId(savedKit)
-        }
-    }, [])
-
-    const getBasePath = (isHome: boolean = false) => {
-        if (currentKitId === 'dusk-kit') {
-            return isHome ? '/' : '/hero-section'
-        } else if (currentKitId === 'mist-kit') {
-            return `/mist${isHome ? '/' : '/hero-section'}`
-        } else {
-            return `/${currentKitId}${isHome ? '/' : '/hero-section'}`
-        }
-    }
-
-    const blocksHref = getBasePath(false)
-    const homeHref = getBasePath(true)
 
     return (
         <header>
@@ -46,29 +25,11 @@ export const SiteHeader = () => {
                 <div className="flex items-center justify-between py-3 lg:py-4">
                     <div className="flex items-center">
                         <Link
-                            href={homeHref}
+                            href="/"
                             className="flex w-fit items-center gap-2">
                             <Logo />
-                            <span className="sr-only font-bold">Tailark</span>
+                            <span className="sr-only">Tailark</span>
                         </Link>
-
-                        {currentKitId == 'mist-kit' && (
-                            <Button
-                                asChild
-                                size="sm"
-                                variant="ghost"
-                                className="text-foreground/75 rounded-full">
-                                <Link
-                                    target="_blank"
-                                    href="https://github.com/tailark/blocks/blob/main/packages/mist-kit/README.md">
-                                    Docs
-                                    <CircleArrowOutUpRightIcon
-                                        strokeWidth={2}
-                                        className="size-3! opacity-50"
-                                    />
-                                </Link>
-                            </Button>
-                        )}
                     </div>
 
                     <div className="-mr-2 hidden items-center gap-4 sm:flex">
@@ -88,9 +49,9 @@ export const SiteHeader = () => {
                                 asChild
                                 size="sm"
                                 variant="ghost"
-                                className={cn('text-foreground/75 rounded-full', isActive(blocksHref) && 'text-foreground')}>
+                                className={cn('text-foreground/75 rounded-full', isActive('/hero-section') && 'text-foreground')}>
                                 <Link
-                                    href={blocksHref}
+                                    href="/hero-section"
                                     className="!text-sm">
                                     Blocks
                                 </Link>
@@ -217,9 +178,9 @@ export const SiteHeader = () => {
                                             asChild
                                             size="sm"
                                             variant="ghost"
-                                            className={cn('justify-start', isActive(blocksHref) && 'bg-accent')}>
+                                            className={cn('justify-start', isActive('/hero-section') && 'bg-accent')}>
                                             <Link
-                                                href={blocksHref}
+                                                href="/hero-section"
                                                 className="!text-sm"
                                                 onClick={() => setIsOpen(false)}>
                                                 Blocks
