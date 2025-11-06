@@ -5,14 +5,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { testimonials } from '@/lib/testimonials'
 import { MistSection } from './mist-section'
+import { ProSection } from './pro-section'
 
 const imageClasses = 'ring-foreground/5 before:border-background relative overflow-hidden rounded-xl shadow-2xl shadow-black/25 ring-1 before:absolute before:inset-0 before:rounded-xl before:border'
 
 export default function Home() {
     return (
         <>
-            <section className="bg-linear-to-b not-dark:to-muted/50 border-b to-35% pb-20">
-                <div className="mx-auto px-4 pt-20 lg:px-6 2xl:max-w-7xl">
+            <section className="bg-linear-to-b not-dark:to-muted/50 overflow-hidden border-b to-35% pb-4 md:pb-20">
+                <div className="mx-auto px-4 pt-6 md:pt-20 lg:px-6 2xl:max-w-7xl">
                     <div className="mx-auto lg:w-1/2">
                         <div className="max-w-xl max-md:mx-auto max-md:text-center">
                             <span className="mb-6 block text-sm text-indigo-500 dark:text-indigo-400">Dusk</span>
@@ -28,7 +29,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="mask-radial-from-75% mask-radial-at-top mask-radial-[75%_100%] relative mb-20 px-4 pt-20 2xl:mx-auto 2xl:max-w-7xl">
+                <div className="mask-radial-from-75% mask-radial-at-top mask-radial-[75%_100%] relative px-4 pt-12 lg:mb-20 lg:pt-20 2xl:mx-auto 2xl:max-w-7xl">
                     <div
                         aria-hidden
                         className="mask-t-from-90% pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -79,7 +80,7 @@ export default function Home() {
                         />
                     </div>
 
-                    <div className="grid grid-cols-4 gap-3">
+                    <div className="grid grid-cols-6 gap-3 md:grid-cols-4">
                         <div className="-ml-67 space-y-3">
                             <div className={cn(imageClasses, 'aspect-90/63')}>
                                 <Image
@@ -87,6 +88,7 @@ export default function Home() {
                                     alt="Dusk hero section"
                                     width={2880}
                                     height={1994}
+                                    sizes="(max-width: 1024px) 686px, 1024px"
                                     className="size-full object-cover"
                                 />
                             </div>
@@ -96,11 +98,12 @@ export default function Home() {
                                     alt="Dusk hero section"
                                     width={2880}
                                     height={1670}
+                                    sizes="(max-width: 1024px) 686px, 1024px"
                                     className="size-full object-cover"
                                 />
                             </div>
                         </div>
-                        <div className="relative z-10 col-span-2">
+                        <div className="relative z-10 col-span-4 md:col-span-2">
                             <div
                                 aria-hidden
                                 className="bg-linear-to-b/increasing not-dark:from-orange-300 absolute -inset-12 via-indigo-500 to-purple-500 opacity-5 blur-2xl dark:hidden dark:via-white"
@@ -111,6 +114,7 @@ export default function Home() {
                                     alt="Dusk hero section"
                                     width={2880}
                                     height={3292}
+                                    sizes="(max-width: 1024px) 686px, 1024px"
                                     className="size-full object-cover"
                                 />
                             </div>
@@ -122,6 +126,7 @@ export default function Home() {
                                     alt="Dusk hero section"
                                     width={2880}
                                     height={2566}
+                                    sizes="(max-width: 1024px) 686px, 1024px"
                                     className="size-full object-cover"
                                 />
                             </div>
@@ -131,6 +136,7 @@ export default function Home() {
                                     alt="Dusk hero section"
                                     width={2880}
                                     height={1514}
+                                    sizes="(max-width: 1024px) 686px, 1024px"
                                     className="size-full object-cover"
                                 />
                             </div>
@@ -211,8 +217,11 @@ export default function Home() {
             </section>
 
             <MistSection />
+            <ProSection />
 
-            <SiteFooter />
+            <div className="pt-24">
+                <SiteFooter />
+            </div>
         </>
     )
 }
