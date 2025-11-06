@@ -26,3 +26,22 @@ export const testimonials:Testimonial[] = [
         certified : true
     }
 ]
+
+export const mistTestimonials:Testimonial[] = [
+     {
+        avatar : "/avatars/frank.jpg",
+        name : "Frank",
+        handler : "FrankCodeZ",
+        post : "I hope you won't stop now - I must say, these are the best I have seen <3 Huge Props",
+        link : "https://x.com/FrankCodeZ/status/1894058732482342981",
+        certified:false
+    },
+    {
+        avatar : "/avatars/dave.jpg",
+        name : "Dave",
+        handler : "daveindiedev",
+        post : "Thank you so much. I'm a big fan of ShadCN UI, and I'm really happy that you created it. 🎉",
+        link : "https://x.com/daveindiedev/status/1894255352021225480",
+        certified:true
+    },
+]

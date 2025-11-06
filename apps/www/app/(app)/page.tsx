@@ -4,13 +4,14 @@ import { Button } from '@tailark/core/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import { testimonials } from '@/lib/testimonials'
+import { MistSection } from './mist-section'
 
-const imageClasses = 'ring-foreground/5 not-dark:before:hidden before:border-foreground/5 relative overflow-hidden rounded-xl shadow-2xl shadow-black/25 ring-1 before:absolute before:inset-0 before:rounded-xl before:border'
+const imageClasses = 'ring-foreground/5 before:border-background relative overflow-hidden rounded-xl shadow-2xl shadow-black/25 ring-1 before:absolute before:inset-0 before:rounded-xl before:border'
 
 export default function Home() {
     return (
         <>
-            <section className="bg-linear-to-b not-dark:to-muted/50 to-35% pb-20">
+            <section className="bg-linear-to-b not-dark:to-muted/50 border-b to-35% pb-20">
                 <div className="mx-auto px-4 pt-20 lg:px-6 2xl:max-w-7xl">
                     <div className="mx-auto lg:w-1/2">
                         <div className="max-w-xl max-md:mx-auto max-md:text-center">
@@ -28,7 +29,9 @@ export default function Home() {
                 </div>
 
                 <div className="mask-radial-from-75% mask-radial-at-top mask-radial-[75%_100%] relative mb-20 px-4 pt-20 2xl:mx-auto 2xl:max-w-7xl">
-                    <div className="mask-t-from-90% pointer-events-none absolute inset-0 z-0 overflow-hidden">
+                    <div
+                        aria-hidden
+                        className="mask-t-from-90% pointer-events-none absolute inset-0 z-0 overflow-hidden">
                         <div
                             className="size-full"
                             style={{
@@ -206,6 +209,8 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            <MistSection />
 
             <SiteFooter />
         </>
