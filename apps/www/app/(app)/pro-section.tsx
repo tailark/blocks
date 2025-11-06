@@ -29,7 +29,7 @@ export const ProSection = () => {
                                 <span className="bg-linear-to-r mb-6 block from-emerald-600 to-indigo-600 bg-clip-text text-transparent dark:from-emerald-400 dark:to-indigo-400">Pro</span>
                                 <h2 className="text-balance text-4xl font-semibold sm:text-5xl">Build enterprise-grade websites, faster.</h2>
                                 <div className="mb-4 mt-4">
-                                    <p className="text-foreground/75 text-balance text-lg md:text-xl">Tailark Pro is your complete Shadcn kit, packed with pages and blocks crafted for speed and quality.</p>
+                                    <p className="text-muted-foreground text-balance lg:text-lg">Tailark Pro is your complete Shadcn kit, packed with pages and blocks crafted for speed and quality.</p>
                                 </div>
 
                                 <Button

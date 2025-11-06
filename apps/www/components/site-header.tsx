@@ -76,7 +76,18 @@ export const SiteHeader = () => {
                             <Button
                                 asChild
                                 size="sm"
-                                variant="link"
+                                variant="ghost"
+                                className="text-foreground/75 rounded-full">
+                                <Link
+                                    href="https://pro.tailark.com"
+                                    className="!text-sm">
+                                    <span className="bg-linear-to-r from-emerald-600 to-indigo-600 bg-clip-text text-transparent dark:from-emerald-400 dark:to-indigo-400">Pro</span>
+                                </Link>
+                            </Button>
+                            <Button
+                                asChild
+                                size="sm"
+                                variant="ghost"
                                 className={cn('text-foreground/75 rounded-full', isActive(blocksHref) && 'text-foreground')}>
                                 <Link
                                     href={blocksHref}
@@ -87,7 +98,19 @@ export const SiteHeader = () => {
                             <Button
                                 asChild
                                 size="sm"
-                                variant="link"
+                                variant="ghost"
+                                className={cn('text-foreground/75 rounded-full', isActive('/mist') && 'text-foreground')}>
+                                <Link
+                                    href="/mist/hero-section"
+                                    className="!text-sm">
+                                    Mist
+                                </Link>
+                            </Button>
+
+                            <Button
+                                asChild
+                                size="sm"
+                                variant="ghost"
                                 className={cn('text-foreground/75 rounded-full', isActive('/snippets/button') && 'text-foreground')}>
                                 <Link
                                     href="/snippets/button"
@@ -98,23 +121,12 @@ export const SiteHeader = () => {
                             <Button
                                 asChild
                                 size="sm"
-                                variant="link"
+                                variant="ghost"
                                 className={cn('text-foreground/75 rounded-full', isActive('/docs') && 'text-foreground')}>
                                 <Link
                                     href="/docs"
                                     className="!text-sm">
                                     Docs
-                                </Link>
-                            </Button>
-                            <Button
-                                asChild
-                                size="sm"
-                                variant="ghost"
-                                className="text-foreground/75 rounded-full">
-                                <Link
-                                    href="https://pro.tailark.com"
-                                    className="!text-sm">
-                                    <span className="bg-linear-to-r from-emerald-600 to-indigo-600 bg-clip-text text-transparent dark:from-emerald-400 dark:to-indigo-400">Pro</span>
                                 </Link>
                             </Button>
                         </div>
@@ -194,12 +206,35 @@ export const SiteHeader = () => {
                                             asChild
                                             size="sm"
                                             variant="ghost"
+                                            className="text-foreground/75 justify-start rounded-full">
+                                            <Link
+                                                href="https://pro.tailark.com"
+                                                className="!text-sm">
+                                                <span className="bg-linear-to-r from-emerald-600 to-indigo-600 bg-clip-text text-transparent dark:from-emerald-400 dark:to-indigo-400">Pro</span>
+                                            </Link>
+                                        </Button>
+                                        <Button
+                                            asChild
+                                            size="sm"
+                                            variant="ghost"
                                             className={cn('justify-start', isActive(blocksHref) && 'bg-accent')}>
                                             <Link
                                                 href={blocksHref}
                                                 className="!text-sm"
                                                 onClick={() => setIsOpen(false)}>
                                                 Blocks
+                                            </Link>
+                                        </Button>
+                                        <Button
+                                            asChild
+                                            size="sm"
+                                            variant="ghost"
+                                            className={cn('justify-start', isActive('/mist') && 'bg-accent')}>
+                                            <Link
+                                                href="/mist/hero-section"
+                                                className="!text-sm"
+                                                onClick={() => setIsOpen(false)}>
+                                                Mist
                                             </Link>
                                         </Button>
                                         <Button
@@ -224,17 +259,6 @@ export const SiteHeader = () => {
                                                 className="!text-sm"
                                                 onClick={() => setIsOpen(false)}>
                                                 Docs
-                                            </Link>
-                                        </Button>
-                                        <Button
-                                            asChild
-                                            size="sm"
-                                            variant="link"
-                                            className="text-foreground/75 rounded-full">
-                                            <Link
-                                                href="https://pro.tailark.com"
-                                                className="!text-sm">
-                                                Pro
                                             </Link>
                                         </Button>
                                     </div>

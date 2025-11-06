@@ -18,11 +18,11 @@ export default function Home() {
                         <div className="max-w-xl max-md:mx-auto max-md:text-center">
                             <span className="mb-6 block text-sm text-indigo-500 dark:text-indigo-400">Dusk</span>
                             <h1 className="text-foreground text-balance text-3xl font-semibold sm:text-4xl">Shadcn Blocks built for Modern Websites</h1>
-                            <p className="text-muted-foreground mb-6 mt-4 text-balance text-lg">Modern, Responsive, pre-built UI blocks designed for marketing websites.</p>
+                            <p className="text-muted-foreground mb-4 mt-4 text-balance text-lg">Modern, Responsive, pre-built UI blocks designed for marketing websites.</p>
 
                             <Button
                                 asChild
-                                className="shadow-lg shadow-black/35">
+                                className="mt-3 shadow-lg shadow-black/35">
                                 <Link href="/hero-section">Explore blocks</Link>
                             </Button>
                         </div>
@@ -80,12 +80,12 @@ export default function Home() {
                         />
                     </div>
 
-                    <div className="grid grid-cols-6 gap-3 md:grid-cols-4">
+                    <div className="grid grid-cols-6 gap-2 sm:gap-3 md:grid-cols-4">
                         <div className="-ml-67 space-y-3">
                             <div className={cn(imageClasses, 'aspect-90/63')}>
                                 <Image
                                     src="/dusk/features-6-light.png"
-                                    alt="Dusk hero section"
+                                    alt="Tailark Dusk features section"
                                     width={2880}
                                     height={1994}
                                     sizes="(max-width: 1024px) 686px, 1024px"
@@ -95,7 +95,7 @@ export default function Home() {
                             <div className={cn(imageClasses, 'aspect-70/42')}>
                                 <Image
                                     src="/dusk/features-11-light.png"
-                                    alt="Dusk hero section"
+                                    alt="Tailark Dusk features section"
                                     width={2880}
                                     height={1670}
                                     sizes="(max-width: 1024px) 686px, 1024px"
@@ -106,12 +106,12 @@ export default function Home() {
                         <div className="relative z-10 col-span-4 md:col-span-2">
                             <div
                                 aria-hidden
-                                className="bg-linear-to-b/increasing not-dark:from-orange-300 absolute -inset-12 via-indigo-500 to-purple-500 opacity-5 blur-2xl dark:hidden dark:via-white"
+                                className="bg-linear-to-b/increasing not-dark:from-orange-300 absolute inset-0 via-indigo-500 to-purple-500 opacity-5 blur-2xl md:-inset-12 dark:hidden dark:via-white"
                             />
                             <div className={cn(imageClasses, 'aspect-45/52')}>
                                 <Image
                                     src="/dusk/hero-light.png"
-                                    alt="Dusk hero section"
+                                    alt="Tailark Dusk hero section"
                                     width={2880}
                                     height={3292}
                                     sizes="(max-width: 1024px) 686px, 1024px"
@@ -123,7 +123,7 @@ export default function Home() {
                             <div className={cn(imageClasses, 'aspect-90/81')}>
                                 <Image
                                     src="/dusk/features-nine-light.png"
-                                    alt="Dusk hero section"
+                                    alt="Tailark Dusk features section"
                                     width={2880}
                                     height={2566}
                                     sizes="(max-width: 1024px) 686px, 1024px"
@@ -133,7 +133,7 @@ export default function Home() {
                             <div className={cn(imageClasses, 'aspect-90/48')}>
                                 <Image
                                     src="/dusk/content-light.png"
-                                    alt="Dusk hero section"
+                                    alt="Tailark Dusk content section"
                                     width={2880}
                                     height={1514}
                                     sizes="(max-width: 1024px) 686px, 1024px"

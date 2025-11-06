@@ -14,16 +14,16 @@ export const MistSection = () => {
                     <div className="max-w-xl max-md:mx-auto max-md:text-center">
                         <span className="mb-6 block text-sm text-indigo-500 dark:text-indigo-400">Mist</span>
                         <h2 className="text-foreground text-balance text-3xl font-semibold sm:text-4xl">Shadcn Blocks for Wiki-Style Websites</h2>
-                        <p className="text-muted-foreground mb-6 mt-4 text-balance text-lg">Craft Sleek, Notion-Inspired Marketing Pages. </p>
+                        <p className="text-muted-foreground mb-4 mt-4 text-balance text-lg">Craft Sleek, Notion-Inspired Marketing Pages. </p>
 
                         <Button
                             asChild
-                            className="shadow-lg shadow-black/35">
+                            className="mt-3 shadow-lg shadow-black/35">
                             <Link href="/mist/hero-section">Explore blocks</Link>
                         </Button>
                         <Button
                             asChild
-                            className="ml-3"
+                            className="ml-3 mt-3"
                             variant="ghost">
                             <Link
                                 target="_blank"
@@ -35,7 +35,7 @@ export const MistSection = () => {
                 </div>
             </div>
 
-            <div className="mask-radial-from-75% mask-radial-at-top mask-radial-[75%_100%] relative px-4 pt-12 md:pt-20 2xl:mx-auto 2xl:max-w-7xl">
+            <div className="mask-radial-from-75% mask-radial-at-top mask-radial-[75%_100%] relative px-4 pt-12 max-md:-mb-12 md:pt-20 2xl:mx-auto 2xl:max-w-7xl">
                 <div
                     aria-hidden
                     className="mask-t-from-90% pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -86,12 +86,12 @@ export const MistSection = () => {
                     />
                 </div>
 
-                <div className="grid grid-cols-6 gap-3 md:grid-cols-4">
-                    <div className="-ml-67 space-y-3">
+                <div className="grid grid-cols-6 gap-2 sm:gap-3 md:grid-cols-4">
+                    <div className="-ml-67 sm:spcae-y-3 space-y-2">
                         <div className={cn(imageClasses, 'aspect-90/72')}>
                             <Image
                                 src="/mist/comparator.png"
-                                alt="Dusk hero section"
+                                alt="Tailark Mist comparator section"
                                 width={2880}
                                 height={2222}
                                 sizes="(max-width: 1024px) 686px, 1024px"
@@ -101,7 +101,7 @@ export const MistSection = () => {
                         <div className={cn(imageClasses, 'aspect-90/66')}>
                             <Image
                                 src="/mist/contact.png"
-                                alt="Dusk hero section"
+                                alt="Tailark Mist contact section"
                                 width={2880}
                                 height={2108}
                                 sizes="(max-width: 1024px) 686px, 1024px"
@@ -109,7 +109,7 @@ export const MistSection = () => {
                             />
                         </div>
                     </div>
-                    <div className="relative z-10 col-span-4 space-y-3 md:col-span-2">
+                    <div className="sm:spcae-y-3 relative z-10 col-span-4 space-y-2 md:col-span-2">
                         <div
                             aria-hidden
                             className="bg-linear-to-b/increasing not-dark:from-emerald-300 absolute inset-0 via-indigo-500 to-purple-500 opacity-5 blur-2xl md:-inset-12 dark:hidden dark:via-white"
@@ -117,7 +117,7 @@ export const MistSection = () => {
                         <div className={cn(imageClasses, 'aspect-72/37')}>
                             <Image
                                 src="/mist/hero.png"
-                                alt="Dusk hero section"
+                                alt="Tailark Mist hero section"
                                 width={2880}
                                 height={1480}
                                 sizes="(max-width: 1024px) 686px, 1024px"
@@ -128,7 +128,7 @@ export const MistSection = () => {
                         <div className={cn(imageClasses, 'aspect-72/70')}>
                             <Image
                                 src="/mist/features-2.png"
-                                alt="Dusk hero section"
+                                alt="Tailark Mist features section"
                                 width={2880}
                                 height={2780}
                                 sizes="(max-width: 1024px) 686px, 1024px"
@@ -136,11 +136,11 @@ export const MistSection = () => {
                             />
                         </div>
                     </div>
-                    <div className="-mr-53 space-y-3">
+                    <div className="-mr-53 sm:spcae-y-3 space-y-2">
                         <div className={cn(imageClasses, 'aspect-90/46')}>
                             <Image
                                 src="/mist/features.png"
-                                alt="Dusk hero section"
+                                alt="Tailark Mist features section"
                                 width={2880}
                                 height={1448}
                                 sizes="(max-width: 1024px) 686px, 1024px"
@@ -151,7 +151,7 @@ export const MistSection = () => {
                         <div className={cn(imageClasses, 'aspect-90/71')}>
                             <Image
                                 src="/mist/pricing.png"
-                                alt="Dusk hero section"
+                                alt="Tailark Mist pricing section"
                                 width={2880}
                                 height={2264}
                                 sizes="(max-width: 1024px) 686px, 1024px"
@@ -161,7 +161,7 @@ export const MistSection = () => {
                         <div className={cn(imageClasses, 'aspect-90/46')}>
                             <Image
                                 src="/mist/login.png"
-                                alt="Dusk hero section"
+                                alt="Tailark Mist login section"
                                 width={2880}
                                 height={2108}
                                 sizes="(max-width: 1024px) 686px, 1024px"
