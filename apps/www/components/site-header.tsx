@@ -292,7 +292,6 @@ export const SiteHeader = () => {
                         </Dialog>
                     </div>
                 </div>
-
                 <span className="bg-size-[6px_1px] block h-px bg-[linear-gradient(90deg,var(--color-foreground)_1px,transparent_1px)] bg-bottom bg-repeat-x opacity-30 dark:opacity-15"></span>
             </div>
         </header>
