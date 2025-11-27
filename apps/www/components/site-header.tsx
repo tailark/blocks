@@ -23,12 +23,22 @@ export const SiteHeader = () => {
         <header>
             <div className="mx-auto max-w-7xl px-6 lg:px-4">
                 <div className="flex items-center justify-between py-3 lg:py-4">
-                    <div className="flex items-center">
+                    <div className="flex items-center gap-6">
                         <Link
                             href="/"
                             className="flex w-fit items-center gap-2">
                             <Logo />
                             <span className="sr-only">Tailark</span>
+                        </Link>
+
+                        <Link
+                            href="https://pro.tailark.com/#pricing"
+                            aria-label="Tailark Pro sale"
+                            className="hover:text-foreground dark:bg-foreground/5 dark:border-foreground/15 dark:text-foreground/75 rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-sm font-medium text-emerald-900">
+                            <span className="inline-flex items-center gap-1">
+                                <span className="animate-pulse">🔥</span> <span className="dark:text-foreground hidden text-emerald-950 sm:inline">Black Friday Sale: </span>
+                                <span className="font-bold">50% OFF</span> <span className="hidden sm:inline">Tailark Pro</span> - Limited time
+                            </span>
                         </Link>
                     </div>
 
