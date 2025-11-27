@@ -8,8 +8,9 @@ import { ThemeToggle } from '@/components/theme-toggle'
 import { KitSwitcher } from '@/components/kit-switcher'
 import { cn } from '@/lib/utils'
 import { Separator } from '@tailark/core/ui/separator'
-import { Menu, X } from 'lucide-react'
+import { GiftIcon, Menu, X } from 'lucide-react'
 import { Dialog, DialogClose, DialogTitle, DialogContent, DialogTrigger } from '@tailark/core/ui/dialog'
+import { BorderBeam } from '@tailark/core/magicui/border-beam'
 
 export const SiteHeader = () => {
     const pathname = usePathname()
@@ -23,7 +24,7 @@ export const SiteHeader = () => {
         <header>
             <div className="mx-auto max-w-7xl px-6 lg:px-4">
                 <div className="flex items-center justify-between py-3 lg:py-4">
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-4">
                         <Link
                             href="/"
                             className="flex w-fit items-center gap-2">
@@ -31,15 +32,7 @@ export const SiteHeader = () => {
                             <span className="sr-only">Tailark</span>
                         </Link>
 
-                        <Link
-                            href="https://pro.tailark.com/#pricing"
-                            aria-label="Tailark Pro sale"
-                            className="hover:text-foreground dark:bg-foreground/5 dark:border-foreground/15 dark:text-foreground/75 rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-sm font-medium text-emerald-900">
-                            <span className="inline-flex items-center gap-1">
-                                <span className="animate-pulse">🔥</span> <span className="dark:text-foreground hidden text-emerald-950 sm:inline">Black Friday Sale: </span>
-                                <span className="font-bold">50% OFF</span> <span className="hidden sm:inline">Tailark Pro</span> - Limited time
-                            </span>
-                        </Link>
+                        <BlackFridayDealBanner />
                     </div>
 
                     <div className="-mr-2 hidden items-center gap-4 sm:flex">
@@ -307,3 +300,20 @@ export const SiteHeader = () => {
         </header>
     )
 }
+
+const BlackFridayDealBanner = () => (
+    <div className="dark:text-foreground hover:bg-foreground/5 dark:hover:bg-emerald-500/7 dark:bg-emerald-500/3 dark:bg-linear-to-l dark:from-foreground/5 relative inline-flex h-7 items-center gap-1 rounded-full bg-emerald-500/10 text-sm text-emerald-950 before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:border before:border-emerald-500/25">
+        <Link
+            href="https://pro.tailark.com/#pricing"
+            aria-label="Tailark Pro sale"
+            className="flex items-center gap-1 px-2.5 py-1">
+            <GiftIcon className="size-4 *:last:text-emerald-500" />
+            <span className="dark:text-foreground hidden text-emerald-950 sm:inline">Black Friday: </span>
+            <span className="dark:text-foreground/85">
+                Get <span className="dark:text-foreground font-semibold">50% OFF</span> <span className="hidden sm:inline">Tailark Pro</span>
+            </span>
+            <span className="dark:border-l-foreground/50 ml-2 block size-0 border-y-4 border-l-4 border-y-transparent border-l-emerald-950/50" />
+        </Link>
+        <BorderBeam className="from-emerald-200 via-emerald-500 to-transparent" />
+    </div>
+)

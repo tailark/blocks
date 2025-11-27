@@ -18,7 +18,7 @@ export default function Home() {
                             asChild
                             className="mt-5 rounded-full">
                             <Link href="/hero-section">
-                                Explore blocks <span className="border-l-primary-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent"></span>
+                                Explore blocks <span className="border-l-primary-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent" />
                             </Link>
                         </Button>
                     </div>
