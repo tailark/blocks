@@ -10,7 +10,7 @@
   },
   "imports": {
     "#*": "./*",
-    "#components/*":[
+    "#components/*": [
       "./components/*.ts",
       "./components/*.tsx"
     ]
@@ -24,7 +24,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.475.0",
     "motion": "^12.4.3",
-    "next": "15.3.1",
+    "next": "15.3.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.1"
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailark/core": "workspace:*",
-    "@tailark/ts-config" : "workspace:*",
+    "@tailark/ts-config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.6",
     "@types/node": "^20",
     "@types/react": "^19",
