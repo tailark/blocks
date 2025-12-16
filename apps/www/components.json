@@ -20,6 +20,12 @@
   },
   "iconLibrary": "lucide",
   "registries": {
-    "@tailark":"http://localhost:3000/r/{name}.json"
+    "@tailark":"http://localhost:3000/r/{name}.json",
+    "@tailark-pro": {
+      "url": "http://localhost:3000/registry/{name}",
+      "headers": {
+        "Authorization": "Bearer ${TAILARK_API_KEY}"
+      }
+    }
   }
 }
