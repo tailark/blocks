@@ -24,16 +24,12 @@ export const SiteHeader = () => {
         <header>
             <div className="mx-auto max-w-7xl px-6 lg:px-4">
                 <div className="flex items-center justify-between py-3 lg:py-4">
-                    <div className="flex items-center gap-4">
-                        <Link
-                            href="/"
-                            className="flex w-fit items-center gap-2">
-                            <Logo />
-                            <span className="sr-only">Tailark</span>
-                        </Link>
-
-                        <BlackFridayDealBanner />
-                    </div>
+                    <Link
+                        href="/"
+                        className="flex w-fit items-center gap-2">
+                        <Logo />
+                        <span className="sr-only">Tailark</span>
+                    </Link>
 
                     <div className="-mr-2 hidden items-center gap-4 sm:flex">
                         <div className="flex items-center gap-1">
