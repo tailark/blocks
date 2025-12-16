@@ -10,7 +10,7 @@
       "title": "Call To Action 1",
       "description": "Shadcn/ui call to action block",
       "registryDependencies" : [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -26,7 +26,7 @@
       "title": "Call To Action 2",
       "description": "Shadcn/ui call to action block",
       "registryDependencies" : [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -42,7 +42,7 @@
       "title": "Call To Action 3",
       "description": "Shadcn/ui call to action block",
       "registryDependencies" : [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -59,7 +59,7 @@
       "title": "Pricing Comparator 1",
       "description": "Shadcn/ui pricing comparator table block",
       "registryDependencies" : [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -115,7 +115,7 @@
       "title": "Content Block 4",
       "description": "Shadcn/ui website content block",
       "registryDependencies" : [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -185,7 +185,7 @@
       "title": "FAQs Block 2",
       "description": "Shadcn/ui FAQs block with accordion component",
       "registryDependencies": [
-        "accordion"
+        "@shadcn/accordion"
       ],
       "files": [
         {
@@ -202,7 +202,7 @@
       "title": "FAQs Block 3",
       "description": "Shadcn/ui FAQs block with accordion component and icons",
       "registryDependencies": [
-        "accordion"
+        "@shadcn/accordion"
       ],
       "files": [
         {
@@ -219,7 +219,7 @@
       "title": "FAQs Block 4",
       "description": "Shadcn/ui FAQs block with accordion component and icons",
       "registryDependencies": [
-        "accordion"
+        "@shadcn/accordion"
       ],
       "files": [
         {
@@ -235,7 +235,7 @@
       "title": "Features Block 1",
       "description": "Shadcn/ui website features block",
       "registryDependencies" : [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -251,7 +251,7 @@
       "title": "Features Block 2",
       "description": "Shadcn/ui website features block",
       "registryDependencies" : [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -267,7 +267,7 @@
       "title": "Features Block 3",
       "description": "Shadcn/ui website features block",
       "registryDependencies" : [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -335,7 +335,7 @@
       "title": "Features Block 8",
       "description": "Shadcn/ui website features block",
       "registryDependencies" : [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -351,7 +351,7 @@
       "title": "Features Block 9",
       "description": "Shadcn/ui website features block",
       "registryDependencies" : [
-        "card",
+        "@shadcn/card",
         "chart"
       ],
       "dependencies": [
@@ -375,7 +375,7 @@
       "title": "Features Block 10",
       "description": "Shadcn/ui website features block with cards and circular UI elements",
       "registryDependencies" : [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -391,7 +391,7 @@
       "title": "Features Block 11",
       "description": "Shadcn/ui website features block with grid layout and images",
       "registryDependencies" : [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -407,7 +407,7 @@
       "title": "Features Block 12",
       "description": "Shadcn/ui website features block with accordion and animated images",
       "registryDependencies" : [
-        "accordion",
+        "@shadcn/accordion",
         "https://magicui.design/r/border-beam"
       ],
       "dependencies": [
@@ -461,9 +461,9 @@
       "title": "Footer Block 3",
       "description": "Shadcn/ui website footer block",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -500,9 +500,9 @@
       "title": "Footer Block 5",
       "description": "Shadcn/ui website footer block",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -522,9 +522,9 @@
       "title": "Hero Section 1",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button",
-        "https://motion-primitives.com/c/text-effect.json",
-        "https://motion-primitives.com/c/animated-group.json"
+        "@shadcn/button",
+        "@motion-primitives/text-effect",
+        "@motion-primitives/animated-group"
       ],
       "files": [
         {
@@ -549,9 +549,9 @@
       "title": "Hero Section 2",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button",
-        "https://motion-primitives.com/c/text-effect.json",
-        "https://motion-primitives.com/c/animated-group.json"
+        "@shadcn/button",
+        "@motion-primitives/text-effect",
+        "@motion-primitives/animated-group"
       ],
       "files": [
         {
@@ -576,9 +576,9 @@
       "title": "Hero Section 3",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button",
-        "https://motion-primitives.com/c/text-effect.json",
-        "https://motion-primitives.com/c/animated-group.json"
+        "@shadcn/button",
+        "@motion-primitives/text-effect",
+        "@motion-primitives/animated-group"
       ],
       "files": [
         {
@@ -608,9 +608,9 @@
       "title": "Hero Section 4",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button",
-        "https://motion-primitives.com/c/infinite-slider.json",
-        "https://motion-primitives.com/c/progressive-blur.json"
+        "@shadcn/button",
+        "@motion-primitives/infinite-slider",
+        "@motion-primitives/progressive-blur"
       ],
       "files": [
         {
@@ -635,9 +635,9 @@
       "title": "Hero Section 5",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button",
-        "https://motion-primitives.com/c/infinite-slider.json",
-        "https://motion-primitives.com/c/progressive-blur.json"
+        "@shadcn/button",
+        "@motion-primitives/infinite-slider",
+        "@motion-primitives/progressive-blur"
       ],
       "files": [
         {
@@ -662,7 +662,7 @@
       "title": "Hero Section 6",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -682,7 +682,7 @@
       "title": "Hero Section 7",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "dependencies": [
         "swiper"
@@ -705,7 +705,7 @@
       "title": "Hero Section 8",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -725,7 +725,7 @@
       "title": "Hero Section 9",
       "description": "Shadcn/ui website Hero Section",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -745,9 +745,9 @@
       "title": "Login Page 1",
       "description": "Shadcn/ui Login Page",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -767,9 +767,9 @@
       "title": "Login Page 2",
       "description": "Shadcn/ui Login Page",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -789,9 +789,9 @@
       "title": "Login Page 3",
       "description": "Shadcn/ui Login Page",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -810,9 +810,9 @@
       "title": "Sign Up Page 1",
       "description": "Shadcn/ui Sign Up Page",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -832,9 +832,9 @@
       "title": "Sign Up Page 2",
       "description": "Shadcn/ui Sign Up Page",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -854,9 +854,9 @@
       "title": "Sign Up Page 3",
       "description": "Shadcn/ui Sign Up Page",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -876,9 +876,9 @@
       "title": "Forgot Password Page 1",
       "description": "Shadcn/ui Forgot Password Page",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -898,9 +898,9 @@
       "title": "Forgot Password Page 2",
       "description": "Shadcn/ui Forgot Password Page",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -998,8 +998,8 @@
       "title": "Testimonials Section 1",
       "description": "Shadcn/ui website testimonials section",
       "registryDependencies": [
-        "card",
-        "avatar"
+        "@shadcn/card",
+        "@shadcn/avatar"
       ],
       "files": [
         {
@@ -1015,8 +1015,8 @@
       "title": "Testimonials Section 2",
       "description": "Shadcn/ui website testimonials section",
       "registryDependencies": [
-        "card",
-        "avatar"
+        "@shadcn/card",
+        "@shadcn/avatar"
       ],
       "files": [
         {
@@ -1045,7 +1045,7 @@
       "title": "Testimonials Section 4",
       "description": "Shadcn/ui website testimonials section",
       "registryDependencies": [
-        "avatar"
+        "@shadcn/avatar"
       ],
       "files": [
         {
@@ -1061,8 +1061,8 @@
       "title": "Testimonials Section 5",
       "description": "Shadcn/ui website testimonials section",
       "registryDependencies": [
-        "avatar",
-        "card"
+        "@shadcn/avatar",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1078,8 +1078,8 @@
       "title": "Testimonials Section 6",
       "description": "Shadcn/ui website testimonials section",
       "registryDependencies": [
-        "avatar",
-        "card"
+        "@shadcn/avatar",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1121,8 +1121,8 @@
       "title": "Logo Cloud 3",
       "description": "Shadcn/ui website logo cloud section",
       "registryDependencies": [
-        "https://motion-primitives.com/c/infinite-slider.json",
-        "https://motion-primitives.com/c/progressive-blur.json"
+        "@motion-primitives/infinite-slider",
+        "@motion-primitives/progressive-blur"
       ],
       "files": [
         {
@@ -1138,8 +1138,8 @@
       "title": "Pricing Block 1",
       "description": "Shadcn/ui website pricing section",
       "registryDependencies": [
-        "button",
-        "card"
+        "@shadcn/button",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1155,8 +1155,8 @@
       "title": "Pricing Block 1",
       "description": "Shadcn/ui website pricing section",
       "registryDependencies": [
-        "button",
-        "card"
+        "@shadcn/button",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1172,8 +1172,8 @@
       "title": "Pricing Block 2",
       "description": "Shadcn/ui website pricing section",
       "registryDependencies": [
-        "button",
-        "card"
+        "@shadcn/button",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1189,8 +1189,8 @@
       "title": "Pricing Block 3",
       "description": "Shadcn/ui website pricing section",
       "registryDependencies": [
-        "button",
-        "card"
+        "@shadcn/button",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1206,7 +1206,7 @@
       "title": "Pricing Block 4",
       "description": "Shadcn/ui website pricing section",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1222,7 +1222,7 @@
       "title": "Pricing Block 5",
       "description": "Shadcn/ui website pricing section",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1238,12 +1238,12 @@
       "title": "Contact Block 1",
       "description": "Shadcn/ui website contact section",
       "registryDependencies": [
-        "button",
-        "input",
-        "label",
-        "textarea",
-        "select",
-        "card"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label",
+        "@shadcn/textarea",
+        "@shadcn/select",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1259,12 +1259,12 @@
       "title": "Contact Block 2",
       "description": "Shadcn/ui website contact section",
       "registryDependencies": [
-        "button",
-        "input",
-        "label",
-        "textarea",
-        "select",
-        "card"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label",
+        "@shadcn/textarea",
+        "@shadcn/select",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1280,8 +1280,8 @@
       "title": "Integrations Block 1",
       "description": "Shadcn/ui website integrations section",
       "registryDependencies": [
-        "card",
-        "button"
+        "@shadcn/card",
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1332,7 +1332,7 @@
       "title": "Integrations Block 2",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1387,7 +1387,7 @@
       "title": "Integrations Block 3",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1442,7 +1442,7 @@
       "title": "Integrations Block 4",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1497,7 +1497,7 @@
       "title": "Integrations Block 5",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1552,7 +1552,7 @@
       "title": "Integrations Block 6",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1603,8 +1603,8 @@
       "title": "Integrations Block 7",
       "description": "Shadcn/ui website integrations block",
       "registryDependencies": [
-        "button",
-        "https://motion-primitives.com/c/infinite-slider.json"
+        "@shadcn/button",
+        "@motion-primitives/infinite-slider"
       ],
       "files": [
         {
@@ -1663,8 +1663,8 @@
       "title": "Integrations Block 8",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "hover-card",
-        "button"
+        "@shadcn/hover-card",
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1717,7 +1717,7 @@
       "title": "Call To Action 1",
       "description": "Mist Kit Call To Action block, variant 1",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1733,7 +1733,7 @@
       "title": "Call To Action 2",
       "description": "Mist Kit Call To Action block, variant 2",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1749,7 +1749,7 @@
       "title": "Call To Action 3",
       "description": "Mist Kit Call To Action block, variant 3",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1765,7 +1765,7 @@
       "title": "Comparator One",
       "description": "Mist Kit Comparator block, variant one",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1781,12 +1781,12 @@
       "title": "Contact One",
       "description": "Mist Kit Contact block, variant one",
        "registryDependencies": [
-        "button",
-        "card",
-        "input",
-        "textarea",
-        "label",
-        "select"
+        "@shadcn/button",
+        "@shadcn/card",
+        "@shadcn/input",
+        "@shadcn/textarea",
+        "@shadcn/label",
+        "@shadcn/select"
       ],
       "files": [
         {
@@ -1802,8 +1802,8 @@
       "title": "Content One",
       "description": "Mist Kit Content block, variant one",
        "registryDependencies": [
-        "toggle",
-        "toggle-group"
+        "@shadcn/toggle",
+        "@shadcn/toggle-group"
       ],
       "files": [
         {
@@ -1819,8 +1819,8 @@
       "title": "Content Two",
       "description": "Mist Kit Content block, variant two",
       "registryDependencies": [
-        "toggle",
-        "toggle-group"
+        "@shadcn/toggle",
+        "@shadcn/toggle-group"
       ],
       "files": [
         {
@@ -1862,7 +1862,7 @@
       "title": "FAQs One",
       "description": "Mist Kit FAQs block, variant one",
       "registryDependencies": [
-        "accordion"
+        "@shadcn/accordion"
       ],
       "files": [
         {
@@ -1878,7 +1878,7 @@
       "title": "FAQs Two",
       "description": "Mist Kit FAQs block, variant two",
       "registryDependencies": [
-        "accordion"
+        "@shadcn/accordion"
       ],
       "files": [
         {
@@ -1894,7 +1894,7 @@
       "title": "FAQs Three",
       "description": "Mist Kit FAQs block, variant three",
       "registryDependencies": [
-        "accordion"
+        "@shadcn/accordion"
       ],
       "files": [
         {
@@ -1910,7 +1910,7 @@
       "title": "Features One",
       "description": "Mist Kit Features block, variant one",
       "registryDependencies": [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1931,7 +1931,7 @@
       "title": "Features Two",
       "description": "Mist Kit Features block, variant two",
        "registryDependencies": [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -1947,9 +1947,9 @@
       "title": "Features Three",
       "description": "Mist Kit Features block, variant three",
       "registryDependencies": [
-        "card",
-        "toggle",
-        "toggle-group"
+        "@shadcn/card",
+        "@shadcn/toggle",
+        "@shadcn/toggle-group"
       ],
       "files": [
         {
@@ -1965,9 +1965,9 @@
       "title": "Features Four",
       "description": "Mist Kit Features block, variant four",
       "registryDependencies": [
-        "card",
-        "toggle",
-        "toggle-group"
+        "@shadcn/card",
+        "@shadcn/toggle",
+        "@shadcn/toggle-group"
       ],
       "files": [
         {
@@ -1983,7 +1983,7 @@
       "title": "Features Five",
       "description": "Mist Kit Features block, variant five",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -1999,8 +1999,8 @@
       "title": "Features Six",
       "description": "Mist Kit Features block, variant six",
       "registryDependencies": [
-        "card",
-        "button"
+        "@shadcn/card",
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2016,8 +2016,8 @@
       "title": "Features Seven",
       "description": "Mist Kit Features block, variant seven",
       "registryDependencies": [
-        "card",
-        "button"
+        "@shadcn/card",
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2033,7 +2033,7 @@
       "title": "Features Eight",
       "description": "Mist Kit Features block, variant eight",
       "registryDependencies": [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -2049,8 +2049,8 @@
       "title": "Features Nine",
       "description": "Mist Kit Features block, variant nine",
       "registryDependencies": [
-        "card",
-        "button"
+        "@shadcn/card",
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2066,8 +2066,8 @@
       "title": "Features Ten",
       "description": "Mist Kit Features block, variant ten",
       "registryDependencies": [
-        "card",
-        "button"
+        "@shadcn/card",
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2083,8 +2083,8 @@
       "title": "Features Eleven",
       "description": "Mist Kit Features block, variant eleven",
       "registryDependencies": [
-        "card",
-        "button"
+        "@shadcn/card",
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2172,9 +2172,9 @@
       "title": "Forgot password block",
       "description": "Mist Kit Forgot password block, variant one",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -2195,7 +2195,7 @@
       "title": "Hero Section One",
       "description": "Mist Kit Hero Section block, variant one",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2221,7 +2221,7 @@
       "title": "Hero Section Two",
       "description": "Mist Kit Hero Section block, variant two",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2247,7 +2247,7 @@
       "title": "Hero Section Three",
       "description": "Mist Kit Hero Section block, variant three",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2273,7 +2273,7 @@
       "title": "Hero Section Four",
       "description": "Mist Kit Hero Section block, variant four",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2299,7 +2299,7 @@
       "title": "Hero Section Five",
       "description": "Mist Kit Hero Section block, variant five",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2315,7 +2315,7 @@
       "title": "Hero Section Six",
       "description": "Mist Kit Hero Section block, variant six",
       "registryDependencies": [
-        "button"
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2475,9 +2475,9 @@
       "title": "Login block",
       "description": "Mist Kit Login block, variant one",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -2524,8 +2524,8 @@
       "title": "Pricing One",
       "description": "Mist Kit Pricing block, variant one",
       "registryDependencies": [
-        "button",
-        "card"
+        "@shadcn/button",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -2546,8 +2546,8 @@
       "title": "Pricing Two",
       "description": "Mist Kit Pricing block, variant two",
       "registryDependencies": [
-        "button",
-        "card"
+        "@shadcn/button",
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -2563,9 +2563,9 @@
       "title": "Sign Up block",
       "description": "Mist Kit Sign Up block, variant two",
       "registryDependencies": [
-        "button",
-        "input",
-        "label"
+        "@shadcn/button",
+        "@shadcn/input",
+        "@shadcn/label"
       ],
       "files": [
         {
@@ -2586,7 +2586,7 @@
       "title": "Stats block",
       "description": "Mist Kit Stats block, variant one",
       "registryDependencies": [
-        "card"
+        "@shadcn/card"
       ],
       "files": [
         {
@@ -2641,8 +2641,8 @@
       "title": "Team section block",
       "description": "Mist Kit Team section block, variant one",
       "registryDependencies": [
-        "avatar",
-        "button"
+        "@shadcn/avatar",
+        "@shadcn/button"
       ],
       "files": [
         {
@@ -2658,9 +2658,9 @@
       "title": "Team section block",
       "description": "Mist Kit Team section block, variant two",
       "registryDependencies": [
-        "avatar",
-        "button",
-        "hover-card"
+        "@shadcn/avatar",
+        "@shadcn/button",
+        "@shadcn/hover-card"
       ],
       "files": [
         {
@@ -2689,7 +2689,7 @@
       "title": "Testimonials Two",
       "description": "Mist Kit Testimonials block, variant two",
       "registryDependencies": [
-        "avatar"
+        "@shadcn/avatar"
       ],
       "files": [
         {
@@ -2705,7 +2705,7 @@
       "title": "Testimonials Three",
       "description": "Mist Kit Testimonials block, variant three",
       "registryDependencies": [
-        "avatar"
+        "@shadcn/avatar"
       ],
       "files": [
         {
@@ -2721,7 +2721,7 @@
       "title": "Testimonials Four",
       "description": "Mist Kit Testimonials block, variant four",
       "registryDependencies": [
-        "avatar"
+        "@shadcn/avatar"
       ],
       "files": [
         {
@@ -2737,7 +2737,7 @@
       "title": "Testimonials Five",
       "description": "Mist Kit Testimonials block, variant five",
       "registryDependencies": [
-        "avatar"
+        "@shadcn/avatar"
       ],
       "files": [
         {
