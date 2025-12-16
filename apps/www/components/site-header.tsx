@@ -297,7 +297,7 @@ export const SiteHeader = () => {
     )
 }
 
-const BlackFridayDealBanner = () => (
+export const BlackFridayDealBanner = () => (
     <div className="dark:text-foreground hover:bg-foreground/5 dark:hover:bg-emerald-500/7 dark:bg-emerald-500/3 dark:bg-linear-to-l dark:from-foreground/5 relative inline-flex h-7 items-center gap-1 rounded-full bg-emerald-500/10 text-sm text-emerald-950 before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:border before:border-emerald-500/25">
         <Link
             href="https://pro.tailark.com/#pricing"
