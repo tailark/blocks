@@ -13,7 +13,7 @@
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",
-    "ui": "@tailark/core/ui",
+    "ui": "@/components/ui",
     "lib": "@/lib",
     "hooks": "@/hooks",
     "data": "@/data"
