@@ -7,8 +7,8 @@ import { ReactNode } from 'react'
 export default function Features() {
     return (
         <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
-            <div className="mx-auto max-w-2xl px-6 lg:max-w-5xl">
-                <div className="mx-auto grid gap-4 lg:grid-cols-2">
+            <div className="mx-auto max-w-2xl px-2 md:px-6 lg:max-w-5xl">
+                <div className="mx-auto grid lg:gap-4 lg:grid-cols-2">
                     <FeatureCard>
                         <CardHeader className="pb-3">
                             <CardHeading
@@ -23,7 +23,7 @@ export default function Features() {
                                 aria-hidden
                                 className="absolute inset-0 [background:radial-gradient(125%_125%_at_50%_0%,transparent_40%,var(--color-blue-600),var(--color-white)_100%)]"
                             />
-                            <div className="aspect-76/59 p-1 px-6">
+                            <div className="aspect-76/59 p-1 px-1 md:px-6">
                                 <DualModeImage
                                     darkSrc="/payments.png"
                                     lightSrc="/payments-light.png"
@@ -59,7 +59,7 @@ export default function Features() {
                         </CardContent>
                     </FeatureCard>
 
-                    <FeatureCard className="p-6 lg:col-span-2">
+                    <FeatureCard className="md:p-6 lg:col-span-2">
                         <p className="mx-auto my-6 max-w-md text-balance text-center text-2xl font-semibold">Smart scheduling with automated reminders for maintenance.</p>
 
                         <div className="flex justify-center gap-6 overflow-hidden">
