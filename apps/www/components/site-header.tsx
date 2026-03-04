@@ -7,15 +7,15 @@ import { Button } from '@tailark/core/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 import { Separator } from '@tailark/core/ui/separator'
-import { Menu, X } from 'lucide-react'
+import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { Dialog, DialogClose, DialogTitle, DialogContent, DialogTrigger } from '@tailark/core/ui/dialog'
 
 const links = [
-    { href: '/illustrations', label: 'Illustrations' },
-    { href: '/blocks', label: 'Blocks' },
-    { href: '/pages', label: 'Pages' },
-    { href: '/#pricing', label: 'Pricing' },
-    { href: '/docs', label: 'Docs' },
+    { href: 'https://pro.tailark.com/illustrations', label: 'Illustrations', isExternal: true },
+    { href: '/blocks', label: 'Blocks', isExternal: false },
+    { href: 'https://pro.tailark.com/pages', label: 'Pages', isExternal: true },
+    { href: '/#pricing', label: 'Pricing', isExternal: false },
+    { href: '/docs', label: 'Docs', isExternal: false },
 ]
 
 export const SiteHeader = ({ isWide = false }: { isWide?: boolean }) => {
@@ -54,8 +54,19 @@ export const SiteHeader = ({ isWide = false }: { isWide?: boolean }) => {
                                     asChild
                                     size="sm"
                                     variant="ghost"
-                                    className={cn('text-foreground/75 hover:text-foreground h-7 text-[13px]', isActive(link.href) && 'text-foreground')}>
-                                    <Link href={link.href}>{link.label}</Link>
+                                    className={cn('text-foreground/75 hover:text-foreground h-7 items-start gap-0.5 text-[13px] hover:bg-transparent', isActive(link.href) && 'text-foreground')}>
+                                    <Link
+                                        href={link.href}
+                                        target={link.isExternal ? '_blank' : '_self'}>
+                                        {link.label}
+
+                                        {link.isExternal && (
+                                            <ArrowUpRight
+                                                strokeWidth={2}
+                                                className="size-2.5! opacity-50"
+                                            />
+                                        )}
+                                    </Link>
                                 </Button>
                             ))}
                         </div>

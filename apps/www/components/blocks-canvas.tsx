@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, ReactNode } from 'react'
 import { BlockImage } from './block-image'
 import { cn } from '@/lib/utils'
 
@@ -101,6 +101,10 @@ export const BlocksCanvas = () => {
 
     const visibleCategoryColumns = distributeToColumns(sortByCategory(categories), 3)
 
+    const columnHeights = visibleCategoryColumns.map((column) => column.reduce((sum, cat) => sum + (cat.height || 0), 0))
+    const maxHeight = Math.max(...columnHeights)
+    const tallestColumnIndex = columnHeights.indexOf(maxHeight)
+
     const KitSwitcher = () => (
         <div className="mb-4 flex items-center justify-center">
             {kits.map((kit) => (
@@ -119,17 +123,20 @@ export const BlocksCanvas = () => {
         <div className="mt-12">
             <KitSwitcher />
             <div className={cn('bg-muted/50 max-w-380 relative mx-auto overflow-hidden border-y p-4 transition-opacity duration-200 2xl:rounded-t-3xl 2xl:border-x', loading && 'opacity-50')}>
-                <div className="grid gap-4 *:grid *:gap-4 md:grid-cols-3">
+                <div className="grid gap-4 *:grid md:grid-cols-3">
                     {visibleCategoryColumns.map((column, colIndex) => (
                         <div
                             key={colIndex}
-                            className="grid h-fit gap-1.5">
-                            {column.map((category) => (
-                                <BlockCard
-                                    key={category.name}
-                                    category={category}
-                                />
-                            ))}
+                            className={cn('grid gap-4', colIndex !== tallestColumnIndex && 'grid-rows-[auto_1fr]')}>
+                            <div className="grid h-fit gap-4">
+                                {column.map((category) => (
+                                    <BlockCard
+                                        key={category.name}
+                                        category={category}
+                                    />
+                                ))}
+                            </div>
+                            {colIndex !== tallestColumnIndex && <CardContainer />}
                         </div>
                     ))}
                 </div>
@@ -156,9 +163,19 @@ function getCategoryUrl(category: BlockCategory): string {
     return `/${name}`
 }
 
+const CardContainer = ({ children }: { children?: ReactNode }) => {
+    return (
+        <div
+            aria-hidden={!!children}
+            className="bg-card shadow-black/4 hover:bg-card/75 dark:hover:bg-card/75 dark:bg-background ring-foreground/7.5 relative overflow-hidden rounded-xl shadow ring">
+            {children}
+        </div>
+    )
+}
+
 const BlockCard = ({ category }: { category: BlockCategory }) => {
     return (
-        <div className="bg-card shadow-black/4 hover:bg-card/75 dark:hover:bg-card/75 dark:bg-background ring-foreground/7.5 relative overflow-hidden rounded-xl shadow ring">
+        <CardContainer>
             <div className="px-6 pt-6 xl:px-12 xl:pt-12">
                 <div
                     className="bg-card overflow-hidden rounded-lg border"
@@ -176,6 +193,6 @@ const BlockCard = ({ category }: { category: BlockCategory }) => {
 
                 <span className="text-muted-foreground font-mono">{category.quantity} blocks</span>
             </p>
-        </div>
+        </CardContainer>
     )
 }
