@@ -1,3 +1,5 @@
+import { Spotify } from '@tailark/core/components/logos/spotify'
+
 export default function StatsSection() {
     return (
         <section className="py-16 md:py-32">
@@ -28,7 +30,11 @@ export default function StatsSection() {
 
                             <div className="mt-6 space-y-3">
                                 <cite className="block font-medium">John Doe, CEO</cite>
-                                <img className="h-5 w-fit dark:invert" src="https://html.tailus.io/blocks/customers/nvidia.svg" alt="Nvidia Logo" height="20" width="auto" />
+                                <Spotify
+                                    height={26}
+                                    width={84}
+                                    className="*:fill-foreground"
+                                />
                             </div>
                         </blockquote>
                     </div>

@@ -5,6 +5,16 @@ import { useState } from 'react'
 import { Button } from '@tailark/core/ui/button'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import { Spotify } from '@tailark/core/components/logos/spotify'
+import { Supabase } from '@tailark/core/components/logos/supabase'
+import { Hulu } from '@tailark/core/components/logos/hulu'
+import { Firebase } from '@tailark/core/components/logos/firebase'
+import { Beacon } from '@tailark/core/components/logos/beacon'
+import { Bolt } from '@tailark/core/components/logos/bolt'
+import { Claude } from '@tailark/core/components/logos/claude'
+import { Figma } from '@tailark/core/components/logos/figma'
+import { VercelFull } from '@tailark/core/components/logos/vercel'
+import { Cisco } from '@tailark/core/components/logos/cisco'
 
 const menuItems = [
     { name: 'Features', href: '#' },
@@ -127,83 +137,43 @@ export default function HeroSection() {
                 <section className="dark:bg-background bg-muted/50 relative z-10 py-16">
                     <div className="m-auto max-w-5xl px-6">
                         <h2 className="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
-                        <div className="mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
-                            <img
-                                className="h-5 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                alt="Nvidia Logo"
-                                height="20"
-                                width="auto"
+                        <div className="**:fill-foreground mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
+                            <Bolt
+                                height={22}
+                                width={56}
                             />
-                            <img
-                                className="h-4 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/column.svg"
-                                alt="Column Logo"
-                                height="16"
-                                width="auto"
+                            <VercelFull
+                                height={22}
+                                width={84}
                             />
-                            <img
-                                className="h-4 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/github.svg"
-                                alt="GitHub Logo"
-                                height="16"
-                                width="auto"
+                            <Supabase className="h-6" />
+                            <Hulu
+                                height={18}
+                                width={56}
                             />
-                            <img
-                                className="h-5 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/nike.svg"
-                                alt="Nike Logo"
-                                height="20"
-                                width="auto"
+                            <Spotify
+                                height={24}
+                                width={80}
                             />
-                            <img
-                                className="h-4 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/laravel.svg"
-                                alt="Laravel Logo"
-                                height="16"
-                                width="auto"
+                            <Firebase
+                                height={24}
+                                width={80}
                             />
-                            <img
-                                className="h-7 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/lilly.svg"
-                                alt="Lilly Logo"
-                                height="28"
-                                width="auto"
+                            <Beacon
+                                height={24}
+                                width={80}
                             />
-                            <img
-                                className="h-5 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                                alt="Lemon Squeezy Logo"
-                                height="20"
-                                width="auto"
+                            <Claude
+                                height={26}
+                                width={90}
                             />
-                            <img
-                                className="h-6 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/openai.svg"
-                                alt="OpenAI Logo"
-                                height="24"
-                                width="auto"
+                            <Figma
+                                height={24}
+                                width={24}
                             />
-                            <img
-                                className="h-4 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/tailwindcss.svg"
-                                alt="Tailwind CSS Logo"
-                                height="16"
-                                width="auto"
-                            />
-                            <img
-                                className="h-5 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/vercel.svg"
-                                alt="Vercel Logo"
-                                height="20"
-                                width="auto"
-                            />
-                            <img
-                                className="h-5 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/zapier.svg"
-                                alt="Zapier Logo"
-                                height="20"
-                                width="auto"
+                            <Cisco
+                                height={30}
+                                width={60}
                             />
                         </div>
                     </div>

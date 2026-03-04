@@ -4,6 +4,9 @@ import { Button } from '@mist/components/ui/button'
 import { HeroHeader } from './header'
 import { ChevronRight, CirclePlay } from 'lucide-react'
 import Image from 'next/image'
+import { VercelFull } from '@tailark/core/components/logos/vercel'
+import { Spotify } from '@tailark/core/components/logos/spotify'
+import { Supabase } from '@tailark/core/components/logos/supabase'
 
 export default function HeroSection() {
     return (
@@ -44,34 +47,16 @@ export default function HeroSection() {
 
                                 <div className="mt-10">
                                     <p className="text-muted-foreground">Trusted by teams at :</p>
-                                    <div className="mt-6 grid max-w-sm grid-cols-3 gap-6">
-                                        <div className="flex">
-                                            <img
-                                                className="h-4 w-fit"
-                                                src="https://html.tailus.io/blocks/customers/column.svg"
-                                                alt="Column Logo"
-                                                height="16"
-                                                width="auto"
-                                            />
-                                        </div>
-                                        <div className="flex">
-                                            <img
-                                                className="h-5 w-fit"
-                                                src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                                alt="Nvidia Logo"
-                                                height="20"
-                                                width="auto"
-                                            />
-                                        </div>
-                                        <div className="flex">
-                                            <img
-                                                className="h-4 w-fit"
-                                                src="https://html.tailus.io/blocks/customers/github.svg"
-                                                alt="GitHub Logo"
-                                                height="16"
-                                                width="auto"
-                                            />
-                                        </div>
+                                    <div className="**:fill-foreground mt-6 flex items-center gap-8">
+                                        <VercelFull
+                                            height={20}
+                                            width={76}
+                                        />
+                                        <Spotify
+                                            height={22}
+                                            width={73}
+                                        />
+                                        <Supabase className="h-[22px]" />
                                     </div>
                                 </div>
                             </div>

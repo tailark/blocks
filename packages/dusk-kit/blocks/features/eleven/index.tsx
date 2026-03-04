@@ -1,6 +1,9 @@
 import { Card, CardContent, CardHeader } from '@tailark/core/ui/card'
 import { Globe } from 'lucide-react'
 import Image from 'next/image'
+import { Linear } from '@tailark/core/components/logos/linear'
+import { Twilio } from '@tailark/core/components/logos/twilio'
+import { Slack } from '@tailark/core/components/logos/slack'
 
 export default function Features() {
     return (
@@ -81,33 +84,15 @@ export default function Features() {
                             <div className="grid grid-cols-4 gap-2 md:grid-cols-6">
                                 <div className="rounded-(--radius) aspect-square border border-dashed"></div>
                                 <div className="rounded-(--radius) bg-muted/50 flex aspect-square items-center justify-center border p-4">
-                                    <img
-                                        className="m-auto size-8 invert dark:invert-0"
-                                        src="https://oxymor-ns.tailus.io/logos/linear.svg"
-                                        alt="Linear logo"
-                                        width="32"
-                                        height="32"
-                                    />
+                                    <Linear className="*:fill-foreground m-auto size-6" />
                                 </div>
                                 <div className="rounded-(--radius) aspect-square border border-dashed"></div>
                                 <div className="rounded-(--radius) bg-muted/50 flex aspect-square items-center justify-center border p-4">
-                                    <img
-                                        className="m-auto size-8 invert dark:invert-0"
-                                        src="https://oxymor-ns.tailus.io/logos/netlify.svg"
-                                        alt="Netlify logo"
-                                        width="32"
-                                        height="32"
-                                    />
+                                    <Twilio className="*:fill-foreground m-auto size-6" />
                                 </div>
                                 <div className="rounded-(--radius) aspect-square border border-dashed"></div>
                                 <div className="rounded-(--radius) bg-muted/50 flex aspect-square items-center justify-center border p-4">
-                                    <img
-                                        className="m-auto size-8 invert dark:invert-0"
-                                        src="https://oxymor-ns.tailus.io/logos/github.svg"
-                                        alt="github logo"
-                                        width="32"
-                                        height="32"
-                                    />
+                                    <Slack className="**:fill-foreground m-auto size-6" />
                                 </div>
                             </div>
                         </CardContent>

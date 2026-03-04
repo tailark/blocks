@@ -1,6 +1,9 @@
 import { Button } from '@tailark/core/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
+import { Spotify } from '@tailark/core/components/logos/spotify'
+import { Hulu } from '@tailark/core/components/logos/hulu'
+import { Firebase } from '@tailark/core/components/logos/firebase'
 
 export default function Pricing() {
     return (
@@ -43,34 +46,18 @@ export default function Pricing() {
                                     ))}
                                 </ul>
                                 <p className="text-muted-foreground mt-6 text-sm">Team can be any size, and you can add or switch members as needed. Companies using our platform include:</p>
-                                <div className="mt-12 flex flex-wrap items-center justify-between gap-6">
-                                    <img
-                                        className="h-5 w-fit dark:invert"
-                                        src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                        alt="Nvidia Logo"
-                                        height="20"
-                                        width="auto"
+                                <div className="**:fill-foreground mt-12 flex flex-wrap items-center gap-12">
+                                    <Hulu
+                                        height={18}
+                                        width={56}
                                     />
-                                    <img
-                                        className="h-4 w-fit dark:invert"
-                                        src="https://html.tailus.io/blocks/customers/column.svg"
-                                        alt="Column Logo"
-                                        height="16"
-                                        width="auto"
+                                    <Spotify
+                                        height={24}
+                                        width={80}
                                     />
-                                    <img
-                                        className="h-4 w-fit dark:invert"
-                                        src="https://html.tailus.io/blocks/customers/github.svg"
-                                        alt="GitHub Logo"
-                                        height="16"
-                                        width="auto"
-                                    />
-                                    <img
-                                        className="h-5 w-fit dark:invert"
-                                        src="https://html.tailus.io/blocks/customers/nike.svg"
-                                        alt="Nike Logo"
-                                        height="20"
-                                        width="auto"
+                                    <Firebase
+                                        height={24}
+                                        width={80}
                                     />
                                 </div>
                             </div>

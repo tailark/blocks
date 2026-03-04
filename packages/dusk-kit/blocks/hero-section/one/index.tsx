@@ -6,6 +6,14 @@ import Image from 'next/image'
 import { TextEffect } from '@tailark/core/motion-primitives/text-effect'
 import { AnimatedGroup } from '@tailark/core/motion-primitives/animated-group'
 import { HeroHeader } from './header'
+import { Spotify } from '@tailark/core/components/logos/spotify'
+import { Supabase } from '@tailark/core/components/logos/supabase'
+import { Hulu } from '@tailark/core/components/logos/hulu'
+import { Bolt } from '@tailark/core/components/logos/bolt'
+import { Firebase } from '@tailark/core/components/logos/firebase'
+import { Beacon } from '@tailark/core/components/logos/beacon'
+import { Claude } from '@tailark/core/components/logos/claude'
+import { VercelFull } from '@tailark/core/components/logos/vercel'
 
 const transitionVariants = {
     item: {
@@ -203,80 +211,31 @@ export default function HeroSection() {
                                 <ChevronRight className="ml-1 inline-block size-3" />
                             </Link>
                         </div>
-                        <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                    alt="Nvidia Logo"
-                                    height="20"
-                                    width="auto"
-                                />
+                        <div className="group-hover:blur-xs **:fill-foreground mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14 md:grid-cols-4">
+                            <div className="flex items-center">
+                                <Bolt className="mx-auto h-5 w-full" />
+                            </div>
+                            <div className="flex items-center">
+                                <VercelFull className="mx-auto h-4 w-full" />
+                            </div>
+                            <div className="flex items-center">
+                                <Supabase className="mx-auto h-6" />
+                            </div>
+                            <div className="flex items-center">
+                                <Hulu className="mx-auto h-4 w-full" />
+                            </div>
+                            <div className="flex items-center">
+                                <Spotify className="mx-auto h-6 w-full" />
+                            </div>
+                            <div className="flex items-center">
+                                <Firebase className="mx-auto h-6 w-full" />
+                            </div>
+                            <div className="flex items-center">
+                                <Beacon className="mx-auto h-4 w-full" />
                             </div>
 
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/column.svg"
-                                    alt="Column Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/github.svg"
-                                    alt="GitHub Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/nike.svg"
-                                    alt="Nike Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                                    alt="Lemon Squeezy Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/laravel.svg"
-                                    alt="Laravel Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-7 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/lilly.svg"
-                                    alt="Lilly Logo"
-                                    height="28"
-                                    width="auto"
-                                />
-                            </div>
-
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-6 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/openai.svg"
-                                    alt="OpenAI Logo"
-                                    height="24"
-                                    width="auto"
-                                />
+                            <div className="flex items-center">
+                                <Claude className="mx-auto h-5 w-full" />
                             </div>
                         </div>
                     </div>

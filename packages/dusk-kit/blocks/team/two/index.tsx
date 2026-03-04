@@ -1,40 +1,41 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const members = [
     {
-        name: 'Liam Brown',
-        role: 'Founder - CEO',
-        avatar: 'https://alt.tailus.io/images/team/member-one.webp',
-        link: '#',
-    },
-    {
-        name: 'Elijah Jones',
-        role: 'Co-Founder - CTO',
-        avatar: 'https://alt.tailus.io/images/team/member-two.webp',
+        name: 'Henry Lee',
+        role: 'UX Engeneer',
+        avatar: 'https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2352&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         link: '#',
     },
     {
         name: 'Isabella Garcia',
         role: 'Sales Manager',
-        avatar: 'https://alt.tailus.io/images/team/member-three.webp',
+        avatar: 'https://images.unsplash.com/photo-1633625763717-045645e9e739?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         link: '#',
     },
     {
-        name: 'Henry Lee',
-        role: 'UX Engeneer',
-        avatar: 'https://alt.tailus.io/images/team/member-four.webp',
-        link: '#',
-    },
-    {
-        name: 'Ava Williams',
-        role: 'Interaction Designer',
-        avatar: 'https://alt.tailus.io/images/team/member-five.webp',
+        name: 'Liam Brown',
+        role: 'Founder - CEO',
+        avatar: 'https://images.unsplash.com/photo-1758922584983-82ffd5720c6a?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         link: '#',
     },
     {
         name: 'Olivia Miller',
         role: 'Visual Designer',
-        avatar: 'https://alt.tailus.io/images/team/member-six.webp',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        link: '#',
+    },
+    {
+        name: 'Ava Williams',
+        role: 'Interaction Designer',
+        avatar: 'https://images.unsplash.com/photo-1605661107759-587d4bfdf168?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        link: '#',
+    },
+    {
+        name: 'Elijah Jones',
+        role: 'Co-Founder - CTO',
+        avatar: 'https://images.unsplash.com/photo-1563237023-b1e970526dcb?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         link: '#',
     },
 ]
@@ -58,12 +59,13 @@ export default function TeamSection() {
                             <div
                                 key={index}
                                 className="group overflow-hidden">
-                                <img
+                                <Image
                                     className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
                                     src={member.avatar}
                                     alt="team member"
                                     width="826"
                                     height="1239"
+                                    sizes="(max-width: 768px) 100vw, 280px"
                                 />
                                 <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
                                     <div className="flex justify-between">
