@@ -138,17 +138,38 @@ export const BlocksCanvas = () => {
     )
 }
 
+function getCategoryUrl(category: BlockCategory): string {
+    const kit = category.kit
+    const name = category.name
+    if (kit === 'quartz') {
+        return `https://pro.tailark.com/${name}` // target="_blank" handled in Link
+    }
+    if (kit === 'dusk') {
+        return `/${name}`
+    }
+    if (kit === 'mist') {
+        return `/mist/${name}`
+    }
+    if (kit === 'veil') {
+        return `/veil/${name}`
+    }
+    return `/${name}`
+}
+
 const BlockCard = ({ category }: { category: BlockCategory }) => {
     return (
         <div className="bg-card shadow-black/4 hover:bg-card/75 dark:hover:bg-card/75 dark:bg-background ring-foreground/7.5 relative overflow-hidden rounded-xl shadow ring">
             <div className="px-6 pt-6 xl:px-12 xl:pt-12">
-                <div className="bg-card overflow-hidden rounded-lg border">
+                <div
+                    className="bg-card overflow-hidden rounded-lg border"
+                    style={{ aspectRatio: category.metadata?.aspect }}>
                     <BlockImage category={category} />
                 </div>
             </div>
             <p className="text-foreground my-6 flex flex-col items-center justify-between gap-1 px-1 pt-1 text-sm">
                 <Link
-                    href={category.name}
+                    href={getCategoryUrl(category)}
+                    target={category.kit === 'quartz' ? '_blank' : undefined}
                     className="font-medium capitalize before:absolute before:inset-0">
                     {category.name.replace(/-/g, ' ')}
                 </Link>
