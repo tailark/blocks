@@ -11,7 +11,6 @@
 @theme inline{
 
   --font-mono: 'Geist Mono', 'Fira Code', monospace;
-  --font-sans: 'Geist', sans-serif;
   --font-serif: 'Asar', serif;
 
   --color-background: var(--background);
@@ -108,7 +107,7 @@
     --accent-foreground: var(--color-zinc-950);
     --destructive: var(--color-red-600);
     --destructive-foreground:var(--color-white);
-    --border: var(--color-zinc-200);
+    --border: --alpha(var(--color-foreground)/7.5%);
     --input: var(--color-zinc-200);
     --ring: var(--color-zinc-950);
     --chart-1: var(--color-blue-500);
@@ -136,7 +135,6 @@
     --accent-foreground:var(--color-white);
     --destructive: var(--color-red-600);
     --destructive-foreground:var(--color-white);
-    --border: var(--color-zinc-800);
     --input: var(--color-zinc-800);
     --ring: var(--color-white);
   }
