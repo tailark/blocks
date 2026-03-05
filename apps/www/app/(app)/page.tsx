@@ -11,6 +11,7 @@ import { Pricing } from '@/components/marketing/pricing'
 import { WallOfLove } from '@/components/marketing/wall-of-love'
 import FAQs from '@/components/marketing/faqs'
 import { LogoCloud } from '@/components/marketing/logo-cloud'
+import { IllustrationsSection } from '@/components/marketing/illustrations'
 
 export default function Home() {
     return (
@@ -69,7 +70,7 @@ export default function Home() {
                         <Button
                             asChild
                             size="sm"
-                            className="bg-primary/90 text-shadow-sm shadow-md shadow-black/10">
+                            className="bg-primary/90 text-shadow-sm shadow-md shadow-black/10 [--color-primary-foreground:var(--color-background)] [--color-primary:var(--foreground)]">
                             <Link
                                 href="/#pricing"
                                 className="text-sm!">
@@ -94,7 +95,9 @@ export default function Home() {
 
             <LogoCloud />
 
-            <div className="@container mx-auto px-4 py-24 lg:px-6 2xl:max-w-7xl">
+            <div
+                data-theme="global"
+                className="@container mx-auto px-4 pt-24 lg:px-6 2xl:max-w-7xl">
                 <div className="mx-auto lg:w-1/2">
                     <Link
                         href="https://vercel.com/oss"
@@ -107,7 +110,7 @@ export default function Home() {
                         />
                     </Link>
                     <h2 className="sr-only">Testimonials</h2>
-                    <div className="ring-foreground/6.5 bg-card @md:grid-cols-2 @max-md:divide-y @md:divide-x mx-auto mt-12 grid max-w-xl rounded-xl border border-transparent shadow-md shadow-black/5 ring-1">
+                    <div className="ring-border-illustration bg-card @md:grid-cols-2 @max-md:divide-y @md:divide-x mx-auto mt-12 grid max-w-xl rounded-xl border border-transparent shadow-md shadow-black/5 ring-1">
                         {testimonials.map((testimonial, index) => (
                             <div
                                 className="relative space-y-4 p-6"
@@ -165,6 +168,7 @@ export default function Home() {
                 </div>
             </div>
 
+            <IllustrationsSection />
             <PagesSection />
 
             <Pricing />

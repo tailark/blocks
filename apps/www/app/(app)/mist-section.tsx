@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils'
 import { Button } from '@tailark/core/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { mistTestimonials as testimonials } from '@/lib/testimonials'
+import { mainTestimonials as testimonials } from '@/lib/testimonials'
 
 const imageClasses = 'ring-foreground/5 relative overflow-hidden rounded-xl shadow-2xl shadow-black/25 ring-1 before:absolute before:inset-0 before:rounded-xl before:border-background before:border'
 

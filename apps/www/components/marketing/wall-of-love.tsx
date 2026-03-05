@@ -11,7 +11,7 @@ export function WallOfLove() {
         <section
             data-theme="global"
             id="wall-of-love"
-            className="bg-linear-to-b not-dark:via-muted overflow-hidden via-25%">
+            className="bg-linear-to-b not-dark:via-zinc-50 overflow-hidden via-25%">
             <div className="relative pb-16 md:pb-32">
                 <div className="mx-auto max-w-7xl px-4">
                     <div className="mx-auto max-w-xl text-center">

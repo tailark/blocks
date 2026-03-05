@@ -15,7 +15,7 @@ export const PagesSection = () => {
         <section
             id="pages"
             data-theme="global"
-            className="relative pb-32">
+            className="relative py-32">
             <div className="mx-auto max-w-7xl px-4 text-center">
                 <h2 className="text-foreground/55 mb-12 block font-mono text-sm tracking-wide">Pages</h2>
 
