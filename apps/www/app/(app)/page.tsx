@@ -195,6 +195,7 @@ export default async function Home() {
 }
 
 async function BlocksCanvasServer() {
+    'use cache'
     const catalogData = await getAllKitCategories()
     return <BlocksCanvas initialData={catalogData} />
 }
