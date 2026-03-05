@@ -6,7 +6,7 @@ import BlockPreview from '@/components/block-preview'
 import { stringToNumber } from '@tailark/core/lib/utils'
 import { slugToTitle } from '@/lib/utils'
 import CategoryNotFound from '@/components/category-not-found'
-import { ChevronRight } from 'lucide-react'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@tailark/core/ui/breadcrumb'
 
 interface PageProps {
     params: Promise<{ kit: string; category: string }>
@@ -65,34 +65,40 @@ export default function KitCategoryPage({ params }: { params: Promise<{ kit: str
     const kitDisplay = slugToTitle(kit)
 
     return (
-        <>
-            <h1 className="sr-only text-3xl font-bold sm:text-4xl md:text-nowrap">
+        <div className="mx-auto max-w-7xl">
+            <h1 className="sr-only">
                 {kitDisplay} <span className="capitalize">{categoryDisplay}</span> blocks
             </h1>
-            <div className="mx-auto max-w-7xl">
-                <nav className="text-muted-foreground flex items-center gap-1 px-4 pb-4 pt-8 text-sm">
-                    <Link
-                        href="/blocks"
-                        className="hover:text-foreground transition-colors">
-                        Blocks
-                    </Link>
-                    <ChevronRight className="size-3.5" />
-                    <Link
-                        href={`/blocks?kits=${kit}`}
-                        className="hover:text-foreground capitalize transition-colors">
-                        {kit}
-                    </Link>
-                    <ChevronRight className="size-3.5" />
-                    <span className="text-foreground capitalize">{category.replace(/-/g, ' ')}</span>
-                </nav>
-            </div>
-            <div className="h-2" />
+            <Breadcrumb className="px-4 pb-4 pt-8">
+                <BreadcrumbList>
+                    <BreadcrumbItem>
+                        <BreadcrumbLink asChild>
+                            <Link href="/blocks">Blocks</Link>
+                        </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                        <BreadcrumbLink asChild>
+                            <Link
+                                className="capitalize"
+                                href={`/blocks?kits=${kit}`}>
+                                {kit}
+                            </Link>
+                        </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                        <BreadcrumbPage className="capitalize">{category.replace(/-/g, ' ')}</BreadcrumbPage>
+                    </BreadcrumbItem>
+                </BreadcrumbList>
+            </Breadcrumb>
+
             {categoryBlocks.map((block, index) => (
                 <BlockPreview
                     {...block}
                     key={`${block.kit}-${block.slug}-${index}`}
                 />
             ))}
-        </>
+        </div>
     )
 }

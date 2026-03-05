@@ -21,10 +21,9 @@ export function ActiveCategoryLinks({ currentKitFullName, currentKitShortName, a
             className="relative flex h-11 w-max items-center gap-x-3 overflow-y-hidden px-6 lg:gap-5">
             {allCategories.map((category) => {
                 const hasBlocksInKit = blocks.some((block) => block.kit === currentKitFullName && block.category === category)
-
                 const href = currentKitShortName === 'default' ? `/${category}` : `/${currentKitShortName}/${category}`
 
-                const isActive = pathname === href
+                const isActive = pathname.includes(category)
 
                 return (
                     <li

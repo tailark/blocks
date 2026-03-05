@@ -213,21 +213,24 @@ export interface CLIGroupButtonProps {
     theme?: string
 }
 
-interface RegistryInstallButtonProps extends CLIGroupButtonProps {
+interface RegistryInstallButtonProps extends Omit<React.ComponentPropsWithoutRef<'button'>, 'title'>, CLIGroupButtonProps {
     title: string
     iconOnly?: boolean
     className?: string
 }
 
-export const RegistryInstallButton = ({ registryItem, eventName, title, category, theme, iconOnly, className }: RegistryInstallButtonProps) => {
+export const RegistryInstallButton = React.forwardRef<HTMLButtonElement, RegistryInstallButtonProps>(({ registryItem, eventName, title, category, theme, iconOnly, className, onClick, ...buttonProps }, ref) => {
     const prompt = useStore(promptStore)
     const [copied, setCopied] = React.useState(false)
 
     const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+        onClick?.(e)
+        if (e.defaultPrevented) return
+
         e.preventDefault()
         e.stopPropagation()
         const kit = theme || 'mist'
-        const command = kit === 'quartz' ? `${prompts[prompt]} shadcn@latest add @tailark-pro/${registryItem}` : `${prompts[prompt]} shadcn@latest add @tailark/${kit}/${registryItem}`
+        const command = kit === 'quartz' ? `${prompts[prompt]} shadcn@latest add @tailark-pro/${registryItem}` : kit === 'dusk' ? `${prompts[prompt]} shadcn@latest add @tailark/${registryItem}` : `${prompts[prompt]} shadcn@latest add @tailark/${kit}/${registryItem}`
         navigator.clipboard.writeText(command)
         setCopied(true)
         setTimeout(() => setCopied(false), 2000)
@@ -236,9 +239,13 @@ export const RegistryInstallButton = ({ registryItem, eventName, title, category
     if (iconOnly) {
         return (
             <button
+                ref={ref}
                 onClick={handleCopy}
+                data-event-name={eventName}
+                data-category={category}
                 className={cn('flex h-7 w-9 items-center justify-center', className)}
-                aria-label={`Copy install command for ${title}`}>
+                aria-label={`Copy install command for ${title}`}
+                {...buttonProps}>
                 <AnimatePresence mode="popLayout">
                     {copied ? (
                         <motion.span
@@ -265,11 +272,17 @@ export const RegistryInstallButton = ({ registryItem, eventName, title, category
 
     return (
         <Button
+            ref={ref}
             onClick={handleCopy}
+            data-event-name={eventName}
+            data-category={category}
             variant="ghost"
             size="sm"
-            className={cn('h-7 px-2', className)}>
+            className={cn('h-7 px-2', className)}
+            {...buttonProps}>
             {copied ? 'Copied!' : `${prompts[prompt]} shadcn add @tailark/${registryItem}`}
         </Button>
     )
-}
+})
+
+RegistryInstallButton.displayName = 'RegistryInstallButton'

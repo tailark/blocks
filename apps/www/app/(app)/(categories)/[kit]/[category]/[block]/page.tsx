@@ -6,8 +6,8 @@ import { mistBlocksImages, veilBlocksImages, duskBlocksImages } from '@/data/blo
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Button } from '@tailark/core/ui/button'
-import { ChevronRight } from 'lucide-react'
 import { titleToNumber, slugToTitle } from '@/lib/utils'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@tailark/core/ui/breadcrumb'
 
 interface PageProps {
     params: Promise<{ kit: string; category: string; block: string }>
@@ -99,27 +99,39 @@ export default async function BlockDetailPage({ params }: PageProps) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             <div className="mx-auto max-w-7xl">
-                <nav className="text-muted-foreground flex items-center gap-1 px-4 pb-4 pt-8 text-sm">
-                    <Link
-                        href="/blocks"
-                        className="hover:text-foreground transition-colors">
-                        Blocks
-                    </Link>
-                    <ChevronRight className="size-3.5" />
-                    <Link
-                        href={`/blocks?kits=${kit}`}
-                        className="hover:text-foreground capitalize transition-colors">
-                        {kit}
-                    </Link>
-                    <ChevronRight className="size-3.5" />
-                    <Link
-                        href={`/${kit}/${category}`}
-                        className="hover:text-foreground capitalize transition-colors">
-                        {category.replace(/-/g, ' ')}
-                    </Link>
-                    <ChevronRight className="size-3.5" />
-                    <span className="text-foreground capitalize">{blockId.replace(/-/g, ' ')}</span>
-                </nav>
+                <Breadcrumb className="px-4 pb-4 pt-8">
+                    <BreadcrumbList>
+                        <BreadcrumbItem>
+                            <BreadcrumbLink asChild>
+                                <Link href="/blocks">Blocks</Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbLink asChild>
+                                <Link
+                                    className="capitalize"
+                                    href={`/blocks?kits=${kit}`}>
+                                    {kit}
+                                </Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbLink asChild>
+                                <Link
+                                    className="capitalize"
+                                    href={`/${kit}/${category}`}>
+                                    {category}
+                                </Link>
+                            </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbPage className="capitalize">{blockId.replace(/-/g, ' ')}</BreadcrumbPage>
+                        </BreadcrumbItem>
+                    </BreadcrumbList>
+                </Breadcrumb>
 
                 <BlockPreview
                     id={blockId}

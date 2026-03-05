@@ -16,12 +16,10 @@ export interface FilterGroup {
 }
 
 interface DiscoverContextType {
-    // Search
     searchQuery: string
     setSearchQuery: (query: string) => void
     placeholder: string
     setPlaceholder: (placeholder: string) => void
-    // Filters (URL)
     selectedCategories: string[]
     setSelectedCategories: (v: string[]) => void
     selectedStyles: string[]
@@ -32,18 +30,16 @@ interface DiscoverContextType {
     setSelectedLicences: (v: string[]) => void
     filterGroups: FilterGroup[]
     setFilterGroups: (groups: FilterGroup[]) => void
-    // UI
     columns: 2 | 3
     setColumns: (v: 2 | 3) => void
     viewMode: 'categories' | 'content'
     setViewMode: (v: 'categories' | 'content') => void
     isFilterCollapsed: boolean
     setIsFilterCollapsed: (v: boolean) => void
-    // Pagination
     currentPage: number
     setCurrentPage: (page: number) => void
     itemsPerPage: number
-    // Type
+    setItemsPerPage: (items: number) => void
     type: 'blocks' | 'pages'
 }
 
@@ -63,14 +59,12 @@ export function DiscoverProvider({ children }: { children: ReactNode }) {
     const pathname = usePathname()
     const type: 'blocks' | 'pages' = pathname === '/pages' ? 'pages' : 'blocks'
 
-    // nuqs: filter state in URL search params
     const [searchQuery, setSearchQueryParam] = useQueryState('q', parseAsString.withDefault(''))
     const [selectedCategories, setSelectedCategoriesParam] = useQueryState('categories', parseAsArrayOf(parseAsString).withDefault([]))
     const [selectedKits, setSelectedKitsParam] = useQueryState('kits', parseAsArrayOf(parseAsString).withDefault([]))
     const [selectedLicences, setSelectedLicencesParam] = useQueryState('licences', parseAsArrayOf(parseAsString).withDefault([]))
     const [selectedStyles, setSelectedStylesParam] = useQueryState('styles', parseAsArrayOf(parseAsString).withDefault([]))
 
-    // Persistent UI state (localStorage)
     const [columns, setColumnsState] = useState<2 | 3>(() => getLocalStorage('discover-columns', 3))
     const [viewMode, setViewModeState] = useState<'categories' | 'content'>(() => getLocalStorage('discover-viewMode', 'content'))
     const [isFilterCollapsed, setIsFilterCollapsedState] = useState<boolean>(() => {
@@ -79,12 +73,10 @@ export function DiscoverProvider({ children }: { children: ReactNode }) {
         return typeof window !== 'undefined' ? !window.matchMedia('(min-width: 1024px)').matches : false
     })
 
-    // Ephemeral state
     const [currentPage, setCurrentPage] = useState(1)
     const [filterGroups, setFilterGroups] = useState<FilterGroup[]>([])
     const [placeholder, setPlaceholder] = useState('Search...')
-
-    const itemsPerPage = 30
+    const [itemsPerPage, setItemsPerPageState] = useState<number>(() => getLocalStorage('discover-itemsPerPage', 30))
 
     const setColumns = useCallback((v: 2 | 3) => {
         setColumnsState(v)
@@ -102,6 +94,15 @@ export function DiscoverProvider({ children }: { children: ReactNode }) {
     }, [])
 
     const resetPage = useCallback(() => setCurrentPage(1), [])
+
+    const setItemsPerPage = useCallback(
+        (items: number) => {
+            setItemsPerPageState(items)
+            localStorage.setItem('discover-itemsPerPage', JSON.stringify(items))
+            resetPage()
+        },
+        [resetPage]
+    )
 
     const setSearchQuery = useCallback(
         (q: string) => {
@@ -164,9 +165,10 @@ export function DiscoverProvider({ children }: { children: ReactNode }) {
             currentPage,
             setCurrentPage,
             itemsPerPage,
+            setItemsPerPage,
             type,
         }),
-        [searchQuery, setSearchQuery, placeholder, setPlaceholder, selectedCategories, setSelectedCategories, selectedStyles, setSelectedStyles, selectedKits, setSelectedKits, selectedLicences, setSelectedLicences, filterGroups, setFilterGroups, columns, setColumns, viewMode, setViewMode, isFilterCollapsed, setIsFilterCollapsed, currentPage, setCurrentPage, itemsPerPage, type]
+        [searchQuery, setSearchQuery, placeholder, setPlaceholder, selectedCategories, setSelectedCategories, selectedStyles, setSelectedStyles, selectedKits, setSelectedKits, selectedLicences, setSelectedLicences, filterGroups, setFilterGroups, columns, setColumns, viewMode, setViewMode, isFilterCollapsed, setIsFilterCollapsed, currentPage, setCurrentPage, itemsPerPage, setItemsPerPage, type]
     )
 
     return <DiscoverContext.Provider value={value}>{children}</DiscoverContext.Provider>
@@ -178,7 +180,6 @@ export function useDiscover() {
     return context
 }
 
-// Named sub-hooks for backward compatibility
 export const useDiscoverSearch = useDiscover
 export const useDiscoverFilter = useDiscover
 export const useDiscoverUI = useDiscover

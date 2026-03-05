@@ -68,7 +68,7 @@ export const DiscoverCardToolbar = ({ href, isBlock, title, subtitle, registryUr
                                             category={category}
                                             theme={theme}
                                             iconOnly={true}
-                                            className="rounded-none border-r-0"
+                                            className="rounded-none"
                                         />
                                     </TooltipTrigger>
                                     <TooltipContent sideOffset={5}>
@@ -81,7 +81,7 @@ export const DiscoverCardToolbar = ({ href, isBlock, title, subtitle, registryUr
                                     registryUrl={registryUrl}
                                     title={title}
                                     category={subtitle}
-                                    className="rounded-none ring-0"
+                                    className="h-7 w-9 rounded-none px-0 ring-0"
                                 />
                             )}
                         </TooltipProvider>

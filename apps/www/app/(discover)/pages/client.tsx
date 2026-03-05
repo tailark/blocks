@@ -8,7 +8,7 @@ import { Pagination } from '../components/pagination'
 import { Suspense } from 'react'
 
 export default function PagesDiscoveryClient() {
-    const { searchQuery, selectedCategories, selectedStyles, setFilterGroups, setPlaceholder, columns, currentPage, setCurrentPage, itemsPerPage } = useDiscover()
+    const { searchQuery, selectedCategories, selectedStyles, setFilterGroups, setPlaceholder, columns, currentPage, setCurrentPage, itemsPerPage, setItemsPerPage } = useDiscover()
 
     const [allPages, setAllPages] = useState<Page[]>([])
 
@@ -102,6 +102,7 @@ export default function PagesDiscoveryClient() {
                 totalPages={totalPages}
                 onPageChange={setCurrentPage}
                 itemsPerPage={itemsPerPage}
+                onItemsPerPageChange={setItemsPerPage}
                 totalItems={filteredPages.length}
             />
         </div>

@@ -54,7 +54,7 @@ function getVariantSortValue(variant: string): number {
 }
 
 export function BlocksClient() {
-    const { searchQuery, selectedCategories, selectedKits, selectedLicences, setFilterGroups, setPlaceholder, columns, currentPage, setCurrentPage, itemsPerPage, viewMode } = useDiscover()
+    const { searchQuery, selectedCategories, selectedKits, selectedLicences, setFilterGroups, setPlaceholder, columns, currentPage, setCurrentPage, itemsPerPage, setItemsPerPage, viewMode } = useDiscover()
 
     const [allBlocks, setAllBlocks] = useState<Block[]>([])
 
@@ -404,7 +404,7 @@ export function BlocksClient() {
                 totalPages={displayTotalPages}
                 onPageChange={setCurrentPage}
                 itemsPerPage={itemsPerPage}
-                onItemsPerPageChange={undefined}
+                onItemsPerPageChange={setItemsPerPage}
                 totalItems={viewMode === 'categories' ? categoriesWithBlocks.length : filteredBlocks.length}
             />
         </div>
