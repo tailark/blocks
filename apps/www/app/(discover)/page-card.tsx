@@ -7,15 +7,12 @@ export const PageCardParent = ({ children, columns = 3 }: { children: React.Reac
 }
 
 export const PageCard = ({ style, asDialog, category, variant, onClick, imageUrl }: { style: string; asDialog?: boolean; category: string; variant: string; onClick?: () => void; imageUrl?: string }) => {
-    const registryItem = `${category}-${variant}`
-
-    const baseUrl = typeof window !== 'undefined' ? window.location.origin : ''
-    const v0registryUrl = `${baseUrl}/registry/pages/${style}/${registryItem}`
+    const proUrl = `https://pro.tailark.com/${style}-${category}-${variant}`
 
     return (
         <DiscoverPageCard
-            href={`/${style}-${category}-${variant}`}
-            title={registryItem}
+            href={proUrl}
+            title={`${category}-${variant}`}
             subtitle={style.replace(/-/g, ' ')}
             imageSrc={imageUrl}
             imageAlt={`${style} ${category} page ${titleToNumber(variant)}`}
@@ -24,10 +21,13 @@ export const PageCard = ({ style, asDialog, category, variant, onClick, imageUrl
             imageClassName="shadow-blac/3 size-full object-cover object-top"
             onClick={onClick}
             asDialog={asDialog}
-            registryUrl={v0registryUrl}
-            registryItem={registryItem}
+            registryUrl=""
+            registryItem={`${style}-${category}-${variant}`}
             eventName="page_cli_copy"
             category={category}
+            theme="quartz"
+            disableV0={true}
+            openInNewTab={true}
         />
     )
 }

@@ -7,7 +7,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Button } from '@tailark/core/ui/button'
 import { ChevronRight } from 'lucide-react'
-import { titleToNumber } from '@/lib/utils'
+import { titleToNumber, slugToTitle } from '@/lib/utils'
 
 interface PageProps {
     params: Promise<{ kit: string; category: string; block: string }>
@@ -22,17 +22,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         return { title: 'Block Not Found' }
     }
 
-    const blockDisplay = blockId
-        .replace(/-/g, ' ')
-        .split(' ')
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ')
-
-    const categoryDisplay = category
-        .replace(/-/g, ' ')
-        .split(' ')
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ')
+    const blockDisplay = slugToTitle(blockId)
+    const categoryDisplay = slugToTitle(category)
 
     const title = `${blockDisplay} - ${categoryDisplay} | Tailark`
     const description = currentBlock.description || `${blockDisplay} block from the ${categoryDisplay} category`
@@ -87,11 +78,7 @@ export default async function BlockDetailPage({ params }: PageProps) {
 
     const relatedBlocks = blocks.filter((b) => b.kit === kitFullName && b.category === category && b.id !== blockId)
 
-    const categoryDisplay = category
-        .replace(/-/g, ' ')
-        .split(' ')
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ')
+    const categoryDisplay = slugToTitle(category)
 
     const breadcrumbSchema = {
         '@context': 'https://schema.org',

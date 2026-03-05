@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { blocks } from '@/data/blocks'
 import BlockPreview from '@/components/block-preview'
 import { stringToNumber } from '@tailark/core/lib/utils'
+import { slugToTitle } from '@/lib/utils'
 import CategoryNotFound from '@/components/category-not-found'
 import { ChevronRight } from 'lucide-react'
 
@@ -13,11 +14,8 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps) {
     const { kit, category } = await params
-    const categoryDisplay = category
-        .split('-')
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ')
-    const kitDisplay = kit.charAt(0).toUpperCase() + kit.slice(1)
+    const categoryDisplay = slugToTitle(category)
+    const kitDisplay = slugToTitle(kit)
 
     return {
         title: `${kitDisplay} ${categoryDisplay} Blocks | Tailark`,
@@ -63,12 +61,8 @@ export default function KitCategoryPage({ params }: { params: Promise<{ kit: str
         notFound()
     }
 
-    const categoryDisplay = category
-        .split('-')
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ')
-
-    const kitDisplay = kit.charAt(0).toUpperCase() + kit.slice(1)
+    const categoryDisplay = slugToTitle(category)
+    const kitDisplay = slugToTitle(kit)
 
     return (
         <>

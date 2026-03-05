@@ -11,9 +11,11 @@ export interface DiscoverCardToolbarProps extends CLIGroupButtonProps {
     subtitle: string
     registryUrl: string
     isBlock?: boolean
+    disableV0?: boolean
+    openInNewTab?: boolean
 }
 
-export const DiscoverCardToolbar = ({ href, isBlock, title, subtitle, registryUrl, eventName, category, registryItem, theme }: DiscoverCardToolbarProps) => {
+export const DiscoverCardToolbar = ({ href, isBlock, title, subtitle, registryUrl, eventName, category, registryItem, theme, disableV0, openInNewTab }: DiscoverCardToolbarProps) => {
     return (
         <>
             <div
@@ -29,7 +31,9 @@ export const DiscoverCardToolbar = ({ href, isBlock, title, subtitle, registryUr
                                 <Tooltip>
                                     <TooltipTrigger asChild>
                                         <Link
-                                            href={`/${category}`}
+                                            href={openInNewTab ? `https://pro.tailark.com/${category}` : `/${category}`}
+                                            target={openInNewTab ? '_blank' : undefined}
+                                            rel={openInNewTab ? 'noopener noreferrer' : undefined}
                                             className="flex h-7 w-9 items-center justify-center">
                                             <View className="size-3.5 fill-indigo-500/20" />
                                         </Link>
@@ -44,6 +48,8 @@ export const DiscoverCardToolbar = ({ href, isBlock, title, subtitle, registryUr
                                 <TooltipTrigger asChild>
                                     <Link
                                         href={href}
+                                        target={openInNewTab ? '_blank' : undefined}
+                                        rel={openInNewTab ? 'noopener noreferrer' : undefined}
                                         className="flex h-7 w-9 items-center justify-center">
                                         <Eye className="size-3.5 fill-indigo-500/20" />
                                     </Link>
@@ -52,28 +58,32 @@ export const DiscoverCardToolbar = ({ href, isBlock, title, subtitle, registryUr
                                     <p>Preview</p>
                                 </TooltipContent>
                             </Tooltip>
-                            <Tooltip>
-                                <TooltipTrigger asChild>
-                                    <RegistryInstallButton
-                                        registryItem={registryItem}
-                                        eventName={eventName}
-                                        title={title}
-                                        category={category}
-                                        theme={theme}
-                                        iconOnly={true}
-                                        className="rounded-none border-r-0"
-                                    />
-                                </TooltipTrigger>
-                                <TooltipContent sideOffset={5}>
-                                    <p>Install</p>
-                                </TooltipContent>
-                            </Tooltip>
-                            <OpenInV0Button
-                                registryUrl={registryUrl}
-                                title={title}
-                                category={subtitle}
-                                className="rounded-none ring-0"
-                            />
+                            {registryItem && (
+                                <Tooltip>
+                                    <TooltipTrigger asChild>
+                                        <RegistryInstallButton
+                                            registryItem={registryItem}
+                                            eventName={eventName}
+                                            title={title}
+                                            category={category}
+                                            theme={theme}
+                                            iconOnly={true}
+                                            className="rounded-none border-r-0"
+                                        />
+                                    </TooltipTrigger>
+                                    <TooltipContent sideOffset={5}>
+                                        <p>Install</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            )}
+                            {!disableV0 && (
+                                <OpenInV0Button
+                                    registryUrl={registryUrl}
+                                    title={title}
+                                    category={subtitle}
+                                    className="rounded-none ring-0"
+                                />
+                            )}
                         </TooltipProvider>
                     </Toolbar.Root>
                 </div>

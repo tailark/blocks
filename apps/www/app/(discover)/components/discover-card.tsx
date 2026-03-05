@@ -1,11 +1,12 @@
 'use client'
-import { useState, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { DiscoverCardToolbarProps } from './discover-card-toolbar'
 import { DiscoverPageCard } from './discover-card-wrapper'
+
+const getBaseUrl = () => (typeof window !== 'undefined' ? window.location.origin : '')
 
 interface DiscoverBlockCardProps extends Omit<DiscoverCardToolbarProps, 'registryUrl'> {
     href: string
@@ -21,22 +22,16 @@ interface DiscoverBlockCardProps extends Omit<DiscoverCardToolbarProps, 'registr
     licence?: string
 }
 
-export function DiscoverBlockCard({ href, title, subtitle, imageSrc, imageAlt, imageWidth, imageHeight, aspectRatio, imageClassName = '', category, registryItem, eventName, showToolbar = true, licence }: DiscoverBlockCardProps) {
-    const [mounted, setMounted] = useState(false)
+export function DiscoverBlockCard({ href, title, subtitle, imageSrc, imageAlt, imageWidth, imageHeight, aspectRatio, imageClassName = '', category, registryItem, eventName, theme, showToolbar = true, licence, disableV0, openInNewTab }: DiscoverBlockCardProps) {
     const { resolvedTheme } = useTheme()
 
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    const isDark = mounted && resolvedTheme === 'dark'
+    const isDark = resolvedTheme === 'dark'
     const noDarkImageBlocks = ['secondary-hero-2.png', 'secondary-hero-4.png']
     // Mist kit doesn't have dark images
     const isMistKit = imageSrc.includes('/mist/')
     const hasDarkImage = !isMistKit && !noDarkImageBlocks.some((block) => imageSrc.endsWith(block))
     const themedImageSrc = isDark && hasDarkImage ? imageSrc.replace('.png', '-dark.png') : imageSrc
-    const baseUrl = typeof window !== 'undefined' ? window.location.origin : ''
-    const registryUrl = `${baseUrl}/registry/${registryItem}`
+    const registryUrl = `${getBaseUrl()}/registry/${registryItem}`
 
     const cardContent = (
         <div className="relative aspect-auto overflow-hidden">
@@ -67,6 +62,7 @@ export function DiscoverBlockCard({ href, title, subtitle, imageSrc, imageAlt, i
                     subtitle={subtitle}
                     aspectRatio={aspectRatio}
                     licence={licence}
+                    openInNewTab={openInNewTab}
                 />
             </CardContainer>
         )
@@ -81,8 +77,11 @@ export function DiscoverBlockCard({ href, title, subtitle, imageSrc, imageAlt, i
             category={category}
             registryItem={registryItem}
             eventName={eventName}
+            theme={theme}
             isBlock={true}
-            licence={licence}>
+            licence={licence}
+            disableV0={disableV0}
+            openInNewTab={openInNewTab}>
             {cardContent}
         </DiscoverPageCard>
     )
@@ -104,15 +103,18 @@ interface CardFooterProps {
     onClick?: () => void
     asDialog?: boolean
     licence?: string
+    openInNewTab?: boolean
 }
 
-export const CardFooter = ({ href, title, subtitle, aspectRatio, onClick, asDialog, licence }: CardFooterProps) => {
+export const CardFooter = ({ href, title, subtitle, aspectRatio, onClick, asDialog, licence, openInNewTab }: CardFooterProps) => {
     return (
         <div className={cn('space-y-0.5 px-3 pb-2', !aspectRatio && 'pt-2')}>
             <p className="flex items-center gap-1.5 text-sm font-medium">
                 <Link
                     href={href}
                     onClick={onClick}
+                    target={openInNewTab ? '_blank' : undefined}
+                    rel={openInNewTab ? 'noopener noreferrer' : undefined}
                     className="capitalize before:absolute before:inset-0">
                     {title.replace(/-/g, ' ')}
                 </Link>

@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
+import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
 import { useQueryState, parseAsArrayOf, parseAsString } from 'nuqs'
 
@@ -45,8 +45,6 @@ interface DiscoverContextType {
     itemsPerPage: number
     // Type
     type: 'blocks' | 'pages'
-    setType: (type: 'blocks' | 'pages') => void
-    setItemsPerPage: (count: number) => void
 }
 
 const DiscoverContext = createContext<DiscoverContextType | undefined>(undefined)
@@ -141,34 +139,35 @@ export function DiscoverProvider({ children }: { children: ReactNode }) {
         [setSelectedLicencesParam, resetPage]
     )
 
-    const value: DiscoverContextType = {
-        searchQuery,
-        setSearchQuery,
-        placeholder,
-        setPlaceholder,
-        selectedCategories,
-        setSelectedCategories,
-        selectedStyles,
-        setSelectedStyles,
-        selectedKits,
-        setSelectedKits,
-        selectedLicences,
-        setSelectedLicences,
-        filterGroups,
-        setFilterGroups,
-        columns,
-        setColumns,
-        viewMode,
-        setViewMode,
-        isFilterCollapsed,
-        setIsFilterCollapsed,
-        currentPage,
-        setCurrentPage,
-        itemsPerPage,
-        type,
-        setType: () => {},
-        setItemsPerPage: () => {},
-    }
+    const value: DiscoverContextType = useMemo(
+        () => ({
+            searchQuery,
+            setSearchQuery,
+            placeholder,
+            setPlaceholder,
+            selectedCategories,
+            setSelectedCategories,
+            selectedStyles,
+            setSelectedStyles,
+            selectedKits,
+            setSelectedKits,
+            selectedLicences,
+            setSelectedLicences,
+            filterGroups,
+            setFilterGroups,
+            columns,
+            setColumns,
+            viewMode,
+            setViewMode,
+            isFilterCollapsed,
+            setIsFilterCollapsed,
+            currentPage,
+            setCurrentPage,
+            itemsPerPage,
+            type,
+        }),
+        [searchQuery, setSearchQuery, placeholder, setPlaceholder, selectedCategories, setSelectedCategories, selectedStyles, setSelectedStyles, selectedKits, setSelectedKits, selectedLicences, setSelectedLicences, filterGroups, setFilterGroups, columns, setColumns, viewMode, setViewMode, isFilterCollapsed, setIsFilterCollapsed, currentPage, setCurrentPage, itemsPerPage, type]
+    )
 
     return <DiscoverContext.Provider value={value}>{children}</DiscoverContext.Provider>
 }

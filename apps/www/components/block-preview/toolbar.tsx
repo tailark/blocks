@@ -17,6 +17,7 @@ import { NPM } from '@tailark/core/components/logos/npm'
 import { Pnpm } from '@tailark/core/components/logos/pnpm'
 import { useStore } from '@nanostores/react'
 import { promptStore, setPrompt } from '@/lib/store/prompt'
+import { ShadcnIcon } from '../ui/shadcn-icon'
 
 const radioItem = 'rounded-md duration-200 flex items-center justify-center h-7 px-2.5 gap-2 transition-[color] ring ring-transparent shadow shadow-transparent not-data-[state=checked]:hover:bg-foreground/4 data-[state=checked]:ring-foreground/6.5 data-[state=checked]:shadow-black/6.5 data-[state=checked]:bg-card dark:data-[state=checked]:bg-foreground/4'
 
@@ -226,7 +227,7 @@ export const RegistryInstallButton = ({ registryItem, eventName, title, category
         e.preventDefault()
         e.stopPropagation()
         const kit = theme || 'mist'
-        const command = `${prompts[prompt]} shadcn add @tailark/${kit}/${registryItem}`
+        const command = kit === 'quartz' ? `${prompts[prompt]} shadcn@latest add @tailark-pro/${registryItem}` : `${prompts[prompt]} shadcn@latest add @tailark/${kit}/${registryItem}`
         navigator.clipboard.writeText(command)
         setCopied(true)
         setTimeout(() => setCopied(false), 2000)
@@ -254,7 +255,7 @@ export const RegistryInstallButton = ({ registryItem, eventName, title, category
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}>
-                            <Code2 className="size-3.5 fill-indigo-500/20" />
+                            <ShadcnIcon className="size-4" />
                         </motion.span>
                     )}
                 </AnimatePresence>

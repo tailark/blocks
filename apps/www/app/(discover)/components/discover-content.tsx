@@ -1,5 +1,6 @@
 'use client'
 
+import { useCallback } from 'react'
 import { FilterPanel } from './filter-panel'
 import { SearchBar } from './search-bar'
 import { useDiscover } from './discover-provider'
@@ -18,31 +19,35 @@ export function DiscoverContent({ children }: DiscoverContentProps) {
         licences: selectedLicences,
     }
 
-    const handleFilterChange = (groupKey: string, values: string[]) => {
-        if (groupKey === 'categories') {
-            setSelectedCategories(values)
-        } else if (groupKey === 'styles') {
-            setSelectedStyles(values)
-        } else if (groupKey === 'kits') {
-            setSelectedKits(values)
-            // Link quartz kit with pro licence
-            if (values.includes('quartz') && !selectedLicences.includes('pro')) {
-                setSelectedLicences([...selectedLicences, 'pro'])
-            } else if (!values.includes('quartz') && selectedLicences.includes('pro')) {
-                setSelectedLicences(selectedLicences.filter((l) => l !== 'pro'))
+    const handleFilterChange = useCallback(
+        (groupKey: string, values: string[]) => {
+            if (groupKey === 'categories') {
+                setSelectedCategories(values)
+            } else if (groupKey === 'styles') {
+                setSelectedStyles(values)
+            } else if (groupKey === 'kits') {
+                setSelectedKits(values)
+                // Link quartz kit with pro licence
+                if (values.includes('quartz') && !selectedLicences.includes('pro')) {
+                    setSelectedLicences([...selectedLicences, 'pro'])
+                } else if (!values.includes('quartz') && selectedLicences.includes('pro')) {
+                    setSelectedLicences(selectedLicences.filter((l) => l !== 'pro'))
+                }
+            } else if (groupKey === 'licences') {
+                setSelectedLicences(values)
+                // Link pro licence with quartz kit
+                if (values.includes('pro') && !selectedKits.includes('quartz')) {
+                    setSelectedKits([...selectedKits, 'quartz'])
+                } else if (!values.includes('pro') && selectedKits.includes('quartz')) {
+                    setSelectedKits(selectedKits.filter((k) => k !== 'quartz'))
+                }
             }
-        } else if (groupKey === 'licences') {
-            setSelectedLicences(values)
-            // Link pro licence with quartz kit
-            if (values.includes('pro') && !selectedKits.includes('quartz')) {
-                setSelectedKits([...selectedKits, 'quartz'])
-            } else if (!values.includes('pro') && selectedKits.includes('quartz')) {
-                setSelectedKits(selectedKits.filter((k) => k !== 'quartz'))
-            }
-        }
-    }
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        },
+        [selectedKits, selectedLicences, setSelectedCategories, setSelectedStyles, setSelectedKits, setSelectedLicences]
+    )
 
-    const handleToggleCollapse = () => {
+    const handleToggleCollapse = useCallback(() => {
         const newState = !isFilterCollapsed
         setIsFilterCollapsed(newState)
         if (!newState) {
@@ -50,7 +55,7 @@ export function DiscoverContent({ children }: DiscoverContentProps) {
         } else {
             localStorage.removeItem('discover-filterManuallyOpened')
         }
-    }
+    }, [isFilterCollapsed, setIsFilterCollapsed])
 
     return (
         <div className="bg-muted/50 dark:bg-background grid min-h-[calc(100vh-3.5rem)] grid-cols-[auto_1fr] border-y">

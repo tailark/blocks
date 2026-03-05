@@ -1,6 +1,6 @@
 'use client'
 
-import { Atom, Blocks, BookOpen, Box, Crown, Filter, Flower, Gem, Gift, ImageIcon, Layers2, MoonStar, PanelLeftClose, PanelLeftOpen, Shapes, Sparkles } from 'lucide-react'
+import { Atom, Blocks, BookOpen, Box, Crown, Filter, Flower, Gem, ImageIcon, Layers2, MoonStar, PanelLeftClose, PanelLeftOpen, Shapes } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

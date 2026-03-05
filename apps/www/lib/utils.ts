@@ -10,6 +10,9 @@ export const titleToNumber = (title: string): number => {
     return titles.indexOf(title.toLowerCase()) + 1;
 };
 
+export const slugToTitle = (slug: string): string =>
+    slug.replace(/-/g, ' ').split(' ').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+
 export const formatComponentName = (category: string, variant: string): string => {
     const categoryFormatted = category
         .split('-')

@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState, useEffect, ReactNode } from 'react'
+import { useState, useEffect, useMemo, ReactNode } from 'react'
 import { BlockImage } from './block-image'
 import { cn } from '@/lib/utils'
 
@@ -48,6 +48,25 @@ function distributeToColumns<T>(items: T[], columnCount: number): T[][] {
     })
     return columns
 }
+
+interface KitSwitcherProps {
+    activeKit: KitId
+    onKitChange: (kit: KitId) => void
+}
+
+const KitSwitcher = ({ activeKit, onKitChange }: KitSwitcherProps) => (
+    <div className="mb-4 flex items-center justify-center">
+        {kits.map((kit) => (
+            <button
+                key={kit.id}
+                onClick={() => onKitChange(kit.id)}
+                className={cn('cursor-pointer rounded-full px-3.5 py-2 font-medium transition-colors', activeKit === kit.id ? 'text-foreground' : 'text-muted-foreground hover:text-foreground')}>
+                {kit.name}
+                {kit.isPro && <span className="ml-1 text-xs opacity-60">Pro</span>}
+            </button>
+        ))}
+    </div>
+)
 
 export const BlocksCanvas = () => {
     const [activeKit, setActiveKit] = useState<KitId>('quartz')
@@ -99,29 +118,19 @@ export const BlocksCanvas = () => {
         fetchCatalog()
     }, [activeKit])
 
-    const visibleCategoryColumns = distributeToColumns(sortByCategory(categories), 3)
-
-    const columnHeights = visibleCategoryColumns.map((column) => column.reduce((sum, cat) => sum + (cat.height || 0), 0))
-    const maxHeight = Math.max(...columnHeights)
-    const tallestColumnIndex = columnHeights.indexOf(maxHeight)
-
-    const KitSwitcher = () => (
-        <div className="mb-4 flex items-center justify-center">
-            {kits.map((kit) => (
-                <button
-                    key={kit.id}
-                    onClick={() => setActiveKit(kit.id)}
-                    className={cn('cursor-pointer rounded-full px-3.5 py-2 font-medium transition-colors', activeKit === kit.id ? 'text-foreground' : 'text-muted-foreground hover:text-foreground')}>
-                    {kit.name}
-                    {kit.isPro && <span className="ml-1 text-xs opacity-60">Pro</span>}
-                </button>
-            ))}
-        </div>
-    )
+    const { visibleCategoryColumns, tallestColumnIndex } = useMemo(() => {
+        const cols = distributeToColumns(sortByCategory(categories), 3)
+        const heights = cols.map((col) => col.reduce((sum, cat) => sum + (cat.height || 0), 0))
+        const maxH = Math.max(...heights)
+        return { visibleCategoryColumns: cols, tallestColumnIndex: heights.indexOf(maxH) }
+    }, [categories])
 
     return (
         <div className="mt-12">
-            <KitSwitcher />
+            <KitSwitcher
+                activeKit={activeKit}
+                onKitChange={setActiveKit}
+            />
             <div className={cn('bg-muted/50 max-w-380 relative mx-auto overflow-hidden border-y p-4 transition-opacity duration-200 2xl:rounded-t-3xl 2xl:border-x', loading && 'opacity-50')}>
                 <div className="grid gap-4 *:grid md:grid-cols-3">
                     {visibleCategoryColumns.map((column, colIndex) => (

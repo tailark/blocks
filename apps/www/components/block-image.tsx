@@ -5,13 +5,13 @@ import { useTheme } from 'next-themes'
 import { useState } from 'react'
 
 export const BlockImage = ({ category }: { category: BlockCategory }) => {
-    const { theme } = useTheme()
+    const { resolvedTheme } = useTheme()
     const [useFallback, setUseFallback] = useState(false)
 
     const isMist = category.kit === 'mist'
     const lightSrc = category.imageUrl || ''
     const darkSrc = category.imageUrl?.replace('.png', '-dark.png') || ''
-    const src = theme === 'dark' && !useFallback && !isMist ? darkSrc : lightSrc
+    const src = resolvedTheme === 'dark' && !useFallback && !isMist ? darkSrc : lightSrc
 
     return (
         <Image
@@ -22,7 +22,7 @@ export const BlockImage = ({ category }: { category: BlockCategory }) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 936px"
             className="pointer-events-none object-cover"
             onError={() => {
-                if (theme === 'dark' && !useFallback && !isMist) {
+                if (resolvedTheme === 'dark' && !useFallback && !isMist) {
                     setUseFallback(true)
                 }
             }}

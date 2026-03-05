@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect, useMemo, Suspense } from 'react'
 import { categoryOrder, unsortedBlockCategories } from '@/data/blocks/metadata'
 import { useDiscover } from '../components/discover-provider'
 import type { Block } from '@/data/blocks/types'
@@ -10,6 +10,21 @@ import { Pagination } from '../components/pagination'
 import { mistBlocksImages, veilBlocksImages, duskBlocksImages } from '@/data/blocks-images'
 
 export const imageClasses = 'border-4 relative pointer-events-none border-background rounded-lg ring-1 ring-foreground/5'
+
+const FREE_KITS = ['mist-kit', 'dusk-kit', 'veil-kit']
+
+interface QuartzVariant {
+    id: string
+    title: string
+    slug: string
+    metadata?: { imageUrl?: string; width?: number; height?: number; aspect?: number }
+}
+
+interface QuartzCategory {
+    name: string
+    variants: QuartzVariant[]
+    metadata?: { imageUrl?: string; width?: number; height?: number; aspect?: number }
+}
 
 const wordToNumber: Record<string, number> = {
     one: 1,
@@ -50,58 +65,37 @@ export function BlocksClient() {
     useEffect(() => {
         const fetchAllBlocks = async () => {
             try {
-                // Fetch local blocks (mist, dusk, veil)
-                const localRes = await fetch('/api/blocks', { cache: 'force-cache' })
-                const localBlocks = await localRes.json()
-
-                // Fetch quartz blocks from pro API
                 const baseUrl = process.env.NODE_ENV === 'production' ? 'https://pro.tailark.com' : 'http://localhost:3000'
-                try {
-                    const quartzRes = await fetch(`${baseUrl}/api/catalog`)
-                    if (quartzRes.ok) {
-                        const quartzData = await quartzRes.json()
-                        // Transform quartz catalog data to match Block type
-                        interface QuartzVariant {
-                            id: string
-                            title: string
-                            slug: string
-                            metadata?: { imageUrl?: string; width?: number; height?: number; aspect?: number }
-                        }
-                        interface QuartzCategory {
-                            name: string
-                            variants: QuartzVariant[]
-                            metadata?: { imageUrl?: string; width?: number; height?: number; aspect?: number }
-                        }
-                        const quartzBlocks =
-                            quartzData.blocks?.flatMap(
-                                (category: QuartzCategory) =>
-                                    category.variants?.map((variant: QuartzVariant) => ({
-                                        id: variant.id,
-                                        slug: `${category.name}-${variant.id}`,
-                                        title: variant.title || `${category.name} ${variant.id}`,
-                                        description: `Quartz ${category.name} block`,
-                                        category: category.name,
-                                        previewLink: `https://pro.tailark.com/preview/quartz/${category.name}/${variant.id}`,
-                                        kit: 'quartz-kit',
-                                        imageUrl: variant.metadata?.imageUrl,
-                                        imageWidth: variant.metadata?.width,
-                                        imageHeight: variant.metadata?.height,
-                                        aspectRatio: variant.metadata?.aspect,
-                                        // Store category cover image for category view
-                                        categoryCoverUrl: category.metadata?.imageUrl,
-                                        categoryCoverWidth: category.metadata?.width,
-                                        categoryCoverHeight: category.metadata?.height,
-                                        categoryCoverAspect: category.metadata?.aspect,
-                                    })) || []
-                            ) || []
-                        setAllBlocks([...localBlocks, ...quartzBlocks])
-                    } else {
-                        setAllBlocks(localBlocks)
-                    }
-                } catch {
-                    // If quartz API fails, just use local blocks
-                    setAllBlocks(localBlocks)
-                }
+
+                // Fetch local and quartz blocks in parallel
+                const [localResult, quartzResult] = await Promise.allSettled([fetch('/api/blocks', { cache: 'force-cache' }).then((r) => r.json()), fetch(`${baseUrl}/api/catalog`).then((r) => (r.ok ? r.json() : null))])
+
+                const localBlocks: Block[] = localResult.status === 'fulfilled' ? localResult.value : []
+                const quartzData = quartzResult.status === 'fulfilled' ? quartzResult.value : null
+
+                const quartzBlocks: Block[] =
+                    quartzData?.blocks?.flatMap(
+                        (category: QuartzCategory) =>
+                            category.variants?.map((variant: QuartzVariant) => ({
+                                id: variant.id,
+                                slug: `${category.name}-${variant.id}`,
+                                title: variant.title || `${category.name} ${variant.id}`,
+                                description: `Quartz ${category.name} block`,
+                                category: category.name,
+                                previewLink: `https://pro.tailark.com/preview/quartz/${category.name}/${variant.id}`,
+                                kit: 'quartz-kit',
+                                imageUrl: variant.metadata?.imageUrl,
+                                imageWidth: variant.metadata?.width,
+                                imageHeight: variant.metadata?.height,
+                                aspectRatio: variant.metadata?.aspect,
+                                categoryCoverUrl: category.metadata?.imageUrl,
+                                categoryCoverWidth: category.metadata?.width,
+                                categoryCoverHeight: category.metadata?.height,
+                                categoryCoverAspect: category.metadata?.aspect,
+                            })) || []
+                    ) || []
+
+                setAllBlocks([...localBlocks, ...quartzBlocks])
             } catch (err) {
                 console.error('Error fetching blocks:', err)
                 setAllBlocks([])
@@ -146,12 +140,11 @@ export function BlocksClient() {
             })),
         }
 
-        const freeKits = ['mist-kit', 'dusk-kit', 'veil-kit']
         const licencesGroup = {
             title: 'Licence',
             key: 'licences',
             items: [
-                { name: 'free', quantity: allBlocks.filter((block) => freeKits.includes(block.kit || '')).length },
+                { name: 'free', quantity: allBlocks.filter((block) => FREE_KITS.includes(block.kit || '')).length },
                 { name: 'pro', quantity: allBlocks.filter((block) => block.kit === 'quartz-kit').length },
             ],
         }
@@ -160,49 +153,52 @@ export function BlocksClient() {
         // Note: View toggle is rendered separately in filter-panel.tsx, right before categories
     }, [allBlocks, setFilterGroups])
 
-    const filteredBlocks = allBlocks
-        .filter((block) => {
-            if (selectedCategories.length > 0 && !selectedCategories.includes(block.category)) {
-                return false
-            }
+    const filteredBlocks = useMemo(
+        () =>
+            allBlocks
+                .filter((block) => {
+                    if (selectedCategories.length > 0 && !selectedCategories.includes(block.category)) {
+                        return false
+                    }
 
-            if (selectedKits.length > 0 && (!block.kit || !selectedKits.includes(block.kit.replace('-kit', '')))) {
-                return false
-            }
+                    if (selectedKits.length > 0 && (!block.kit || !selectedKits.includes(block.kit.replace('-kit', '')))) {
+                        return false
+                    }
 
-            if (selectedLicences.length > 0) {
-                const freeKits = ['mist-kit', 'dusk-kit', 'veil-kit']
-                const isFree = freeKits.includes(block.kit || '')
-                const isPro = block.kit === 'quartz-kit'
-                if (selectedLicences.includes('free') && !selectedLicences.includes('pro') && !isFree) {
-                    return false
-                }
-                if (selectedLicences.includes('pro') && !selectedLicences.includes('free') && !isPro) {
-                    return false
-                }
-            }
+                    if (selectedLicences.length > 0) {
+                        const isFree = FREE_KITS.includes(block.kit || '')
+                        const isPro = block.kit === 'quartz-kit'
+                        if (selectedLicences.includes('free') && !selectedLicences.includes('pro') && !isFree) {
+                            return false
+                        }
+                        if (selectedLicences.includes('pro') && !selectedLicences.includes('free') && !isPro) {
+                            return false
+                        }
+                    }
 
-            if (searchQuery) {
-                const query = searchQuery.toLowerCase()
-                const category = block.category.toLowerCase()
-                const id = block.id.toLowerCase()
-                return category.includes(query) || id.includes(query) || block.title.toLowerCase().includes(query)
-            }
+                    if (searchQuery) {
+                        const query = searchQuery.toLowerCase()
+                        const category = block.category.toLowerCase()
+                        const id = block.id.toLowerCase()
+                        return category.includes(query) || id.includes(query) || block.title.toLowerCase().includes(query)
+                    }
 
-            return true
-        })
-        .sort((a, b) => {
-            const categoryIndexA = categoryOrder.indexOf(a.category)
-            const categoryIndexB = categoryOrder.indexOf(b.category)
+                    return true
+                })
+                .sort((a, b) => {
+                    const categoryIndexA = categoryOrder.indexOf(a.category)
+                    const categoryIndexB = categoryOrder.indexOf(b.category)
 
-            if (categoryIndexA !== categoryIndexB) {
-                if (categoryIndexA === -1) return 1
-                if (categoryIndexB === -1) return -1
-                return categoryIndexA - categoryIndexB
-            }
+                    if (categoryIndexA !== categoryIndexB) {
+                        if (categoryIndexA === -1) return 1
+                        if (categoryIndexB === -1) return -1
+                        return categoryIndexA - categoryIndexB
+                    }
 
-            return getVariantSortValue(a.id) - getVariantSortValue(b.id)
-        })
+                    return getVariantSortValue(a.id) - getVariantSortValue(b.id)
+                }),
+        [allBlocks, selectedCategories, selectedKits, selectedLicences, searchQuery]
+    )
 
     useEffect(() => {
         setCurrentPage(1)
@@ -213,18 +209,8 @@ export function BlocksClient() {
     const endIndex = startIndex + itemsPerPage
     const paginatedBlocks = filteredBlocks.slice(startIndex, endIndex)
 
-    if (filteredBlocks.length === 0) {
-        return (
-            <div className="flex min-h-[400px] items-center justify-center p-6">
-                <div className="text-center">
-                    <p className="text-muted-foreground text-sm">No blocks found matching your search or filters.</p>
-                </div>
-            </div>
-        )
-    }
-
     // Build categories per kit - each kit has its own categories with different images
-    const categoriesWithBlocks = (() => {
+    const categoriesWithBlocks = useMemo(() => {
         // Get unique category-kit combinations with cover image info
         const categoryKitMap = new Map<
             string,
@@ -293,18 +279,31 @@ export function BlocksClient() {
                 // Same category, sort by kit name
                 return a.kitName.localeCompare(b.kitName)
             })
-    })()
+    }, [filteredBlocks])
+
+    const columnGroups: Block[][] = useMemo(() => {
+        const groups: Block[][] = Array.from({ length: columns }, () => [])
+        if (viewMode === 'content') {
+            paginatedBlocks.forEach((block, index) => {
+                groups[index % columns].push(block)
+            })
+        }
+        return groups
+    }, [columns, viewMode, paginatedBlocks])
+
+    if (filteredBlocks.length === 0) {
+        return (
+            <div className="flex min-h-[400px] items-center justify-center p-6">
+                <div className="text-center">
+                    <p className="text-muted-foreground text-sm">No blocks found matching your search or filters.</p>
+                </div>
+            </div>
+        )
+    }
 
     const displayTotalPages = viewMode === 'categories' ? Math.ceil(categoriesWithBlocks.length / itemsPerPage) : totalPages
 
     const paginatedCategories = viewMode === 'categories' ? categoriesWithBlocks.slice(startIndex, endIndex) : []
-
-    const columnGroups: Block[][] = Array.from({ length: columns }, () => [])
-    if (viewMode === 'content') {
-        paginatedBlocks.forEach((block, index) => {
-            columnGroups[index % columns].push(block)
-        })
-    }
 
     return (
         <div className="flex h-[calc(100%-3rem)] min-w-72 flex-col">
@@ -337,6 +336,7 @@ export function BlocksClient() {
                                                     eventName="block_cli_copy"
                                                     showToolbar={false}
                                                     licence={category.kit === 'quartz-kit' ? 'pro' : 'free'}
+                                                    openInNewTab={isQuartz}
                                                 />
                                             )
                                         })}
@@ -369,6 +369,7 @@ export function BlocksClient() {
                                             }
                                         }
 
+                                        const registryItem = `${block.category}-${titleToNumber(block.id)}`
                                         return (
                                             <DiscoverBlockCard
                                                 key={`${block.kit}-${block.slug}`}
@@ -382,9 +383,12 @@ export function BlocksClient() {
                                                 aspectRatio={aspectRatio || 1.715}
                                                 imageClassName={imageClasses}
                                                 category={block.category || ''}
-                                                registryItem={`${block.category}-${titleToNumber(block.id)}`}
+                                                registryItem={registryItem}
                                                 eventName="block_cli_copy"
+                                                theme={kitName}
                                                 licence={isQuartz ? 'pro' : 'free'}
+                                                disableV0={isQuartz}
+                                                openInNewTab={isQuartz}
                                             />
                                         )
                                     })}
