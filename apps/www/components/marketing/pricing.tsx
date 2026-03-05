@@ -3,6 +3,7 @@ import { Button } from '@tailark/core/ui/button'
 import { CircleCheck } from 'lucide-react'
 import { CardTitle, CardDescription } from '@tailark/core/ui/card'
 import Link from 'next/link'
+import { PricingLogoCloud } from './logo-cloud'
 
 export function Pricing() {
     const prices = {
@@ -177,6 +178,8 @@ export function Pricing() {
                     </div>
                 </div>
             </div>
+
+            <PricingLogoCloud />
         </section>
     )
 }

@@ -3,11 +3,14 @@ import { cn } from '@/lib/utils'
 import { Button } from '@tailark/core/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { testimonials } from '@/lib/testimonials'
+import { mainTestimonials as testimonials } from '@/lib/testimonials'
 import { ChevronRight } from 'lucide-react'
 import { BlocksCanvas } from '@/components/blocks-canvas'
-import { PagesSection } from '@/components/pages'
-import { Pricing } from '@/components/pricing'
+import { PagesSection } from '@/components/marketing/pages'
+import { Pricing } from '@/components/marketing/pricing'
+import { WallOfLove } from '@/components/marketing/wall-of-love'
+import FAQs from '@/components/marketing/faqs'
+import { LogoCloud } from '@/components/marketing/logo-cloud'
 
 export default function Home() {
     return (
@@ -89,6 +92,8 @@ export default function Home() {
                 <BlocksCanvas />
             </section>
 
+            <LogoCloud />
+
             <div className="@container mx-auto px-4 py-24 lg:px-6 2xl:max-w-7xl">
                 <div className="mx-auto lg:w-1/2">
                     <Link
@@ -163,6 +168,8 @@ export default function Home() {
             <PagesSection />
 
             <Pricing />
+            <WallOfLove />
+            <FAQs />
 
             <div className="pt-24">
                 <SiteFooter />
