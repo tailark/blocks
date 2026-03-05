@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState, useEffect, useMemo, ReactNode } from 'react'
 import { BlockImage } from './block-image'
 import { cn } from '@/lib/utils'
+import { categoryOrder } from '@/data/blocks/metadata'
 
 export type KitId = 'quartz' | 'dusk' | 'mist' | 'veil'
 
@@ -21,14 +22,12 @@ export interface BlockCategory {
     }
 }
 
-const kits: { id: KitId; name: string; isPro?: boolean }[] = [
-    { id: 'quartz', name: 'Quartz', isPro: true },
+const kits: { id: KitId; name: string }[] = [
+    { id: 'quartz', name: 'Quartz' },
     { id: 'dusk', name: 'Dusk' },
     { id: 'mist', name: 'Mist' },
     { id: 'veil', name: 'Veil' },
 ]
-
-const categoryOrder = ['hero-section', 'logo-cloud', 'features', 'integrations', 'content', 'stats', 'team', 'testimonials', 'call-to-action', 'footer', 'pricing', 'comparator', 'faqs', 'login', 'sign-up', 'forgot-password', 'contact']
 
 function sortByCategory<T extends { name: string }>(items: T[]): T[] {
     return [...items].sort((a, b) => {
@@ -62,7 +61,6 @@ const KitSwitcher = ({ activeKit, onKitChange }: KitSwitcherProps) => (
                 onClick={() => onKitChange(kit.id)}
                 className={cn('cursor-pointer rounded-full px-3.5 py-2 font-medium transition-colors', activeKit === kit.id ? 'text-foreground' : 'text-muted-foreground hover:text-foreground')}>
                 {kit.name}
-                {kit.isPro && <span className="ml-1 text-xs opacity-60">Pro</span>}
             </button>
         ))}
     </div>
