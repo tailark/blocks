@@ -1,30 +1,9 @@
 import { blocks } from '@/data/blocks'
 import { mistBlocksImages, veilBlocksImages, duskBlocksImages } from '@/data/blocks-images'
 import { NextResponse } from 'next/server'
+import { categoryOrder } from '@/data/blocks/metadata'
+import { variantNames } from '@/lib/utils'
 
-const variantNames = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
-
-const categoryOrder = [
-    'hero-section',
-    'logo-cloud',
-    'features',
-    'integrations',
-    'content',
-    'stats',
-    'team',
-    'testimonials',
-    'call-to-action',
-    'footer',
-    'pricing',
-    'comparator',
-    'faqs',
-    'login',
-    'sign-up',
-    'forgot-password',
-    'contact',
-]
-
-// Cover image variant numbers per kit, ordered by categoryOrder
 const coverVariants: Record<string, Record<string, number>> = {
     dusk: {
         'hero-section': 5,

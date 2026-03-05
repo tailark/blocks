@@ -26,31 +26,8 @@ interface QuartzCategory {
     metadata?: { imageUrl?: string; width?: number; height?: number; aspect?: number }
 }
 
-const wordToNumber: Record<string, number> = {
-    one: 1,
-    two: 2,
-    three: 3,
-    four: 4,
-    five: 5,
-    six: 6,
-    seven: 7,
-    eight: 8,
-    nine: 9,
-    ten: 10,
-    eleven: 11,
-    twelve: 12,
-    thirteen: 13,
-    fourteen: 14,
-    fifteen: 15,
-    sixteen: 16,
-    seventeen: 17,
-    eighteen: 18,
-    nineteen: 19,
-    twenty: 20,
-}
-
 function getVariantSortValue(variant: string): number {
-    return wordToNumber[variant] || 999
+    return titleToNumber(variant)
 }
 
 export function BlocksClient() {
@@ -65,9 +42,8 @@ export function BlocksClient() {
     useEffect(() => {
         const fetchAllBlocks = async () => {
             try {
-                const baseUrl = process.env.NODE_ENV === 'production' ? 'https://pro.tailark.com' : 'http://localhost:3000'
+                const baseUrl = 'https://pro.tailark.com'
 
-                // Fetch local and quartz blocks in parallel
                 const [localResult, quartzResult] = await Promise.allSettled([fetch('/api/blocks', { cache: 'force-cache' }).then((r) => r.json()), fetch(`${baseUrl}/api/catalog`).then((r) => (r.ok ? r.json() : null))])
 
                 const localBlocks: Block[] = localResult.status === 'fulfilled' ? localResult.value : []
@@ -150,7 +126,6 @@ export function BlocksClient() {
         }
 
         setFilterGroups([kitsGroup, licencesGroup, categoriesGroup])
-        // Note: View toggle is rendered separately in filter-panel.tsx, right before categories
     }, [allBlocks, setFilterGroups])
 
     const filteredBlocks = useMemo(
@@ -209,9 +184,7 @@ export function BlocksClient() {
     const endIndex = startIndex + itemsPerPage
     const paginatedBlocks = filteredBlocks.slice(startIndex, endIndex)
 
-    // Build categories per kit - each kit has its own categories with different images
     const categoriesWithBlocks = useMemo(() => {
-        // Get unique category-kit combinations with cover image info
         const categoryKitMap = new Map<
             string,
             {
@@ -235,7 +208,6 @@ export function BlocksClient() {
                     category: block.category,
                     kit: block.kit || 'mist-kit',
                     count: 1,
-                    // For quartz, use the category cover URL from the block
                     coverUrl: block.categoryCoverUrl,
                     coverWidth: block.categoryCoverWidth,
                     coverHeight: block.categoryCoverHeight,
@@ -248,9 +220,7 @@ export function BlocksClient() {
             .map((item) => {
                 const categoryMeta = unsortedBlockCategories.find((cat) => cat.name === item.category)
                 const kitName = item.kit.replace('-kit', '')
-                // For quartz, use the cover URL from API; for others, construct URL
                 const imageUrl = item.kit === 'quartz-kit' && item.coverUrl ? item.coverUrl : `https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/${kitName}/${item.category}-1.png`
-                // For non-quartz kits, look up the actual aspect ratio of variant "one" from the kit images array
                 let kitImageData: { width: number; height: number; aspectRatio: number } | undefined
                 if (item.kit !== 'quartz-kit') {
                     const kitImages = kitName === 'mist' ? mistBlocksImages : kitName === 'veil' ? veilBlocksImages : duskBlocksImages
@@ -268,7 +238,6 @@ export function BlocksClient() {
                 }
             })
             .sort((a, b) => {
-                // Sort by category order first, then by kit name
                 const indexA = categoryOrder.indexOf(a.name)
                 const indexB = categoryOrder.indexOf(b.name)
                 if (indexA !== indexB) {
@@ -276,7 +245,6 @@ export function BlocksClient() {
                     if (indexB === -1) return -1
                     return indexA - indexB
                 }
-                // Same category, sort by kit name
                 return a.kitName.localeCompare(b.kitName)
             })
     }, [filteredBlocks])

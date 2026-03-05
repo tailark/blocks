@@ -17,8 +17,7 @@ export default function PagesDiscoveryClient() {
     }, [setPlaceholder])
 
     useEffect(() => {
-        const baseUrl = process.env.NODE_ENV === 'production' ? 'https://pro.tailark.com' : 'http://localhost:3000'
-        fetch(`${baseUrl}/api/catalog`)
+        fetch('https://pro.tailark.com/api/catalog')
             .then((res) => res.json())
             .then((catalog) => {
                 const pages: Page[] = (catalog.pages ?? []).map((p: Page) => ({

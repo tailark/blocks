@@ -66,20 +66,31 @@ const KitSwitcher = ({ activeKit, onKitChange }: KitSwitcherProps) => (
     </div>
 )
 
-export const BlocksCanvas = () => {
+interface BlocksCanvasProps {
+    initialData?: Record<KitId, BlockCategory[]>
+}
+
+export const BlocksCanvas = ({ initialData }: BlocksCanvasProps) => {
     const [activeKit, setActiveKit] = useState<KitId>('quartz')
-    const [categories, setCategories] = useState<BlockCategory[]>([])
-    const [loading, setLoading] = useState(true)
+    const [categories, setCategories] = useState<BlockCategory[]>(initialData?.quartz ?? [])
+    const [loading, setLoading] = useState(!initialData)
 
     useEffect(() => {
+        // Use prefetched data if available for the active kit
+        if (initialData?.[activeKit]) {
+            setCategories(initialData[activeKit])
+            setLoading(false)
+            return
+        }
+
+        // Fallback to client-side fetch if no prefetched data
         const fetchCatalog = async () => {
             setLoading(true)
             try {
                 let data: { blocks: BlockCategory[] }
 
                 if (activeKit === 'quartz') {
-                    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://pro.tailark.com' : 'http://localhost:3000'
-                    const res = await fetch(`${baseUrl}/api/catalog`)
+                    const res = await fetch('https://pro.tailark.com/api/catalog')
                     if (!res.ok) throw new Error('Failed to fetch catalog')
                     const json = await res.json()
                     data = {
@@ -114,7 +125,7 @@ export const BlocksCanvas = () => {
             }
         }
         fetchCatalog()
-    }, [activeKit])
+    }, [activeKit, initialData])
 
     const { visibleCategoryColumns, tallestColumnIndex } = useMemo(() => {
         const cols = distributeToColumns(sortByCategory(categories), 3)

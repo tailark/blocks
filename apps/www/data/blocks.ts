@@ -1,9 +1,8 @@
 import { File } from '@/components/code-editor'
 import fs from 'fs'
 import path from 'path'
+import { categoryOrder } from './blocks/metadata'
 
-// In Next.js, process.cwd() returns the project root (apps/www)
-// So we need to go up 2 levels to reach the monorepo root, then into packages
 const PACKAGES_DIR = path.join(process.cwd(), '../../packages')
 
 export interface Block {
@@ -148,26 +147,6 @@ function generateBlocks(): Block[] {
 }
 
 export const blocks: Block[] = generateBlocks()
-
-const categoryOrder = [
-    'hero-section',
-    'logo-cloud',
-    'features',
-    'integrations',
-    'content',
-    'stats',
-    'team',
-    'testimonials',
-    'call-to-action',
-    'footer',
-    'pricing',
-    'comparator',
-    'faqs',
-    'login',
-    'sign-up',
-    'forgot-password',
-    'contact'
-]
 
 const uniqueCategories = [...new Set(blocks.map((b) => b.category))]
 

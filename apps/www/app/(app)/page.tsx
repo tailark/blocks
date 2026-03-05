@@ -11,8 +11,9 @@ import { WallOfLove } from '@/components/marketing/wall-of-love'
 import FAQs from '@/components/marketing/faqs'
 import { LogoCloud } from '@/components/marketing/logo-cloud'
 import { IllustrationsSection } from '@/components/marketing/illustrations'
+import { getAllKitCategories } from '@/lib/catalog'
 
-export default function Home() {
+export default async function Home() {
     return (
         <>
             <section
@@ -89,7 +90,8 @@ export default function Home() {
                         </Button>
                     </div>
                 </div>
-                <BlocksCanvas />
+
+                <BlocksCanvasServer />
             </section>
 
             <LogoCloud />
@@ -179,4 +181,10 @@ export default function Home() {
             </div>
         </>
     )
+}
+
+async function BlocksCanvasServer() {
+    'use cache'
+    const catalogData = await getAllKitCategories()
+    return <BlocksCanvas initialData={catalogData} />
 }
