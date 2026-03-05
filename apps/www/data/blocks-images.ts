@@ -1344,3 +1344,5 @@ export const duskBlocksImages: BlockImage[] = [
         height: 720,
     },
 ]
+
+export const blocksImages = [...mistBlocksImages, ...veilBlocksImages, ...duskBlocksImages]

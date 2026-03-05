@@ -3,14 +3,14 @@ import Link from 'next/link'
 import { sendGAEvent } from '@next/third-parties/google'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@tailark/core/ui/tooltip'
 
-export function OpenInV0Button({ registryUrl, title, category }: { registryUrl: string; title: string; category: string }) {
+export function OpenInV0Button({ registryUrl, title, category, className }: { registryUrl: string; title: string; category: string; className?: string }) {
     return (
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
                     <Button
                         aria-label="Open in v0"
-                        className="hover:bg-foreground/4 size-7"
+                        className={className || 'hover:bg-foreground/4 size-7'}
                         variant="ghost"
                         asChild
                         onClick={() =>

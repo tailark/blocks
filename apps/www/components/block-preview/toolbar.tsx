@@ -204,3 +204,71 @@ const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeC
 }
 
 export default BlockPreviewToolbar
+
+export interface CLIGroupButtonProps {
+    category: string
+    registryItem: string
+    eventName: string
+    theme?: string
+}
+
+interface RegistryInstallButtonProps extends CLIGroupButtonProps {
+    title: string
+    iconOnly?: boolean
+    className?: string
+}
+
+export const RegistryInstallButton = ({ registryItem, eventName, title, category, theme, iconOnly, className }: RegistryInstallButtonProps) => {
+    const prompt = useStore(promptStore)
+    const [copied, setCopied] = React.useState(false)
+
+    const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        e.stopPropagation()
+        const kit = theme || 'mist'
+        const command = `${prompts[prompt]} shadcn add @tailark/${kit}/${registryItem}`
+        navigator.clipboard.writeText(command)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+    }
+
+    if (iconOnly) {
+        return (
+            <button
+                onClick={handleCopy}
+                className={cn('flex h-7 w-9 items-center justify-center', className)}
+                aria-label={`Copy install command for ${title}`}>
+                <AnimatePresence mode="popLayout">
+                    {copied ? (
+                        <motion.span
+                            key="check"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.8 }}
+                            className="text-emerald-500">
+                            ✓
+                        </motion.span>
+                    ) : (
+                        <motion.span
+                            key="copy"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.8 }}>
+                            <Code2 className="size-3.5 fill-indigo-500/20" />
+                        </motion.span>
+                    )}
+                </AnimatePresence>
+            </button>
+        )
+    }
+
+    return (
+        <Button
+            onClick={handleCopy}
+            variant="ghost"
+            size="sm"
+            className={cn('h-7 px-2', className)}>
+            {copied ? 'Copied!' : `${prompts[prompt]} shadcn add @tailark/${registryItem}`}
+        </Button>
+    )
+}

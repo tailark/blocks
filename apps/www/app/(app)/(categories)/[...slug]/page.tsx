@@ -9,12 +9,14 @@ interface PageProps {
     params: Promise<{ slug: string[] }>
 }
 
+const KIT_PREFIXES = new Set(['mist', 'veil'])
+
 function getKitAndCategory(slug: string[]): { kitShortName: string; category: string; kitFullName: string } | null {
     if (slug[0] === '.well-known') {
         return null
     }
 
-    if (slug.length < 1 || slug.length > 2) {
+    if (slug.length < 1 || slug.length > 3) {
         return null
     }
 
@@ -22,11 +24,17 @@ function getKitAndCategory(slug: string[]): { kitShortName: string; category: st
     let category: string
 
     if (slug.length === 1) {
+        // /[category] → dusk
         kitShortName = 'dusk'
         category = slug[0]
-    } else {
+    } else if (KIT_PREFIXES.has(slug[0])) {
+        // /mist/[category] or /mist/[category]/[variant]
         kitShortName = slug[0]
         category = slug[1]
+    } else {
+        // /[category]/[variant] → dusk (variant id ignored for category page)
+        kitShortName = 'dusk'
+        category = slug[0]
     }
     const kitFullName = `${kitShortName}-kit`
     return { kitShortName, category, kitFullName }
