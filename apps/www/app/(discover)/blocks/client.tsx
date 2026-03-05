@@ -318,7 +318,8 @@ export function BlocksClient() {
                                         .filter((_, index: number) => index % columns === colIndex)
                                         .map((category) => {
                                             const isQuartz = category.kit === 'quartz-kit'
-                                            const categoryHref = isQuartz ? `https://pro.tailark.com/${category.name}` : `/${category.name}`
+                                            const catKitName = category.kit?.replace('-kit', '') || 'dusk'
+                                            const categoryHref = isQuartz ? `https://pro.tailark.com/${category.name}` : `/${catKitName}/${category.name}`
                                             return (
                                                 <DiscoverBlockCard
                                                     key={`${category.kit}-${category.name}`}
@@ -349,7 +350,7 @@ export function BlocksClient() {
                                     {group.map((block) => {
                                         const kitName = block.kit?.replace('-kit', '') || 'mist'
                                         const isQuartz = block.kit === 'quartz-kit'
-                                        const blockHref = isQuartz ? `https://pro.tailark.com/${block.category}/${block.id}` : `/${block.category}/${block.id}`
+                                        const blockHref = isQuartz ? `https://pro.tailark.com/${block.category}/${block.id}` : `/${kitName}/${block.category}/${block.id}`
                                         // Use imageUrl from block if available (quartz), otherwise construct URL
                                         const imageSrc = block.imageUrl || `https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/${kitName}/${block.category}-${titleToNumber(block.id)}.png`
 

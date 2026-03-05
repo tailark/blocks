@@ -5,14 +5,18 @@ import { SiteFooter } from '@/components/site-footer'
 
 interface LayoutProps {
     children: React.ReactNode
+    params: Promise<{ kit: string }>
 }
 
-export default function CategoryLayout({ children }: LayoutProps) {
+export default async function KitCategoryLayout({ children, params }: LayoutProps) {
+    const { kit } = await params
+    const kitFullName = `${kit}-kit`
+
     return (
         <>
             <BlocksNav
-                currentKitFullName="dusk-kit"
-                currentKitShortName="default"
+                currentKitFullName={kitFullName}
+                currentKitShortName={kit}
                 allCategories={categories}
                 blocks={blocks}
             />
