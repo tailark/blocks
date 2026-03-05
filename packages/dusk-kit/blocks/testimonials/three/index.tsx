@@ -1,4 +1,4 @@
-import { Spotify } from '@tailark/core/components/logos/spotify'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
 
 export default function TestimonialsSection() {
     return (

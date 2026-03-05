@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Spotify } from '@tailark/core/components/logos/spotify'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
 
 export default function ContentSection() {
     return (

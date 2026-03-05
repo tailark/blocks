@@ -1,4 +1,5 @@
 import type { SVGProps } from 'react'
+
 export const Vercel = (props: SVGProps<SVGSVGElement>) => (
     <svg
         viewBox="0 0 256 222"

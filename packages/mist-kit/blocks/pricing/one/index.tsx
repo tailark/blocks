@@ -2,9 +2,9 @@ import { Button } from '@mist/components/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 import { Card } from '@mist/components/ui/card'
-import { Spotify } from '@tailark/core/components/logos/spotify'
-import { Supabase } from '@tailark/core/components/logos/supabase'
-import { VercelFull } from '@tailark/core/components/logos/vercel'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
+import { VercelFull } from '@tailark/core/components/ui/svgs/vercel'
 
 export default function Pricing() {
     return (
@@ -60,7 +60,7 @@ export default function Pricing() {
                                         height={22}
                                         width={73}
                                     />
-                                    <Supabase className="h-[22px]" />
+                                    <SupabaseFull className="h-[22px]" />
                                 </div>
                             </div>
                         </div>

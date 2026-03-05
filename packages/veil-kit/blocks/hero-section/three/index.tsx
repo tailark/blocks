@@ -1,18 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { Button } from '@veil/components/ui/button'
-import { Card } from '@veil/components/ui/card'
 import { HeroHeader } from './header'
 import { AudioLines, ChevronRight, MessageCircle, Mic2, Plus } from 'lucide-react'
-import { Supabase } from '@veil/components/ui/svgs/supabase'
-import { Slack } from '@veil/components/ui/svgs/slack'
-import { Twilio } from '@veil/components/ui/svgs/twilio'
-import { Linear } from '@veil/components/ui/svgs/linear'
-import { Figma } from '@veil/components/ui/svgs/figma'
-import { Vercel } from '@veil/components/ui/svgs/vercel'
-import { Firebase } from '@veil/components/ui/svgs/firebase'
-import { ClerkIconLight as Clerk } from '@veil/components/ui/svgs/clerk'
-import { Claude } from '@veil/components/ui/svgs/claude'
 import Image from 'next/image'
 
 export default function HeroSection() {

@@ -5,16 +5,16 @@ import { Logo } from '@tailark/core/components/logo'
 import { ArrowRight, Menu, Rocket, X } from 'lucide-react'
 import { Button } from '@tailark/core/ui/button'
 import Image from 'next/image'
-import { Spotify } from '@tailark/core/components/logos/spotify'
-import { Supabase } from '@tailark/core/components/logos/supabase'
-import { Hulu } from '@tailark/core/components/logos/hulu'
-import { Firebase } from '@tailark/core/components/logos/firebase'
-import { Beacon } from '@tailark/core/components/logos/beacon'
-import { Bolt } from '@tailark/core/components/logos/bolt'
-import { Claude } from '@tailark/core/components/logos/claude'
-import { Figma } from '@tailark/core/components/logos/figma'
-import { VercelFull } from '@tailark/core/components/logos/vercel'
-import { Cisco } from '@tailark/core/components/logos/cisco'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
+import { Hulu } from '@tailark/core/components/ui/svgs/hulu'
+import { FirebaseFull } from '@tailark/core/components/ui/svgs/firebase'
+import { Beacon } from '@tailark/core/components/ui/svgs/beacon'
+import { Bolt } from '@tailark/core/components/ui/svgs/bolt'
+import { Claude } from '@tailark/core/components/ui/svgs/claude'
+import { Figma } from '@tailark/core/components/ui/svgs/figma'
+import { VercelFull } from '@tailark/core/components/ui/svgs/vercel'
+import { Cisco } from '@tailark/core/components/ui/svgs/cisco'
 
 const menuItems = [
     { name: 'Features', href: '#' },
@@ -150,7 +150,7 @@ export default function HeroSection() {
                                 height={22}
                                 width={84}
                             />
-                            <Supabase className="h-6" />
+                            <SupabaseFull className="h-6" />
                             <Hulu
                                 height={18}
                                 width={56}
@@ -159,7 +159,7 @@ export default function HeroSection() {
                                 height={24}
                                 width={80}
                             />
-                            <Firebase
+                            <FirebaseFull
                                 height={24}
                                 width={80}
                             />

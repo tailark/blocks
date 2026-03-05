@@ -1,5 +1,10 @@
 import { Button } from '@mist/components/ui/button'
-import { Gemini, GooglePaLM, Replit, MediaWiki, MagicUI, VSCodium } from '@tailark/core/components/logos'
+import { Gemini } from '@tailark/core/components/ui/svgs/gemini'
+import { GooglePaLM } from '@tailark/core/components/ui/svgs/google-palm'
+import { Replit } from '@tailark/core/components/ui/svgs/replit'
+import { MediaWiki } from '@tailark/core/components/ui/svgs/media-wiki'
+import { MagicUI } from '@tailark/core/components/ui/svgs/magic-ui'
+import { VSCodium } from '@tailark/core/components/ui/svgs/vs-codium'
 import Link from 'next/link'
 
 export default function Integrations() {

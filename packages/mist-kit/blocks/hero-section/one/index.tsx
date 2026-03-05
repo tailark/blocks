@@ -4,9 +4,9 @@ import { Button } from '@mist/components/ui/button'
 import { HeroHeader } from './header'
 import { ChevronRight, CirclePlay } from 'lucide-react'
 import Image from 'next/image'
-import { VercelFull } from '@tailark/core/components/logos/vercel'
-import { Spotify } from '@tailark/core/components/logos/spotify'
-import { Supabase } from '@tailark/core/components/logos/supabase'
+import { VercelFull } from '@tailark/core/components/ui/svgs/vercel'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
 
 export default function HeroSection() {
     return (
@@ -56,7 +56,7 @@ export default function HeroSection() {
                                             height={22}
                                             width={73}
                                         />
-                                        <Supabase className="h-[22px]" />
+                                        <SupabaseFull className="h-[22px]" />
                                     </div>
                                 </div>
                             </div>

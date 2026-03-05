@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader } from '@tailark/core/ui/card'
 import { Avatar, AvatarFallback, AvatarImage } from '@tailark/core/ui/avatar'
-import { Hulu } from '@tailark/core/components/logos/hulu'
+import { Hulu } from '@tailark/core/components/ui/svgs/hulu'
 
 export default function Testimonials() {
     return (

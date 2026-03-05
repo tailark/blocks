@@ -1,15 +1,15 @@
 import { InfiniteSlider } from '@tailark/core/motion-primitives/infinite-slider'
 import { ProgressiveBlur } from '@tailark/core/motion-primitives/progressive-blur'
-import { Spotify } from '@tailark/core/components/logos/spotify'
-import { VercelFull } from '@tailark/core/components/logos/vercel'
-import { Supabase } from '@tailark/core/components/logos/supabase'
-import { Hulu } from '@tailark/core/components/logos/hulu'
-import { Bolt } from '@tailark/core/components/logos/bolt'
-import { Firebase } from '@tailark/core/components/logos/firebase'
-import { Beacon } from '@tailark/core/components/logos/beacon'
-import { Claude } from '@tailark/core/components/logos/claude'
-import { Cisco } from '@tailark/core/components/logos/cisco'
-import { Figma } from '@tailark/core/components/logos/figma'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { VercelFull } from '@tailark/core/components/ui/svgs/vercel'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
+import { Hulu } from '@tailark/core/components/ui/svgs/hulu'
+import { Bolt } from '@tailark/core/components/ui/svgs/bolt'
+import { FirebaseFull } from '@tailark/core/components/ui/svgs/firebase'
+import { Beacon } from '@tailark/core/components/ui/svgs/beacon'
+import { Claude } from '@tailark/core/components/ui/svgs/claude'
+import { Cisco } from '@tailark/core/components/ui/svgs/cisco'
+import { Figma } from '@tailark/core/components/ui/svgs/figma'
 
 export const LogoCloud = () => {
     return (
@@ -32,7 +32,7 @@ export const LogoCloud = () => {
                                 height={22}
                                 width={84}
                             />
-                            <Supabase className="h-6" />
+                            <SupabaseFull className="h-6" />
                             <Hulu
                                 height={18}
                                 width={56}
@@ -41,7 +41,7 @@ export const LogoCloud = () => {
                                 height={24}
                                 width={80}
                             />
-                            <Firebase
+                            <FirebaseFull
                                 height={24}
                                 width={80}
                             />

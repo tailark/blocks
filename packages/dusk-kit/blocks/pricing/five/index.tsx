@@ -1,9 +1,9 @@
 import { Button } from '@tailark/core/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
-import { Spotify } from '@tailark/core/components/logos/spotify'
-import { Hulu } from '@tailark/core/components/logos/hulu'
-import { Firebase } from '@tailark/core/components/logos/firebase'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { Hulu } from '@tailark/core/components/ui/svgs/hulu'
+import { FirebaseFull } from '@tailark/core/components/ui/svgs/firebase'
 
 export default function Pricing() {
     return (
@@ -55,7 +55,7 @@ export default function Pricing() {
                                         height={24}
                                         width={80}
                                     />
-                                    <Firebase
+                                    <FirebaseFull
                                         height={24}
                                         width={80}
                                     />

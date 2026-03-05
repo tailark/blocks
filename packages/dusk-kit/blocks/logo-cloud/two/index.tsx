@@ -1,13 +1,13 @@
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import { Spotify } from '@tailark/core/components/logos/spotify'
-import { VercelFull } from '@tailark/core/components/logos/vercel'
-import { Supabase } from '@tailark/core/components/logos/supabase'
-import { Hulu } from '@tailark/core/components/logos/hulu'
-import { Bolt } from '@tailark/core/components/logos/bolt'
-import { Firebase } from '@tailark/core/components/logos/firebase'
-import { Beacon } from '@tailark/core/components/logos/beacon'
-import { Claude } from '@tailark/core/components/logos/claude'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { VercelFull } from '@tailark/core/components/ui/svgs/vercel'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
+import { Hulu } from '@tailark/core/components/ui/svgs/hulu'
+import { Bolt } from '@tailark/core/components/ui/svgs/bolt'
+import { FirebaseFull } from '@tailark/core/components/ui/svgs/firebase'
+import { Beacon } from '@tailark/core/components/ui/svgs/beacon'
+import { Claude } from '@tailark/core/components/ui/svgs/claude'
 
 export default function LogoCloudTwo() {
     return (
@@ -30,7 +30,7 @@ export default function LogoCloudTwo() {
                         <VercelFull className="mx-auto h-4 w-full" />
                     </div>
                     <div className="flex items-center">
-                        <Supabase className="mx-auto h-6" />
+                        <SupabaseFull className="mx-auto h-6" />
                     </div>
                     <div className="flex items-center">
                         <Hulu className="mx-auto h-4 w-full" />
@@ -39,7 +39,7 @@ export default function LogoCloudTwo() {
                         <Spotify className="mx-auto h-6 w-full" />
                     </div>
                     <div className="flex items-center">
-                        <Firebase className="mx-auto h-6 w-full" />
+                        <FirebaseFull className="mx-auto h-6 w-full" />
                     </div>
                     <div className="flex items-center">
                         <Beacon className="mx-auto h-4 w-full" />

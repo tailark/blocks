@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader } from '@tailark/core/ui/card'
 import { Globe } from 'lucide-react'
 import Image from 'next/image'
-import { Linear } from '@tailark/core/components/logos/linear'
-import { Twilio } from '@tailark/core/components/logos/twilio'
-import { Slack } from '@tailark/core/components/logos/slack'
+import { Linear } from '@tailark/core/components/ui/svgs/linear'
+import { Twilio } from '@tailark/core/components/ui/svgs/twilio'
+import { Slack } from '@tailark/core/components/ui/svgs/slack'
 
 export default function Features() {
     return (

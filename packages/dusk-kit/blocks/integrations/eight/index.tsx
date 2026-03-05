@@ -1,4 +1,9 @@
-import { Gemini, Replit, GooglePaLM, MagicUI, VSCodium, MediaWiki } from '@tailark/core/components/logos'
+import { Gemini } from '@tailark/core/components/ui/svgs/gemini'
+import { Replit } from '@tailark/core/components/ui/svgs/replit'
+import { GooglePaLM } from '@tailark/core/components/ui/svgs/google-palm'
+import { MagicUI } from '@tailark/core/components/ui/svgs/magic-ui'
+import { VSCodium } from '@tailark/core/components/ui/svgs/vs-codium'
+import { MediaWiki } from '@tailark/core/components/ui/svgs/media-wiki'
 import { Button } from '@tailark/core/ui/button'
 import Link from 'next/link'
 

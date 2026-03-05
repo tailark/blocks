@@ -1,4 +1,6 @@
-import { Gemini, Replit, GooglePaLM } from '@tailark/core/components/logos'
+import { Gemini } from '@tailark/core/components/ui/svgs/gemini'
+import { Replit } from '@tailark/core/components/ui/svgs/replit'
+import { GooglePaLM } from '@tailark/core/components/ui/svgs/google-palm'
 import { Button } from '@tailark/core/ui/button'
 import Link from 'next/link'
 import { Plus } from 'lucide-react'

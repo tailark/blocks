@@ -4,10 +4,10 @@ import { Button } from '@mist/components/ui/button'
 import Image from 'next/image'
 import { BookOpen } from 'lucide-react'
 import { cn } from '@tailark/core/lib/utils'
-import { Spotify } from '@tailark/core/components/logos/spotify'
-import { VercelFull } from '@tailark/core/components/logos/vercel'
-import { Supabase } from '@tailark/core/components/logos/supabase'
-import { Hulu } from '@tailark/core/components/logos/hulu'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { VercelFull } from '@tailark/core/components/ui/svgs/vercel'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
+import { Hulu } from '@tailark/core/components/ui/svgs/hulu'
 
 export default function HeroSection() {
     return (
@@ -66,7 +66,7 @@ export default function HeroSection() {
                             height={20}
                             width={76}
                         />
-                        <Supabase className="h-[22px]" />
+                        <SupabaseFull className="h-[22px]" />
                         <Hulu
                             height={16}
                             width={50}
