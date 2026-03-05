@@ -17,7 +17,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "registry:build": "shadcn build"
+    "registry:build": "pnpm --filter @tailark/www registry:build"
   },
   "devDependencies": {
     "prettier": "3.5.1",
