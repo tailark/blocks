@@ -1,5 +1,5 @@
 import { cache } from 'react'
-import type { BlockCategory, KitId } from '@/components/blocks-canvas'
+import type { BlockCategory, KitId } from '@/components/marketing/blocks-canvas'
 
 interface CatalogBlock {
     name: string

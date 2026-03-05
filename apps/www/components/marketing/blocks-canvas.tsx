@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useState, useEffect, useMemo, ReactNode } from 'react'
-import { BlockImage } from './block-image'
+import { BlockImage } from '../block-image'
 import { cn } from '@/lib/utils'
 import { categoryOrder } from '@/data/blocks/metadata'
 
@@ -76,14 +76,12 @@ export const BlocksCanvas = ({ initialData }: BlocksCanvasProps) => {
     const [loading, setLoading] = useState(!initialData)
 
     useEffect(() => {
-        // Use prefetched data if available for the active kit
         if (initialData?.[activeKit]) {
             setCategories(initialData[activeKit])
             setLoading(false)
             return
         }
 
-        // Fallback to client-side fetch if no prefetched data
         const fetchCatalog = async () => {
             setLoading(true)
             try {
