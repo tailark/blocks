@@ -5,7 +5,7 @@
   "title": "Features Five",
   "description": "Mist Kit Features block, variant five",
   "registryDependencies": [
-    "button"
+    "@shadcn/button"
   ],
   "files": [
     {

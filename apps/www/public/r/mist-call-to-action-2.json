@@ -5,7 +5,7 @@
   "title": "Call To Action 2",
   "description": "Mist Kit Call To Action block, variant 2",
   "registryDependencies": [
-    "button"
+    "@shadcn/button"
   ],
   "files": [
     {

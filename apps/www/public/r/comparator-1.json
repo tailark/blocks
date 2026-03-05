@@ -5,7 +5,7 @@
   "title": "Pricing Comparator 1",
   "description": "Shadcn/ui pricing comparator table block",
   "registryDependencies": [
-    "button"
+    "@shadcn/button"
   ],
   "files": [
     {

@@ -5,7 +5,7 @@
   "title": "Features Block 10",
   "description": "Shadcn/ui website features block with cards and circular UI elements",
   "registryDependencies": [
-    "card"
+    "@shadcn/card"
   ],
   "files": [
     {

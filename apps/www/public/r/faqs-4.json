@@ -5,7 +5,7 @@
   "title": "FAQs Block 4",
   "description": "Shadcn/ui FAQs block with accordion component and icons",
   "registryDependencies": [
-    "accordion"
+    "@shadcn/accordion"
   ],
   "files": [
     {

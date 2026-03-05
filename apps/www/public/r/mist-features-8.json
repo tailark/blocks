@@ -5,7 +5,7 @@
   "title": "Features Eight",
   "description": "Mist Kit Features block, variant eight",
   "registryDependencies": [
-    "card"
+    "@shadcn/card"
   ],
   "files": [
     {

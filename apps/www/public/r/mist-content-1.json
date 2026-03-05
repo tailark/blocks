@@ -5,8 +5,8 @@
   "title": "Content One",
   "description": "Mist Kit Content block, variant one",
   "registryDependencies": [
-    "toggle",
-    "toggle-group"
+    "@shadcn/toggle",
+    "@shadcn/toggle-group"
   ],
   "files": [
     {

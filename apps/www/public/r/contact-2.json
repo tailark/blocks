@@ -5,12 +5,12 @@
   "title": "Contact Block 2",
   "description": "Shadcn/ui website contact section",
   "registryDependencies": [
-    "button",
-    "input",
-    "label",
-    "textarea",
-    "select",
-    "card"
+    "@shadcn/button",
+    "@shadcn/input",
+    "@shadcn/label",
+    "@shadcn/textarea",
+    "@shadcn/select",
+    "@shadcn/card"
   ],
   "files": [
     {

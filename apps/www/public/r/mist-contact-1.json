@@ -5,12 +5,12 @@
   "title": "Contact One",
   "description": "Mist Kit Contact block, variant one",
   "registryDependencies": [
-    "button",
-    "card",
-    "input",
-    "textarea",
-    "label",
-    "select"
+    "@shadcn/button",
+    "@shadcn/card",
+    "@shadcn/input",
+    "@shadcn/textarea",
+    "@shadcn/label",
+    "@shadcn/select"
   ],
   "files": [
     {
