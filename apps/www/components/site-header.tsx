@@ -87,7 +87,7 @@ export const SiteHeader = ({ isWide = false }: { isWide?: boolean }) => {
                                 asChild
                                 size="sm"
                                 className="dark:bg-primary/95 relative h-7 border-transparent [--color-primary-foreground:var(--color-background)] [--color-primary:var(--color-foreground)]">
-                                <Link href="https://pro.tailark.com/#pricing">Get full access</Link>
+                                <Link href="/#pricing">Get full access</Link>
                             </Button>
                         </div>
                     </nav>

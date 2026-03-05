@@ -4,9 +4,10 @@ import { Button } from '@tailark/core/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import { testimonials } from '@/lib/testimonials'
-import { BlockImageCard } from '@/components/block-image-card'
 import { ChevronRight } from 'lucide-react'
 import { BlocksCanvas } from '@/components/blocks-canvas'
+import { PagesSection } from '@/components/pages'
+import { Pricing } from '@/components/pricing'
 
 export default function Home() {
     return (
@@ -88,7 +89,7 @@ export default function Home() {
                 <BlocksCanvas />
             </section>
 
-            <div className="@container mx-auto px-4 lg:px-6 2xl:max-w-7xl">
+            <div className="@container mx-auto px-4 py-24 lg:px-6 2xl:max-w-7xl">
                 <div className="mx-auto lg:w-1/2">
                     <Link
                         href="https://vercel.com/oss"
@@ -159,137 +160,9 @@ export default function Home() {
                 </div>
             </div>
 
-            <section className="relative mt-12 overflow-hidden pb-24">
-                <div
-                    aria-hidden="true"
-                    className="mask-x-from-75% pointer-events-none absolute -inset-x-32 -inset-y-px h-px border-t border-dashed"
-                />
+            <PagesSection />
 
-                <div className="mx-auto max-w-7xl px-4 py-12 lg:py-16">
-                    <div className="mx-auto max-w-lg text-center">
-                        <span className="mb-6 block text-sm text-indigo-500 dark:text-indigo-400">Pro</span>
-                        <h2 className="text-foreground text-balance text-4xl font-medium leading-10 tracking-tight">Build enterprise-grade websites, faster.</h2>
-                        <p className="text-muted-foreground mt-4 text-balance text-base">Tailark Pro is your complete Shadcn kit, packed with pages, blocks and illustration crafted for speed and quality.</p>
-                        <Button
-                            asChild
-                            className="mt-6 rounded-full">
-                            <Link href="https://pro.tailark.com">
-                                Explore pro <span className="border-l-primary-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent" />
-                            </Link>
-                        </Button>
-                    </div>
-                </div>
-                <div className="relative">
-                    <div
-                        aria-hidden
-                        className="mask-x-from-75% pointer-events-none absolute -inset-x-32 inset-y-0 border-y"
-                    />
-                    <div className="relative mx-auto max-w-7xl px-4">
-                        <div
-                            aria-hidden
-                            className="mask-y-from-85% pointer-events-none absolute -inset-y-32 inset-x-4 border-x"
-                        />
-                        <div className="bg-foreground/4 relative overflow-hidden">
-                            <div className="grid grid-cols-2 gap-1.5 p-1.5 sm:grid-cols-3">
-                                <div className="space-y-1.5">
-                                    <BlockImageCard
-                                        name="features-carousel-2"
-                                        alt="Tailark pro features carousel 2"
-                                        height={271}
-                                    />
-                                    <div className="ring-foreground/6.5 bg-card relative z-10 overflow-hidden rounded-2xl shadow-md shadow-black/5 ring-1">
-                                        <div className="aspect-20/22 overlflow-hidden rounded-2xl">
-                                            <Image
-                                                src="https://pro.tailark.com/pages/grid-2-landing-one.png"
-                                                alt="Tailark Quartz libre pricing page"
-                                                width={440}
-                                                height={557}
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 520px"
-                                                className="size-full object-cover object-top"
-                                            />
-                                        </div>
-                                    </div>
-                                    <BlockImageCard
-                                        name="features-11"
-                                        alt="Tailark pro features 11"
-                                        height={245}
-                                    />
-                                    <div className="ring-foreground/6.5 bg-card relative z-10 overflow-hidden rounded-2xl shadow-md shadow-black/5 ring-1">
-                                        <div className="aspect-20/22 overlflow-hidden rounded-2xl">
-                                            <Image
-                                                src="https://pro.tailark.com/pages/libre-pricing-one.png"
-                                                alt="Tailark Quartz libre pricing page"
-                                                width={440}
-                                                height={557}
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 520px"
-                                                className="size-full object-cover object-top"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="grid space-y-1.5">
-                                    <BlockImageCard
-                                        name="hero-section-15"
-                                        alt="Tailark pro hero section 15"
-                                        height={397}
-                                    />
-                                    <div className="ring-foreground/6.5 bg-card relative z-10 overflow-hidden rounded-2xl shadow-md shadow-black/5 ring-1">
-                                        <div className="aspect-20/22 overlflow-hidden rounded-2xl">
-                                            <Image
-                                                src="https://pro.tailark.com/pages/dark-landing-one.png"
-                                                alt="Tailark Quartz libre pricing page"
-                                                width={440}
-                                                height={557}
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 520px"
-                                                className="size-full object-cover object-top"
-                                            />
-                                        </div>
-                                    </div>
-                                    <BlockImageCard
-                                        name="call-to-action-1"
-                                        alt="Tailark pro call to action 1"
-                                        height={158}
-                                    />
-                                    <BlockImageCard
-                                        name="hero-section-16"
-                                        alt="Tailark pro hero section 16"
-                                        height={445}
-                                    />
-                                </div>
-                                <div className="grid grid-rows-[auto_1fr] gap-1.5 max-sm:hidden">
-                                    <div className="space-y-1.5">
-                                        <BlockImageCard
-                                            name="team-3"
-                                            alt="Tailark pro team 3"
-                                            height={257}
-                                        />
-                                        <BlockImageCard
-                                            name="bento-13"
-                                            alt="Tailark pro bento 13"
-                                            height={428}
-                                        />
-                                        <BlockImageCard
-                                            name="investors-2"
-                                            alt="Tailark pro investors 2"
-                                            height={271}
-                                        />
-
-                                        <BlockImageCard
-                                            name="secondary-hero-2"
-                                            alt="Tailark pro secondary hero 2"
-                                            height={388}
-                                        />
-                                    </div>
-                                    <div className="bg-card ring-foreground/6.5 flex items-center justify-center rounded-2xl p-8 shadow-md shadow-black/5 ring-1">
-                                        <p className="text-muted-foreground max-w-xs text-balance text-center text-base">200+ Blocks, 43 Pages, 123 Illustrations now - more shipped progressively</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Pricing />
 
             <div className="pt-24">
                 <SiteFooter />
