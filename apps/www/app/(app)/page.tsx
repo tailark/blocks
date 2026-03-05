@@ -67,27 +67,38 @@ export default async function Home() {
                             Build modern marketing websites with <span className="bg-linear-to-b hover:animate-hue-rotate from-emerald-400 to-emerald-600 bg-clip-text text-transparent dark:from-emerald-200 dark:to-emerald-500">Shadcn blocks.</span>
                         </h1>
 
-                        <Button
-                            asChild
-                            size="sm"
-                            className="bg-primary/90 text-shadow-sm shadow-md shadow-black/10 [--color-primary-foreground:var(--color-background)] [--color-primary:var(--foreground)]">
-                            <Link
-                                href="/#pricing"
-                                className="text-sm!">
-                                Get full access
-                            </Link>
-                        </Button>
-                        <Button
-                            asChild
-                            size="sm"
-                            variant="ghost"
-                            className="ml-2">
-                            <Link
-                                href="/blocks"
-                                className="text-sm!">
-                                Explore kits
-                            </Link>
-                        </Button>
+                        <div className="flex flex-wrap justify-center gap-2">
+                            <Button
+                                asChild
+                                size="sm"
+                                className="bg-primary/90 text-shadow-sm shadow-md shadow-black/10 [--color-primary-foreground:var(--color-background)] [--color-primary:var(--foreground)]">
+                                <a
+                                    href="/#pricing"
+                                    className="text-sm!">
+                                    Get full access
+                                </a>
+                            </Button>
+                            <Button
+                                asChild
+                                size="sm"
+                                className="bg-primary/90 text-shadow-sm shadow-md shadow-black/10 [--color-primary-foreground:var(--color-background)] [--color-primary:var(--foreground)]">
+                                <a
+                                    href="/#pricing"
+                                    className="text-sm!">
+                                    Get full access
+                                </a>
+                            </Button>
+                            <Button
+                                asChild
+                                size="sm"
+                                variant="ghost">
+                                <Link
+                                    href="/blocks"
+                                    className="text-sm!">
+                                    Explore kits
+                                </Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
@@ -184,7 +195,6 @@ export default async function Home() {
 }
 
 async function BlocksCanvasServer() {
-    'use cache'
     const catalogData = await getAllKitCategories()
     return <BlocksCanvas initialData={catalogData} />
 }
