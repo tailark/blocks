@@ -64,11 +64,12 @@ export default function Home() {
 
                         <Button
                             asChild
-                            size="sm">
+                            size="sm"
+                            className="bg-primary/90 text-shadow-sm shadow-md shadow-black/10">
                             <Link
-                                href="/blocks"
+                                href="/#pricing"
                                 className="text-sm!">
-                                Explore kits
+                                Get full access
                             </Link>
                         </Button>
                         <Button
@@ -77,9 +78,9 @@ export default function Home() {
                             variant="ghost"
                             className="ml-2">
                             <Link
-                                href="/#pricing"
+                                href="/blocks"
                                 className="text-sm!">
-                                Get full access
+                                Explore kits
                             </Link>
                         </Button>
                     </div>

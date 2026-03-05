@@ -13,7 +13,7 @@ import { Dialog, DialogClose, DialogTitle, DialogContent, DialogTrigger } from '
 const links = [
     { href: 'https://pro.tailark.com/illustrations', label: 'Illustrations', isExternal: true },
     { href: '/blocks', label: 'Blocks', isExternal: false },
-    { href: 'https://pro.tailark.com/pages', label: 'Pages', isExternal: true },
+    { href: '/pages', label: 'Pages', isExternal: false },
     { href: '/#pricing', label: 'Pricing', isExternal: false },
     { href: '/docs', label: 'Docs', isExternal: false },
 ]
