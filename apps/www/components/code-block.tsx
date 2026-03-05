@@ -8,6 +8,7 @@ import { JSX, useLayoutEffect, useState } from 'react'
 import { Fragment, jsx, jsxs } from 'react/jsx-runtime'
 import type { BundledLanguage } from 'shiki/bundle/web'
 import { codeToHast } from 'shiki/bundle/web'
+import { Loader } from './loader'
 
 export async function highlight(code: string, lang: BundledLanguage) {
     const hast = await codeToHast(code, {
@@ -62,6 +63,9 @@ export default function CodeBlock({ code, lang, initial, maxHeight, preHighlight
             {content}
         </div>
     ) : (
-        <pre className="rounded-lg bg-zinc-950 p-4">Loading...</pre>
+        <pre className="rounded-lg bg-zinc-950 p-4 text-center">
+            <Loader />
+            <span>Almost there...</span>
+        </pre>
     )
 }
