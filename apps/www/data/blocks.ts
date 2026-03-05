@@ -18,67 +18,6 @@ export interface Block {
     kit?: string
 }
 
-function loadCode(filePath: string): string {
-    const fullPath = path.join(process.cwd(), filePath)
-    if (fs.existsSync(fullPath)) {
-        let code = fs.readFileSync(fullPath, 'utf-8')
-        
-        code = code.replace(/<!--.*?-->/g, '').trim()
-
-        const tailarkPattern = /@tailark\/([a-zA-Z0-9-]+)\/([a-zA-Z0-9-]+)/g
-        code = code.replace(tailarkPattern, (match, kit, type) => {
-            const replacements: Record<string, string> = {
-                'ui': '@/components/ui',
-                'components': '@/components',
-                'lib': '@/lib',
-                'hooks': '@/hooks',
-                'styles': '@/styles',
-                'public': '@/public',
-                'motion-primitives': '@/components/motion-primitives',
-                'magic-ui': '@/components/magic-ui',
-            }
-            
-            return replacements[type] || `@/${type}`;
-        })
-
-        code = code.replace(/from\s+['"]\.\.\/([^'"]+)['"]|from\s+['"]\.\/?([^'"]+)['"]/g, (match, p1, p2) => {
-            const importPath = p1 || p2
-            return `from "@/components/${importPath}"`
-        })
-
-        code = code.replace(/@mist|@veil/g, '@')
-        
-        return code
-    }
-    return '// Code not found'
-}
-
-function loadAllComponentsFromFolder(folderPath: string, category: string): File[] {
-    const result: File[] = []
-    const fullPath = path.join(process.cwd(), folderPath)
-    
-    if (!fs.existsSync(fullPath)) {
-        return result
-    }
-    
-    const files = fs.readdirSync(fullPath)
-        .filter(file => file.endsWith('.tsx'))
-    
-    for (const file of files) {
-        const fileName = file === 'index.tsx' ? `${category}.tsx` : file
-        const filePath = path.join(folderPath, file)
-        const code = loadCode(filePath)
-        
-        result.push({
-            name: fileName,
-            lang: 'tsx',
-            code: code
-        })
-    }
-    
-    return result
-}
-
 function loadCodeAbsolute(absolutePath: string): string {
     if (fs.existsSync(absolutePath)) {
         let code = fs.readFileSync(absolutePath, 'utf-8')

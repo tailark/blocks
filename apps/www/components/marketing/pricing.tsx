@@ -21,7 +21,7 @@ export function Pricing() {
         <section
             id="pricing"
             data-theme="global"
-            className="overflow-hidden pb-32">
+            className="scroll-my-24 overflow-hidden pb-32">
             <div className="mx-auto max-w-7xl px-4">
                 <div className="mx-auto max-w-xl text-center">
                     <h2 className="text-foreground/55 mb-12 block font-mono text-sm tracking-wider">Pricing</h2>

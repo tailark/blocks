@@ -129,7 +129,7 @@ export const BlocksCanvas = () => {
                 activeKit={activeKit}
                 onKitChange={setActiveKit}
             />
-            <div className={cn('bg-muted/50 max-w-380 relative mx-auto overflow-hidden border-y p-4 transition-opacity duration-200 2xl:rounded-t-3xl 2xl:border-x', loading && 'opacity-50')}>
+            <div className={cn('bg-muted/50 min-h-132 max-w-380 relative mx-auto overflow-hidden border-y p-4 transition-opacity duration-200 2xl:rounded-t-3xl 2xl:border-x', loading && 'opacity-50')}>
                 <div className="grid gap-4 *:grid md:grid-cols-3">
                     {visibleCategoryColumns.map((column, colIndex) => (
                         <div

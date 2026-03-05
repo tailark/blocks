@@ -42,7 +42,7 @@ export function DiscoverContent({ children }: DiscoverContentProps) {
                     setSelectedKits(selectedKits.filter((k) => k !== 'quartz'))
                 }
             }
-            // eslint-disable-next-line react-hooks/exhaustive-deps
+             
         },
         [selectedKits, selectedLicences, setSelectedCategories, setSelectedStyles, setSelectedKits, setSelectedLicences]
     )

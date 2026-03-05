@@ -1,7 +1,7 @@
 import BlockPreview from '@/components/block-preview'
 import { SiteFooter } from '@/components/site-footer'
 import { Button } from '@tailark/core/ui/button'
-import { ArrowUpRight, BookOpen, CircleArrowOutUpRightIcon } from 'lucide-react'
+import { ArrowUpRight, BookOpen } from 'lucide-react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 

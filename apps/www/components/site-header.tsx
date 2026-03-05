@@ -54,7 +54,7 @@ export const SiteHeader = ({ isWide = false }: { isWide?: boolean }) => {
                                     asChild
                                     size="sm"
                                     variant="ghost"
-                                    className={cn('text-foreground/75 hover:text-foreground h-7 items-start gap-0.5 text-[13px] hover:bg-transparent', isActive(link.href) && 'text-foreground')}>
+                                    className={cn('text-foreground/75 hover:text-foreground h-7 gap-0.5 text-[13px] hover:bg-transparent', isActive(link.href) && 'text-foreground')}>
                                     <Link
                                         href={link.href}
                                         target={link.isExternal ? '_blank' : '_self'}>
@@ -63,7 +63,7 @@ export const SiteHeader = ({ isWide = false }: { isWide?: boolean }) => {
                                         {link.isExternal && (
                                             <ArrowUpRight
                                                 strokeWidth={2}
-                                                className="size-2.5! opacity-50"
+                                                className="size-2.5! -translate-y-0.5 opacity-50"
                                             />
                                         )}
                                     </Link>
@@ -87,7 +87,7 @@ export const SiteHeader = ({ isWide = false }: { isWide?: boolean }) => {
                                 asChild
                                 size="sm"
                                 className="dark:bg-primary/95 relative h-7 border-transparent [--color-primary-foreground:var(--color-background)] [--color-primary:var(--color-foreground)]">
-                                <Link href="/#pricing">Get full access</Link>
+                                <a href="/#pricing">Get full access</a>
                             </Button>
                         </div>
                     </nav>

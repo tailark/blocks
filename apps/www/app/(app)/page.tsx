@@ -1,5 +1,4 @@
 import { SiteFooter } from '@/components/site-footer'
-import { cn } from '@/lib/utils'
 import { Button } from '@tailark/core/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -179,17 +178,5 @@ export default function Home() {
                 <SiteFooter />
             </div>
         </>
-    )
-}
-
-const ImageWrapper = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-    return (
-        <div
-            className={cn(
-                'bg-card shadow-black/1.5 rounded-xl [--color-border-illustration:--alpha(var(--color-foreground)/6.5%)] [box-shadow:0_0_0_1px_var(--color-border-illustration),0_2px_4px_-0.5px_var(--tw-shadow-color),0_4px_8px_-1px_var(--tw-shadow-color),0_8px_16px_-2px_var(--tw-shadow-color),0_16px_32px_-4px_var(--tw-shadow-color),0_24px_48px_-6px_var(--tw-shadow-color),0_32px_64px_-8px_var(--tw-shadow-color),0_40px_80px_-10px_var(--tw-shadow-color),0_48px_96px_-12px_var(--tw-shadow-color)] dark:shadow-black/5',
-                className
-            )}>
-            <div className="aspect-20/39 overflow-hidden rounded-xl">{children}</div>
-        </div>
     )
 }

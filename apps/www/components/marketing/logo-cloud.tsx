@@ -72,7 +72,7 @@ export function LogoCloud() {
     }, [isDesktop])
 
     return (
-        <div className="lg:mt-12">
+        <div className="overflow-hidden lg:mt-12">
             <div className="mx-auto max-w-7xl px-4">
                 <div className="grid gap-6 pb-6">
                     <p className="text-foreground/60 mx-auto max-w-2xl text-balance text-center tracking-tight">Trusted by people from</p>
