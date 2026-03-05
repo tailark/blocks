@@ -26,18 +26,18 @@ export function DiscoverContent({ children }: DiscoverContentProps) {
         } else if (groupKey === 'kits') {
             setSelectedKits(values)
             // Link quartz kit with pro licence
-            if (values.includes('quartz-kit') && !selectedLicences.includes('pro')) {
+            if (values.includes('quartz') && !selectedLicences.includes('pro')) {
                 setSelectedLicences([...selectedLicences, 'pro'])
-            } else if (!values.includes('quartz-kit') && selectedLicences.includes('pro')) {
+            } else if (!values.includes('quartz') && selectedLicences.includes('pro')) {
                 setSelectedLicences(selectedLicences.filter((l) => l !== 'pro'))
             }
         } else if (groupKey === 'licences') {
             setSelectedLicences(values)
             // Link pro licence with quartz kit
-            if (values.includes('pro') && !selectedKits.includes('quartz-kit')) {
-                setSelectedKits([...selectedKits, 'quartz-kit'])
-            } else if (!values.includes('pro') && selectedKits.includes('quartz-kit')) {
-                setSelectedKits(selectedKits.filter((k) => k !== 'quartz-kit'))
+            if (values.includes('pro') && !selectedKits.includes('quartz')) {
+                setSelectedKits([...selectedKits, 'quartz'])
+            } else if (!values.includes('pro') && selectedKits.includes('quartz')) {
+                setSelectedKits(selectedKits.filter((k) => k !== 'quartz'))
             }
         }
     }

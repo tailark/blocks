@@ -8,7 +8,7 @@ interface PaginationProps {
     totalPages: number
     onPageChange: (page: number) => void
     itemsPerPage: number
-    onItemsPerPageChange: (items: number) => void
+    onItemsPerPageChange?: (items: number) => void
     totalItems: number
 }
 
@@ -59,7 +59,7 @@ export function Pagination({ currentPage, totalPages, onPageChange, itemsPerPage
                     <span className="text-muted-foreground">Show</span>
                     <select
                         value={itemsPerPage}
-                        onChange={(e) => onItemsPerPageChange(Number(e.target.value))}
+                        onChange={(e) => onItemsPerPageChange?.(Number(e.target.value))}
                         className="bg-card ring-foreground/6.5 rounded-lg border border-transparent px-2 py-1 text-sm shadow outline-none ring-1 transition-colors">
                         {itemsPerPageOptions.map((option) => (
                             <option

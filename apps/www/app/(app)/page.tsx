@@ -68,7 +68,18 @@ export default function Home() {
                             <Link
                                 href="/blocks"
                                 className="text-sm!">
-                                Explore blocks
+                                Explore kits
+                            </Link>
+                        </Button>
+                        <Button
+                            asChild
+                            size="sm"
+                            variant="ghost"
+                            className="ml-2">
+                            <Link
+                                href="/#pricing"
+                                className="text-sm!">
+                                Get full access
                             </Link>
                         </Button>
                     </div>
