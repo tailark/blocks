@@ -5,7 +5,7 @@
   "title": "FAQs Two",
   "description": "Mist Kit FAQs block, variant two",
   "registryDependencies": [
-    "accordion"
+    "@shadcn/accordion"
   ],
   "files": [
     {

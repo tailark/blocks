@@ -5,7 +5,7 @@
   "title": "Content Block 4",
   "description": "Shadcn/ui website content block",
   "registryDependencies": [
-    "button"
+    "@shadcn/button"
   ],
   "files": [
     {

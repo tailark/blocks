@@ -10,12 +10,7 @@ interface BlocksNavProps {
     blocks: Block[]
 }
 
-const BlocksNav = ({ 
-    currentKitFullName,
-    currentKitShortName,
-    allCategories,
-    blocks
-}: BlocksNavProps) => {
+const BlocksNav = ({ currentKitFullName, currentKitShortName, allCategories, blocks }: BlocksNavProps) => {
     return (
         <div className="dark:border-border/50 relative z-50 border-b">
             <div className="mx-auto max-w-7xl overflow-hidden lg:overflow-visible">
@@ -31,11 +26,11 @@ const BlocksNav = ({
                             className="bg-linear-to-l from-background pointer-events-none absolute inset-y-px -right-2.5 z-10 w-12"></div>
 
                         <CategoryScrollManager>
-                            <ActiveCategoryLinks 
+                            <ActiveCategoryLinks
                                 currentKitFullName={currentKitFullName}
                                 currentKitShortName={currentKitShortName}
-                                allCategories={allCategories} 
-                                blocks={blocks} 
+                                allCategories={allCategories}
+                                blocks={blocks}
                             />
                         </CategoryScrollManager>
                         <ScrollBar orientation="horizontal" />

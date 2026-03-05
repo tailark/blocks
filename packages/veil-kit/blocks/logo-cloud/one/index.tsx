@@ -3,7 +3,7 @@ import { Beacon } from '@veil/components/ui/svgs/beacon'
 import { Bolt } from '@veil/components/ui/svgs/bolt'
 import { Cisco } from '@veil/components/ui/svgs/cisco'
 import { Hulu } from '@veil/components/ui/svgs/hulu'
-import { Supabase } from '@veil/components/ui/svgs/supabase'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
 import { Spotify } from '@veil/components/ui/svgs/spotify'
 import { VercelFull } from '@veil/components/ui/svgs/vercel'
 import { Linear } from '@veil/components/ui/svgs/linear'
@@ -21,7 +21,7 @@ export default function LogoCloud() {
                     </div>
 
                     <div>
-                        <Supabase className="size-5" />
+                        <SupabaseFull className="h-5" />
                     </div>
                     <div>
                         <Hulu className="h-3.5 w-full" />

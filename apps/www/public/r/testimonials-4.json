@@ -5,7 +5,7 @@
   "title": "Testimonials Section 4",
   "description": "Shadcn/ui website testimonials section",
   "registryDependencies": [
-    "avatar"
+    "@shadcn/avatar"
   ],
   "files": [
     {

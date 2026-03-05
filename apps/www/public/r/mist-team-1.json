@@ -5,8 +5,8 @@
   "title": "Team section block",
   "description": "Mist Kit Team section block, variant one",
   "registryDependencies": [
-    "avatar",
-    "button"
+    "@shadcn/avatar",
+    "@shadcn/button"
   ],
   "files": [
     {

@@ -10,7 +10,7 @@ export default function Features() {
                     <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Built to cover your needs</h2>
                     <p className="mt-4">Libero sapiente aliquam quibusdam aspernatur, praesentium iusto repellendus.</p>
                 </div>
-                <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 [--color-background:var(--color-muted)] [--color-card:var(--color-muted)] *:text-center md:mt-16 dark:[--color-muted:var(--color-zinc-900)]">
+                <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 *:bg-muted mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
                     <Card className="group border-0 shadow-none">
                         <CardHeader className="pb-3">
                             <CardDecorator>
@@ -74,6 +74,6 @@ const CardDecorator = ({ children }: { children: ReactNode }) => (
             className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px] dark:opacity-50"
         />
 
-        <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t">{children}</div>
+        <div className="bg-muted absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t">{children}</div>
     </div>
 )

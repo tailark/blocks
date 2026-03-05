@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "core-gemini",
+  "type": "registry:ui",
+  "title": "Gemini logo",
+  "description": "Tailark core gemini svg logo",
+  "files": [
+    {
+      "path": "../../packages/core/src/components/ui/svgs/gemini.tsx",
+      "content": "import { type SVGProps } from 'react'\n\nexport function Gemini(props: SVGProps<SVGSVGElement>) {\n    return (\n        <svg\n            height=\"1em\"\n            style={{\n                flex: 'none',\n                lineHeight: 1,\n            }}\n            viewBox=\"0 0 24 24\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            width=\"1em\"\n            {...props}>\n            <title>{'Gemini'}</title>\n            <defs>\n                <linearGradient\n                    id=\"lobe-icons-gemini-fill\"\n                    x1=\"0%\"\n                    x2=\"68.73%\"\n                    y1=\"100%\"\n                    y2=\"30.395%\">\n                    <stop\n                        offset=\"0%\"\n                        stopColor=\"#1C7DFF\"\n                    />\n                    <stop\n                        offset=\"52.021%\"\n                        stopColor=\"#1C69FF\"\n                    />\n                    <stop\n                        offset=\"100%\"\n                        stopColor=\"#F0DCD6\"\n                    />\n                </linearGradient>\n            </defs>\n            <path\n                d=\"M12 24A14.304 14.304 0 000 12 14.304 14.304 0 0012 0a14.305 14.305 0 0012 12 14.305 14.305 0 00-12 12\"\n                fill=\"url(#lobe-icons-gemini-fill)\"\n                fillRule=\"nonzero\"\n            />\n        </svg>\n    )\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/svgs/gemini.tsx"
+    }
+  ]
+}

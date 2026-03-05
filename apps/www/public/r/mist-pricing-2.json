@@ -5,8 +5,8 @@
   "title": "Pricing Two",
   "description": "Mist Kit Pricing block, variant two",
   "registryDependencies": [
-    "button",
-    "card"
+    "@shadcn/button",
+    "@shadcn/card"
   ],
   "files": [
     {

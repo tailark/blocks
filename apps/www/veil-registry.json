@@ -154,7 +154,7 @@
       "description": "Shadcn/ui supabase svg logo",
       "files": [
         {
-          "path": "../../packages/veil-kit/components/ui/svgs/supabase.tsx",
+          "path": "../../packages/core/src/components/ui/svgs/supabase.tsx",
           "type": "registry:ui",
           "target": "components/ui/svgs/supabase.tsx"
         }

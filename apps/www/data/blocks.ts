@@ -1,6 +1,9 @@
 import { File } from '@/components/code-editor'
 import fs from 'fs'
 import path from 'path'
+import { categoryOrder } from './blocks/metadata'
+
+const PACKAGES_DIR = path.join(process.cwd(), '../../packages')
 
 export interface Block {
     id:string
@@ -14,10 +17,9 @@ export interface Block {
     kit?: string
 }
 
-function loadCode(filePath: string): string {
-    const fullPath = path.join(process.cwd(), filePath)
-    if (fs.existsSync(fullPath)) {
-        let code = fs.readFileSync(fullPath, 'utf-8')
+function loadCodeAbsolute(absolutePath: string): string {
+    if (fs.existsSync(absolutePath)) {
+        let code = fs.readFileSync(absolutePath, 'utf-8')
         
         code = code.replace(/<!--.*?-->/g, '').trim()
 
@@ -49,21 +51,20 @@ function loadCode(filePath: string): string {
     return '// Code not found'
 }
 
-function loadAllComponentsFromFolder(folderPath: string, category: string): File[] {
+function loadAllComponentsFromFolderAbsolute(absoluteFolderPath: string, category: string): File[] {
     const result: File[] = []
-    const fullPath = path.join(process.cwd(), folderPath)
     
-    if (!fs.existsSync(fullPath)) {
+    if (!fs.existsSync(absoluteFolderPath)) {
         return result
     }
     
-    const files = fs.readdirSync(fullPath)
+    const files = fs.readdirSync(absoluteFolderPath)
         .filter(file => file.endsWith('.tsx'))
     
     for (const file of files) {
         const fileName = file === 'index.tsx' ? `${category}.tsx` : file
-        const filePath = path.join(folderPath, file)
-        const code = loadCode(filePath)
+        const filePath = path.join(absoluteFolderPath, file)
+        const code = loadCodeAbsolute(filePath)
         
         result.push({
             name: fileName,
@@ -78,16 +79,14 @@ function loadAllComponentsFromFolder(folderPath: string, category: string): File
 function generateBlocks(): Block[] {
     const blocks: Block[] = []
 
-    const packagesDir = path.join(process.cwd(), '../../packages')
-
-    const kitNames = fs.existsSync(packagesDir) 
-        ? fs.readdirSync(packagesDir, { withFileTypes: true })
+    const kitNames = fs.existsSync(PACKAGES_DIR) 
+        ? fs.readdirSync(PACKAGES_DIR, { withFileTypes: true })
             .filter(dirent => dirent.isDirectory() && dirent.name.endsWith('-kit'))
             .map(dirent => dirent.name)
-        : ['dusk-kit', 'mist-kit'] 
+        : ['dusk-kit', 'mist-kit', 'veil-kit'] 
 
     for (const kitName of kitNames) {
-        const kitDir = path.join(process.cwd(), '../../packages', kitName, 'blocks')
+        const kitDir = path.join(PACKAGES_DIR, kitName, 'blocks')
         const kitShortName = kitName.replace('-kit', '')
         
         if (!fs.existsSync(kitDir)) {
@@ -109,7 +108,8 @@ function generateBlocks(): Block[] {
                 .map(dirent => dirent.name)
             
             for (const variant of variants) {
-                const blockFolderPath = path.join('../../packages', kitName, 'blocks', category, variant)
+                // Use absolute path for block folder
+                const blockFolderPath = path.join(PACKAGES_DIR, kitName, 'blocks', category, variant)
                 const blockFilePath = path.join(blockFolderPath, 'index.tsx')
                 
                 const fullVariantPath = path.join(categoryDir, variant)
@@ -118,7 +118,7 @@ function generateBlocks(): Block[] {
                      continue;
                 }
 
-                const allComponents = loadAllComponentsFromFolder(blockFolderPath, category)
+                const allComponents = loadAllComponentsFromFolderAbsolute(blockFolderPath, category)
                 
                 const formattedCategory = category.split('-').map(word => 
                     word.charAt(0).toUpperCase() + word.slice(1)
@@ -135,7 +135,7 @@ function generateBlocks(): Block[] {
                     description: `Beautiful ${formattedCategory.toLowerCase()} block from ${kitName} for your marketing website (variant ${formattedVariant})`,
                     category: category,
                     previewLink: `/preview/${kitShortName}/${category}/${variant}`,
-                    code: loadCode(blockFilePath),
+                    code: loadCodeAbsolute(blockFilePath),
                     codes: allComponents,
                     kit: kitName 
                 })
@@ -147,26 +147,6 @@ function generateBlocks(): Block[] {
 }
 
 export const blocks: Block[] = generateBlocks()
-
-const categoryOrder = [
-    'hero-section',
-    'logo-cloud',
-    'features',
-    'integrations',
-    'content',
-    'stats',
-    'team',
-    'testimonials',
-    'call-to-action',
-    'footer',
-    'pricing',
-    'comparator',
-    'faqs',
-    'login',
-    'sign-up',
-    'forgot-password',
-    'contact'
-]
 
 const uniqueCategories = [...new Set(blocks.map((b) => b.category))]
 

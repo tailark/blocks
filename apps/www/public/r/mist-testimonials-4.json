@@ -5,7 +5,7 @@
   "title": "Testimonials Four",
   "description": "Mist Kit Testimonials block, variant four",
   "registryDependencies": [
-    "avatar"
+    "@shadcn/avatar"
   ],
   "files": [
     {

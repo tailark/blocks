@@ -5,9 +5,9 @@
   "title": "Features Three",
   "description": "Mist Kit Features block, variant three",
   "registryDependencies": [
-    "card",
-    "toggle",
-    "toggle-group"
+    "@shadcn/card",
+    "@shadcn/toggle",
+    "@shadcn/toggle-group"
   ],
   "files": [
     {

@@ -5,6 +5,266 @@
   "author" : "Méschac Irung <meschacirung@gmail.com>",
   "items": [
     {
+      "name": "core-beacon",
+      "type": "registry:ui",
+      "title": "Beacon logo",
+      "description": "Tailark core beacon svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/beacon.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/beacon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-bolt",
+      "type": "registry:ui",
+      "title": "Bolt logo",
+      "description": "Tailark core bolt svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/bolt.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/bolt.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-cisco",
+      "type": "registry:ui",
+      "title": "Cisco logo",
+      "description": "Tailark core cisco svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/cisco.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/cisco.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-claude",
+      "type": "registry:ui",
+      "title": "Claude logo",
+      "description": "Tailark core claude svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/claude.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/claude.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-figma",
+      "type": "registry:ui",
+      "title": "Figma logo",
+      "description": "Tailark core figma svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/figma.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/figma.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-firebase",
+      "type": "registry:ui",
+      "title": "Firebase logo",
+      "description": "Tailark core firebase svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/firebase.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/firebase.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-gemini",
+      "type": "registry:ui",
+      "title": "Gemini logo",
+      "description": "Tailark core gemini svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/gemini.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/gemini.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-google-palm",
+      "type": "registry:ui",
+      "title": "GooglePaLM logo",
+      "description": "Tailark core google-palm svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/google-palm.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/google-palm.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-hulu",
+      "type": "registry:ui",
+      "title": "Hulu logo",
+      "description": "Tailark core hulu svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/hulu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/hulu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-linear",
+      "type": "registry:ui",
+      "title": "Linear logo",
+      "description": "Tailark core linear svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/linear.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/linear.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-magic-ui",
+      "type": "registry:ui",
+      "title": "MagicUI logo",
+      "description": "Tailark core magic-ui svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/magic-ui.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/magic-ui.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-media-wiki",
+      "type": "registry:ui",
+      "title": "MediaWiki logo",
+      "description": "Tailark core media-wiki svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/media-wiki.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/media-wiki.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-neon",
+      "type": "registry:ui",
+      "title": "Neon logo",
+      "description": "Tailark core neon svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/neon.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/neon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-replit",
+      "type": "registry:ui",
+      "title": "Replit logo",
+      "description": "Tailark core replit svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/replit.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/replit.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-slack",
+      "type": "registry:ui",
+      "title": "Slack logo",
+      "description": "Tailark core slack svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/slack.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/slack.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-spotify",
+      "type": "registry:ui",
+      "title": "Spotify logo",
+      "description": "Tailark core spotify svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/spotify.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/spotify.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-supabase",
+      "type": "registry:ui",
+      "title": "Supabase logo",
+      "description": "Tailark core supabase svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/supabase.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/supabase.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-twilio",
+      "type": "registry:ui",
+      "title": "Twilio logo",
+      "description": "Tailark core twilio svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/twilio.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/twilio.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-vercel",
+      "type": "registry:ui",
+      "title": "Vercel logo",
+      "description": "Tailark core vercel svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/vercel.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/vercel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "core-vs-codium",
+      "type": "registry:ui",
+      "title": "VSCodium logo",
+      "description": "Tailark core vs-codium svg logo",
+      "files": [
+        {
+          "path": "../../packages/core/src/components/ui/svgs/vs-codium.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/svgs/vs-codium.tsx"
+        }
+      ]
+    },
+    {
       "name": "call-to-action-1",
       "type": "registry:block",
       "title": "Call To Action 1",
@@ -1281,48 +1541,19 @@
       "description": "Shadcn/ui website integrations section",
       "registryDependencies": [
         "@shadcn/card",
-        "@shadcn/button"
+        "@shadcn/button",
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
       ],
       "files": [
         {
           "path": "../../packages/dusk-kit/blocks/integrations/one/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-1.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -1332,7 +1563,13 @@
       "title": "Integrations Block 2",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "@shadcn/button"
+        "@shadcn/button",
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
       ],
       "files": [
         {
@@ -1343,41 +1580,6 @@
         {
           "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -1387,7 +1589,13 @@
       "title": "Integrations Block 3",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "@shadcn/button"
+        "@shadcn/button",
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
       ],
       "files": [
         {
@@ -1398,41 +1606,6 @@
         {
           "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -1442,7 +1615,13 @@
       "title": "Integrations Block 4",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "@shadcn/button"
+        "@shadcn/button",
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
       ],
       "files": [
         {
@@ -1453,41 +1632,6 @@
         {
           "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -1497,7 +1641,13 @@
       "title": "Integrations Block 5",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "@shadcn/button"
+        "@shadcn/button",
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
       ],
       "files": [
         {
@@ -1508,41 +1658,6 @@
         {
           "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -1552,48 +1667,19 @@
       "title": "Integrations Block 6",
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
-        "@shadcn/button"
+        "@shadcn/button",
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
       ],
       "files": [
         {
           "path": "../../packages/dusk-kit/blocks/integrations/six/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-6.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -1604,7 +1690,13 @@
       "description": "Shadcn/ui website integrations block",
       "registryDependencies": [
         "@shadcn/button",
-        "@motion-primitives/infinite-slider"
+        "@motion-primitives/infinite-slider",
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
       ],
       "files": [
         {
@@ -1615,41 +1707,6 @@
         {
           "path" : "../../packages/core/src/components/logo.tsx",
           "type": "registry:component"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         },
         {
           "path" : "../../packages/core/src/motion-primitives/infinite-slider.tsx",
@@ -1664,48 +1721,19 @@
       "description": "Shadcn/ui website integrations",
       "registryDependencies": [
         "@shadcn/hover-card",
-        "@shadcn/button"
+        "@shadcn/button",
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
       ],
       "files": [
         {
           "path": "../../packages/dusk-kit/blocks/integrations/eight/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-8.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -2330,46 +2358,19 @@
       "type": "registry:block",
       "title": "Integrations block",
       "description": "Mist Kit Integrations block, variant one",
+      "registryDependencies": [
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
+      ],
       "files": [
         {
           "path": "../../packages/mist-kit/blocks/integrations/one/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-one.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -2378,46 +2379,19 @@
       "type": "registry:block",
       "title": "Integrations block",
       "description": "Mist Kit Integrations block, variant two",
+      "registryDependencies": [
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
+      ],
       "files": [
         {
           "path": "../../packages/mist-kit/blocks/integrations/two/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-two.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },
@@ -2426,46 +2400,19 @@
       "type": "registry:block",
       "title": "Integrations block",
       "description": "Mist Kit Integrations block, variant three",
+      "registryDependencies": [
+        "@tailark/core-gemini",
+        "@tailark/core-google-palm",
+        "@tailark/core-magic-ui",
+        "@tailark/core-media-wiki",
+        "@tailark/core-replit",
+        "@tailark/core-vs-codium"
+      ],
       "files": [
         {
           "path": "../../packages/mist-kit/blocks/integrations/three/index.tsx",
           "type": "registry:component",
           "target": "components/integrations-three.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/index.ts",
-          "type": "registry:component",
-          "target": "components/logos/index.ts"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Gemini.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Gemini.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/GooglePaLM.tsx",
-          "type": "registry:component",
-          "target": "components/logos/GooglePaLM.tsx"
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MagicUI.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MagicUI.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/MediaWiki.tsx",
-          "type": "registry:component",
-          "target": "components/logos/MediaWiki.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/Replit.tsx",
-          "type": "registry:component",
-          "target": "components/logos/Replit.tsx" 
-        },
-        {
-          "path" : "../../packages/core/src/components/logos/VSCodium.tsx",
-          "type": "registry:component",
-          "target": "components/logos/VSCodium.tsx" 
         }
       ]
     },

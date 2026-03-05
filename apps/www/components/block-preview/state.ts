@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { type ImperativePanelGroupHandle } from 'react-resizable-panels';
 
 export type PreviewMode = 'preview' | 'code';
@@ -67,16 +68,16 @@ export const usePreviewActions = (
   panelGroupRef: React.RefObject<ImperativePanelGroupHandle | null>,
   onCliCopy: (e: React.MouseEvent<HTMLButtonElement>) => void,
 ): PreviewActions => {
-  const handleModeChange = (mode: PreviewMode) => {
+  const handleModeChange = useCallback((mode: PreviewMode) => {
     dispatch({ type: 'SET_MODE', payload: mode });
-  };
+  }, [dispatch]);
 
-  const handleCliCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleCliCopy = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     onCliCopy(e);
-  };
+  }, [onCliCopy]);
 
-  const togglePanel = () => {
+  const togglePanel = useCallback(() => {
     dispatch({ type: 'TOGGLE_PANEL' });
     setTimeout(() => {
       panelGroupRef.current?.setLayout([
@@ -84,14 +85,14 @@ export const usePreviewActions = (
         state.isPanelCollapsed ? 50 : 100,
       ]);
     }, 0);
-  };
+  }, [dispatch, panelGroupRef, state.isPanelCollapsed]);
 
-  const setPanelSizes = (sizes: number[]) => {
+  const setPanelSizes = useCallback((sizes: number[]) => {
     dispatch({
       type: 'SET_PANEL_SIZES',
       payload: { preview: sizes[0], code: sizes[1] },
     });
-  };
+  }, [dispatch]);
 
   return {
     handleModeChange,

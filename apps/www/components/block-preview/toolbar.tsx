@@ -17,6 +17,7 @@ import { NPM } from '@tailark/core/components/logos/npm'
 import { Pnpm } from '@tailark/core/components/logos/pnpm'
 import { useStore } from '@nanostores/react'
 import { promptStore, setPrompt } from '@/lib/store/prompt'
+import { ShadcnIcon } from '../ui/shadcn-icon'
 
 const radioItem = 'rounded-md duration-200 flex items-center justify-center h-7 px-2.5 gap-2 transition-[color] ring ring-transparent shadow shadow-transparent not-data-[state=checked]:hover:bg-foreground/4 data-[state=checked]:ring-foreground/6.5 data-[state=checked]:shadow-black/6.5 data-[state=checked]:bg-card dark:data-[state=checked]:bg-foreground/4'
 
@@ -204,3 +205,84 @@ const BlockPreviewToolbar: React.FC<BlockPreviewToolbarProps> = ({ mode, onModeC
 }
 
 export default BlockPreviewToolbar
+
+export interface CLIGroupButtonProps {
+    category: string
+    registryItem: string
+    eventName: string
+    theme?: string
+}
+
+interface RegistryInstallButtonProps extends Omit<React.ComponentPropsWithoutRef<'button'>, 'title'>, CLIGroupButtonProps {
+    title: string
+    iconOnly?: boolean
+    className?: string
+}
+
+export const RegistryInstallButton = React.forwardRef<HTMLButtonElement, RegistryInstallButtonProps>(({ registryItem, eventName, title, category, theme, iconOnly, className, onClick, ...buttonProps }, ref) => {
+    const prompt = useStore(promptStore)
+    const [copied, setCopied] = React.useState(false)
+
+    const handleCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
+        onClick?.(e)
+        if (e.defaultPrevented) return
+
+        e.preventDefault()
+        e.stopPropagation()
+        const kit = theme || 'mist'
+        const command = kit === 'quartz' ? `${prompts[prompt]} shadcn@latest add @tailark-pro/${registryItem}` : kit === 'dusk' ? `${prompts[prompt]} shadcn@latest add @tailark/${registryItem}` : `${prompts[prompt]} shadcn@latest add @tailark/${kit}/${registryItem}`
+        navigator.clipboard.writeText(command)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+    }
+
+    if (iconOnly) {
+        return (
+            <button
+                ref={ref}
+                onClick={handleCopy}
+                data-event-name={eventName}
+                data-category={category}
+                className={cn('flex h-7 w-9 items-center justify-center', className)}
+                aria-label={`Copy install command for ${title}`}
+                {...buttonProps}>
+                <AnimatePresence mode="popLayout">
+                    {copied ? (
+                        <motion.span
+                            key="check"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.8 }}
+                            className="text-emerald-500">
+                            ✓
+                        </motion.span>
+                    ) : (
+                        <motion.span
+                            key="copy"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.8 }}>
+                            <ShadcnIcon className="size-4" />
+                        </motion.span>
+                    )}
+                </AnimatePresence>
+            </button>
+        )
+    }
+
+    return (
+        <Button
+            ref={ref}
+            onClick={handleCopy}
+            data-event-name={eventName}
+            data-category={category}
+            variant="ghost"
+            size="sm"
+            className={cn('h-7 px-2', className)}
+            {...buttonProps}>
+            {copied ? 'Copied!' : `${prompts[prompt]} shadcn add @tailark/${registryItem}`}
+        </Button>
+    )
+})
+
+RegistryInstallButton.displayName = 'RegistryInstallButton'

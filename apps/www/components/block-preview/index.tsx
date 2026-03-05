@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useReducer, useRef } from 'react'
+import React, { useReducer, useRef, useCallback } from 'react'
 import { Panel, PanelGroup, PanelResizeHandle, type ImperativePanelGroupHandle } from 'react-resizable-panels'
 import { useCopyToClipboard } from '@/hooks/useClipboard'
 import { useMedia } from 'use-media'
@@ -46,12 +46,15 @@ const BlockPreview: React.FC<BlockPreviewProps> = ({ code, codes, previewLink, t
 
     const { copy: _cliCopy } = useCopyToClipboard(cliCopyProps)
 
-    const handleCliCopy = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault()
-        _cliCopy(e as unknown as React.MouseEvent<HTMLButtonElement, MouseEvent>)
-        dispatch({ type: 'SET_COPIED_CLI', payload: true })
-        setTimeout(() => dispatch({ type: 'SET_COPIED_CLI', payload: false }), 2000)
-    }
+    const handleCliCopy = useCallback(
+        (e: React.MouseEvent<HTMLButtonElement>) => {
+            e.preventDefault()
+            _cliCopy(e as unknown as React.MouseEvent<HTMLButtonElement, MouseEvent>)
+            dispatch({ type: 'SET_COPIED_CLI', payload: true })
+            setTimeout(() => dispatch({ type: 'SET_COPIED_CLI', payload: false }), 2000)
+        },
+        [_cliCopy]
+    )
 
     const panelGroupRef = useRef<ImperativePanelGroupHandle>(null)
     const isLargeScreen = useMedia('(min-width: 1024px)')

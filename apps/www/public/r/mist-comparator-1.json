@@ -5,7 +5,7 @@
   "title": "Comparator One",
   "description": "Mist Kit Comparator block, variant one",
   "registryDependencies": [
-    "button"
+    "@shadcn/button"
   ],
   "files": [
     {

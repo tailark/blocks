@@ -5,7 +5,7 @@
   "title": "Stats block",
   "description": "Mist Kit Stats block, variant one",
   "registryDependencies": [
-    "card"
+    "@shadcn/card"
   ],
   "files": [
     {

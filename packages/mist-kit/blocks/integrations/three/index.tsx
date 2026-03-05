@@ -1,6 +1,11 @@
 import { Card } from '@mist/components/ui/card'
 import * as React from 'react'
-import { Gemini, Replit, MagicUI, VSCodium, MediaWiki, GooglePaLM } from '@tailark/core/components/logos'
+import { Gemini } from '@tailark/core/components/ui/svgs/gemini'
+import { Replit } from '@tailark/core/components/ui/svgs/replit'
+import { MagicUI } from '@tailark/core/components/ui/svgs/magic-ui'
+import { VSCodium } from '@tailark/core/components/ui/svgs/vs-codium'
+import { MediaWiki } from '@tailark/core/components/ui/svgs/media-wiki'
+import { GooglePaLM } from '@tailark/core/components/ui/svgs/google-palm'
 
 export default function Integrations() {
     return (

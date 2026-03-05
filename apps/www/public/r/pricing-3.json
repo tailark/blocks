@@ -5,8 +5,8 @@
   "title": "Pricing Block 3",
   "description": "Shadcn/ui website pricing section",
   "registryDependencies": [
-    "button",
-    "card"
+    "@shadcn/button",
+    "@shadcn/card"
   ],
   "files": [
     {

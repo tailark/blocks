@@ -5,7 +5,7 @@
   "title": "Call To Action 3",
   "description": "Shadcn/ui call to action block",
   "registryDependencies": [
-    "button"
+    "@shadcn/button"
   ],
   "files": [
     {

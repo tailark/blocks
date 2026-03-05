@@ -2,6 +2,9 @@ import { Button } from '@mist/components/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 import { Card } from '@mist/components/ui/card'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
+import { VercelFull } from '@tailark/core/components/ui/svgs/vercel'
 
 export default function Pricing() {
     return (
@@ -48,35 +51,16 @@ export default function Pricing() {
                                     ))}
                                 </ul>
                                 <p className="text-muted-foreground mt-6 text-sm">Team can be any size, and you can add or switch members as needed. Companies using our platform include:</p>
-                                <div className="mt-12 flex flex-wrap items-center justify-between gap-6">
-                                    <img
-                                        className="h-5 w-fit"
-                                        src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                        alt="Nvidia Logo"
-                                        height="20"
-                                        width="auto"
+                                <div className="**:fill-foreground mt-6 flex items-center gap-8">
+                                    <VercelFull
+                                        height={20}
+                                        width={76}
                                     />
-                                    <img
-                                        className="h-4 w-fit"
-                                        src="https://html.tailus.io/blocks/customers/column.svg"
-                                        alt="Column Logo"
-                                        height="16"
-                                        width="auto"
+                                    <Spotify
+                                        height={22}
+                                        width={73}
                                     />
-                                    <img
-                                        className="h-4 w-fit"
-                                        src="https://html.tailus.io/blocks/customers/github.svg"
-                                        alt="GitHub Logo"
-                                        height="16"
-                                        width="auto"
-                                    />
-                                    <img
-                                        className="h-5 w-fit"
-                                        src="https://html.tailus.io/blocks/customers/nike.svg"
-                                        alt="Nike Logo"
-                                        height="20"
-                                        width="auto"
-                                    />
+                                    <SupabaseFull className="h-[22px]" />
                                 </div>
                             </div>
                         </div>

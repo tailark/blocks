@@ -8,10 +8,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline{
+@theme{
 
   --font-mono: 'Geist Mono', 'Fira Code', monospace;
-  --font-sans: 'Geist', sans-serif;
   --font-serif: 'Asar', serif;
 
   --color-background: var(--background);
@@ -19,6 +18,9 @@
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+
+  --color-illustration: var(--illustration);
+  --color-border-illustration: var(--border-illustration);
 
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
@@ -108,7 +110,7 @@
     --accent-foreground: var(--color-zinc-950);
     --destructive: var(--color-red-600);
     --destructive-foreground:var(--color-white);
-    --border: var(--color-zinc-200);
+    --border: --alpha(var(--color-foreground)/7.5%);
     --input: var(--color-zinc-200);
     --ring: var(--color-zinc-950);
     --chart-1: var(--color-blue-500);
@@ -136,7 +138,6 @@
     --accent-foreground:var(--color-white);
     --destructive: var(--color-red-600);
     --destructive-foreground:var(--color-white);
-    --border: var(--color-zinc-800);
     --input: var(--color-zinc-800);
     --ring: var(--color-white);
   }
@@ -156,45 +157,45 @@
 
 [data-theme="mist"] {
   --radius: 0.625rem;
-  --background: var(--color-white);
-  --foreground: var(--color-zinc-950);
-  --card: var(--color-white);
-  --card-foreground: var(--color-zinc-950);
-  --popover: var(--color-white);
-  --popover-foreground: var(--color-zinc-950);
-  --primary: var(--color-indigo-500);
-  --primary-foreground: var(--color-white);
-  --secondary: var(--color-indigo-100);
-  --secondary-foreground: var(--color-indigo-600);
-  --muted: var(--color-zinc-100);
-  --muted-foreground: var(--color-zinc-600);
-  --accent: var(--color-zinc-700);
-  --accent-foreground: var(--color-white);
-  --destructive: var(--color-red-600);
-  --border: var(--color-zinc-200);
-  --input: var(--color-zinc-200);
-  --ring: var(--color-indigo-500);
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-zinc-950);
+  --color-card: var(--color-white);
+  --color-card-foreground: var(--color-zinc-950);
+  --color-popover: var(--color-white);
+  --color-popover-foreground: var(--color-zinc-950);
+  --color-primary: var(--color-indigo-500);
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-indigo-100);
+  --color-secondary-foreground: var(--color-indigo-600);
+  --color-muted: var(--color-zinc-100);
+  --color-muted-foreground: var(--color-zinc-600);
+  --color-accent: var(--color-zinc-700);
+  --color-accent-foreground: var(--color-white);
+  --color-destructive: var(--color-red-600);
+  --color-border: var(--color-zinc-200);
+  --color-input: var(--color-zinc-200);
+  --color-ring: var(--color-indigo-500);
 
   @variant dark {
     --radius: 0.625rem;
-    --background: var(--color-white);
-    --foreground: var(--color-zinc-950);
-    --card: var(--color-white);
-    --card-foreground: black;
-    --popover: var(--color-white);
-    --popover-foreground: var(--color-zinc-950);
-    --primary: var(--color-indigo-500);
-    --primary-foreground: var(--color-white);
-    --secondary: var(--color-indigo-100);
-    --secondary-foreground: var(--color-indigo-600);
-    --muted: var(--color-zinc-100);
-    --muted-foreground: var(--color-zinc-600);
-    --accent: var(--color-zinc-700);
-    --accent-foreground: var(--color-white);
-    --destructive: var(--color-red-600);
-    --border: var(--color-zinc-200);
-    --input: var(--color-zinc-200);
-    --ring: var(--color-indigo-500);
+    --color-background: var(--color-white);
+    --color-foreground: var(--color-zinc-950);
+    --color-card: var(--color-white);
+    --color-card-foreground: black;
+    --color-popover: var(--color-white);
+    --color-popover-foreground: var(--color-zinc-950);
+    --color-primary: var(--color-indigo-500);
+    --color-primary-foreground: var(--color-white);
+    --color-secondary: var(--color-indigo-100);
+    --color-secondary-foreground: var(--color-indigo-600);
+    --color-muted: var(--color-zinc-100);
+    --color-muted-foreground: var(--color-zinc-600);
+    --color-accent: var(--color-zinc-700);
+    --color-accent-foreground: var(--color-white);
+    --color-destructive: var(--color-red-600);
+    --color-border: var(--color-zinc-200);
+    --color-input: var(--color-zinc-200);
+    --color-ring: var(--color-indigo-500);
   }
 
   @apply *:text-foreground
@@ -202,80 +203,139 @@
 
 [data-theme="veil"] {
   --radius: 0.625rem;
-  --background: oklch(0.9779 0.0042 56.38);
-  --foreground: oklch(0.3421 0.0379 61.15);
-  --card: var(--color-white);
-  --card-foreground: oklch(0.3421 0.0379 61.15);
-  --popover: var(--color-white);
-  --popover-foreground: oklch(0.3421 0.0379 61.15);
-  --primary: oklch(0.5967 0.0558 61.59);
-  --primary-foreground: oklch(0.1448 0 0);
-  --secondary: --alpha(var(--primary)/15%);
-  --secondary-foreground: oklch(0.3421 0.0379 61.15);
-  --muted: --alpha(var(--foreground)/5%);
-  --muted-foreground: oklch(0.4563 0.0061 48.59);
-  --accent: oklch(0.9068 0.0112 89.73);
-  --accent-foreground: oklch(0.3467 0.0231 86.12);
-  --destructive: var(--color-red-600);
-  --destructive-foreground: var(--color-white);
-  --border: --alpha(var(--foreground)/7.5%);
-  --input: --alpha(var(--foreground)/20%);
-  --ring: var(--primary);
+  --color-background: oklch(0.9779 0.0042 56.38);
+  --color-foreground: oklch(0.3421 0.0379 61.15);
+  --color-card: var(--color-white);
+  --color-card-foreground: oklch(0.3421 0.0379 61.15);
+  --color-popover: var(--color-white);
+  --color-popover-foreground: oklch(0.3421 0.0379 61.15);
+  --color-primary: oklch(0.5967 0.0558 61.59);
+  --color-primary-foreground: oklch(0.1448 0 0);
+  --color-secondary: --alpha(var(--primary)/15%);
+  --color-secondary-foreground: oklch(0.3421 0.0379 61.15);
+  --color-muted: --alpha(var(--foreground)/5%);
+  --color-muted-foreground: oklch(0.4563 0.0061 48.59);
+  --color-accent: oklch(0.9068 0.0112 89.73);
+  --color-accent-foreground: oklch(0.3467 0.0231 86.12);
+  --color-destructive: var(--color-red-600);
+  --color-destructive-foreground: var(--color-white);
+  --color-border: --alpha(var(--foreground)/7.5%);
+  --color-input: --alpha(var(--foreground)/20%);
+  --color-ring: var(--primary);
 
   @variant dark {
-    --background: oklch(0.1448 0 0);
-    --foreground: oklch(0.9027 0.0137 60.56);
+    --color-background: oklch(0.1448 0 0);
+    --color-foreground: oklch(0.9027 0.0137 60.56);
 
-    --card: oklch(0.1924 0.0016 17.3);
-    --card-foreground: oklch(0.9027 0.0137 60.56);
+    --color-card: oklch(0.1924 0.0016 17.3);
+    --color-card-foreground: oklch(0.9027 0.0137 60.56);
     
-    --popover: var(--color-white);
-    --popover-foreground: oklch(0.9027 0.0137 60.56);
+    --color-popover: var(--color-white);
+    --color-popover-foreground: oklch(0.9027 0.0137 60.56);
     
-    --primary-foreground: var(--color-white);
-    --secondary: --alpha(var(--primary)/10%);
-    --secondary-foreground: oklch(0.9027 0.0137 60.56);
+    --color-primary-foreground: var(--color-white);
+    --color-secondary: --alpha(var(--primary)/10%);
+    --color-secondary-foreground: oklch(0.9027 0.0137 60.56);
     
-    --muted: var(--background);
-    --muted-foreground: oklch(0.7262 0.0037 67.77);
+    --color-muted: var(--background);
+    --color-muted-foreground: oklch(0.7262 0.0037 67.77);
     
-    --accent: var(--color-zinc-700);
-    --accent-foreground: var(--color-white);
+    --color-accent: var(--color-zinc-700);
+    --color-accent-foreground: var(--color-white);
     
-    --input: --alpha(var(--foreground)/15%);
+    --color-input: --alpha(var(--foreground)/15%);
   }
 
   @apply *:text-foreground selection:text-primary selection:bg-muted
 }
 
 [data-theme='dark'] {
-    --background: var(--color-zinc-950);
-    --foreground: var(--color-white);
-    --card: color-mix(in oklab,var(--color-zinc-800)55%,#000);
-    --illustration : color-mix(in oklab,var(--color-zinc-800)60%,#000);
-    --card-foreground: var(--color-white);
-    --popover: var(--color-zinc-900);
-    --popover-foreground: var(--color-white);
-    --primary: var(--color-white);
-    --primary-foreground: var(--color-zinc-950);
-    --secondary: var(--color-zinc-800);
-    --secondary-foreground: var(--color-white);
-    --muted: var(--color-zinc-800);
-    --muted-foreground: var(--color-zinc-300);
-    --accent: var(--color-zinc-800);
-    --accent-foreground: var(--color-white);
-    --destructive: var(--color-red-700);
-    --destructive-foreground: var(--color-white);
-    --border: color-mix(in oklab,var(--color-white)10%,transparent);
-    --border-illustration: color-mix(in oklab,var(--color-white)7.5%,transparent);
-    --input: var(--color-zinc-800);
-    --ring: var(--color-zinc-600);
-    --chart-1: var(--color-blue-500);
-    --chart-2: var(--color-green-500);
-    --chart-3: var(--color-yellow-500);
-    --chart-4: var(--color-purple-500);
-    --chart-5: var(--color-pink-500);
+    --color-background: var(--color-zinc-950);
+    --color-foreground: var(--color-white);
+    --color-card: color-mix(in oklab,var(--color-zinc-800)55%,#000);
+    --color-illustration : color-mix(in oklab,var(--color-zinc-800)60%,#000);
+    --color-card-foreground: var(--color-white);
+    --color-popover: var(--color-zinc-900);
+    --color-popover-foreground: var(--color-white);
+    --color-primary: var(--color-white);
+    --color-primary-foreground: var(--color-zinc-950);
+    --color-secondary: var(--color-zinc-800);
+    --color-secondary-foreground: var(--color-white);
+    --color-muted: var(--color-zinc-800);
+    --color-muted-foreground: var(--color-zinc-300);
+    --color-accent: var(--color-zinc-800);
+    --color-accent-foreground: var(--color-white);
+    --color-destructive: var(--color-red-700);
+    --color-destructive-foreground: var(--color-white);
+    --color-border: color-mix(in oklab,var(--color-white)10%,transparent);
+    --color-border-illustration: color-mix(in oklab,var(--color-white)7.5%,transparent);
+    --color-input: var(--color-zinc-800);
+    --color-ring: var(--color-zinc-600);
+    --color-chart-1: var(--color-blue-500);
+    --color-chart-2: var(--color-green-500);
+    --color-chart-3: var(--color-yellow-500);
+    --color-chart-4: var(--color-purple-500);
+    --color-chart-5: var(--color-pink-500);
   
     @apply *:text-foreground scheme-dark
 
+}
+
+[data-theme="global"] {
+  --radius: 0.625rem;
+  --color-background: var(--color-zinc-50);
+  --color-foreground: var(--color-zinc-950);
+  --color-card: var(--color-white);
+  --color-illustration: var(--color-white);
+  --color-card-foreground: var(--color-zinc-950);
+  --color-popover: var(--color-white);
+  --color-popover-foreground: var(--color-zinc-950);
+  --color-primary: var(--color-indigo-500);
+  --color-primary-foreground: var(--color-white);
+  --color-secondary: var(--color-sky-100);
+  --color-secondary-foreground: var(--color-sky-600);
+  --color-muted: --alpha(var(--color-foreground)/5%);
+  --color-muted-foreground: var(--color-zinc-600);
+  --color-accent: var(--color-zinc-100);
+  --color-accent-foreground: var(--color-zinc-800);
+  --color-destructive: var(--color-red-600);
+  --color-border: --alpha(var(--color-foreground)/7.5%);
+  --color-border-illustration: color-mix(in oklab,var(--color-black)7.5%,transparent);
+  --color-input: var(--color-zinc-200);
+  --color-ring: var(--color-primary);
+  --color-chart-1: #8d9778;
+
+
+  @variant dark {
+    --color-background: var(--color-zinc-950);
+    --color-foreground: var(--color-white);
+    --color-card: color-mix(in oklab,var(--color-zinc-800)55%,#000);
+    --color-illustration : color-mix(in oklab,var(--color-zinc-800)60%,#000);
+    --color-card-foreground: var(--color-white);
+    --color-popover: var(--color-zinc-950);
+    --popover-foreground: var(--color-white);
+    --color-primary: var(--color-indigo-500);
+    --color-primary-foreground: var(--color-white);
+    --color-secondary: var(--color-zinc-800);
+    --color-secondary-foreground: var(--color-white);
+    --color-muted: var(--color-zinc-800);
+    --color-muted-foreground: var(--color-zinc-400);
+    --color-accent: var(--color-zinc-800);
+    --color-accent-foreground: var(--color-white);
+    --color-destructive: var(--color-red-700);
+    --color-destructive-foreground: var(--color-white);
+    --color-border: color-mix(in oklab,var(--color-white)7%,transparent);
+    --color-border-illustration: color-mix(in oklab,var(--color-white)7.5%,transparent);
+    --color-input: var(--color-zinc-800);
+    --color-ring: var(--color-zinc-600);
+    --color-chart-1: #8d9778;
+    --color-chart-2: var(--color-green-500);
+    --color-chart-3: var(--color-yellow-500);
+    --color-chart-4: var(--color-purple-500);
+    --color-chart-5: var(--color-pink-500);
+  
+    @apply *:text-foreground scheme-dark
+  }
+
+  @apply *:text-foreground scheme-light;
 }

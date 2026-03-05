@@ -1,5 +1,15 @@
 import { InfiniteSlider } from '@tailark/core/motion-primitives/infinite-slider'
 import { ProgressiveBlur } from '@tailark/core/motion-primitives/progressive-blur'
+import { Spotify } from '@tailark/core/components/ui/svgs/spotify'
+import { VercelFull } from '@tailark/core/components/ui/svgs/vercel'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
+import { Hulu } from '@tailark/core/components/ui/svgs/hulu'
+import { Bolt } from '@tailark/core/components/ui/svgs/bolt'
+import { FirebaseFull } from '@tailark/core/components/ui/svgs/firebase'
+import { Beacon } from '@tailark/core/components/ui/svgs/beacon'
+import { Claude } from '@tailark/core/components/ui/svgs/claude'
+import { Cisco } from '@tailark/core/components/ui/svgs/cisco'
+import { Figma } from '@tailark/core/components/ui/svgs/figma'
 
 export const LogoCloud = () => {
     return (
@@ -9,89 +19,58 @@ export const LogoCloud = () => {
                     <div className="inline md:max-w-44 md:border-r md:pr-6">
                         <p className="text-end text-sm">Powering the best teams</p>
                     </div>
-                    <div className="relative py-6 md:w-[calc(100%-11rem)]">
+                    <div className="**:fill-foreground relative py-6 md:w-[calc(100%-11rem)]">
                         <InfiniteSlider
                             speedOnHover={20}
                             speed={40}
                             gap={112}>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                    alt="Nvidia Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/column.svg"
-                                    alt="Column Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/github.svg"
-                                    alt="GitHub Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/nike.svg"
-                                    alt="Nike Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                                    alt="Lemon Squeezy Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/laravel.svg"
-                                    alt="Laravel Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-7 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/lilly.svg"
-                                    alt="Lilly Logo"
-                                    height="28"
-                                    width="auto"
-                                />
-                            </div>
-
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-6 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/openai.svg"
-                                    alt="OpenAI Logo"
-                                    height="24"
-                                    width="auto"
-                                />
-                            </div>
+                            <Bolt
+                                height={22}
+                                width={56}
+                            />
+                            <VercelFull
+                                height={22}
+                                width={84}
+                            />
+                            <SupabaseFull className="h-6" />
+                            <Hulu
+                                height={18}
+                                width={56}
+                            />
+                            <Spotify
+                                height={24}
+                                width={80}
+                            />
+                            <FirebaseFull
+                                height={24}
+                                width={80}
+                            />
+                            <Beacon
+                                height={24}
+                                width={80}
+                            />
+                            <Claude
+                                height={26}
+                                width={90}
+                            />
+                            <Figma
+                                height={24}
+                                width={24}
+                            />
+                            <Cisco
+                                height={30}
+                                width={60}
+                            />
                         </InfiniteSlider>
 
-                        <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>
-                        <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"></div>
+                        <div
+                            aria-hidden
+                            className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"
+                        />
+                        <div
+                            aria-hidden
+                            className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"
+                        />
                         <ProgressiveBlur
                             className="pointer-events-none absolute left-0 top-0 h-full w-20"
                             direction="left"

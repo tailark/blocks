@@ -5,7 +5,7 @@ import { Beacon } from '@veil/components/ui/svgs/beacon'
 import { Bolt } from '@veil/components/ui/svgs/bolt'
 import { Cisco } from '@veil/components/ui/svgs/cisco'
 import { Hulu } from '@veil/components/ui/svgs/hulu'
-import { Supabase } from '@veil/components/ui/svgs/supabase'
+import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
 import { AnimatePresence, motion } from 'motion/react'
 import { VercelFull } from '@veil/components/ui/svgs/vercel'
 import { Spotify } from '@veil/components/ui/svgs/spotify'
@@ -26,9 +26,9 @@ const aiLogos: React.ReactNode[] = [
 ]
 
 const hostingLogos: React.ReactNode[] = [
-    <Supabase
+    <SupabaseFull
         key="supabase"
-        className="size-5"
+        className="h-5"
     />,
     <Spotify
         key="spotify"

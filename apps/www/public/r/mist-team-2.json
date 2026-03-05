@@ -5,9 +5,9 @@
   "title": "Team section block",
   "description": "Mist Kit Team section block, variant two",
   "registryDependencies": [
-    "avatar",
-    "button",
-    "hover-card"
+    "@shadcn/avatar",
+    "@shadcn/button",
+    "@shadcn/hover-card"
   ],
   "files": [
     {
