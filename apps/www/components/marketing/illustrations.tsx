@@ -36,8 +36,9 @@ export const IllustrationsSection = () => {
                             variant="ghost"
                             size="sm">
                             <Link
-                                href="/illustrations"
-                                className="text-sm!">
+                                href="https://pro.tailark.com/illustrations"
+                                className="text-sm!"
+                                target="_blank">
                                 Explore illustrations
                                 <span className="border-l-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent" />
                             </Link>
