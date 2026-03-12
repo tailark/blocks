@@ -38,7 +38,7 @@ export const IllustrationsSection = () => {
                             <Link
                                 href="https://pro.tailark.com/illustrations"
                                 className="text-sm!"
-                                target="_blank">
+                                target="_blank" rel="noopener noreferrer">
                                 Explore illustrations
                                 <span className="border-l-foreground/50 ml-0.5 block size-0 border-y-4 border-l-4 border-y-transparent" />
                             </Link>
@@ -97,7 +97,7 @@ export const IllustrationsSection = () => {
                     className="text-sm! z-10 mx-auto mt-6 flex w-fit">
                     <Link
                         href="https://pro.tailark.com/illustrations"
-                        target="_blank">
+                        target="_blank" rel="noopener noreferrer">
                         See more illustrations
                         <span className="border-t-foreground/50 ml-0.5 block size-0 -rotate-90 border-x-4 border-t-4 border-x-transparent" />
                     </Link>

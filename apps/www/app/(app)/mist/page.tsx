@@ -132,7 +132,7 @@ export default function Home() {
                             asChild
                             size="sm">
                             <Link
-                                target="_blank"
+                                target="_blank" rel="noopener noreferrer"
                                 href="https://github.com/tailark/blocks/blob/main/packages/mist-kit/README.md">
                                 Docs
                                 <ArrowUpRight
