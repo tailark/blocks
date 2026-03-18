@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Logo } from '@/components/logo'
 import { Button } from '@tailark/core/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
@@ -22,6 +22,14 @@ export const SiteHeader = ({ isWide = false }: { isWide?: boolean }) => {
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
 
+    useEffect(() => {
+        if (pathname === '/') {
+            document.documentElement.setAttribute('data-home', '')
+        } else {
+            document.documentElement.removeAttribute('data-home')
+        }
+    }, [pathname])
+
     const isActive = (path: string) => {
         return pathname === path || pathname.startsWith(`${path}/`)
     }
@@ -30,9 +38,7 @@ export const SiteHeader = ({ isWide = false }: { isWide?: boolean }) => {
     isWide = isIllustrationsPage ? true : isWide
 
     return (
-        <header
-            role="banner"
-            className={cn(pathname == '/' && 'bg-background fixed inset-x-0 z-50')}>
+        <header role="banner">
             <div className={cn('relative z-10 mx-auto max-w-7xl px-4', isWide && 'bg-muted/50 dark:bg-background max-w-full lg:px-6', isIllustrationsPage && '2xl:max-w-336 max-w-full lg:px-6 2xl:mx-auto dark:bg-black/75')}>
                 <div className="flex items-center justify-between py-4">
                     <div className="relative flex items-center">

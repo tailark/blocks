@@ -23,6 +23,7 @@ export default async function Home() {
                     <div className="mx-auto max-w-xl text-center">
                         <div className="group relative mx-auto flex w-fit items-center gap-3 text-sm max-md:justify-center">
                             <svg
+                                aria-hidden
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20"
                                 fill="currentColor"
@@ -63,7 +64,7 @@ export default async function Home() {
                             </Link>
                         </div>
 
-                        <h1 className="mb-7 mt-9 text-balance text-3xl font-medium tracking-tight">
+                        <h1 className="mb-7 mt-8 text-balance text-3xl font-medium tracking-tight">
                             Build modern marketing websites with <span className="bg-linear-to-b hover:animate-hue-rotate from-emerald-400 to-emerald-600 bg-clip-text text-transparent dark:from-emerald-200 dark:to-emerald-500">Shadcn blocks.</span>
                         </h1>
 

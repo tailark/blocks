@@ -3,7 +3,6 @@ import { Geist_Mono, Asar } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { GoogleAnalytics } from '@next/third-parties/google'
-import ServiceWorkerInit from '@/components/service-worker-init'
 
 const geistMono = Geist_Mono({
     variable: '--font-geist-mono',
@@ -32,6 +31,11 @@ export default function RootLayout({
             lang="en"
             suppressHydrationWarning>
             <body className={`${geistMono.variable} ${asar.variable} overflow-x-hidden antialiased`}>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(){if(window.location.pathname==='/'){document.documentElement.setAttribute('data-home','')}})()`,
+                    }}
+                />
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
@@ -39,7 +43,6 @@ export default function RootLayout({
                     disableTransitionOnChange>
                     {children}
                 </ThemeProvider>
-                <ServiceWorkerInit />
             </body>
             <GoogleAnalytics gaId="G-6KY6TLKXKY" />
         </html>
