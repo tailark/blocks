@@ -53,7 +53,7 @@
     "react-use-measure": "^2.1.7",
     "recharts": "^2.15.1",
     "shadcn": "2.4.0-canary.10",
-    "swiper": "^11.2.4",
+    "swiper": "^12.1.2",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
     "third-parties": "link:@next/third-parties",
