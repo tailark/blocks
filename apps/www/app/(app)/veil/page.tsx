@@ -157,7 +157,7 @@ export default async function Home() {
                             className="ml-3 pr-2.5"
                             asChild>
                             <Link
-                                target="_blank"
+                                target="_blank" rel="noopener noreferrer"
                                 href="https://github.com/tailark/blocks/blob/main/packages/veil-kit/README.md">
                                 Docs
                                 <ArrowUpRight className="size-3.5! opacity-50" />

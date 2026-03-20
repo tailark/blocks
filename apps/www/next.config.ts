@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-    productionBrowserSourceMaps: true,
+    productionBrowserSourceMaps: false,
     cacheComponents: true,
     images: {
         remotePatterns: [

@@ -57,9 +57,8 @@ export const FooterContent = ({ className, asSidePanel }: { className?: string; 
                 className="size-8 rounded-full">
                 <Link
                     href="https://x.com/MeschacIrung/"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     aria-label="x/twitter"
-                    rel="noreferrer"
                     className="text-sm">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

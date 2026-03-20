@@ -144,7 +144,7 @@ export default async function Home() {
                                     <div>
                                         <h3 className="flex items-center gap-1 text-sm font-medium">
                                             <Link
-                                                target="_blank"
+                                                target="_blank" rel="noopener noreferrer"
                                                 href={testimonial.link}
                                                 className="line-clamp-1 capitalize before:absolute before:inset-0">
                                                 {testimonial.name}
