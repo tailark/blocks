@@ -32,14 +32,23 @@ export default function FAQs() {
             question: 'What pages are currently available?',
             answer: (
                 <>
-                    Currently, the following page categories are available: <br /> <br />
+                    Every page category listed in the Complete plan has been shipped with at least one page in each category: <br /> <br />
                     ✓ Landing pages <br />
+                    ✓ Product pages <br />
+                    ✓ Solution pages <br />
                     ✓ Pricing pages <br />
+                    ✓ About pages <br />
+                    ✓ Brand pages <br />
+                    ✓ Contact pages <br />
+                    ✓ Contact Sales pages <br />
                     ✓ Customers pages <br />
-                    ✓ Customer story pages <br />
+                    ✓ Customer Story pages <br />
                     ✓ Blog pages <br />
-                    ✓ Blog article pages <br /> <br />
-                    Additional page categories will be shipped progressively as we continue through Phase 2.
+                    ✓ Blog Article pages <br />
+                    ✓ Wall of Love pages <br />
+                    ✓ Legal pages <br />
+                    ✓ Legal Document pages <br /> <br />
+                    All pages are available across multiple styles and more variants are being added regularly.
                 </>
             ),
         },

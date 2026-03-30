@@ -39,9 +39,9 @@ export default async function Home() {
                                 />
                             </svg>
 
-                            <span className="text-muted-foreground group-hover:text-foreground font-medium">Introducing Veil Kit</span>
+                            <span className="text-muted-foreground group-hover:text-foreground font-medium">13 new pages added to the Grid-2 style</span>
                             <Link
-                                href="/veil"
+                                href="https://pro.tailark.com/changelog"
                                 aria-label="Veil"
                                 className="before:absolute before:-inset-4">
                                 <div className="relative size-3">

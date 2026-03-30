@@ -44,7 +44,7 @@ export const PagesSection = () => {
                             <ContainerContent>
                                 <Image
                                     src="https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/pages/grid-2-landing-one.png"
-                                    alt="Tailark Pro dark landing page"
+                                    alt="Tailark Pro grid-2 landing page"
                                     width={936}
                                     height={1184}
                                     sizes="(max-width: 1280px) 100vw, (min-width: 1280px) 720px"
@@ -55,8 +55,8 @@ export const PagesSection = () => {
                         <div className="bg-indigo-200">
                             <ContainerContent className="xl:max-w-152">
                                 <Image
-                                    src="https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/pages/grid-2-customers-one.png"
-                                    alt="Tailark Pro dark landing page"
+                                    src="https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/pages/grid-2-product-one.png"
+                                    alt="Tailark Pro grid-2 product page"
                                     width={936}
                                     height={1184}
                                     sizes="(max-width: 1280px) 100vw, (min-width: 1280px) 720px"
@@ -67,8 +67,32 @@ export const PagesSection = () => {
                         <div className="bg-indigo-200">
                             <ContainerContent className="xl:max-w-152">
                                 <Image
-                                    src="https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/pages/grid-2-pricing-one.png"
-                                    alt="Tailark Pro dark pricing page"
+                                    src="https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/pages/grid-2-about-one.png"
+                                    alt="Tailark Pro grid-2 about page"
+                                    width={936}
+                                    height={1184}
+                                    sizes="(max-width: 1280px) 100vw, (min-width: 1280px) 720px"
+                                    className="rounded-xl object-cover object-top"
+                                />
+                            </ContainerContent>
+                        </div>
+                        <div className="bg-indigo-200">
+                            <ContainerContent className="xl:max-w-152">
+                                <Image
+                                    src="https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/pages/grid-2-solution-one.png"
+                                    alt="Tailark Pro grid-2 solution page"
+                                    width={936}
+                                    height={1184}
+                                    sizes="(max-width: 1280px) 100vw, (min-width: 1280px) 720px"
+                                    className="rounded-xl object-cover object-top"
+                                />
+                            </ContainerContent>
+                        </div>
+                        <div className="bg-indigo-200">
+                            <ContainerContent className="xl:max-w-152">
+                                <Image
+                                    src="https://raw.githubusercontent.com/tailark/pro-images/refs/heads/main/pages/grid-2-product-two.png"
+                                    alt="Tailark Pro grid-2 product page"
                                     width={936}
                                     height={1184}
                                     sizes="(max-width: 1280px) 100vw, (min-width: 1280px) 720px"
