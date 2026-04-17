@@ -23,11 +23,11 @@
     "dotted-map": "^2.2.3",
     "lucide-react": "^0.475.0",
     "motion": "^12.4.3",
-    "next": "15.3.8",
+    "next": "15.3.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "recharts": "^2.15.1",
-    "swiper": "^11.2.4",
+    "swiper": "^12.1.2",
     "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
