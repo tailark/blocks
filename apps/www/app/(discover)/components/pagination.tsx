@@ -49,6 +49,11 @@ export function Pagination({ currentPage, totalPages, onPageChange, itemsPerPage
         return pages
     }
 
+    const handlePageChange = (page: number) => {
+        onPageChange(page)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
     const startItem = (currentPage - 1) * itemsPerPage + 1
     const endItem = Math.min(currentPage * itemsPerPage, totalItems)
 
@@ -77,7 +82,7 @@ export function Pagination({ currentPage, totalPages, onPageChange, itemsPerPage
                 {totalPages > 1 && (
                     <div className="flex items-center gap-0.5">
                         <button
-                            onClick={() => onPageChange(currentPage - 1)}
+                            onClick={() => handlePageChange(currentPage - 1)}
                             disabled={currentPage === 1}
                             className="hover:bg-muted active:scale-98 flex h-7 w-9 items-center justify-center rounded-md transition-all disabled:cursor-not-allowed disabled:opacity-30"
                             aria-label="Previous page">
@@ -98,7 +103,7 @@ export function Pagination({ currentPage, totalPages, onPageChange, itemsPerPage
                             return (
                                 <button
                                     key={page}
-                                    onClick={() => onPageChange(page as number)}
+                                    onClick={() => handlePageChange(page as number)}
                                     className={cn('active:scale-98 flex h-7 w-9 items-center justify-center rounded-md text-sm transition-all', currentPage === page ? 'bg-card ring-foreground/6.5 text-foreground font-medium shadow-md shadow-black/5 ring-1' : 'hover:bg-muted text-foreground')}
                                     aria-label={`Page ${page}`}
                                     aria-current={currentPage === page ? 'page' : undefined}>
@@ -108,7 +113,7 @@ export function Pagination({ currentPage, totalPages, onPageChange, itemsPerPage
                         })}
 
                         <button
-                            onClick={() => onPageChange(currentPage + 1)}
+                            onClick={() => handlePageChange(currentPage + 1)}
                             disabled={currentPage === totalPages}
                             className="hover:bg-muted active:scale-98 flex h-7 w-9 items-center justify-center rounded-md transition-all disabled:cursor-not-allowed disabled:opacity-30"
                             aria-label="Next page">
