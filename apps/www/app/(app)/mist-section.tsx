@@ -26,7 +26,7 @@ export const MistSection = () => {
                             className="ml-3 mt-3"
                             variant="ghost">
                             <Link
-                                target="_blank"
+                                target="_blank" rel="noopener noreferrer"
                                 href="https://github.com/tailark/blocks/blob/main/packages/mist-kit/README.md">
                                 Docs
                             </Link>
@@ -195,7 +195,7 @@ export const MistSection = () => {
                                     <div>
                                         <h3 className="flex items-center gap-1 text-sm font-medium">
                                             <Link
-                                                target="_blank"
+                                                target="_blank" rel="noopener noreferrer"
                                                 href={testimonial.link}
                                                 className="line-clamp-1 capitalize before:absolute before:inset-0">
                                                 {testimonial.name}

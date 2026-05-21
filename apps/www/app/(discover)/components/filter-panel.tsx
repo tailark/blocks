@@ -94,7 +94,7 @@ export function FilterPanel({ filterGroups, selectedFilters, onFilterChange, isC
                                         </Link>
                                         <Link
                                             href="https://pro.tailark.com/illustrations"
-                                            target="_blank"
+                                            target="_blank" rel="noopener noreferrer"
                                             data-state={pathname === '/illustrations' ? 'checked' : 'unchecked'}
                                             className={radioItem}>
                                             <ImageIcon className="size-3.5 *:first:fill-sky-300 *:last:fill-sky-600 dark:stroke-transparent" />
