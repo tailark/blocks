@@ -1,12 +1,13 @@
 'use client'
+
 import React, { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'motion/react'
 
 import { Beacon } from '@/registry/bases/radix/veil/ui/svgs/beacon'
 import { Bolt } from '@/registry/bases/radix/veil/ui/svgs/bolt'
 import { Cisco } from '@/registry/bases/radix/veil/ui/svgs/cisco'
 import { Hulu } from '@/registry/bases/radix/veil/ui/svgs/hulu'
-import { SupabaseFull } from '@tailark/core/components/ui/svgs/supabase'
-import { AnimatePresence, motion } from 'motion/react'
+import { SupabaseFull } from '@/registry/bases/radix/veil/ui/svgs/supabase'
 import { VercelFull } from '@/registry/bases/radix/veil/ui/svgs/vercel'
 import { Spotify } from '@/registry/bases/radix/veil/ui/svgs/spotify'
 
