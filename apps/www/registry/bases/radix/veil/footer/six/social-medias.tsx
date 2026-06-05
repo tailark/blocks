@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@tailark/core/lib/utils'
-import { Button } from '@veil/components/ui/button'
+import { Button } from '@/registry/bases/radix/veil/ui/button'
 import { Twitter, Linkedin, Youtube } from 'lucide-react'
 import Link from 'next/link'
 import { useMemo, useState } from 'react'

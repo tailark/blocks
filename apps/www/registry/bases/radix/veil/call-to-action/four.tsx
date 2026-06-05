@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Button } from '@veil/components/ui/button'
-import { Card } from '@veil/components/ui/card'
+import { Button } from '@/registry/bases/radix/veil/ui/button'
+import { Card } from '@/registry/bases/radix/veil/ui/card'
 import { ArrowRight, Check } from 'lucide-react'
 
 const benefits = ['14-day free trial', 'No credit card required', 'Cancel anytime', '24/7 support']

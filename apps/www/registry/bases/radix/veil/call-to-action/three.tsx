@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button } from '@veil/components/ui/button'
+import { Button } from '@/registry/bases/radix/veil/ui/button'
 import { ChevronRight, Mail } from 'lucide-react'
 
 export default function CallToAction() {

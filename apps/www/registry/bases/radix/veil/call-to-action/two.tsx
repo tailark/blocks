@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { Button } from '@veil/components/ui/button'
-import { Card } from '@veil/components/ui/card'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { Button } from '@/registry/bases/radix/veil/ui/button'
+import { Card } from '@/registry/bases/radix/veil/ui/card'
+import { ArrowRight } from 'lucide-react'
 
 export default function CallToAction() {
     return (
