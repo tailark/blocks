@@ -1,6 +1,6 @@
 import { LogoIcon } from '@/registry/bases/radix/veil/ui/logo'
 import Link from 'next/link'
-import { ThemeSwitcher } from '@/registry/bases/radix/veil/footer/five/components/theme-switcher'
+import { ThemeSwitcher } from '@/registry/bases/radix/veil/footer/five/theme-switcher'
 
 const links = [
     { label: 'Features', href: '#' },

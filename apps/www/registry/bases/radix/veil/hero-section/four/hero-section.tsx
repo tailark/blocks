@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Button } from '@/registry/bases/radix/veil/ui/button'
-import { HeroHeader } from '@/registry/bases/radix/veil/hero-section/four/components/header'
+import { HeroHeader } from '@/registry/bases/radix/veil/hero-section/four/header'
 import { AudioLines, ChevronRight, Github, ImageIcon, Lightbulb, Mic2, Paperclip, Plus, ShoppingBag, Telescope } from 'lucide-react'
 import Image from 'next/image'
 

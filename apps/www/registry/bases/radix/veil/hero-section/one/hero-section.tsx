@@ -6,7 +6,7 @@ import { ChevronRight } from 'lucide-react'
 import { Button } from '@/registry/bases/radix/veil/ui/button'
 import { Card } from '@/registry/bases/radix/veil/ui/card'
 
-import { HeroHeader } from '@/registry/bases/radix/veil/hero-section/one/components/header'
+import { HeroHeader } from '@/registry/bases/radix/veil/hero-section/one/header'
 
 import { Supabase } from '@/registry/bases/radix/veil/ui/svgs/supabase'
 import { Slack } from '@/registry/bases/radix/veil/ui/svgs/slack'

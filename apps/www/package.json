@@ -50,11 +50,12 @@
     "react-resizable-panels": "^2.1.9",
     "react-use-measure": "^2.1.7",
     "recharts": "^2.15.4",
-    "shadcn": "2.4.0-canary.10",
+    "shadcn": "4.10.0",
     "swiper": "^11.2.10",
     "tailwind-merge": "^3.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "use-media": "^1.5.0"
+    "use-media": "^1.5.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",

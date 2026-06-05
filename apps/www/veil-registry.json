@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "Tailark Veil",
   "homepage": "https://tailark.com/veil",
-  "author": "M\u00e9schac Irung <meschacirung@gmail.com>",
+  "author": "Meschac Irung <meschacirung@gmail.com>",
   "items": [
     {
       "name": "veil-beacon",
@@ -262,7 +262,7 @@
       "name": "veil-call-to-action-1",
       "type": "registry:block",
       "title": "Call To Action 1",
-      "description": "Tailark Veil call-to-action block",
+      "description": "Tailark Veil call-to-action variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/call-to-action/one/index.tsx",
@@ -278,7 +278,7 @@
       "name": "veil-call-to-action-2",
       "type": "registry:block",
       "title": "Call To Action 2",
-      "description": "Tailark Veil call-to-action block",
+      "description": "Tailark Veil call-to-action variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/call-to-action/two/index.tsx",
@@ -295,7 +295,7 @@
       "name": "veil-call-to-action-3",
       "type": "registry:block",
       "title": "Call To Action 3",
-      "description": "Tailark Veil call-to-action block",
+      "description": "Tailark Veil call-to-action variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/call-to-action/three/index.tsx",
@@ -311,7 +311,7 @@
       "name": "veil-call-to-action-4",
       "type": "registry:block",
       "title": "Call To Action 4",
-      "description": "Tailark Veil call-to-action block",
+      "description": "Tailark Veil call-to-action variant 4 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/call-to-action/four/index.tsx",
@@ -328,7 +328,7 @@
       "name": "veil-comparator-1",
       "type": "registry:block",
       "title": "Comparator 1",
-      "description": "Tailark Veil comparator block",
+      "description": "Tailark Veil comparator variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/comparator/one/index.tsx",
@@ -345,7 +345,7 @@
       "name": "veil-comparator-2",
       "type": "registry:block",
       "title": "Comparator 2",
-      "description": "Tailark Veil comparator block",
+      "description": "Tailark Veil comparator variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/comparator/two/index.tsx",
@@ -362,7 +362,7 @@
       "name": "veil-comparator-3",
       "type": "registry:block",
       "title": "Comparator 3",
-      "description": "Tailark Veil comparator block",
+      "description": "Tailark Veil comparator variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/comparator/three/index.tsx",
@@ -379,7 +379,7 @@
       "name": "veil-contact-1",
       "type": "registry:block",
       "title": "Contact 1",
-      "description": "Tailark Veil contact block",
+      "description": "Tailark Veil contact variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/contact/one/index.tsx",
@@ -399,7 +399,7 @@
       "name": "veil-contact-2",
       "type": "registry:block",
       "title": "Contact 2",
-      "description": "Tailark Veil contact block",
+      "description": "Tailark Veil contact variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/contact/two/index.tsx",
@@ -420,7 +420,7 @@
       "name": "veil-content-1",
       "type": "registry:block",
       "title": "Content 1",
-      "description": "Tailark Veil content block",
+      "description": "Tailark Veil content variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/content/one/index.tsx",
@@ -433,7 +433,7 @@
       "name": "veil-content-2",
       "type": "registry:block",
       "title": "Content 2",
-      "description": "Tailark Veil content block",
+      "description": "Tailark Veil content variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/content/two/index.tsx",
@@ -446,7 +446,7 @@
       "name": "veil-content-3",
       "type": "registry:block",
       "title": "Content 3",
-      "description": "Tailark Veil content block",
+      "description": "Tailark Veil content variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/content/three/index.tsx",
@@ -459,7 +459,7 @@
       "name": "veil-faqs-1",
       "type": "registry:block",
       "title": "Faqs 1",
-      "description": "Tailark Veil faqs block",
+      "description": "Tailark Veil faqs variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/faqs/one/index.tsx",
@@ -476,7 +476,7 @@
       "name": "veil-faqs-2",
       "type": "registry:block",
       "title": "Faqs 2",
-      "description": "Tailark Veil faqs block",
+      "description": "Tailark Veil faqs variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/faqs/two/index.tsx",
@@ -492,7 +492,7 @@
       "name": "veil-faqs-3",
       "type": "registry:block",
       "title": "Faqs 3",
-      "description": "Tailark Veil faqs block",
+      "description": "Tailark Veil faqs variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/faqs/three/index.tsx",
@@ -508,7 +508,7 @@
       "name": "veil-faqs-4",
       "type": "registry:block",
       "title": "Faqs 4",
-      "description": "Tailark Veil faqs block",
+      "description": "Tailark Veil faqs variant 4 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/faqs/four/index.tsx",
@@ -524,7 +524,7 @@
       "name": "veil-faqs-5",
       "type": "registry:block",
       "title": "Faqs 5",
-      "description": "Tailark Veil faqs block",
+      "description": "Tailark Veil faqs variant 5 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/faqs/five/index.tsx",
@@ -541,7 +541,7 @@
       "name": "veil-features-1",
       "type": "registry:block",
       "title": "Features 1",
-      "description": "Tailark Veil features block",
+      "description": "Tailark Veil features variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/features/one/index.tsx",
@@ -563,7 +563,7 @@
       "name": "veil-features-2",
       "type": "registry:block",
       "title": "Features 2",
-      "description": "Tailark Veil features block",
+      "description": "Tailark Veil features variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/features/two/index.tsx",
@@ -585,7 +585,7 @@
       "name": "veil-features-3",
       "type": "registry:block",
       "title": "Features 3",
-      "description": "Tailark Veil features block",
+      "description": "Tailark Veil features variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/features/three/index.tsx",
@@ -607,7 +607,7 @@
       "name": "veil-footer-1",
       "type": "registry:block",
       "title": "Footer 1",
-      "description": "Tailark Veil footer block",
+      "description": "Tailark Veil footer variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/footer/one/index.tsx",
@@ -623,7 +623,7 @@
       "name": "veil-footer-2",
       "type": "registry:block",
       "title": "Footer 2",
-      "description": "Tailark Veil footer block",
+      "description": "Tailark Veil footer variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/footer/two/index.tsx",
@@ -639,7 +639,7 @@
       "name": "veil-footer-3",
       "type": "registry:block",
       "title": "Footer 3",
-      "description": "Tailark Veil footer block",
+      "description": "Tailark Veil footer variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/footer/three/index.tsx",
@@ -655,7 +655,7 @@
       "name": "veil-footer-4",
       "type": "registry:block",
       "title": "Footer 4",
-      "description": "Tailark Veil footer block",
+      "description": "Tailark Veil footer variant 4 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/footer/four/index.tsx",
@@ -671,7 +671,7 @@
       "name": "veil-footer-5",
       "type": "registry:block",
       "title": "Footer 5",
-      "description": "Tailark Veil footer block",
+      "description": "Tailark Veil footer variant 5 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/footer/five/index.tsx",
@@ -696,7 +696,7 @@
       "name": "veil-footer-6",
       "type": "registry:block",
       "title": "Footer 6",
-      "description": "Tailark Veil footer block",
+      "description": "Tailark Veil footer variant 6 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/footer/six/index.tsx",
@@ -726,7 +726,7 @@
       "name": "veil-forgot-password-1",
       "type": "registry:block",
       "title": "Forgot Password 1",
-      "description": "Tailark Veil forgot-password block",
+      "description": "Tailark Veil forgot-password variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/forgot-password/one/index.tsx",
@@ -746,7 +746,7 @@
       "name": "veil-forgot-password-2",
       "type": "registry:block",
       "title": "Forgot Password 2",
-      "description": "Tailark Veil forgot-password block",
+      "description": "Tailark Veil forgot-password variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/forgot-password/two/index.tsx",
@@ -765,7 +765,7 @@
       "name": "veil-forgot-password-3",
       "type": "registry:block",
       "title": "Forgot Password 3",
-      "description": "Tailark Veil forgot-password block",
+      "description": "Tailark Veil forgot-password variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/forgot-password/three/index.tsx",
@@ -784,7 +784,7 @@
       "name": "veil-hero-section-1",
       "type": "registry:block",
       "title": "Hero Section 1",
-      "description": "Tailark Veil hero-section block",
+      "description": "Tailark Veil hero-section variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/hero-section/one/header.tsx",
@@ -816,7 +816,7 @@
       "name": "veil-hero-section-2",
       "type": "registry:block",
       "title": "Hero Section 2",
-      "description": "Tailark Veil hero-section block",
+      "description": "Tailark Veil hero-section variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/hero-section/two/header.tsx",
@@ -856,7 +856,7 @@
       "name": "veil-hero-section-3",
       "type": "registry:block",
       "title": "Hero Section 3",
-      "description": "Tailark Veil hero-section block",
+      "description": "Tailark Veil hero-section variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/hero-section/three/header.tsx",
@@ -888,7 +888,7 @@
       "name": "veil-hero-section-4",
       "type": "registry:block",
       "title": "Hero Section 4",
-      "description": "Tailark Veil hero-section block",
+      "description": "Tailark Veil hero-section variant 4 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/hero-section/four/header.tsx",
@@ -918,7 +918,7 @@
       "name": "veil-hero-section-5",
       "type": "registry:block",
       "title": "Hero Section 5",
-      "description": "Tailark Veil hero-section block",
+      "description": "Tailark Veil hero-section variant 5 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/hero-section/five/index.tsx",
@@ -935,7 +935,7 @@
       "name": "veil-integrations-1",
       "type": "registry:block",
       "title": "Integrations 1",
-      "description": "Tailark Veil integrations block",
+      "description": "Tailark Veil integrations variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/integrations/one/index.tsx",
@@ -958,7 +958,7 @@
       "name": "veil-integrations-2",
       "type": "registry:block",
       "title": "Integrations 2",
-      "description": "Tailark Veil integrations block",
+      "description": "Tailark Veil integrations variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/integrations/two/index.tsx",
@@ -981,7 +981,7 @@
       "name": "veil-login-1",
       "type": "registry:block",
       "title": "Login 1",
-      "description": "Tailark Veil login block",
+      "description": "Tailark Veil login variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/login/one/index.tsx",
@@ -1001,7 +1001,7 @@
       "name": "veil-login-2",
       "type": "registry:block",
       "title": "Login 2",
-      "description": "Tailark Veil login block",
+      "description": "Tailark Veil login variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/login/two/index.tsx",
@@ -1020,7 +1020,7 @@
       "name": "veil-login-3",
       "type": "registry:block",
       "title": "Login 3",
-      "description": "Tailark Veil login block",
+      "description": "Tailark Veil login variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/login/three/index.tsx",
@@ -1039,7 +1039,7 @@
       "name": "veil-logo-cloud-1",
       "type": "registry:block",
       "title": "Logo Cloud 1",
-      "description": "Tailark Veil logo-cloud block",
+      "description": "Tailark Veil logo-cloud variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/logo-cloud/one/index.tsx",
@@ -1062,7 +1062,7 @@
       "name": "veil-logo-cloud-2",
       "type": "registry:block",
       "title": "Logo Cloud 2",
-      "description": "Tailark Veil logo-cloud block",
+      "description": "Tailark Veil logo-cloud variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/logo-cloud/two/index.tsx",
@@ -1087,7 +1087,7 @@
       "name": "veil-pricing-1",
       "type": "registry:block",
       "title": "Pricing 1",
-      "description": "Tailark Veil pricing block",
+      "description": "Tailark Veil pricing variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/pricing/one/index.tsx",
@@ -1104,7 +1104,7 @@
       "name": "veil-pricing-2",
       "type": "registry:block",
       "title": "Pricing 2",
-      "description": "Tailark Veil pricing block",
+      "description": "Tailark Veil pricing variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/pricing/two/index.tsx",
@@ -1121,7 +1121,7 @@
       "name": "veil-pricing-3",
       "type": "registry:block",
       "title": "Pricing 3",
-      "description": "Tailark Veil pricing block",
+      "description": "Tailark Veil pricing variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/pricing/three/index.tsx",
@@ -1138,7 +1138,7 @@
       "name": "veil-sign-up-1",
       "type": "registry:block",
       "title": "Sign Up 1",
-      "description": "Tailark Veil sign-up block",
+      "description": "Tailark Veil sign-up variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/sign-up/one/index.tsx",
@@ -1158,7 +1158,7 @@
       "name": "veil-sign-up-2",
       "type": "registry:block",
       "title": "Sign Up 2",
-      "description": "Tailark Veil sign-up block",
+      "description": "Tailark Veil sign-up variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/sign-up/two/index.tsx",
@@ -1177,7 +1177,7 @@
       "name": "veil-sign-up-3",
       "type": "registry:block",
       "title": "Sign Up 3",
-      "description": "Tailark Veil sign-up block",
+      "description": "Tailark Veil sign-up variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/sign-up/three/index.tsx",
@@ -1196,7 +1196,7 @@
       "name": "veil-stats-1",
       "type": "registry:block",
       "title": "Stats 1",
-      "description": "Tailark Veil stats block",
+      "description": "Tailark Veil stats variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/stats/one/index.tsx",
@@ -1209,7 +1209,7 @@
       "name": "veil-stats-2",
       "type": "registry:block",
       "title": "Stats 2",
-      "description": "Tailark Veil stats block",
+      "description": "Tailark Veil stats variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/stats/two/index.tsx",
@@ -1222,7 +1222,7 @@
       "name": "veil-stats-3",
       "type": "registry:block",
       "title": "Stats 3",
-      "description": "Tailark Veil stats block",
+      "description": "Tailark Veil stats variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/stats/three/index.tsx",
@@ -1235,7 +1235,7 @@
       "name": "veil-stats-4",
       "type": "registry:block",
       "title": "Stats 4",
-      "description": "Tailark Veil stats block",
+      "description": "Tailark Veil stats variant 4 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/stats/four/index.tsx",
@@ -1248,7 +1248,7 @@
       "name": "veil-team-1",
       "type": "registry:block",
       "title": "Team 1",
-      "description": "Tailark Veil team block",
+      "description": "Tailark Veil team variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/team/one/index.tsx",
@@ -1261,7 +1261,7 @@
       "name": "veil-team-2",
       "type": "registry:block",
       "title": "Team 2",
-      "description": "Tailark Veil team block",
+      "description": "Tailark Veil team variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/team/two/index.tsx",
@@ -1274,7 +1274,7 @@
       "name": "veil-testimonials-1",
       "type": "registry:block",
       "title": "Testimonials 1",
-      "description": "Tailark Veil testimonials block",
+      "description": "Tailark Veil testimonials variant 1 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/testimonials/one/index.tsx",
@@ -1287,7 +1287,7 @@
       "name": "veil-testimonials-2",
       "type": "registry:block",
       "title": "Testimonials 2",
-      "description": "Tailark Veil testimonials block",
+      "description": "Tailark Veil testimonials variant 2 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/testimonials/two/index.tsx",
@@ -1303,7 +1303,7 @@
       "name": "veil-testimonials-3",
       "type": "registry:block",
       "title": "Testimonials 3",
-      "description": "Tailark Veil testimonials block",
+      "description": "Tailark Veil testimonials variant 3 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/testimonials/three/index.tsx",
@@ -1316,7 +1316,7 @@
       "name": "veil-testimonials-4",
       "type": "registry:block",
       "title": "Testimonials 4",
-      "description": "Tailark Veil testimonials block",
+      "description": "Tailark Veil testimonials variant 4 block",
       "files": [
         {
           "path": "../../packages/veil-kit/blocks/testimonials/four/index.tsx",

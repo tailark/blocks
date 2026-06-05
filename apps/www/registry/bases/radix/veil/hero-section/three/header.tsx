@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from '@veil/components/logo'
+import { Logo } from '@/registry/bases/radix/veil/ui/logo'
 import { Menu, X } from 'lucide-react'
-import { Button } from '@veil/components/ui/button'
+import { Button } from '@/registry/bases/radix/veil/ui/button'
 import React from 'react'
 import { cn } from '@tailark/core/lib/utils'
 
