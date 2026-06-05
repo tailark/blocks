@@ -1,14 +1,12 @@
 import { type Registry } from "shadcn/schema"
-import { components as veilRadixComponents } from "@/registry/bases/radix/veil/_components-registry"
-import { blocks as veilRadixBlocks } from "@/registry/bases/radix/veil/_regsitry"
+import { registry as radixRegistry } from "@/registry/bases/radix/registry"
 
 export const registry: Registry = {
     $schema: "https://ui.shadcn.com/schema/registry.json",
     name: "Tailark",
     homepage: "https://tailark.com",
     items: [
-        ...veilRadixComponents,
-        ...veilRadixBlocks,
+        ...(radixRegistry.items ?? []),
         {
             name: "use-media",
             type: "registry:hook",
