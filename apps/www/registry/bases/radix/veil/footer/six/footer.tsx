@@ -1,4 +1,4 @@
-import { LogoIcon } from '@veil/components/logo'
+import { LogoIcon } from '@/registry/bases/radix/veil/ui/logo'
 import Link from 'next/link'
 import { ThemeSwitcher } from '@/registry/bases/radix/veil/footer/six/components/theme-switcher'
 import { SocialMedias } from '@/registry/bases/radix/veil/footer/six/components/social-medias'

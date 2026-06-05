@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Logo } from '@veil/components/logo'
+import { Logo } from '@/registry/bases/radix/veil/ui/logo'
 import { Github, Linkedin, Twitter } from 'lucide-react'
 
 const links = [
