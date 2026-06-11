@@ -19,6 +19,7 @@ export default function Integrations() {
                     <h2 className="font-serif text-4xl font-medium">Connect Your Favorite Tools</h2>
                     <p className="text-muted-foreground mb-6 mt-4">Seamlessly integrate with the services you already use. Set up in minutes, not days.</p>
                     <Button
+                        nativeButton={false}
                         variant="secondary"
                         size="sm"
                         render={

@@ -11,6 +11,7 @@ export default function CallToAction() {
                     <p className="text-muted-foreground mx-auto mt-4 max-w-md text-balance">Join thousands of teams already using our platform to build better products faster.</p>
                     <div className="mt-6 flex flex-wrap justify-center gap-3">
                         <Button
+                            nativeButton={false}
                             render={
                                 <Link href="#link">
                                     <span>Start Free Trial</span>
@@ -20,6 +21,7 @@ export default function CallToAction() {
                             className="pr-1.5"
                         />
                         <Button
+                            nativeButton={false}
                             variant="secondary"
                             render={<Link href="#link">Talk to Sales</Link>}
                         />

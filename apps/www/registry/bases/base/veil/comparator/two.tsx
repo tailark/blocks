@@ -49,6 +49,7 @@ export default function Comparator() {
                         <div className="p-4"></div>
                         <div className="min-w-32 border-l p-4">
                             <Button
+                                nativeButton={false}
                                 render={<Link href="#link">Get Started</Link>}
                                 variant="outline"
                                 size="sm"
@@ -57,6 +58,7 @@ export default function Comparator() {
                         </div>
                         <div className="bg-primary/5 min-w-32 border-l p-4">
                             <Button
+                                nativeButton={false}
                                 render={<Link href="#link">Upgrade</Link>}
                                 size="sm"
                                 className="w-full"

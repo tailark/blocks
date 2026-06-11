@@ -14,6 +14,7 @@ export default function CallToAction() {
                     <h2 className="text-balance font-serif text-3xl font-medium md:text-4xl">Start Building Today</h2>
                     <p className="text-muted-foreground mt-4 max-w-md text-balance">Get 3 months free when you sign up for an annual plan. No credit card required to start.</p>
                     <Button
+                        nativeButton={false}
                         render={
                             <Link href="#link">
                                 Claim Your Offer

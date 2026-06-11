@@ -56,6 +56,7 @@ export default function Pricing() {
                                 ))}
                             </ul>
                             <Button
+                                nativeButton={false}
                                 render={
                                     <Link href="#link">
                                         <span>Get Started</span>

@@ -59,6 +59,7 @@ export const HeroHeader = () => {
                             </div>
                             <div className={cn('flex w-full flex-col space-y-3 duration-200 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit', isScrolled && 'lg:blur-xs lg:opacity-0')}>
                                 <Button
+                                    nativeButton={false}
                                     render={
                                         <Link href="#">
                                             <span>Login</span>
@@ -68,6 +69,7 @@ export const HeroHeader = () => {
                                     size="sm"
                                 />
                                 <Button
+                                    nativeButton={false}
                                     render={
                                         <Link href="#">
                                             <span>Sign Up</span>
@@ -91,6 +93,7 @@ const NavItems = () => {
             {menuItems.map((item, index) => (
                 <li key={index}>
                     <Button
+                        nativeButton={false}
                         render={
                             <Link
                                 href={item.href}
@@ -140,6 +143,7 @@ const FloatingNavPill = ({ isScrolled }: { isScrolled: boolean }) => {
                         <>
                             <NavItems />
                             <Button
+                                nativeButton={false}
                                 render={
                                     <Link href="#">
                                         <span>Get started</span>

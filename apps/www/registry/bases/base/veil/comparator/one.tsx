@@ -85,6 +85,7 @@ export default function Comparator() {
                                 key={plan.name}
                                 className={`border-l p-4 ${plan.highlighted ? 'bg-primary/5' : ''}`}>
                                 <Button
+                                    nativeButton={false}
                                     render={<Link href="#link">{plan.cta}</Link>}
                                     variant={plan.highlighted ? 'default' : 'outline'}
                                     size="sm"

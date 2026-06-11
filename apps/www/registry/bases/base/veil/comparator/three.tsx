@@ -92,6 +92,7 @@ export default function Comparator() {
                                         {plan.period && <span className="text-muted-foreground">{plan.period}</span>}
                                     </div>
                                     <Button
+                                        nativeButton={false}
                                         render={<Link href="#link">{plan.cta}</Link>}
                                         variant={plan.highlighted ? 'default' : 'outline'}
                                         size="sm"

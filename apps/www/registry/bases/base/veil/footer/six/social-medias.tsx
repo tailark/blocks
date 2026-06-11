@@ -30,6 +30,7 @@ export const SocialMedias = () => {
         <div className="flex w-fit flex-col items-end">
             <div className="-mr-2 mb-2 flex">
                 <Button
+                    nativeButton={false}
                     render={
                         <Link
                             href="#"
@@ -50,6 +51,7 @@ export const SocialMedias = () => {
                     onBlur={() => setHoveredSocialMedia(null)}
                 />
                 <Button
+                    nativeButton={false}
                     render={
                         <Link
                             href="#"
@@ -71,6 +73,7 @@ export const SocialMedias = () => {
                 />
 
                 <Button
+                    nativeButton={false}
                     render={
                         <Link
                             href="#"

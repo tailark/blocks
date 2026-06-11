@@ -1,10 +1,11 @@
 import { type Registry } from "shadcn/schema"
-import { registry as radixRegistry } from "@/registry/bases/radix/registry"
+import { registry as baseRegistry } from "@/registry/bases/base/registry"
 import { normalizeRegistryItemName } from "@/lib/registry-item"
 
 export type RegistryEntry = NonNullable<Registry["items"]>[number]
 
-const registry = radixRegistry
+const registry = baseRegistry
+const REGISTRY_BASE = "registry/bases/base"
 
 const KITS = ["dusk", "mist", "veil", "quartz"] as const
 
@@ -91,7 +92,7 @@ export async function getRegistryComponent(name: string) {
     }
 
     try {
-        const module = await import(`@/registry/bases/radix/${importPath}`)
+        const module = await import(`@/${REGISTRY_BASE}/${importPath}`)
 
         return module.default ?? null
     } catch (error) {

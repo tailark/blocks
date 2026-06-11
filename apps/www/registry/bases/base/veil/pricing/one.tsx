@@ -67,6 +67,7 @@ export default function Pricing() {
                                 ))}
                             </ul>
                             <Button
+                                nativeButton={false}
                                 render={<Link href="#link">{plan.cta}</Link>}
                                 variant={plan.highlighted ? 'default' : 'outline'}
                                 className="mt-8 w-full"

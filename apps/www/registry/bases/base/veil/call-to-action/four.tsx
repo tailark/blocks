@@ -33,6 +33,7 @@ export default function CallToAction() {
                         </p>
                         <p className="text-muted-foreground mt-1 text-sm">Free forever for individuals</p>
                         <Button
+                            nativeButton={false}
                             render={
                                 <Link href="#link">
                                     Get Started Free

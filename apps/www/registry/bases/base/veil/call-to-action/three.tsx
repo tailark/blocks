@@ -23,6 +23,7 @@ export default function CallToAction() {
                             />
                         </div>
                         <Button
+                            nativeButton={false}
                             render={
                                 <Link href="#link">
                                     Subscribe

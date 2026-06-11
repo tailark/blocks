@@ -65,6 +65,7 @@ export default function Pricing() {
                                     {tier.period && <span className="text-muted-foreground text-sm">{tier.period}</span>}
                                 </div>
                                 <Button
+                                    nativeButton={false}
                                     render={
                                         <Link href="#link">
                                             <span>Get Started</span>

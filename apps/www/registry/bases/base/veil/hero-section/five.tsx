@@ -12,6 +12,7 @@ export default function HeroSection() {
                 <div className="bg-foreground/5 flex items-center gap-6 rounded-full py-2 pl-5 pr-2 backdrop-blur">
                     <Logo className="h-5" />
                     <Button
+                        nativeButton={false}
                         render={
                             <Link href="#link">
                                 <span className="text-nowrap">Get started</span>
@@ -43,6 +44,7 @@ export default function HeroSection() {
                                 <p className="text-muted-foreground mt-4 text-balance">Veil is your all-in-one engine for adding seamless integrations to your app.</p>
 
                                 <Button
+                                    nativeButton={false}
                                     render={
                                         <Link href="#link">
                                             <span className="text-nowrap">Start Building</span>

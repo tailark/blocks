@@ -27,7 +27,7 @@ export default function Features() {
                             aria-hidden
                             className="**:fill-foreground flex h-44 flex-col justify-between pt-8">
                             <div className="relative flex h-10 items-center gap-12 px-6">
-                                <div className="bg-border absolute inset-0 my-auto h-px"></div>
+                                <div className="bg-border absolute inset-0 my-auto h-px" />
 
                                 <div className="bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring">
                                     <Vercel className="size-3.5" />
@@ -37,7 +37,7 @@ export default function Features() {
                                 </div>
                             </div>
                             <div className="pl-17 relative flex h-10 items-center justify-between gap-12 pr-6">
-                                <div className="bg-border absolute inset-0 my-auto h-px"></div>
+                                <div className="bg-border absolute inset-0 my-auto h-px" />
 
                                 <div className="bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring">
                                     <Clerk className="size-3.5" />
@@ -47,7 +47,7 @@ export default function Features() {
                                 </div>
                             </div>
                             <div className="relative flex h-10 items-center gap-20 px-8">
-                                <div className="bg-border absolute inset-0 my-auto h-px"></div>
+                                <div className="bg-border absolute inset-0 my-auto h-px" />
 
                                 <div className="bg-card shadow-black/6.5 ring-border relative flex h-8 items-center rounded-full px-3 shadow-sm ring">
                                     <Supabase className="size-3.5" />
@@ -68,11 +68,11 @@ export default function Features() {
                         <div
                             aria-hidden
                             className="relative h-44 translate-y-6">
-                            <div className="bg-foreground/15 absolute inset-0 mx-auto w-px"></div>
-                            <div className="absolute -inset-x-16 top-6 aspect-square rounded-full border"></div>
-                            <div className="border-primary mask-l-from-50% mask-l-to-90% mask-r-from-50% mask-r-to-50% absolute -inset-x-16 top-6 aspect-square rounded-full border"></div>
-                            <div className="absolute -inset-x-8 top-24 aspect-square rounded-full border"></div>
-                            <div className="mask-r-from-50% mask-r-to-90% mask-l-from-50% mask-l-to-50% absolute -inset-x-8 top-24 aspect-square rounded-full border border-lime-500"></div>
+                            <div className="bg-foreground/15 absolute inset-0 mx-auto w-px" />
+                            <div className="absolute -inset-x-16 top-6 aspect-square rounded-full border" />
+                            <div className="border-primary mask-l-from-50% mask-l-to-90% mask-r-from-50% mask-r-to-50% absolute -inset-x-16 top-6 aspect-square rounded-full border" />
+                            <div className="absolute -inset-x-8 top-24 aspect-square rounded-full border" />
+                            <div className="mask-r-from-50% mask-r-to-90% mask-l-from-50% mask-l-to-50% absolute -inset-x-8 top-24 aspect-square rounded-full border border-lime-500" />
                         </div>
                     </Card>
                     <Card
@@ -85,38 +85,38 @@ export default function Features() {
                         <div
                             aria-hidden
                             className="*:bg-foreground/15 flex h-44 justify-between pb-6 pt-12 *:h-full *:w-px">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div className="bg-primary!"></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div className="bg-primary!"></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div className="bg-primary!"></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div className="bg-primary!"></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div className="bg-primary!"></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div className="bg-primary!"></div>
+                            <div />
+                            <div />
+                            <div />
+                            <div />
+                            <div className="bg-primary!" />
+                            <div />
+                            <div />
+                            <div />
+                            <div />
+                            <div className="bg-primary!" />
+                            <div />
+                            <div />
+                            <div />
+                            <div className="bg-primary!" />
+                            <div />
+                            <div />
+                            <div />
+                            <div />
+                            <div className="bg-primary!" />
+                            <div />
+                            <div />
+                            <div />
+                            <div />
+                            <div className="bg-primary!" />
+                            <div />
+                            <div />
+                            <div />
+                            <div />
+                            <div />
+                            <div />
+                            <div />
+                            <div className="bg-primary!" />
                         </div>
                     </Card>
                     <Card
