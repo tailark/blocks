@@ -4,7 +4,7 @@ import { GooglePaLM } from '@/registry/core/ui/svgs/google-palm'
 import { MagicUI } from '@/registry/core/ui/svgs/magic-ui'
 import { VSCodium } from '@/registry/core/ui/svgs/vs-codium'
 import { MediaWiki } from '@/registry/core/ui/svgs/media-wiki'
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import Link from 'next/link'
 
 export default function IntegrationsSection() {

@@ -1,6 +1,6 @@
 'use client'
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/bases/radix/ui/accordion'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/bases/radix/dusk/ui/accordion'
 import { DynamicIcon, type IconName } from 'lucide-react/dynamic'
 import Link from 'next/link'
 

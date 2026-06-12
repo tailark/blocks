@@ -1,11 +1,14 @@
 import { type Registry } from "shadcn/schema"
 
-const uiComponents = ["button", "card", "input", "textarea", "logo"] as const
+const uiComponents = ["accordion", "button", "card", "input", "label", "select", "textarea", "logo"] as const
 
 const titles: Record<(typeof uiComponents)[number], string> = {
+    accordion: "Accordion",
     button: "Button",
     card: "Card",
     input: "Input",
+    label: "Label",
+    select: "Select",
     textarea: "Textarea",
     logo: "Logo",
 }

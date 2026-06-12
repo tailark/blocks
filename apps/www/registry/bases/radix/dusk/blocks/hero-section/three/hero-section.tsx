@@ -1,6 +1,6 @@
 import React from 'react'
 import { Mail, SendHorizonal } from 'lucide-react'
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import { TextEffect } from '@/registry/core/ui/motion-primitives/text-effect'
 import { AnimatedGroup, type AnimatedGroupProps } from '@/registry/core/ui/motion-primitives/animated-group'
 import { HeroHeader } from '@/registry/bases/radix/dusk/blocks/hero-section/three/header'

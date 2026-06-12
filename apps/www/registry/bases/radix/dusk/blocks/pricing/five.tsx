@@ -1,4 +1,4 @@
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 import { Spotify } from '@/registry/core/ui/svgs/spotify'

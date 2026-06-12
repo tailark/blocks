@@ -5,8 +5,8 @@ import { VSCodium } from '@/registry/core/ui/svgs/vs-codium'
 import { MediaWiki } from '@/registry/core/ui/svgs/media-wiki'
 import { GooglePaLM } from '@/registry/core/ui/svgs/google-palm'
 import { cn } from '@/registry/core/lib/utils'
-import { LogoIcon } from '@/registry/bases/radix/ui/logo'
-import { Button } from '@/registry/bases/radix/ui/button'
+import { LogoIcon } from '@/registry/bases/radix/dusk/ui/logo'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import Link from 'next/link'
 
 export default function IntegrationsSection() {

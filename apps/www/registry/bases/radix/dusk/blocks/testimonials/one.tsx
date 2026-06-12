@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from '@/registry/bases/radix/ui/card'
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/bases/radix/ui/avatar'
+import { Card, CardContent, CardHeader } from '@/registry/bases/radix/dusk/ui/card'
+import { Avatar, AvatarFallback, AvatarImage } from '@/registry/bases/radix/dusk/ui/avatar'
 import { Hulu } from '@/registry/core/ui/svgs/hulu'
 
 export default function Testimonials() {

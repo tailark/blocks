@@ -113,7 +113,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil contact variant 1 block",
         path: "veil/contact/one.tsx",
         target: "@components/contact-1.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-textarea", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-textarea", "@tailark/veil-label"],
     }),
     block({
         name: "contact-2",
@@ -121,7 +121,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil contact variant 2 block",
         path: "veil/contact/two.tsx",
         target: "@components/contact-2.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-textarea", "@shadcn/label", "@shadcn/select"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-textarea", "@tailark/veil-label", "@tailark/veil-select"],
     }),
     block({
         name: "content-1",
@@ -150,7 +150,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil faqs variant 1 block",
         path: "veil/faqs/one.tsx",
         target: "@components/faqs-1.tsx",
-        dependencies: ["@tailark/veil-card", "@shadcn/accordion"],
+        dependencies: ["@tailark/veil-card", "@tailark/veil-accordion"],
     }),
     block({
         name: "faqs-2",
@@ -158,7 +158,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil faqs variant 2 block",
         path: "veil/faqs/two.tsx",
         target: "@components/faqs-2.tsx",
-        dependencies: ["@shadcn/accordion"],
+        dependencies: ["@tailark/veil-accordion"],
     }),
     block({
         name: "faqs-3",
@@ -166,7 +166,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil faqs variant 3 block",
         path: "veil/faqs/three.tsx",
         target: "@components/faqs-3.tsx",
-        dependencies: ["@shadcn/accordion"],
+        dependencies: ["@tailark/veil-accordion"],
     }),
     block({
         name: "faqs-4",
@@ -182,7 +182,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil faqs variant 5 block",
         path: "veil/faqs/five.tsx",
         target: "@components/faqs-5.tsx",
-        dependencies: ["@tailark/veil-card", "@shadcn/accordion"],
+        dependencies: ["@tailark/veil-card", "@tailark/veil-accordion"],
     }),
     block({
         name: "features-1",
@@ -285,7 +285,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil forgot-password variant 1 block",
         path: "veil/forgot-password/one.tsx",
         target: "@components/forgot-password-1.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     block({
         name: "forgot-password-2",
@@ -293,7 +293,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil forgot-password variant 2 block",
         path: "veil/forgot-password/two.tsx",
         target: "@components/forgot-password-2.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     block({
         name: "forgot-password-3",
@@ -301,7 +301,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil forgot-password variant 3 block",
         path: "veil/forgot-password/three.tsx",
         target: "@components/forgot-password-3.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     component({
         name: "hero-section-1-header",
@@ -395,7 +395,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil login variant 1 block",
         path: "veil/login/one.tsx",
         target: "@components/login-1.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     block({
         name: "login-2",
@@ -403,7 +403,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil login variant 2 block",
         path: "veil/login/two.tsx",
         target: "@components/login-2.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     block({
         name: "login-3",
@@ -411,7 +411,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil login variant 3 block",
         path: "veil/login/three.tsx",
         target: "@components/login-3.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     block({
         name: "logo-cloud-1",
@@ -460,7 +460,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil sign-up variant 1 block",
         path: "veil/sign-up/one.tsx",
         target: "@components/sign-up-1.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     block({
         name: "sign-up-2",
@@ -468,7 +468,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil sign-up variant 2 block",
         path: "veil/sign-up/two.tsx",
         target: "@components/sign-up-2.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     block({
         name: "sign-up-3",
@@ -476,7 +476,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil sign-up variant 3 block",
         path: "veil/sign-up/three.tsx",
         target: "@components/sign-up-3.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@shadcn/label"],
+        dependencies: ["@tailark/veil-button", "@tailark/veil-input", "@tailark/veil-logo", "@tailark/veil-label"],
     }),
     block({
         name: "stats-1",

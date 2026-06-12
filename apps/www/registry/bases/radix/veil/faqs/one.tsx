@@ -1,6 +1,6 @@
 'use client'
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/bases/radix/ui/accordion'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/bases/radix/veil/ui/accordion'
 import { Card } from '@/registry/bases/radix/veil/ui/card'
 import Link from 'next/link'
 

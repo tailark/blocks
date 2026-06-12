@@ -1,7 +1,7 @@
 import { Gemini } from '@/registry/core/ui/svgs/gemini'
 import { Replit } from '@/registry/core/ui/svgs/replit'
 import { GooglePaLM } from '@/registry/core/ui/svgs/google-palm'
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import Link from 'next/link'
 import { Plus } from 'lucide-react'
 

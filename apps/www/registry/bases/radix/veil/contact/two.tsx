@@ -1,9 +1,9 @@
 import { Button } from '@/registry/bases/radix/veil/ui/button'
 import { Card } from '@/registry/bases/radix/veil/ui/card'
 import { Input } from '@/registry/bases/radix/veil/ui/input'
-import { Label } from '@/registry/bases/radix/ui/label'
+import { Label } from '@/registry/bases/radix/veil/ui/label'
 import { Textarea } from '@/registry/bases/radix/veil/ui/textarea'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/bases/radix/ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/bases/radix/veil/ui/select'
 
 export default function Contact() {
     return (

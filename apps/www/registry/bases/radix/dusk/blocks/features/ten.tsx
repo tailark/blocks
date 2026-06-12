@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@/registry/bases/radix/ui/card'
+import { Card, CardContent, CardHeader } from '@/registry/bases/radix/dusk/ui/card'
 import { cn } from '@/registry/core/lib/utils'
 import { Calendar, LucideIcon, MapIcon } from 'lucide-react'
 import Image from 'next/image'

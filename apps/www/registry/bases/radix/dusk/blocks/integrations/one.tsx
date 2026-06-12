@@ -1,5 +1,5 @@
-import { Button } from '@/registry/bases/radix/ui/button'
-import { Card } from '@/registry/bases/radix/ui/card'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
+import { Card } from '@/registry/bases/radix/dusk/ui/card'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import * as React from 'react'

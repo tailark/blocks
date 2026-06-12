@@ -1,4 +1,4 @@
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import Link from 'next/link'
 
 export default function CallToAction() {

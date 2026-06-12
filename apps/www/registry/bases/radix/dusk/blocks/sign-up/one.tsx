@@ -1,7 +1,7 @@
-import { LogoIcon } from '@/registry/bases/radix/ui/logo'
-import { Button } from '@/registry/bases/radix/ui/button'
-import { Input } from '@/registry/bases/radix/ui/input'
-import { Label } from '@/registry/bases/radix/ui/label'
+import { LogoIcon } from '@/registry/bases/radix/dusk/ui/logo'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
+import { Input } from '@/registry/bases/radix/dusk/ui/input'
+import { Label } from '@/registry/bases/radix/dusk/ui/label'
 import Link from 'next/link'
 
 export default function LoginPage() {

@@ -2,7 +2,7 @@ import { Logo } from '@/registry/bases/radix/veil/ui/logo'
 import { Button } from '@/registry/bases/radix/veil/ui/button'
 import { Card } from '@/registry/bases/radix/veil/ui/card'
 import { Input } from '@/registry/bases/radix/veil/ui/input'
-import { Label } from '@/registry/bases/radix/ui/label'
+import { Label } from '@/registry/bases/radix/veil/ui/label'
 import Link from 'next/link'
 
 export default function ForgotPassword() {

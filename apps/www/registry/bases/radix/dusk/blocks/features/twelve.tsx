@@ -1,5 +1,5 @@
 'use client'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/bases/radix/ui/accordion'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/bases/radix/dusk/ui/accordion'
 import { ChartBarIncreasingIcon, Database, Fingerprint, IdCard } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'

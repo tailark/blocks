@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Button } from '@/registry/bases/radix/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/bases/radix/ui/card'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/bases/radix/dusk/ui/card'
 import { Check } from 'lucide-react'
 
 export default function Pricing() {

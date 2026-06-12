@@ -7,9 +7,9 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-coverflow'
 import Link from 'next/link'
-import { Logo } from '@/registry/bases/radix/ui/logo'
+import { Logo } from '@/registry/bases/radix/dusk/ui/logo'
 import { ArrowRight, Menu, Rocket, X } from 'lucide-react'
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 
 const menuItems = [
     { name: 'Features', href: '#' },

@@ -1,9 +1,9 @@
-import { Card } from '@/registry/bases/radix/ui/card'
-import { Input } from '@/registry/bases/radix/ui/input'
-import { Textarea } from '@/registry/bases/radix/ui/textarea'
-import { Button } from '@/registry/bases/radix/ui/button'
-import { Label } from '@/registry/bases/radix/ui/label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/bases/radix/ui/select'
+import { Card } from '@/registry/bases/radix/dusk/ui/card'
+import { Input } from '@/registry/bases/radix/dusk/ui/input'
+import { Textarea } from '@/registry/bases/radix/dusk/ui/textarea'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
+import { Label } from '@/registry/bases/radix/dusk/ui/label'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/bases/radix/dusk/ui/select'
 import Link from 'next/link'
 
 export default function ContactSection() {

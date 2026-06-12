@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@/registry/bases/radix/ui/card'
+import { Card, CardContent, CardHeader } from '@/registry/bases/radix/dusk/ui/card'
 import { Settings2, Sparkles, Zap } from 'lucide-react'
 import { ReactNode } from 'react'
 

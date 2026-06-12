@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from '@/registry/bases/radix/ui/card'
+import { Card, CardContent, CardHeader } from '@/registry/bases/radix/dusk/ui/card'
 import { Globe } from 'lucide-react'
 import Image from 'next/image'
 import { Linear } from '@/registry/core/ui/svgs/linear'

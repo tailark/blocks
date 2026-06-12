@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@/registry/bases/radix/ui/button'
-import { Label } from '@/registry/bases/radix/ui/label'
-import { Input } from '@/registry/bases/radix/ui/input'
-import { Logo } from '@/registry/bases/radix/ui/logo'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
+import { Label } from '@/registry/bases/radix/dusk/ui/label'
+import { Input } from '@/registry/bases/radix/dusk/ui/input'
+import { Logo } from '@/registry/bases/radix/dusk/ui/logo'
 
 const enterpriseLinks = [
     { href: '#', label: 'About' },

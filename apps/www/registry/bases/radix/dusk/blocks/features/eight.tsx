@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@/registry/bases/radix/ui/card'
+import { Card, CardContent } from '@/registry/bases/radix/dusk/ui/card'
 import { Shield, Users } from 'lucide-react'
 
 export default function FeaturesSection() {

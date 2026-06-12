@@ -1,6 +1,6 @@
 'use client'
-import { Logo } from '@/registry/bases/radix/ui/logo'
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Logo } from '@/registry/bases/radix/dusk/ui/logo'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import { ArrowRight, Mail, Menu, SendHorizonal, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'

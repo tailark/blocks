@@ -1,9 +1,9 @@
-import { Button } from '@/registry/bases/radix/ui/button'
-import { Input } from '@/registry/bases/radix/ui/input'
-import { Label } from '@/registry/bases/radix/ui/label'
-import { Textarea } from '@/registry/bases/radix/ui/textarea'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/bases/radix/ui/select'
-import { Card } from '@/registry/bases/radix/ui/card'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
+import { Input } from '@/registry/bases/radix/dusk/ui/input'
+import { Label } from '@/registry/bases/radix/dusk/ui/label'
+import { Textarea } from '@/registry/bases/radix/dusk/ui/textarea'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/bases/radix/dusk/ui/select'
+import { Card } from '@/registry/bases/radix/dusk/ui/card'
 
 export default function ContactSection() {
     return (

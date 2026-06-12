@@ -7,6 +7,10 @@ const APP_ROOT = process.cwd()
 const REGISTRY_BASE = path.join(APP_ROOT, "registry/bases/radix")
 const REGISTRY_ROOT = path.join(APP_ROOT, "registry")
 const REGISTRY_IMPORT_PREFIX = "@/registry/bases/radix/veil/"
+const REGISTRY_MIST_BLOCK_IMPORT_PREFIX = "@/registry/bases/radix/mist/blocks/"
+const REGISTRY_MIST_UI_IMPORT_PREFIX = "@/registry/bases/radix/mist/ui/"
+const REGISTRY_DUSK_BLOCK_IMPORT_PREFIX = "@/registry/bases/radix/dusk/blocks/"
+const REGISTRY_DUSK_UI_IMPORT_PREFIX = "@/registry/bases/radix/dusk/ui/"
 const REGISTRY_CORE_IMPORT_PREFIX = "@/registry/core/"
 
 const packageNamespaces = [
@@ -67,6 +71,41 @@ function toRelativeImport(from: string, to: string): string {
     return relativePath.split(path.sep).join("/")
 }
 
+const numberWords: Record<string, string> = {
+    one: "1",
+    two: "2",
+    three: "3",
+    four: "4",
+    five: "5",
+    six: "6",
+    seven: "7",
+    eight: "8",
+    nine: "9",
+    ten: "10",
+    eleven: "11",
+    twelve: "12",
+}
+
+function blockSpecifierToComponentAlias(suffix: string): string {
+    const parts = suffix.split("/")
+    const [category, variant, component] = parts
+    const variantNumber = numberWords[variant] ?? variant
+
+    if (parts.length === 2) {
+        return `@/components/${category}-${variantNumber}`
+    }
+
+    return `@/components/${category}-${variantNumber}-${component}`
+}
+
+function uiSpecifierToComponentAlias(suffix: string): string {
+    if (suffix === "logo") {
+        return "@/components/logo"
+    }
+
+    return `@/components/ui/${suffix}`
+}
+
 function rewriteSpecifier(
     specifier: string,
     currentFilePath: string,
@@ -74,6 +113,22 @@ function rewriteSpecifier(
 ): string {
     if (specifier.startsWith("@tailark/")) {
         return rewritePackageSpecifier(specifier)
+    }
+
+    if (specifier.startsWith(REGISTRY_MIST_UI_IMPORT_PREFIX) || specifier.startsWith(REGISTRY_DUSK_UI_IMPORT_PREFIX)) {
+        const suffix = specifier.startsWith(REGISTRY_MIST_UI_IMPORT_PREFIX)
+            ? specifier.slice(REGISTRY_MIST_UI_IMPORT_PREFIX.length)
+            : specifier.slice(REGISTRY_DUSK_UI_IMPORT_PREFIX.length)
+
+        return uiSpecifierToComponentAlias(suffix)
+    }
+
+    if (specifier.startsWith(REGISTRY_MIST_BLOCK_IMPORT_PREFIX) || specifier.startsWith(REGISTRY_DUSK_BLOCK_IMPORT_PREFIX)) {
+        const suffix = specifier.startsWith(REGISTRY_MIST_BLOCK_IMPORT_PREFIX)
+            ? specifier.slice(REGISTRY_MIST_BLOCK_IMPORT_PREFIX.length)
+            : specifier.slice(REGISTRY_DUSK_BLOCK_IMPORT_PREFIX.length)
+
+        return blockSpecifierToComponentAlias(suffix)
     }
 
     if (!specifier.startsWith(REGISTRY_IMPORT_PREFIX)) {
@@ -109,11 +164,11 @@ function rewriteSpecifier(
     const suffix = specifier.slice(REGISTRY_IMPORT_PREFIX.length)
 
     if (suffix === "ui/logo") {
-        return "@/components/logo"
+        return uiSpecifierToComponentAlias("logo")
     }
 
     if (suffix.startsWith("ui/")) {
-        return `@/components/ui/${suffix.slice(3)}`
+        return uiSpecifierToComponentAlias(suffix.slice(3))
     }
 
     const targetBase = `veil/${suffix}`

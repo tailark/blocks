@@ -1,4 +1,4 @@
-import { Logo } from '@/registry/bases/radix/ui/logo'
+import { Logo } from '@/registry/bases/radix/dusk/ui/logo'
 import Link from 'next/link'
 
 const links = [

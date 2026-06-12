@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from '@/registry/bases/radix/ui/logo'
+import { Logo } from '@/registry/bases/radix/dusk/ui/logo'
 import { Menu, X } from 'lucide-react'
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import React from 'react'
 
 const menuItems = [

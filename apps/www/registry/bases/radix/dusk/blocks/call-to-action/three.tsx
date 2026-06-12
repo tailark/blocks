@@ -1,4 +1,4 @@
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import { Mail, SendHorizonal } from 'lucide-react'
 
 export default function CallToAction() {

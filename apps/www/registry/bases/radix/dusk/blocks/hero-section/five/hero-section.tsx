@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@/registry/bases/radix/ui/button'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
 import { HeroHeader } from '@/registry/bases/radix/dusk/blocks/hero-section/five/header'
 import { InfiniteSlider } from '@/registry/core/ui/motion-primitives/infinite-slider'
 import { ProgressiveBlur } from '@/registry/core/ui/motion-primitives/progressive-blur'

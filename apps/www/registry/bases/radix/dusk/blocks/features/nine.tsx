@@ -1,9 +1,9 @@
 'use client'
-import { Logo } from '@/registry/bases/radix/ui/logo'
+import { Logo } from '@/registry/bases/radix/dusk/ui/logo'
 import { Activity, Map as MapIcon, MessageCircle } from 'lucide-react'
 import DottedMap from 'dotted-map'
 import { Area, AreaChart, CartesianGrid } from 'recharts'
-import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/bases/radix/ui/chart'
+import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/registry/bases/radix/dusk/ui/chart'
 
 export default function FeaturesSection() {
     return (
