@@ -612,7 +612,7 @@ export const blocks: Registry["items"] = [
         "motion"
       ],
       registryDependencies: [
-        "@tailark/use-media",
+        "@tailark/core-use-media",
         "@tailark/veil-button",
         "@tailark/veil-logo",
       ]
@@ -697,7 +697,7 @@ export const blocks: Registry["items"] = [
         },
       ],
       registryDependencies: [
-        "@tailark/use-media",
+        "@tailark/core-use-media",
         "@tailark/veil-button",
         "@tailark/veil-logo",
       ],

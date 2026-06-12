@@ -9,17 +9,5 @@ export const registry: Registry = {
     items: [
         ...(radixRegistry.items ?? []),
         ...(baseRegistry.items ?? []),
-        {
-            name: "use-media",
-            type: "registry:hook",
-            title: "Use Media",
-            description: "Tailark Veil use media hook",
-            files: [
-                {
-                    path: "../../packages/core/src/hooks/use-media.ts",
-                    type: "registry:hook",
-                },
-            ],
-        },
     ],
 }

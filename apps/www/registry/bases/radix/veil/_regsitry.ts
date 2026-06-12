@@ -323,7 +323,7 @@ const blockItems: Registry["items"] = [
         title: "Hero Section 2 Header",
         description: "Tailark Veil hero-section variant 2 header component",
         path: "veil/hero-section/two/header.tsx",
-        dependencies: ["@tailark/use-media", "@tailark/veil-button", "@tailark/veil-logo"],
+        dependencies: ["@tailark/core-use-media", "@tailark/veil-button", "@tailark/veil-logo"],
         packageDependencies: ["motion"],
     }),
     block({
@@ -354,7 +354,7 @@ const blockItems: Registry["items"] = [
         title: "Hero Section 4 Header",
         description: "Tailark Veil hero-section variant 4 header component",
         path: "veil/hero-section/four/header.tsx",
-        dependencies: ["@tailark/use-media", "@tailark/veil-button", "@tailark/veil-logo"],
+        dependencies: ["@tailark/core-use-media", "@tailark/veil-button", "@tailark/veil-logo"],
         packageDependencies: ["motion"],
     }),
     block({

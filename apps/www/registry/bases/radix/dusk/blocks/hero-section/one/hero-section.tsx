@@ -4,7 +4,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react'
 import { Button } from '@/registry/bases/radix/ui/button'
 import Image from 'next/image'
 import { TextEffect } from '@/registry/core/ui/motion-primitives/text-effect'
-import { AnimatedGroup } from '@/registry/core/ui/motion-primitives/animated-group'
+import { AnimatedGroup, type AnimatedGroupProps } from '@/registry/core/ui/motion-primitives/animated-group'
 import { HeroHeader } from '@/registry/bases/radix/dusk/blocks/hero-section/one/header'
 import { Spotify } from '@/registry/core/ui/svgs/spotify'
 import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
@@ -15,7 +15,7 @@ import { Beacon } from '@/registry/core/ui/svgs/beacon'
 import { Claude } from '@/registry/core/ui/svgs/claude'
 import { VercelFull } from '@/registry/core/ui/svgs/vercel'
 
-const transitionVariants = {
+const transitionVariants: AnimatedGroupProps['variants'] = {
     item: {
         hidden: {
             opacity: 0,

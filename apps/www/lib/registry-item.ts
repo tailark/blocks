@@ -87,6 +87,10 @@ function rewriteSpecifier(
             return "@/lib/utils"
         }
 
+        if (suffix.startsWith("hooks/")) {
+            return `@/hooks/${suffix.slice("hooks/".length)}`
+        }
+
         if (suffix.startsWith("ui/svgs/")) {
             return `@/components/ui/svgs/${suffix.slice("ui/svgs/".length)}`
         }

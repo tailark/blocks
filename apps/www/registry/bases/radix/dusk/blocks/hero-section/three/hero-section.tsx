@@ -2,11 +2,11 @@ import React from 'react'
 import { Mail, SendHorizonal } from 'lucide-react'
 import { Button } from '@/registry/bases/radix/ui/button'
 import { TextEffect } from '@/registry/core/ui/motion-primitives/text-effect'
-import { AnimatedGroup } from '@/registry/core/ui/motion-primitives/animated-group'
+import { AnimatedGroup, type AnimatedGroupProps } from '@/registry/core/ui/motion-primitives/animated-group'
 import { HeroHeader } from '@/registry/bases/radix/dusk/blocks/hero-section/three/header'
 import { LogoCloud } from '@/registry/bases/radix/dusk/blocks/hero-section/three/logo-cloud'
 
-const transitionVariants = {
+const transitionVariants: AnimatedGroupProps['variants'] = {
     item: {
         hidden: {
             opacity: 0,
