@@ -15,7 +15,7 @@ export const magicUi: Registry["items"] = magicUiComponents.map((name) => ({
         {
             path: `core/ui/magicui/${name}.tsx`,
             type: "registry:component" as const,
-            target: `@components/magic-ui/${name}.tsx`,
+            target: `@ui/magic-ui/${name}.tsx`,
         },
     ],
     dependencies: ["motion"],

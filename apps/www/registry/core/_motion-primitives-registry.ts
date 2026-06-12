@@ -23,7 +23,7 @@ export const motionPrimitivesRegistry: Registry["items"] = motionPrimitives.map(
         {
             path: `core/ui/motion-primitives/${name}.tsx`,
             type: "registry:component" as const,
-            target: `@components/motion-primitives/${name}.tsx`,
+            target: `@ui/motion-primitives/${name}.tsx`,
         },
     ],
     dependencies: ["motion"],
