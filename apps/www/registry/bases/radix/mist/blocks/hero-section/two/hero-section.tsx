@@ -10,7 +10,7 @@ export default function HeroSection() {
         <>
             <HeroHeader />
             <main>
-                <section className="before:bg-muted border-e-foreground relative overflow-hidden before:absolute before:inset-1 before:h-[calc(100%-8rem)] before:rounded-2xl sm:before:inset-2 md:before:rounded-[2rem] lg:before:h-[calc(100%-14rem)]">
+                <section className="before:bg-muted border-e-foreground md:before:rounded-4xl relative overflow-hidden before:absolute before:inset-1 before:h-[calc(100%-8rem)] before:rounded-2xl sm:before:inset-2 lg:before:h-[calc(100%-14rem)]">
                     <div className="py-20 md:py-36">
                         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
                             <div>
