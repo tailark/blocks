@@ -2,9 +2,9 @@ import { Button } from '@/registry/bases/radix/mist/ui/button'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 import { Card } from '@/registry/bases/radix/mist/ui/card'
-import { Spotify } from '@/registry/bases/radix/mist/ui/svgs/spotify'
-import { SupabaseFull } from '@/registry/bases/radix/mist/ui/svgs/supabase'
-import { VercelFull } from '@/registry/bases/radix/mist/ui/svgs/vercel'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
 
 export default function Pricing() {
     return (

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Button } from '@/registry/bases/base/veil/ui/button'
 import { Card } from '@/registry/bases/base/veil/ui/card'
 import { ArrowRight } from 'lucide-react'
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 const tiers = [
     {

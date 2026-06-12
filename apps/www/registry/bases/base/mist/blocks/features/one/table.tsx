@@ -1,4 +1,4 @@
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 import Image from 'next/image'
 
 const MESCHAC_AVATAR = 'https://avatars.githubusercontent.com/u/47919550?v=4'

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 import { Button } from '@/registry/bases/radix/veil/ui/button'
 import { Monitor, Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'

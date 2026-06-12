@@ -4,7 +4,7 @@ import { Logo } from '@/registry/bases/base/veil/ui/logo'
 import { ChevronRight, Menu, X } from 'lucide-react'
 import { Button } from '@/registry/bases/base/veil/ui/button'
 import React from 'react'
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import { useMedia } from '@tailark/core/hooks/use-media'
 

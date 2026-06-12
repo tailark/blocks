@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { PreviewCard as HoverCardPrimitive } from '@base-ui/react/preview-card'
 
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 type HoverCardProps = HoverCardPrimitive.Root.Props & {
     openDelay?: number

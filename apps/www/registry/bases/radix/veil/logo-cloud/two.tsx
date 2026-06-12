@@ -3,13 +3,13 @@
 import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 
-import { Beacon } from '@/registry/bases/radix/veil/ui/svgs/beacon'
-import { Bolt } from '@/registry/bases/radix/veil/ui/svgs/bolt'
-import { Cisco } from '@/registry/bases/radix/veil/ui/svgs/cisco'
-import { Hulu } from '@/registry/bases/radix/veil/ui/svgs/hulu'
-import { SupabaseFull } from '@/registry/bases/radix/veil/ui/svgs/supabase'
-import { VercelFull } from '@/registry/bases/radix/veil/ui/svgs/vercel'
-import { Spotify } from '@/registry/bases/radix/veil/ui/svgs/spotify'
+import { Beacon } from '@/registry/core/ui/svgs/beacon'
+import { Bolt } from '@/registry/core/ui/svgs/bolt'
+import { Cisco } from '@/registry/core/ui/svgs/cisco'
+import { Hulu } from '@/registry/core/ui/svgs/hulu'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
 
 const aiLogos: React.ReactNode[] = [
     <Bolt

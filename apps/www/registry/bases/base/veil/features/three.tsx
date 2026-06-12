@@ -2,15 +2,15 @@
 import { useState } from 'react'
 
 import { Cloud, Cpu, Shield, ChevronRight } from 'lucide-react'
-import { Vercel } from '@/registry/bases/base/veil/ui/svgs/vercel'
-import { Supabase } from '@/registry/bases/base/veil/ui/svgs/supabase'
-import { Linear } from '@/registry/bases/base/veil/ui/svgs/linear'
-import { Slack } from '@/registry/bases/base/veil/ui/svgs/slack'
-import { Firebase } from '@/registry/bases/base/veil/ui/svgs/firebase'
-import { ClerkIconDark as Clerk } from '@/registry/bases/base/veil/ui/svgs/clerk'
+import { Vercel } from '@/registry/core/ui/svgs/vercel'
+import { Supabase } from '@/registry/core/ui/svgs/supabase'
+import { Linear } from '@/registry/core/ui/svgs/linear'
+import { Slack } from '@/registry/core/ui/svgs/slack'
+import { Firebase } from '@/registry/core/ui/svgs/firebase'
+import { ClerkIconDark as Clerk } from '@/registry/core/ui/svgs/clerk'
 import { Button } from '@/registry/bases/base/veil/ui/button'
 import Link from 'next/link'
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 type Feature = 'seamless-integrations' | 'real-time-sync' | 'developer-first' | 'enterprise-ready'
 

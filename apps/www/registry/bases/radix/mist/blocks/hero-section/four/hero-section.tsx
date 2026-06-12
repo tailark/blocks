@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { Button } from '@/registry/bases/radix/mist/ui/button'
 import { HeroHeader } from '@/registry/bases/radix/mist/blocks/hero-section/four/header'
 import Image from 'next/image'
-import { Spotify } from '@/registry/bases/radix/mist/ui/svgs/spotify'
-import { VercelFull } from '@/registry/bases/radix/mist/ui/svgs/vercel'
-import { SupabaseFull } from '@/registry/bases/radix/mist/ui/svgs/supabase'
-import { Hulu } from '@/registry/bases/radix/mist/ui/svgs/hulu'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
+import { Hulu } from '@/registry/core/ui/svgs/hulu'
 
 export default function HeroSection() {
     return (

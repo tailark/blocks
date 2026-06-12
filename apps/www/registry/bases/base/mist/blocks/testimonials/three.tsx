@@ -1,4 +1,4 @@
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 import { Star } from 'lucide-react'
 import Image from 'next/image'
 

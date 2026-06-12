@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { Card } from '@/registry/bases/base/mist/ui/card'
-import { Gemini } from '@/registry/bases/base/mist/ui/svgs/gemini'
-import { Replit } from '@/registry/bases/base/mist/ui/svgs/replit'
-import { MagicUI } from '@/registry/bases/base/mist/ui/svgs/magic-ui'
-import { VSCodium } from '@/registry/bases/base/mist/ui/svgs/vs-codium'
-import { MediaWiki } from '@/registry/bases/base/mist/ui/svgs/media-wiki'
-import { GooglePaLM } from '@/registry/bases/base/mist/ui/svgs/google-palm'
+import { Gemini } from '@/registry/core/ui/svgs/gemini'
+import { Replit } from '@/registry/core/ui/svgs/replit'
+import { MagicUI } from '@/registry/core/ui/svgs/magic-ui'
+import { VSCodium } from '@/registry/core/ui/svgs/vs-codium'
+import { MediaWiki } from '@/registry/core/ui/svgs/media-wiki'
+import { GooglePaLM } from '@/registry/core/ui/svgs/google-palm'
 
 export default function Integrations() {
     return (

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 import { Button } from '@/registry/bases/base/veil/ui/button'
 import { Twitter, Linkedin, Youtube } from 'lucide-react'
 import Link from 'next/link'

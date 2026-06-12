@@ -4,9 +4,9 @@ import { Button } from '@/registry/bases/radix/mist/ui/button'
 import { HeroHeader } from '@/registry/bases/radix/mist/blocks/hero-section/one/header'
 import { ChevronRight, CirclePlay } from 'lucide-react'
 import Image from 'next/image'
-import { VercelFull } from '@/registry/bases/radix/mist/ui/svgs/vercel'
-import { Spotify } from '@/registry/bases/radix/mist/ui/svgs/spotify'
-import { SupabaseFull } from '@/registry/bases/radix/mist/ui/svgs/supabase'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
 
 export default function HeroSection() {
     return (

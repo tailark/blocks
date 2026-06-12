@@ -1,0 +1,63 @@
+import { type Registry } from "shadcn/schema"
+
+const svgComponents = [
+    "beacon",
+    "bolt",
+    "cisco",
+    "claude",
+    "clerk",
+    "figma",
+    "firebase",
+    "gemini",
+    "google-palm",
+    "hulu",
+    "linear",
+    "magic-ui",
+    "media-wiki",
+    "neon",
+    "replit",
+    "slack",
+    "spotify",
+    "supabase",
+    "twilio",
+    "vercel",
+    "vs-codium",
+] as const
+
+const titles: Record<(typeof svgComponents)[number], string> = {
+    beacon: "Beacon logo",
+    bolt: "Bolt logo",
+    cisco: "Cisco logo",
+    claude: "Claude logo",
+    clerk: "Clerk logo",
+    figma: "Figma logo",
+    firebase: "Firebase logo",
+    gemini: "Gemini logo",
+    "google-palm": "Google PaLM logo",
+    hulu: "Hulu logo",
+    linear: "Linear logo",
+    "magic-ui": "Magic UI logo",
+    "media-wiki": "MediaWiki logo",
+    neon: "Neon logo",
+    replit: "Replit logo",
+    slack: "Slack logo",
+    spotify: "Spotify logo",
+    supabase: "Supabase logo",
+    twilio: "Twilio logo",
+    vercel: "Vercel logo",
+    "vs-codium": "VSCodium logo",
+}
+
+export const svgs: Registry["items"] = svgComponents.map((name) => ({
+    name: `core-${name}`,
+    title: titles[name],
+    description: `Tailark core ${name} svg logo`,
+    type: "registry:ui" as const,
+    files: [
+        {
+            path: `core/ui/svgs/${name}.tsx`,
+            type: "registry:ui" as const,
+            target: `@ui/svgs/${name}.tsx`,
+        },
+    ],
+}))

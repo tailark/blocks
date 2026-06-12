@@ -1,9 +1,9 @@
 import { Button } from '@/registry/bases/base/mist/ui/button'
 import { Check } from 'lucide-react'
 import { Card } from '@/registry/bases/base/mist/ui/card'
-import { Spotify } from '@/registry/bases/base/mist/ui/svgs/spotify'
-import { SupabaseFull } from '@/registry/bases/base/mist/ui/svgs/supabase'
-import { VercelFull } from '@/registry/bases/base/mist/ui/svgs/vercel'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
 
 export default function Pricing() {
     return (

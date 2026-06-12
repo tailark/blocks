@@ -1,5 +1,5 @@
 import { Input as InputPrimitive } from '@base-ui/react/input'
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 function Input({ className, type, ...props }: InputPrimitive.Props) {
     return (

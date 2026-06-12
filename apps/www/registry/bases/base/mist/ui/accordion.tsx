@@ -2,7 +2,7 @@
 
 import { Accordion as AccordionPrimitive } from '@base-ui/react/accordion'
 import { ChevronDownIcon, ChevronUpIcon } from 'lucide-react'
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 type AccordionProps = AccordionPrimitive.Root.Props & {
     type?: 'single' | 'multiple'

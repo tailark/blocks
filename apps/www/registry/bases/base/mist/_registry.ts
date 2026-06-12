@@ -4,6 +4,7 @@ import { components } from "./_components-registry"
 type RegistryItem = NonNullable<Registry["items"]>[number]
 
 const ui = (name: string) => `@tailark/mist-${name}`
+const core = (name: string) => `@tailark/core-${name}`
 
 const numberWords: Record<string, string> = {
     one: "1",
@@ -86,15 +87,15 @@ function component({
 }
 
 const integrationSvgs = [
-    ui("gemini"),
-    ui("google-palm"),
-    ui("magic-ui"),
-    ui("media-wiki"),
-    ui("replit"),
-    ui("vs-codium"),
+    core("gemini"),
+    core("google-palm"),
+    core("magic-ui"),
+    core("media-wiki"),
+    core("replit"),
+    core("vs-codium"),
 ]
 
-const logoCloudSvgs = [ui("hulu"), ui("spotify"), ui("supabase"), ui("vercel")]
+const logoCloudSvgs = [core("hulu"), core("spotify"), core("supabase"), core("vercel")]
 
 const blocksOnly: Registry["items"] = [
     block({ category: "call-to-action", variant: "one", path: "mist/blocks/call-to-action/one.tsx", dependencies: [ui("button")] }),
@@ -152,7 +153,7 @@ const blocksOnly: Registry["items"] = [
         category: "hero-section",
         variant: "one",
         path: "mist/blocks/hero-section/one/hero-section.tsx",
-        dependencies: [ui("hero-section-1-header"), ui("button"), ui("spotify"), ui("supabase"), ui("vercel")],
+        dependencies: [ui("hero-section-1-header"), ui("button"), core("spotify"), core("supabase"), core("vercel")],
     }),
     component({
         name: "hero-section-2-header",
@@ -201,7 +202,7 @@ const blocksOnly: Registry["items"] = [
     block({ category: "login", variant: "one", path: "mist/blocks/login/one.tsx", dependencies: [ui("button"), ui("input"), ui("label"), ui("logo")] }),
     block({ category: "logo-cloud", variant: "one", path: "mist/blocks/logo-cloud/one.tsx", dependencies: logoCloudSvgs }),
     block({ category: "logo-cloud", variant: "two", path: "mist/blocks/logo-cloud/two.tsx", dependencies: logoCloudSvgs }),
-    block({ category: "pricing", variant: "one", path: "mist/blocks/pricing/one.tsx", dependencies: [ui("button"), ui("card"), ui("spotify"), ui("supabase"), ui("vercel")] }),
+    block({ category: "pricing", variant: "one", path: "mist/blocks/pricing/one.tsx", dependencies: [ui("button"), ui("card"), core("spotify"), core("supabase"), core("vercel")] }),
     block({ category: "pricing", variant: "two", path: "mist/blocks/pricing/two.tsx", dependencies: [ui("button"), ui("card")] }),
     block({ category: "sign-up", variant: "one", path: "mist/blocks/sign-up/one.tsx", dependencies: [ui("button"), ui("input"), ui("label"), ui("logo")] }),
     block({ category: "stats", variant: "one", path: "mist/blocks/stats/one.tsx", dependencies: [ui("card")] }),

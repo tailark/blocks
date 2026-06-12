@@ -1,5 +1,5 @@
 'use client'
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 import { ToggleGroup, ToggleGroupItem } from '@tailark/core/ui/toggle-group'
 import { Bold, Calendar1, Ellipsis, Italic, Strikethrough, Underline } from 'lucide-react'
 import { Button } from '@/registry/bases/base/mist/ui/button'

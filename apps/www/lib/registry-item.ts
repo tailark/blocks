@@ -5,7 +5,9 @@ import { registry } from "@/registry/registry"
 
 const APP_ROOT = process.cwd()
 const REGISTRY_BASE = path.join(APP_ROOT, "registry/bases/radix")
+const REGISTRY_ROOT = path.join(APP_ROOT, "registry")
 const REGISTRY_IMPORT_PREFIX = "@/registry/bases/radix/veil/"
+const REGISTRY_CORE_IMPORT_PREFIX = "@/registry/core/"
 
 const packageNamespaces = [
     "@tailark/core",
@@ -75,6 +77,28 @@ function rewriteSpecifier(
     }
 
     if (!specifier.startsWith(REGISTRY_IMPORT_PREFIX)) {
+        if (!specifier.startsWith(REGISTRY_CORE_IMPORT_PREFIX)) {
+            return specifier
+        }
+
+        const suffix = specifier.slice(REGISTRY_CORE_IMPORT_PREFIX.length)
+
+        if (suffix === "lib/utils") {
+            return "@/lib/utils"
+        }
+
+        if (suffix.startsWith("ui/svgs/")) {
+            return `@/components/ui/svgs/${suffix.slice("ui/svgs/".length)}`
+        }
+
+        if (suffix.startsWith("ui/motion-primitives/")) {
+            return `@/components/motion-primitives/${suffix.slice("ui/motion-primitives/".length)}`
+        }
+
+        if (suffix.startsWith("ui/magicui/")) {
+            return `@/components/magic-ui/${suffix.slice("ui/magicui/".length)}`
+        }
+
         return specifier
     }
 
@@ -128,6 +152,8 @@ async function resolveRegistryFilePath(filePath: string): Promise<string> {
     const candidates = [
         filePath.startsWith("../../")
             ? path.resolve(APP_ROOT, filePath)
+            : filePath.startsWith("core/")
+              ? path.join(REGISTRY_ROOT, filePath)
             : path.join(REGISTRY_BASE, filePath),
     ]
 

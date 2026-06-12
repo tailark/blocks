@@ -1,10 +1,10 @@
 import { Button } from '@/registry/bases/radix/mist/ui/button'
-import { Gemini } from '@/registry/bases/radix/mist/ui/svgs/gemini'
-import { GooglePaLM } from '@/registry/bases/radix/mist/ui/svgs/google-palm'
-import { Replit } from '@/registry/bases/radix/mist/ui/svgs/replit'
-import { MediaWiki } from '@/registry/bases/radix/mist/ui/svgs/media-wiki'
-import { MagicUI } from '@/registry/bases/radix/mist/ui/svgs/magic-ui'
-import { VSCodium } from '@/registry/bases/radix/mist/ui/svgs/vs-codium'
+import { Gemini } from '@/registry/core/ui/svgs/gemini'
+import { GooglePaLM } from '@/registry/core/ui/svgs/google-palm'
+import { Replit } from '@/registry/core/ui/svgs/replit'
+import { MediaWiki } from '@/registry/core/ui/svgs/media-wiki'
+import { MagicUI } from '@/registry/core/ui/svgs/magic-ui'
+import { VSCodium } from '@/registry/core/ui/svgs/vs-codium'
 import Link from 'next/link'
 
 export default function Integrations() {

@@ -8,15 +8,15 @@ import { Card } from '@/registry/bases/radix/veil/ui/card'
 
 import { HeroHeader } from '@/registry/bases/radix/veil/hero-section/one/header'
 
-import { Supabase } from '@/registry/bases/radix/veil/ui/svgs/supabase'
-import { Slack } from '@/registry/bases/radix/veil/ui/svgs/slack'
-import { Twilio } from '@/registry/bases/radix/veil/ui/svgs/twilio'
-import { Linear } from '@/registry/bases/radix/veil/ui/svgs/linear'
-import { Figma } from '@/registry/bases/radix/veil/ui/svgs/figma'
-import { Vercel } from '@/registry/bases/radix/veil/ui/svgs/vercel'
-import { Firebase } from '@/registry/bases/radix/veil/ui/svgs/firebase'
-import { ClerkIconLight as Clerk } from '@/registry/bases/radix/veil/ui/svgs/clerk'
-import { Claude } from '@/registry/bases/radix/veil/ui/svgs/claude'
+import { Supabase } from '@/registry/core/ui/svgs/supabase'
+import { Slack } from '@/registry/core/ui/svgs/slack'
+import { Twilio } from '@/registry/core/ui/svgs/twilio'
+import { Linear } from '@/registry/core/ui/svgs/linear'
+import { Figma } from '@/registry/core/ui/svgs/figma'
+import { Vercel } from '@/registry/core/ui/svgs/vercel'
+import { Firebase } from '@/registry/core/ui/svgs/firebase'
+import { ClerkIconLight as Clerk } from '@/registry/core/ui/svgs/clerk'
+import { Claude } from '@/registry/core/ui/svgs/claude'
 
 export default function HeroSection() {
     return (

@@ -4,7 +4,7 @@ import { Logo } from '@/registry/bases/base/mist/ui/logo'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/registry/bases/base/mist/ui/button'
 import React from 'react'
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 const menuItems = [
     { name: 'Features', href: '#link' },

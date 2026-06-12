@@ -190,7 +190,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil features variant 1 block",
         path: "veil/features/one.tsx",
         target: "@components/features-1.tsx",
-        dependencies: ["@tailark/veil-card", "@tailark/veil-clerk", "@tailark/veil-firebase", "@tailark/veil-linear", "@tailark/veil-slack", "@tailark/veil-supabase", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/veil-card", "@tailark/core-clerk", "@tailark/core-firebase", "@tailark/core-linear", "@tailark/core-slack", "@tailark/core-supabase", "@tailark/core-vercel"],
     }),
     block({
         name: "features-2",
@@ -198,7 +198,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil features variant 2 block",
         path: "veil/features/two.tsx",
         target: "@components/features-2.tsx",
-        dependencies: ["@tailark/veil-card", "@tailark/veil-clerk", "@tailark/veil-firebase", "@tailark/veil-linear", "@tailark/veil-slack", "@tailark/veil-supabase", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/veil-card", "@tailark/core-clerk", "@tailark/core-firebase", "@tailark/core-linear", "@tailark/core-slack", "@tailark/core-supabase", "@tailark/core-vercel"],
     }),
     block({
         name: "features-3",
@@ -206,7 +206,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil features variant 3 block",
         path: "veil/features/three.tsx",
         target: "@components/features-3.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-clerk", "@tailark/veil-firebase", "@tailark/veil-linear", "@tailark/veil-slack", "@tailark/veil-supabase", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/veil-button", "@tailark/core-clerk", "@tailark/core-firebase", "@tailark/core-linear", "@tailark/core-slack", "@tailark/core-supabase", "@tailark/core-vercel"],
     }),
     block({
         name: "footer-1",
@@ -316,7 +316,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil hero-section variant 1 block",
         path: "veil/hero-section/one/hero-section.tsx",
         target: "@components/hero-section-1.tsx",
-        dependencies: ["@tailark/veil-hero-section-1-header", "@tailark/veil-button", "@tailark/veil-card", "@tailark/veil-claude", "@tailark/veil-clerk", "@tailark/veil-figma", "@tailark/veil-firebase", "@tailark/veil-linear", "@tailark/veil-slack", "@tailark/veil-supabase", "@tailark/veil-twilio", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/veil-hero-section-1-header", "@tailark/veil-button", "@tailark/veil-card", "@tailark/core-claude", "@tailark/core-clerk", "@tailark/core-figma", "@tailark/core-firebase", "@tailark/core-linear", "@tailark/core-slack", "@tailark/core-supabase", "@tailark/core-twilio", "@tailark/core-vercel"],
     }),
     component({
         name: "hero-section-2-header",
@@ -332,7 +332,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil hero-section variant 2 block",
         path: "veil/hero-section/two/hero-section.tsx",
         target: "@components/hero-section-2.tsx",
-        dependencies: ["@tailark/veil-hero-section-2-header", "@tailark/veil-card", "@tailark/veil-claude", "@tailark/veil-clerk", "@tailark/veil-figma", "@tailark/veil-firebase", "@tailark/veil-linear", "@tailark/veil-slack", "@tailark/veil-supabase", "@tailark/veil-twilio", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/veil-hero-section-2-header", "@tailark/veil-card", "@tailark/core-claude", "@tailark/core-clerk", "@tailark/core-figma", "@tailark/core-firebase", "@tailark/core-linear", "@tailark/core-slack", "@tailark/core-supabase", "@tailark/core-twilio", "@tailark/core-vercel"],
     }),
     component({
         name: "hero-section-3-header",
@@ -347,7 +347,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil hero-section variant 3 block",
         path: "veil/hero-section/three/hero-section.tsx",
         target: "@components/hero-section-3.tsx",
-        dependencies: ["@tailark/veil-hero-section-3-header", "@tailark/veil-card", "@tailark/veil-claude", "@tailark/veil-clerk", "@tailark/veil-figma", "@tailark/veil-firebase", "@tailark/veil-linear", "@tailark/veil-slack", "@tailark/veil-supabase", "@tailark/veil-twilio", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/veil-hero-section-3-header", "@tailark/veil-card", "@tailark/core-claude", "@tailark/core-clerk", "@tailark/core-figma", "@tailark/core-firebase", "@tailark/core-linear", "@tailark/core-slack", "@tailark/core-supabase", "@tailark/core-twilio", "@tailark/core-vercel"],
     }),
     component({
         name: "hero-section-4-header",
@@ -379,7 +379,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil integrations variant 1 block",
         path: "veil/integrations/one.tsx",
         target: "@components/integrations-1.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-clerk", "@tailark/veil-firebase", "@tailark/veil-linear", "@tailark/veil-logo", "@tailark/veil-slack", "@tailark/veil-supabase", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/veil-button", "@tailark/core-clerk", "@tailark/core-firebase", "@tailark/core-linear", "@tailark/veil-logo", "@tailark/core-slack", "@tailark/core-supabase", "@tailark/core-vercel"],
     }),
     block({
         name: "integrations-2",
@@ -387,7 +387,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil integrations variant 2 block",
         path: "veil/integrations/two.tsx",
         target: "@components/integrations-2.tsx",
-        dependencies: ["@tailark/veil-button", "@tailark/veil-clerk", "@tailark/veil-firebase", "@tailark/veil-linear", "@tailark/veil-logo", "@tailark/veil-slack", "@tailark/veil-supabase", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/veil-button", "@tailark/core-clerk", "@tailark/core-firebase", "@tailark/core-linear", "@tailark/veil-logo", "@tailark/core-slack", "@tailark/core-supabase", "@tailark/core-vercel"],
     }),
     block({
         name: "login-1",
@@ -419,7 +419,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil logo-cloud variant 1 block",
         path: "veil/logo-cloud/one.tsx",
         target: "@components/logo-cloud-1.tsx",
-        dependencies: ["@tailark/veil-beacon", "@tailark/veil-bolt", "@tailark/veil-cisco", "@tailark/veil-hulu", "@tailark/veil-linear", "@tailark/veil-spotify", "@tailark/veil-supabase", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/core-beacon", "@tailark/core-bolt", "@tailark/core-cisco", "@tailark/core-hulu", "@tailark/core-linear", "@tailark/core-spotify", "@tailark/core-supabase", "@tailark/core-vercel"],
     }),
     block({
         name: "logo-cloud-2",
@@ -427,7 +427,7 @@ const blockItems: Registry["items"] = [
         description: "Tailark Veil logo-cloud variant 2 block",
         path: "veil/logo-cloud/two.tsx",
         target: "@components/logo-cloud-2.tsx",
-        dependencies: ["@tailark/veil-beacon", "@tailark/veil-bolt", "@tailark/veil-cisco", "@tailark/veil-hulu", "@tailark/veil-spotify", "@tailark/veil-supabase", "@tailark/veil-vercel"],
+        dependencies: ["@tailark/core-beacon", "@tailark/core-bolt", "@tailark/core-cisco", "@tailark/core-hulu", "@tailark/core-spotify", "@tailark/core-supabase", "@tailark/core-vercel"],
         packageDependencies: ["motion"],
     }),
     block({

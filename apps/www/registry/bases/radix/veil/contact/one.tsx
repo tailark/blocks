@@ -1,7 +1,7 @@
 import { Button } from '@/registry/bases/radix/veil/ui/button'
 import { Card } from '@/registry/bases/radix/veil/ui/card'
 import { Input } from '@/registry/bases/radix/veil/ui/input'
-import { Label } from '@tailark/core/ui/label'
+import { Label } from '@/registry/bases/radix/ui/label'
 import { Textarea } from '@/registry/bases/radix/veil/ui/textarea'
 import Link from 'next/link'
 

@@ -1,6 +1,6 @@
 'use client'
-import { cn } from '@tailark/core/lib/utils'
-import { ToggleGroup, ToggleGroupItem } from '@tailark/core/ui/toggle-group'
+import { cn } from '@/registry/core/lib/utils'
+import { ToggleGroup, ToggleGroupItem } from '@/registry/bases/radix/ui/toggle-group'
 import { Bold, Calendar1, Ellipsis, Italic, Strikethrough, Underline } from 'lucide-react'
 import { Button } from '@/registry/bases/radix/mist/ui/button'
 import { Card } from '@/registry/bases/radix/mist/ui/card'

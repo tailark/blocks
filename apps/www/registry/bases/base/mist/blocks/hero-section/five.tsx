@@ -3,11 +3,11 @@ import Link from 'next/link'
 import { Button } from '@/registry/bases/base/mist/ui/button'
 import Image from 'next/image'
 import { BookOpen } from 'lucide-react'
-import { cn } from '@tailark/core/lib/utils'
-import { Spotify } from '@/registry/bases/base/mist/ui/svgs/spotify'
-import { VercelFull } from '@/registry/bases/base/mist/ui/svgs/vercel'
-import { SupabaseFull } from '@/registry/bases/base/mist/ui/svgs/supabase'
-import { Hulu } from '@/registry/bases/base/mist/ui/svgs/hulu'
+import { cn } from '@/registry/core/lib/utils'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
+import { Hulu } from '@/registry/core/ui/svgs/hulu'
 
 export default function HeroSection() {
     return (

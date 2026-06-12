@@ -2,7 +2,7 @@
 
 import { Field as FieldPrimitive } from '@base-ui/react/field'
 
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 function Label({ className, ...props }: FieldPrimitive.Label.Props) {
     return (

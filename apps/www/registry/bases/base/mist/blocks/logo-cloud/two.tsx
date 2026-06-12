@@ -1,7 +1,7 @@
-import { Spotify } from '@/registry/bases/base/mist/ui/svgs/spotify'
-import { VercelFull } from '@/registry/bases/base/mist/ui/svgs/vercel'
-import { SupabaseFull } from '@/registry/bases/base/mist/ui/svgs/supabase'
-import { Hulu } from '@/registry/bases/base/mist/ui/svgs/hulu'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
+import { Hulu } from '@/registry/core/ui/svgs/hulu'
 
 export default function LogoCloud() {
     return (

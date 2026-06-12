@@ -1,11 +1,11 @@
 import { Card } from '@/registry/bases/base/veil/ui/card'
 import { Shield } from 'lucide-react'
-import { Vercel } from '@/registry/bases/base/veil/ui/svgs/vercel'
-import { Supabase } from '@/registry/bases/base/veil/ui/svgs/supabase'
-import { Linear } from '@/registry/bases/base/veil/ui/svgs/linear'
-import { Slack } from '@/registry/bases/base/veil/ui/svgs/slack'
-import { Firebase } from '@/registry/bases/base/veil/ui/svgs/firebase'
-import { ClerkIconDark as Clerk } from '@/registry/bases/base/veil/ui/svgs/clerk'
+import { Vercel } from '@/registry/core/ui/svgs/vercel'
+import { Supabase } from '@/registry/core/ui/svgs/supabase'
+import { Linear } from '@/registry/core/ui/svgs/linear'
+import { Slack } from '@/registry/core/ui/svgs/slack'
+import { Firebase } from '@/registry/core/ui/svgs/firebase'
+import { ClerkIconDark as Clerk } from '@/registry/core/ui/svgs/clerk'
 
 export default function Features() {
     return (

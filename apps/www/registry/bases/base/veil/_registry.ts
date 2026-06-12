@@ -294,12 +294,12 @@ export const blocks: Registry["items"] = [
       ],
       registryDependencies: [
         "@tailark/veil-card",
-        "@tailark/veil-clerk",
-        "@tailark/veil-firebase",
-        "@tailark/veil-linear",
-        "@tailark/veil-slack",
-        "@tailark/veil-supabase",
-        "@tailark/veil-vercel"
+        "@tailark/core-clerk",
+        "@tailark/core-firebase",
+        "@tailark/core-linear",
+        "@tailark/core-slack",
+        "@tailark/core-supabase",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -316,12 +316,12 @@ export const blocks: Registry["items"] = [
       ],
       registryDependencies: [
         "@tailark/veil-card",
-        "@tailark/veil-clerk",
-        "@tailark/veil-firebase",
-        "@tailark/veil-linear",
-        "@tailark/veil-slack",
-        "@tailark/veil-supabase",
-        "@tailark/veil-vercel"
+        "@tailark/core-clerk",
+        "@tailark/core-firebase",
+        "@tailark/core-linear",
+        "@tailark/core-slack",
+        "@tailark/core-supabase",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -338,12 +338,12 @@ export const blocks: Registry["items"] = [
       ],
       registryDependencies: [
         "@tailark/veil-button",
-        "@tailark/veil-clerk",
-        "@tailark/veil-firebase",
-        "@tailark/veil-linear",
-        "@tailark/veil-slack",
-        "@tailark/veil-supabase",
-        "@tailark/veil-vercel"
+        "@tailark/core-clerk",
+        "@tailark/core-firebase",
+        "@tailark/core-linear",
+        "@tailark/core-slack",
+        "@tailark/core-supabase",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -586,15 +586,15 @@ export const blocks: Registry["items"] = [
         "@tailark/veil-hero-section-1-header",
         "@tailark/veil-button",
         "@tailark/veil-card",
-        "@tailark/veil-claude",
-        "@tailark/veil-clerk",
-        "@tailark/veil-figma",
-        "@tailark/veil-firebase",
-        "@tailark/veil-linear",
-        "@tailark/veil-slack",
-        "@tailark/veil-supabase",
-        "@tailark/veil-twilio",
-        "@tailark/veil-vercel"
+        "@tailark/core-claude",
+        "@tailark/core-clerk",
+        "@tailark/core-figma",
+        "@tailark/core-firebase",
+        "@tailark/core-linear",
+        "@tailark/core-slack",
+        "@tailark/core-supabase",
+        "@tailark/core-twilio",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -632,15 +632,15 @@ export const blocks: Registry["items"] = [
       registryDependencies: [
         "@tailark/veil-hero-section-2-header",
         "@tailark/veil-card",
-        "@tailark/veil-claude",
-        "@tailark/veil-clerk",
-        "@tailark/veil-figma",
-        "@tailark/veil-firebase",
-        "@tailark/veil-linear",
-        "@tailark/veil-slack",
-        "@tailark/veil-supabase",
-        "@tailark/veil-twilio",
-        "@tailark/veil-vercel"
+        "@tailark/core-claude",
+        "@tailark/core-clerk",
+        "@tailark/core-figma",
+        "@tailark/core-firebase",
+        "@tailark/core-linear",
+        "@tailark/core-slack",
+        "@tailark/core-supabase",
+        "@tailark/core-twilio",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -674,15 +674,15 @@ export const blocks: Registry["items"] = [
       registryDependencies: [
         "@tailark/veil-hero-section-3-header",
         "@tailark/veil-card",
-        "@tailark/veil-claude",
-        "@tailark/veil-clerk",
-        "@tailark/veil-figma",
-        "@tailark/veil-firebase",
-        "@tailark/veil-linear",
-        "@tailark/veil-slack",
-        "@tailark/veil-supabase",
-        "@tailark/veil-twilio",
-        "@tailark/veil-vercel"
+        "@tailark/core-claude",
+        "@tailark/core-clerk",
+        "@tailark/core-figma",
+        "@tailark/core-firebase",
+        "@tailark/core-linear",
+        "@tailark/core-slack",
+        "@tailark/core-supabase",
+        "@tailark/core-twilio",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -752,13 +752,13 @@ export const blocks: Registry["items"] = [
       ],
       registryDependencies: [
         "@tailark/veil-button",
-        "@tailark/veil-clerk",
-        "@tailark/veil-firebase",
-        "@tailark/veil-linear",
+        "@tailark/core-clerk",
+        "@tailark/core-firebase",
+        "@tailark/core-linear",
         "@tailark/veil-logo",
-        "@tailark/veil-slack",
-        "@tailark/veil-supabase",
-        "@tailark/veil-vercel"
+        "@tailark/core-slack",
+        "@tailark/core-supabase",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -775,13 +775,13 @@ export const blocks: Registry["items"] = [
       ],
       registryDependencies: [
         "@tailark/veil-button",
-        "@tailark/veil-clerk",
-        "@tailark/veil-firebase",
-        "@tailark/veil-linear",
+        "@tailark/core-clerk",
+        "@tailark/core-firebase",
+        "@tailark/core-linear",
         "@tailark/veil-logo",
-        "@tailark/veil-slack",
-        "@tailark/veil-supabase",
-        "@tailark/veil-vercel"
+        "@tailark/core-slack",
+        "@tailark/core-supabase",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -855,14 +855,14 @@ export const blocks: Registry["items"] = [
         }
       ],
       registryDependencies: [
-        "@tailark/veil-beacon",
-        "@tailark/veil-bolt",
-        "@tailark/veil-cisco",
-        "@tailark/veil-hulu",
-        "@tailark/veil-linear",
-        "@tailark/veil-spotify",
-        "@tailark/veil-supabase",
-        "@tailark/veil-vercel"
+        "@tailark/core-beacon",
+        "@tailark/core-bolt",
+        "@tailark/core-cisco",
+        "@tailark/core-hulu",
+        "@tailark/core-linear",
+        "@tailark/core-spotify",
+        "@tailark/core-supabase",
+        "@tailark/core-vercel"
       ]
     },
     {
@@ -878,13 +878,13 @@ export const blocks: Registry["items"] = [
         }
       ],
       registryDependencies: [
-        "@tailark/veil-beacon",
-        "@tailark/veil-bolt",
-        "@tailark/veil-cisco",
-        "@tailark/veil-hulu",
-        "@tailark/veil-spotify",
-        "@tailark/veil-supabase",
-        "@tailark/veil-vercel"
+        "@tailark/core-beacon",
+        "@tailark/core-bolt",
+        "@tailark/core-cisco",
+        "@tailark/core-hulu",
+        "@tailark/core-spotify",
+        "@tailark/core-supabase",
+        "@tailark/core-vercel"
       ],
       dependencies: [
         "motion"

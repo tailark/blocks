@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 function Input({ className, type, ...props }: React.ComponentProps<'input'>) {
     return (

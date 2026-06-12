@@ -1,12 +1,12 @@
 import React from 'react'
-import { Beacon } from '@/registry/bases/base/veil/ui/svgs/beacon'
-import { Bolt } from '@/registry/bases/base/veil/ui/svgs/bolt'
-import { Cisco } from '@/registry/bases/base/veil/ui/svgs/cisco'
-import { Hulu } from '@/registry/bases/base/veil/ui/svgs/hulu'
-import { SupabaseFull } from '@/registry/bases/base/veil/ui/svgs/supabase'
-import { Spotify } from '@/registry/bases/base/veil/ui/svgs/spotify'
-import { VercelFull } from '@/registry/bases/base/veil/ui/svgs/vercel'
-import { Linear } from '@/registry/bases/base/veil/ui/svgs/linear'
+import { Beacon } from '@/registry/core/ui/svgs/beacon'
+import { Bolt } from '@/registry/core/ui/svgs/bolt'
+import { Cisco } from '@/registry/core/ui/svgs/cisco'
+import { Hulu } from '@/registry/core/ui/svgs/hulu'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
+import { Linear } from '@/registry/core/ui/svgs/linear'
 
 export default function LogoCloud() {
     return (

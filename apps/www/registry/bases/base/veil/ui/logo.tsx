@@ -1,4 +1,4 @@
-import { cn } from '@tailark/core/lib/utils'
+import { cn } from '@/registry/core/lib/utils'
 
 export const Logo = ({ className, uniColor = true }: { className?: string; uniColor?: boolean }) => {
     return (
