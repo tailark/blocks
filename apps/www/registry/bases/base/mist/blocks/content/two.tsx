@@ -1,8 +1,8 @@
 'use client'
 import { cn } from '@tailark/core/lib/utils'
-import { ToggleGroup, ToggleGroupItem } from '@/registry/bases/radix/mist/ui/toggle-group'
+import { ToggleGroup, ToggleGroupItem } from '@/registry/bases/base/mist/ui/toggle-group'
 import { Bold, Calendar1, Ellipsis, Italic, Strikethrough, Underline } from 'lucide-react'
-import { Button } from '@/registry/bases/radix/mist/ui/button'
+import { Button } from '@/registry/bases/base/mist/ui/button'
 
 export default function ContentSection() {
     return (
@@ -48,7 +48,7 @@ export const ScheduleIllustation = ({ className, variant = 'elevated' }: Illustr
     return (
         <div className={cn('relative', className)}>
             <div
-                className={cn('bg-background -translate-x-1/8 absolute flex translate-y-[-110%] items-center gap-2 rounded-lg p-1', {
+                className={cn('bg-background -translate-x-1/8 absolute flex -translate-y-[110%] items-center gap-2 rounded-lg p-1', {
                     'shadow-black-950/10 shadow-lg': variant === 'elevated',
                     'border-foreground/10 border': variant === 'outlined',
                     'border-foreground/10 border shadow-md shadow-black/5': variant === 'mixed',
@@ -59,7 +59,7 @@ export const ScheduleIllustation = ({ className, variant = 'elevated' }: Illustr
                     <Calendar1 className="size-3" />
                     <span className="text-sm font-medium">Schedule</span>
                 </Button>
-                <span className="bg-border block h-4 w-px" />
+                <span className="bg-border block h-4 w-px"></span>
                 <ToggleGroup
                     type="multiple"
                     size="sm"
@@ -85,7 +85,7 @@ export const ScheduleIllustation = ({ className, variant = 'elevated' }: Illustr
                         <Strikethrough className="size-4" />
                     </ToggleGroupItem>
                 </ToggleGroup>
-                <span className="bg-border block h-4 w-px" />
+                <span className="bg-border block h-4 w-px"></span>
                 <Button
                     size="icon"
                     className="size-8"
@@ -102,12 +102,12 @@ export const ScheduleIllustation = ({ className, variant = 'elevated' }: Illustr
 
 export const CodeIllustration = ({ className }: { className?: string }) => {
     return (
-        <div className={cn('mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]', className)}>
+        <div className={cn('[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_50%,transparent_100%)]', className)}>
             <ul className="text-muted-foreground mx-auto w-fit font-mono text-2xl font-medium">
                 {['Images', 'Variables', 'Pages', 'Components', 'Styles'].map((item, index) => (
                     <li
                         key={index}
-                        className={cn(index == 2 && "text-foreground before:absolute before:translate-x-[-110%] before:text-orange-500 before:content-['Import']")}>
+                        className={cn(index == 2 && "text-foreground before:absolute before:-translate-x-[110%] before:text-orange-500 before:content-['Import']")}>
                         {item}
                     </li>
                 ))}

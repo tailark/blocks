@@ -1,0 +1,45 @@
+import { Button } from '@/registry/bases/base/mist/ui/button'
+import { Gemini } from '@/registry/bases/base/mist/ui/svgs/gemini'
+import { GooglePaLM } from '@/registry/bases/base/mist/ui/svgs/google-palm'
+import { Replit } from '@/registry/bases/base/mist/ui/svgs/replit'
+import { MediaWiki } from '@/registry/bases/base/mist/ui/svgs/media-wiki'
+import { MagicUI } from '@/registry/bases/base/mist/ui/svgs/magic-ui'
+import { VSCodium } from '@/registry/bases/base/mist/ui/svgs/vs-codium'
+import Link from 'next/link'
+
+export default function Integrations() {
+    return (
+        <section>
+            <div className="mx-auto max-w-5xl px-6 py-8">
+                <div className="space-y-6 text-center">
+                    <h2 className="text-foreground text-2xl font-semibold">Integrate with your favorite tools : </h2>
+                    <div className="*:bg-foreground/5 mx-auto flex max-w-xl flex-wrap justify-center gap-0.5 *:rounded *:p-6 *:first:rounded-l-xl *:last:rounded-r-xl">
+                        <div>
+                            <Gemini className="m-auto size-8" />
+                        </div>
+                        <div>
+                            <GooglePaLM className="m-auto size-8" />
+                        </div>
+                        <div>
+                            <Replit className="m-auto size-8" />
+                        </div>
+                        <div>
+                            <MediaWiki className="m-auto size-8" />
+                        </div>
+                        <div>
+                            <MagicUI className="m-auto size-8" />
+                        </div>
+                        <div>
+                            <VSCodium className="m-auto size-8" />
+                        </div>
+                    </div>
+                    <Button
+                        nativeButton={false}
+                        render={<Link href="#">More Integrations</Link>}
+                        variant="outline"
+                    />
+                </div>
+            </div>
+        </section>
+    )
+}

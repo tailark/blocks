@@ -29,7 +29,7 @@ export default function CallToAction() {
                             className="pl-2.5">
                             <Link href="#">
                                 <Calendar
-                                    className="!size-3.5 opacity-50"
+                                    className="size-3.5! opacity-50"
                                     strokeWidth={2.5}
                                 />
                                 Request a Demo
