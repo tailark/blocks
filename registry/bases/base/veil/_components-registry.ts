@@ -1,13 +1,15 @@
 import { type Registry } from "shadcn/schema"
 
-const uiComponents = ["button", "card", "input", "textarea", "logo"] as const
+const uiComponents = ["button", "card", "input", "label", "logo", "select", "textarea"] as const
 
 const titles: Record<(typeof uiComponents)[number], string> = {
     button: "Button",
     card: "Card",
     input: "Input",
-    textarea: "Textarea",
+    label: "Label",
     logo: "Logo",
+    select: "Select",
+    textarea: "Textarea",
 }
 
 export const components: Registry["items"] = uiComponents.map((name) => ({
@@ -17,7 +19,7 @@ export const components: Registry["items"] = uiComponents.map((name) => ({
     type: "registry:ui" as const,
     files: [
         {
-            path: name === "logo" ? "veil/logo.tsx" : `veil/ui/${name}.tsx`,
+            path: `veil/ui/${name}.tsx`,
             type: "registry:ui" as const,
         },
     ],

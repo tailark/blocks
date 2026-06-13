@@ -21,7 +21,7 @@ export const components: Registry["items"] = [
         type: "registry:ui" as const,
         files: [
             {
-                path: name === "logo" ? "veil/logo.tsx" : `veil/ui/${name}.tsx`,
+                path: `veil/ui/${name}.tsx`,
                 type: "registry:ui" as const,
             },
         ],

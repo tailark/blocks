@@ -3,6 +3,7 @@ import path from "node:path"
 import { type Registry, type RegistryItem } from "shadcn/schema"
 import { registry as baseRegistry } from "@/registry/bases/base/registry"
 import { registry as radixRegistry } from "@/registry/bases/radix/registry"
+import { variantNumber } from "@/lib/registry-helpers"
 
 const APP_ROOT = process.cwd()
 const REGISTRY_ROOT = path.join(APP_ROOT, "registry")
@@ -81,35 +82,15 @@ function toRelativeImport(from: string, to: string): string {
     return relativePath.split(path.sep).join("/")
 }
 
-export const numberWords: Record<string, string> = {
-    one: "1",
-    two: "2",
-    three: "3",
-    four: "4",
-    five: "5",
-    six: "6",
-    seven: "7",
-    eight: "8",
-    nine: "9",
-    ten: "10",
-    eleven: "11",
-    twelve: "12",
-}
-
-function variantToNumber(variant: string): string {
-    return numberWords[variant] ?? variant
-}
-
 function blockSpecifierToComponentAlias(suffix: string): string {
     const parts = suffix.split("/")
     const [category, variant, component] = parts
-    const variantNumber = variantToNumber(variant)
 
     if (parts.length === 2) {
-        return `@/components/${category}-${variantNumber}`
+        return `@/components/${category}-${variantNumber(variant)}`
     }
 
-    return `@/components/${category}-${variantNumber}-${component}`
+    return `@/components/${category}-${variantNumber(variant)}-${component}`
 }
 
 function uiSpecifierToComponentAlias(suffix: string): string {

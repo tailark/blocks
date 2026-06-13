@@ -1,7 +1,7 @@
-import { LogoIcon } from '@/registry/bases/radix/veil/ui/logo'
+import { LogoIcon } from '@/registry/bases/base/veil/ui/logo'
 import Link from 'next/link'
-import { ThemeSwitcher } from '@/registry/bases/radix/veil/footer/six/theme-switcher'
-import { SocialMedias } from '@/registry/bases/radix/veil/footer/six/social-medias'
+import { ThemeSwitcher } from '@/registry/bases/base/veil/blocks/footer/six/theme-switcher'
+import { SocialMedias } from '@/registry/bases/base/veil/blocks/footer/six/social-medias'
 
 const links = [
     { label: 'Features', href: '#' },

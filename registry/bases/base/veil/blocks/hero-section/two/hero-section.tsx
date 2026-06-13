@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import { Button } from '@/registry/bases/base/veil/ui/button'
 import { Card } from '@/registry/bases/base/veil/ui/card'
-import { HeroHeader } from '@/registry/bases/base/veil/hero-section/two/header'
+import { HeroHeader } from '@/registry/bases/base/veil/blocks/hero-section/two/header'
 
 import { Supabase } from '@/registry/core/ui/svgs/supabase'
 import { Slack } from '@/registry/core/ui/svgs/slack'

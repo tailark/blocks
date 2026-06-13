@@ -1,101 +1,12 @@
 import { type Registry } from "shadcn/schema"
 import { components } from "./_components-registry"
+import { createRegistryHelpers } from "@/lib/registry-helpers"
 
-type RegistryItem = NonNullable<Registry["items"]>[number]
-
-const ui = (name: string) => `@tailark/dusk-${name}`
-const core = (name: string) => `@tailark/core-${name}`
-const motionPrimitive = (name: string) => `@tailark/motion-primitives-${name}`
-const magicUi = (name: string) => `@tailark/magic-ui-${name}`
-const local = (name: string) => `@tailark/dusk-${name}`
-
-const numberWords: Record<string, string> = {
-    one: "1",
-    two: "2",
-    three: "3",
-    four: "4",
-    five: "5",
-    six: "6",
-    seven: "7",
-    eight: "8",
-    nine: "9",
-    ten: "10",
-    eleven: "11",
-    twelve: "12",
-    thirteen: "13",
-    fourteen: "14",
-    fifteen: "15",
-    sixteen: "16",
-    seventeen: "17",
-    eighteen: "18",
-    nineteen: "19",
-    twenty: "20",
-}
-
-function titleize(value: string) {
-    return value
-        .split("-")
-        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-        .join(" ")
-}
-
-function block({
-    category,
-    variant,
-    path,
-    dependencies,
-}: {
-    category: string
-    variant: string
-    path: string
-    dependencies?: string[]
-}): RegistryItem {
-    const variantNumber = numberWords[variant] ?? variant
-
-    return {
-        name: `dusk-${category}-${variantNumber}`,
-        type: "registry:block",
-        title: `${titleize(category)} ${variantNumber}`,
-        description: `Tailark Dusk ${category} variant ${variantNumber} block`,
-        files: [
-            {
-                path,
-                type: "registry:component",
-                target: `@components/${category}-${variantNumber}.tsx`,
-            },
-        ],
-        ...(dependencies?.length ? { registryDependencies: dependencies } : {}),
-    }
-}
-
-function component({
-    name,
-    title,
-    description,
-    path,
-    dependencies,
-}: {
-    name: string
-    title: string
-    description: string
-    path: string
-    dependencies?: string[]
-}): RegistryItem {
-    return {
-        name: `dusk-${name}`,
-        type: "registry:component",
-        title,
-        description,
-        files: [
-            {
-                path,
-                type: "registry:component",
-                target: `@components/${name}.tsx`,
-            },
-        ],
-        ...(dependencies?.length ? { registryDependencies: dependencies } : {}),
-    }
-}
+const { block, component, core, magicUi, motionPrimitive, ui } = createRegistryHelpers({
+    componentTarget: true,
+    kit: "dusk",
+})
+const local = ui
 
 const componentItems: Registry["items"] = [
     component({ name: "hero-section-1-header", title: "Hero Section 1 Header", description: "Tailark Dusk hero section 1 header component", path: "dusk/blocks/hero-section/one/header.tsx", dependencies: [ui("logo"), ui("button")] }),

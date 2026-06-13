@@ -1,12 +1,13 @@
 import { LogoIcon } from '@/registry/bases/base/veil/ui/logo'
 import Link from 'next/link'
-import { ThemeSwitcher } from '@/registry/bases/base/veil/footer/six/theme-switcher'
-import { SocialMedias } from '@/registry/bases/base/veil/footer/six/social-medias'
+import { ThemeSwitcher } from '@/registry/bases/base/veil/blocks/footer/five/theme-switcher'
 
 const links = [
     { label: 'Features', href: '#' },
     { label: 'Pricing', href: '#' },
+    { label: 'About', href: '#' },
     { label: 'Blog', href: '#' },
+    { label: 'Contact', href: '#' },
 ]
 
 export default function Footer() {
@@ -20,10 +21,10 @@ export default function Footer() {
                         className="hover:bg-foreground/5 -ml-1.5 flex size-8 rounded-lg *:m-auto">
                         <LogoIcon
                             uniColor
-                            className="size-5"
+                            className="w-fit"
                         />
                     </Link>
-                    <nav className="my-8 flex flex-col gap-y-4">
+                    <nav className="my-8 flex flex-wrap gap-x-8 gap-y-2">
                         {links.map((link) => (
                             <Link
                                 key={link.label}
@@ -34,12 +35,9 @@ export default function Footer() {
                         ))}
                     </nav>
 
-                    <div className="flex justify-between">
-                        <ThemeSwitcher />
-                        <SocialMedias />
-                    </div>
+                    <ThemeSwitcher />
 
-                    <p className="text-muted-foreground border-foreground/10 mt-2 border-t border-dashed pt-6 text-sm">&copy; {2026} Veil. </p>
+                    <p className="text-muted-foreground mt-2 border-t pt-6 text-sm">&copy; {2026} Veil. </p>
                 </div>
             </div>
         </footer>

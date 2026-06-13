@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@/registry/bases/base/veil/ui/button'
-import { HeroHeader } from '@/registry/bases/base/veil/hero-section/three/header'
+import { Button } from '@/registry/bases/radix/veil/ui/button'
+import { HeroHeader } from '@/registry/bases/radix/veil/blocks/hero-section/three/header'
 import { AudioLines, ChevronRight, MessageCircle, Mic2, Plus } from 'lucide-react'
 import Image from 'next/image'
 
@@ -28,14 +28,13 @@ export default function HeroSection() {
                                     <p className="text-muted-foreground mt-4 text-balance">Veil is your all-in-one engine for adding seamless integrations to your app.</p>
 
                                     <Button
-                                        nativeButton={false}
-                                        render={
-                                            <Link href="#link">
-                                                <span className="text-nowrap">Start Building</span>
-                                                <ChevronRight className="opacity-50" />
-                                            </Link>
-                                        }
-                                        className="mt-6 pr-1.5"></Button>
+                                        asChild
+                                        className="mt-6 pr-1.5">
+                                        <Link href="#link">
+                                            <span className="text-nowrap">Start Building</span>
+                                            <ChevronRight className="opacity-50" />
+                                        </Link>
+                                    </Button>
                                 </div>
                                 <div
                                     aria-hidden

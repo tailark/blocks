@@ -2,7 +2,7 @@ import { type Registry } from "shadcn/schema"
 import { components } from "./_components-registry"
 import { createRegistryHelpers } from "@/lib/registry-helpers"
 
-const { block, component, core, shadcn, ui } = createRegistryHelpers({ kit: "veil" })
+const { block, component, core, ui } = createRegistryHelpers({ kit: "veil" })
 
 const companyLogos = [
     core("claude"),
@@ -57,11 +57,11 @@ const blockItems: Registry["items"] = [
     block({ category: "content", variant: "one", path: "veil/blocks/content/one.tsx" }),
     block({ category: "content", variant: "two", path: "veil/blocks/content/two.tsx" }),
     block({ category: "content", variant: "three", path: "veil/blocks/content/three.tsx" }),
-    block({ category: "faqs", variant: "one", path: "veil/blocks/faqs/one.tsx", dependencies: [ui("card"), shadcn("accordion")] }),
-    block({ category: "faqs", variant: "two", path: "veil/blocks/faqs/two.tsx", dependencies: [shadcn("accordion")] }),
-    block({ category: "faqs", variant: "three", path: "veil/blocks/faqs/three.tsx", dependencies: [shadcn("accordion")] }),
+    block({ category: "faqs", variant: "one", path: "veil/blocks/faqs/one.tsx", dependencies: [ui("card"), ui("accordion")] }),
+    block({ category: "faqs", variant: "two", path: "veil/blocks/faqs/two.tsx", dependencies: [ui("accordion")] }),
+    block({ category: "faqs", variant: "three", path: "veil/blocks/faqs/three.tsx", dependencies: [ui("accordion")] }),
     block({ category: "faqs", variant: "four", path: "veil/blocks/faqs/four.tsx", dependencies: [ui("card")] }),
-    block({ category: "faqs", variant: "five", path: "veil/blocks/faqs/five.tsx", dependencies: [ui("card"), shadcn("accordion")] }),
+    block({ category: "faqs", variant: "five", path: "veil/blocks/faqs/five.tsx", dependencies: [ui("card"), ui("accordion")] }),
     block({ category: "features", variant: "one", path: "veil/blocks/features/one.tsx", dependencies: [ui("card"), ...featureLogos] }),
     block({ category: "features", variant: "two", path: "veil/blocks/features/two.tsx", dependencies: [ui("card"), ...featureLogos] }),
     block({ category: "features", variant: "three", path: "veil/blocks/features/three.tsx", dependencies: [ui("button"), ...featureLogos] }),
