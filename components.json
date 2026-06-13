@@ -20,6 +20,6 @@
   },
   "iconLibrary": "lucide",
   "registries": {
-    "@tailark": "http://localhost:3000/registry/{name}"
+    "@tailark": "http://localhost:3000/r/{name}"
   }
 }

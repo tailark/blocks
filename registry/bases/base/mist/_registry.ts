@@ -1,24 +1,11 @@
 import { type Registry } from "shadcn/schema"
 import { components } from "./_components-registry"
+import { numberWords } from "@/lib/registry-item"
 
 type RegistryItem = NonNullable<Registry["items"]>[number]
 
 const ui = (name: string) => `@tailark/mist-${name}`
 const core = (name: string) => `@tailark/core-${name}`
-
-const numberWords: Record<string, string> = {
-    one: "1",
-    two: "2",
-    three: "3",
-    four: "4",
-    five: "5",
-    six: "6",
-    seven: "7",
-    eight: "8",
-    nine: "9",
-    ten: "10",
-    eleven: "11",
-}
 
 function titleize(value: string) {
     return value

@@ -1,17 +1,15 @@
 import { readFile } from "node:fs/promises"
 import path from "node:path"
 import { type Registry, type RegistryItem } from "shadcn/schema"
-import { registry } from "@/registry/registry"
+import { registry as baseRegistry } from "@/registry/bases/base/registry"
+import { registry as radixRegistry } from "@/registry/bases/radix/registry"
 
 const APP_ROOT = process.cwd()
-const REGISTRY_BASE = path.join(APP_ROOT, "registry/bases/radix")
 const REGISTRY_ROOT = path.join(APP_ROOT, "registry")
-const REGISTRY_IMPORT_PREFIX = "@/registry/bases/radix/veil/"
-const REGISTRY_MIST_BLOCK_IMPORT_PREFIX = "@/registry/bases/radix/mist/blocks/"
-const REGISTRY_MIST_UI_IMPORT_PREFIX = "@/registry/bases/radix/mist/ui/"
-const REGISTRY_DUSK_BLOCK_IMPORT_PREFIX = "@/registry/bases/radix/dusk/blocks/"
-const REGISTRY_DUSK_UI_IMPORT_PREFIX = "@/registry/bases/radix/dusk/ui/"
+const REGISTRY_BASES = ["radix", "base"] as const
 const REGISTRY_CORE_IMPORT_PREFIX = "@/registry/core/"
+
+type RegistryBase = (typeof REGISTRY_BASES)[number]
 
 const packageNamespaces = [
     "@tailark/core",
@@ -60,6 +58,18 @@ function rewritePackageSpecifier(specifier: string): string {
     return exactSpecifierMap.get(specifier) ?? specifier
 }
 
+export function isRegistryBase(base: string): base is RegistryBase {
+    return REGISTRY_BASES.includes(base as RegistryBase)
+}
+
+export function getRegistryBase(base = "radix"): RegistryBase {
+    return REGISTRY_BASES.includes(base as RegistryBase) ? (base as RegistryBase) : "radix"
+}
+
+export function getRegistryIndex(base = getRegistryBase()): Registry {
+    return base === "base" ? baseRegistry : radixRegistry
+}
+
 function toRelativeImport(from: string, to: string): string {
     const fromDir = path.dirname(from)
     let relativePath = path.relative(fromDir, to).replace(/\.(tsx?|jsx?)$/, "")
@@ -71,7 +81,7 @@ function toRelativeImport(from: string, to: string): string {
     return relativePath.split(path.sep).join("/")
 }
 
-const numberWords: Record<string, string> = {
+export const numberWords: Record<string, string> = {
     one: "1",
     two: "2",
     three: "3",
@@ -86,10 +96,14 @@ const numberWords: Record<string, string> = {
     twelve: "12",
 }
 
+function variantToNumber(variant: string): string {
+    return numberWords[variant] ?? variant
+}
+
 function blockSpecifierToComponentAlias(suffix: string): string {
     const parts = suffix.split("/")
     const [category, variant, component] = parts
-    const variantNumber = numberWords[variant] ?? variant
+    const variantNumber = variantToNumber(variant)
 
     if (parts.length === 2) {
         return `@/components/${category}-${variantNumber}`
@@ -106,6 +120,69 @@ function uiSpecifierToComponentAlias(suffix: string): string {
     return `@/components/ui/${suffix}`
 }
 
+function normalizeRegistryPath(filePath: string): string {
+    return filePath.replace(/\.(tsx?|jsx?)$/, "")
+}
+
+function registryImportToPath(specifier: string): string | null {
+    const basePrefix = "@/registry/bases/"
+
+    if (!specifier.startsWith(basePrefix)) {
+        return null
+    }
+
+    const [, kitPath] = specifier.slice(basePrefix.length).split(/\/(.+)/)
+
+    return kitPath ?? null
+}
+
+function coreSpecifierToAlias(suffix: string): string {
+    if (suffix === "lib/utils") {
+        return "@/lib/utils"
+    }
+
+    if (suffix.startsWith("hooks/")) {
+        return `@/hooks/${suffix.slice("hooks/".length)}`
+    }
+
+    if (suffix.startsWith("ui/svgs/")) {
+        return `@/components/ui/svgs/${suffix.slice("ui/svgs/".length)}`
+    }
+
+    if (suffix.startsWith("ui/motion-primitives/")) {
+        return `@/components/motion-primitives/${suffix.slice("ui/motion-primitives/".length)}`
+    }
+
+    if (suffix.startsWith("ui/magicui/")) {
+        return `@/components/magic-ui/${suffix.slice("ui/magicui/".length)}`
+    }
+
+    return `@/components/${suffix}`
+}
+
+function registryPathToConsumerAlias(suffix: string): string | null {
+    const parts = suffix.split("/")
+    const kit = parts[0]
+
+    if (!kit) {
+        return null
+    }
+
+    if (parts[1] === "ui") {
+        return uiSpecifierToComponentAlias(parts.slice(2).join("/"))
+    }
+
+    if (parts[1] === "blocks") {
+        return blockSpecifierToComponentAlias(parts.slice(2).join("/"))
+    }
+
+    if (parts.length >= 3) {
+        return blockSpecifierToComponentAlias(parts.slice(1).join("/"))
+    }
+
+    return null
+}
+
 function rewriteSpecifier(
     specifier: string,
     currentFilePath: string,
@@ -115,73 +192,25 @@ function rewriteSpecifier(
         return rewritePackageSpecifier(specifier)
     }
 
-    if (specifier.startsWith(REGISTRY_MIST_UI_IMPORT_PREFIX) || specifier.startsWith(REGISTRY_DUSK_UI_IMPORT_PREFIX)) {
-        const suffix = specifier.startsWith(REGISTRY_MIST_UI_IMPORT_PREFIX)
-            ? specifier.slice(REGISTRY_MIST_UI_IMPORT_PREFIX.length)
-            : specifier.slice(REGISTRY_DUSK_UI_IMPORT_PREFIX.length)
-
-        return uiSpecifierToComponentAlias(suffix)
+    if (specifier.startsWith(REGISTRY_CORE_IMPORT_PREFIX)) {
+        return coreSpecifierToAlias(specifier.slice(REGISTRY_CORE_IMPORT_PREFIX.length))
     }
 
-    if (specifier.startsWith(REGISTRY_MIST_BLOCK_IMPORT_PREFIX) || specifier.startsWith(REGISTRY_DUSK_BLOCK_IMPORT_PREFIX)) {
-        const suffix = specifier.startsWith(REGISTRY_MIST_BLOCK_IMPORT_PREFIX)
-            ? specifier.slice(REGISTRY_MIST_BLOCK_IMPORT_PREFIX.length)
-            : specifier.slice(REGISTRY_DUSK_BLOCK_IMPORT_PREFIX.length)
-
-        return blockSpecifierToComponentAlias(suffix)
-    }
-
-    if (!specifier.startsWith(REGISTRY_IMPORT_PREFIX)) {
-        if (!specifier.startsWith(REGISTRY_CORE_IMPORT_PREFIX)) {
-            return specifier
-        }
-
-        const suffix = specifier.slice(REGISTRY_CORE_IMPORT_PREFIX.length)
-
-        if (suffix === "lib/utils") {
-            return "@/lib/utils"
-        }
-
-        if (suffix.startsWith("hooks/")) {
-            return `@/hooks/${suffix.slice("hooks/".length)}`
-        }
-
-        if (suffix.startsWith("ui/svgs/")) {
-            return `@/components/ui/svgs/${suffix.slice("ui/svgs/".length)}`
-        }
-
-        if (suffix.startsWith("ui/motion-primitives/")) {
-            return `@/components/motion-primitives/${suffix.slice("ui/motion-primitives/".length)}`
-        }
-
-        if (suffix.startsWith("ui/magicui/")) {
-            return `@/components/magic-ui/${suffix.slice("ui/magicui/".length)}`
-        }
-
+    const registryPath = registryImportToPath(specifier)
+    if (!registryPath) {
         return specifier
     }
 
-    const suffix = specifier.slice(REGISTRY_IMPORT_PREFIX.length)
+    const normalizedRegistryPath = normalizeRegistryPath(registryPath)
+    const itemPath = itemFilePaths.find(
+        (filePath) => normalizeRegistryPath(filePath) === normalizedRegistryPath
+    )
 
-    if (suffix === "ui/logo") {
-        return uiSpecifierToComponentAlias("logo")
+    if (itemPath && itemPath !== currentFilePath) {
+        return toRelativeImport(currentFilePath, itemPath)
     }
 
-    if (suffix.startsWith("ui/")) {
-        return uiSpecifierToComponentAlias(suffix.slice(3))
-    }
-
-    const targetBase = `veil/${suffix}`
-
-    for (const filePath of itemFilePaths) {
-        const filePathNoExt = filePath.replace(/\.(tsx?|jsx?)$/, "")
-
-        if (filePathNoExt === targetBase && filePath !== currentFilePath) {
-            return toRelativeImport(currentFilePath, filePath)
-        }
-    }
-
-    return specifier
+    return registryPathToConsumerAlias(registryPath) ?? specifier
 }
 
 function rewriteImportSpecifiers(
@@ -207,17 +236,22 @@ function rewriteImportSpecifiers(
     return output
 }
 
-async function resolveRegistryFilePath(filePath: string): Promise<string> {
-    const candidates = [
-        filePath.startsWith("../../")
-            ? path.resolve(APP_ROOT, filePath)
-            : filePath.startsWith("core/")
-              ? path.join(REGISTRY_ROOT, filePath)
-            : path.join(REGISTRY_BASE, filePath),
-    ]
+async function resolveRegistryFilePath(
+    filePath: string,
+    base = getRegistryBase()
+): Promise<string> {
+    const candidates: string[] = []
+
+    if (filePath.startsWith("../../")) {
+        candidates.push(path.resolve(APP_ROOT, filePath))
+    } else if (filePath.startsWith("core/")) {
+        candidates.push(path.join(REGISTRY_ROOT, filePath))
+    } else {
+        candidates.push(path.join(REGISTRY_ROOT, "bases", base, filePath))
+    }
 
     if (filePath === "veil/logo.tsx") {
-        candidates.push(path.join(REGISTRY_BASE, "veil/ui/logo.tsx"))
+        candidates.push(path.join(REGISTRY_ROOT, "bases", base, "veil/ui/logo.tsx"))
     }
 
     for (const candidate of candidates) {
@@ -254,8 +288,11 @@ function normalizeTarget(file: NonNullable<RegistryItem["files"]>[number]): stri
     return `components/${basename}`
 }
 
-function findRegistryItem(name: string): Registry["items"][number] | undefined {
-    return registry.items?.find((item) => item.name === name)
+function findRegistryItem(
+    name: string,
+    base = getRegistryBase()
+): Registry["items"][number] | undefined {
+    return getRegistryIndex(base).items?.find((item) => item.name === name)
 }
 
 export function isRegistryIndexRequest(name: string): boolean {
@@ -266,8 +303,12 @@ export function normalizeRegistryItemName(name: string): string {
     return name.endsWith(".json") ? name.slice(0, -".json".length) : name
 }
 
-export async function getRegistryItem(name: string): Promise<RegistryItem | null> {
-    const item = findRegistryItem(name)
+export async function getRegistryItem(
+    name: string,
+    base = getRegistryBase()
+): Promise<RegistryItem | null> {
+    const registryBase = getRegistryBase(base)
+    const item = findRegistryItem(name, registryBase)
 
     if (!item || !item.files?.length) {
         return null
@@ -276,7 +317,7 @@ export async function getRegistryItem(name: string): Promise<RegistryItem | null
     const itemFilePaths = item.files.map((file) => file.path)
     const files = await Promise.all(
         item.files.map(async (file) => {
-            const absolutePath = await resolveRegistryFilePath(file.path)
+            const absolutePath = await resolveRegistryFilePath(file.path, registryBase)
             const content = await readFile(absolutePath, "utf8")
             const rewrittenContent = rewriteImportSpecifiers(
                 content,

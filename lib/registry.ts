@@ -1,19 +1,30 @@
 import { type Registry } from "shadcn/schema"
-import { registry } from "@/registry/registry"
 import { normalizeRegistryItemName } from "@/lib/registry-item"
+import { registry as baseRegistry } from "@/registry/bases/base/registry"
+import { registry as radixRegistry } from "@/registry/bases/radix/registry"
 
 export type RegistryEntry = NonNullable<Registry["items"]>[number]
 
 const KITS = ["dusk", "mist", "veil"] as const
+const REGISTRY_BASES = ["radix", "base"] as const
 
 export type RegistryKit = (typeof KITS)[number]
+export type RegistryBase = (typeof REGISTRY_BASES)[number]
 
 const VIEWABLE_TYPES = new Set<RegistryEntry["type"]>(["registry:block"])
 
-export function getRegistryBlocks(): RegistryEntry[] {
+export function getRegistryBase(base = "radix"): RegistryBase {
+    return REGISTRY_BASES.includes(base as RegistryBase) ? (base as RegistryBase) : "radix"
+}
+
+export function getRegistryIndex(base = getRegistryBase()): Registry {
+    return base === "base" ? baseRegistry : radixRegistry
+}
+
+export function getRegistryBlocks(base = getRegistryBase()): RegistryEntry[] {
     const seen = new Set<string>()
 
-    return (registry.items ?? []).filter((item) => {
+    return (getRegistryIndex(base).items ?? []).filter((item) => {
         if (!VIEWABLE_TYPES.has(item.type) || seen.has(item.name)) {
             return false
         }
@@ -23,9 +34,9 @@ export function getRegistryBlocks(): RegistryEntry[] {
     })
 }
 
-export function getRegistryEntry(name: string): RegistryEntry | null {
+export function getRegistryEntry(name: string, base = getRegistryBase()): RegistryEntry | null {
     const normalizedName = normalizeRegistryItemName(name)
-    const item = (registry.items ?? []).find((entry) => entry.name === normalizedName)
+    const item = (getRegistryIndex(base).items ?? []).find((entry) => entry.name === normalizedName)
 
     if (!item || !VIEWABLE_TYPES.has(item.type) || !item.files?.length) {
         return null
@@ -66,8 +77,11 @@ function getMainBlockFile(entry: RegistryEntry) {
     return files[0]
 }
 
-export function getRegistryComponentImportPath(name: string): string | null {
-    const entry = getRegistryEntry(name)
+export function getRegistryComponentImportPath(
+    name: string,
+    base = getRegistryBase()
+): string | null {
+    const entry = getRegistryEntry(name, base)
 
     if (!entry) {
         return null
@@ -76,25 +90,31 @@ export function getRegistryComponentImportPath(name: string): string | null {
     return getMainBlockFile(entry).path.replace(/\.(tsx?|jsx?)$/, "")
 }
 
-export async function getRegistryComponent(name: string) {
-    const importPath = getRegistryComponentImportPath(name)
+async function importRegistryComponent(base: (typeof REGISTRY_BASES)[number], importPath: string) {
+    if (base === "radix") {
+        return import(`@/registry/bases/radix/${importPath}`)
+    }
 
-    if (!importPath) {
+    return import(`@/registry/bases/base/${importPath}`)
+}
+
+export async function getRegistryComponent(name: string, base = getRegistryBase()) {
+    const registryBase = getRegistryBase(base)
+    const componentPath = getRegistryComponentImportPath(name, registryBase)
+
+    if (!componentPath) {
         return null
     }
 
     try {
-        const registryModule = await import(`@/registry/bases/radix/${importPath}`)
+        const registryModule = await importRegistryComponent(registryBase, componentPath)
 
-        return registryModule.default ?? null
-    } catch {
-        try {
-            const registryModule = await import(`@/registry/bases/base/${importPath}`)
-
-            return registryModule.default ?? null
-        } catch (error) {
-            console.error(`Failed to load registry component: ${importPath}`, error)
-            return null
+        if (registryModule.default) {
+            return registryModule.default
         }
+    } catch (error) {
+        console.error(`Failed to load registry component: ${name}`, error)
     }
+
+    return null
 }
