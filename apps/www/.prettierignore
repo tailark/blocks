@@ -1,4 +1,0 @@
-# Ignore artifacts:
-build
-coverage
-pnpm-workspace.yaml

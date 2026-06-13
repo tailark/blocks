@@ -1,33 +1,50 @@
-# Tailark
+# Tailark Registry
 
-Tailark is a design and component toolkit built for founders and teams who want to ship modern marketing websites faster. It provides a large collection of responsive, production-ready blocks built with shadcn/ui, Tailwind CSS, Next.js, and TypeScript. The components are fully open and editable, so they fit naturally into your codebase without introducing a new design system or locking you into fixed styling patterns.
+Open source shadcn/ui registry for Tailark blocks and components.
 
-## Dusk Kit
+## Endpoints
 
-Dusk is a set of blocks designed to be stylish and elegant, ideal for dark mode websites while also working well in light themes.
+- `/registry` returns the full registry index.
+- `/registry.json` returns the same registry index using the conventional shadcn filename.
+- `/registry/[name]` returns a single registry item with file contents.
+- `/docs` contains lightweight usage notes.
 
-![Dusk Image](apps/www/app/opengraph-image.png)
+## Development
 
-## Mist Kit
+```bash
+pnpm install
+pnpm dev
+```
 
-Mist offers a clean and friendly "notion-like" experience, designed specifically for light mode websites.
+Open `http://localhost:3000/registry` to inspect the registry index.
 
-![Mist Image](apps/www/app/(app)/mist/opengraph-image.png)
+## Deployment
 
-## Start Using
+This repo can be deployed as the public registry app. A separate closed-source landing app can own `tailark.com` and proxy registry paths to this deployment:
 
-Visit [Tailark](https://tailark.com) to start using Tailark.
+```ts
+const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/registry/:path*",
+        destination: "https://tailark-registry.vercel.app/registry/:path*",
+      },
+      {
+        source: "/registry.json",
+        destination: "https://tailark-registry.vercel.app/registry.json",
+      },
+      {
+        source: "/docs/:path*",
+        destination: "https://tailark-registry.vercel.app/docs/:path*",
+      },
+    ]
+  },
+}
 
-## Contributing
-
-Learn more about [Contributing](CONTRIBUTING.md).
+export default nextConfig
+```
 
 ## License
 
-Tailark is released under the [MIT License](LICENSE).
-
-<br />
-<br />
-<a href="https://vercel.com/oss">
-  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
-</a>
+MIT
