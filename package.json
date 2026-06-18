@@ -39,7 +39,8 @@
     "recharts": "^3.8.1",
     "swiper": "^12.2.0",
     "tailwind-merge": "^3.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
@@ -47,6 +48,7 @@
     "@types/node": "^20.19.41",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.184.1",
     "eslint": "^9.39.4",
     "eslint-config-next": "15.3.2",
     "postcss": "^8.5.14",
