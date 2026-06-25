@@ -36,7 +36,7 @@ export default function HeroSection() {
 
                             <Image
                                 src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt=""
+                                alt="landscape image"
                                 width={2215}
                                 height={1477}
                                 sizes="(max-width: 768px) 100vw, 1280px"

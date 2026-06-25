@@ -52,7 +52,7 @@ export default function HeroSection() {
 
                             <Image
                                 src="https://images.unsplash.com/photo-1761798979849-ebb267341d50?q=80&w=2215&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt=""
+                                alt="background image"
                                 width={2215}
                                 height={1477}
                                 sizes="(max-width: 768px) 100vw, 1280px"
