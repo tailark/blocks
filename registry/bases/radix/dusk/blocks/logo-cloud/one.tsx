@@ -5,53 +5,49 @@ import { FirebaseFull } from '@/registry/core/ui/svgs/firebase'
 import { Beacon } from '@/registry/core/ui/svgs/beacon'
 import { Bolt } from '@/registry/core/ui/svgs/bolt'
 import { Claude } from '@/registry/core/ui/svgs/claude'
-import { Figma } from '@/registry/core/ui/svgs/figma'
 import { VercelFull } from '@/registry/core/ui/svgs/vercel'
-import { Cisco } from '@/registry/core/ui/svgs/cisco'
+import Link from 'next/link'
+import { ChevronsRight } from 'lucide-react'
 
 export default function LogoCloud() {
     return (
         <section className="bg-background py-16">
-            <div className="mx-auto max-w-5xl px-6">
-                <h2 className="text-center text-lg font-medium">Your favorite companies are our partners.</h2>
-                <div className="**:fill-foreground mx-auto mt-20 flex max-w-4xl flex-wrap items-center justify-center gap-x-12 gap-y-8 sm:gap-x-16 sm:gap-y-12">
-                    <Bolt
-                        height={22}
-                        width={56}
-                    />
-                    <VercelFull
-                        height={22}
-                        width={84}
-                    />
-                    <SupabaseFull className="h-6" />
-                    <Hulu
-                        height={18}
-                        width={56}
-                    />
-                    <Spotify
-                        height={24}
-                        width={80}
-                    />
-                    <FirebaseFull
-                        height={24}
-                        width={80}
-                    />
-                    <Beacon
-                        height={24}
-                        width={80}
-                    />
-                    <Claude
-                        height={26}
-                        width={90}
-                    />
-                    <Figma
-                        height={24}
-                        width={24}
-                    />
-                    <Cisco
-                        height={30}
-                        width={60}
-                    />
+            <div className="group relative m-auto max-w-5xl px-6">
+                <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
+                    <Link
+                        href="/"
+                        className="block text-sm duration-150 hover:opacity-75">
+                        <span> See the network</span>
+
+                        <ChevronsRight className="ml-1 inline-block size-3" />
+                    </Link>
+                </div>
+                <div className="group-hover:blur-xs **:fill-foreground mx-auto grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14 md:grid-cols-4">
+                    <div className="flex items-center">
+                        <Bolt className="mx-auto h-5 w-full" />
+                    </div>
+                    <div className="flex items-center">
+                        <VercelFull className="mx-auto h-4 w-full" />
+                    </div>
+                    <div className="flex items-center">
+                        <SupabaseFull className="mx-auto h-6" />
+                    </div>
+                    <div className="flex items-center">
+                        <Hulu className="mx-auto h-4 w-full" />
+                    </div>
+                    <div className="flex items-center">
+                        <Spotify className="mx-auto h-6 w-full" />
+                    </div>
+                    <div className="flex items-center">
+                        <FirebaseFull className="mx-auto h-6 w-full" />
+                    </div>
+                    <div className="hidden items-center sm:flex">
+                        <Beacon className="mx-auto h-4 w-full" />
+                    </div>
+
+                    <div className="hidden items-center sm:flex">
+                        <Claude className="mx-auto h-5 w-full" />
+                    </div>
                 </div>
             </div>
         </section>

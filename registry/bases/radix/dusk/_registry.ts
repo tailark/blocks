@@ -87,6 +87,7 @@ const blockItems: Registry["items"] = [
     block({ category: "logo-cloud", variant: "one", path: "dusk/blocks/logo-cloud/one.tsx", dependencies: [core("spotify"), core("supabase"), core("hulu"), core("firebase"), core("beacon"), core("bolt"), core("claude"), core("figma"), core("vercel"), core("cisco")] }),
     block({ category: "logo-cloud", variant: "two", path: "dusk/blocks/logo-cloud/two.tsx", dependencies: [core("spotify"), core("vercel"), core("supabase"), core("hulu"), core("bolt"), core("firebase"), core("beacon"), core("claude")] }),
     block({ category: "logo-cloud", variant: "three", path: "dusk/blocks/logo-cloud/three.tsx", dependencies: [motionPrimitive("infinite-slider"), motionPrimitive("progressive-blur"), core("spotify"), core("vercel"), core("supabase"), core("hulu"), core("bolt"), core("firebase"), core("beacon"), core("claude"), core("cisco"), core("figma")] }),
+    block({ category: "logo-cloud", variant: "four", path: "dusk/blocks/logo-cloud/four.tsx", dependencies: [motionPrimitive("infinite-slider"), core("spotify"), core("vercel"), core("supabase"), core("hulu"), core("bolt")] }),
     block({ category: "pricing", variant: "one", path: "dusk/blocks/pricing/one.tsx", dependencies: [ui("button"), ui("card")] }),
     block({ category: "pricing", variant: "two", path: "dusk/blocks/pricing/two.tsx", dependencies: [ui("button"), ui("card")] }),
     block({ category: "pricing", variant: "three", path: "dusk/blocks/pricing/three.tsx", dependencies: [ui("button"), ui("card")] }),

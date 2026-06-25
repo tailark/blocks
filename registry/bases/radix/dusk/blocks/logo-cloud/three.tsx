@@ -1,88 +1,35 @@
-import { InfiniteSlider } from '@/registry/core/ui/motion-primitives/infinite-slider'
-import { ProgressiveBlur } from '@/registry/core/ui/motion-primitives/progressive-blur'
 import { Spotify } from '@/registry/core/ui/svgs/spotify'
 import { VercelFull } from '@/registry/core/ui/svgs/vercel'
 import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
 import { Hulu } from '@/registry/core/ui/svgs/hulu'
 import { Bolt } from '@/registry/core/ui/svgs/bolt'
-import { FirebaseFull } from '@/registry/core/ui/svgs/firebase'
 import { Beacon } from '@/registry/core/ui/svgs/beacon'
-import { Claude } from '@/registry/core/ui/svgs/claude'
-import { Cisco } from '@/registry/core/ui/svgs/cisco'
-import { Figma } from '@/registry/core/ui/svgs/figma'
 
 export default function LogoCloud() {
     return (
-        <section className="bg-background overflow-hidden py-16">
-            <div className="group relative m-auto max-w-7xl px-6">
-                <div className="flex flex-col items-center md:flex-row">
-                    <div className="md:max-w-44 md:border-r md:pr-6">
-                        <p className="text-end text-sm">Powering the best teams</p>
-                    </div>
-                    <div className="**:fill-foreground relative py-6 md:w-[calc(100%-11rem)]">
-                        <InfiniteSlider
-                            speedOnHover={20}
-                            speed={40}
-                            gap={112}>
-                            <Bolt
-                                height={22}
-                                width={56}
-                            />
-                            <VercelFull
-                                height={22}
-                                width={84}
-                            />
-                            <SupabaseFull className="h-6" />
-                            <Hulu
-                                height={18}
-                                width={56}
-                            />
-                            <Spotify
-                                height={24}
-                                width={80}
-                            />
-                            <FirebaseFull
-                                height={24}
-                                width={80}
-                            />
-                            <Beacon
-                                height={24}
-                                width={80}
-                            />
-                            <Claude
-                                height={26}
-                                width={90}
-                            />
-                            <Figma
-                                height={24}
-                                width={24}
-                            />
-                            <Cisco
-                                height={30}
-                                width={60}
-                            />
-                        </InfiniteSlider>
-
-                        <div
-                            aria-hidden
-                            className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"
-                        />
-                        <div
-                            aria-hidden
-                            className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"
-                        />
-                        <ProgressiveBlur
-                            className="pointer-events-none absolute left-0 top-0 h-full w-20"
-                            direction="left"
-                            blurIntensity={1}
-                        />
-                        <ProgressiveBlur
-                            className="pointer-events-none absolute right-0 top-0 h-full w-20"
-                            direction="right"
-                            blurIntensity={1}
-                        />
-                    </div>
-                </div>
+        <section className="bg-background py-16">
+            <div className="**:fill-muted-foreground relative mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-8 md:gap-x-16">
+                <Bolt
+                    height={22}
+                    width={54}
+                />
+                <VercelFull
+                    height={22}
+                    width={84}
+                />
+                <SupabaseFull className="h-6" />
+                <Hulu
+                    height={18}
+                    width={56}
+                />
+                <Spotify
+                    height={26}
+                    width={84}
+                />
+                <Beacon
+                    height={24}
+                    width={80}
+                />
             </div>
         </section>
     )
