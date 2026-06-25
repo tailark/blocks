@@ -1,23 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-import { Button } from '@/registry/bases/radix/dusk/ui/button'
-import Image from 'next/image'
 import { HeroHeader } from '@/registry/bases/radix/dusk/blocks/hero-section/four/header'
-import { Hourglass } from '@/registry/bases/radix/dusk/blocks/hero-section/four/hourglass'
-import { InfiniteSlider } from '@/registry/core/ui/motion-primitives/infinite-slider'
-import { ProgressiveBlur } from '@/registry/core/ui/motion-primitives/progressive-blur'
-import { Spotify } from '@/registry/core/ui/svgs/spotify'
-import { VercelFull } from '@/registry/core/ui/svgs/vercel'
-import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
-import { Hulu } from '@/registry/core/ui/svgs/hulu'
-import { Bolt } from '@/registry/core/ui/svgs/bolt'
-import { FirebaseFull } from '@/registry/core/ui/svgs/firebase'
-import { Beacon } from '@/registry/core/ui/svgs/beacon'
-import { Claude } from '@/registry/core/ui/svgs/claude'
-import { Figma } from '@/registry/core/ui/svgs/figma'
-import { Cisco } from '@/registry/core/ui/svgs/cisco'
-import { ArrowUp, AudioLines, Github, ImageIcon, Lightbulb, Mic2, Paperclip, Plus, ShoppingBag, Telescope } from 'lucide-react'
+
+import { ArrowUp, Link, Mic2, Plus } from 'lucide-react'
 import { Kbd } from '@/registry/bases/radix/dusk/ui/kdb'
+import { Button } from '@/registry/bases/radix/dusk/ui/button'
+import LogoCloud from '@/registry/bases/radix/dusk/blocks/hero-section/four/logo-cloud'
+import Image from 'next/image'
 
 export default function HeroSection() {
     return (
@@ -25,17 +12,20 @@ export default function HeroSection() {
             <HeroHeader />
             <main className="@container overflow-x-hidden">
                 <section>
-                    <div className="pt-16">
+                    <div className="pt-32 lg:pt-16">
                         <div className="relative mx-auto grid max-w-7xl items-center px-6 md:grid-cols-2 md:gap-12">
                             <div className="text-center md:text-left">
-                                <h1 className="mb-10 text-balance text-5xl font-medium tracking-tight">
-                                    <span className="text-muted-foreground">Understand, operate, and </span> transform your SAP systems.
-                                </h1>
+                                <h1 className="mb-10 text-balance text-5xl font-medium tracking-tight">Build Software businesses can rely on</h1>
 
-                                <div>
-                                    <Kbd>D</Kbd>
-
-                                    <span className="ml-2 text-sm font-medium">Download App</span>
+                                <div className="flex gap-2 max-md:justify-center">
+                                    <Button>Get Started</Button>
+                                    <Button
+                                        variant="ghost"
+                                        aria-label="Download App"
+                                        className="hover:bg-transparent">
+                                        <Kbd>D</Kbd>
+                                        Download App
+                                    </Button>
                                 </div>
                             </div>
                             <div className="h-100 md:h-180 relative flex items-center">
@@ -61,42 +51,19 @@ export default function HeroSection() {
                                     </div>
                                 </div>
 
-                                <img
-                                    src="/gr-bg.png"
-                                    alt=""
-                                    className="mask-y-from-85% mask-x-from-65% size-full object-cover"
+                                <Image
+                                    src="https://images.unsplash.com/photo-1618003787019-95b65cc875d2?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="flower background"
+                                    className="mask-b-from-65% size-full scale-90 object-cover object-[25%_50%] mix-blend-lighten"
+                                    width={2148}
+                                    height={1611}
+                                    sizes="(max-width: 768px) 100vw, 720px"
                                 />
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="bg-background pb-16 pt-4">
-                    <div className="relative m-auto max-w-7xl px-6">
-                        <div className="**:fill-foreground relative flex items-center justify-between py-6">
-                            <Bolt
-                                height={24}
-                                width={58}
-                            />
-                            <VercelFull
-                                height={24}
-                                width={100}
-                            />
-                            <SupabaseFull className="h-7" />
-                            <Hulu
-                                height={20}
-                                width={60}
-                            />
-                            <Spotify
-                                height={28}
-                                width={90}
-                            />
-                            <Beacon
-                                height={26}
-                                width={92}
-                            />
-                        </div>
-                    </div>
-                </section>
+                <LogoCloud />
             </main>
         </>
     )
