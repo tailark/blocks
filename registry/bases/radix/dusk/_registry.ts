@@ -72,6 +72,7 @@ const blockItems: Registry["items"] = [
     block({ category: "hero-section", variant: "seven", path: "dusk/blocks/hero-section/seven/hero-section.tsx", dependencies: [local("hero-section-6-header"), local("hero-section-7-logo-cloud")] }),
     block({ category: "hero-section", variant: "eight", path: "dusk/blocks/hero-section/eight.tsx", dependencies: [local("hero-section-6-header")] }),
     block({ category: "hero-section", variant: "nine", path: "dusk/blocks/hero-section/nine/hero-section.tsx", dependencies: [ui("button"), local("hero-section-9-header"), local("hero-section-9-logo-cloud")] }),
+    block({ category: "hero-section", variant: "ten", path: "dusk/blocks/hero-section/ten/hero-section.tsx", dependencies: [ui("button"), local("hero-section-9-header"), local("hero-section-9-logo-cloud")] }),
     block({ category: "integrations", variant: "one", path: "dusk/blocks/integrations/one.tsx", dependencies: [ui("button"), ui("card"), core("gemini"), core("replit"), core("magic-ui"), core("vs-codium"), core("media-wiki"), core("google-palm")] }),
     block({ category: "integrations", variant: "two", path: "dusk/blocks/integrations/two.tsx", dependencies: [core("gemini"), core("replit"), core("magic-ui"), core("vs-codium"), core("media-wiki"), core("google-palm"), ui("logo"), ui("button")] }),
     block({ category: "integrations", variant: "three", path: "dusk/blocks/integrations/three.tsx", dependencies: [core("gemini"), core("replit"), core("magic-ui"), core("vs-codium"), core("media-wiki"), core("google-palm"), ui("logo"), ui("button")] }),

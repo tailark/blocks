@@ -1,12 +1,13 @@
 'use client'
-import { Spotify } from '@/registry/core/ui/svgs/spotify'
-import { VercelFull } from '@/registry/core/ui/svgs/vercel'
-import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
-import { Hulu } from '@/registry/core/ui/svgs/hulu'
-import { Bolt } from '@/registry/core/ui/svgs/bolt'
-import { Beacon } from '@/registry/core/ui/svgs/beacon'
+
 import { useMedia } from '@/registry/core/hooks/use-media'
 import { InfiniteSlider } from '@/registry/core/ui/motion-primitives/infinite-slider'
+import { Beacon } from '@/registry/core/ui/svgs/beacon'
+import { Bolt } from '@/registry/core/ui/svgs/bolt'
+import { Hulu } from '@/registry/core/ui/svgs/hulu'
+import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
+import { VercelFull } from '@/registry/core/ui/svgs/vercel'
 
 export default function LogoCloud() {
     const isLarge = useMedia('(min-width: 64rem)')
