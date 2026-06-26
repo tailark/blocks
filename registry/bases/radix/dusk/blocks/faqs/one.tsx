@@ -1,43 +1,69 @@
-export default function FAQs() {
+'use client'
+
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/bases/radix/dusk/ui/accordion'
+import Link from 'next/link'
+
+export default function FAQsTwo() {
+    const faqItems = [
+        {
+            id: 'item-1',
+            question: 'How long does shipping take?',
+            answer: 'Standard shipping takes 3-5 business days, depending on your location. Express shipping options are available at checkout for 1-2 business day delivery.',
+        },
+        {
+            id: 'item-2',
+            question: 'What payment methods do you accept?',
+            answer: 'We accept all major credit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, and Google Pay. For enterprise customers, we also offer invoicing options.',
+        },
+        {
+            id: 'item-3',
+            question: 'Can I change or cancel my order?',
+            answer: 'You can modify or cancel your order within 1 hour of placing it. After this window, please contact our customer support team who will assist you with any changes.',
+        },
+        {
+            id: 'item-4',
+            question: 'Do you ship internationally?',
+            answer: "Yes, we ship to over 50 countries worldwide. International shipping typically takes 7-14 business days. Additional customs fees may apply depending on your country's import regulations.",
+        },
+        {
+            id: 'item-5',
+            question: 'What is your return policy?',
+            answer: 'We offer a 30-day return policy for most items. Products must be in original condition with tags attached. Some specialty items may have different return terms, which will be noted on the product page.',
+        },
+    ]
+
     return (
-        <section className="scroll-py-16 py-16 md:scroll-py-32 md:py-32">
-            <div className="mx-auto max-w-5xl px-6">
-                <div className="grid gap-y-12 px-2 lg:grid-cols-[1fr_auto]">
-                    <div className="text-center lg:text-left">
-                        <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
-                            Frequently <br className="hidden lg:block" /> Asked <br className="hidden lg:block" />
-                            Questions
-                        </h2>
-                        <p>Accusantium quisquam. Illo, omnis?</p>
-                    </div>
+        <section className="py-16 md:py-24">
+            <div className="mx-auto max-w-7xl px-6">
+                <div className="grid gap-12 md:grid-cols-2 md:gap-6">
+                    <h2 className="text-foreground max-w-sm text-balance text-4xl font-medium tracking-tight">Frequently Asked Questions</h2>
 
-                    <div className="divide-y divide-dashed sm:mx-auto sm:max-w-lg lg:mx-0">
-                        <div className="pb-6">
-                            <h3 className="font-medium">What is the refund policy?</h3>
-                            <p className="text-muted-foreground mt-4">We offer a 30-day money back guarantee. If you are not satisfied with our product, you can request a refund within 30 days of your purchase.</p>
+                    <div>
+                        <Accordion
+                            type="single"
+                            collapsible
+                            className="w-full">
+                            {faqItems.map((item) => (
+                                <AccordionItem
+                                    key={item.id}
+                                    value={item.id}
+                                    className="border-dashed">
+                                    <AccordionTrigger className="cursor-pointer text-base hover:no-underline">{item.question}</AccordionTrigger>
+                                    <AccordionContent>
+                                        <p className="text-muted-foreground text-base">{item.answer}</p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
 
-                            <ol className="list-outside list-decimal space-y-2 pl-4">
-                                <li className="text-muted-foreground mt-4">To request a refund, please contact our support team with your order number and reason for the refund.</li>
-                                <li className="text-muted-foreground mt-4">Refunds will be processed within 3-5 business days.</li>
-                                <li className="text-muted-foreground mt-4">Please note that refunds are only available for new customers and are limited to one per customer.</li>
-                            </ol>
-                        </div>
-                        <div className="py-6">
-                            <h3 className="font-medium">How do I cancel my subscription?</h3>
-                            <p className="text-muted-foreground mt-4">You can cancel your subscription at any time by logging into your account and clicking on the cancel button.</p>
-                        </div>
-                        <div className="py-6">
-                            <h3 className="font-medium">Can I upgrade my plan?</h3>
-                            <p className="text-muted-foreground my-4">Yes, you can upgrade your plan at any time by logging into your account and selecting the plan you want to upgrade to.</p>
-                            <ul className="list-outside list-disc space-y-2 pl-4">
-                                <li className="text-muted-foreground">You will be charged the difference in price between your current plan and the plan you are upgrading to.</li>
-                                <li className="text-muted-foreground">Your new plan will take effect immediately and you will be billed at the new rate on your next billing cycle.</li>
-                            </ul>
-                        </div>
-                        <div className="py-6">
-                            <h3 className="font-medium">Do you offer phone support?</h3>
-                            <p className="text-muted-foreground mt-4">We do not offer phone support at this time. However, you can contact us via email or live chat for any questions or concerns you may have.</p>
-                        </div>
+                        <p className="text-muted-foreground mt-6">
+                            Can't find what you're looking for? Contact our{' '}
+                            <Link
+                                href="#"
+                                className="text-primary font-medium hover:underline">
+                                customer support team
+                            </Link>
+                        </p>
                     </div>
                 </div>
             </div>
