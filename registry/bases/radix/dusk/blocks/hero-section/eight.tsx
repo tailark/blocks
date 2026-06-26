@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { HeroHeader } from '@/registry/bases/radix/dusk/blocks/hero-section/six/header'
 import { cn } from '@/registry/core/lib/utils'
+import { Google } from '@/registry/core/ui/svgs/google'
+import { Trustpilot } from '@/registry/core/ui/svgs/trustpilot'
+import { G2 } from '@/registry/core/ui/svgs/g2'
 
 type ProfileCardProps = {
     name: string
@@ -64,7 +67,7 @@ export default function HeroSection() {
             <HeroHeader />
 
             <main>
-                <section className="pt-40 md:pt-56">
+                <section className="pb-24 pt-40 md:pt-56">
                     <div className="relative mx-auto max-w-7xl px-6">
                         <div>
                             <h1 className="text-balance text-center text-4xl font-medium tracking-tight">
@@ -96,6 +99,36 @@ export default function HeroSection() {
                                 height={1000}
                                 className="mask-x-from-80% mask-y-from-80% size-full object-cover max-sm:scale-150 dark:mix-blend-lighten"
                             />
+                        </div>
+                    </div>
+
+                    <div className="mt-12">
+                        <p className="text-muted-foreground text-center text-lg">Trusted by over 100,000 families</p>
+
+                        <div className="mt-6 flex flex-wrap justify-center gap-x-12 gap-y-6">
+                            <div className="flex items-center gap-2">
+                                <Google className="size-5" />
+
+                                <p className="text-foreground text-lg font-medium">
+                                    <span>4.8</span> Google
+                                </p>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                                <Trustpilot className="size-5" />
+
+                                <p className="text-foreground text-lg font-medium">
+                                    <span>4.6</span> Trustpilot
+                                </p>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                                <G2 className="size-5" />
+
+                                <p className="text-foreground text-lg font-medium">
+                                    <span>4.5</span> G2
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>

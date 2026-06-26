@@ -10,16 +10,16 @@
     "cssVariables": true,
     "prefix": ""
   },
+  "iconLibrary": "lucide",
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
     "lib": "@/lib",
-    "hooks": "@/hooks",
-    "data": "@/data"
+    "hooks": "@/hooks"
   },
-  "iconLibrary": "lucide",
   "registries": {
-    "@tailark": "http://localhost:3000/r/{name}"
+    "@tailark": "http://localhost:3000/r/{name}",
+    "@svgl": "https://svgl.app/r/{name}.json"
   }
 }

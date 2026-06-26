@@ -1,24 +1,23 @@
 export default function StatsSection() {
     return (
-        <section className="py-12 md:py-20">
-            <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-                <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center">
-                    <h2 className="text-4xl font-semibold lg:text-5xl">Tailark in numbers</h2>
-                    <p>Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
-                </div>
+        <section className="py-16 md:py-32">
+            <div className="mx-auto max-w-7xl px-6">
+                <p className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight">
+                    <span className="text-foreground">Scale with confidence.</span> Handle thousands of transactions per second.
+                </p>
 
-                <div className="grid gap-0.5 *:text-center md:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]">
-                    <div className="bg-muted rounded-(--radius) space-y-4 py-12">
-                        <div className="text-5xl font-bold">+1200</div>
-                        <p>Stars on GitHub</p>
+                <div className="mt-32 grid gap-12 md:grid-cols-3 md:gap-12 xl:mt-44">
+                    <div className="space-y-3 border-t pt-6">
+                        <div className="text-5xl font-semibold tracking-tight">+21200</div>
+                        <p className="text-muted-foreground">Stars on GitHub</p>
                     </div>
-                    <div className="bg-muted rounded-(--radius) space-y-4 py-12">
-                        <div className="text-5xl font-bold">56%</div>
-                        <p>Conversion rate</p>
+                    <div className="space-y-3 border-t pt-6">
+                        <div className="text-5xl font-semibold tracking-tight">22 Million</div>
+                        <p className="text-muted-foreground">Active Users</p>
                     </div>
-                    <div className="bg-muted rounded-(--radius) space-y-4 py-12">
-                        <div className="text-5xl font-bold">+500</div>
-                        <p>Powered Apps</p>
+                    <div className="space-y-3 border-t pt-6">
+                        <div className="text-5xl font-semibold tracking-tight">+500</div>
+                        <p className="text-muted-foreground">Powered Apps</p>
                     </div>
                 </div>
             </div>
