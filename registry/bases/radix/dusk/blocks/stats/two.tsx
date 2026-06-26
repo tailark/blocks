@@ -6,7 +6,7 @@ export default function StatsSection() {
                     <span className="text-foreground">Scale with confidence.</span> Handle thousands of transactions per second.
                 </p>
 
-                <div className="mt-32 grid gap-12 md:grid-cols-3 md:gap-12 xl:mt-44">
+                <div className="mt-32 grid gap-12 md:grid-cols-3 xl:mt-44">
                     <div className="space-y-3 border-t pt-6">
                         <div className="text-5xl font-semibold tracking-tight">+21200</div>
                         <p className="text-muted-foreground">Stars on GitHub</p>

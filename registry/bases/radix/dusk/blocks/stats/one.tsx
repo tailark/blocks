@@ -6,10 +6,10 @@ export default function StatsSection() {
                     <h2 className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight">
                         <span className="text-foreground">Close more deals.</span> <br /> Know every customer signal.
                     </h2>
-                    <div className="flex flex-col gap-4 md:mx-auto">
+                    <div className="flex flex-col gap-32 md:mx-auto xl:gap-44">
                         <p className="text-muted-foreground text-balance text-lg">Modern sales teams move faster when every account, conversation, and next step lives in one place. Tailark brings pipeline, outreach, and customer history into a focused CRM workspace where reps can spot momentum, prioritize follow-up, and turn relationships into revenue. </p>
 
-                        <div className="mt-32 grid gap-12 md:grid-cols-3 md:gap-12 xl:mt-44">
+                        <div className="grid gap-12 md:grid-cols-3 md:gap-12">
                             <div className="space-y-3 border-t pt-6">
                                 <div className="text-4xl font-semibold tracking-tight">21k</div>
                                 <p className="text-muted-foreground">Deals tracked</p>
