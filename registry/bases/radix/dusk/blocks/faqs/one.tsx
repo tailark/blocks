@@ -3,7 +3,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/registry/bases/radix/dusk/ui/accordion'
 import Link from 'next/link'
 
-export default function FAQsTwo() {
+export default function FAQs() {
     const faqItems = [
         {
             id: 'item-1',
