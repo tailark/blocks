@@ -55,7 +55,7 @@ export default function TeamSection() {
                 </div>
                 <div className="mt-12 grid gap-4 md:mt-24 md:grid-cols-2 md:gap-6 lg:gap-12">
                     <div className="sm:w-2/5">
-                        <h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
+                        <h2 className="text-4xl font-medium tracking-tight">Our dream team</h2>
                     </div>
                     <div className="space-y-4">
                         <p className="text-muted-foreground text-lg">During the working process, we perform regular fitting with the client because he is the only person who can feel whether a new suit fits or not.</p>
