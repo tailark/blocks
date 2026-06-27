@@ -1,115 +1,132 @@
 import Link from 'next/link'
 import { Button } from '@/registry/bases/radix/dusk/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/registry/bases/radix/dusk/ui/card'
 import { Check } from 'lucide-react'
 
 export default function Pricing() {
     return (
         <section className="py-16 md:py-32">
-            <div className="mx-auto max-w-6xl px-6">
-                <div className="mx-auto max-w-2xl space-y-6 text-center">
-                    <h1 className="text-center text-4xl font-semibold lg:text-5xl">Pricing that Scales with You</h1>
-                    <p>Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
+            <div className="mx-auto max-w-7xl px-6">
+                <div className="max-w-sm space-y-6">
+                    <h1 className="text-muted-foreground text-balance text-4xl font-medium tracking-tight lg:text-5xl">
+                        <span className="text-foreground">Pricing</span> that Scales with you
+                    </h1>
                 </div>
 
-                <div className="mt-8 grid gap-6 md:mt-20 md:grid-cols-3">
-                    <Card className="flex flex-col">
-                        <CardHeader>
-                            <CardTitle className="font-medium">Free</CardTitle>
-                            <span className="my-3 block text-2xl font-semibold">$0 / mo</span>
-                            <CardDescription className="text-sm">Per editor</CardDescription>
-                        </CardHeader>
+                <div className="mt-12 grid gap-1.5 border *:p-6 max-lg:mx-auto max-lg:max-w-sm lg:mt-20 lg:grid-cols-4">
+                    <div className="flex flex-col gap-8 max-lg:border-b lg:border-r">
+                        <div>
+                            <p className="text-lg font-medium">Starter</p>
+                            <p className="text-muted-foreground text-lg font-medium">For solo developers</p>
 
-                        <CardContent className="space-y-4">
-                            <hr className="border-dashed" />
+                            <div className="my-8 block text-4xl font-medium tracking-tight">
+                                $19 <span className="text-muted-foreground text-lg">/mo</span>
+                            </div>
 
-                            <ul className="list-outside space-y-3 text-sm">
-                                {['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className="flex items-center gap-2">
-                                        <Check className="size-3" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </CardContent>
-
-                        <CardFooter className="mt-auto">
                             <Button
                                 asChild
                                 variant="outline"
                                 className="w-full">
-                                <Link href="">Get Started</Link>
+                                <Link href="#">Get Started</Link>
                             </Button>
-                        </CardFooter>
-                    </Card>
-
-                    <Card className="relative">
-                        <span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">Popular</span>
-
-                        <div className="flex flex-col">
-                            <CardHeader>
-                                <CardTitle className="font-medium">Pro</CardTitle>
-                                <span className="my-3 block text-2xl font-semibold">$19 / mo</span>
-                                <CardDescription className="text-sm">Per editor</CardDescription>
-                            </CardHeader>
-
-                            <CardContent className="space-y-4">
-                                <hr className="border-dashed" />
-                                <ul className="list-outside space-y-3 text-sm">
-                                    {['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
-                                        <li
-                                            key={index}
-                                            className="flex items-center gap-2">
-                                            <Check className="size-3" />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </CardContent>
-
-                            <CardFooter>
-                                <Button
-                                    asChild
-                                    className="w-full">
-                                    <Link href="">Get Started</Link>
-                                </Button>
-                            </CardFooter>
                         </div>
-                    </Card>
 
-                    <Card className="flex flex-col">
-                        <CardHeader>
-                            <CardTitle className="font-medium">Startup</CardTitle>
-                            <span className="my-3 block text-2xl font-semibold">$29 / mo</span>
-                            <CardDescription className="text-sm">Per editor</CardDescription>
-                        </CardHeader>
+                        <ul className="text-muted-foreground list-outside space-y-3">
+                            {['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
+                                <li
+                                    key={index}
+                                    className="flex items-center gap-3">
+                                    <Check className="text-muted-foreground size-3" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                        <CardContent className="space-y-4">
-                            <hr className="border-dashed" />
+                    <div className="bg-card flex flex-col gap-8 max-lg:border-y lg:border-x">
+                        <div>
+                            <p className="text-lg font-medium">Pro</p>
+                            <p className="text-muted-foreground text-lg font-medium">For ambitious founders</p>
 
-                            <ul className="list-outside space-y-3 text-sm">
-                                {['Everything in Pro Plan', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className="flex items-center gap-2">
-                                        <Check className="size-3" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </CardContent>
+                            <div className="my-8 block text-4xl font-medium tracking-tight">
+                                $59 <span className="text-muted-foreground text-lg">/mo</span>
+                            </div>
 
-                        <CardFooter className="mt-auto">
                             <Button
                                 asChild
-                                variant="outline"
                                 className="w-full">
-                                <Link href="">Get Started</Link>
+                                <Link href="#">Get Started</Link>
                             </Button>
-                        </CardFooter>
-                    </Card>
+                        </div>
+
+                        <ul className="text-muted-foreground list-outside space-y-3">
+                            {['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
+                                <li
+                                    key={index}
+                                    className="flex items-center gap-3">
+                                    <Check className="text-muted-foreground size-3" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="flex flex-col gap-8 max-lg:border-y lg:border-x">
+                        <div>
+                            <p className="text-lg font-medium">Startup</p>
+                            <p className="text-muted-foreground text-lg font-medium">For growing businesses</p>
+
+                            <div className="my-8 block text-4xl font-medium tracking-tight">
+                                $99 <span className="text-muted-foreground text-lg">/mo</span>
+                            </div>
+
+                            <Button
+                                asChild
+                                className="w-full"
+                                variant="outline">
+                                <Link href="#">Get Started</Link>
+                            </Button>
+                        </div>
+
+                        <ul className="text-muted-foreground list-outside space-y-3">
+                            {['Everything in Pro Plan', '10GB Cloud Storage', 'Email and Chat Support', '12 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
+                                <li
+                                    key={index}
+                                    className="flex items-center gap-3">
+                                    <Check className="text-muted-foreground size-3" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="flex flex-col gap-8 max-lg:border-t lg:border-l">
+                        <div>
+                            <p className="text-lg font-medium">Enterprise</p>
+                            <p className="text-muted-foreground text-lg font-medium">For large organizations</p>
+
+                            <div className="my-8 block text-4xl font-medium tracking-tight">
+                                $299 <span className="text-muted-foreground text-lg">/mo</span>
+                            </div>
+
+                            <Button
+                                asChild
+                                className="w-full"
+                                variant="outline">
+                                <Link href="#">Get Started</Link>
+                            </Button>
+                        </div>
+
+                        <ul className="text-muted-foreground list-outside space-y-3">
+                            {['Everything in Startup Plan', 'Unlimited Cloud Storage', 'Unlimited User Access', 'Daily Product Updates'].map((item, index) => (
+                                <li
+                                    key={index}
+                                    className="flex items-center gap-3">
+                                    <Check className="text-muted-foreground size-3" />
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>

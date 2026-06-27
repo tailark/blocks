@@ -9,7 +9,7 @@ const buttonVariants = cva('cursor-pointer inline-flex items-center justify-cent
         variant: {
             default: 'shadow-sm shadow-black/10 bg-primary text-primary-foreground hover:bg-primary/90',
             destructive: 'bg-destructive text-destructive-foreground shadow-md hover:bg-destructive/90',
-            outline: 'shadow-sm shadow-black/10 border border-transparent bg-card ring-1 ring-foreground/10 duration-200 hover:bg-muted/50 dark:ring-foreground/15 dark:hover:bg-muted/50',
+            outline: 'shadow-sm bg-foreground/5 shadow-black/10  ring-1 ring-foreground/10 duration-200 hover:bg-muted/50',
             secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
             ghost: 'hover:bg-foreground/6.5 hover:text-accent-foreground',
             link: 'text-primary underline-offset-4 hover:underline',

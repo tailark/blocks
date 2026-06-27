@@ -122,7 +122,7 @@
   .dark {
     --background: var(--color-zinc-950);
     --foreground:var(--color-white);
-    --card: var(--color-zinc-950);
+    --card: color-mix(in oklab,var(--color-zinc-800)55%,#000);
     --card-foreground:var(--color-white);
     --popover: var(--color-zinc-950);
     --popover-foreground:var(--color-white);
