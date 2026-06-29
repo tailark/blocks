@@ -3,7 +3,7 @@ export default function StatsSection() {
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-7xl px-6">
                 <div className="grid gap-4 md:grid-cols-2 md:gap-6">
-                    <h2 className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight">
+                    <h2 className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight lg:text-5xl">
                         <span className="text-foreground">Close more deals.</span> <br /> Know every customer signal.
                     </h2>
                     <div className="flex flex-col gap-32 md:mx-auto xl:gap-44">

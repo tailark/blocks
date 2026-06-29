@@ -2,7 +2,7 @@ export default function StatsSection() {
     return (
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-7xl px-6">
-                <p className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight">
+                <p className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight lg:text-5xl">
                     <span className="text-foreground">Scale with confidence.</span> Handle thousands of transactions per second.
                 </p>
 
