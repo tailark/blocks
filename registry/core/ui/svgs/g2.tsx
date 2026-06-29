@@ -8,7 +8,7 @@ const G2 = (props: SVGProps<SVGSVGElement>) => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         {...props}>
-        <g clip-path="url(#clip0_2025_9)">
+        <g clipPath="url(#clip0_2025_9)">
             <mask
                 id="mask0_2025_9"
                 style={{ maskType: 'luminance' }}
