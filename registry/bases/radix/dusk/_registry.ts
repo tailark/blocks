@@ -103,7 +103,7 @@ const blockItems: Registry["items"] = [
     block({ category: "team", variant: "one", path: "dusk/blocks/team/one.tsx" }),
     block({ category: "team", variant: "two", path: "dusk/blocks/team/two.tsx" }),
     block({ category: "testimonials", variant: "one", path: "dusk/blocks/testimonials/one.tsx", dependencies: [ui("card"), ui("avatar"), core("hulu")] }),
-    block({ category: "testimonials", variant: "two", path: "dusk/blocks/testimonials/two.tsx", dependencies: [ui("card"), ui("avatar"), core("hulu")] }),
+    block({ category: "testimonials", variant: "two", path: "dusk/blocks/testimonials/two.tsx", dependencies: [ui("button"), core("claude-ai"), core("gemini"), core("openai")] }),
     block({ category: "testimonials", variant: "three", path: "dusk/blocks/testimonials/three.tsx", dependencies: [core("spotify")] }),
     block({ category: "testimonials", variant: "four", path: "dusk/blocks/testimonials/four.tsx", dependencies: [ui("avatar")] }),
     block({ category: "testimonials", variant: "five", path: "dusk/blocks/testimonials/five.tsx", dependencies: [ui("avatar"), ui("card")] }),
