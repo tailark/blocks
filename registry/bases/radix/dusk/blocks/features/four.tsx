@@ -29,7 +29,7 @@ export default function Features() {
 
                     <Card className="relative h-full min-h-96 overflow-hidden bg-zinc-100">
                         <div className="relative z-10 max-w-sm p-8">
-                            <p className="text-balance text-lg text-zinc-950/75">
+                            <p className="text-balance text-lg text-zinc-950/75 selection:bg-zinc-950 selection:text-white">
                                 <span className="font-medium text-zinc-950">Proactive alerts. </span> Surface renewals and quiet accounts before they slip.
                             </p>
                         </div>

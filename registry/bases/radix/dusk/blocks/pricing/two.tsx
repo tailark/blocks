@@ -8,7 +8,7 @@ export default function Pricing() {
             <div className="mx-auto max-w-7xl px-6">
                 <div className="max-w-md space-y-6">
                     <h1 className="text-muted-foreground text-balance text-4xl font-medium tracking-tight lg:text-5xl">
-                        <span className="text-foreground">Start free.</span> <br /> Upgrade as you scale
+                        <span className="text-foreground">Start free.</span> <br /> Upgrade as you scale.
                     </h1>
                 </div>
 
