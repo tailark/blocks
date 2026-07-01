@@ -24,8 +24,7 @@ export default function HeroSection() {
                             <div className="px-6 text-center sm:mx-auto lg:mr-auto lg:mt-0">
                                 <Link
                                     href="#link"
-                                    className="group mx-auto flex w-fit items-center gap-3 rounded-full p-1 pl-4 transition-colors duration-300"
-                                >
+                                    className="group mx-auto flex w-fit items-center gap-3 rounded-full p-1 pl-4 transition-colors duration-300">
                                     <span className="text-sm font-medium">New:</span>
                                     <span className="text-muted-foreground text-sm">Introducing the living customer graph</span>
 
@@ -73,15 +72,8 @@ export default function HeroSection() {
                                 <div className="bg-background ring-foreground/6.5 before:mask-radial-at-top-left before:mask-radial-from-65% before:mask-radial-[100%_60%] before:ring-foreground before:border-foreground/10 relative rounded-2xl p-2 shadow-xl shadow-black/50 ring before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-l before:border-t">
                                     <div className="bg-foreground/2 z-1 absolute inset-0 rounded-2xl"></div>
                                     <Image
-                                        className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
+                                        className="bg-background aspect-15/8 relative rounded-2xl"
                                         src="/mail2.png"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
-                                    />
-                                    <Image
-                                        className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                        src="/mail2-light.png"
                                         alt="app screen"
                                         width="2700"
                                         height="1440"
@@ -97,8 +89,7 @@ export default function HeroSection() {
                         <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
                             <Link
                                 href="/"
-                                className="block text-sm duration-150 hover:opacity-75"
-                            >
+                                className="block text-sm duration-150 hover:opacity-75">
                                 <span> See the network</span>
 
                                 <ChevronRight className="ml-1 inline-block size-3" />

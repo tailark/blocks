@@ -17,8 +17,7 @@ export default function HeroSection() {
                             <Button
                                 className="w-fit"
                                 asChild
-                                size="lg"
-                            >
+                                size="lg">
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>
@@ -27,15 +26,8 @@ export default function HeroSection() {
                             <div className="bg-background ring-foreground/6.5 before:mask-radial-at-top-left before:mask-radial-from-65% before:mask-radial-[100%_60%] before:ring-foreground before:border-foreground/10 relative rounded-2xl p-2 shadow-2xl shadow-black/55 ring before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-l before:border-t">
                                 <div className="bg-foreground/2 z-1 absolute inset-0 rounded-2xl"></div>
                                 <Image
-                                    className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
+                                    className="bg-background aspect-15/8 relative rounded-2xl"
                                     src="/mail2.png"
-                                    alt="app screen"
-                                    width="2700"
-                                    height="1440"
-                                />
-                                <Image
-                                    className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                    src="/mail2-light.png"
                                     alt="app screen"
                                     width="2700"
                                     height="1440"

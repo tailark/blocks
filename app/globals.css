@@ -92,34 +92,6 @@
   }
 
   :root {
-    --background: var(--color-white);
-    --foreground: var(--color-zinc-950);
-    --card: var(--color-white);
-    --card-foreground: var(--color-zinc-950);
-    --popover: var(--color-white);
-    --popover-foreground: var(--color-zinc-950);
-    --primary: var(--color-zinc-950);
-    --primary-foreground:var(--color-white);
-    --secondary: var(--color-zinc-100);
-    --secondary-foreground: var(--color-zinc-950);
-    --muted: var(--color-zinc-100);
-    --muted-foreground: var(--color-zinc-500);
-    --accent: var(--color-zinc-100);
-    --accent-foreground: var(--color-zinc-950);
-    --destructive: var(--color-red-600);
-    --destructive-foreground:var(--color-white);
-    --border: --alpha(var(--color-foreground)/7.5%);
-    --input: var(--color-zinc-200);
-    --ring: var(--color-zinc-950);
-    --chart-1: var(--color-blue-500);
-    --chart-2: var(--color-indigo-500);
-    --chart-3: var(--color-purple-500);
-    --chart-4: var(--color-indigo-400);
-    --chart-5: var(--color-red-500);
-    --radius: 0.5rem
-  }
-
-  .dark {
     --background: var(--color-zinc-950);
     --foreground:var(--color-white);
     --card: color-mix(in oklab,var(--color-zinc-800)55%,#000);
@@ -138,6 +110,13 @@
     --destructive-foreground:var(--color-white);
     --input: var(--color-zinc-800);
     --ring: var(--color-white);
+    --border: --alpha(var(--color-foreground)/7.5%);
+    --chart-1: var(--color-blue-500);
+    --chart-2: var(--color-indigo-500);
+    --chart-3: var(--color-purple-500);
+    --chart-4: var(--color-indigo-400);
+    --chart-5: var(--color-red-500);
+    --radius: 0.5rem
   }
 
   * {
