@@ -17,8 +17,7 @@ export default function HeroSection() {
                             <div className="relative mx-auto max-w-7xl px-6">
                                 <Link
                                     href="/"
-                                    className="flex w-fit items-center gap-2 font-medium"
-                                >
+                                    className="flex w-fit items-center gap-2 font-medium">
                                     <span>New</span>
                                     <span className="text-muted-foreground">Introducing Tailark Dusk 1.0</span>
 
@@ -32,8 +31,7 @@ export default function HeroSection() {
 
                                         <Button
                                             className="w-fit"
-                                            asChild
-                                        >
+                                            asChild>
                                             <Link href="#">Get Started</Link>
                                         </Button>
                                     </div>
@@ -45,15 +43,8 @@ export default function HeroSection() {
                                     <div className="bg-background min-w-4xl lg:min-w-5xl xl:min-w-7xl ring-foreground/6.5 before:mask-radial-at-top-left before:mask-radial-from-65% before:mask-radial-[100%_60%] before:ring-foreground before:border-foreground/10 absolute left-4 top-4 z-10 rounded-2xl p-2 shadow-lg ring before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-l before:border-t lg:left-16 lg:top-16">
                                         <div className="bg-foreground/2 z-1 absolute inset-0 rounded-2xl"></div>
                                         <Image
-                                            className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
+                                            className="bg-background aspect-15/8 relative rounded-2xl"
                                             src="/mail2.png"
-                                            alt="app screen"
-                                            width="2700"
-                                            height="1440"
-                                        />
-                                        <Image
-                                            className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                            src="/mail2-light.png"
                                             alt="app screen"
                                             width="2700"
                                             height="1440"

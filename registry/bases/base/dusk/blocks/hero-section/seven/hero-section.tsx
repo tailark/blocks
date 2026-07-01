@@ -17,8 +17,7 @@ export default function HeroSection() {
                             <div>
                                 <Link
                                     href="/"
-                                    className="flex w-fit items-center gap-2 font-medium"
-                                >
+                                    className="flex w-fit items-center gap-2 font-medium">
                                     <span className="text-sm">New</span>
                                     <span className="text-muted-foreground text-sm">Introducing Tailark CRM 1.0</span>
 
@@ -52,17 +51,13 @@ export default function HeroSection() {
 
                             <div className="sm:aspect-5/3 lg:aspect-5/4 relative aspect-square overflow-hidden rounded-3xl lg:ml-auto lg:max-w-xl">
                                 <div className="bg-background min-w-3xl ring-foreground/6.5 before:mask-radial-at-top-left before:mask-radial-from-65% before:mask-radial-[100%_60%] before:ring-foreground before:border-foreground/10 absolute left-6 top-6 z-10 rounded-2xl p-2 shadow-lg ring before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-l before:border-t lg:left-8 lg:top-8">
-                                    <div className="bg-foreground/2 z-1 absolute inset-0 rounded-2xl"></div>
-                                    <Image
-                                        className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                                        src="/mail2.png"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
+                                    <div
+                                        aria-hidden
+                                        className="bg-foreground/2 z-1 absolute inset-0 rounded-2xl"
                                     />
                                     <Image
-                                        className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                        src="/mail2-light.png"
+                                        className="bg-background aspect-15/8 relative rounded-2xl"
+                                        src="/mail2.png"
                                         alt="app screen"
                                         width="2700"
                                         height="1440"
