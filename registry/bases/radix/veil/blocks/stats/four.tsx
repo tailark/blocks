@@ -32,7 +32,8 @@ export default function Stats() {
             </div>
             <div
                 aria-hidden
-                className="mask-radial-from-65% mask-radial-at-bottom mask-radial-[50%_100%] sm:min-w-6xl pointer-events-none relative sm:absolute sm:bottom-0 sm:left-1/2 sm:right-0 dark:opacity-50">
+                className="mask-radial-from-65% mask-radial-at-bottom mask-radial-[50%_100%] sm:min-w-6xl pointer-events-none relative sm:absolute sm:bottom-0 sm:left-1/2 sm:right-0 dark:opacity-50"
+            >
                 <div className="bg-primary absolute inset-0 z-10 mix-blend-overlay" />
                 <Image
                     src="https://images.unsplash.com/photo-1723307060937-b003478a2c03?q=80&w=2928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

@@ -25,7 +25,8 @@ export default function Pricing() {
                             <Button
                                 asChild
                                 variant="outline"
-                                className="w-full">
+                                className="w-full"
+                            >
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>
@@ -34,7 +35,8 @@ export default function Pricing() {
                             {['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
                                 <li
                                     key={index}
-                                    className="flex items-center gap-3">
+                                    className="flex items-center gap-3"
+                                >
                                     <Check className="text-muted-foreground size-3" />
                                     {item}
                                 </li>
@@ -53,7 +55,8 @@ export default function Pricing() {
 
                             <Button
                                 asChild
-                                className="w-full">
+                                className="w-full"
+                            >
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>
@@ -62,7 +65,8 @@ export default function Pricing() {
                             {['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
                                 <li
                                     key={index}
-                                    className="flex items-center gap-3">
+                                    className="flex items-center gap-3"
+                                >
                                     <Check className="text-muted-foreground size-3" />
                                     {item}
                                 </li>
@@ -82,7 +86,8 @@ export default function Pricing() {
                             <Button
                                 asChild
                                 className="w-full"
-                                variant="outline">
+                                variant="outline"
+                            >
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>
@@ -91,7 +96,8 @@ export default function Pricing() {
                             {['Everything in Pro Plan', '10GB Cloud Storage', 'Email and Chat Support', '12 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
                                 <li
                                     key={index}
-                                    className="flex items-center gap-3">
+                                    className="flex items-center gap-3"
+                                >
                                     <Check className="text-muted-foreground size-3" />
                                     {item}
                                 </li>
@@ -111,7 +117,8 @@ export default function Pricing() {
                             <Button
                                 asChild
                                 className="w-full"
-                                variant="outline">
+                                variant="outline"
+                            >
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>
@@ -120,7 +127,8 @@ export default function Pricing() {
                             {['Everything in Startup Plan', 'Unlimited Cloud Storage', 'Unlimited User Access', 'Daily Product Updates'].map((item, index) => (
                                 <li
                                     key={index}
-                                    className="flex items-center gap-3">
+                                    className="flex items-center gap-3"
+                                >
                                     <Check className="text-muted-foreground size-3" />
                                     {item}
                                 </li>

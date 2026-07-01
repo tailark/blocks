@@ -44,7 +44,8 @@ export default function Footer() {
                     <div className="col-span-full lg:col-span-3">
                         <Link
                             href="/"
-                            aria-label="go home">
+                            aria-label="go home"
+                        >
                             <LogoIcon uniColor />
                         </Link>
                     </div>
@@ -57,7 +58,8 @@ export default function Footer() {
                                     <li key={index}>
                                         <Link
                                             href={link.href}
-                                            className="hover:text-primary text-muted-foreground text-sm duration-150">
+                                            className="hover:text-primary text-muted-foreground text-sm duration-150"
+                                        >
                                             {link.label}
                                         </Link>
                                     </li>
@@ -73,40 +75,48 @@ export default function Footer() {
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                asChild>
+                                asChild
+                            >
                                 <Link
                                     href="#"
-                                    aria-label="Claude AI">
+                                    aria-label="Claude AI"
+                                >
                                     <ClaudeAI />
                                 </Link>
                             </Button>
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                asChild>
+                                asChild
+                            >
                                 <Link
                                     href="#"
-                                    aria-label="OpenAI">
+                                    aria-label="OpenAI"
+                                >
                                     <Openai />
                                 </Link>
                             </Button>
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                asChild>
+                                asChild
+                            >
                                 <Link
                                     href="#"
-                                    aria-label="Perplexity">
+                                    aria-label="Perplexity"
+                                >
                                     <Perplexity className="size-5!" />
                                 </Link>
                             </Button>
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                asChild>
+                                asChild
+                            >
                                 <Link
                                     href="#"
-                                    aria-label="Gemini">
+                                    aria-label="Gemini"
+                                >
                                     <Gemini />
                                 </Link>
                             </Button>

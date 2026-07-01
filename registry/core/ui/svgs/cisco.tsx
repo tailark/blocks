@@ -1,12 +1,13 @@
 import type { SVGProps } from 'react'
-export const Cisco = (props: SVGProps<SVGSVGElement>) => (
+export const Cisco = (props: SVGProps) => (
     <svg
         width="1em"
         height="1em"
         viewBox="0 0 52 28"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...props}>
+        {...props}
+    >
         <path
             fillRule="evenodd"
             clipRule="evenodd"

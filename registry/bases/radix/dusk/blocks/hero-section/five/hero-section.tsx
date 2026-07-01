@@ -20,7 +20,8 @@ export default function HeroSection() {
                                     <div className="flex items-center gap-2">
                                         <Button
                                             asChild
-                                            className="pr-2.5">
+                                            className="pr-2.5"
+                                        >
                                             <Link href="#link">
                                                 <span className="text-nowrap">Start Building</span>
                                                 <ChevronRight className="ml-1" />

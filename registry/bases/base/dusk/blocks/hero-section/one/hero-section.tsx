@@ -3,8 +3,6 @@ import Link from 'next/link'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import { Button } from '@/registry/bases/base/dusk/ui/button'
 import Image from 'next/image'
-import { TextEffect } from '@/registry/core/ui/motion-primitives/text-effect'
-import { AnimatedGroup, type AnimatedGroupProps } from '@/registry/core/ui/motion-primitives/animated-group'
 import { HeroHeader } from '@/registry/bases/base/dusk/blocks/hero-section/one/header'
 import { Spotify } from '@/registry/core/ui/svgs/spotify'
 import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
@@ -15,26 +13,6 @@ import { Beacon } from '@/registry/core/ui/svgs/beacon'
 import { Claude } from '@/registry/core/ui/svgs/claude'
 import { VercelFull } from '@/registry/core/ui/svgs/vercel'
 
-const transitionVariants: AnimatedGroupProps['variants'] = {
-    item: {
-        hidden: {
-            opacity: 0,
-            filter: 'blur(12px)',
-            y: 12,
-        },
-        visible: {
-            opacity: 1,
-            filter: 'blur(0px)',
-            y: 0,
-            transition: {
-                type: 'spring',
-                bounce: 0.3,
-                duration: 1.5,
-            },
-        },
-    },
-}
-
 export default function HeroSection() {
     return (
         <>
@@ -42,142 +20,58 @@ export default function HeroSection() {
             <main className="overflow-hidden">
                 <section>
                     <div className="relative pt-24 md:pt-36">
-                        <AnimatedGroup
-                            variants={{
-                                container: {
-                                    visible: {
-                                        transition: {
-                                            delayChildren: 1,
-                                        },
-                                    },
-                                },
-                                item: {
-                                    hidden: {
-                                        opacity: 0,
-                                        y: 20,
-                                    },
-                                    visible: {
-                                        opacity: 1,
-                                        y: 0,
-                                        transition: {
-                                            type: 'spring',
-                                            bounce: 0.3,
-                                            duration: 2,
-                                        },
-                                    },
-                                },
-                            }}
-                            className="mask-y-from-35% mask-y-to-90% absolute inset-0 top-56 lg:top-12">
-                            <Image
-                                src="https://images.unsplash.com/photo-1662285064441-bedb11ca7e47?q=80&w=1344&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="background"
-                                className="hidden size-full mix-blend-overlay dark:block"
-                                width="3276"
-                                height="4095"
-                            />
-                        </AnimatedGroup>
+                        <div className="mx-auto max-w-7xl">
+                            <div className="px-6 text-center sm:mx-auto lg:mr-auto lg:mt-0">
+                                <Link
+                                    href="#link"
+                                    className="group mx-auto flex w-fit items-center gap-3 rounded-full p-1 pl-4 transition-colors duration-300"
+                                >
+                                    <span className="text-sm font-medium">New:</span>
+                                    <span className="text-muted-foreground text-sm">Introducing the living customer graph</span>
 
-                        <div
-                            aria-hidden
-                            className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"
-                        />
-
-                        <div className="mx-auto max-w-7xl px-6">
-                            <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
-                                <AnimatedGroup variants={transitionVariants}>
-                                    <Link
-                                        href="#link"
-                                        className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
-                                        <span className="text-foreground text-sm">Introducing Support for AI Models</span>
-                                        <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
-
-                                        <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                                            <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                                                <span className="flex size-6">
-                                                    <ArrowRight className="m-auto size-3" />
-                                                </span>
-                                                <span className="flex size-6">
-                                                    <ArrowRight className="m-auto size-3" />
-                                                </span>
-                                            </div>
+                                    <div className="size-6 overflow-hidden rounded-full duration-500">
+                                        <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
+                                            <span className="flex size-6">
+                                                <ArrowRight className="m-auto size-3" />
+                                            </span>
+                                            <span className="flex size-6">
+                                                <ArrowRight className="m-auto size-3" />
+                                            </span>
                                         </div>
-                                    </Link>
-                                </AnimatedGroup>
-
-                                <TextEffect
-                                    preset="fade-in-blur"
-                                    speedSegment={0.3}
-                                    as="h1"
-                                    className="mx-auto mt-8 max-w-4xl text-balance text-5xl max-md:font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                                    Modern Solutions for Customer Engagement
-                                </TextEffect>
-                                <TextEffect
-                                    per="line"
-                                    preset="fade-in-blur"
-                                    speedSegment={0.3}
-                                    delay={0.5}
-                                    as="p"
-                                    className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                    Highly customizable components for building modern websites and applications that look and feel the way you mean it.
-                                </TextEffect>
-
-                                <AnimatedGroup
-                                    variants={{
-                                        container: {
-                                            visible: {
-                                                transition: {
-                                                    staggerChildren: 0.05,
-                                                    delayChildren: 0.75,
-                                                },
-                                            },
-                                        },
-                                        ...transitionVariants,
-                                    }}
-                                    className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
-                                    <div
-                                        key={1}
-                                        className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
-                                        <Button
-                                            nativeButton={false}
-                                            render={
-                                                <Link href="#link">
-                                                    <span className="text-nowrap">Start Building</span>
-                                                </Link>
-                                            }
-                                            size="lg"
-                                            className="rounded-xl px-5 text-base"
-                                        />
                                     </div>
+                                </Link>
+
+                                <h1 className="mx-auto mt-8 max-w-4xl text-balance text-5xl font-medium tracking-tight md:text-6xl lg:mt-12 xl:text-7xl">Customer universe, beautifully connected</h1>
+                                <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-balance md:text-lg">Every account, signal, conversation, and next move in one living workspace that helps teams turn momentum into revenue.</p>
+
+                                <div className="mt-6 flex flex-col items-center justify-center gap-2 md:flex-row">
                                     <Button
+                                        key={1}
                                         nativeButton={false}
                                         render={
-                                            <Link href="#link">
-                                                <span className="text-nowrap">Request a demo</span>
+                                            <Link href="#">
+                                                <span className="text-nowrap">Explore the graph</span>
                                             </Link>
                                         }
-                                        key={2}
-                                        size="lg"
-                                        variant="ghost"
-                                        className="h-10.5 rounded-xl px-5"
                                     />
-                                </AnimatedGroup>
-                            </div>
-                        </div>
 
-                        <AnimatedGroup
-                            variants={{
-                                container: {
-                                    visible: {
-                                        transition: {
-                                            staggerChildren: 0.05,
-                                            delayChildren: 0.75,
-                                        },
-                                    },
-                                },
-                                ...transitionVariants,
-                            }}>
-                            <div className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
+                                    <Button
+                                        key={2}
+                                        variant="ghost"
+                                        nativeButton={false}
+                                        render={
+                                            <Link href="#">
+                                                <span className="text-nowrap">Watch the flow</span>
+                                            </Link>
+                                        }
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="relative mt-8 overflow-hidden p-6 max-sm:-mr-56 sm:mt-16">
+                                <div className="rounded-4xl mask-t-from-25% mask-t-to-65% bg-linear-to-b absolute inset-0 border to-zinc-600"></div>
+                                <div className="bg-background ring-foreground/6.5 before:mask-radial-at-top-left before:mask-radial-from-65% before:mask-radial-[100%_60%] before:ring-foreground before:border-foreground/10 relative rounded-2xl p-2 shadow-xl shadow-black/50 ring before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-l before:border-t">
+                                    <div className="bg-foreground/2 z-1 absolute inset-0 rounded-2xl"></div>
                                     <Image
                                         className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
                                         src="/mail2.png"
@@ -194,16 +88,18 @@ export default function HeroSection() {
                                     />
                                 </div>
                             </div>
-                        </AnimatedGroup>
+                        </div>
                     </div>
                 </section>
-                <section className="bg-background pb-16 pt-16 md:pb-32">
+
+                <section className="bg-background pb-16 pt-6 md:pb-32">
                     <div className="group relative m-auto max-w-5xl px-6">
                         <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
                             <Link
                                 href="/"
-                                className="block text-sm duration-150 hover:opacity-75">
-                                <span> Meet Our Customers</span>
+                                className="block text-sm duration-150 hover:opacity-75"
+                            >
+                                <span> See the network</span>
 
                                 <ChevronRight className="ml-1 inline-block size-3" />
                             </Link>
@@ -227,11 +123,11 @@ export default function HeroSection() {
                             <div className="flex items-center">
                                 <FirebaseFull className="mx-auto h-6 w-full" />
                             </div>
-                            <div className="flex items-center">
+                            <div className="hidden items-center sm:flex">
                                 <Beacon className="mx-auto h-4 w-full" />
                             </div>
 
-                            <div className="flex items-center">
+                            <div className="hidden items-center sm:flex">
                                 <Claude className="mx-auto h-5 w-full" />
                             </div>
                         </div>

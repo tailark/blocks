@@ -9,12 +9,14 @@ export default function ForgotPassword() {
         <section className="bg-linear-to-b from-muted to-background flex min-h-screen px-4 py-16 md:py-32">
             <form
                 action=""
-                className="max-w-92 m-auto h-fit w-full">
+                className="max-w-92 m-auto h-fit w-full"
+            >
                 <div className="p-6">
                     <div>
                         <Link
                             href="/mist"
-                            aria-label="go home">
+                            aria-label="go home"
+                        >
                             <LogoIcon />
                         </Link>
                         <h1 className="mt-6 text-balance text-xl font-semibold">Forgot Your Password?</h1>
@@ -25,7 +27,8 @@ export default function ForgotPassword() {
                         <div className="space-y-2">
                             <Label
                                 htmlFor="email"
-                                className="block text-sm">
+                                className="block text-sm"
+                            >
                                 Email
                             </Label>
                             <Input
@@ -40,7 +43,8 @@ export default function ForgotPassword() {
 
                         <Button
                             className="w-full"
-                            size="default">
+                            size="default"
+                        >
                             Send Reset Link
                         </Button>
                     </div>
@@ -51,7 +55,8 @@ export default function ForgotPassword() {
                         <Button
                             asChild
                             variant="link"
-                            className="px-2">
+                            className="px-2"
+                        >
                             <Link href="#">Sign In</Link>
                         </Button>
                     </p>

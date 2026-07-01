@@ -1,6 +1,6 @@
 import { type SVGProps } from 'react'
 
-export function MediaWiki(props: SVGProps<SVGSVGElement>) {
+export function MediaWiki(props: SVGProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,8 @@ export function MediaWiki(props: SVGProps<SVGSVGElement>) {
             viewBox="0 0 50 50"
             width="1em"
             height="1em"
-            {...props}>
+            {...props}
+        >
             <defs id="defs11">
                 <linearGradient
                     id="gradient"
@@ -17,7 +18,8 @@ export function MediaWiki(props: SVGProps<SVGSVGElement>) {
                     x2={100}
                     y1={100}
                     y2={0}
-                    gradientUnits="userSpaceOnUse">
+                    gradientUnits="userSpaceOnUse"
+                >
                     <stop
                         id="stop2"
                         offset="0%"
@@ -264,7 +266,8 @@ export function MediaWiki(props: SVGProps<SVGSVGElement>) {
             <g
                 id="petals"
                 fill="url(#linearGradient921)"
-                transform="matrix(.5 0 0 .5 0 .026)">
+                transform="matrix(.5 0 0 .5 0 .026)"
+            >
                 <path
                     id="path13"
                     fill="url(#linearGradient873)"

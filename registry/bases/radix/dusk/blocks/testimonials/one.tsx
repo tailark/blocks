@@ -32,7 +32,8 @@ export default function Testimonials() {
                                 <Button
                                     size="icon"
                                     variant="secondary"
-                                    className="inset-ring inset-ring-black/10 self-end bg-black/20">
+                                    className="inset-ring inset-ring-black/10 self-end bg-black/20"
+                                >
                                     <Play
                                         fill="white"
                                         stroke="white"

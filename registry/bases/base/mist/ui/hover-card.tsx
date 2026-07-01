@@ -10,13 +10,14 @@ type HoverCardProps = HoverCardPrimitive.Root.Props & {
     closeDelay?: number
 }
 
-const HoverCardDelayContext = React.createContext<Pick<HoverCardProps, 'openDelay' | 'closeDelay'>>({})
+const HoverCardDelayContext = React.createContext({})
 
 function HoverCard({ openDelay, closeDelay, children, ...props }: HoverCardProps) {
     return (
         <HoverCardPrimitive.Root
             data-slot="hover-card"
-            {...props}>
+            {...props}
+        >
             <HoverCardDelayContext.Provider value={{ openDelay, closeDelay }}>{children as React.ReactNode}</HoverCardDelayContext.Provider>
         </HoverCardPrimitive.Root>
     )
@@ -35,7 +36,7 @@ function HoverCardTrigger({ delay, closeDelay, ...props }: HoverCardPrimitive.Tr
     )
 }
 
-type HoverCardContentProps = HoverCardPrimitive.Popup.Props & Pick<HoverCardPrimitive.Positioner.Props, 'align' | 'side' | 'sideOffset'>
+type HoverCardContentProps = HoverCardPrimitive.Popup.Props & Pick
 
 function HoverCardContent({ className, align = 'center', sideOffset = 4, side, ...props }: HoverCardContentProps) {
     return (
@@ -44,7 +45,8 @@ function HoverCardContent({ className, align = 'center', sideOffset = 4, side, .
                 data-slot="hover-card-positioner"
                 align={align}
                 side={side}
-                sideOffset={sideOffset}>
+                sideOffset={sideOffset}
+            >
                 <HoverCardPrimitive.Popup
                     data-slot="hover-card-content"
                     className={cn(

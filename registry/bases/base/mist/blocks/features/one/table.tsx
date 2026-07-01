@@ -59,7 +59,8 @@ export const Table = ({ className }: { className?: string }) => {
             </div>
             <table
                 className="w-max table-auto border-collapse lg:w-full"
-                data-rounded="medium">
+                data-rounded="medium"
+            >
                 <thead className="dark:bg-background bg-gray-950/5">
                     <tr className="*:border *:p-3 *:text-left *:text-sm *:font-medium">
                         <th className="rounded-l-[--card-radius]">#</th>
@@ -73,7 +74,8 @@ export const Table = ({ className }: { className?: string }) => {
                     {customers.map((customer) => (
                         <tr
                             key={customer.id}
-                            className="*:border *:p-2">
+                            className="*:border *:p-2"
+                        >
                             <td>{customer.id}</td>
                             <td>{customer.date}</td>
                             <td>

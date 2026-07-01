@@ -11,7 +11,8 @@ export default function CallToAction() {
             <div className="mx-auto max-w-2xl px-6">
                 <Card
                     variant="outline"
-                    className="@xl:grid-cols-2 grid gap-8 p-6 md:p-8">
+                    className="@xl:grid-cols-2 grid gap-8 p-6 md:p-8"
+                >
                     <div>
                         <h2 className="text-balance font-serif text-3xl font-medium">Transform Your Workflow</h2>
                         <p className="text-muted-foreground mt-3 text-balance">Experience the power of seamless integrations and watch your productivity soar.</p>
@@ -19,7 +20,8 @@ export default function CallToAction() {
                             {benefits.map((benefit, index) => (
                                 <li
                                     key={index}
-                                    className="text-muted-foreground flex items-center gap-2 text-sm">
+                                    className="text-muted-foreground flex items-center gap-2 text-sm"
+                                >
                                     <Check className="text-primary size-4" />
                                     {benefit}
                                 </li>

@@ -49,7 +49,8 @@ export default function TestimonialSection() {
                                     <div className="text-foreground text-sm font-medium">{testimonial.name}</div>
                                     <span
                                         aria-hidden
-                                        className="bg-foreground/25 size-1 rounded-full"></span>
+                                        className="bg-foreground/25 size-1 rounded-full"
+                                    ></span>
                                     <span className="text-muted-foreground text-sm">{testimonial.role}</span>
                                 </div>
                             </div>

@@ -45,7 +45,8 @@ function DynamicIslandIllustration() {
     return (
         <div
             aria-hidden
-            className="z-1 bg-black/2.5 mask-b-from-90% absolute inset-x-8 bottom-0 mx-auto mt-auto h-2/3 w-10/12 origin-bottom scale-95 rounded-t-[4rem] border border-black/5 px-4 pt-4">
+            className="z-1 bg-black/2.5 mask-b-from-90% absolute inset-x-8 bottom-0 mx-auto mt-auto h-2/3 w-10/12 origin-bottom scale-95 rounded-t-[4rem] border border-black/5 px-4 pt-4"
+        >
             <div className="shadow-black/6.5 h-full overflow-hidden rounded-t-[3rem] bg-white p-3 shadow-xl ring ring-black/10">
                 <div className="relative">
                     <Image

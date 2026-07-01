@@ -28,7 +28,8 @@ export default function ContentSection() {
                             asChild
                             variant="secondary"
                             size="sm"
-                            className="gap-1 pr-1.5">
+                            className="gap-1 pr-1.5"
+                        >
                             <Link href="#">
                                 <span>Explore CRM</span>
                                 <ChevronRight className="size-2" />

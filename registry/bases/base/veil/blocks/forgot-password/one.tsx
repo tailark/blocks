@@ -12,7 +12,8 @@ export default function ForgotPassword() {
                 <Link
                     href="/"
                     aria-label="go home"
-                    className="inline-block border-t-2 border-transparent py-3">
+                    className="inline-block border-t-2 border-transparent py-3"
+                >
                     <Logo className="w-fit" />
                 </Link>
             </div>
@@ -24,14 +25,17 @@ export default function ForgotPassword() {
                 </div>
                 <Card
                     variant="outline"
-                    className="mt-6 p-8">
+                    className="mt-6 p-8"
+                >
                     <form
                         action=""
-                        className="space-y-5">
+                        className="space-y-5"
+                    >
                         <div className="space-y-3">
                             <Label
                                 htmlFor="email"
-                                className="text-sm">
+                                className="text-sm"
+                            >
                                 Email
                             </Label>
                             <Input
@@ -51,7 +55,8 @@ export default function ForgotPassword() {
                     Remember your password?{' '}
                     <Link
                         href="#"
-                        className="text-primary font-medium hover:underline">
+                        className="text-primary font-medium hover:underline"
+                    >
                         Sign in
                     </Link>
                 </p>

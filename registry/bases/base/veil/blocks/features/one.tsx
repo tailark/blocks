@@ -18,14 +18,16 @@ export default function Features() {
                 <div className="@xl:grid-cols-2 mt-12 grid gap-3 *:p-6">
                     <Card
                         variant="outline"
-                        className="row-span-2 grid grid-rows-subgrid">
+                        className="row-span-2 grid grid-rows-subgrid"
+                    >
                         <div className="space-y-2">
                             <h3 className="text-foreground font-medium">Seamless Integrations</h3>
                             <p className="text-muted-foreground text-sm">Connect your favorite tools and services with just a few clicks.</p>
                         </div>
                         <div
                             aria-hidden
-                            className="**:fill-foreground flex h-44 flex-col justify-between pt-8">
+                            className="**:fill-foreground flex h-44 flex-col justify-between pt-8"
+                        >
                             <div className="relative flex h-10 items-center gap-12 px-6">
                                 <div className="bg-border absolute inset-0 my-auto h-px" />
 
@@ -60,14 +62,16 @@ export default function Features() {
                     </Card>
                     <Card
                         variant="outline"
-                        className="row-span-2 grid grid-rows-subgrid overflow-hidden">
+                        className="row-span-2 grid grid-rows-subgrid overflow-hidden"
+                    >
                         <div className="space-y-2">
                             <h3 className="text-foreground font-medium">Real-time Sync</h3>
                             <p className="text-muted-foreground text-sm">Keep your data synchronized across all platforms automatically.</p>
                         </div>
                         <div
                             aria-hidden
-                            className="relative h-44 translate-y-6">
+                            className="relative h-44 translate-y-6"
+                        >
                             <div className="bg-foreground/15 absolute inset-0 mx-auto w-px" />
                             <div className="absolute -inset-x-16 top-6 aspect-square rounded-full border" />
                             <div className="border-primary mask-l-from-50% mask-l-to-90% mask-r-from-50% mask-r-to-50% absolute -inset-x-16 top-6 aspect-square rounded-full border" />
@@ -77,14 +81,16 @@ export default function Features() {
                     </Card>
                     <Card
                         variant="outline"
-                        className="row-span-2 grid grid-rows-subgrid overflow-hidden">
+                        className="row-span-2 grid grid-rows-subgrid overflow-hidden"
+                    >
                         <div className="space-y-2">
                             <h3 className="text-foreground font-medium">Developer First</h3>
                             <p className="text-muted-foreground mt-2 text-sm">Built with developers in mind, featuring comprehensive APIs and SDKs.</p>
                         </div>
                         <div
                             aria-hidden
-                            className="*:bg-foreground/15 flex h-44 justify-between pb-6 pt-12 *:h-full *:w-px">
+                            className="*:bg-foreground/15 flex h-44 justify-between pb-6 pt-12 *:h-full *:w-px"
+                        >
                             <div />
                             <div />
                             <div />
@@ -121,7 +127,8 @@ export default function Features() {
                     </Card>
                     <Card
                         variant="outline"
-                        className="row-span-2 grid grid-rows-subgrid">
+                        className="row-span-2 grid grid-rows-subgrid"
+                    >
                         <div className="space-y-2">
                             <h3 className="font-medium">Enterprise Ready</h3>
                             <p className="text-muted-foreground text-sm">Scale confidently with enterprise-grade security and reliability.</p>

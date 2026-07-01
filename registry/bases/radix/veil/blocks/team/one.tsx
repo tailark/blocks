@@ -27,7 +27,8 @@ export default function Team() {
                     {members.map((member, index) => (
                         <div
                             key={index}
-                            className="relative grid grid-cols-[auto_1fr] gap-4">
+                            className="relative grid grid-cols-[auto_1fr] gap-4"
+                        >
                             <div
                                 aria-hidden
                                 className="max-h-26 absolute -inset-x-6 inset-y-1 border-y"

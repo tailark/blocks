@@ -15,7 +15,8 @@ export default function HeroSection() {
                     <div className="mx-auto max-w-7xl px-6">
                         <Link
                             href="/"
-                            className="mx-auto flex w-fit items-center gap-2 font-medium">
+                            className="mx-auto flex w-fit items-center gap-2 font-medium"
+                        >
                             <span>New</span>
                             <span className="text-muted-foreground">Introducing Tailark Dusk 1.0</span>
 
@@ -27,7 +28,8 @@ export default function HeroSection() {
                             <Button
                                 className="mx-auto w-fit"
                                 size="lg"
-                                asChild>
+                                asChild
+                            >
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>

@@ -26,7 +26,7 @@ const buttonVariants = cva('cursor-pointer font-medium inline-flex items-center 
     },
 })
 
-function Button({ className, variant = 'default', size = 'default', ...props }: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
+function Button({ className, variant = 'default', size = 'default', ...props }: ButtonPrimitive.Props & VariantProps) {
     return (
         <ButtonPrimitive
             data-slot="button"

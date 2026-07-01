@@ -6,7 +6,8 @@ export const Logo = ({ className, uniColor }: { className?: string; uniColor?: b
             className={cn('text-foreground h-6 w-full', className)}
             viewBox="0 0 797 220"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+        >
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -24,7 +25,8 @@ export const Logo = ({ className, uniColor }: { className?: string; uniColor?: b
                     y1="0"
                     x2="90"
                     y2="220"
-                    gradientUnits="userSpaceOnUse">
+                    gradientUnits="userSpaceOnUse"
+                >
                     <stop stopColor="#9B99FE" />
                     <stop
                         offset="1"
@@ -42,7 +44,8 @@ export const LogoIcon = ({ className, uniColor }: { className?: string; uniColor
             className={cn('size-6', className)}
             viewBox="0 0 180 220"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+        >
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -56,7 +59,8 @@ export const LogoIcon = ({ className, uniColor }: { className?: string; uniColor
                     y1="0"
                     x2="90"
                     y2="220"
-                    gradientUnits="userSpaceOnUse">
+                    gradientUnits="userSpaceOnUse"
+                >
                     <stop stopColor="#9B99FE" />
                     <stop
                         offset="1"

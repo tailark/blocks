@@ -35,7 +35,8 @@ export default function Footer() {
                     <div className="col-span-full">
                         <Link
                             href="/"
-                            className="flex items-center gap-2">
+                            className="flex items-center gap-2"
+                        >
                             <Logo className="h-5 w-fit" />
                         </Link>
                         <p className="text-muted-foreground mt-4 max-w-xs text-sm">Building the future of integrations. Connect your tools, automate your workflow.</p>
@@ -47,7 +48,8 @@ export default function Footer() {
                                 <li key={link.label}>
                                     <Link
                                         href={link.href}
-                                        className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                                        className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                                    >
                                         {link.label}
                                     </Link>
                                 </li>
@@ -61,7 +63,8 @@ export default function Footer() {
                                 <li key={link.label}>
                                     <Link
                                         href={link.href}
-                                        className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                                        className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                                    >
                                         {link.label}
                                     </Link>
                                 </li>
@@ -75,7 +78,8 @@ export default function Footer() {
                                 <li key={link.label}>
                                     <Link
                                         href={link.href}
-                                        className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                                        className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                                    >
                                         {link.label}
                                     </Link>
                                 </li>
@@ -90,7 +94,8 @@ export default function Footer() {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                                className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                            >
                                 {link.label}
                             </Link>
                         ))}

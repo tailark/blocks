@@ -32,7 +32,8 @@ export default function ContentSection() {
                         <div className="border-t">
                             <ul
                                 role="list"
-                                className="text-muted-foreground mt-8 space-y-2">
+                                className="text-muted-foreground mt-8 space-y-2"
+                            >
                                 {[
                                     { value: '90+', label: 'Integrations' },
                                     { value: '56%', label: 'Productivity Boost' },
@@ -41,7 +42,8 @@ export default function ContentSection() {
                                 ].map((stat, index) => (
                                     <li
                                         key={index}
-                                        className="-ml-0.5 flex items-center gap-1.5">
+                                        className="-ml-0.5 flex items-center gap-1.5"
+                                    >
                                         <ArrowRight className="size-4 opacity-50" />
                                         <span className="text-foreground font-medium">{stat.value}</span> {stat.label}
                                     </li>

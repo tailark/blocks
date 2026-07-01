@@ -30,7 +30,8 @@ export default function Team() {
                     {members.map((member, index) => (
                         <div
                             key={index}
-                            className="flex flex-col gap-4">
+                            className="flex flex-col gap-4"
+                        >
                             <div className="before:border-foreground/10 shadow-foreground/6.5 dark:shadow-black/6.5 relative size-28 shrink-0 rounded-xl shadow-md before:absolute before:inset-0 before:rounded-xl before:border">
                                 <Image
                                     src={member.avatar}

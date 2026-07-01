@@ -18,7 +18,8 @@ export default function Footer() {
                     <div className="@xl:flex-row @xl:items-center flex flex-col gap-6">
                         <Link
                             href="/"
-                            aria-label="home">
+                            aria-label="home"
+                        >
                             <Logo className="h-5 w-fit" />
                         </Link>
                         <nav className="@xl:ml-auto flex flex-wrap gap-x-6 gap-y-2">
@@ -26,7 +27,8 @@ export default function Footer() {
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                                    className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                                >
                                     {link.label}
                                 </Link>
                             ))}
@@ -38,17 +40,20 @@ export default function Footer() {
                     <div className="flex flex-wrap gap-4">
                         <Link
                             href="#"
-                            className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                            className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                        >
                             Privacy Policy
                         </Link>
                         <Link
                             href="#"
-                            className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                            className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                        >
                             Terms of Service
                         </Link>
                         <Link
                             href="#"
-                            className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                            className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                        >
                             Cookies
                         </Link>
                     </div>

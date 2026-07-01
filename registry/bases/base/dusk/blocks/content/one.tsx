@@ -1,51 +1,41 @@
+import { Button } from '@/registry/bases/base/dusk/ui/button'
+import { ChevronRight } from 'lucide-react'
 import Image from 'next/image'
-import { Spotify } from '@/registry/core/ui/svgs/spotify'
+import Link from 'next/link'
 
 export default function ContentSection() {
     return (
         <section className="py-16 md:py-32">
-            <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-                <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl">The Lyra ecosystem brings together our models.</h2>
-                <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
-                    <div className="relative mb-6 sm:mb-0">
-                        <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700">
-                            <Image
-                                src="/payments.png"
-                                className="hidden rounded-[15px] dark:block"
-                                alt="payments illustration dark"
-                                width={1207}
-                                height={929}
-                            />
-                            <Image
-                                src="/payments-light.png"
-                                className="rounded-[15px] shadow dark:hidden"
-                                alt="payments illustration light"
-                                width={1207}
-                                height={929}
-                            />
-                        </div>
-                    </div>
+            <div className="mx-auto max-w-7xl space-y-12 px-6 md:space-y-16">
+                <div className="aspect-video">
+                    <Image
+                        className="size-full rounded-xl object-cover grayscale"
+                        src="https://images.unsplash.com/photo-1530099486328-e021101a494a?q=80&w=2747&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="team image"
+                        height="1080"
+                        width="1920"
+                        loading="lazy"
+                    />
+                </div>
 
-                    <div className="relative space-y-4">
-                        <p className="text-muted-foreground">
-                            Gemini is evolving to be more than just the models. <span className="text-accent-foreground font-bold">It supports an entire ecosystem</span> — from products innovate.
-                        </p>
-                        <p className="text-muted-foreground">It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate</p>
+                <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:gap-12">
+                    <h2 className="max-w-md text-balance text-4xl font-medium tracking-tight lg:text-5xl">A CRM workspace for every customer relationship.</h2>
+                    <div className="space-y-6">
+                        <p className="text-muted-foreground text-balance text-lg">Tailark keeps pipeline, conversations, tasks, and account history connected so teams can spot the next best move, follow up with context, and turn every customer signal into momentum.</p>
 
-                        <div className="pt-6">
-                            <blockquote className="border-l-4 pl-4">
-                                <p>Using TailsUI has been like unlocking a secret design superpower. It's the perfect fusion of simplicity and versatility, enabling us to create UIs that are as stunning as they are user-friendly.</p>
-
-                                <div className="mt-6 space-y-3">
-                                    <cite className="block font-medium">John Doe, CEO</cite>
-                                    <Spotify
-                                        height={24}
-                                        width={80}
-                                        className="**:fill-foreground"
-                                    />
-                                </div>
-                            </blockquote>
-                        </div>
+                        <p className="text-muted-foreground text-balance text-lg">Modern sales teams move faster when every account, conversation, and next step lives in one place. </p>
+                        <Button
+                            variant="secondary"
+                            size="sm"
+                            className="gap-1 pr-1.5"
+                            nativeButton={false}
+                            render={
+                                <Link href="#">
+                                    <span>Explore CRM</span>
+                                    <ChevronRight className="size-2" />
+                                </Link>
+                            }
+                        />
                     </div>
                 </div>
             </div>

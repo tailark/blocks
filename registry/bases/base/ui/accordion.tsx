@@ -29,7 +29,8 @@ function AccordionTrigger({ className, children, ...props }: AccordionPrimitive.
             <AccordionPrimitive.Trigger
                 data-slot="accordion-trigger"
                 className={cn('focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium outline-none transition-all hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50', className)}
-                {...props}>
+                {...props}
+            >
                 {children}
                 <ChevronDownIcon
                     data-slot="accordion-trigger-icon"
@@ -49,7 +50,8 @@ function AccordionContent({ className, children, ...props }: AccordionPrimitive.
         <AccordionPrimitive.Panel
             data-slot="accordion-content"
             className="data-open:animate-accordion-down data-closed:animate-accordion-up overflow-hidden text-sm"
-            {...props}>
+            {...props}
+        >
             <div className={cn('h-(--accordion-panel-height) data-ending-style:h-0 data-starting-style:h-0 [&_a]:underline-offset-3 [&_a]:hover:text-foreground pb-2.5 pt-0 [&_a]:underline [&_p:not(:last-child)]:mb-4', className)}>{children}</div>
         </AccordionPrimitive.Panel>
     )

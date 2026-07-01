@@ -1,196 +1,49 @@
-import React from 'react'
 import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
 import { Button } from '@/registry/bases/base/dusk/ui/button'
 import Image from 'next/image'
-import { TextEffect } from '@/registry/core/ui/motion-primitives/text-effect'
-import { AnimatedGroup, type AnimatedGroupProps } from '@/registry/core/ui/motion-primitives/animated-group'
 import { HeroHeader } from '@/registry/bases/base/dusk/blocks/hero-section/two/header'
-import { Spotify } from '@/registry/core/ui/svgs/spotify'
-import { SupabaseFull } from '@/registry/core/ui/svgs/supabase'
-import { Hulu } from '@/registry/core/ui/svgs/hulu'
-import { Bolt } from '@/registry/core/ui/svgs/bolt'
-import { FirebaseFull } from '@/registry/core/ui/svgs/firebase'
-import { Beacon } from '@/registry/core/ui/svgs/beacon'
-import { Claude } from '@/registry/core/ui/svgs/claude'
-import { VercelFull } from '@/registry/core/ui/svgs/vercel'
-
-const transitionVariants: AnimatedGroupProps['variants'] = {
-    item: {
-        hidden: {
-            opacity: 0,
-            filter: 'blur(12px)',
-            y: 12,
-        },
-        visible: {
-            opacity: 1,
-            filter: 'blur(0px)',
-            y: 0,
-            transition: {
-                type: 'spring',
-                bounce: 0.3,
-                duration: 1.5,
-            },
-        },
-    },
-}
+import LogoCloud from '@/registry/bases/base/dusk/blocks/hero-section/two/logo-cloud'
 
 export default function HeroSection() {
     return (
         <>
             <HeroHeader />
             <main className="overflow-hidden">
-                <div
-                    aria-hidden
-                    className="absolute inset-0 isolate hidden contain-strict lg:block"
-                >
-                    <div className="w-140 h-320 -translate-y-87.5 absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]" />
-                    <div className="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
-                    <div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
-                </div>
-                <section>
-                    <div className="relative pt-24">
-                        <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"></div>
-                        <div className="mx-auto max-w-5xl px-6">
-                            <div className="sm:mx-auto lg:mr-auto lg:mt-0">
-                                <TextEffect
-                                    preset="fade-in-blur"
-                                    speedSegment={0.3}
-                                    as="h1"
-                                    className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16"
-                                >
-                                    Build and Ship 10x faster with NS
-                                </TextEffect>
-                                <TextEffect
-                                    per="line"
-                                    preset="fade-in-blur"
-                                    speedSegment={0.3}
-                                    delay={0.5}
-                                    as="p"
-                                    className="mt-8 max-w-2xl text-pretty text-lg"
-                                >
-                                    Tailwindcss highly customizable components for building modern websites and applications that look and feel the way you mean it.
-                                </TextEffect>
+                <section className="pt-44">
+                    <div className="mx-auto max-w-7xl px-6">
+                        <div className="flex justify-between gap-6 max-md:flex-col md:items-end lg:mt-16">
+                            <h1 className="max-w-2xl text-balance text-5xl font-medium tracking-tight md:text-6xl">Build Software business can rely on</h1>
 
-                                <AnimatedGroup
-                                    variants={{
-                                        container: {
-                                            visible: {
-                                                transition: {
-                                                    staggerChildren: 0.05,
-                                                    delayChildren: 0.75,
-                                                },
-                                            },
-                                        },
-                                        ...transitionVariants,
-                                    }}
-                                    className="mt-12 flex items-center gap-2"
-                                >
-                                    <div
-                                        key={1}
-                                        className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5"
-                                    >
-                                        <Button
-                                            nativeButton={false}
-                                            render={
-                                                <Link href="#link">
-                                                    <span className="text-nowrap">Start Building</span>
-                                                </Link>
-                                            }
-                                            size="lg"
-                                            className="rounded-xl px-5 text-base"
-                                        />
-                                    </div>
-                                    <Button
-                                        nativeButton={false}
-                                        render={
-                                            <Link href="#link">
-                                                <span className="text-nowrap">Request a demo</span>
-                                            </Link>
-                                        }
-                                        key={2}
-                                        size="lg"
-                                        variant="ghost"
-                                        className="h-10.5 rounded-xl px-5 text-base"
-                                    />
-                                </AnimatedGroup>
-                            </div>
+                            <Button
+                                className="w-fit"
+                                size="lg"
+                                nativeButton={false}
+                                render={<Link href="#">Get Started</Link>}
+                            />
                         </div>
-                        <AnimatedGroup
-                            variants={{
-                                container: {
-                                    visible: {
-                                        transition: {
-                                            staggerChildren: 0.05,
-                                            delayChildren: 0.75,
-                                        },
-                                    },
-                                },
-                                ...transitionVariants,
-                            }}
-                        >
-                            <div className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-5xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                                    <Image
-                                        className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                                        src="/mail2.png"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
-                                    />
-                                    <Image
-                                        className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                        src="/mail2-light.png"
-                                        alt="app screen"
-                                        width="2700"
-                                        height="1440"
-                                    />
-                                </div>
-                            </div>
-                        </AnimatedGroup>
-                    </div>
-                </section>
-                <section className="bg-background pb-16 pt-16 md:pb-32">
-                    <div className="group relative m-auto max-w-5xl px-6">
-                        <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-                            <Link
-                                href="/"
-                                className="block text-sm duration-150 hover:opacity-75"
-                            >
-                                <span> Meet Our Customers</span>
 
-                                <ChevronRight className="ml-1 inline-block size-3" />
-                            </Link>
-                        </div>
-                        <div className="group-hover:blur-xs **:fill-foreground mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14 md:grid-cols-4">
-                            <div className="flex items-center">
-                                <Bolt className="mx-auto h-5 w-full" />
-                            </div>
-                            <div className="flex items-center">
-                                <VercelFull className="mx-auto h-4 w-full" />
-                            </div>
-                            <div className="flex items-center">
-                                <SupabaseFull className="mx-auto h-6" />
-                            </div>
-                            <div className="flex items-center">
-                                <Hulu className="mx-auto h-4 w-full" />
-                            </div>
-                            <div className="flex items-center">
-                                <Spotify className="mx-auto h-6 w-full" />
-                            </div>
-                            <div className="flex items-center">
-                                <FirebaseFull className="mx-auto h-6 w-full" />
-                            </div>
-                            <div className="flex items-center">
-                                <Beacon className="mx-auto h-4 w-full" />
-                            </div>
-
-                            <div className="flex items-center">
-                                <Claude className="mx-auto h-5 w-full" />
+                        <div className="relative -mx-2 mt-8 overflow-hidden rounded-3xl bg-black p-2 max-sm:-mr-56 sm:mt-12">
+                            <div className="bg-background ring-foreground/6.5 before:mask-radial-at-top-left before:mask-radial-from-65% before:mask-radial-[100%_60%] before:ring-foreground before:border-foreground/10 relative rounded-2xl p-2 shadow-2xl shadow-black/55 ring before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-l before:border-t">
+                                <div className="bg-foreground/2 z-1 absolute inset-0 rounded-2xl"></div>
+                                <Image
+                                    className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
+                                    src="/mail2.png"
+                                    alt="app screen"
+                                    width="2700"
+                                    height="1440"
+                                />
+                                <Image
+                                    className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
+                                    src="/mail2-light.png"
+                                    alt="app screen"
+                                    width="2700"
+                                    height="1440"
+                                />
                             </div>
                         </div>
                     </div>
                 </section>
+                <LogoCloud />
             </main>
         </>
     )

@@ -1,17 +1,19 @@
 import type { SVGProps } from 'react'
 
-const Neon = (props: SVGProps<SVGSVGElement>) => (
+const Neon = (props: SVGProps) => (
     <svg
         {...props}
         viewBox="0 0 256 256"
-        preserveAspectRatio="xMidYMid">
+        preserveAspectRatio="xMidYMid"
+    >
         <defs>
             <linearGradient
                 id="a"
                 x1="100%"
                 x2="12.069%"
                 y1="100%"
-                y2="0%">
+                y2="0%"
+            >
                 <stop
                     offset="0%"
                     stopColor="#62F755"
@@ -27,7 +29,8 @@ const Neon = (props: SVGProps<SVGSVGElement>) => (
                 x1="100%"
                 x2="40.603%"
                 y1="100%"
-                y2="76.897%">
+                y2="76.897%"
+            >
                 <stop
                     offset="0%"
                     stopOpacity=".9"

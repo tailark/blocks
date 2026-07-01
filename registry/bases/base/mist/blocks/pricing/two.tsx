@@ -22,18 +22,21 @@ export default function Pricing() {
                                 <div className="border-y px-8 py-4">
                                     <Button
                                         className="w-full"
-                                        variant="neutral">
+                                        variant="neutral"
+                                    >
                                         Get Started
                                     </Button>
                                 </div>
 
                                 <ul
                                     role="list"
-                                    className="space-y-3 p-8">
+                                    className="space-y-3 p-8"
+                                >
                                     {['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
                                         <li
                                             key={index}
-                                            className="flex items-center gap-2">
+                                            className="flex items-center gap-2"
+                                        >
                                             <Check
                                                 className="text-primary size-3"
                                                 strokeWidth={3.5}
@@ -53,18 +56,21 @@ export default function Pricing() {
                                     <div className="@3xl:mx-0 -mx-1 border-y px-8 py-4">
                                         <Button
                                             asChild
-                                            className="w-full">
+                                            className="w-full"
+                                        >
                                             Get Started
                                         </Button>
                                     </div>
 
                                     <ul
                                         role="list"
-                                        className="space-y-3 p-8">
+                                        className="space-y-3 p-8"
+                                    >
                                         {['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
                                             <li
                                                 key={index}
-                                                className="flex items-center gap-2">
+                                                className="flex items-center gap-2"
+                                            >
                                                 <Check
                                                     className="text-primary size-3"
                                                     strokeWidth={3.5}
@@ -85,18 +91,21 @@ export default function Pricing() {
                                     <Button
                                         asChild
                                         className="w-full"
-                                        variant="neutral">
+                                        variant="neutral"
+                                    >
                                         Get Started
                                     </Button>
                                 </div>
 
                                 <ul
                                     role="list"
-                                    className="space-y-3 p-8">
+                                    className="space-y-3 p-8"
+                                >
                                     {['Everything in Pro Plan', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
                                         <li
                                             key={index}
-                                            className="flex items-center gap-2">
+                                            className="flex items-center gap-2"
+                                        >
                                             <Check
                                                 className="text-primary size-3"
                                                 strokeWidth={3.5}

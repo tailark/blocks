@@ -20,7 +20,8 @@ export default function Features() {
                         <div className="grid items-center gap-6 sm:grid-cols-5">
                             <Card
                                 variant="soft"
-                                className="p-6 sm:col-span-2">
+                                className="p-6 sm:col-span-2"
+                            >
                                 <MeetingIllustration />
                             </Card>
                             <div className="max-w-md sm:col-span-3">
@@ -32,7 +33,8 @@ export default function Features() {
                         <div className="grid items-center gap-6 sm:grid-cols-5">
                             <Card
                                 variant="soft"
-                                className="overflow-hidden p-6 sm:col-span-2 sm:overflow-clip">
+                                className="overflow-hidden p-6 sm:col-span-2 sm:overflow-clip"
+                            >
                                 <CodeReviewIllustration />
                             </Card>
                             <div className="max-w-md sm:col-span-3">
@@ -44,7 +46,8 @@ export default function Features() {
                         <div className="grid items-center gap-6 sm:grid-cols-5">
                             <Card
                                 variant="soft"
-                                className="overflow-hidden px-6 sm:col-span-2">
+                                className="overflow-hidden px-6 sm:col-span-2"
+                            >
                                 <div className="mask-b-from-75% -mx-2 -mt-2 px-2 pt-6">
                                     <AIAssistantIllustration />
                                 </div>
@@ -65,7 +68,8 @@ const MeetingIllustration = () => {
     return (
         <Card
             aria-hidden
-            className="aspect-video p-4">
+            className="aspect-video p-4"
+        >
             <div className="relative hidden h-fit">
                 <div className="absolute -left-1.5 bottom-1.5 rounded-md border-t border-red-700 bg-red-500 px-1 py-px text-[10px] font-medium text-white shadow-md shadow-red-500/35">PDF</div>
                 <div className="bg-linear-to-b h-10 w-8 rounded-md border from-zinc-100 to-zinc-200" />
@@ -84,7 +88,8 @@ const MeetingIllustration = () => {
                     ].map((avatar, index) => (
                         <div
                             key={index}
-                            className="bg-background size-7 rounded-full border p-0.5 shadow shadow-zinc-950/5">
+                            className="bg-background size-7 rounded-full border p-0.5 shadow shadow-zinc-950/5"
+                        >
                             <Image
                                 className="aspect-square rounded-full object-cover"
                                 src={avatar.src}
@@ -105,7 +110,8 @@ const CodeReviewIllustration = () => {
     return (
         <div
             aria-hidden
-            className="relative">
+            className="relative"
+        >
             <Card className="aspect-video w-4/5 p-3 transition-transform duration-200 ease-in-out group-hover:-rotate-3">
                 <div className="mb-3 grid grid-cols-[auto_1fr] gap-2">
                     <div className="bg-background size-6 rounded-full border p-0.5 shadow shadow-zinc-950/5">
@@ -145,7 +151,8 @@ const AIAssistantIllustration = () => {
     return (
         <Card
             aria-hidden
-            className="aspect-video p-4 transition-transform duration-200 group-hover:translate-y-0">
+            className="aspect-video p-4 transition-transform duration-200 group-hover:translate-y-0"
+        >
             <div className="w-fit">
                 <Sparkles className="size-3.5 fill-purple-300 stroke-purple-300" />
                 <p className="mt-2 line-clamp-2 text-sm">How can I optimize my neural network to reduce inference time while maintaining accuracy?</p>
@@ -158,20 +165,23 @@ const AIAssistantIllustration = () => {
                         <Button
                             variant="outline"
                             size="icon"
-                            className="size-7 rounded-2xl bg-transparent shadow-none">
+                            className="size-7 rounded-2xl bg-transparent shadow-none"
+                        >
                             <Plus />
                         </Button>
                         <Button
                             variant="outline"
                             size="icon"
-                            className="size-7 rounded-2xl bg-transparent shadow-none">
+                            className="size-7 rounded-2xl bg-transparent shadow-none"
+                        >
                             <Globe />
                         </Button>
                     </div>
 
                     <Button
                         size="icon"
-                        className="size-7 rounded-2xl bg-black">
+                        className="size-7 rounded-2xl bg-black"
+                    >
                         <ArrowUp strokeWidth={3} />
                     </Button>
                 </div>

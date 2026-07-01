@@ -50,7 +50,8 @@ export default function Footer() {
                     <div className="max-lg:col-span-full">
                         <Link
                             href="/"
-                            aria-label="go home">
+                            aria-label="go home"
+                        >
                             <LogoIcon uniColor />
                         </Link>
                     </div>
@@ -63,7 +64,8 @@ export default function Footer() {
                                     <li key={index}>
                                         <Link
                                             href={link.href}
-                                            className="hover:text-primary text-muted-foreground text-sm duration-150">
+                                            className="hover:text-primary text-muted-foreground text-sm duration-150"
+                                        >
                                             {link.label}
                                         </Link>
                                     </li>
@@ -78,7 +80,8 @@ export default function Footer() {
                                 <li key={index}>
                                     <Link
                                         href={link.href}
-                                        className="hover:text-primary text-muted-foreground text-sm duration-150">
+                                        className="hover:text-primary text-muted-foreground text-sm duration-150"
+                                    >
                                         {link.label}
                                     </Link>
                                 </li>
@@ -89,7 +92,8 @@ export default function Footer() {
                             <div className="space-y-2.5">
                                 <Label
                                     className="block text-sm font-medium"
-                                    htmlFor="email">
+                                    htmlFor="email"
+                                >
                                     Subscribe to our newsletter
                                 </Label>
                                 <Input
@@ -104,7 +108,8 @@ export default function Footer() {
                             <Button
                                 type="submit"
                                 className="mt-3"
-                                size="sm">
+                                size="sm"
+                            >
                                 <span>Subscribe</span>
                             </Button>
                         </form>

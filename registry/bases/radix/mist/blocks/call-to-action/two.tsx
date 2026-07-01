@@ -14,12 +14,14 @@ export default function CallToAction() {
                             <Button
                                 asChild
                                 variant="outline"
-                                size="lg">
+                                size="lg"
+                            >
                                 <Link href="#">Get a Demo</Link>
                             </Button>
                             <Button
                                 asChild
-                                size="lg">
+                                size="lg"
+                            >
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>

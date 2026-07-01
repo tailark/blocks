@@ -17,7 +17,8 @@ export default function Features() {
                         <div className="my-16">
                             <div
                                 aria-hidden
-                                className="relative mx-auto aspect-square w-10/12">
+                                className="relative mx-auto aspect-square w-10/12"
+                            >
                                 <div className="mask-b-from-75% absolute inset-0">
                                     <div className="bg-background h-full rounded-xl border"></div>
                                 </div>
@@ -35,7 +36,8 @@ export default function Features() {
                         <div className="mask-x-from-65% relative mt-6 pt-2">
                             <div
                                 aria-hidden
-                                className="bg-linear-to-b from-card to background ring-foreground/6.5 relative h-72 rounded-xl shadow-xl ring"></div>
+                                className="bg-linear-to-b from-card to background ring-foreground/6.5 relative h-72 rounded-xl shadow-xl ring"
+                            ></div>
                         </div>
                     </Card>
                     <Card className="p-8">
@@ -46,7 +48,8 @@ export default function Features() {
                         <div className="mask-b-from-75% mt-16">
                             <div
                                 aria-hidden
-                                className="bg-background relative mx-auto flex aspect-square flex-col justify-between rounded-xl border pb-6">
+                                className="bg-background relative mx-auto flex aspect-square flex-col justify-between rounded-xl border pb-6"
+                            >
                                 <div className="flex gap-1 border-b p-3">
                                     <div className="bg-foreground/10 size-1 rounded-full"></div>
                                     <div className="bg-foreground/10 size-1 rounded-full"></div>

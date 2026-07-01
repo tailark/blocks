@@ -16,15 +16,18 @@ export default function Contact() {
 
                 <Card
                     variant="outline"
-                    className="mt-12 p-8">
+                    className="mt-12 p-8"
+                >
                     <form
                         action=""
-                        className="space-y-5">
+                        className="space-y-5"
+                    >
                         <div className="@md:grid-cols-2 grid gap-4">
                             <div className="space-y-2">
                                 <Label
                                     htmlFor="firstName"
-                                    className="text-sm">
+                                    className="text-sm"
+                                >
                                     First name
                                 </Label>
                                 <Input
@@ -37,7 +40,8 @@ export default function Contact() {
                             <div className="space-y-2">
                                 <Label
                                     htmlFor="lastName"
-                                    className="text-sm">
+                                    className="text-sm"
+                                >
                                     Last name
                                 </Label>
                                 <Input
@@ -52,7 +56,8 @@ export default function Contact() {
                         <div className="space-y-2">
                             <Label
                                 htmlFor="email"
-                                className="text-sm">
+                                className="text-sm"
+                            >
                                 Work email
                             </Label>
                             <Input
@@ -66,7 +71,8 @@ export default function Contact() {
                         <div className="space-y-2">
                             <Label
                                 htmlFor="company"
-                                className="text-sm">
+                                className="text-sm"
+                            >
                                 Company
                             </Label>
                             <Input
@@ -80,7 +86,8 @@ export default function Contact() {
                             <div className="space-y-2">
                                 <Label
                                     htmlFor="size"
-                                    className="text-sm">
+                                    className="text-sm"
+                                >
                                     Company size
                                 </Label>
                                 <Select>
@@ -99,7 +106,8 @@ export default function Contact() {
                             <div className="space-y-2">
                                 <Label
                                     htmlFor="interest"
-                                    className="text-sm">
+                                    className="text-sm"
+                                >
                                     Interest
                                 </Label>
                                 <Select>
@@ -119,7 +127,8 @@ export default function Contact() {
                         <div className="space-y-2">
                             <Label
                                 htmlFor="message"
-                                className="text-sm">
+                                className="text-sm"
+                            >
                                 Message
                             </Label>
                             <Textarea
@@ -139,7 +148,8 @@ export default function Contact() {
                     By submitting, you agree to our{' '}
                     <a
                         href="#"
-                        className="text-foreground underline">
+                        className="text-foreground underline"
+                    >
                         Privacy Policy
                     </a>
                 </p>

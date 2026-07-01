@@ -25,7 +25,8 @@ export default function HeroSection() {
                                         <Button
                                             asChild
                                             size="lg"
-                                            className="pr-4.5">
+                                            className="pr-4.5"
+                                        >
                                             <Link href="#link">
                                                 <span className="text-nowrap">Get Started</span>
                                                 <ChevronRight className="opacity-50" />
@@ -36,7 +37,8 @@ export default function HeroSection() {
                                             asChild
                                             size="lg"
                                             variant="outline"
-                                            className="pl-5">
+                                            className="pl-5"
+                                        >
                                             <Link href="#link">
                                                 <CirclePlay className="fill-primary/25 stroke-primary" />
                                                 <span className="text-nowrap">Watch video</span>

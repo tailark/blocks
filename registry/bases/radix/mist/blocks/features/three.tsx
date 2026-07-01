@@ -18,7 +18,8 @@ export default function Features() {
                     <div className="grid gap-4 sm:grid-cols-2">
                         <Card
                             variant="soft"
-                            className="p-6">
+                            className="p-6"
+                        >
                             <div className="flex aspect-video items-center justify-center">
                                 <CodeIllustration className="w-full" />
                             </div>
@@ -29,7 +30,8 @@ export default function Features() {
                         </Card>
                         <Card
                             variant="soft"
-                            className="p-6">
+                            className="p-6"
+                        >
                             <div className="flex aspect-video items-center justify-center">
                                 <ScheduleIllustation className="border" />
                             </div>
@@ -58,10 +60,12 @@ export const ScheduleIllustation = ({ className, variant = 'elevated' }: Illustr
                     'shadow-black-950/10 shadow-lg': variant === 'elevated',
                     'border-foreground/10 border': variant === 'outlined',
                     'border-foreground/10 border shadow-md shadow-black/5': variant === 'mixed',
-                })}>
+                })}
+            >
                 <Button
                     size="sm"
-                    className="rounded-sm">
+                    className="rounded-sm"
+                >
                     <Calendar1 className="size-3" />
                     <span className="text-sm font-medium">Schedule</span>
                 </Button>
@@ -69,25 +73,30 @@ export const ScheduleIllustation = ({ className, variant = 'elevated' }: Illustr
                 <ToggleGroup
                     type="multiple"
                     size="sm"
-                    className="gap-0.5 *:rounded-md">
+                    className="gap-0.5 *:rounded-md"
+                >
                     <ToggleGroupItem
                         value="bold"
-                        aria-label="Toggle bold">
+                        aria-label="Toggle bold"
+                    >
                         <Bold className="size-4" />
                     </ToggleGroupItem>
                     <ToggleGroupItem
                         value="italic"
-                        aria-label="Toggle italic">
+                        aria-label="Toggle italic"
+                    >
                         <Italic className="size-4" />
                     </ToggleGroupItem>
                     <ToggleGroupItem
                         value="underline"
-                        aria-label="Toggle underline">
+                        aria-label="Toggle underline"
+                    >
                         <Underline className="size-4" />
                     </ToggleGroupItem>
                     <ToggleGroupItem
                         value="strikethrough"
-                        aria-label="Toggle strikethrough">
+                        aria-label="Toggle strikethrough"
+                    >
                         <Strikethrough className="size-4" />
                     </ToggleGroupItem>
                 </ToggleGroup>
@@ -95,7 +104,8 @@ export const ScheduleIllustation = ({ className, variant = 'elevated' }: Illustr
                 <Button
                     size="icon"
                     className="size-8"
-                    variant="ghost">
+                    variant="ghost"
+                >
                     <Ellipsis className="size-3" />
                 </Button>
             </div>
@@ -113,7 +123,8 @@ export const CodeIllustration = ({ className }: { className?: string }) => {
                 {['Images', 'Variables', 'Pages', 'Components', 'Styles'].map((item, index) => (
                     <li
                         key={index}
-                        className={cn(index == 2 && "text-foreground before:absolute before:translate-x-[-110%] before:text-orange-500 before:content-['Import']")}>
+                        className={cn(index == 2 && "text-foreground before:absolute before:translate-x-[-110%] before:text-orange-500 before:content-['Import']")}
+                    >
                         {item}
                     </li>
                 ))}

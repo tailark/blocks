@@ -1,67 +1,68 @@
-import { Button } from '@/registry/bases/base/dusk/ui/button'
-import { Card } from '@/registry/bases/base/dusk/ui/card'
-import { ChevronRight } from 'lucide-react'
-import Link from 'next/link'
-import * as React from 'react'
 import { Gemini } from '@/registry/core/ui/svgs/gemini'
 import { Replit } from '@/registry/core/ui/svgs/replit'
+import { GooglePaLM } from '@/registry/core/ui/svgs/google-palm'
 import { MagicUI } from '@/registry/core/ui/svgs/magic-ui'
 import { VSCodium } from '@/registry/core/ui/svgs/vs-codium'
 import { MediaWiki } from '@/registry/core/ui/svgs/media-wiki'
-import { GooglePaLM } from '@/registry/core/ui/svgs/google-palm'
+import { Button } from '@/registry/bases/base/dusk/ui/button'
+import Link from 'next/link'
 
 export default function IntegrationsSection() {
     return (
         <section>
-            <div className="py-32">
-                <div className="mx-auto max-w-5xl px-6">
-                    <div className="text-center">
-                        <h2 className="text-balance text-3xl font-semibold md:text-4xl">Integrate with your favorite tools</h2>
-                        <p className="text-muted-foreground mt-6">Connect seamlessly with popular platforms and services to enhance your workflow.</p>
+            <div className="mx-auto max-w-7xl px-6 py-16 md:py-32">
+                <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:gap-12">
+                    <div className="flex flex-col justify-between gap-12 pb-6 max-lg:order-last md:mt-6">
+                        <div>
+                            <h2 className="text-balance text-4xl font-medium tracking-tight lg:text-5xl">Integrate with your favorite Tools</h2>
+                            <p className="text-muted-foreground mb-6 mt-4 text-balance text-lg">Connect seamlessly with popular platforms and services to enhance your workflow.</p>
+                            <Button
+                                variant="outline"
+                                nativeButton={false}
+                                render={<Link href="#">Get Started</Link>}
+                            />
+                        </div>
+
+                        <p className="text-muted-foreground max-w-xs text-balance text-lg">
+                            Tailark CRM integrates with <span className="text-foreground font-medium">over 150 Tools</span> to enhance your workflow.
+                        </p>
                     </div>
 
-                    <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                        <IntegrationCard
-                            title="Google Gemini"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
-                        >
-                            <Gemini />
-                        </IntegrationCard>
-
-                        <IntegrationCard
-                            title="Replit"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
-                        >
-                            <Replit />
-                        </IntegrationCard>
-
-                        <IntegrationCard
-                            title="Magic UI"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
-                        >
-                            <MagicUI />
-                        </IntegrationCard>
-
-                        <IntegrationCard
-                            title="VSCodium"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
-                        >
-                            <VSCodium />
-                        </IntegrationCard>
-
-                        <IntegrationCard
-                            title="MediaWiki"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
-                        >
-                            <MediaWiki />
-                        </IntegrationCard>
-
-                        <IntegrationCard
-                            title="Google PaLM"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
-                        >
-                            <GooglePaLM />
-                        </IntegrationCard>
+                    <div className="mask-radial-at-top-left mask-radial-from-65% mask-radial-[100%_80%] -mx-6 px-6 sm:mx-auto sm:max-w-md md:-mx-6 md:ml-auto md:mr-0">
+                        <div className="bg-card rounded-2xl border p-3 shadow-lg md:pb-12">
+                            <div className="grid grid-cols-2 gap-2">
+                                <Integration
+                                    icon={<Gemini />}
+                                    name="Gemini"
+                                    description="The AI model that powers Google's search engine."
+                                />
+                                <Integration
+                                    icon={<Replit />}
+                                    name="Replit"
+                                    description="The AI model that powers Google's search engine."
+                                />
+                                <Integration
+                                    icon={<GooglePaLM />}
+                                    name="GooglePaLM"
+                                    description="The AI model that powers Google's search engine."
+                                />
+                                <Integration
+                                    icon={<MagicUI />}
+                                    name="MagicUI"
+                                    description="The AI model that powers Google's search engine."
+                                />
+                                <Integration
+                                    icon={<VSCodium />}
+                                    name="VSCodium"
+                                    description="The AI model that powers Google's search engine."
+                                />
+                                <Integration
+                                    icon={<MediaWiki />}
+                                    name="MediaWiki"
+                                    description="The AI model that powers Google's search engine."
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,32 +70,14 @@ export default function IntegrationsSection() {
     )
 }
 
-const IntegrationCard = ({ title, description, children, link = 'https://github.com/meschacirung/cnblocks' }: { title: string; description: string; children: React.ReactNode; link?: string }) => {
+const Integration = ({ icon, name, description }: { icon: React.ReactNode; name: string; description: string }) => {
     return (
-        <Card className="p-6">
-            <div className="relative">
-                <div className="*:size-10">{children}</div>
-
-                <div className="space-y-2 py-6">
-                    <h3 className="text-base font-medium">{title}</h3>
-                    <p className="text-muted-foreground line-clamp-2 text-sm">{description}</p>
-                </div>
-
-                <div className="flex gap-3 border-t border-dashed pt-6">
-                    <Button
-                        nativeButton={false}
-                        render={
-                            <Link href={link}>
-                                Learn More
-                                <ChevronRight className="ml-0 !size-3.5 opacity-50" />
-                            </Link>
-                        }
-                        variant="secondary"
-                        size="sm"
-                        className="gap-1 pr-2 shadow-none"
-                    />
-                </div>
+        <div className="hover:bg-foreground/5 cursor-pointer space-y-4 rounded-lg border p-4 transition-colors">
+            <div className="flex size-fit items-center justify-center">{icon}</div>
+            <div className="space-y-1">
+                <h3 className="text-sm font-medium">{name}</h3>
+                <p className="text-muted-foreground line-clamp-1 text-sm md:line-clamp-2">{description}</p>
             </div>
-        </Card>
+        </div>
     )
 }

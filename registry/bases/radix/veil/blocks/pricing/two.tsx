@@ -49,7 +49,8 @@ export default function Pricing() {
                         <Card
                             key={tier.name}
                             variant="outline"
-                            className={cn('@2xl:flex-row @2xl:items-center @2xl:justify-between flex flex-col gap-4 p-4', tier.highlighted && 'ring-primary')}>
+                            className={cn('@2xl:flex-row @2xl:items-center @2xl:justify-between flex flex-col gap-4 p-4', tier.highlighted && 'ring-primary')}
+                        >
                             <div className="@2xl:flex-row @2xl:items-center @2xl:gap-6 flex flex-col gap-2">
                                 <div className="@2xl:w-44 shrink-0">
                                     <h3 className="text-foreground font-medium">{tier.name}</h3>
@@ -68,7 +69,8 @@ export default function Pricing() {
                                     asChild
                                     variant={tier.highlighted ? 'default' : 'outline'}
                                     size="sm"
-                                    className="gap-1">
+                                    className="gap-1"
+                                >
                                     <Link href="#link">
                                         {tier.price === 'Custom' ? 'Contact Us' : 'Get Started'}
                                         <ArrowRight className="size-3.5" />

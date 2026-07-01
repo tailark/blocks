@@ -41,14 +41,17 @@ export default function FAQs() {
                     <Accordion
                         type="single"
                         collapsible
-                        className="-mx-2 sm:mx-0">
+                        className="-mx-2 sm:mx-0"
+                    >
                         {faqItems.map((item) => (
                             <div
                                 className="group"
-                                key={item.id}>
+                                key={item.id}
+                            >
                                 <AccordionItem
                                     value={item.id}
-                                    className="data-[state=open]:bg-muted peer rounded-xl border-none px-5 py-1 data-[state=open]:border-none md:px-7">
+                                    className="data-[state=open]:bg-muted peer rounded-xl border-none px-5 py-1 data-[state=open]:border-none md:px-7"
+                                >
                                     <AccordionTrigger className="cursor-pointer text-base hover:no-underline">{item.question}</AccordionTrigger>
                                     <AccordionContent>
                                         <p className="text-base">{item.answer}</p>
@@ -63,7 +66,8 @@ export default function FAQs() {
                         Can't find what you're looking for? Contact our{' '}
                         <Link
                             href="#"
-                            className="text-primary font-medium hover:underline">
+                            className="text-primary font-medium hover:underline"
+                        >
                             customer support team
                         </Link>
                     </p>

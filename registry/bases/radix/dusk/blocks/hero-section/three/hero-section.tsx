@@ -32,7 +32,8 @@ export default function HeroSection() {
 
                                 <div
                                     aria-hidden
-                                    className="aspect-27/58 relative mx-auto max-w-72 overflow-hidden">
+                                    className="aspect-27/58 relative mx-auto max-w-72 overflow-hidden"
+                                >
                                     <Image
                                         src="/strava.png"
                                         alt="strava app screenshot"

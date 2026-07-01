@@ -22,14 +22,16 @@ export default function HeroSection() {
                     <div className="flex flex-col items-center gap-2 *:w-full sm:flex-row sm:*:w-auto">
                         <Button
                             asChild
-                            variant="neutral">
+                            variant="neutral"
+                        >
                             <Link href="#link">
                                 <span className="text-nowrap">Get Started</span>
                             </Link>
                         </Button>
                         <Button
                             asChild
-                            variant="ghost">
+                            variant="ghost"
+                        >
                             <Link href="#link">
                                 <span className="text-nowrap">View Demo</span>
                             </Link>
@@ -81,7 +83,8 @@ export default function HeroSection() {
 const MistKitLogo = ({ className }: { className?: string }) => (
     <div
         aria-hidden
-        className={cn('border-background bg-linear-to-b rounded-(--radius) relative flex size-9 translate-y-0.5 items-center justify-center border from-yellow-300 to-orange-600 shadow-lg shadow-black/20 ring-1 ring-black/10', className)}>
+        className={cn('border-background bg-linear-to-b rounded-(--radius) relative flex size-9 translate-y-0.5 items-center justify-center border from-yellow-300 to-orange-600 shadow-lg shadow-black/20 ring-1 ring-black/10', className)}
+    >
         <BookOpen className="mask-b-from-25% size-6 fill-white stroke-white drop-shadow-sm" />
         <BookOpen className="absolute inset-0 m-auto size-6 fill-white stroke-white opacity-65 drop-shadow-sm" />
         <div className="z-1 h-4.5 absolute inset-2 m-auto w-px translate-y-px rounded-full bg-black/10"></div>

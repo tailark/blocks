@@ -32,11 +32,13 @@ export default function Pricing() {
                             <div className="relative">
                                 <ul
                                     role="list"
-                                    className="space-y-4">
+                                    className="space-y-4"
+                                >
                                     {['First premium advantage', 'Second advantage weekly', 'Third advantage donate to project', 'Fourth, access to all components weekly'].map((item, index) => (
                                         <li
                                             key={index}
-                                            className="flex items-center gap-2">
+                                            className="flex items-center gap-2"
+                                        >
                                             <Check
                                                 className="text-primary size-3"
                                                 strokeWidth={3.5}

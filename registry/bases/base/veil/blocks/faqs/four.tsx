@@ -41,7 +41,8 @@ export default function FAQs() {
                         <Card
                             key={index}
                             variant="mixed"
-                            className="p-5">
+                            className="p-5"
+                        >
                             <h3 className="text-foreground text-sm font-medium">{item.question}</h3>
                             <p className="text-muted-foreground mt-2 text-sm">{item.answer}</p>
                         </Card>
@@ -51,7 +52,8 @@ export default function FAQs() {
                     Have another question?{' '}
                     <Link
                         href="#"
-                        className="text-primary font-medium hover:underline">
+                        className="text-primary font-medium hover:underline"
+                    >
                         Get in touch
                     </Link>
                 </p>

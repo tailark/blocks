@@ -14,7 +14,8 @@ export default function CallToAction() {
                     <div className="mt-8 flex gap-3">
                         <Button
                             asChild
-                            className="pr-2">
+                            className="pr-2"
+                        >
                             <Link href="#">
                                 Try Mist for Free
                                 <ChevronRight
@@ -26,7 +27,8 @@ export default function CallToAction() {
                         <Button
                             asChild
                             variant="outline"
-                            className="pl-2.5">
+                            className="pl-2.5"
+                        >
                             <Link href="#">
                                 <Calendar
                                     className="size-3.5! opacity-50"

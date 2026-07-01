@@ -10,7 +10,7 @@ type ThemeOption = 'system' | 'light' | 'dark'
 
 export const ThemeSwitcher = () => {
     const { theme, setTheme } = useTheme()
-    const [hoveredTheme, setHoveredTheme] = useState<ThemeOption | null>(null)
+    const [hoveredTheme, setHoveredTheme] = useState(null)
 
     const selectedTheme = (theme ?? 'system') as ThemeOption
 
@@ -41,7 +41,8 @@ export const ThemeSwitcher = () => {
                     onMouseLeave={() => setHoveredTheme(null)}
                     onFocus={() => setHoveredTheme('system')}
                     onBlur={() => setHoveredTheme(null)}
-                    onClick={() => setTheme('system')}>
+                    onClick={() => setTheme('system')}
+                >
                     <Monitor />
                 </Button>
                 <Button
@@ -54,7 +55,8 @@ export const ThemeSwitcher = () => {
                     onMouseLeave={() => setHoveredTheme(null)}
                     onFocus={() => setHoveredTheme('light')}
                     onBlur={() => setHoveredTheme(null)}
-                    onClick={() => setTheme('light')}>
+                    onClick={() => setTheme('light')}
+                >
                     <Sun />
                 </Button>
 
@@ -68,14 +70,16 @@ export const ThemeSwitcher = () => {
                     onMouseLeave={() => setHoveredTheme(null)}
                     onFocus={() => setHoveredTheme('dark')}
                     onBlur={() => setHoveredTheme(null)}
-                    onClick={() => setTheme('dark')}>
+                    onClick={() => setTheme('dark')}
+                >
                     <Moon />
                 </Button>
             </div>
 
             <div
                 aria-live="polite"
-                className={cn('text-muted-foreground w-fit text-xs leading-none transition-opacity', hoveredTheme ? 'opacity-100' : 'opacity-0')}>
+                className={cn('text-muted-foreground w-fit text-xs leading-none transition-opacity', hoveredTheme ? 'opacity-100' : 'opacity-0')}
+            >
                 {tooltipLabel}
             </div>
         </div>

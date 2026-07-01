@@ -46,13 +46,15 @@ export default function Comparator() {
                 </div>
                 <Card
                     variant="outline"
-                    className="*:min-w-xl mt-12 overflow-auto">
+                    className="*:min-w-xl mt-12 overflow-auto"
+                >
                     <div className="grid grid-cols-4 border-b">
                         <div className="p-4"></div>
                         {plans.map((plan) => (
                             <div
                                 key={plan.name}
-                                className={`border-l p-4 text-center ${plan.highlighted ? 'bg-primary/5' : ''}`}>
+                                className={`border-l p-4 text-center ${plan.highlighted ? 'bg-primary/5' : ''}`}
+                            >
                                 <p className="text-foreground font-medium">{plan.name}</p>
                                 <p className="mt-1">
                                     <span className="font-serif text-2xl font-medium">{plan.price}</span>
@@ -64,14 +66,16 @@ export default function Comparator() {
                     {features.map((feature) => (
                         <div
                             key={feature.name}
-                            className="grid grid-cols-4 border-b last:border-b-0">
+                            className="grid grid-cols-4 border-b last:border-b-0"
+                        >
                             <div className="text-muted-foreground p-4 text-sm">{feature.name}</div>
                             {['basic', 'pro', 'team'].map((plan, idx) => {
                                 const value = feature[plan as keyof typeof feature]
                                 return (
                                     <div
                                         key={plan}
-                                        className={`flex items-center justify-center border-l p-4 text-sm ${idx === 1 ? 'bg-primary/5' : ''}`}>
+                                        className={`flex items-center justify-center border-l p-4 text-sm ${idx === 1 ? 'bg-primary/5' : ''}`}
+                                    >
                                         {typeof value === 'boolean' ? value ? <Check className="text-primary size-4" /> : <Minus className="text-muted-foreground size-4" /> : <span className="text-foreground">{value}</span>}
                                     </div>
                                 )
@@ -83,12 +87,14 @@ export default function Comparator() {
                         {plans.map((plan) => (
                             <div
                                 key={plan.name}
-                                className={`border-l p-4 ${plan.highlighted ? 'bg-primary/5' : ''}`}>
+                                className={`border-l p-4 ${plan.highlighted ? 'bg-primary/5' : ''}`}
+                            >
                                 <Button
                                     asChild
                                     variant={plan.highlighted ? 'default' : 'outline'}
                                     size="sm"
-                                    className="w-full">
+                                    className="w-full"
+                                >
                                     <Link href="#link">{plan.cta}</Link>
                                 </Button>
                             </div>

@@ -16,10 +16,12 @@ export default function HeroSection() {
                             <div>
                                 <Link
                                     href="#"
-                                    className="hover:bg-foreground/5 mx-auto flex w-fit items-center justify-center gap-2 rounded-md py-0.5 pl-1 pr-3 transition-colors duration-150">
+                                    className="hover:bg-foreground/5 mx-auto flex w-fit items-center justify-center gap-2 rounded-md py-0.5 pl-1 pr-3 transition-colors duration-150"
+                                >
                                     <div
                                         aria-hidden
-                                        className="border-background bg-linear-to-b dark:inset-shadow-2xs to-foreground from-primary relative flex size-5 items-center justify-center rounded border shadow-md shadow-black/20 ring-1 ring-black/10">
+                                        className="border-background bg-linear-to-b dark:inset-shadow-2xs to-foreground from-primary relative flex size-5 items-center justify-center rounded border shadow-md shadow-black/20 ring-1 ring-black/10"
+                                    >
                                         <div className="absolute inset-x-0 inset-y-1.5 border-y border-dotted border-white/25"></div>
                                         <div className="absolute inset-x-1.5 inset-y-0 border-x border-dotted border-white/25"></div>
                                         <Sparkle className="size-3 fill-white stroke-white drop-shadow" />
@@ -32,7 +34,8 @@ export default function HeroSection() {
                                 <div className="flex items-center justify-center gap-3">
                                     <Button
                                         asChild
-                                        size="lg">
+                                        size="lg"
+                                    >
                                         <Link href="#link">
                                             <span className="text-nowrap">Start Building</span>
                                         </Link>
@@ -40,7 +43,8 @@ export default function HeroSection() {
                                     <Button
                                         asChild
                                         size="lg"
-                                        variant="outline">
+                                        variant="outline"
+                                    >
                                         <Link href="#link">
                                             <span className="text-nowrap">Watch Video</span>
                                         </Link>

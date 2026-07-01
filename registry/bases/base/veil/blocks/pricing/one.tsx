@@ -47,7 +47,8 @@ export default function Pricing() {
                         <Card
                             key={plan.name}
                             variant={plan.highlighted ? 'default' : 'mixed'}
-                            className={cn('relative flex flex-col p-6 last:col-span-full', plan.highlighted && 'ring-primary')}>
+                            className={cn('relative flex flex-col p-6 last:col-span-full', plan.highlighted && 'ring-primary')}
+                        >
                             <div>
                                 <h3 className="text-foreground font-medium">{plan.name}</h3>
                                 <p className="text-muted-foreground mt-1 text-sm">{plan.description}</p>
@@ -60,7 +61,8 @@ export default function Pricing() {
                                 {plan.features.map((feature) => (
                                     <li
                                         key={feature}
-                                        className="text-muted-foreground flex items-start gap-2 text-sm">
+                                        className="text-muted-foreground flex items-start gap-2 text-sm"
+                                    >
                                         <Check className="text-primary mt-0.5 size-4 shrink-0" />
                                         {feature}
                                     </li>

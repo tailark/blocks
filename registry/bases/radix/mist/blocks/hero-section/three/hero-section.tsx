@@ -23,7 +23,8 @@ export default function HeroSection() {
                                 <div className="flex flex-col items-center gap-3 *:w-full sm:flex-row sm:*:w-fit">
                                     <Button
                                         asChild
-                                        size="lg">
+                                        size="lg"
+                                    >
                                         <Link href="#link">
                                             <span className="text-nowrap">Start Building</span>
                                         </Link>
@@ -32,7 +33,8 @@ export default function HeroSection() {
                                         key={2}
                                         asChild
                                         size="lg"
-                                        variant="outline">
+                                        variant="outline"
+                                    >
                                         <Link href="#link">
                                             <span className="text-nowrap">Request a demo</span>
                                         </Link>

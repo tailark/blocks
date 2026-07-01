@@ -12,7 +12,8 @@ export default function CallToAction() {
                     <div className="mt-6 flex flex-wrap justify-center gap-3">
                         <Button
                             asChild
-                            className="pr-1.5">
+                            className="pr-1.5"
+                        >
                             <Link href="#link">
                                 <span>Start Free Trial</span>
                                 <ChevronRight className="opacity-50" />
@@ -20,7 +21,8 @@ export default function CallToAction() {
                         </Button>
                         <Button
                             variant="secondary"
-                            asChild>
+                            asChild
+                        >
                             <Link href="#link">Talk to Sales</Link>
                         </Button>
                     </div>

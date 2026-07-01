@@ -10,7 +10,8 @@ export default function Features() {
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                         <Card
                             variant="soft"
-                            className="col-span-full overflow-hidden pl-6 pt-6">
+                            className="col-span-full overflow-hidden pl-6 pt-6"
+                        >
                             <Layout className="text-primary size-5" />
                             <h3 className="text-foreground mt-5 text-lg font-semibold">AI Code Generation</h3>
                             <p className="text-muted-foreground mt-3 max-w-xl text-balance">Our advanced AI models transform natural language into production-ready code, streamlining development workflows and enabling faster iteration. </p>
@@ -28,7 +29,8 @@ export default function Features() {
                         </Card>
                         <Card
                             variant="soft"
-                            className="p-6">
+                            className="p-6"
+                        >
                             <Target className="text-primary size-5" />
                             <h3 className="text-foreground mt-5 text-lg font-semibold">AI Code Generation</h3>
                             <p className="text-muted-foreground mt-3 text-balance">Our advanced AI models transform natural language into production-ready code.</p>
@@ -36,14 +38,16 @@ export default function Features() {
 
                         <Card
                             variant="soft"
-                            className="p-6">
+                            className="p-6"
+                        >
                             <CalendarCheck className="text-primary size-5" />
                             <h3 className="text-foreground mt-5 text-lg font-semibold">Intelligent Code Review</h3>
                             <p className="text-muted-foreground mt-3 text-balance">Our AI analyzes your code for bugs, security issues, and optimization opportunities.</p>
                         </Card>
                         <Card
                             variant="soft"
-                            className="p-6">
+                            className="p-6"
+                        >
                             <Sparkles className="text-primary size-5" />
                             <h3 className="text-foreground mt-5 text-lg font-semibold">Contextual AI Assistant</h3>
                             <p className="text-muted-foreground mt-3 text-balance">A personalized AI companion that understands your codebase and helps solve complex...</p>

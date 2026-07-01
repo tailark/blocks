@@ -36,7 +36,8 @@ export default function Footer() {
                     <div className="order-last flex items-center gap-3 md:order-first">
                         <Link
                             href="#"
-                            aria-label="go home">
+                            aria-label="go home"
+                        >
                             <LogoIcon />
                         </Link>
                         <span className="text-muted-foreground block text-center text-sm">© {2026} Tailark Mist, All rights reserved</span>
@@ -47,7 +48,8 @@ export default function Footer() {
                             <Link
                                 key={index}
                                 href={link.href}
-                                className="text-muted-foreground hover:text-primary block duration-150">
+                                className="text-muted-foreground hover:text-primary block duration-150"
+                            >
                                 <span>{link.title}</span>
                             </Link>
                         ))}

@@ -28,7 +28,8 @@ export const HeroHeader = () => {
         <header>
             <nav
                 data-state={menuState && 'active'}
-                className="fixed z-20 w-full">
+                className="fixed z-20 w-full"
+            >
                 <div className="mx-auto max-w-7xl px-6">
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-6 lg:gap-0">
                         <div className={cn('flex justify-between gap-6 duration-200 max-lg:w-full', isScrolled && 'lg:blur-xs lg:opacity-0')}>
@@ -38,14 +39,16 @@ export const HeroHeader = () => {
                             <Link
                                 href="/"
                                 aria-label="home"
-                                className="flex items-center space-x-2 lg:hidden">
+                                className="flex items-center space-x-2 lg:hidden"
+                            >
                                 <Logo />
                             </Link>
 
                             <button
                                 onClick={() => setMenuState(!menuState)}
                                 aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
-                                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
+                                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
+                            >
                                 <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
                                 <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
                             </button>
@@ -96,7 +99,8 @@ const NavItems = () => {
                         render={
                             <Link
                                 href={item.href}
-                                className="text-base">
+                                className="text-base"
+                            >
                                 <span>{item.name}</span>
                             </Link>
                         }
@@ -118,11 +122,13 @@ const FloatingNavPill = ({ isScrolled }: { isScrolled: boolean }) => {
                 background: isScrolled ? 'var(--color-card)' : 'transparent',
             }}
             transition={{ duration: 0.5, type: 'spring', bounce: 0.1 }}
-            className={cn('absolute inset-0 z-50 m-auto flex size-fit h-11 items-center rounded-lg transition-colors duration-500', isScrolled && 'ring-border shadow-foreground/6.5 shadow-lg ring-1 backdrop-blur')}>
+            className={cn('absolute inset-0 z-50 m-auto flex size-fit h-11 items-center rounded-lg transition-colors duration-500', isScrolled && 'ring-border shadow-foreground/6.5 shadow-lg ring-1 backdrop-blur')}
+        >
             <Link
                 href="/"
                 aria-label="home"
-                className="px-3.5">
+                className="px-3.5"
+            >
                 <Logo />
             </Link>
             <AnimatePresence initial={false}>
@@ -138,7 +144,8 @@ const FloatingNavPill = ({ isScrolled }: { isScrolled: boolean }) => {
                         }}
                         exit={{ opacity: 0, x: -156, scale: 0.8, filter: 'blur(4px)', width: 0 }}
                         transition={{ duration: 0.5, type: 'spring', bounce: 0.1 }}
-                        className="flex origin-left items-center overflow-hidden rounded-full">
+                        className="flex origin-left items-center overflow-hidden rounded-full"
+                    >
                         <>
                             <NavItems />
                             <Button
@@ -150,7 +157,8 @@ const FloatingNavPill = ({ isScrolled }: { isScrolled: boolean }) => {
                                     </Link>
                                 }
                                 size="sm"
-                                className="mx-2 gap-1 pr-1"></Button>
+                                className="mx-2 gap-1 pr-1"
+                            ></Button>
                         </>
                     </motion.div>
                 )}

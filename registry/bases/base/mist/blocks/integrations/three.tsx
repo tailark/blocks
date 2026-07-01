@@ -20,37 +20,43 @@ export default function Integrations() {
                     <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         <IntegrationCard
                             title="Google Gemini"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.">
+                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
+                        >
                             <Gemini />
                         </IntegrationCard>
 
                         <IntegrationCard
                             title="Replit"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.">
+                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
+                        >
                             <Replit />
                         </IntegrationCard>
 
                         <IntegrationCard
                             title="Magic UI"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.">
+                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
+                        >
                             <MagicUI />
                         </IntegrationCard>
 
                         <IntegrationCard
                             title="VSCodium"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.">
+                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
+                        >
                             <VSCodium />
                         </IntegrationCard>
 
                         <IntegrationCard
                             title="MediaWiki"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.">
+                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
+                        >
                             <MediaWiki />
                         </IntegrationCard>
 
                         <IntegrationCard
                             title="Google PaLM"
-                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente.">
+                            description="Amet praesentium deserunt ex commodi tempore fuga voluptatem. Sit, sapiente."
+                        >
                             <GooglePaLM />
                         </IntegrationCard>
                     </div>
@@ -64,7 +70,8 @@ const IntegrationCard = ({ title, description, children }: { title: string; desc
     return (
         <Card
             variant="soft"
-            className="p-6">
+            className="p-6"
+        >
             <div className="relative">
                 <div className="*:size-10">{children}</div>
 

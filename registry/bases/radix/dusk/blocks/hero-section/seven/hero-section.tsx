@@ -17,7 +17,8 @@ export default function HeroSection() {
                             <div>
                                 <Link
                                     href="/"
-                                    className="flex w-fit items-center gap-2 font-medium">
+                                    className="flex w-fit items-center gap-2 font-medium"
+                                >
                                     <span className="text-sm">New</span>
                                     <span className="text-muted-foreground text-sm">Introducing Tailark CRM 1.0</span>
 
@@ -35,13 +36,15 @@ export default function HeroSection() {
                                         <div className="flex gap-3">
                                             <Button
                                                 className="w-fit"
-                                                asChild>
+                                                asChild
+                                            >
                                                 <Link href="#">Get Started</Link>
                                             </Button>
                                             <Button
                                                 className="w-fit"
                                                 variant="outline"
-                                                asChild>
+                                                asChild
+                                            >
                                                 <Link href="#">Talk to sales</Link>
                                             </Button>
                                         </div>

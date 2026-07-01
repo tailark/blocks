@@ -52,7 +52,8 @@ export default function HeroSection() {
                             </div>
                             <div
                                 aria-hidden
-                                className="mx-auto mt-24 max-w-xl">
+                                className="mx-auto mt-24 max-w-xl"
+                            >
                                 <div className="**:fill-foreground grid scale-95 grid-cols-3 gap-12">
                                     <div className="ml-auto blur-[2px]">
                                         <Card className="shadow-foreground/10 flex h-8 w-fit items-center gap-2 rounded-xl px-3 sm:h-10 sm:px-4">

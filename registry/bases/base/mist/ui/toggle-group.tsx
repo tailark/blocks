@@ -7,13 +7,13 @@ import { type VariantProps } from 'class-variance-authority'
 import { cn } from '@/registry/core/lib/utils'
 import { toggleVariants } from '@/registry/bases/base/mist/ui/toggle'
 
-const ToggleGroupContext = React.createContext<VariantProps<typeof toggleVariants>>({
+const ToggleGroupContext = React.createContext({
     size: 'default',
     variant: 'default',
 })
 
 type ToggleGroupProps = ToggleGroupPrimitive.Props &
-    VariantProps<typeof toggleVariants> & {
+    VariantProps & {
         type?: 'single' | 'multiple'
     }
 
@@ -25,13 +25,14 @@ function ToggleGroup({ className, variant, size, children, type, multiple, ...pr
             data-size={size}
             className={cn('group/toggle-group data-[variant=outline]:shadow-xs flex w-fit items-center rounded-md', className)}
             multiple={multiple ?? type === 'multiple'}
-            {...props}>
+            {...props}
+        >
             <ToggleGroupContext.Provider value={{ variant, size }}>{children}</ToggleGroupContext.Provider>
         </ToggleGroupPrimitive>
     )
 }
 
-function ToggleGroupItem({ className, children, variant, size, ...props }: TogglePrimitive.Props & VariantProps<typeof toggleVariants>) {
+function ToggleGroupItem({ className, children, variant, size, ...props }: TogglePrimitive.Props & VariantProps) {
     const context = React.useContext(ToggleGroupContext)
 
     return (
@@ -47,7 +48,8 @@ function ToggleGroupItem({ className, children, variant, size, ...props }: Toggl
                 'min-w-0 flex-1 shrink-0 rounded-none shadow-none first:rounded-l-md last:rounded-r-md focus:z-10 focus-visible:z-10 data-[variant=outline]:border-l-0 data-[variant=outline]:first:border-l',
                 className
             )}
-            {...props}>
+            {...props}
+        >
             {children}
         </TogglePrimitive>
     )

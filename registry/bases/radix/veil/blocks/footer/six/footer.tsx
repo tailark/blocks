@@ -17,7 +17,8 @@ export default function Footer() {
                     <Link
                         href="/"
                         aria-label="go home"
-                        className="hover:bg-foreground/5 -ml-1.5 flex size-8 rounded-lg *:m-auto">
+                        className="hover:bg-foreground/5 -ml-1.5 flex size-8 rounded-lg *:m-auto"
+                    >
                         <LogoIcon
                             uniColor
                             className="size-5"
@@ -28,7 +29,8 @@ export default function Footer() {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                                className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                            >
                                 {link.label}
                             </Link>
                         ))}

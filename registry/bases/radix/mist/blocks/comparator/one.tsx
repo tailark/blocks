@@ -61,7 +61,8 @@ export default function PricingComparator() {
 
                                     <Button
                                         asChild
-                                        variant="neutral">
+                                        variant="neutral"
+                                    >
                                         <Link href="#">Get Started</Link>
                                     </Button>
                                 </th>
@@ -75,7 +76,8 @@ export default function PricingComparator() {
                                     <span className="block">Startup</span>
                                     <Button
                                         asChild
-                                        variant="neutral">
+                                        variant="neutral"
+                                    >
                                         <Link href="#">Get Started</Link>
                                     </Button>
                                 </th>
@@ -94,7 +96,8 @@ export default function PricingComparator() {
                             {tableData.slice(-4).map((row, index) => (
                                 <tr
                                     key={index}
-                                    className="*:border-b *:py-4">
+                                    className="*:border-b *:py-4"
+                                >
                                     <td className="text-muted-foreground">{row.feature}</td>
                                     <td>
                                         {row.free === true ? (
@@ -140,7 +143,8 @@ export default function PricingComparator() {
                             {tableData.map((row, index) => (
                                 <tr
                                     key={index}
-                                    className="*:border-b *:py-4">
+                                    className="*:border-b *:py-4"
+                                >
                                     <td className="text-muted-foreground">{row.feature}</td>
                                     <td>
                                         {row.free === true ? (

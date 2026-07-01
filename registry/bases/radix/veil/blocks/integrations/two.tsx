@@ -22,7 +22,8 @@ export default function Integrations() {
                         variant="secondary"
                         size="sm"
                         asChild
-                        className="gap-1 pr-1.5">
+                        className="gap-1 pr-1.5"
+                    >
                         <Link href="#">
                             Learn more
                             <ChevronRight />
@@ -38,7 +39,8 @@ const IntegrationsIllustration = () => {
     return (
         <div
             aria-hidden
-            className="**:fill-foreground @max-md:scale-85 relative mx-auto flex size-96">
+            className="**:fill-foreground @max-md:scale-85 relative mx-auto flex size-96"
+        >
             <div className="bg-card shadow-black/6.5 ring-border absolute inset-0 m-auto flex size-12 items-center rounded-full shadow-sm ring *:m-auto">
                 <LogoIcon className="size-5" />
             </div>

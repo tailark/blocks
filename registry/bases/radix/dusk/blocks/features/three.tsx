@@ -70,7 +70,8 @@ function DownloadIllustration() {
                 variant="secondary"
                 asChild
                 className="bg-background/25 inset-ring inset-ring-foreground/25 ml-1 backdrop-blur"
-                size="sm">
+                size="sm"
+            >
                 <div>
                     <HardDriveDownload className="opacity-75" />
                     <span className="border-r pr-2">Download</span>
@@ -103,7 +104,8 @@ function AIInputIllustration() {
     return (
         <div
             aria-hidden
-            className="z-1 absolute inset-8 m-auto h-fit scale-95">
+            className="z-1 absolute inset-8 m-auto h-fit scale-95"
+        >
             <div className="bg-card ring-foreground/15 mt-auto h-fit rounded-3xl p-3 shadow-xl shadow-black/25 ring">
                 <div className="text-muted-foreground p-2 pb-3 text-sm">Ask Tailark what you need...</div>
                 <div className="flex justify-between gap-3">
@@ -129,7 +131,8 @@ function DynamicIslandIllustration() {
     return (
         <div
             aria-hidden
-            className="z-1 bg-black/2.5 absolute inset-x-8 bottom-0 mx-auto mt-auto h-2/3 w-10/12 origin-bottom scale-95 rounded-t-[4rem] border border-black/5 px-4 pt-4">
+            className="z-1 bg-black/2.5 absolute inset-x-8 bottom-0 mx-auto mt-auto h-2/3 w-10/12 origin-bottom scale-95 rounded-t-[4rem] border border-black/5 px-4 pt-4"
+        >
             <div className="h-full overflow-hidden rounded-t-[3rem] bg-white p-3 shadow-lg shadow-black/15 ring ring-black/10">
                 <div className="relative">
                     <Image

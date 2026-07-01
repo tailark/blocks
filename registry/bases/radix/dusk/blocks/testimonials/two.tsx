@@ -12,7 +12,7 @@ const testimonials: {
     highlight: string
     author: string
     role: string
-    Logo: ComponentType<SVGProps<SVGSVGElement>>
+    Logo: ComponentType
 }[] = [
     {
         quote: 'Tailark helped our revenue team move from scattered updates to one shared CRM view.',
@@ -61,7 +61,8 @@ export default function Testimonials() {
                             className="h-7 px-4"
                             aria-label="read previous testimonial"
                             onClick={previousTestimonial}
-                            disabled={activeIndex === 0}>
+                            disabled={activeIndex === 0}
+                        >
                             <ArrowIcon className="size-3!" />
                         </Button>
                         <Button
@@ -70,7 +71,8 @@ export default function Testimonials() {
                             className="h-7 px-4"
                             aria-label="read next testimonial"
                             onClick={nextTestimonial}
-                            disabled={activeIndex === testimonials.length - 1}>
+                            disabled={activeIndex === testimonials.length - 1}
+                        >
                             <ArrowIcon className="size-3! rotate-180" />
                         </Button>
                     </div>
@@ -80,7 +82,8 @@ export default function Testimonials() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}>
+                            transition={{ duration: 0.3 }}
+                        >
                             <p className="text-muted-foreground mb-20 text-2xl font-medium leading-snug md:text-4xl md:leading-tight">
                                 {activeTestimonial.quote} <span className="rounded bg-emerald-500/10 px-1.5 text-emerald-500">{activeTestimonial.highlight}</span>
                             </p>
@@ -92,7 +95,8 @@ export default function Testimonials() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="flex items-center gap-4">
+                            className="flex items-center gap-4"
+                        >
                             <Logo className="size-10" />
                             <div className="border-l pl-4">
                                 <p className="font-medium">{activeTestimonial.author}</p>
@@ -106,7 +110,7 @@ export default function Testimonials() {
     )
 }
 
-const ArrowIcon = (props: SVGProps<SVGSVGElement>) => {
+const ArrowIcon = (props: SVGProps) => {
     return (
         <svg
             {...props}
@@ -114,7 +118,8 @@ const ArrowIcon = (props: SVGProps<SVGSVGElement>) => {
             height="16"
             viewBox="0 0 20 16"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+        >
             <path
                 d="M8 1L1 8L8 15M1 8H19"
                 stroke="currentColor"

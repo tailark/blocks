@@ -26,7 +26,8 @@ export default function TeamSection() {
                         <Button
                             asChild
                             variant="outline"
-                            className="pr-2">
+                            className="pr-2"
+                        >
                             <Link href="#">
                                 We're hiring
                                 <ChevronRight className="opacity-50" />
@@ -38,7 +39,8 @@ export default function TeamSection() {
                         {members.map((member, index) => (
                             <div
                                 key={index}
-                                className="grid grid-cols-[auto_1fr] items-center gap-3">
+                                className="grid grid-cols-[auto_1fr] items-center gap-3"
+                            >
                                 <div className="rounded-(--radius) ring-foreground/10 size-10 border border-transparent shadow ring">
                                     <Image
                                         src={member.src}

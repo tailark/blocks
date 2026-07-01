@@ -82,7 +82,8 @@ export default function Comparator() {
                         <Card
                             key={plan.name}
                             variant={plan.highlighted ? 'default' : 'mixed'}
-                            className={cn('p-6', plan.highlighted && 'ring-primary')}>
+                            className={cn('p-6', plan.highlighted && 'ring-primary')}
+                        >
                             <div className="@lg:flex-row @lg:items-start @lg:justify-between flex flex-col gap-6">
                                 <div className="@lg:max-w-xs">
                                     <h3 className="text-foreground font-medium">{plan.name}</h3>
@@ -95,7 +96,8 @@ export default function Comparator() {
                                         asChild
                                         variant={plan.highlighted ? 'default' : 'outline'}
                                         size="sm"
-                                        className="mt-4">
+                                        className="mt-4"
+                                    >
                                         <Link href="#link">{plan.cta}</Link>
                                     </Button>
                                 </div>

@@ -20,7 +20,8 @@ export default function Features() {
                             <p className="text-muted-foreground my-4 text-lg">Effortlessly plan and execute your marketing campaigns organized.</p>
                             <Card
                                 className="aspect-video overflow-hidden px-6"
-                                variant="soft">
+                                variant="soft"
+                            >
                                 <Card className="h-full translate-y-6" />
                             </Card>
                         </div>
@@ -29,7 +30,8 @@ export default function Features() {
                             <p className="text-muted-foreground my-4 text-lg">Effortlessly book and manage your meetings. Stay on top of your schedule.</p>
                             <Card
                                 className="aspect-video overflow-hidden"
-                                variant="soft">
+                                variant="soft"
+                            >
                                 <Card className="translate-6 h-full" />
                             </Card>
                         </div>

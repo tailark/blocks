@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react'
 
-export function MagicUI(props: SVGProps<SVGSVGElement>) {
+export function MagicUI(props: SVGProps) {
     return (
         <svg
             width="1em"
@@ -9,7 +9,8 @@ export function MagicUI(props: SVGProps<SVGSVGElement>) {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="size-6"
-            {...props}>
+            {...props}
+        >
             <rect
                 width={256}
                 height={256}
@@ -33,7 +34,8 @@ export function MagicUI(props: SVGProps<SVGSVGElement>) {
                     y1={0}
                     x2={128}
                     y2={256}
-                    gradientUnits="userSpaceOnUse">
+                    gradientUnits="userSpaceOnUse"
+                >
                     <stop stopColor="#EF786F" />
                     <stop
                         offset={1}
@@ -46,7 +48,8 @@ export function MagicUI(props: SVGProps<SVGSVGElement>) {
                     y1={0.0000037012}
                     x2={236}
                     y2={256}
-                    gradientUnits="userSpaceOnUse">
+                    gradientUnits="userSpaceOnUse"
+                >
                     <stop stopColor="#9E7AFF" />
                     <stop
                         offset={0.333333}

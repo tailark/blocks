@@ -39,14 +39,17 @@ export default function FAQs() {
                 <Accordion
                     type="single"
                     collapsible
-                    className="mt-12">
+                    className="mt-12"
+                >
                     {faqItems.map((item) => (
                         <div
                             className="group"
-                            key={item.id}>
+                            key={item.id}
+                        >
                             <AccordionItem
                                 value={item.id}
-                                className="data-[state=open]:bg-muted/50 peer rounded-xl border-none px-5 py-1 transition-colors">
+                                className="data-[state=open]:bg-muted/50 peer rounded-xl border-none px-5 py-1 transition-colors"
+                            >
                                 <AccordionTrigger className="cursor-pointer py-4 text-sm font-medium hover:no-underline">{item.question}</AccordionTrigger>
                                 <AccordionContent>
                                     <p className="text-muted-foreground pb-2 text-sm">{item.answer}</p>
@@ -60,7 +63,8 @@ export default function FAQs() {
                     Can't find what you're looking for?{' '}
                     <Link
                         href="#"
-                        className="text-primary font-medium hover:underline">
+                        className="text-primary font-medium hover:underline"
+                    >
                         Contact support
                     </Link>
                 </p>

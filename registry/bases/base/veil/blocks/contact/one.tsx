@@ -20,7 +20,8 @@ export default function Contact() {
                             <p className="text-foreground text-sm font-medium">Email</p>
                             <Link
                                 href="mailto:hello@example.com"
-                                className="text-muted-foreground hover:text-primary text-sm">
+                                className="text-muted-foreground hover:text-primary text-sm"
+                            >
                                 hello@example.com
                             </Link>
                         </div>
@@ -29,7 +30,8 @@ export default function Contact() {
                             <p className="text-foreground text-sm font-medium">Phone</p>
                             <Link
                                 href="tel:+1234567890"
-                                className="text-muted-foreground hover:text-primary text-sm">
+                                className="text-muted-foreground hover:text-primary text-sm"
+                            >
                                 +1 (234) 567-890
                             </Link>
                         </div>
@@ -42,15 +44,18 @@ export default function Contact() {
 
                     <Card
                         variant="outline"
-                        className="@xl:col-span-3 p-6">
+                        className="@xl:col-span-3 p-6"
+                    >
                         <form
                             action=""
-                            className="space-y-5">
+                            className="space-y-5"
+                        >
                             <div className="@md:grid-cols-2 grid gap-4">
                                 <div className="space-y-2">
                                     <Label
                                         htmlFor="name"
-                                        className="text-sm">
+                                        className="text-sm"
+                                    >
                                         Name
                                     </Label>
                                     <Input
@@ -64,7 +69,8 @@ export default function Contact() {
                                 <div className="space-y-2">
                                     <Label
                                         htmlFor="email"
-                                        className="text-sm">
+                                        className="text-sm"
+                                    >
                                         Email
                                     </Label>
                                     <Input
@@ -80,7 +86,8 @@ export default function Contact() {
                             <div className="space-y-2">
                                 <Label
                                     htmlFor="subject"
-                                    className="text-sm">
+                                    className="text-sm"
+                                >
                                     Subject
                                 </Label>
                                 <Input
@@ -94,7 +101,8 @@ export default function Contact() {
                             <div className="space-y-2">
                                 <Label
                                     htmlFor="message"
-                                    className="text-sm">
+                                    className="text-sm"
+                                >
                                     Message
                                 </Label>
                                 <Textarea

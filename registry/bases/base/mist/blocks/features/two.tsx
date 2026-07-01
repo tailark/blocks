@@ -13,7 +13,8 @@ export default function Features() {
                         <div className="space-y-4">
                             <Card
                                 className="aspect-video overflow-hidden px-6"
-                                variant="soft">
+                                variant="soft"
+                            >
                                 <Card className="h-full translate-y-6" />
                             </Card>
                             <div className="sm:max-w-sm">
@@ -24,7 +25,8 @@ export default function Features() {
                         <div className="space-y-4">
                             <Card
                                 className="aspect-video overflow-hidden p-6"
-                                variant="soft">
+                                variant="soft"
+                            >
                                 <Card className="h-full" />
                             </Card>
                             <div className="sm:max-w-sm">
@@ -35,7 +37,8 @@ export default function Features() {
                         <div className="space-y-4">
                             <Card
                                 className="aspect-video overflow-hidden"
-                                variant="soft">
+                                variant="soft"
+                            >
                                 <Card className="translate-6 h-full" />
                             </Card>
                             <div className="sm:max-w-sm">

@@ -25,7 +25,8 @@ export default function Footer() {
                     <div className="col-span-full border-b pb-8">
                         <Link
                             href="/"
-                            className="flex items-center gap-2">
+                            className="flex items-center gap-2"
+                        >
                             <Logo className="h-5 w-fit" />
                         </Link>
                         <p className="text-muted-foreground mt-4 max-w-xs text-sm">The modern integration platform for teams who ship fast.</p>
@@ -35,7 +36,8 @@ export default function Footer() {
                                     key={item.label}
                                     href={item.href}
                                     className="text-muted-foreground hover:text-foreground flex size-8 transition-colors *:m-auto"
-                                    aria-label={item.label}>
+                                    aria-label={item.label}
+                                >
                                     <item.icon className="size-4" />
                                 </Link>
                             ))}
@@ -47,7 +49,8 @@ export default function Footer() {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                                className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                            >
                                 {link.label}
                             </Link>
                         ))}

@@ -24,7 +24,8 @@ export default function CallToAction() {
                         </div>
                         <Button
                             asChild
-                            className="shrink-0 pr-1.5">
+                            className="shrink-0 pr-1.5"
+                        >
                             <Link href="#link">
                                 Subscribe
                                 <ChevronRight className="opacity-50" />

@@ -98,7 +98,8 @@ export default function HeroSection() {
 
                                 <Button
                                     asChild
-                                    className="mt-6 pr-1.5">
+                                    className="mt-6 pr-1.5"
+                                >
                                     <Link href="#link">
                                         <span className="text-nowrap">Start Building</span>
                                         <ChevronRight className="opacity-50" />

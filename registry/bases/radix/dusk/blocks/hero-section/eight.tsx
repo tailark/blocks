@@ -18,7 +18,8 @@ const ProfileCard = ({ name, alt, imageSrc, className, cardClassName, rightMaskC
     return (
         <div
             aria-hidden
-            className={cn('absolute inset-0 z-10 m-auto size-fit', className)}>
+            className={cn('absolute inset-0 z-10 m-auto size-fit', className)}
+        >
             <div className="border-foreground/25 mask-radial-from-bottom-left mask-radial-from-65% mask-radial-[100%_60%] absolute inset-y-0 left-0 z-10 aspect-video rounded-l-2xl border-l border-t" />
             <div className={cn('border-foreground/25 mask-radial-from-bottom-right mask-radial-from-65% mask-radial-[60%_100%] absolute inset-y-0 right-0 z-10 aspect-video rounded-r-2xl border-r border-t', rightMaskClassName)} />
 

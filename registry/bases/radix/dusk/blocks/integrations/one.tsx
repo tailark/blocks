@@ -18,7 +18,8 @@ export default function IntegrationsSection() {
                             <p className="text-muted-foreground mb-6 mt-4 text-balance text-lg">Connect seamlessly with popular platforms and services to enhance your workflow.</p>
                             <Button
                                 variant="outline"
-                                asChild>
+                                asChild
+                            >
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>

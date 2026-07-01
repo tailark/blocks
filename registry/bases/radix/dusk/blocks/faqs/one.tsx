@@ -42,12 +42,14 @@ export default function FAQs() {
                         <Accordion
                             type="single"
                             collapsible
-                            className="w-full">
+                            className="w-full"
+                        >
                             {faqItems.map((item) => (
                                 <AccordionItem
                                     key={item.id}
                                     value={item.id}
-                                    className="border-dashed">
+                                    className="border-dashed"
+                                >
                                     <AccordionTrigger className="cursor-pointer text-base hover:no-underline">{item.question}</AccordionTrigger>
                                     <AccordionContent>
                                         <p className="text-muted-foreground text-base">{item.answer}</p>
@@ -60,7 +62,8 @@ export default function FAQs() {
                             Can't find what you're looking for? Contact our{' '}
                             <Link
                                 href="#"
-                                className="text-primary font-medium hover:underline">
+                                className="text-primary font-medium hover:underline"
+                            >
                                 customer support team
                             </Link>
                         </p>

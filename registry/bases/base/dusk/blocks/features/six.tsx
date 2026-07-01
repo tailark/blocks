@@ -1,69 +1,60 @@
-import { Cpu, Lock, Sparkles, Zap } from 'lucide-react'
+import { Bell, LineChart, Users, ArrowLeftRight } from 'lucide-react'
 import Image from 'next/image'
 
 export default function FeaturesSection() {
     return (
         <section className="py-16 md:py-32">
-            <div className="mx-auto max-w-5xl space-y-12 px-6">
-                <div className="relative z-10 grid items-center gap-4 md:grid-cols-2 md:gap-12">
-                    <h2 className="text-4xl font-semibold">The Lyra ecosystem brings together our models</h2>
-                    <p className="max-w-sm sm:ml-auto">Empower your team with workflows that adapt to your needs, whether you prefer git synchronization or a AI Agents interface.</p>
-                </div>
-                <div className="px-3 pt-3 md:-mx-8">
-                    <div className="aspect-88/36 mask-b-from-75% mask-b-to-95% relative">
+            <div className="mx-auto max-w-7xl space-y-12 px-6">
+                <h2 className="text-muted-foreground relative z-10 max-w-4xl text-balance text-4xl font-medium tracking-tight lg:text-5xl">
+                    <span className="text-foreground">Your stack, connected.</span> <br /> Git sync or AI agents, your way.
+                </h2>
+                <div className="relative -mx-6 overflow-hidden px-3 pt-3 md:-mx-8">
+                    <div className="mask-radial-at-top-left mask-radial-from-65% mask-radial-[100%_60%] z-1 absolute inset-3 size-64 rounded-tl-3xl border-l border-t md:size-96 lg:inset-4"></div>
+                    <div className="min-w-2xl aspect-88/36 mask-b-from-75% mask-b-to-95% relative">
                         <Image
                             src="/mail-upper.png"
                             className="absolute inset-0 z-10"
-                            alt="payments illustration dark"
+                            alt="payments illustration"
                             width={2797}
                             height={1137}
                         />
                         <Image
                             src="/mail-back.png"
-                            className="hidden dark:block"
-                            alt="payments illustration dark"
+                            alt="payments illustration"
                             width={2797}
                             height={1137}
-                        />
-                        <Image
-                            src="/mail-back-light.png"
-                            className="dark:hidden"
-                            alt="payments illustration light"
-                            width={2797}
-                            height={1137}
+                            className="opacity-75"
                         />
                     </div>
                 </div>
-                <div className="relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4">
-                    <div className="space-y-3">
-                        <div className="flex items-center gap-2">
-                            <Zap className="size-4" />
-                            <h3 className="text-sm font-medium">Faaast</h3>
-                        </div>
-                        <p className="text-muted-foreground text-sm">It supports an entire helping developers and innovate.</p>
-                    </div>
-                    <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                            <Cpu className="size-4" />
-                            <h3 className="text-sm font-medium">Powerful</h3>
-                        </div>
-                        <p className="text-muted-foreground text-sm">It supports an entire helping developers and businesses.</p>
-                    </div>
-                    <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                            <Lock className="size-4" />
-                            <h3 className="text-sm font-medium">Security</h3>
-                        </div>
-                        <p className="text-muted-foreground text-sm">It supports an helping developers businesses innovate.</p>
-                    </div>
-                    <div className="space-y-2">
-                        <div className="flex items-center gap-2">
-                            <Sparkles className="size-4" />
+                <div className="max-sm:*:not-last:border-b max-sm:*:not-last:pb-3 mt-12 grid gap-3 *:max-w-xs sm:grid-cols-2 md:mt-16 md:gap-y-6 lg:mt-24 lg:grid-cols-4 lg:gap-6">
+                    <p className="text-muted-foreground text-balance">
+                        <span className="text-foreground font-medium">
+                            <ArrowLeftRight className="inline size-4 -translate-y-0.5" /> Seamless handoffs.
+                        </span>{' '}
+                        Ownership changes without resetting the relationship.
+                    </p>
 
-                            <h3 className="text-sm font-medium">AI Powered</h3>
-                        </div>
-                        <p className="text-muted-foreground text-sm">It supports an helping developers businesses innovate.</p>
-                    </div>
+                    <p className="text-muted-foreground text-balance">
+                        <span className="text-foreground font-medium">
+                            <Bell className="inline size-4 -translate-y-0.5" /> Proactive alerts.
+                        </span>{' '}
+                        Surface renewals and quiet accounts before they slip.
+                    </p>
+
+                    <p className="text-muted-foreground text-balance">
+                        <span className="text-foreground font-medium">
+                            <Users className="inline size-4 -translate-y-0.5" /> Shared timeline.
+                        </span>{' '}
+                        Sales, success, and support work from one account view.
+                    </p>
+
+                    <p className="text-muted-foreground text-balance">
+                        <span className="text-foreground font-medium">
+                            <LineChart className="inline size-4 -translate-y-0.5" /> Forecast clarity.
+                        </span>{' '}
+                        Leaders see risk and momentum without chasing updates.
+                    </p>
                 </div>
             </div>
         </section>

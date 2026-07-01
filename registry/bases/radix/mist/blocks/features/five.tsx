@@ -14,7 +14,8 @@ export default function Features() {
                             <Button
                                 className="mt-8 pr-2"
                                 variant="outline"
-                                asChild>
+                                asChild
+                            >
                                 <Link href="#">
                                     Learn more
                                     <ChevronRight className="size-4 opacity-50" />

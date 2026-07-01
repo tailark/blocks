@@ -1,9 +1,10 @@
 import type { SVGProps } from 'react'
 
-export const Perplexity = (props: SVGProps<SVGSVGElement>) => (
+export const Perplexity = (props: SVGProps) => (
     <svg
         {...props}
-        viewBox="0 0 48 48">
+        viewBox="0 0 48 48"
+    >
         <path
             fill="none"
             stroke="currentColor"

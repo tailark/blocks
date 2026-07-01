@@ -1,10 +1,11 @@
 import type { SVGProps } from 'react'
 
-const ClerkIconDark = (props: SVGProps<SVGSVGElement>) => (
+const ClerkIconDark = (props: SVGProps) => (
     <svg
         {...props}
         fill="none"
-        viewBox="0 0 128 128">
+        viewBox="0 0 128 128"
+    >
         <circle
             cx="64"
             cy="64"
@@ -23,11 +24,12 @@ const ClerkIconDark = (props: SVGProps<SVGSVGElement>) => (
     </svg>
 )
 
-const ClerkIconLight = (props: SVGProps<SVGSVGElement>) => (
+const ClerkIconLight = (props: SVGProps) => (
     <svg
         {...props}
         fill="none"
-        viewBox="0 0 128 128">
+        viewBox="0 0 128 128"
+    >
         <circle
             cx="64"
             cy="64"

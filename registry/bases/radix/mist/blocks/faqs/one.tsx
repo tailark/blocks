@@ -44,12 +44,14 @@ export default function FAQs() {
                     <Accordion
                         type="single"
                         collapsible
-                        className="bg-card ring-foreground/5 rounded-(--radius) w-full border border-transparent px-8 py-3 shadow ring-1">
+                        className="bg-card ring-foreground/5 rounded-(--radius) w-full border border-transparent px-8 py-3 shadow ring-1"
+                    >
                         {faqItems.map((item) => (
                             <AccordionItem
                                 key={item.id}
                                 value={item.id}
-                                className="border-dotted">
+                                className="border-dotted"
+                            >
                                 <AccordionTrigger className="cursor-pointer text-base hover:no-underline">{item.question}</AccordionTrigger>
                                 <AccordionContent>
                                     <p className="text-base">{item.answer}</p>
@@ -62,7 +64,8 @@ export default function FAQs() {
                         Can't find what you're looking for? Contact our{' '}
                         <Link
                             href="#"
-                            className="text-primary font-medium hover:underline">
+                            className="text-primary font-medium hover:underline"
+                        >
                             customer support team
                         </Link>
                     </p>

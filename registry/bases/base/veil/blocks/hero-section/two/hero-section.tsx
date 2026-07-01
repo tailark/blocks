@@ -35,7 +35,8 @@ export default function HeroSection() {
                         </div>
                         <div
                             aria-hidden
-                            className="relative z-10 mx-auto w-full max-w-5xl px-6">
+                            className="relative z-10 mx-auto w-full max-w-5xl px-6"
+                        >
                             <div className="mx-auto mb-16 max-w-xl lg:mb-24">
                                 <div className="**:fill-foreground grid scale-95 grid-cols-3 gap-12">
                                     <div className="ml-auto blur-[2px]">

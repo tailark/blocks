@@ -14,7 +14,8 @@ export default function Features() {
                     <div className="@container mt-12 space-y-12">
                         <Card
                             variant="soft"
-                            className="relative overflow-hidden p-0 sm:col-span-2">
+                            className="relative overflow-hidden p-0 sm:col-span-2"
+                        >
                             <Image
                                 src="https://images.unsplash.com/photo-1635776062043-223faf322554?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="AI Assistant Illustration background"
@@ -51,13 +52,15 @@ const AIAssistantIllustration = () => {
     return (
         <Card
             aria-hidden
-            className="relative space-y-4 p-6">
+            className="relative space-y-4 p-6"
+        >
             <div className="w-fit">
                 <Sparkles className="size-3.5 fill-purple-300 stroke-purple-300" />
                 <p className="mt-2 line-clamp-2 text-sm">How can I optimize my neural network to reduce inference time while maintaining accuracy?</p>
                 <ul
                     role="list"
-                    className="text-muted-foreground mt-3 space-y-2 text-sm">
+                    className="text-muted-foreground mt-3 space-y-2 text-sm"
+                >
                     {[
                         { value: '90+', emoji: '⭐️', label: 'Integrations' },
                         { value: '56%', emoji: '👨🏽‍💻', label: 'Productivity Boost' },
@@ -65,7 +68,8 @@ const AIAssistantIllustration = () => {
                     ].map((stat, index) => (
                         <li
                             key={index}
-                            className="-ml-0.5 flex items-center gap-2">
+                            className="-ml-0.5 flex items-center gap-2"
+                        >
                             <span>{stat.emoji}</span>
                             <span className="text-foreground font-medium">{stat.value}</span> {stat.label}
                         </li>
@@ -80,20 +84,23 @@ const AIAssistantIllustration = () => {
                         <Button
                             variant="outline"
                             size="icon"
-                            className="size-7 rounded-2xl bg-transparent shadow-none">
+                            className="size-7 rounded-2xl bg-transparent shadow-none"
+                        >
                             <Plus />
                         </Button>
                         <Button
                             variant="outline"
                             size="icon"
-                            className="size-7 rounded-2xl bg-transparent shadow-none">
+                            className="size-7 rounded-2xl bg-transparent shadow-none"
+                        >
                             <Globe />
                         </Button>
                     </div>
 
                     <Button
                         size="icon"
-                        className="size-7 rounded-2xl bg-black">
+                        className="size-7 rounded-2xl bg-black"
+                    >
                         <ArrowUp strokeWidth={3} />
                     </Button>
                 </div>

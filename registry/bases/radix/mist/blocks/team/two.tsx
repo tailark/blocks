@@ -27,7 +27,8 @@ export default function TeamSection() {
                         <Button
                             asChild
                             variant="outline"
-                            className="pr-2">
+                            className="pr-2"
+                        >
                             <Link href="#">
                                 We're hiring
                                 <ChevronRight className="opacity-50" />
@@ -39,7 +40,8 @@ export default function TeamSection() {
                         {members.map((member, index) => (
                             <HoverCard
                                 key={index}
-                                openDelay={300}>
+                                openDelay={300}
+                            >
                                 <HoverCardTrigger className="grid cursor-pointer grid-cols-[auto_1fr] items-center gap-2.5">
                                     <div className="ring-foreground/10 size-6 border border-transparent shadow ring-1">
                                         <Image
@@ -69,7 +71,8 @@ export default function TeamSection() {
                                             <Button
                                                 variant="ghost"
                                                 asChild
-                                                aria-label="X Account">
+                                                aria-label="X Account"
+                                            >
                                                 <Link href="https://x.com/MeschacIrung">
                                                     <Twitter className="fill-muted-foreground stroke-muted-foreground" />
                                                 </Link>

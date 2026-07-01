@@ -22,7 +22,8 @@ export default function HeroSection() {
                                     <Button
                                         variant="ghost"
                                         aria-label="Download App"
-                                        className="hover:bg-transparent">
+                                        className="hover:bg-transparent"
+                                    >
                                         <Kbd>D</Kbd>
                                         Download App
                                     </Button>

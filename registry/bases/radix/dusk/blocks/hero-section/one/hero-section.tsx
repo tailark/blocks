@@ -24,7 +24,8 @@ export default function HeroSection() {
                             <div className="px-6 text-center sm:mx-auto lg:mr-auto lg:mt-0">
                                 <Link
                                     href="#link"
-                                    className="group mx-auto flex w-fit items-center gap-3 rounded-full p-1 pl-4 transition-colors duration-300">
+                                    className="group mx-auto flex w-fit items-center gap-3 rounded-full p-1 pl-4 transition-colors duration-300"
+                                >
                                     <span className="text-sm font-medium">New:</span>
                                     <span className="text-muted-foreground text-sm">Introducing the living customer graph</span>
 
@@ -46,7 +47,8 @@ export default function HeroSection() {
                                 <div className="mt-6 flex flex-col items-center justify-center gap-2 md:flex-row">
                                     <Button
                                         key={1}
-                                        asChild>
+                                        asChild
+                                    >
                                         <Link href="#">
                                             <span className="text-nowrap">Explore the graph</span>
                                         </Link>
@@ -55,7 +57,8 @@ export default function HeroSection() {
                                     <Button
                                         key={2}
                                         asChild
-                                        variant="ghost">
+                                        variant="ghost"
+                                    >
                                         <Link href="#">
                                             <span className="text-nowrap">Watch the flow</span>
                                         </Link>
@@ -92,7 +95,8 @@ export default function HeroSection() {
                         <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
                             <Link
                                 href="/"
-                                className="block text-sm duration-150 hover:opacity-75">
+                                className="block text-sm duration-150 hover:opacity-75"
+                            >
                                 <span> See the network</span>
 
                                 <ChevronRight className="ml-1 inline-block size-3" />

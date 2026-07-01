@@ -20,7 +20,8 @@ export default function HeroSection() {
 
                                 <Button
                                     className="w-fit"
-                                    asChild>
+                                    asChild
+                                >
                                     <Link href="#">Get Started</Link>
                                 </Button>
                             </div>

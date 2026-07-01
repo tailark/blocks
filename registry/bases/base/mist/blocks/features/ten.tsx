@@ -20,7 +20,8 @@ export default function Features() {
                         <div className="col-span-full space-y-4">
                             <Card
                                 variant="soft"
-                                className="overflow-hidden px-6 sm:col-span-2">
+                                className="overflow-hidden px-6 sm:col-span-2"
+                            >
                                 <div className="mask-b-from-75% mx-auto -mt-2 max-w-sm px-2 pt-8">
                                     <AIAssistantIllustration />
                                 </div>
@@ -33,7 +34,8 @@ export default function Features() {
                         <div className="grid grid-rows-[1fr_auto] space-y-4">
                             <Card
                                 variant="soft"
-                                className="p-6">
+                                className="p-6"
+                            >
                                 <MeetingIllustration />
                             </Card>
                             <div>
@@ -45,7 +47,8 @@ export default function Features() {
                         <div className="grid grid-rows-[1fr_auto] space-y-4">
                             <Card
                                 variant="soft"
-                                className="overflow-hidden p-6">
+                                className="overflow-hidden p-6"
+                            >
                                 <CodeReviewIllustration />
                             </Card>
                             <div>
@@ -64,7 +67,8 @@ const MeetingIllustration = () => {
     return (
         <Card
             aria-hidden
-            className="p-4">
+            className="p-4"
+        >
             <div className="relative hidden h-fit">
                 <div className="absolute -left-1.5 bottom-1.5 rounded-md border-t border-red-700 bg-red-500 px-1 py-px text-[10px] font-medium text-white shadow-md shadow-red-500/35">PDF</div>
                 <div className="bg-linear-to-b h-10 w-8 rounded-md border from-zinc-100 to-zinc-200" />
@@ -83,7 +87,8 @@ const MeetingIllustration = () => {
                     ].map((avatar, index) => (
                         <div
                             key={index}
-                            className="bg-background size-7 rounded-full border p-0.5 shadow shadow-zinc-950/5">
+                            className="bg-background size-7 rounded-full border p-0.5 shadow shadow-zinc-950/5"
+                        >
                             <Image
                                 className="aspect-square rounded-full object-cover"
                                 src={avatar.src}
@@ -104,7 +109,8 @@ const CodeReviewIllustration = () => {
     return (
         <div
             aria-hidden
-            className="relative">
+            className="relative"
+        >
             <Card className="aspect-video w-4/5 translate-y-2 p-3">
                 <div className="mb-3 grid grid-cols-[auto_1fr] gap-2">
                     <div className="bg-background size-6 rounded-full border p-0.5 shadow shadow-zinc-950/5">
@@ -144,7 +150,8 @@ const AIAssistantIllustration = () => {
     return (
         <Card
             aria-hidden
-            className="p-4 transition-transform duration-200 group-hover:translate-y-0">
+            className="p-4 transition-transform duration-200 group-hover:translate-y-0"
+        >
             <div className="max-w-3/4 ml-auto w-fit">
                 <p className="border-foreground/5 bg-foreground/5 mb-2 rounded-l-2xl rounded-t-2xl rounded-br border p-4 text-sm">Mollitia rerum est quisquam nobis ut cumque, dolore earum a voluptate esse. Illo, rerum esse?</p>
                 <span className="text-muted-foreground block text-right text-xs">Now</span>
@@ -161,20 +168,23 @@ const AIAssistantIllustration = () => {
                         <Button
                             variant="outline"
                             size="icon"
-                            className="size-7 rounded-2xl bg-transparent shadow-none">
+                            className="size-7 rounded-2xl bg-transparent shadow-none"
+                        >
                             <Plus />
                         </Button>
                         <Button
                             variant="outline"
                             size="icon"
-                            className="size-7 rounded-2xl bg-transparent shadow-none">
+                            className="size-7 rounded-2xl bg-transparent shadow-none"
+                        >
                             <Globe />
                         </Button>
                     </div>
 
                     <Button
                         size="icon"
-                        className="size-7 rounded-2xl bg-black">
+                        className="size-7 rounded-2xl bg-black"
+                    >
                         <ArrowUp strokeWidth={3} />
                     </Button>
                 </div>

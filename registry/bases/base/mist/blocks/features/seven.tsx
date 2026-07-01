@@ -16,7 +16,8 @@ export default function FeaturesSection() {
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                         <Card
                             variant="soft"
-                            className="col-span-full overflow-hidden pl-6 pt-6">
+                            className="col-span-full overflow-hidden pl-6 pt-6"
+                        >
                             <Layout className="text-primary size-5" />
                             <h3 className="text-foreground mt-5 text-lg font-semibold">AI Code Generation</h3>
                             <p className="text-muted-foreground mt-3 max-w-xl text-balance">Our advanced AI models transform natural language into production-ready code, streamlining development workflows and enabling faster iteration. </p>
@@ -34,7 +35,8 @@ export default function FeaturesSection() {
                         </Card>
                         <Card
                             variant="soft"
-                            className="overflow-hidden p-6">
+                            className="overflow-hidden p-6"
+                        >
                             <Target className="text-primary size-5" />
                             <h3 className="text-foreground mt-5 text-lg font-semibold">AI Code Generation</h3>
                             <p className="text-muted-foreground mt-3 text-balance">Our advanced AI models transform natural language into production-ready code.</p>
@@ -44,7 +46,8 @@ export default function FeaturesSection() {
 
                         <Card
                             variant="soft"
-                            className="group overflow-hidden px-6 pt-6">
+                            className="group overflow-hidden px-6 pt-6"
+                        >
                             <CalendarCheck className="text-primary size-5" />
                             <h3 className="text-foreground mt-5 text-lg font-semibold">Intelligent Code Review</h3>
                             <p className="text-muted-foreground mt-3 text-balance">Our AI analyzes your code for bugs, security issues, and optimization opportunities.</p>
@@ -53,7 +56,8 @@ export default function FeaturesSection() {
                         </Card>
                         <Card
                             variant="soft"
-                            className="group overflow-hidden px-6 pt-6">
+                            className="group overflow-hidden px-6 pt-6"
+                        >
                             <Sparkles className="text-primary size-5" />
                             <h3 className="text-foreground mt-5 text-lg font-semibold">Contextual AI Assistant</h3>
                             <p className="text-muted-foreground mt-3 text-balance">A personalized AI companion that understands your codebase and helps solve complex...</p>
@@ -73,7 +77,8 @@ const MeetingIllustration = () => {
     return (
         <Card
             aria-hidden
-            className="mt-9 aspect-video p-4">
+            className="mt-9 aspect-video p-4"
+        >
             <div className="relative hidden h-fit">
                 <div className="absolute -left-1.5 bottom-1.5 rounded-md border-t border-red-700 bg-red-500 px-1 py-px text-[10px] font-medium text-white shadow-md shadow-red-500/35">PDF</div>
                 <div className="bg-linear-to-b h-10 w-8 rounded-md border from-zinc-100 to-zinc-200" />
@@ -92,7 +97,8 @@ const MeetingIllustration = () => {
                     ].map((avatar, index) => (
                         <div
                             key={index}
-                            className="bg-background size-7 rounded-full border p-0.5 shadow shadow-zinc-950/5">
+                            className="bg-background size-7 rounded-full border p-0.5 shadow shadow-zinc-950/5"
+                        >
                             <Image
                                 className="aspect-square rounded-full object-cover"
                                 src={avatar.src}
@@ -113,7 +119,8 @@ const CodeReviewIllustration = () => {
     return (
         <div
             aria-hidden
-            className="relative mt-6">
+            className="relative mt-6"
+        >
             <Card className="aspect-video w-4/5 translate-y-4 p-3 transition-transform duration-200 ease-in-out group-hover:-rotate-3">
                 <div className="mb-3 flex items-center gap-2">
                     <div className="bg-background size-6 rounded-full border p-0.5 shadow shadow-zinc-950/5">
@@ -151,7 +158,8 @@ const AIAssistantIllustration = () => {
     return (
         <Card
             aria-hidden
-            className="mt-6 aspect-video translate-y-4 p-4 pb-6 transition-transform duration-200 group-hover:translate-y-0">
+            className="mt-6 aspect-video translate-y-4 p-4 pb-6 transition-transform duration-200 group-hover:translate-y-0"
+        >
             <div className="w-fit">
                 <Sparkles className="size-3.5 fill-purple-300 stroke-purple-300" />
                 <p className="mt-2 line-clamp-2 text-sm">How can I optimize my neural network to reduce inference time while maintaining accuracy?</p>
@@ -164,20 +172,23 @@ const AIAssistantIllustration = () => {
                         <Button
                             variant="outline"
                             size="icon"
-                            className="size-7 rounded-2xl bg-transparent shadow-none">
+                            className="size-7 rounded-2xl bg-transparent shadow-none"
+                        >
                             <Plus />
                         </Button>
                         <Button
                             variant="outline"
                             size="icon"
-                            className="size-7 rounded-2xl bg-transparent shadow-none">
+                            className="size-7 rounded-2xl bg-transparent shadow-none"
+                        >
                             <Globe />
                         </Button>
                     </div>
 
                     <Button
                         size="icon"
-                        className="size-7 rounded-2xl bg-black">
+                        className="size-7 rounded-2xl bg-black"
+                    >
                         <ArrowUp strokeWidth={3} />
                     </Button>
                 </div>

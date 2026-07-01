@@ -82,7 +82,8 @@ export function InfiniteSlider({ children, gap = 16, speed = 100, speedOnHover, 
                     flexDirection: direction === 'horizontal' ? 'row' : 'column',
                 }}
                 ref={ref}
-                {...hoverProps}>
+                {...hoverProps}
+            >
                 {children}
                 {children}
             </motion.div>

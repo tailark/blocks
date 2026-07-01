@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { cn } from '@/registry/core/lib/utils'
 
-function Input({ className, type, ...props }: React.ComponentProps<'input'>) {
+function Input({ className, type, ...props }: React.ComponentProps) {
     return (
         <input
             type={type}

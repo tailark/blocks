@@ -1,13 +1,14 @@
 import { type SVGProps } from 'react'
 
-export function VSCodium(props: SVGProps<SVGSVGElement>) {
+export function VSCodium(props: SVGProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 100"
             width="1em"
             height="1em"
-            {...props}>
+            {...props}
+        >
             <defs>
                 <linearGradient
                     id="a"
@@ -16,7 +17,8 @@ export function VSCodium(props: SVGProps<SVGSVGElement>) {
                     y1={214.302}
                     y2={307.573}
                     gradientTransform="translate(-200 -213)"
-                    gradientUnits="userSpaceOnUse">
+                    gradientUnits="userSpaceOnUse"
+                >
                     <stop
                         offset={0}
                         stopColor="#62A0EA"

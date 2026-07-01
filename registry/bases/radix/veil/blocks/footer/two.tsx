@@ -23,7 +23,8 @@ export default function Footer() {
                 <div className="flex flex-col items-center text-center">
                     <Link
                         href="/"
-                        className="flex items-center gap-2">
+                        className="flex items-center gap-2"
+                    >
                         <Logo className="h-5" />
                     </Link>
                     <nav className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
@@ -31,7 +32,8 @@ export default function Footer() {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className="text-muted-foreground hover:text-foreground text-sm transition-colors">
+                                className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                            >
                                 {link.label}
                             </Link>
                         ))}
@@ -42,7 +44,8 @@ export default function Footer() {
                                 key={item.label}
                                 href={item.href}
                                 className="text-muted-foreground hover:text-foreground size-8 rounded-full transition-colors"
-                                aria-label={item.label}>
+                                aria-label={item.label}
+                            >
                                 <item.icon className="size-4" />
                             </Link>
                         ))}

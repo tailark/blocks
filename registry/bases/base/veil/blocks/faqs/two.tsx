@@ -43,7 +43,8 @@ export default function FAQs() {
                             Need more help?{' '}
                             <Link
                                 href="#"
-                                className="text-primary font-medium hover:underline">
+                                className="text-primary font-medium hover:underline"
+                            >
                                 Contact us
                             </Link>
                         </p>
@@ -54,7 +55,8 @@ export default function FAQs() {
                                 <AccordionItem
                                     key={item.id}
                                     value={item.id}
-                                    className="border-dashed">
+                                    className="border-dashed"
+                                >
                                     <AccordionTrigger className="cursor-pointer py-4 text-sm font-medium hover:no-underline">{item.question}</AccordionTrigger>
                                     <AccordionContent>
                                         <p className="text-muted-foreground pb-2 text-sm">{item.answer}</p>
@@ -66,7 +68,8 @@ export default function FAQs() {
                             Need more help?{' '}
                             <Link
                                 href="#"
-                                className="text-primary font-medium hover:underline">
+                                className="text-primary font-medium hover:underline"
+                            >
                                 Contact us
                             </Link>
                         </p>

@@ -36,21 +36,24 @@ export const HeroHeader = () => {
         <header>
             <nav
                 data-state={menuState && 'active'}
-                className="bg-background fixed top-0 z-20 w-full border-b max-lg:data-[state=active]:bottom-0">
+                className="bg-background fixed top-0 z-20 w-full border-b max-lg:data-[state=active]:bottom-0"
+            >
                 <div className="mx-auto max-w-7xl px-6">
                     <div className="relative flex flex-wrap items-center justify-between max-lg:gap-6">
                         <div className="max-lg:in-data-[state=active]:border-b flex w-full items-center justify-between gap-12 py-4 lg:w-auto lg:py-5">
                             <Link
                                 href="/"
                                 aria-label="goto home"
-                                className="flex items-center space-x-2">
+                                className="flex items-center space-x-2"
+                            >
                                 <Logo uniColor />
                             </Link>
 
                             <button
                                 onClick={() => setMenuState(!menuState)}
                                 aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
-                                className="relative z-20 block cursor-pointer after:absolute after:-inset-4 lg:hidden">
+                                className="relative z-20 block cursor-pointer after:absolute after:-inset-4 lg:hidden"
+                            >
                                 <div className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 size-4.5 m-auto flex flex-col items-center justify-center gap-[7px] duration-200">
                                     <span className="bg-foreground h-0.5 w-full rounded-full" />
                                     <span className="bg-foreground h-0.5 w-full rounded-full" />
@@ -65,7 +68,8 @@ export const HeroHeader = () => {
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
-                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                                                className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                                            >
                                                 <span>{item.name}</span>
                                             </Link>
                                         </li>
@@ -81,7 +85,8 @@ export const HeroHeader = () => {
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
-                                                className="text-foreground block py-3 text-2xl font-medium">
+                                                className="text-foreground block py-3 text-2xl font-medium"
+                                            >
                                                 <span>{item.name}</span>
                                             </Link>
                                         </li>
@@ -92,7 +97,8 @@ export const HeroHeader = () => {
                                 <Button
                                     asChild
                                     variant="outline"
-                                    size="sm">
+                                    size="sm"
+                                >
                                     <Link href="#">
                                         <span>Login</span>
                                     </Link>

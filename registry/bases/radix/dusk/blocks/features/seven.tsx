@@ -20,7 +20,8 @@ export default function FeaturesSection() {
 
                         <div
                             aria-hidden
-                            className="relative">
+                            className="relative"
+                        >
                             <div className="absolute inset-0 z-10 m-auto size-fit -translate-y-full">
                                 <div className="rounded-(--radius) text-muted-foreground z-1 ring-foreground/6.5 shadow-black/6.5 relative flex size-fit w-fit items-center gap-2 bg-zinc-900/75 px-3 py-1 text-xs font-medium shadow-lg ring backdrop-blur">
                                     <span className="text-lg">🇨🇩</span> Last connection from <span className="text-foreground">DR Congo</span>
@@ -41,7 +42,8 @@ export default function FeaturesSection() {
                         </div>
                         <div
                             aria-hidden
-                            className="mask-radial-at-top-left mask-radial-[90%_80%] mask-radial-from-75%">
+                            className="mask-radial-at-top-left mask-radial-[90%_80%] mask-radial-from-75%"
+                        >
                             <div className="bg-card relative mx-auto flex aspect-video flex-col justify-between rounded-xl border pb-6">
                                 <div className="mb-6 flex gap-1.5 border-b p-3">
                                     <div className="bg-foreground/10 size-1.5 rounded-full"></div>
@@ -87,7 +89,8 @@ const Map = () => {
     return (
         <svg
             viewBox={viewBox}
-            style={{ background: svgOptions.backgroundColor }}>
+            style={{ background: svgOptions.backgroundColor }}
+        >
             {points.map((point, index) => (
                 <circle
                     key={index}
@@ -125,21 +128,24 @@ const MonitoringChart = () => {
     return (
         <ChartContainer
             className="h-120 aspect-auto md:h-96"
-            config={chartConfig}>
+            config={chartConfig}
+        >
             <AreaChart
                 accessibilityLayer
                 data={chartData}
                 margin={{
                     left: 0,
                     right: 0,
-                }}>
+                }}
+            >
                 <defs>
                     <linearGradient
                         id="fillDesktop"
                         x1="0"
                         y1="0"
                         x2="0"
-                        y2="1">
+                        y2="1"
+                    >
                         <stop
                             offset="0%"
                             stopColor="var(--color-desktop)"
@@ -156,7 +162,8 @@ const MonitoringChart = () => {
                         x1="0"
                         y1="0"
                         x2="0"
-                        y2="1">
+                        y2="1"
+                    >
                         <stop
                             offset="0%"
                             stopColor="var(--color-mobile)"

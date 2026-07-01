@@ -42,15 +42,18 @@ export default function FAQs() {
                 </div>
                 <Card
                     variant="outline"
-                    className="mt-12 p-2">
+                    className="mt-12 p-2"
+                >
                     <Accordion
                         type="single"
-                        collapsible>
+                        collapsible
+                    >
                         {faqItems.map((item) => (
                             <AccordionItem
                                 key={item.id}
                                 value={item.id}
-                                className="border-b-0 px-4">
+                                className="border-b-0 px-4"
+                            >
                                 <AccordionTrigger className="cursor-pointer py-4 text-sm font-medium hover:no-underline">{item.question}</AccordionTrigger>
                                 <AccordionContent>
                                     <p className="text-muted-foreground pb-2 text-sm">{item.answer}</p>
@@ -63,7 +66,8 @@ export default function FAQs() {
                     Still have questions?{' '}
                     <Link
                         href="#"
-                        className="text-primary font-medium hover:underline">
+                        className="text-primary font-medium hover:underline"
+                    >
                         Contact support
                     </Link>
                 </p>

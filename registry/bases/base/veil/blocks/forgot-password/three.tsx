@@ -12,7 +12,8 @@ export default function ForgotPassword() {
                     <Link
                         href="/"
                         aria-label="go home"
-                        className="inline-block py-3">
+                        className="inline-block py-3"
+                    >
                         <Logo className="mx-auto w-fit" />
                     </Link>
                     <h1 className="mt-3 font-serif text-4xl font-medium">Reset password</h1>
@@ -20,11 +21,13 @@ export default function ForgotPassword() {
 
                 <form
                     action=""
-                    className="mt-12 space-y-4">
+                    className="mt-12 space-y-4"
+                >
                     <div className="space-y-2">
                         <Label
                             htmlFor="email"
-                            className="text-sm">
+                            className="text-sm"
+                        >
                             Email
                         </Label>
                         <Input
@@ -43,7 +46,8 @@ export default function ForgotPassword() {
                     Remember your password?{' '}
                     <Link
                         href="#"
-                        className="text-primary font-medium hover:underline">
+                        className="text-primary font-medium hover:underline"
+                    >
                         Sign in
                     </Link>
                 </p>

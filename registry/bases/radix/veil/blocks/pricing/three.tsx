@@ -36,7 +36,8 @@ export default function Pricing() {
                         <Card
                             key={plan.name}
                             variant={plan.highlighted ? 'default' : 'mixed'}
-                            className={cn('relative p-6', plan.highlighted && 'ring-primary')}>
+                            className={cn('relative p-6', plan.highlighted && 'ring-primary')}
+                        >
                             <div className="mb-6">
                                 <h3 className="text-foreground font-medium">{plan.name}</h3>
                                 <p className="text-muted-foreground mt-1 text-sm">{plan.description}</p>
@@ -49,7 +50,8 @@ export default function Pricing() {
                                 {plan.features.map((feature) => (
                                     <li
                                         key={feature}
-                                        className="text-muted-foreground flex items-center gap-2 text-sm">
+                                        className="text-muted-foreground flex items-center gap-2 text-sm"
+                                    >
                                         <Check className="text-primary size-4" />
                                         {feature}
                                     </li>
@@ -58,7 +60,8 @@ export default function Pricing() {
                             <Button
                                 asChild
                                 variant={plan.highlighted ? 'default' : 'outline'}
-                                className="mt-8 w-full gap-2">
+                                className="mt-8 w-full gap-2"
+                            >
                                 <Link href="#link">
                                     Get Started
                                     <ArrowRight className="size-4" />

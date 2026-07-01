@@ -29,7 +29,8 @@ export default function HeroSection() {
 
                                     <Button
                                         asChild
-                                        className="mt-6 pr-1.5">
+                                        className="mt-6 pr-1.5"
+                                    >
                                         <Link href="#link">
                                             <span className="text-nowrap">Start Building</span>
                                             <ChevronRight className="opacity-50" />
@@ -38,7 +39,8 @@ export default function HeroSection() {
                                 </div>
                                 <div
                                     aria-hidden
-                                    className="mask-y-from-50% relative max-md:mx-auto max-md:*:scale-90">
+                                    className="mask-y-from-50% relative max-md:mx-auto max-md:*:scale-90"
+                                >
                                     {[
                                         'How do I integrate Supabase authentication?',
                                         'Set up real-time subscriptions with Firebase',
@@ -55,7 +57,8 @@ export default function HeroSection() {
                                     ].map((prompt, index) => (
                                         <div
                                             key={index}
-                                            className="text-muted-foreground flex items-center gap-2 px-14 py-2 text-sm">
+                                            className="text-muted-foreground flex items-center gap-2 px-14 py-2 text-sm"
+                                        >
                                             <MessageCircle className="size-3.5 opacity-50" />
                                             <span className="text-nowrap">{prompt}</span>
                                         </div>

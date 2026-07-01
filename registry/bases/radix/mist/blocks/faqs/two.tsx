@@ -43,7 +43,8 @@ export default function FAQs() {
                             Can't find what you're looking for? Contact our{' '}
                             <Link
                                 href="#"
-                                className="text-primary font-medium hover:underline">
+                                className="text-primary font-medium hover:underline"
+                            >
                                 customer support team
                             </Link>
                         </p>
@@ -52,11 +53,13 @@ export default function FAQs() {
                     <div className="md:col-span-3">
                         <Accordion
                             type="single"
-                            collapsible>
+                            collapsible
+                        >
                             {faqItems.map((item) => (
                                 <AccordionItem
                                     key={item.id}
-                                    value={item.id}>
+                                    value={item.id}
+                                >
                                     <AccordionTrigger className="cursor-pointer text-base hover:no-underline">{item.question}</AccordionTrigger>
                                     <AccordionContent>
                                         <p className="text-base">{item.answer}</p>
@@ -70,7 +73,8 @@ export default function FAQs() {
                         Can't find what you're looking for? Contact our{' '}
                         <Link
                             href="#"
-                            className="text-primary font-medium hover:underline">
+                            className="text-primary font-medium hover:underline"
+                        >
                             customer support team
                         </Link>
                     </p>

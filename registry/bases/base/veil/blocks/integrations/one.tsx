@@ -40,7 +40,8 @@ const IntegrationsIllustration = () => {
     return (
         <div
             aria-hidden
-            className="**:fill-foreground mx-auto flex h-44 max-w-lg flex-col justify-between">
+            className="**:fill-foreground mx-auto flex h-44 max-w-lg flex-col justify-between"
+        >
             <div className="@lg:px-6 relative flex h-10 items-center justify-between gap-12">
                 <div className="bg-border absolute inset-0 my-auto h-px"></div>
 

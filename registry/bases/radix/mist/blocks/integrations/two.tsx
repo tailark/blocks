@@ -35,7 +35,8 @@ export default function Integrations() {
                     </div>
                     <Button
                         asChild
-                        variant="outline">
+                        variant="outline"
+                    >
                         <Link href="#">More Integrations</Link>
                     </Button>
                 </div>

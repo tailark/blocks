@@ -55,7 +55,8 @@ export default function LogoCloud() {
                 ) : (
                     <InfiniteSlider
                         gap={44}
-                        className="mask-x-from-85% mask-x-to-99% *:[&>svg]:scale-80 py-8">
+                        className="mask-x-from-85% mask-x-to-99% *:[&>svg]:scale-80 py-8"
+                    >
                         <Logos />
                     </InfiniteSlider>
                 )}

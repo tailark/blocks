@@ -8,7 +8,7 @@ import { type ComponentProps, useMemo, useState } from 'react'
 
 type SocialMedia = 'twitter' | 'linkedin' | 'youtube'
 
-function YoutubeIcon(props: ComponentProps<'svg'>) {
+function YoutubeIcon(props: ComponentProps) {
     return (
         <svg
             viewBox="0 0 24 24"
@@ -18,7 +18,8 @@ function YoutubeIcon(props: ComponentProps<'svg'>) {
             strokeLinecap="round"
             strokeLinejoin="round"
             aria-hidden="true"
-            {...props}>
+            {...props}
+        >
             <path d="M2.5 17a24.1 24.1 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.1 24.1 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
             <path d="m10 15 5-3-5-3z" />
         </svg>
@@ -26,7 +27,7 @@ function YoutubeIcon(props: ComponentProps<'svg'>) {
 }
 
 export const SocialMedias = () => {
-    const [hoveredSocialMedia, setHoveredSocialMedia] = useState<SocialMedia | null>(null)
+    const [hoveredSocialMedia, setHoveredSocialMedia] = useState(null)
 
     const tooltipLabel = useMemo(() => {
         const activeTheme = hoveredSocialMedia ?? 'twitter'
@@ -56,12 +57,14 @@ export const SocialMedias = () => {
                     onMouseEnter={() => setHoveredSocialMedia('twitter')}
                     onMouseLeave={() => setHoveredSocialMedia(null)}
                     onFocus={() => setHoveredSocialMedia('twitter')}
-                    onBlur={() => setHoveredSocialMedia(null)}>
+                    onBlur={() => setHoveredSocialMedia(null)}
+                >
                     <Link
                         href="#"
                         target="_blank"
                         rel="noopener noreferrer"
-                        referrerPolicy="no-referrer">
+                        referrerPolicy="no-referrer"
+                    >
                         <Twitter />
                     </Link>
                 </Button>
@@ -75,12 +78,14 @@ export const SocialMedias = () => {
                     onMouseEnter={() => setHoveredSocialMedia('linkedin')}
                     onMouseLeave={() => setHoveredSocialMedia(null)}
                     onFocus={() => setHoveredSocialMedia('linkedin')}
-                    onBlur={() => setHoveredSocialMedia(null)}>
+                    onBlur={() => setHoveredSocialMedia(null)}
+                >
                     <Link
                         href="#"
                         target="_blank"
                         rel="noopener noreferrer"
-                        referrerPolicy="no-referrer">
+                        referrerPolicy="no-referrer"
+                    >
                         <Linkedin />
                     </Link>
                 </Button>
@@ -95,12 +100,14 @@ export const SocialMedias = () => {
                     onMouseEnter={() => setHoveredSocialMedia('youtube')}
                     onMouseLeave={() => setHoveredSocialMedia(null)}
                     onFocus={() => setHoveredSocialMedia('youtube')}
-                    onBlur={() => setHoveredSocialMedia(null)}>
+                    onBlur={() => setHoveredSocialMedia(null)}
+                >
                     <Link
                         href="#"
                         target="_blank"
                         rel="noopener noreferrer"
-                        referrerPolicy="no-referrer">
+                        referrerPolicy="no-referrer"
+                    >
                         <YoutubeIcon />
                     </Link>
                 </Button>
@@ -108,7 +115,8 @@ export const SocialMedias = () => {
 
             <div
                 aria-live="polite"
-                className={cn('text-muted-foreground w-fit text-xs leading-none transition-opacity', hoveredSocialMedia ? 'opacity-100' : 'opacity-0')}>
+                className={cn('text-muted-foreground w-fit text-xs leading-none transition-opacity', hoveredSocialMedia ? 'opacity-100' : 'opacity-0')}
+            >
                 {tooltipLabel}
             </div>
         </div>

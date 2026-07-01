@@ -9,7 +9,8 @@ export default function TestimonialSection() {
                             <cite>John Doe</cite>
                             <span
                                 aria-hidden
-                                className="bg-foreground/15 size-1 rounded-full"></span>
+                                className="bg-foreground/15 size-1 rounded-full"
+                            ></span>
                             <span className="text-muted-foreground">Product Designer</span>
                         </footer>
                     </blockquote>

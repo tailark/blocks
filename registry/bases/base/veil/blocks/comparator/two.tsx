@@ -24,7 +24,8 @@ export default function Comparator() {
                 </div>
                 <Card
                     variant="outline"
-                    className="@max-md:*:min-w-md mt-12 overflow-auto">
+                    className="@max-md:*:min-w-md mt-12 overflow-auto"
+                >
                     <div className="grid grid-cols-3">
                         <div className="p-4"></div>
                         <div className="min-w-32 border-l p-4 text-center">
@@ -39,7 +40,8 @@ export default function Comparator() {
                     {features.map((feature) => (
                         <div
                             key={feature.name}
-                            className="grid grid-cols-3 border-t">
+                            className="grid grid-cols-3 border-t"
+                        >
                             <div className="text-muted-foreground p-4 text-sm">{feature.name}</div>
                             <div className="flex min-w-32 items-center justify-center border-l p-4 text-sm">{typeof feature.free === 'boolean' ? feature.free ? <Check className="text-primary size-4" /> : <Minus className="text-muted-foreground/50 size-4" /> : <span className="text-foreground">{feature.free}</span>}</div>
                             <div className="bg-primary/5 flex min-w-32 items-center justify-center border-l p-4 text-sm">{typeof feature.pro === 'boolean' ? feature.pro ? <Check className="text-primary size-4" /> : <Minus className="text-muted-foreground/50 size-4" /> : <span className="text-foreground font-medium">{feature.pro}</span>}</div>

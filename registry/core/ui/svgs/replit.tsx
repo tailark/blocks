@@ -1,6 +1,6 @@
 import { type SVGProps } from 'react'
 
-export function Replit(props: SVGProps<SVGSVGElement>) {
+export function Replit(props: SVGProps) {
     return (
         <svg
             width="1em"
@@ -8,7 +8,8 @@ export function Replit(props: SVGProps<SVGSVGElement>) {
             viewBox="0 0 20 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            {...props}>
+            {...props}
+        >
             <path
                 d="M0 1.5C0 0.671573 0.671573 0 1.5 0H8.5C9.32843 0 10 0.671573 10 1.5V8H1.5C0.671573 8 0 7.32843 0 6.5V1.5Z"
                 fill="#F26207"

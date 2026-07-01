@@ -41,7 +41,8 @@ export default function TeamSection() {
                         {members.map((member, index) => (
                             <HoverCard
                                 key={index}
-                                openDelay={300}>
+                                openDelay={300}
+                            >
                                 <HoverCardTrigger className="grid cursor-pointer grid-cols-[auto_1fr] items-center gap-2.5">
                                     <div className="ring-foreground/10 size-6 rounded-full border border-transparent shadow ring-1">
                                         <Image

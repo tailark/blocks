@@ -19,7 +19,8 @@ export default function ContactSection() {
                                 <h2 className="mb-3 text-lg font-semibold">Collaborate</h2>
                                 <Link
                                     href="mailto:hello@tailus.com"
-                                    className="text-primary text-lg hover:underline">
+                                    className="text-primary text-lg hover:underline"
+                                >
                                     hello@tailark.com
                                 </Link>
                                 <p className="mt-3 text-sm">+243 000 000 000</p>
@@ -30,7 +31,8 @@ export default function ContactSection() {
                                 <h3 className="mb-3 text-lg font-semibold">Press</h3>
                                 <Link
                                     href="mailto:press@tailark.com"
-                                    className="text-primary text-lg hover:underline">
+                                    className="text-primary text-lg hover:underline"
+                                >
                                     press@tailark.com
                                 </Link>
                                 <p className="mt-3 text-sm">+243 000 000 000</p>
@@ -40,7 +42,8 @@ export default function ContactSection() {
 
                     <form
                         action=""
-                        className="@container lg:col-span-3">
+                        className="@container lg:col-span-3"
+                    >
                         <Card className="p-8 sm:p-12">
                             <h3 className="text-xl font-semibold">Let's get you to the right place</h3>
                             <p className="mt-4 text-sm">Reach out to our sales team! We’re eager to learn more about how you plan to use our application.</p>
@@ -50,7 +53,8 @@ export default function ContactSection() {
                                     <div>
                                         <Label
                                             htmlFor="name"
-                                            className="space-y-2">
+                                            className="space-y-2"
+                                        >
                                             Full name
                                         </Label>
                                         <Input

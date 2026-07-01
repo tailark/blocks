@@ -1,123 +1,132 @@
-import { Card, CardContent, CardHeader } from '@/registry/bases/base/dusk/ui/card'
-import { Avatar, AvatarFallback, AvatarImage } from '@/registry/bases/base/dusk/ui/avatar'
-import { Hulu } from '@/registry/core/ui/svgs/hulu'
+'use client'
+
+import { Button } from '@/registry/bases/base/dusk/ui/button'
+import { ClaudeAI } from '@/registry/core/ui/svgs/claude-ai'
+import { Gemini } from '@/registry/core/ui/svgs/gemini'
+import { Openai } from '@/registry/core/ui/svgs/openai'
+import { useState, type ComponentType, type SVGProps } from 'react'
+import { AnimatePresence, motion } from 'motion/react'
+
+const testimonials: {
+    quote: string
+    highlight: string
+    author: string
+    role: string
+    Logo: ComponentType
+}[] = [
+    {
+        quote: 'Tailark helped our revenue team move from scattered updates to one shared CRM view.',
+        highlight: 'We finally know which accounts need attention before deals stall.',
+        author: 'Maya Patel',
+        role: 'VP of Revenue, Claude',
+        Logo: ClaudeAI,
+    },
+    {
+        quote: 'Our account managers use Tailark every morning to review pipeline health, open tasks, and customer history.',
+        highlight: 'The workflow feels focused without hiding the details teams need.',
+        author: 'Ethan Brooks',
+        role: 'Head of Customer Operations, Gemini',
+        Logo: Gemini,
+    },
+    {
+        quote: 'Tailark gives our sales and success teams a cleaner way to coordinate follow-up across every account.',
+        highlight: 'It turns customer signals into clear next steps.',
+        author: 'Sofia Ramirez',
+        role: 'Revenue Operations Lead, OpenAI',
+        Logo: Openai,
+    },
+]
 
 export default function Testimonials() {
+    const [activeIndex, setActiveIndex] = useState(0)
+    const activeTestimonial = testimonials[activeIndex]
+    const Logo = activeTestimonial.Logo
+
+    const previousTestimonial = () => {
+        setActiveIndex((index) => (index - 1 + testimonials.length) % testimonials.length)
+    }
+
+    const nextTestimonial = () => {
+        setActiveIndex((index) => (index + 1) % testimonials.length)
+    }
+
     return (
         <section className="py-16 md:py-32">
-            <div className="mx-auto max-w-6xl space-y-8 px-6 md:space-y-16">
-                <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
-                    <h2 className="text-4xl font-medium lg:text-5xl">Build by makers, loved by thousand developers</h2>
-                    <p>Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
-                </div>
+            <div className="mx-auto max-w-5xl px-6">
+                <div className="mx-auto max-w-3xl">
+                    <div className="mb-20 flex gap-2">
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="h-7 px-4"
+                            aria-label="read previous testimonial"
+                            onClick={previousTestimonial}
+                            disabled={activeIndex === 0}
+                        >
+                            <ArrowIcon className="size-3!" />
+                        </Button>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="h-7 px-4"
+                            aria-label="read next testimonial"
+                            onClick={nextTestimonial}
+                            disabled={activeIndex === testimonials.length - 1}
+                        >
+                            <ArrowIcon className="size-3! rotate-180" />
+                        </Button>
+                    </div>
+                    <AnimatePresence mode="popLayout">
+                        <motion.div
+                            key={activeIndex}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <p className="text-muted-foreground mb-20 text-2xl font-medium leading-snug md:text-4xl md:leading-tight">
+                                {activeTestimonial.quote} <span className="rounded bg-emerald-500/10 px-1.5 text-emerald-500">{activeTestimonial.highlight}</span>
+                            </p>
+                        </motion.div>
 
-                <div className="*:bg-muted grid gap-4 *:border-none *:shadow-none sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
-                    <Card className="grid grid-rows-[auto_1fr] gap-8 sm:col-span-2 sm:p-6 lg:row-span-2">
-                        <CardHeader>
-                            <Hulu
-                                height={18}
-                                width={56}
-                                className="**:fill-foreground"
-                            />
-                        </CardHeader>
-                        <CardContent>
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Tailus has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow. The flexibility to customize every aspect allows me to create unique user experiences. Tailus is a game-changer for modern web development</p>
-
-                                <div className="grid grid-cols-[auto_1fr] items-center gap-3">
-                                    <Avatar className="size-12 border">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/shekinah.webp"
-                                            alt="Shekinah Tshiokufila"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>ST</AvatarFallback>
-                                    </Avatar>
-
-                                    <div>
-                                        <cite className="text-sm font-medium">Shekinah Tshiokufila</cite>
-                                        <span className="text-muted-foreground block text-sm">Software Ingineer</span>
-                                    </div>
-                                </div>
-                            </blockquote>
-                        </CardContent>
-                    </Card>
-                    <Card className="md:col-span-2">
-                        <CardContent className="h-full pt-6">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.</p>
-
-                                <div className="grid grid-cols-[auto_1fr] items-center gap-3">
-                                    <Avatar className="size-12 border">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/jonathan.webp"
-                                            alt="Jonathan Yombo"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>JY</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <cite className="text-sm font-medium">Jonathan Yombo</cite>
-                                        <span className="text-muted-foreground block text-sm">Software Ingineer</span>
-                                    </div>
-                                </div>
-                            </blockquote>
-                        </CardContent>
-                    </Card>
-                    <Card>
-                        <CardContent className="h-full pt-6">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Great work on tailfolio template. This is one of the best personal website that I have seen so far!</p>
-
-                                <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
-                                    <Avatar className="size-12 border">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/yucel.webp"
-                                            alt="Yucel Faruksahan"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>YF</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <cite className="text-sm font-medium">Yucel Faruksahan</cite>
-                                        <span className="text-muted-foreground block text-sm">Creator, Tailkits</span>
-                                    </div>
-                                </div>
-                            </blockquote>
-                        </CardContent>
-                    </Card>
-                    <Card className="card variant-mixed">
-                        <CardContent className="h-full pt-6">
-                            <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Great work on tailfolio template. This is one of the best personal website that I have seen so far!</p>
-
-                                <div className="grid grid-cols-[auto_1fr] gap-3">
-                                    <Avatar className="size-12 border">
-                                        <AvatarImage
-                                            src="https://tailus.io/images/reviews/rodrigo.webp"
-                                            alt="Rodrigo Aguilar"
-                                            height="400"
-                                            width="400"
-                                            loading="lazy"
-                                        />
-                                        <AvatarFallback>YF</AvatarFallback>
-                                    </Avatar>
-                                    <div>
-                                        <p className="text-sm font-medium">Rodrigo Aguilar</p>
-                                        <span className="text-muted-foreground block text-sm">Creator, TailwindAwesome</span>
-                                    </div>
-                                </div>
-                            </blockquote>
-                        </CardContent>
-                    </Card>
+                        <motion.div
+                            key={`${activeIndex}-author`}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="flex items-center gap-4"
+                        >
+                            <Logo className="size-10" />
+                            <div className="border-l pl-4">
+                                <p className="font-medium">{activeTestimonial.author}</p>
+                                <p className="text-muted-foreground text-sm">{activeTestimonial.role}</p>
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
             </div>
         </section>
+    )
+}
+
+const ArrowIcon = (props: SVGProps) => {
+    return (
+        <svg
+            {...props}
+            width="20"
+            height="16"
+            viewBox="0 0 20 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M8 1L1 8L8 15M1 8H19"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
     )
 }

@@ -1,13 +1,14 @@
 import type { SVGProps } from 'react'
 
-const G2 = (props: SVGProps<SVGSVGElement>) => (
+const G2 = (props: SVGProps) => (
     <svg
         width="50"
         height="50"
         viewBox="0 0 50 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...props}>
+        {...props}
+    >
         <g clipPath="url(#clip0_2025_9)">
             <mask
                 id="mask0_2025_9"
@@ -16,7 +17,8 @@ const G2 = (props: SVGProps<SVGSVGElement>) => (
                 x="0"
                 y="0"
                 width="50"
-                height="50">
+                height="50"
+            >
                 <path
                     d="M50 0H0V50H50V0Z"
                     fill="white"

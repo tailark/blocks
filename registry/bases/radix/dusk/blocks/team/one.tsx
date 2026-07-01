@@ -61,7 +61,8 @@ export default function TeamSection() {
                         <p className="text-muted-foreground text-lg">During the working process, we perform regular fitting with the client because he is the only person who can feel whether a new suit fits or not.</p>
                         <Button
                             asChild
-                            variant="outline">
+                            variant="outline"
+                        >
                             <Link href="#">See pending roles</Link>
                         </Button>
                     </div>
@@ -71,7 +72,8 @@ export default function TeamSection() {
                         {members.map((member, index) => (
                             <div
                                 key={index}
-                                className="group">
+                                className="group"
+                            >
                                 <div className="aspect-square overflow-hidden transition-all duration-200 [clip-path:inset(0_0_0_0_round_12px)] group-hover:[clip-path:inset(0_0_4px_0_round_16px)]">
                                     <Image
                                         className="size-full object-cover object-top grayscale"

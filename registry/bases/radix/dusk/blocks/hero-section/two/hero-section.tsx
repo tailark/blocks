@@ -17,7 +17,8 @@ export default function HeroSection() {
                             <Button
                                 className="w-fit"
                                 asChild
-                                size="lg">
+                                size="lg"
+                            >
                                 <Link href="#">Get Started</Link>
                             </Button>
                         </div>

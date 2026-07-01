@@ -69,19 +69,22 @@ export default function FAQs() {
                         <Card
                             key={category.title}
                             variant="outline"
-                            className="p-5">
+                            className="p-5"
+                        >
                             <div className="mb-4 flex items-center gap-2">
                                 <category.icon className="text-muted-foreground size-4" />
                                 <h3 className="text-foreground font-medium">{category.title}</h3>
                             </div>
                             <Accordion
                                 type="single"
-                                collapsible>
+                                collapsible
+                            >
                                 {category.items.map((item) => (
                                     <AccordionItem
                                         key={item.id}
                                         value={item.id}
-                                        className="border-dashed last:border-b-0">
+                                        className="border-dashed last:border-b-0"
+                                    >
                                         <AccordionTrigger className="cursor-pointer py-3 text-sm font-medium hover:no-underline">{item.question}</AccordionTrigger>
                                         <AccordionContent>
                                             <p className="text-muted-foreground pb-1 text-sm">{item.answer}</p>
@@ -96,7 +99,8 @@ export default function FAQs() {
                     Need more help?{' '}
                     <Link
                         href="#"
-                        className="text-primary font-medium hover:underline">
+                        className="text-primary font-medium hover:underline"
+                    >
                         Contact our team
                     </Link>
                 </p>

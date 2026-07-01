@@ -1,12 +1,6 @@
-import { type RegistryKit } from "@/lib/registry"
+import { type RegistryKit } from '@/lib/registry'
 
-export function ComponentPreview({
-    children,
-    theme,
-}: {
-    children: React.ReactNode
-    theme: RegistryKit
-}) {
+export function ComponentPreview({ children, theme }: { children: React.ReactNode; theme: RegistryKit }) {
     return (
         <div
             data-theme={theme}
