@@ -1,16 +1,11 @@
-import * as React from "react"
-import { type Metadata } from "next"
-import { notFound } from "next/navigation"
+import * as React from 'react'
+import { type Metadata } from 'next'
+import { notFound } from 'next/navigation'
 
-import { normalizeRegistryItemName } from "@/lib/registry-item"
-import {
-    getRegistryBlocks,
-    getRegistryComponent,
-    getRegistryEntry,
-    getRegistryKit,
-} from "@/lib/registry"
+import { normalizeRegistryItemName } from '@/lib/registry-item'
+import { getRegistryBlocks, getRegistryComponent, getRegistryEntry, getRegistryKit } from '@/lib/registry'
 
-import { ComponentPreview } from "./component-preview"
+import { ComponentPreview } from './component-preview'
 
 const getCachedRegistryEntry = React.cache((name: string) => {
     return getRegistryEntry(normalizeRegistryItemName(name))
@@ -22,20 +17,16 @@ export async function generateStaticParams() {
     }))
 }
 
-export async function generateMetadata({
-    params,
-}: {
-    params: Promise<{ name: string }>
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ name: string }> }): Promise<Metadata> {
     const { name } = await params
     const item = getCachedRegistryEntry(name)
 
     if (!item) {
-        return { title: "Block not found | Tailark" }
+        return { title: 'Block not found | Tailark' }
     }
 
     return {
-        title: `${item.title ?? item.name} | Tailark Registry`,
+        title: `${item.title ?? item.name} - Tailark`,
         description: item.description,
         robots: {
             index: false,
@@ -44,11 +35,7 @@ export async function generateMetadata({
     }
 }
 
-export default async function RegistryBlockViewPage({
-    params,
-}: {
-    params: Promise<{ name: string }>
-}) {
+export default async function RegistryBlockViewPage({ params }: { params: Promise<{ name: string }> }) {
     const { name } = await params
     const item = getCachedRegistryEntry(name)
     const kit = getRegistryKit(name)
