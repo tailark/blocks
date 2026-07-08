@@ -27,6 +27,13 @@ const numberWords: Record<string, string> = {
 
 type RegistryFile = NonNullable<RegistryItem["files"]>[number]
 
+export type BlockMeta = {
+    "aspect-ratio"?: string
+    width?: number
+    height?: number
+    "category-media"?: boolean
+}
+
 type BlockOptions = {
     category: string
     variant: string
@@ -34,6 +41,7 @@ type BlockOptions = {
     dependencies?: string[]
     packageDependencies?: string[]
     files?: RegistryFile[]
+    meta?: BlockMeta
 }
 
 type ComponentOptions = {
@@ -45,6 +53,17 @@ type ComponentOptions = {
     packageDependencies?: string[]
     files?: RegistryFile[]
     target?: string
+}
+
+type PageOptions = {
+    category: string
+    variant: string
+    path: string
+    target?: string
+    dependencies?: string[]
+    packageDependencies?: string[]
+    files?: RegistryFile[]
+    meta?: BlockMeta
 }
 
 export function titleize(value: string) {
@@ -80,6 +99,7 @@ export function createRegistryHelpers({
         dependencies,
         packageDependencies,
         files,
+        meta,
     }: BlockOptions): RegistryItem {
         const number = variantNumber(variant)
 
@@ -97,6 +117,7 @@ export function createRegistryHelpers({
             ],
             ...(dependencies?.length ? { registryDependencies: dependencies } : {}),
             ...(packageDependencies?.length ? { dependencies: packageDependencies } : {}),
+            ...(meta ? { meta } : {}),
         }
     }
 
@@ -127,12 +148,43 @@ export function createRegistryHelpers({
         }
     }
 
+    function page({
+        category,
+        variant,
+        path,
+        target,
+        dependencies,
+        packageDependencies,
+        files,
+        meta,
+    }: PageOptions): RegistryItem {
+        const number = variantNumber(variant)
+
+        return {
+            name: `${kit}-${category}-${number}`,
+            type: "registry:page",
+            title: `${titleize(category)} ${number}`,
+            description: `Tailark ${kitTitle} ${category} variant ${number} page`,
+            files: files ?? [
+                {
+                    path,
+                    type: "registry:page",
+                    target: target ?? "app/page.tsx",
+                },
+            ],
+            ...(dependencies?.length ? { registryDependencies: dependencies } : {}),
+            ...(packageDependencies?.length ? { dependencies: packageDependencies } : {}),
+            ...(meta ? { meta } : {}),
+        }
+    }
+
     return {
         block,
         component,
         core,
         magicUi,
         motionPrimitive,
+        page,
         shadcn,
         ui,
     }

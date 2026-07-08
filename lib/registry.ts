@@ -11,7 +11,7 @@ const REGISTRY_BASES = ["radix", "base"] as const
 export type RegistryKit = (typeof KITS)[number]
 export type RegistryBase = (typeof REGISTRY_BASES)[number]
 
-const VIEWABLE_TYPES = new Set<RegistryEntry["type"]>(["registry:block"])
+const VIEWABLE_TYPES = new Set<RegistryEntry["type"]>(["registry:block", "registry:page"])
 
 export function getRegistryBase(base = "radix"): RegistryBase {
     return REGISTRY_BASES.includes(base as RegistryBase) ? (base as RegistryBase) : "radix"

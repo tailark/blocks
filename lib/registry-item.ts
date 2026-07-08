@@ -323,6 +323,7 @@ export async function getRegistryItem(
         dependencies: item.dependencies,
         devDependencies: item.devDependencies,
         registryDependencies: item.registryDependencies,
+        ...(item.meta ? { meta: item.meta } : {}),
         files,
     } as RegistryItem
 }
