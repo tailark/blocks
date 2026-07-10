@@ -1,5 +1,6 @@
 import { type Registry } from "shadcn/schema"
 import { components } from "./_components-registry"
+import { pages } from "./_pages-registry"
 import { createRegistryHelpers } from "@/lib/registry-helpers"
 
 const { block, component, core, motionPrimitive, ui } = createRegistryHelpers({
@@ -70,4 +71,4 @@ const blockItems: Registry["items"] = [
     block({ category: "testimonials", variant: "two", path: "dusk/blocks/testimonials/two.tsx", dependencies: [ui("button"), core("claude-ai"), core("gemini"), core("openai")] }),
 ]
 
-export const blocks: Registry["items"] = [...components, ...componentItems, ...blockItems]
+export const blocks: Registry["items"] = [...components, ...componentItems, ...blockItems, ...pages]
