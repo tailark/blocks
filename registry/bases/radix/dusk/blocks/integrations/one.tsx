@@ -10,7 +10,7 @@ import Link from 'next/link'
 export default function IntegrationsSection() {
     return (
         <section>
-            <div className="mx-auto max-w-7xl px-6 py-16 md:py-32">
+            <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
                 <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:gap-12">
                     <div className="flex flex-col justify-between gap-12 pb-6 max-lg:order-last md:mt-6">
                         <div>

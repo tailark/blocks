@@ -49,7 +49,7 @@ const tableData = [
 
 export default function PricingComparator() {
     return (
-        <section className="bg-muted py-16 md:py-32">
+        <section className="bg-muted py-16 md:py-20">
             <div className="mx-auto max-w-5xl px-6">
                 <div className="w-full overflow-auto lg:overflow-visible">
                     <table className="w-[200vw] border-separate border-spacing-x-3 md:w-full dark:[--color-muted:var(--color-zinc-900)]">

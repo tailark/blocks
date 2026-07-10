@@ -47,7 +47,7 @@ const members = [
 
 export default function TeamSection() {
     return (
-        <section className="py-16 md:py-32">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-7xl px-6">
                 <div className="grid grid-cols-[auto_1fr] items-center gap-4">
                     <span className="text-muted-foreground block text-sm">Team</span>

@@ -5,7 +5,7 @@ import { Play } from 'lucide-react'
 
 export default function Testimonials() {
     return (
-        <section className="py-16 md:py-32">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-16">
                 <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:gap-12">
                     <h2 className="text-balance text-4xl font-medium tracking-tight lg:text-5xl">By makers, loved by thousand developers</h2>

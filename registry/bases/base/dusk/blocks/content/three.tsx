@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function ContentSection() {
     return (
-        <section className="overflow-hidden py-16 md:py-32">
+        <section className="overflow-hidden py-16 md:py-20">
             <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-16">
                 <div className="max-w-2xl max-lg:pr-6">
                     <h2 className="text-balance text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl">Workspace for every customer relationship.</h2>

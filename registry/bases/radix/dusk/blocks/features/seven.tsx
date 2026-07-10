@@ -5,7 +5,7 @@ import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } f
 
 export default function FeaturesSection() {
     return (
-        <section className="overflow-hidden px-4 py-16 md:py-32">
+        <section className="overflow-hidden px-4 py-16 md:py-20">
             <div className="mx-auto max-w-7xl px-2 lg:px-6">
                 <h2 className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight">
                     <span className="text-foreground">See the whole pipeline.</span> <br /> Activity and health in one view.

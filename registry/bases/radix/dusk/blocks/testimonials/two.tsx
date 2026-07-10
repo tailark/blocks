@@ -51,7 +51,7 @@ export default function Testimonials() {
     }
 
     return (
-        <section className="py-16 md:py-32">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-5xl px-6">
                 <div className="mx-auto max-w-3xl">
                     <div className="mb-20 flex gap-2">

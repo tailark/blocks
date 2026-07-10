@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function ContentSection() {
     return (
-        <section className="py-16 md:py-32">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-7xl px-6">
                 <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:gap-12">
                     <h2 className="max-w-md text-balance text-4xl font-medium tracking-tight lg:text-5xl">A Workspace for every customer relationship.</h2>

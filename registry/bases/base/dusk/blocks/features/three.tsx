@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Features() {
     return (
-        <section className="py-16 md:py-32">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-7xl px-6">
                 <h2 className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight">
                     <span className="text-foreground">Context before every reply.</span> <br /> Grounded in real account history.

@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function ContentSection() {
     return (
-        <section className="py-16 md:py-32">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-7xl space-y-12 px-6 md:space-y-16">
                 <div className="aspect-video">
                     <Image

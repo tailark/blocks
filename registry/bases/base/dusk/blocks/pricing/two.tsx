@@ -4,7 +4,7 @@ import { Check } from 'lucide-react'
 
 export default function Pricing() {
     return (
-        <section className="py-16 md:py-32">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-7xl px-6">
                 <div className="max-w-md space-y-6">
                     <h1 className="text-muted-foreground text-balance text-4xl font-medium tracking-tight lg:text-5xl">

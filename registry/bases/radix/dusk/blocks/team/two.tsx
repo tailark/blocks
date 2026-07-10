@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function TeamSection() {
     return (
-        <section className="py-16 md:py-32">
+        <section className="py-16 md:py-20">
             <div className="mx-auto max-w-7xl px-6">
                 <div className="grid gap-4 md:grid-cols-2 md:gap-6">
                     <h2 className="text-muted-foreground max-w-4xl text-balance text-4xl font-medium tracking-tight">
