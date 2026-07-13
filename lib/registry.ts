@@ -13,8 +13,8 @@ export type RegistryBase = (typeof REGISTRY_BASES)[number]
 
 const VIEWABLE_TYPES = new Set<RegistryEntry["type"]>(["registry:block", "registry:page"])
 
-export function getRegistryBase(base = "radix"): RegistryBase {
-    return REGISTRY_BASES.includes(base as RegistryBase) ? (base as RegistryBase) : "radix"
+export function getRegistryBase(base = "base"): RegistryBase {
+    return REGISTRY_BASES.includes(base as RegistryBase) ? (base as RegistryBase) : "base"
 }
 
 export function getRegistryIndex(base = getRegistryBase()): Registry {

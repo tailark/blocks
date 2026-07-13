@@ -13,11 +13,11 @@ export async function GET(
     const { name: rawName } = await params
 
     if (isRegistryIndexRequest(rawName)) {
-        return NextResponse.json(getRegistryIndex("radix"))
+        return NextResponse.json(getRegistryIndex("base"))
     }
 
     const name = normalizeRegistryItemName(rawName)
-    const item = await getRegistryItem(name, "radix")
+    const item = await getRegistryItem(name, "base")
 
     if (!item) {
         return NextResponse.json({ error: "Registry item not found" }, { status: 404 })

@@ -12,59 +12,12 @@ const REGISTRY_CORE_IMPORT_PREFIX = "@/registry/core/"
 
 type RegistryBase = (typeof REGISTRY_BASES)[number]
 
-const packageNamespaces = [
-    "@tailark/core",
-    "@tailark/mist",
-    "@tailark/dusk",
-    "@tailark/veil",
-    "@mist",
-    "@veil",
-]
-
-const segmentToLocalAlias: Record<string, string> = {
-    "components/ui": "@/components/ui",
-    components: "@/components",
-    ui: "@/components/ui",
-    lib: "@/lib",
-    hooks: "@/hooks",
-    styles: "@/styles",
-    data: "@/data",
-    public: "@/public",
-    "motion-primitives": "@/components/motion-primitives",
-    "magic-ui": "@/components/magic-ui",
-    magicui: "@/components/magic-ui",
-}
-
-const exactSpecifierMap = new Map<string, string>()
-const prefixSpecifierMap = new Map<string, string>()
-
-for (const namespace of packageNamespaces) {
-    for (const [segment, localAlias] of Object.entries(segmentToLocalAlias)) {
-        exactSpecifierMap.set(`${namespace}/${segment}`, localAlias)
-        prefixSpecifierMap.set(`${namespace}/${segment}/`, `${localAlias}/`)
-    }
-}
-
-function rewritePackageSpecifier(specifier: string): string {
-    if (!specifier.startsWith("@") || specifier.startsWith("@/")) {
-        return specifier
-    }
-
-    for (const [sourcePrefix, targetPrefix] of prefixSpecifierMap) {
-        if (specifier.startsWith(sourcePrefix)) {
-            return `${targetPrefix}${specifier.slice(sourcePrefix.length)}`
-        }
-    }
-
-    return exactSpecifierMap.get(specifier) ?? specifier
-}
-
 export function isRegistryBase(base: string): base is RegistryBase {
     return REGISTRY_BASES.includes(base as RegistryBase)
 }
 
-export function getRegistryBase(base = "radix"): RegistryBase {
-    return REGISTRY_BASES.includes(base as RegistryBase) ? (base as RegistryBase) : "radix"
+export function getRegistryBase(base = "base"): RegistryBase {
+    return REGISTRY_BASES.includes(base as RegistryBase) ? (base as RegistryBase) : "base"
 }
 
 export function getRegistryIndex(base = getRegistryBase()): Registry {
@@ -169,10 +122,6 @@ function rewriteSpecifier(
     currentFilePath: string,
     itemFilePaths: string[]
 ): string {
-    if (specifier.startsWith("@tailark/")) {
-        return rewritePackageSpecifier(specifier)
-    }
-
     if (specifier.startsWith(REGISTRY_CORE_IMPORT_PREFIX)) {
         return coreSpecifierToAlias(specifier.slice(REGISTRY_CORE_IMPORT_PREFIX.length))
     }
