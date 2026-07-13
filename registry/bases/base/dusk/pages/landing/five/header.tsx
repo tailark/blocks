@@ -99,20 +99,16 @@ export const HeroHeader = () => {
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                                 <Button
-                                    asChild
+                                    nativeButton={false}
+                                    render={<Link href="#">Login</Link>}
                                     variant="outline"
-                                    size="sm">
-                                    <Link href="#">
-                                        <span>Login</span>
-                                    </Link>
-                                </Button>
+                                    size="sm"
+                                />
                                 <Button
-                                    asChild
-                                    size="sm">
-                                    <Link href="#">
-                                        <span>Sign Up</span>
-                                    </Link>
-                                </Button>
+                                    nativeButton={false}
+                                    render={<Link href="#">Sign Up</Link>}
+                                    size="sm"
+                                />
                             </div>
                         </div>
                     </div>
