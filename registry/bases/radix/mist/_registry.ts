@@ -123,7 +123,7 @@ const blocksOnly: Registry["items"] = [
     block({ category: "integrations", variant: "one", path: "mist/blocks/integrations/one.tsx", dependencies: integrationSvgs, meta: { "aspect-ratio": "90/6", width: 686, height: 46 } }),
     block({ category: "integrations", variant: "two", path: "mist/blocks/integrations/two.tsx", dependencies: [ui("button"), ...integrationSvgs], meta: { "aspect-ratio": "45/8", width: 686, height: 122 } }),
     block({ category: "integrations", variant: "three", path: "mist/blocks/integrations/three.tsx", dependencies: [ui("card"), ...integrationSvgs], meta: { "aspect-ratio": "90/50", width: 686, height: 381 } }),
-    block({ category: "login", variant: "one", path: "mist/blocks/login/one.tsx", dependencies: [ui("button"), ui("input"), ui("label"), ui("logo")], meta: { "aspect-ratio": "90/62", width: 686, height: 473 } }),
+    block({ category: "login", variant: "one", path: "mist/blocks/login/one.tsx", dependencies: [ui("button"), ui("input"), ui("field"), ui("logo")], meta: { "aspect-ratio": "90/62", width: 686, height: 473 } }),
     block({ category: "logo-cloud", variant: "one", path: "mist/blocks/logo-cloud/one.tsx", dependencies: logoCloudSvgs, meta: { "aspect-ratio": "80/7", width: 686, height: 60 } }),
     block({ category: "logo-cloud", variant: "two", path: "mist/blocks/logo-cloud/two.tsx", dependencies: logoCloudSvgs, meta: { "aspect-ratio": "90/6", width: 686, height: 46 } }),
     block({ category: "pricing", variant: "one", path: "mist/blocks/pricing/one.tsx", dependencies: [ui("button"), ui("card"), core("spotify"), core("supabase"), core("vercel")], meta: { "aspect-ratio": "80/51", width: 686, height: 437 } }),

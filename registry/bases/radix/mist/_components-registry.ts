@@ -4,11 +4,13 @@ const uiComponents = [
     "accordion",
     "button",
     "card",
+    "field",
     "hover-card",
     "input",
     "label",
     "logo",
     "select",
+    "separator",
     "textarea",
     "toggle",
     "toggle-group",
@@ -18,14 +20,21 @@ const titles: Record<(typeof uiComponents)[number], string> = {
     accordion: "Accordion",
     button: "Button",
     card: "Card",
+    field: "Field",
     "hover-card": "Hover Card",
     input: "Input",
     label: "Label",
     logo: "Logo",
     select: "Select",
+    separator: "Separator",
     textarea: "Textarea",
     toggle: "Toggle",
     "toggle-group": "Toggle Group",
+}
+
+const registryDependencies: Partial<Record<(typeof uiComponents)[number], string[]>> = {
+    field: ["@tailark/mist-label", "@tailark/mist-separator"],
+    "toggle-group": ["@tailark/mist-toggle"],
 }
 
 export const components: Registry["items"] = [
@@ -40,10 +49,6 @@ export const components: Registry["items"] = [
                 type: "registry:ui" as const,
             },
         ],
-        ...(name === "toggle-group"
-            ? {
-                  registryDependencies: ["@tailark/mist-toggle"],
-              }
-            : {}),
+        ...(registryDependencies[name] ? { registryDependencies: registryDependencies[name] } : {}),
     })),
 ]

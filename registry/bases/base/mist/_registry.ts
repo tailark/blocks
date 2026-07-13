@@ -117,7 +117,7 @@ const blocksOnly: Registry["items"] = [
     block({ category: "integrations", variant: "one", path: "mist/blocks/integrations/one.tsx", dependencies: integrationSvgs }),
     block({ category: "integrations", variant: "two", path: "mist/blocks/integrations/two.tsx", dependencies: [ui("button"), ...integrationSvgs] }),
     block({ category: "integrations", variant: "three", path: "mist/blocks/integrations/three.tsx", dependencies: [ui("card"), ...integrationSvgs] }),
-    block({ category: "login", variant: "one", path: "mist/blocks/login/one.tsx", dependencies: [ui("button"), ui("input"), ui("label"), ui("logo")] }),
+    block({ category: "login", variant: "one", path: "mist/blocks/login/one.tsx", dependencies: [ui("button"), ui("input"), ui("field"), ui("logo")] }),
     block({ category: "logo-cloud", variant: "one", path: "mist/blocks/logo-cloud/one.tsx", dependencies: logoCloudSvgs }),
     block({ category: "logo-cloud", variant: "two", path: "mist/blocks/logo-cloud/two.tsx", dependencies: logoCloudSvgs }),
     block({ category: "pricing", variant: "one", path: "mist/blocks/pricing/one.tsx", dependencies: [ui("button"), ui("card"), core("spotify"), core("supabase"), core("vercel")] }),
