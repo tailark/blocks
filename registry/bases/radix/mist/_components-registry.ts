@@ -33,8 +33,8 @@ const titles: Record<(typeof uiComponents)[number], string> = {
 }
 
 const registryDependencies: Partial<Record<(typeof uiComponents)[number], string[]>> = {
-    field: ["@tailark/mist-label", "@tailark/mist-separator"],
-    "toggle-group": ["@tailark/mist-toggle"],
+    field: ["@tailark-oss/mist-label", "@tailark-oss/mist-separator"],
+    "toggle-group": ["@tailark-oss/mist-toggle"],
 }
 
 export const components: Registry["items"] = [

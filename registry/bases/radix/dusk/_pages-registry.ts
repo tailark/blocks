@@ -6,8 +6,8 @@ const { component, core, motionPrimitive, page, ui } = createRegistryHelpers({
     kit: "dusk",
 })
 
-const block = (category: string, variant: string) => `@tailark/dusk-${category}-${variantNumber(variant)}`
-const local = (name: string) => `@tailark/dusk-${name}`
+const block = (category: string, variant: string) => `@tailark-oss/dusk-${category}-${variantNumber(variant)}`
+const local = (name: string) => `@tailark-oss/dusk-${name}`
 
 const pageComponentItems: Registry["items"] = [
     component({

@@ -86,10 +86,10 @@ export function createRegistryHelpers({
 }) {
     const kitTitle = titleize(kit)
 
-    const ui = (name: string) => `@tailark/${kit}-${name}`
-    const core = (name: string) => `@tailark/core-${name}`
-    const motionPrimitive = (name: string) => `@tailark/motion-primitives-${name}`
-    const magicUi = (name: string) => `@tailark/magic-ui-${name}`
+    const ui = (name: string) => `@tailark-oss/${kit}-${name}`
+    const core = (name: string) => `@tailark-oss/core-${name}`
+    const motionPrimitive = (name: string) => `@tailark-oss/motion-primitives-${name}`
+    const magicUi = (name: string) => `@tailark-oss/magic-ui-${name}`
     const shadcn = (name: string) => `@shadcn/${name}`
 
     function block({
