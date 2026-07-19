@@ -19,7 +19,7 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@tailark": "http://localhost:3000/r/{name}",
+    "@tailark-oss": "https://oss.tailark.com/r/{name}.json",
     "@svgl": "https://svgl.app/r/{name}.json"
   }
 }
