@@ -84,11 +84,11 @@ function coreSpecifierToAlias(suffix: string): string {
     }
 
     if (suffix.startsWith("ui/motion-primitives/")) {
-        return `@/components/motion-primitives/${suffix.slice("ui/motion-primitives/".length)}`
+        return `@/components/ui/motion-primitives/${suffix.slice("ui/motion-primitives/".length)}`
     }
 
     if (suffix.startsWith("ui/magicui/")) {
-        return `@/components/magic-ui/${suffix.slice("ui/magicui/".length)}`
+        return `@/components/ui/magic-ui/${suffix.slice("ui/magicui/".length)}`
     }
 
     return `@/components/${suffix}`
@@ -196,26 +196,31 @@ async function resolveRegistryFilePath(
     throw new Error(`Registry file not found: ${filePath}`)
 }
 
+const TARGET_PLACEHOLDER_RE = /^@(ui|components|lib|hooks)\//
+
 function normalizeTarget(file: NonNullable<RegistryItem["files"]>[number]): string {
     if ("target" in file && file.target) {
-        return file.target.replace(/^@/, "")
+        if (TARGET_PLACEHOLDER_RE.test(file.target)) {
+            return file.target
+        }
+        return file.target.replace(/^@\//, "")
     }
 
     const basename = path.basename(file.path)
 
     if (file.type === "registry:ui") {
         if (file.path.includes("logo")) {
-            return "components/logo.tsx"
+            return "@components/logo.tsx"
         }
 
-        return `components/ui/${basename}`
+        return `@ui/${basename}`
     }
 
     if (file.type === "registry:hook") {
-        return `hooks/${basename}`
+        return `@hooks/${basename}`
     }
 
-    return `components/${basename}`
+    return `@components/${basename}`
 }
 
 function findRegistryItem(
