@@ -12,14 +12,23 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
+    "app": "@/app",
     "components": "@/components",
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
     "lib": "@/lib",
-    "hooks": "@/hooks"
+    "hooks": "@/hooks",
+    "types": "@/types",
+    "content": "@/content"
   },
   "registries": {
     "@tailark-oss": "https://oss.tailark.com/r/{name}.json",
+    "@tailark": {
+      "url": "https://tailark.com/r/{name}.json",
+      "headers": {
+        "x-api-key": "${TAILARK_API_KEY}"
+      }
+    },
     "@svgl": "https://svgl.app/r/{name}.json"
   }
 }
